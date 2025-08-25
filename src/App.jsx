@@ -19,6 +19,7 @@ import Launchkit from './pages/Launchkit/Launchkit';
 import AccessPage from './pages/AccessPage/AccessPage';
 import SplashScreen from './components/SplashScreen';
 import { animate } from 'animejs';
+import HeroTest from './pages/HeroTest';
 
 
 function App() {
@@ -28,6 +29,8 @@ function App() {
   
   // Check if we're on the copym-ai page
   const isCopymAIPage = location.pathname === "/copym-ai";
+  // Check if we're on the marketplace page (has its own header)
+  const isMarketplacePage = location.pathname === "/marketplace";
 
   // Handle splash screen timing
   useEffect(() => {
@@ -74,7 +77,7 @@ function App() {
       ) : (
         <Box
         ref={appRef} 
-         className={`min-h-screen relative text-text-primary overflow-x-hidden ${isCopymAIPage ? 'bg-blue-100' : 'bg-blue-100'}`}>
+                   className={`min-h-screen relative text-text-primary overflow-x-hidden bg-white`}>
           <ScrollToTop />
           <Header />
           <main className="relative z-20 overflow-x-hidden">
@@ -89,6 +92,7 @@ function App() {
               <Route path="/copym-ai" element={<CopymAI />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/access" element={<AccessPage />} />
+              <Route path="/hero-test" element={<HeroTest />} />
             </Routes>
           </main>
           <Footer />
