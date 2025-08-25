@@ -2,12 +2,11 @@ import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
 
-import { curve, robot } from "../assets";
 import { heroIcons } from "../constants";
 import "./HeroIconsBlack.css";
 import Button from "./Button";
 import CompanyLogos from "./CompanyLogos";
-import { BackgroundCircles, Gradient } from "./design/Hero";
+import { Gradient } from "./design/Hero";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
@@ -25,7 +24,7 @@ const Hero = () => {
     >
       <div ref={parallaxRef} className="container relative">
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
-          <h1 className="h1 mb-6 text-black">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-black uppercase anton-regular">
             Explore the Possibilities of
             <br />
             <Typewriter
@@ -47,13 +46,6 @@ const Hero = () => {
             Experience the future of finance with{" "}
             <span className="inline-block relative font-semibold">
               COPYM-AI
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
             </span>
             , the unified RWA tokenization AI platform.
           </p>
@@ -77,52 +69,6 @@ const Hero = () => {
           <Button href="#pricing" black>
             Get started
           </Button>
-        </div>
-
-        <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
-          <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
-            <div className="relative bg-gray-50 rounded-[1rem]">
-                              <div className="h-[1.4rem] bg-gray-200 rounded-t-[0.9rem]" />
-
-              <div className="aspect-[33/40] rounded-b-[0.9rem] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
-                <img
-                  src={robot}
-                  className="w-full scale-[1.7] translate-y-[8%] md:scale-[1] md:-translate-y-[10%] lg:-translate-y-[23%] pointer-events-none select-none"
-                  width={1024}
-                  height={490}
-                  alt="AI"
-                  // style={{
-                  //   WebkitFilter: 'hue-rotate(180deg) saturate(1.5) brightness(0.8) contrast(1.2)'
-                  // }}
-                />
-
-                <Generating className="absolute left-4 right-4 bottom-5 md:left-1/2 md:right-auto md:bottom-8 md:w-[31rem] md:-translate-x-1/2" />
-
-                <ScrollParallax isAbsolutelyPositioned>
-                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-gray-100 backdrop-blur border border-gray-300 rounded-2xl xl:flex">
-                    {heroIcons.map((icon, index) => (
-                      <li className="p-5" key={index}>
-                        <img src={icon} width={24} height={25} alt={icon} className="icon-black" />
-                      </li>
-                    ))}
-                  </ul>
-                </ScrollParallax>
-
-                <ScrollParallax isAbsolutelyPositioned>
-                  <Notification
-                    className="hidden absolute -right-[5.5rem] bottom-[11rem] w-[18rem] xl:flex"
-                    title="Market analyzing"
-                  />
-                </ScrollParallax>
-              </div>
-            </div>
-
-            <Gradient />
-          </div>
-
-
-
-          <BackgroundCircles />
         </div>
 
         <CompanyLogos className="hidden relative z-10 mt-20 lg:block" />

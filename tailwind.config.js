@@ -117,7 +117,9 @@ export default {
                 'scale-in': 'scaleIn 0.3s ease-out',
                 'gradient': 'gradientBackground 8s ease infinite',
                 'sweep': 'sweep 4s ease-in-out infinite',
-                'gradient-xy': 'gradientXY 15s ease infinite'
+                'gradient-xy': 'gradientXY 15s ease infinite',
+                'scroll-left': 'scrollLeft 15s linear infinite',
+                'rotate-coin': 'rotateCoin 4s linear infinite',
             },
             keyframes: {
                 fadeIn: {
@@ -148,6 +150,14 @@ export default {
                     '25%': { 'background-position': '100% 0%' },
                     '50%': { 'background-position': '100% 100%' },
                     '75%': { 'background-position': '0% 100%' }
+                },
+                scrollLeft: {
+                    '0%': { transform: 'translateX(0)' },
+                    '100%': { transform: 'translateX(-50%)' }
+                },
+                rotateCoin: {
+                    '0%': { transform: 'rotateY(0deg)' },
+                    '100%': { transform: 'rotateY(360deg)' }
                 }
             }
         },

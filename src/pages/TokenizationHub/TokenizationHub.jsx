@@ -3,6 +3,7 @@ import CreateAssetModal from "./tokenizationDemo.jsx";
 import { createTheme, ThemeProvider as BWThemeProvider } from '@mui/material/styles';
 import { Box } from '@mui/material';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { LavaLamp } from '../../components/ui/fluid-blob';
 import { 
   ArrowRight, 
   Play, 
@@ -39,84 +40,67 @@ import {
 } from 'lucide-react';
 
 const Hero = () => {
-  const playerRef = useRef(null);
-
-  // Handle animation completion - stop at final frame
-  const handleComplete = () => {
-    if (playerRef.current) {
-      playerRef.current.pause();
-    }
-  };
-
   return (
-    <section className="relative  py-12 lg:py-20 overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none">
-          <path
-            d="M100 100C200 200 300 50 400 150C500 250 600 100 700 200C800 300 900 150 1000 250"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            className="text-black"
-          />
-          <path
-            d="M0 300C100 400 200 250 300 350C400 450 500 300 600 400C700 500 800 350 900 450"
-            stroke="currentColor"
-            strokeWidth="2"
-            fill="none"
-            className="text-black"
-          />
-        </svg>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      {/* Blue Background Pattern - Same as Homepage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start -mt-6">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center px-4 py-2 bg-gray-100 rounded-full text-sm font-medium text-gray-700 mb-6">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              Tokenization Portal is Open
-            </div>
+      {/* Fluid Blob Background */}
+      <div className="absolute inset-0 opacity-30">
+        <LavaLamp />
+      </div>
 
-            <h1 className="brand-title mb-6 text-[#255f99] bg-clip-text">
-              Tokenize Real-World{' '}
-              <span className="relative text-[#15a36e] bg-clip-text">
-                Assets
-              </span>
-            </h1>
-            
-            <p className="brand-description mb-8 max-w-lg mx-auto lg:mx-0">
-              Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className="btn-gradient">
-                Start Tokenizing
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="btn-gradient-secondary">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </button>
-            </div>
+      {/* Main Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* AI-Powered Badge - Top of Content */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            Tokenization Portal is Open
+          </div>
+        </div>
+
+        <div className="text-center">
+          {/* Main Title - Full Width with Homepage Font Styles */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-8 uppercase anton-regular">
+            <div className="text-gray-900">TOKENIZE REAL-WORLD</div>
+            <div className="text-green-600">ASSETS</div>
+          </h1>
+
+          {/* Description with Homepage Style */}
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
+            Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
+          </p>
+
+          {/* CTA Buttons with Homepage Style */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Start Tokenizing
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
+
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300 transform hover:scale-105">
+              <Play className="mr-2 h-5 w-5" />
+              Watch Demo
+            </button>
           </div>
 
-          {/* Right Content - Lottie Animation */}
-          <div className="flex items-start justify-center -mt-32 md:-mt-0 overflow-hidden">
-            <Player
-              ref={playerRef}
-              autoplay
-              loop={false}
-              keepLastFrame={true}
-              src="/assets/lottie/crypto animation-2/crypto animation-2.json"
-              style={{ height: '500px', width: '500px' }}
-              onEvent={(event) => {
-                if (event === 'complete') {
-                  handleComplete();
-                }
-              }}
-            />
+          {/* Additional UI Elements */}
+          <div className="mt-16 flex justify-center space-x-8 opacity-60">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Secure</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Compliant</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">AI-Enhanced</span>
+            </div>
           </div>
         </div>
       </div>
