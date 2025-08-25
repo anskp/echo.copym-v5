@@ -12,12 +12,21 @@ import grid from "./grid.png";
 import check2 from "./check-02.svg";
 import loading1 from "./loading-01.svg";
 import yourlogo from "./yourlogo.svg";
-import avalanche from "./avalanche-avax-logo.svg";
-import bitcoin from "./bitcoin-btc-logo.svg";
-import ethereum from "./ethereum-eth-logo.svg";
-import optimism from "./optimism-ethereum-op-logo.svg";
-import polygon from "./polygon-matic-logo.svg";
-import solana from "./solana-sol-logo.svg";
+
+// Blockchain SVGs
+import avalanche from "./blockchains/avalanche-avax-logo.svg";
+import bitcoin from "./blockchains/bitcoin-btc-logo.svg";
+import bnb from "./blockchains/bnb-bnb-logo.svg";
+import ethereum from "./blockchains/ethereum-eth-logo.svg";
+import lympo from "./blockchains/lympo-lym-logo.svg";
+import near from "./blockchains/near-protocol-near-logo.svg";
+import optimism from "./blockchains/optimism-ethereum-op-logo.svg";
+import polkadot from "./blockchains/polkadot-new-dot-logo.svg";
+import polygon from "./blockchains/polygon-matic-logo.svg";
+import solana from "./blockchains/solana-sol-logo.svg";
+import stellar from "./blockchains/stellar-logo.svg";
+import uniswap from "./blockchains/uniswap-uni-logo.svg";
+
 import homeSmile from "./home-smile.svg";
 import file02 from "./file-02.svg";
 import searchMd from "./search-md.svg";
@@ -100,10 +109,16 @@ export {
     yourlogo,
     avalanche,
     bitcoin,
+    bnb,
     ethereum,
+    lympo,
+    near,
     optimism,
+    polkadot,
     polygon,
     solana,
+    stellar,
+    uniswap,
     homeSmile,
     file02,
     searchMd,

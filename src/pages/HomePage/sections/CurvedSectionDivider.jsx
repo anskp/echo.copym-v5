@@ -24,7 +24,7 @@ export default function CurvedSectionDivider() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 anton-regular">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular bg-gradient-to-r from-green-400 via-green-500 to-green-800 bg-clip-text text-transparent">
               Own. Earn. Explore. Trade
             </h2>
           </div>
