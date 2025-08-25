@@ -118,7 +118,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative py-16 -mt-20 bg-gradient-to-r from-green-500 via-green-600 to-green-500 rounded-[50px] mx-4">
+    <section className="relative pt-8 pb-0 -mt-20 bg-gradient-to-r from-black via-green-600 to-black rounded-[50px] mx-4">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
@@ -127,10 +127,10 @@ export default function AppPeekSection() {
       
       {/* Content Container */}
       <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center p-4 mb-12">
-          <motion.h1 
-            className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 uppercase anton-regular"
+                 {/* Header */}
+         <div className="text-center p-2 mb-12">
+                     <motion.h1 
+             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-2 uppercase anton-regular"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -152,8 +152,8 @@ export default function AppPeekSection() {
           </motion.p>
         </div>
 
-        {/* Main Content with Phones and Download Buttons */}
-        <div className="flex justify-center items-center relative">
+                 {/* Main Content with Phones and Download Buttons */}
+         <div className="flex justify-center items-center relative mb-8">
           {/* Left Download Button - Google Play Store */}
           <StoreDownloadButton 
             store="Google Play"
