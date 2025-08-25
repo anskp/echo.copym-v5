@@ -118,7 +118,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative pt-8 pb-0 -mt-20 bg-gradient-to-r from-black via-green-600 to-black rounded-[50px] mx-4">
+    <section className="relative pt-8 pb-0 -mt-20 bg-gradient-to-r from-black/90 via-green-600 to-black/90 rounded-[50px] mx-4">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
@@ -218,7 +218,7 @@ export default function AppPeekSection() {
                 className="relative w-full h-full bg-gradient-to-br from-green-400 via-emerald-400 to-green-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
                 style={{
                   background: 'linear-gradient(135deg, #22c55e, #10b981, #22c55e)',
-                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                  boxShadow: '0 25px 50px -12px rgba(128, 125, 125, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
                   transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-20px) translateX(-20px)',
                   transformStyle: 'preserve-3d'
                 }}
