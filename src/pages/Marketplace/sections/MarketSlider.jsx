@@ -218,49 +218,11 @@ const MarketplaceGlimpse = () => {
 
   return (
     <div className="w-full">
-      {/* Act I: The Immersive Header */}
-      <section className="min-h-screen relative flex items-center justify-center overflow-hidden bg-white">
-        {/* Content */}
-        <div className="relative z-20 text-center px-4 max-w-4xl mx-auto">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-extrabold mb-6 leading-tight"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <span className="text-[#255f99]">Where Real-World Value</span>
-            <br />
-            <span className="text-[#15a36e]">Meets Digital Opportunity</span>
-          </motion.h1>
-          
-          <motion.p 
-            className="text-lg md:text-xl text-black mb-12 max-w-3xl mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Discover, invest, and trade in a curated selection of premium, tokenized real-world assets. 
-            Your gateway to the future of ownership starts here.
-          </motion.p>
-        </div>
-
-        {/* Scroll Down Indicator */}
-        <motion.div 
-          className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <ChevronDown className="w-8 h-8 text-black" />
-        </motion.div>
-      </section>
-
-      <section>
-        <AppPeekSection />
-      </section>
+      <AppPeekSection />
 
       {/* Section Header - moved outside as introduction */}
       <motion.div 
-        className="text-center py-16 bg-white"
+        className="text-center py-16"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -320,7 +282,7 @@ const MarketplaceGlimpse = () => {
       </section>
 
       {/* Act IV: The "Why Invest With Us?" Panel */}
-      <section className="py-16 bg-white">
+      <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div 
             className="text-center mb-12"
@@ -391,7 +353,7 @@ const MarketplaceGlimpse = () => {
       </section>
 
       {/* Act V: The Final Call to Action */}
-      <section className="bg-white py-16">
+      <section className="py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
