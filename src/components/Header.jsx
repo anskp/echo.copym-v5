@@ -82,7 +82,7 @@ export default function Header() {
               <img
                 src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
                 alt="COPYM"
-                className="h-12 w-auto object-contain sm:h-14 md:h-16"
+                className="h-16 w-auto object-contain sm:h-18 md:h-20"
               />
             </Link>
 
