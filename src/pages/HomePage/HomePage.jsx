@@ -1,10 +1,11 @@
 import Hero from "./sections/Hero";
 import CurvedSectionDivider from "./sections/CurvedSectionDivider";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
-import WhyCopym from "./sections/WhyCopym";
+import AIInvestingSection from "./sections/AIInvestingSection";
+import AuditSection from "./sections/AuditSection";
+import NewsletterSection from "./sections/NewsletterSection";
 import Testimonials from "./sections/Testimonials";
 import SupportedAssets from "./sections/SupportedAssets";
-import FAQ from "./sections/FAQ";
 
 export default function HomePage() {
   return (
@@ -12,9 +13,11 @@ export default function HomePage() {
       <Hero />
       <CurvedSectionDivider />
       <TrackYourCrypto />
-      <WhyCopym />
+      <AIInvestingSection />
+      <AuditSection />
+      <NewsletterSection />
+      {/* <SupportedAssets /> */}
       <Testimonials />
-      <FAQ />
     </div>
   );
 }
