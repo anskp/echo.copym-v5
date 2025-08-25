@@ -53,7 +53,7 @@ const Contact = () => {
   const [submitStatus, setSubmitStatus] = useState(null);
   const [errors, setErrors] = useState({});
   const [showLiveChat, setShowLiveChat] = useState(false);
-  const [showTypeform, setShowTypeform] = useState(false);
+  const [showTypeform, setShowTypeform] = useState(true);
 
   // RWA-specific contact types
   const contactTypes = [
@@ -326,16 +326,16 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Header - Enhanced Mobile Responsiveness */}
-        <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
-            Keep in <span className="text-[#065f46]">Touch</span>
-          </h1>
-          <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
-            Connect with our team for investor onboarding, asset tokenization,
-            legal compliance, or technical integration.
-          </p>
-        </motion.div>
+                 {/* Header - Enhanced Mobile Responsiveness */}
+         <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
+           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
+             Let's <span className="text-[#065f46]">Connect</span>
+           </h1>
+           <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
+             Connect with our team for investor onboarding, asset tokenization,
+             legal compliance, or technical integration.
+           </p>
+         </motion.div>
 
         {/* Quick Contact Cards - Smart 3-Column Layout */}
         {/* <motion.div className="grid gap-3 sm:gap-4 lg:gap-6 grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-12" variants={itemVariants}>
@@ -359,7 +359,7 @@ const Contact = () => {
         </motion.div> */}
 
         {/* Form Type Toggle */}
-        <motion.div className="flex justify-center mb-6 sm:mb-8" variants={itemVariants}>
+        {/* <motion.div className="flex justify-center mb-6 sm:mb-8" variants={itemVariants}>
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-2">
             <div className="flex">
               <button
@@ -384,287 +384,19 @@ const Contact = () => {
               </button>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Main Content Grid - Fixed Responsive Layout */}
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Form - Optimized for all screens */}
-          <motion.div className="lg:col-span-2" variants={itemVariants}>
-            {showTypeform ? (
-              <Typeform />
-            ) : (
-              <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6 lg:p-8">
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1e40af] mb-4 sm:mb-6">Submit Your Inquiry</h2>
-
-              {submitStatus === 'success' && (
-                <motion.div
-                  className="mb-4 sm:mb-6 p-3 sm:p-4 bg-green-50 border border-green-200 rounded-lg flex items-center"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-600 mr-2 sm:mr-3 flex-shrink-0" />
-                  <span className="text-green-800 text-sm sm:text-base">Thank you. We'll respond within 24 business hours.</span>
-                </motion.div>
-              )}
-
-              {submitStatus === 'error' && (
-                <motion.div
-                  className="mb-4 sm:mb-6 p-3 sm:p-4 bg-red-50 border border-red-200 rounded-lg flex items-center"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  <AlertCircle className="w-4 h-4 sm:w-5 sm:h-5 text-red-600 mr-2 sm:mr-3 flex-shrink-0" />
-                  <span className="text-red-800 text-sm sm:text-base">Submission failed. Please try again.</span>
-                </motion.div>
-              )}
-
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
-                {/* Name and Email - 2 columns on all devices */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] focus:border-transparent text-sm sm:text-base bg-white text-gray-900 ${errors.name ? 'border-red-300' : 'border-gray-300'
-                        }`}
-                      placeholder="John Smith"
-                      required
-                    />
-                    {errors.name && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.name}</p>}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] focus:border-transparent text-sm sm:text-base bg-white text-gray-900 ${errors.email ? 'border-red-300' : 'border-gray-300'
-                        }`}
-                      placeholder="john@institution.com"
-                      required
-                    />
-                    {errors.email && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.email}</p>}
-                  </div>
-                </div>
-
-                {/* Company and Role - 2 columns on all devices */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Company *</label>
-                    <input
-                      type="text"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] focus:border-transparent text-sm sm:text-base bg-white text-gray-900 ${errors.company ? 'border-red-300' : 'border-gray-300'
-                        }`}
-                      placeholder="ABC Capital Partners"
-                      required
-                    />
-                    {errors.company && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.company}</p>}
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Role *</label>
-                    <input
-                      type="text"
-                      name="role"
-                      value={formData.role}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] focus:border-transparent text-sm sm:text-base bg-white text-gray-900 ${errors.role ? 'border-red-300' : 'border-gray-300'
-                        }`}
-                      placeholder="CFO, Portfolio Manager, etc."
-                      required
-                    />
-                    {errors.role && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.role}</p>}
-                  </div>
+          <motion.div className="lg:col-span-3" variants={itemVariants}>
+            <Typeform />
+          </motion.div>
         </div>
 
-                {/* Contact Type and Preferred Contact - 2 columns on all devices */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Contact Type</label>
-                    <select
-                      name="contactType"
-                      value={formData.contactType}
-                      onChange={handleInputChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900"
-                    >
-                      {contactTypes.map((type) => (
-                        <option key={type.value} value={type.value}>
-                          {type.label}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Contact</label>
-                    <select
-                      name="preferredContact"
-                      value={formData.preferredContact}
-                      onChange={handleInputChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900"
-                    >
-                      <option value="email">Email</option>
-                      <option value="phone">Phone</option>
-                    </select>
-                  </div>
-                </div>
-
-                {/* Phone Number - Conditional, full width */}
-                {formData.preferredContact === 'phone' && (
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900 ${errors.phone ? 'border-red-300' : 'border-gray-300'
-                        }`}
-                      placeholder="+1 (555) 123-4567"
-                    />
-                    {errors.phone && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.phone}</p>}
-                  </div>
-                )}
-
-                {/* Subject - Full width for better UX */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Subject *</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900 ${errors.subject ? 'border-red-300' : 'border-gray-300'
-                      }`}
-                    placeholder="e.g., Investment in Commercial Real Estate"
-                    required
-                  />
-                  {errors.subject && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.subject}</p>}
-                </div>
-
-                {/* Asset Type, Investment Interest - 2 columns on all devices */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Interested In</label>
-                    <select
-                      name="assetType"
-                      value={formData.assetType}
-                      onChange={handleInputChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900"
-                    >
-                      <option value="">Select asset type</option>
-                      {assetOptions.map((opt) => (
-                        <option key={opt} value={opt}>{opt}</option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Investment Interest</label>
-                    <select
-                      name="investmentInterest"
-                      value={formData.investmentInterest}
-                      onChange={handleInputChange}
-                      className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900"
-                    >
-                      <option value="">Select level</option>
-                      {investmentLevels.map((level) => (
-                        <option key={level} value={level}>{level}</option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-
-                {/* Accreditation Status - Full width for better UX */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Accreditation Status</label>
-                  <select
-                    name="accreditation"
-                    value={formData.accreditation}
-                    onChange={handleInputChange}
-                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#065f46] text-sm sm:text-base bg-white text-gray-900"
-                  >
-                    <option value="">Select status</option>
-                    <option value="accredited">Accredited Investor</option>
-                    <option value="institution">Institutional Investor</option>
-                    <option value="not_accredited">Not Accredited (Limited Access)</option>
-                  </select>
-              </div>
-              
-                {/* Message - Full width for better UX */}
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Message *</label>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={4}
-                    className={`w-full px-3 sm:px-4 py-2 sm:py-3 border rounded-lg focus:ring-2 focus:ring-[#065f46] resize-none text-sm sm:text-base bg-white text-gray-900 ${errors.message ? 'border-red-300' : 'border-gray-300'
-                      }`}
-                    placeholder="Please describe your interest, use case, or integration needs..."
-                    required
-                  />
-                  {errors.message && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.message}</p>}
-                </div>
-
-
-
-                {/* Compliance Checkbox - Optimized layout */}
-                <div className="flex items-start space-x-3">
-                  <input
-                    type="checkbox"
-                    name="compliance"
-                    checked={formData.compliance}
-                    onChange={handleInputChange}
-                    className="mt-1 h-4 w-4 text-[#065f46] focus:ring-[#065f46] border-gray-300 rounded flex-shrink-0"
-                  />
-                  <div>
-                    <label className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-                      I agree to the{' '}
-                      <a href="/compliance" className="text-[#065f46] hover:underline">
-                        compliance terms
-                      </a>{' '}
-                      and acknowledge that this is for qualified investors only *
-                    </label>
-                    {errors.compliance && <p className="mt-1 text-xs sm:text-sm text-red-600">{errors.compliance}</p>}
-            </div>
-          </div>
-
-                {/* Submit Button - Full width */}
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white font-semibold py-3 sm:py-4 px-4 sm:px-6 rounded-lg hover:from-[#1e3a8a] hover:to-[#064e3b] transition-all disabled:opacity-50 flex items-center justify-center text-sm sm:text-base touch-manipulation"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  {isSubmitting ? (
-                    <>
-                      <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2 sm:mr-3"></div>
-                      Submitting...
-                    </>
-                  ) : (
-                    <>
-                      <Send className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3" />
-                      Submit Inquiry
-                    </>
-                  )}
-                </motion.button>
-              </form>
-            </div>
-            )}
-          </motion.div>
-
-          {/* Sidebar - Fixed for better screen utilization */}
-          <motion.div className="space-y-6" variants={itemVariants}>
+        {/* Horizontal Sidebar Sections */}
+        <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Contact Information - Single Consolidated Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
               <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Contact Information</h3>
@@ -695,7 +427,7 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
-              </div>
+            </div>
               
             {/* Social Media & Resources - Combined Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
@@ -736,9 +468,9 @@ const Contact = () => {
                       <span className="text-gray-700 text-xs">{r.name}</span>
                     </a>
                   ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
             {/* Why Partner With Us - Simplified */}
             <div className="bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-2xl p-4 sm:p-6 text-white">
@@ -755,8 +487,8 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Map Section - Optimized layout */}
         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>

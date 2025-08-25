@@ -20,6 +20,17 @@ import { Link } from "react-router-dom";
 import AppPeekSection from "./AppPeekSection";
 import ChromaGrid from "../../../components/ChromaGrid";
 
+// Custom CSS for hiding scrollbars
+const scrollbarHideStyles = `
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+`;
+
 // --- Asset data for ChromaGrid ----
 const mockAssets = [
   { 
@@ -131,7 +142,7 @@ const theme = {
 const allCardData = mockAssets;
 
 // ====================================================================
-// --- THE FULLY RESPONSIVE ASSET CARD COMPONENT (UNCHANGED) ---
+// --- THE ENHANCED ASSET CARD COMPONENT WITH BOLDER DESIGN ---
 // ====================================================================
 const AssetCard = ({ card, layoutId, isPopup = false }) => {
   const handleNavigate = (link) => {
@@ -142,20 +153,28 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
   return (
     <motion.div
       layoutId={layoutId}
-      className="w-full h-[400px] rounded-2xl flex flex-col justify-end overflow-hidden shadow-2xl relative bg-black"
+      className="w-full h-[400px] rounded-2xl flex flex-col justify-end overflow-hidden shadow-2xl relative bg-black group"
+      whileHover={{ scale: 1.02 }}
+      transition={{ duration: 0.3 }}
     >
+      {/* Enhanced Aura Effect on Hover */}
+      <div className="absolute inset-0 bg-green-500/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
+      
       <motion.img
         src={card.image}
         alt={card.title}
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
-      <div className={`absolute inset-0 bg-gradient-to-t z-10 ${isPopup ? 'from-black/90 via-black/60' : 'from-black/80 via-black/40'} to-transparent`} />
-      <div className="absolute top-3 left-3 py-1 px-3 rounded-full text-white text-sm font-semibold z-30" style={{ backgroundColor: theme.blueButton }}>{card.category}</div>
-      <div className="relative z-20 p-4 space-y-4 text-white">
-        <h3 className="brand-card-title leading-tight">{card.title}</h3>
+      
+      {/* Enhanced Gradient for Better Readability */}
+      <div className={`absolute inset-0 bg-gradient-to-t z-10 ${isPopup ? 'from-black/95 via-black/80' : 'from-black/90 via-black/70'} to-transparent`} />
+      
+      {/* Removed Blue Header - Cleaner Design */}
+      <div className="relative z-20 p-6 space-y-4 text-white">
+        <h3 className="text-2xl font-bold leading-tight">{card.title}</h3>
         <div className="flex flex-col gap-2 text-base font-semibold border-t border-b border-white/20 py-3">
-          <p className="flex items-center gap-2"><MapPin size={20} style={{ color: theme.greenIcon }} />{card.location}</p>
-          <p className="flex items-center gap-2"><TrendingUp size={20} style={{ color: theme.greenIcon }} />{card.expectedRoi} ROI</p>
+          <p className="flex items-center gap-2"><MapPin size={20} className="text-green-400" />{card.location}</p>
+          <p className="flex items-center gap-2"><TrendingUp size={20} className="text-green-400" />{card.expectedRoi} ROI</p>
         </div>
         <div className="flex items-end justify-between pt-2">
           <div>
@@ -163,8 +182,7 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
             <p className="text-2xl font-bold">${card.price.toLocaleString()}</p>
           </div>
           <motion.button 
-            className="px-5 py-2 text-white rounded-lg font-semibold shadow-md text-sm" 
-            style={{ backgroundColor: theme.blueButton }} 
+            className="px-6 py-3 text-white rounded-lg font-semibold shadow-lg text-sm bg-green-500 hover:bg-green-600 transition-colors duration-300" 
             whileHover={{ scale: 1.05 }} 
             whileTap={{ scale: 0.95 }} 
             onClick={(e) => { 
@@ -181,7 +199,7 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
 };
 
 // ====================================================================
-// --- NEW MARKETPLACE GLIMPSE COMPONENT ---
+// --- ENHANCED MARKETPLACE GLIMPSE COMPONENT ---
 // ====================================================================
 const MarketplaceGlimpse = () => {
   const [selectedCard, setSelectedCard] = useState(null);
@@ -218,31 +236,161 @@ const MarketplaceGlimpse = () => {
 
   return (
     <div className="w-full">
+      <style dangerouslySetInnerHTML={{ __html: scrollbarHideStyles }} />
       <AppPeekSection />
 
-      {/* Section Header - moved outside as introduction */}
-      <motion.div 
-        className="text-center py-16"
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-[#255f99]">Explore Our </span>
-            <span className="text-[#15a36e]">Curated Assets</span>
-          </h2>
-          <p className="text-lg text-black max-w-3xl mx-auto mb-8">
-            Discover a diverse portfolio of tokenized real-world assets, each carefully selected for their potential returns and market stability.
-          </p>
-        </div>
-      </motion.div>
+             {/* PART 1: "Why Invest With Us?" Section - Visual Upgrade */}
+       <section className="relative py-24 overflow-hidden">
+         {/* Background Pattern - Same as Hero Section */}
+         <div className="absolute inset-0 opacity-10">
+           <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+         </div>
 
-      {/* Act III: The ChromaGrid Experience */}
-      <section className="bg-gray-50 py-24">
+         {/* Fluid Blob Background */}
+         <div className="absolute inset-0 overflow-hidden">
+           <motion.div
+             className="absolute -top-40 -right-40 w-80 h-80 bg-green-400/20 rounded-full blur-3xl"
+             animate={{
+               x: [0, 30, 0],
+               y: [0, -30, 0],
+               scale: [1, 1.1, 1],
+             }}
+             transition={{
+               duration: 20,
+               repeat: Infinity,
+               ease: "easeInOut",
+             }}
+           />
+           <motion.div
+             className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
+             animate={{
+               x: [0, -40, 0],
+               y: [0, 40, 0],
+               scale: [1, 1.2, 1],
+             }}
+             transition={{
+               duration: 25,
+               repeat: Infinity,
+               ease: "easeInOut",
+               delay: 2,
+             }}
+           />
+           <motion.div
+             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400/15 rounded-full blur-3xl"
+             animate={{
+               x: [0, 20, 0],
+               y: [0, -20, 0],
+               scale: [1, 1.15, 1],
+             }}
+             transition={{
+               duration: 18,
+               repeat: Infinity,
+               ease: "easeInOut",
+               delay: 1,
+             }}
+           />
+         </div>
+
+         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <motion.div 
+             className="text-center mb-16"
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.6 }}
+             viewport={{ once: true }}
+           >
+             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+               <span className="text-gray-900">WHY INVEST </span>
+               <span className="text-green-600">WITH US?</span>
+             </h2>
+             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+               We combine cutting-edge blockchain technology with traditional investment wisdom to create a secure, transparent, and accessible investment platform.
+             </p>
+           </motion.div>
+
+                       {/* Feature Cards - Inspired by CurvedSectionDivider */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-teal-500 flex items-center justify-center mb-4 mx-auto">
+                  <Shield className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Grade Security</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Your investments are protected with multi-layer security protocols and institutional-grade custody solutions.
+                </p>
+                <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
+                  Learn More <ArrowRight className="ml-1 w-4 h-4" />
+                </button>
+              </motion.div>
+
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-500 to-green-500 flex items-center justify-center mb-4 mx-auto">
+                  <Eye className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Radical Transparency</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Every transaction is recorded on an immutable blockchain ledger, providing auditable proof of ownership.
+                </p>
+                <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
+                  View Details <ArrowRight className="ml-1 w-4 h-4" />
+                </button>
+              </motion.div>
+
+              <motion.div 
+                className="text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                viewport={{ once: true }}
+              >
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 via-blue-500 to-green-500 flex items-center justify-center mb-4 mx-auto">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Liquidity</h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Trade your tokenized assets on our secondary market, turning illiquid investments into flexible opportunities.
+                </p>
+                <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
+                  Start Trading <ArrowRight className="ml-1 w-4 h-4" />
+                </button>
+              </motion.div>
+            </div>
+         </div>
+       </section>
+
+             {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
+       <section className="bg-gradient-to-r from-black via-green-600 to-black rounded-[50px] mx-4 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Category Filter Buttons */}
+          {/* Enhanced Section Header */}
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+              <span className="text-white">EXPLORE OUR </span>
+              <span className="text-black">CURATED ASSETS</span>
+            </h2>
+            <p className="text-xl text-black/80 max-w-3xl mx-auto">
+              Discover a diverse portfolio of tokenized real-world assets, each carefully selected for their potential returns and market stability.
+            </p>
+          </motion.div>
+
+          {/* Smart Tabs - Enhanced Filter UI */}
           <motion.div 
             className="flex flex-wrap justify-center gap-3 mb-16"
             initial={{ opacity: 0, y: 20 }}
@@ -254,10 +402,10 @@ const MarketplaceGlimpse = () => {
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 ${
+                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 border ${
                   selectedCategory === category.id
-                    ? 'bg-blue-600 text-white shadow-lg'
-                    : 'bg-white text-gray-700 hover:bg-gray-100 border border-gray-200'
+                    ? 'bg-[#255f99] text-white shadow-lg border-[#255f99]'
+                    : 'bg-white/20 text-white hover:bg-white/30 border-white/30 hover:border-white/50 backdrop-blur-sm'
                 }`}
               >
                 {category.label}
@@ -266,126 +414,150 @@ const MarketplaceGlimpse = () => {
             ))}
           </motion.div>
 
-          {/* ChromaGrid Component */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <ChromaGrid 
-              assets={filteredAssets}
-              onAssetClick={handleAssetClick}
-            />
+                     {/* Horizontally Scrollable Asset Cards */}
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8 }}
+             viewport={{ once: true }}
+             className="relative"
+           >
+             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
+               {filteredAssets.map((asset, index) => (
+                 <motion.div
+                   key={asset.id}
+                   className="flex-shrink-0 w-[320px] h-[420px] rounded-2xl overflow-hidden shadow-2xl bg-white group cursor-pointer relative"
+                   initial={{ opacity: 0, x: 50 }}
+                   whileInView={{ opacity: 1, x: 0 }}
+                   transition={{ duration: 0.6, delay: index * 0.1 }}
+                   viewport={{ once: true }}
+                   whileHover={{ scale: 1.02, y: -5 }}
+                   onClick={() => handleAssetClick(asset)}
+                 >
+                   {/* Image Section (Top 60%) */}
+                   <div className="relative h-[60%] overflow-hidden">
+                     <img 
+                       src={asset.image} 
+                       alt={asset.title}
+                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                     />
+                     
+                     {/* Category Badge - Top Left */}
+                     <div className="absolute top-3 left-3">
+                       <span className="px-2 py-1 bg-green-600 text-white text-xs font-semibold rounded-full">
+                         {asset.category}
+                       </span>
+                     </div>
+                     
+                     {/* Action Icons - Top Right */}
+                     <div className="absolute top-3 right-3 flex gap-2">
+                       <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                         </svg>
+                       </div>
+                       <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
+                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+                         </svg>
+                       </div>
+                     </div>
+
+                     {/* Image Carousel Indicators - Bottom Center */}
+                     <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1">
+                       <div className="w-2 h-2 bg-white rounded-full"></div>
+                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+                     </div>
+                   </div>
+
+                   {/* Details Section (Bottom 40%) - Dark Green Background */}
+                   <div className="h-[40%] bg-green-800 p-4 flex flex-col justify-between">
+                     {/* Title and Location */}
+                     <div>
+                       <h3 className="text-lg font-bold text-white mb-1 line-clamp-1">
+                         {asset.title}
+                       </h3>
+                       <p className="text-sm text-white/80 mb-2">
+                         {asset.location}
+                       </p>
+                     </div>
+
+                     {/* Price and Rating Row */}
+                     <div className="flex items-center justify-between">
+                       {/* Price */}
+                       <div className="text-right">
+                         <p className="text-lg font-bold text-white">
+                           ${asset.price.toLocaleString()} USDC
+                         </p>
+                       </div>
+                       
+                       {/* Rating */}
+                       <div className="flex items-center gap-1">
+                         <div className="flex">
+                           {[...Array(5)].map((_, i) => (
+                             <svg key={i} className={`w-4 h-4 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-white/30'}`} viewBox="0 0 20 20">
+                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                             </svg>
+                           ))}
+                         </div>
+                         <span className="text-sm text-white ml-1">4.5 (108)</span>
+                       </div>
+                     </div>
+                   </div>
+                 </motion.div>
+               ))}
+             </div>
+
+            {/* Scroll Indicators */}
+            <div className="flex justify-center mt-8 space-x-2">
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
+            </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Act IV: The "Why Invest With Us?" Panel */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div 
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="text-[#255f99]">Why Invest </span>
-              <span className="text-[#15a36e]">With Us?</span>
-            </h2>
-            <p className="text-lg text-black max-w-3xl mx-auto">
-              We combine cutting-edge blockchain technology with traditional investment wisdom to create a secure, transparent, and accessible investment platform.
-            </p>
-          </motion.div>
+             {/* PART 3: The Final CTA - A Grand Finale */}
+       <section className="relative py-16 overflow-hidden mt-16">
+         {/* Background Video/Image with Dark Overlay */}
+         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-gray-900">
+           <div className="absolute inset-0 bg-black/60" />
+         </div>
+         
+         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+           <motion.div
+             initial={{ opacity: 0, y: 30 }}
+             whileInView={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.6 }}
+             viewport={{ once: true }}
+           >
+             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+               <span className="text-white">READY TO BUILD YOUR </span>
+               <span className="text-green-500">FUTURE PORTFOLIO?</span>
+             </h2>
+             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+               Join thousands of investors accessing exclusive real-world assets. The full marketplace awaits.
+             </p>
+             <Link 
+               to="/marketplace"
+               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
+             >
+               Explore the Full Marketplace
+               <ArrowRight className="w-5 h-5" />
+             </Link>
+           </motion.div>
+         </div>
+       </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div 
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: theme.greenIcon }}>
-                <Shield className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Bank-Grade Security</h3>
-              <p className="text-black leading-relaxed">
-                Your investments are protected with multi-layer security protocols and institutional-grade custody solutions.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: theme.greenIcon }}>
-                <Eye className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Radical Transparency</h3>
-              <p className="text-black leading-relaxed">
-                Every transaction is recorded on an immutable blockchain ledger, providing auditable proof of ownership.
-              </p>
-            </motion.div>
-
-            <motion.div 
-              className="text-center"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center" style={{ backgroundColor: theme.greenIcon }}>
-                <Zap className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Enhanced Liquidity</h3>
-              <p className="text-black leading-relaxed">
-                Trade your tokenized assets on our secondary market, turning illiquid investments into flexible opportunities.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Act V: The Final Call to Action */}
-      <section className="py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="text-[#255f99]">Ready to Build Your </span>
-              <span className="text-[#15a36e]">Future Portfolio?</span>
-            </h2>
-            <p className="text-lg text-black mb-8 max-w-2xl mx-auto">
-              Join thousands of investors accessing exclusive real-world assets. The full marketplace awaits.
-            </p>
-            <Link 
-              to="/marketplace"
-              className="btn-gradient inline-flex items-center gap-2 text-lg px-10 py-4"
-            >
-              Explore the Full Marketplace
-              <ArrowRight className="w-6 h-6" />
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* THE TAKEOVER POPUP MODAL (UNCHANGED) */}
+      {/* THE TAKEOVER POPUP MODAL (Enhanced) */}
       <AnimatePresence>
         {selectedCard && (
           <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
             initial={{ backgroundColor: 'rgba(0,0,0,0)' }}
-            animate={{ backgroundColor: 'rgba(0,0,0,0.7)' }}
+            animate={{ backgroundColor: 'rgba(0,0,0,0.8)' }}
             exit={{ backgroundColor: 'rgba(0,0,0,0)' }}
             onClick={() => setSelectedCard(null)}
           >
@@ -393,11 +565,12 @@ const MarketplaceGlimpse = () => {
               <AssetCard card={selectedCard} layoutId={`card-${selectedCard.id}`} isPopup={true} />
             </div>
             <motion.button 
-              className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center text-white" 
+              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/20" 
               onClick={() => setSelectedCard(null)} 
               initial={{ scale: 0, rotate: -90 }} 
               animate={{ scale: 1, rotate: 0 }} 
               exit={{ scale: 0, rotate: -90 }}
+              whileHover={{ scale: 1.1 }}
             >
               <X size={24} />
             </motion.button>
