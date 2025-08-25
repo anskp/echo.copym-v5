@@ -1,240 +1,218 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { ArrowRight, Play, X } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, Play, X, TrendingUp, Wallet, BarChart3, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import * as THREE from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import { gsap } from 'gsap';
+
+// 3D Phone Component for Hero - First Phone (Marketplace)
+const HeroPhone3D = () => {
+  return (
+    <div 
+      className="relative w-[320px] h-[650px] transition-all duration-700 hover:scale-105"
+      style={{ perspective: '1000px' }}
+    >
+      {/* 3D Phone Container */}
+      <div 
+        className="relative w-full h-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-[3rem] p-2 shadow-2xl"
+        style={{
+          background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+          transform: 'rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px)',
+          transformStyle: 'preserve-3d'
+        }}
+      >
+        {/* Phone Screen */}
+        <div className="w-full h-full bg-black rounded-[2.5rem] p-1">
+          <div className="w-full h-full bg-white rounded-[2.3rem] overflow-hidden">
+            {/* Marketplace Image */}
+            <img 
+              src="/assets/Images/devices/marketplace01.jpg" 
+              alt="Marketplace Interface"
+              className="w-full h-full object-cover rounded-[2.3rem]"
+            />
+          </div>
+        </div>
+        
+        {/* Phone Reflection/Glow Effect */}
+        <div 
+          className="absolute -bottom-16 left-1/2 w-60 h-16 bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-40 blur-2xl rounded-full"
+          style={{
+            transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
+            transformOrigin: 'center top'
+          }}
+        ></div>
+        
+        {/* Additional shadow for depth */}
+        <div 
+          className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
+          style={{
+            transform: 'translateZ(-10px)'
+          }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+// 3D Phone Component for Hero - Second Phone (Wallet)
+const HeroPhone3DWallet = () => {
+  return (
+    <div 
+      className="relative w-[320px] h-[650px] transition-all duration-700 hover:scale-105"
+      style={{ perspective: '1000px' }}
+    >
+      {/* 3D Phone Container */}
+      <div 
+        className="relative w-full h-full bg-gradient-to-br from-green-400 via-emerald-400 to-green-500 rounded-[3rem] p-2 shadow-2xl"
+        style={{
+          background: 'linear-gradient(135deg, #22c55e, #10b981, #22c55e)',
+          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+          transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-50px) translateX(-20px)',
+          transformStyle: 'preserve-3d'
+        }}
+      >
+        {/* Phone Screen */}
+        <div className="w-full h-full bg-black rounded-[2.5rem] p-1">
+          <div className="w-full h-full bg-white rounded-[2.3rem] overflow-hidden">
+            {/* Wallet Image */}
+            <img 
+              src="/assets/Images/devices/marketplace02.jpg" 
+              alt="Wallet Interface"
+              className="w-full h-full object-cover rounded-[2.3rem]"
+            />
+          </div>
+        </div>
+        
+        {/* Phone Reflection/Glow Effect */}
+        <div 
+          className="absolute -bottom-16 left-1/2 w-60 h-16 bg-gradient-to-r from-transparent via-green-300 to-transparent opacity-40 blur-2xl rounded-full"
+          style={{
+            transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
+            transformOrigin: 'center top'
+          }}
+        ></div>
+        
+        {/* Additional shadow for depth */}
+        <div 
+          className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
+          style={{
+            transform: 'translateZ(-10px)'
+          }}
+        ></div>
+      </div>
+    </div>
+  );
+};
+
+// Feature Card Component
+const FeatureCard = ({ icon: Icon, title, description, color }) => {
+  return (
+    <div className="text-center">
+      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${color} flex items-center justify-center`}>
+        <Icon className="w-8 h-8 text-white" />
+      </div>
+      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
+      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
+    </div>
+  );
+};
 
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
-  const mountRef = useRef(null);
-  const sceneRef = useRef(null);
-  const rendererRef = useRef(null);
-  const modelRef = useRef(null);
-  const mouseRef = useRef({ x: 0, y: 0 });
-
-  useEffect(() => {
-    if (!mountRef.current) return;
-
-    const handleMouseMove = (event) => {
-      // Only enable mouse interaction on larger screens
-      if (window.innerWidth >= 640) {
-        const rect = mountRef.current.getBoundingClientRect();
-        mouseRef.current.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
-        mouseRef.current.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
-      }
-    };
-
-    mountRef.current.addEventListener('mousemove', handleMouseMove);
-
-    const scene = new THREE.Scene();
-    sceneRef.current = scene;
-
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      mountRef.current.clientWidth / mountRef.current.clientHeight,
-      0.1,
-      1000
-    );
-    camera.position.set(-28, 0, 150);
-
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
-    renderer.setClearColor(0x000000, 0);
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-    rendererRef.current = renderer;
-    mountRef.current.appendChild(renderer.domElement);
-
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
-    scene.add(ambientLight);
-
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    directionalLight.position.set(10, 10, 5);
-    directionalLight.castShadow = true;
-    directionalLight.shadow.mapSize.width = 2048;
-    directionalLight.shadow.mapSize.height = 2048;
-    scene.add(directionalLight);
-
-    const pointLight = new THREE.PointLight(0x4a90e2, 1, 100);
-    pointLight.position.set(-10, 10, 10);
-    scene.add(pointLight);
-
-    // Blue light from top right for reflection effect
-    const blueLight = new THREE.PointLight(0x0066ff, 2, 80);
-    blueLight.position.set(15, 15, 10);
-    scene.add(blueLight);
-
-    // Additional blue light from top right for enhanced reflection
-    const blueLight2 = new THREE.PointLight(0x0099ff, 1.5, 60);
-    blueLight2.position.set(20, 20, 5);
-    scene.add(blueLight2);
-
-    const loader = new GLTFLoader();
-
-    const geometry = new THREE.BoxGeometry(1, 1, 1);
-    const material = new THREE.MeshPhongMaterial({ color: 0x4a90e2, transparent: true, opacity: 0.8 });
-    const cube = new THREE.Mesh(geometry, material);
-    cube.position.set(0, 0, 0);
-    scene.add(cube);
-
-    loader.load(
-      '/assets/glb/abstract_ball (2).glb',
-      (gltf) => {
-        const model = gltf.scene;
-        model.scale.set(25, 25, 25);
-        model.position.set(3, -1, 0);
-        model.castShadow = true;
-        model.receiveShadow = true;
-
-        scene.remove(cube);
-        scene.add(model);
-        modelRef.current = model;
-
-        // gsap.fromTo(model.rotation, { y: 0 }, { y: Math.PI * 2, duration: 20, ease: 'none', repeat: -1 });
-
-        gsap.fromTo(model.scale, { x: 0, y: 0, z: 0 }, {
-          x: 25, y: 25, z: 25,
-          duration: 1.5,
-          ease: 'back.out(1.7)'
-        });
-      },
-      undefined,
-      (error) => {
-        console.error('GLB load error:', error);
-
-        gsap.fromTo(cube.rotation, { y: 0 }, { y: Math.PI * 2, duration: 10, ease: 'none', repeat: -1 });
-
-        gsap.fromTo(cube.position, { y: -0.5 }, {
-          y: 0.5,
-          duration: 2,
-          ease: 'power2.inOut',
-          yoyo: true,
-          repeat: -1
-        });
-      }
-    );
-
-    const animate = () => {
-      requestAnimationFrame(animate);
-      if (modelRef.current) {
-        // Center the model on mobile screens, use mouse interaction on larger screens
-        if (window.innerWidth < 640) {
-          modelRef.current.position.x = -21;
-          modelRef.current.position.y = -5;
-        } else {
-          modelRef.current.position.x = (mouseRef.current.x * 1.5) + 2.2;
-          modelRef.current.position.y = (mouseRef.current.y * 1) - 3;
-        }
-      }
-      renderer.render(scene, camera);
-    };
-    animate();
-
-    const handleResize = () => {
-      const width = mountRef.current.clientWidth;
-      const height = mountRef.current.clientHeight;
-      camera.aspect = width / height;
-      camera.updateProjectionMatrix();
-      renderer.setSize(width, height);
-    };
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-      if (mountRef.current) {
-        mountRef.current.removeEventListener('mousemove', handleMouseMove);
-        mountRef.current.removeChild(renderer.domElement);
-      }
-      renderer.dispose();
-    };
-  }, []);
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-0 overflow-hidden">
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none">
-          <path d="M100 100C200 200 300 50 400 150C500 250 600 100 700 200C800 300 900 150 1000 250" stroke="currentColor" strokeWidth="2" className="text-black" />
-          <path d="M0 300C100 400 200 250 300 350C400 450 500 300 600 400C700 500 800 350 900 450" stroke="currentColor" strokeWidth="2" className="text-black" />
-        </svg>
+    <section className="relative min-h-[70vh] max-h-[90vh] overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      <div className="w-full px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-16 shadow-lg relative overflow-hidden">
-          <div className="absolute inset-0 opacity-100 mix-blend-multiply">
-            <img
-              src="/assets/Images/cover.png"
-              alt="Background"
-              className="w-full h-full object-cover sm:object-center"
-              style={{ objectPosition: '92% center' }}
-            />
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-8">
+        <div className="grid lg:grid-cols-2 gap-12 items-start h-full">
+          {/* Left Side - Text Content */}
+          <div className="text-center lg:text-left lg:pt-16">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+              <span className="text-gray-900">UNLOCK </span>
+              <span className="text-green-600">EXCLUSIVE</span>
+              <br />
+              <span className="text-gray-900">ASSETS, INVEST WITH </span>
+              <br />
+              <span className="text-green-600">CONFIDENCE</span>
+            </h1>
+            
+            <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-2xl mx-auto lg:mx-0">
+              Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <Link
+                to="/marketplace"
+                className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Start Investing
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+
+              <button
+                onClick={() => setVideoOpen(true)}
+                className="inline-flex items-center justify-center px-8 py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                Watch Demo
+              </button>
+            </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-20 items-center relative z-10">
-            <div className="text-center lg:text-left lg:-mt-12 lg:ml-4 order-2 lg:order-1">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-                <span
-                  className="text-[#ffffff]"
-                  // style={{ textShadow: '1px 1px 2px rgba(255, 255, 255, 0.4)' }}
-                >
-                  Unlock Exclusive Assets, Invest With{' '}
-                </span>
-                <span
-                  className="text-[#ffffff]"
-                  // style={{ textShadow: '2px 2px 3px rgba(223, 223, 223, 0.4)' }}
-                >
-                  Confidence
-                </span>
-              </h1>
-              <p className="text-lg sm:text-xl text-black leading-relaxed mb-6 sm:mb-8 mt-3 sm:mt-4 max-w-lg mx-auto lg:mx-0">
-                Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
-              </p>
+          {/* Right Side - Dual Phone Mockups */}
+          <div className="flex justify-center lg:justify-start lg:pt-24 lg:pl-2">
+            <div className="flex gap-6 items-center">
+              <HeroPhone3D />
+              <HeroPhone3DWallet />
+            </div>
+          </div>
+        </div>
+      </div>
 
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
-                <Link
-                  to="/marketplace"
-                  className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 font-semibold text-white btn-gradient text-sm sm:text-base"
-                >
-                  Start Investing
-                  <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-                </Link>
-
-                <button
-                  onClick={() => setVideoOpen(true)}
-                  className="inline-flex items-center justify-center px-5 sm:px-6 py-2.5 font-semibold text-white btn-gradient-secondary text-sm sm:text-base"
-                >
-                  <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                  Watch Demo
-                </button>
-              </div>
-
-              <div className="flex items-center justify-center lg:justify-start space-x-6 sm:space-x-8 mt-8 sm:mt-12 text-xs sm:text-sm text-gray-500">
-                <div>
-                  <div className="font-semibold text-black text-base sm:text-lg">500K+</div>
-                  <div>Active Users</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-black text-base sm:text-lg">$2.5B+</div>
-                  <div>Assets Managed</div>
-                </div>
-                <div>
-                  <div className="font-semibold text-black text-base sm:text-lg">15.2%</div>
-                  <div>Avg. Returns</div>
-                </div>
-              </div>
+      {/* Curved Transition Section */}
+      <div className="relative">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[3rem] sm:rounded-t-[4rem] lg:rounded-t-[5rem] transform translate-y-1/2"></div>
+        
+        {/* Investor's Toolkit Section */}
+        <div className="relative z-10 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[3rem] sm:rounded-t-[4rem] lg:rounded-t-[5rem] pt-20 pb-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Investor's toolkit</h2>
             </div>
 
-            <div className="flex items-center justify-center overflow-hidden order-1 lg:order-2">
-              <div
-                ref={mountRef}
-                className="w-full max-w-[200px] sm:max-w-[260px] md:max-w-[320px] lg:max-w-[400px] h-[200px] sm:h-[300px] md:h-[350px] lg:h-[450px]"
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <FeatureCard
+                icon={Wallet}
+                title="Link what you love"
+                description="Connect your wallets and exchanges effortlessly. Delta brings all your crypto together in one place."
+                color="from-green-500 to-emerald-600"
+              />
+              <FeatureCard
+                icon={TrendingUp}
+                title="Stay ahead"
+                description="Stay informed with tailored alerts and updates. From Why Is It Moving to price predictions."
+                color="from-yellow-500 to-orange-600"
+              />
+              <FeatureCard
+                icon={BarChart3}
+                title="Master your portfolio"
+                description="Track every coin, every move, and your entire portfolio with crystal clarity."
+                color="from-pink-500 to-purple-600"
+              />
+              <FeatureCard
+                icon={Zap}
+                title="Uncover new horizons"
+                description="Discover opportunities and market trends with tools like What's Moving and advanced analytics."
+                color="from-blue-500 to-cyan-600"
               />
             </div>
           </div>
         </div>
       </div>
 
+      {/* Video Modal */}
       {isVideoOpen && (
         <div
           className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
