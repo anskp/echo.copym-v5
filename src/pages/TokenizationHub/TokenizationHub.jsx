@@ -308,31 +308,8 @@ const TokenizationProcess = ({ onLaunchCreator }) => {
   );
 };
 
-// Token Distribution Section Component
-const TokenDistribution = () => {
-  const [expandedDistribution, setExpandedDistribution] = useState(new Set([0, 1, 2, 3])); // All expanded by default on large screens
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  // Check screen size on mount and resize
-  React.useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
-    };
-    
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
-
-  // Initialize expanded state based on screen size
-  React.useEffect(() => {
-    if (isLargeScreen) {
-      setExpandedDistribution(new Set([0, 1, 2, 3])); // All expanded on large screens
-    } else {
-      setExpandedDistribution(new Set()); // All collapsed on small screens
-    }
-  }, [isLargeScreen]);
+ // Token Distribution Section Component
+ const TokenDistribution = () => {
 
   const distributionMethods = [
     {
@@ -361,15 +338,7 @@ const TokenDistribution = () => {
     }
   ];
 
-  const toggleDistribution = (index) => {
-    const newExpandedDistribution = new Set(expandedDistribution);
-    if (newExpandedDistribution.has(index)) {
-      newExpandedDistribution.delete(index);
-    } else {
-      newExpandedDistribution.add(index);
-    }
-    setExpandedDistribution(newExpandedDistribution);
-  };
+  
 
   return (
     <section className="py-20 ">
@@ -386,34 +355,61 @@ const TokenDistribution = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:items-start">
           {distributionMethods.map((method, index) => (
             
-            <div key={index} className="rounded-2xl p-6 cursor-pointer hover:bg-gradient-to-r from-[#d3f8e3] to-[#C7DBF0] transition-colors duration-200 lg:self-start" onClick={() => toggleDistribution(index)}>
-              <Box
-                className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon"
-                sx={{
-                  background: "rgba(255, 255, 255, 0.9)",
-                  backdropFilter: "blur(5px)",
-                  boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <method.icon className="h-6 w-6 text-blue-500" />
-              </Box>
-              <div className="flex items-center justify-between">
-                <h3 className="brand-card-title text-black">{method.title}</h3>
-                <div className={`transform transition-transform duration-200 ${expandedDistribution.has(index) ? 'rotate-180' : ''}`}>
-                  <ChevronDown className="h-5 w-5 text-gray-400" />
+                                                                                                       <div key={index} className="bg-white rounded-2xl p-6 cursor-pointer hover:bg-gray-50 transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:shadow-xl lg:self-start shadow-lg h-full flex flex-col relative overflow-hidden group">
+                            {/* Security protocol hover background elements */}
+                            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                              {/* Security grid pattern */}
+                              <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                              
+                              {/* Scanning security line */}
+                              <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                              
+                              {/* Security shield patterns */}
+                              <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                              <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                              
+                              {/* Security monitoring dots */}
+                              <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                              <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                              <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                              <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                              
+                              {/* Security lock patterns */}
+                              <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                              <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                              
+                              {/* Glowing security orbs */}
+                              <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                              <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                              
+                              {/* Security circuit patterns */}
+                              <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                              <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                            </div>
+                             <Box
+                 className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon relative z-10"
+                 sx={{
+                   background: "rgba(255, 255, 255, 0.9)",
+                   backdropFilter: "blur(5px)",
+                   boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
+                 }}
+               >
+                 <method.icon className="h-6 w-6 text-blue-500 group-hover:text-cyan-600 transition-colors duration-300" />
+               </Box>
+                                                           <div className="flex items-center justify-center relative z-10 mb-3">
+                  <h3 className="brand-card-title text-black group-hover:text-gray-800 transition-colors duration-300">{method.title}</h3>
                 </div>
-              </div>
-              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedDistribution.has(index) ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
-                <p className="text-black mb-4">{method.description}</p>
-                <ul className="space-y-2">
-                  {method.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-black">
-                      <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="relative z-10">
+                 <p className="text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">{method.description}</p>
+                 <ul className="space-y-2">
+                   {method.features.map((feature, idx) => (
+                     <li key={idx} className="flex items-center text-sm text-black group-hover:text-gray-700 transition-colors duration-300">
+                       <CheckCircle className="h-4 w-4 text-green-500 mr-2 group-hover:text-cyan-500 transition-colors duration-300" />
+                       {feature}
+                     </li>
+                   ))}
+                 </ul>
+               </div>
             </div>
           ))}
         </div>
@@ -489,19 +485,49 @@ const IssuerDashboard = () => {
 
           {/* Features List */}
           <div className="space-y-6">
-            {dashboardFeatures.map((feature, index) => (
-              <div key={index} className="bg-green-50 rounded-2xl p-6 shadow-sm border border-gray-200">
-                <div className="flex items-start">
-                  <div className={`p-3 border border-blue-100 rounded-2xl mr-4 ${feature.bgClass}`}>
-                    <feature.icon className={`h-6 w-6 ${feature.iconClass}`} />
-                  </div>
-                  <div>
-                    <h4 className="brand-card-title text-black mb-2">{feature.title}</h4>
-                    <p className="text-black">{feature.description}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
+                         {dashboardFeatures.map((feature, index) => (
+               <div key={index} className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:bg-gray-50 transition-all duration-300 relative overflow-hidden group">
+                 {/* Security protocol hover background elements */}
+                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                   {/* Security grid pattern */}
+                   <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                   
+                   {/* Scanning security line */}
+                   <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                   
+                   {/* Security shield patterns */}
+                   <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                   <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                   
+                   {/* Security monitoring dots */}
+                   <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                   <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                   <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                   <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                   
+                   {/* Security lock patterns */}
+                   <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                   <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                   
+                   {/* Glowing security orbs */}
+                   <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                   <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                   
+                   {/* Security circuit patterns */}
+                   <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                   <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                 </div>
+                 <div className="flex items-start relative z-10">
+                   <div className={`p-3 border border-blue-100 rounded-2xl mr-4 ${feature.bgClass} group-hover:border-cyan-200 transition-colors duration-300`}>
+                     <feature.icon className={`h-6 w-6 ${feature.iconClass} group-hover:text-cyan-600 transition-colors duration-300`} />
+                   </div>
+                   <div>
+                     <h4 className="brand-card-title text-black mb-2 group-hover:text-gray-800 transition-colors duration-300">{feature.title}</h4>
+                     <p className="text-black group-hover:text-gray-700 transition-colors duration-300">{feature.description}</p>
+                   </div>
+                 </div>
+               </div>
+             ))}
           </div>
         </div>
       </div>
@@ -509,31 +535,8 @@ const IssuerDashboard = () => {
   );
 };
 
-// Investor Management Section Component
-const InvestorManagement = () => {
-  const [expandedManagement, setExpandedManagement] = useState(new Set([0, 1, 2, 3])); // All expanded by default on large screens
-  const [isLargeScreen, setIsLargeScreen] = useState(false);
-
-  // Check screen size on mount and resize
-  React.useEffect(() => {
-    const checkScreenSize = () => {
-      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint
-    };
-    
-    checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    
-    return () => window.removeEventListener('resize', checkScreenSize);
-  }, []);
-
-  // Initialize expanded state based on screen size
-  React.useEffect(() => {
-    if (isLargeScreen) {
-      setExpandedManagement(new Set([0, 1, 2, 3])); // All expanded on large screens
-    } else {
-      setExpandedManagement(new Set()); // All collapsed on small screens
-    }
-  }, [isLargeScreen]);
+ // Investor Management Section Component
+ const InvestorManagement = () => {
 
   const managementTools = [
     {
@@ -562,15 +565,7 @@ const InvestorManagement = () => {
     }
   ];
 
-  const toggleManagement = (index) => {
-    const newExpandedManagement = new Set(expandedManagement);
-    if (newExpandedManagement.has(index)) {
-      newExpandedManagement.delete(index);
-    } else {
-      newExpandedManagement.add(index);
-    }
-    setExpandedManagement(newExpandedManagement);
-  };
+  
 
   return (
     <section className="py-20">
@@ -588,37 +583,56 @@ const InvestorManagement = () => {
           {managementTools.map((tool, index) => (
             
             <div key={index} className="w-full max-w-sm">
-              <div className="rounded-2xl p-8 cursor-pointer hover:bg-gradient-to-r from-[#d3f8e3] to-[#C7DBF0] transition-colors duration-200 w-full text-center" onClick={() => toggleManagement(index)}>
-                <Box
-                  className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon mx-auto"
-                  sx={{
-                    background: "rgba(255, 255, 255, 0.9)",
-                    backdropFilter: "blur(5px)",
-                    boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
-                  }}
-                >
-                  <tool.icon className="h-6 w-6 text-blue-500" />
-                </Box>
-                <div className="flex items-center justify-between mb-3">
-                  <div className="flex-1"></div>
-                  <h3 className="brand-card-title text-black flex-1 text-center">{tool.title}</h3>
-                  <div className="flex-1 flex justify-end">
-                    <div className="relative">
-                      <div className={`transition-opacity duration-200 ${expandedManagement.has(index) ? 'opacity-100' : 'opacity-0'}`}>
-                        <ChevronUp className="h-5 w-5 text-gray-400 absolute" />
-                      </div>
-                      <div className={`transition-opacity duration-200 ${expandedManagement.has(index) ? 'opacity-0' : 'opacity-100'}`}>
-                        <ChevronDown className="h-5 w-5 text-gray-400" />
-                      </div>
-                    </div>
+                                                                                                                                                                                                                                               <div className="bg-white rounded-2xl p-8 cursor-pointer hover:bg-gray-50 transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:shadow-xl w-full text-center relative overflow-hidden group shadow-lg">
+                                {/* Security protocol hover background elements */}
+                                <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                                  {/* Security grid pattern */}
+                                  <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                                  
+                                  {/* Scanning security line */}
+                                  <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                                  
+                                  {/* Security shield patterns */}
+                                  <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                                  <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                                  
+                                  {/* Security monitoring dots */}
+                                  <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                                  <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                                  <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                                  
+                                  {/* Security lock patterns */}
+                                  <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                                  <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                                  
+                                  {/* Glowing security orbs */}
+                                  <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                                  <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                                  
+                                  {/* Security circuit patterns */}
+                                  <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                                  <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                                </div>
+                                 <Box
+                   className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon mx-auto relative z-10"
+                   sx={{
+                     background: "rgba(255, 255, 255, 0.9)",
+                     backdropFilter: "blur(5px)",
+                     boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
+                   }}
+                 >
+                   <tool.icon className="h-6 w-6 text-blue-500 group-hover:text-cyan-600 transition-colors duration-300" />
+                 </Box>
+                                                                   <div className="flex items-center justify-center mb-3 relative z-10">
+                    <h3 className="brand-card-title text-black text-center group-hover:text-gray-800 transition-colors duration-300">{tool.title}</h3>
                   </div>
-                </div>
-                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedManagement.has(index) ? 'max-h-32 opacity-100' : 'max-h-0 opacity-0'}`}>
-                  <p className="text-black mb-4">{tool.description}</p>
-                  <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
-                    {tool.stats}
-                  </div>
-                </div>
+                  <div className="relative z-10">
+                   <p className="text-black mb-4 group-hover:text-gray-700 transition-colors duration-300">{tool.description}</p>
+                   <div className="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium group-hover:bg-cyan-100 group-hover:text-cyan-800 transition-colors duration-300">
+                     {tool.stats}
+                   </div>
+                 </div>
               </div>
             </div>
           ))}
@@ -666,132 +680,127 @@ const SecurityProtocols = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1),transparent_50%)]"></div>
-      </div>
+         <section className="py-20 bg-white relative overflow-hidden">
+       {/* Background Pattern */}
+       <div className="absolute inset-0 opacity-5">
+         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,0,0,0.05),transparent_50%)]"></div>
+       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-500/20 rounded-full text-sm font-medium text-blue-300 mb-6 border border-blue-400/30">
-            <Shield className="w-4 h-4 mr-2" />
-            Security First
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Enterprise-Grade
-            <span className="block bg-gradient-to-r from-blue-400 to-green-400 text-transparent bg-clip-text">
-              Security Protocols
-            </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Bank-grade security measures protecting your assets and investor data with military-grade encryption and compliance.
-          </p>
-        </div>
+                 <div className="text-center mb-16">
+           <div className="inline-flex items-center px-4 py-2 bg-blue-500/10 rounded-full text-sm font-medium text-blue-600 mb-6 border border-blue-200">
+             <Shield className="w-4 h-4 mr-2" />
+             Security First
+           </div>
+           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+         
+               Security Protocols
+             
+           </h2>
+           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+             Bank-grade security measures protecting your assets and investor data with military-grade encryption and compliance.
+           </p>
+         </div>
 
-        {/* Security Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          {securityFeatures.map((feature, index) => (
-            <div key={index} className="group relative">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 hover:bg-white/10 cursor-pointer">
-                {/* Icon with animated background */}
-                <div className={`w-16 h-16 rounded-2xl mb-4 flex items-center justify-center bg-gradient-to-r ${feature.color} shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="h-8 w-8 text-white" />
-                </div>
+                 {/* Security Features Grid */}
+         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+           {securityFeatures.map((feature, index) => (
+             <div key={index} className="group relative">
+                               <div className="bg-white backdrop-blur-sm rounded-2xl p-6 border border-gray-200 hover:border-cyan-300/50 transition-all duration-300 hover:bg-gray-50 cursor-pointer h-full flex flex-col relative overflow-hidden group shadow-lg hover:shadow-xl">
+                  {/* Security protocol hover background elements */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    {/* Security grid pattern */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                    
+                    {/* Scanning security line */}
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                    
+                    {/* Security shield patterns */}
+                    <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                    
+                    {/* Security monitoring dots */}
+                    <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                    <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                    <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                    
+                    {/* Security lock patterns */}
+                    <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                    
+                    {/* Glowing security orbs */}
+                    <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                    
+                    {/* Security circuit patterns */}
+                    <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                    <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                  </div>
+                  {/* Security protocol hover background elements */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                    {/* Security grid pattern */}
+                    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                    
+                    {/* Scanning security line */}
+                    <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                    
+                    {/* Security shield patterns */}
+                    <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                    
+                    {/* Security monitoring dots */}
+                    <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                    <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                    <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                    <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                    
+                    {/* Security lock patterns */}
+                    <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                    
+                    {/* Glowing security orbs */}
+                    <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                    
+                    {/* Security circuit patterns */}
+                    <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                    <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                  </div>
+                                 {/* Icon with animated background */}
+                 <div className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center bg-white shadow-lg group-hover:scale-110 transition-transform duration-300 relative z-10">
+                   <feature.icon className="h-6 w-6 text-green-500" />
+                 </div>
                 
-                {/* Content */}
-                <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">{feature.description}</p>
-                
-                {/* Level Badge */}
-                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-white/10 text-white border border-white/20 mb-4">
-                  {feature.level}
-                </div>
-
-                {/* Feature List */}
-                <div className="space-y-2">
-                  {feature.features.map((item, idx) => (
-                    <div key={idx} className="flex items-center text-xs text-gray-400">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2"></div>
-                      {item}
+                                                   {/* Content */}
+                  <div className="flex-1 relative z-10">
+                    <h4 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-gray-900 transition-colors duration-300">{feature.title}</h4>
+                    <p className="text-gray-600 text-sm mb-4 leading-relaxed group-hover:text-gray-700 transition-colors duration-300">{feature.description}</p>
+                    
+                    {/* Level Badge */}
+                    <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-cyan-500/10 text-cyan-600 border border-cyan-200 mb-4 group-hover:bg-cyan-500/20 group-hover:border-cyan-400/30 transition-all duration-300">
+                      <div className="w-2 h-2 bg-cyan-500 rounded-full mr-2 animate-pulse"></div>
+                      {feature.level}
                     </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Security Stats Section */}
-        <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-white mb-2">Security Metrics</h3>
-            <p className="text-gray-300">Real-time security performance indicators</p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-blue-400 mb-2">99.9%</div>
-              <div className="text-sm text-gray-300">Uptime</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-green-400 mb-2">256-bit</div>
-              <div className="text-sm text-gray-300">Encryption</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-purple-400 mb-2">24/7</div>
-              <div className="text-sm text-gray-300">Monitoring</div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-red-400 mb-2">SOC 2</div>
-              <div className="text-sm text-gray-300">Compliant</div>
-            </div>
-          </div>
-        </div>
+                    {/* Feature List */}
+                    <div className="space-y-2">
+                      {feature.features.map((item, idx) => (
+                        <div key={idx} className="flex items-center text-xs text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                          <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-2 group-hover:bg-cyan-400 transition-colors duration-300"></div>
+                          {item}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+               </div>
+             </div>
+           ))}
+         </div>
 
-        {/* Security Overview with Image */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Side - Security Overview */}
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-blue-500/20 to-green-500/20 rounded-2xl p-6 border border-blue-400/30">
-              <h3 className="text-2xl font-bold text-white mb-4">
-                Multi-Layered Defense
-              </h3>
-              <p className="text-gray-300 mb-4">
-                Our comprehensive security approach combines cutting-edge technology with industry best practices to create an impenetrable defense system.
-              </p>
-              <div className="flex items-center text-blue-300">
-                <ShieldCheck className="w-5 h-5 mr-2" />
-                <span className="text-sm">ISO 27001 Certified</span>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <div className="text-2xl font-bold text-green-400 mb-1">100%</div>
-                <div className="text-xs text-gray-400">Audit Success</div>
-              </div>
-              <div className="bg-white/5 rounded-xl p-4 border border-white/10">
-                <div className="text-2xl font-bold text-blue-400 mb-1">0</div>
-                <div className="text-xs text-gray-400">Security Breaches</div>
-              </div>
-            </div>
-          </div>
+      
 
-          {/* Right Side - Enhanced Image */}
-          <div className="flex items-center justify-center">
-            <div className="relative group">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-green-500 rounded-3xl transform rotate-3 opacity-30 group-hover:rotate-6 transition-transform duration-500"></div>
-              <div className="relative bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/20 group-hover:border-white/40 transition-all duration-500">
-                <img
-                  src="/assets/Images/token-issuence-removebg.png"
-                  alt="Token Issuance Compliance Rules"
-                  className="max-w-full h-auto rounded-2xl filter drop-shadow-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+       
       </div>
     </section>
   );
@@ -867,42 +876,71 @@ const AnalyticsReporting = () => {
           <h2 className="brand-section-title mb-2 pb-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] text-transparent bg-clip-text">
             Analytics & Reporting
           </h2>
-          <p className="brand-description max-w-3xl mx-auto text-green-700">
+                     <p className="brand-description max-w-3xl mx-auto text-gray-600">
             Comprehensive analytics and reporting tools for data-driven decision making.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:items-start">
-          {reportingFeatures.map((feature, index) => (
-            
-            <div key={index} className="rounded-2xl p-6 cursor-pointer hover:bg-gradient-to-r from-[#d3f8e3] to-[#C7DBF0] transition-colors duration-200 lg:self-start" onClick={() => toggleAnalytics(index)}>
-              <Box
-                className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon"
-                sx={{
-                  background: "rgba(255, 255, 255, 0.9)",
-                  backdropFilter: "blur(5px)",
-                  boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
-                }}
-              >
-                <feature.icon className="h-6 w-6 text-blue-500" />
-              </Box>
-              <div className="flex items-center justify-between">
-                <h3 className="brand-card-title text-green-800">{feature.title}</h3>
-                <div className={`transform transition-transform duration-200 ${expandedAnalytics.has(index) ? 'rotate-180' : ''}`}>
-                  <ChevronDown className="h-5 w-5 text-gray-400" />
+                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:items-start">
+           {reportingFeatures.map((feature, index) => (
+             
+                                                                                                           <div key={index} className="bg-white rounded-2xl p-6 hover:bg-gray-50 transition-all duration-300 border border-gray-200 hover:border-gray-300 hover:shadow-xl lg:self-start shadow-lg h-full flex flex-col relative overflow-hidden group">
+                             {/* Security protocol hover background elements */}
+                             <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700">
+                               {/* Security grid pattern */}
+                               <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] scale-0 group-hover:scale-100 transition-transform duration-1000"></div>
+                               
+                               {/* Scanning security line */}
+                               <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1500"></div>
+                               
+                               {/* Security shield patterns */}
+                               <div className="absolute top-1/4 left-1/4 w-16 h-16 border border-cyan-400/20 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-800"></div>
+                               <div className="absolute bottom-1/4 right-1/4 w-12 h-12 border border-blue-400/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-800 delay-200"></div>
+                               
+                               {/* Security monitoring dots */}
+                               <div className="absolute top-4 left-4 w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                               <div className="absolute top-8 right-8 w-1 h-1 bg-blue-400 rounded-full animate-ping"></div>
+                               <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-green-400 rounded-full animate-bounce"></div>
+                               <div className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-300 rounded-full animate-pulse"></div>
+                               
+                               {/* Security lock patterns */}
+                               <div className="absolute top-1/3 right-1/3 w-8 h-8 border-2 border-cyan-400/30 rounded-lg transform rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-300"></div>
+                               <div className="absolute bottom-1/3 left-1/3 w-6 h-6 border-2 border-blue-400/30 rounded-lg transform -rotate-12 scale-0 group-hover:scale-100 transition-transform duration-700 delay-500"></div>
+                               
+                               {/* Glowing security orbs */}
+                               <div className="absolute top-1/3 right-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-300"></div>
+                               <div className="absolute bottom-1/3 left-1/3 w-6 h-6 bg-gradient-to-r from-green-400/20 to-cyan-400/20 rounded-full blur-sm scale-0 group-hover:scale-100 transition-transform duration-800 delay-500"></div>
+                               
+                               {/* Security circuit patterns */}
+                               <div className="absolute top-1/2 left-1/2 w-20 h-20 border border-cyan-400/15 rounded-lg transform rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-400"></div>
+                               <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-blue-400/15 rounded-lg transform -rotate-45 scale-0 group-hover:scale-100 transition-transform duration-1000 delay-600"></div>
+                             </div>
+                             <Box
+                 className="w-12 h-12 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon relative z-10"
+                 sx={{
+                   background: "rgba(255, 255, 255, 0.9)",
+                   backdropFilter: "blur(5px)",
+                   boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
+                 }}
+               >
+                 <feature.icon className="h-6 w-6 text-blue-500 group-hover:text-cyan-600 transition-colors duration-300" />
+               </Box>
+                                                           <div className="flex-1 flex flex-col relative z-10">
+                                    <div className="flex items-center justify-between">
+                                           <h3 className="brand-card-title text-gray-800 group-hover:text-gray-900 transition-colors duration-300">{feature.title}</h3>
+                   </div>
+                                    <div className="flex-1 mt-3">
+                                           <p className="text-gray-600 mb-4 group-hover:text-gray-700 transition-colors duration-300">{feature.description}</p>
+                     <div className="space-y-2">
+                       {feature.metrics.map((metric, idx) => (
+                                                   <div key={idx} className="flex items-center text-sm text-gray-600 group-hover:text-gray-700 transition-colors duration-300">
+                            <div className="w-2 h-2 bg-gray-400 rounded-full mr-2 group-hover:bg-gray-600 transition-colors duration-300"></div>
+                           {metric}
+                         </div>
+                       ))}
+                     </div>
+                   </div>
                 </div>
-              </div>
-              <div className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedAnalytics.has(index) ? 'max-h-96 opacity-100 mt-3' : 'max-h-0 opacity-0'}`}>
-                <p className="text-green-700 mb-4">{feature.description}</p>
-                <div className="space-y-2">
-                  {feature.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center text-sm text-green-700">
-                      <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                      {metric}
-                    </div>
-                  ))}
-                </div>
-              </div>
             </div>
           ))}
         </div>
