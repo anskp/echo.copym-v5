@@ -1,6 +1,7 @@
 import Hero from "./sections/Hero";
 import CurvedSectionDivider from "./sections/CurvedSectionDivider";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
+import AIInvestingSection from "./sections/AIInvestingSection";
 import IssuerSection from "./sections/IssuerSection";
 import WhyCopym from "./sections/WhyCopym";
 import Testimonials from "./sections/Testimonials";
@@ -13,6 +14,7 @@ export default function HomePage() {
       <Hero />
       <CurvedSectionDivider />
       <TrackYourCrypto />
+      <AIInvestingSection />
       {/* <SupportedAssets /> */}
       <IssuerSection />
       <WhyCopym />
