@@ -1,0 +1,343 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  color-scheme: dark;
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-n-8 text-n-1 text-base;
+  }
+}
+
+.rotate-45 {
+  @apply rotate-[45deg];
+}
+
+.rotate-90 {
+  @apply rotate-[90deg];
+}
+
+.rotate-135 {
+  @apply rotate-[135deg];
+}
+
+.rotate-180 {
+  @apply rotate-[180deg];
+}
+
+.rotate-225 {
+  @apply rotate-[225deg];
+}
+
+.rotate-270 {
+  @apply rotate-[270deg];
+}
+
+.rotate-315 {
+  @apply rotate-[315deg];
+}
+
+.rotate-360 {
+  @apply rotate-[360deg];
+}
+
+.-rotate-45 {
+  @apply rotate-[-45deg];
+}
+
+.-rotate-90 {
+  @apply rotate-[-90deg];
+}
+
+.-rotate-135 {
+  @apply rotate-[-135deg];
+}
+
+.-rotate-180 {
+  @apply rotate-[-180deg];
+}
+
+.-rotate-225 {
+  @apply rotate-[-225deg];
+}
+
+.-rotate-270 {
+  @apply rotate-[-270deg];
+}
+
+.-rotate-315 {
+  @apply rotate-[-315deg];
+}
+
+.-rotate-360 {
+  @apply rotate-[-360deg];
+}
+
+@layer components {
+  .brand-title {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight;
+  }
+
+
+  .brand-section-title {
+    @apply text-4xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight;
+  }
+
+  .brand-card-title {
+    @apply text-xl font-semibold;
+  }
+
+  .brand-description {
+    @apply text-xl text-gray-600 leading-relaxed;
+  }
+
+  .btn-gradient {
+    @apply inline-flex items-center justify-center h-12 px-8 text-white font-semibold text-base rounded-full bg-[#255f99] hover:bg-[#1e4c80] transition-all duration-200;
+  }
+
+
+  .btn-gradient-secondary {
+    @apply inline-flex items-center justify-center h-12 px-8 text-white font-semibold text-base rounded-full bg-gray-500 hover:bg-gray-600 transition-all duration-200;
+  }
+}
+
+/* Delta-Style Navbar Styles */
+.navbar {
+  position: relative;
+  padding: 20px 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-pills {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 8px;
+  display: flex;
+  gap: 4px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  color: #1e40af;
+  text-decoration: none;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #1d4ed8;
+  background: rgba(30, 64, 175, 0.1);
+}
+
+.nav-link.active {
+  background: rgba(30, 64, 175, 0.15);
+  color: #1d4ed8;
+}
+
+.dropdown-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+  color: #1e40af;
+}
+
+.nav-item:hover .dropdown-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #e0f2fe;
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  min-width: 640px;
+  max-width: 640px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.nav-item:hover .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #e0f2fe;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.dropdown-item:hover {
+  background: #b3e5fc;
+  border-color: rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.dropdown-icon-wrapper {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropdown-content {
+  flex: 1;
+}
+
+.dropdown-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e40af;
+  margin-bottom: 6px;
+}
+
+.dropdown-description {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.dropdown-item img {
+  background: #e0f2fe;
+  border-radius: 12px;
+  padding: 8px;
+}
+
+.dropdown-item:hover img {
+  background: #b3e5fc;
+}
+
+/* Icon backgrounds */
+.icon-tokenization { background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); }
+.icon-marketplace { background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
+.icon-accesspass { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.icon-copymi { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+.icon-about { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+.icon-roadmap { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+.icon-contact { background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-pills {
+    display: none;
+  }
+  
+  /* Only apply these styles to desktop dropdowns, not mobile */
+  .nav-pills .dropdown {
+    min-width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .nav-pills .nav-item:hover .dropdown {
+    transform: translateX(-50%) translateY(0);
+  }
+  
+  .dropdown-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hologram Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(-10px);
+  }
+}
+
+@keyframes hologramFlicker {
+  0% {
+    opacity: 0.8;
+    filter: brightness(1) blur(0px);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1.2) blur(1px);
+  }
+}
+
+/* Reverse float animation for the left hologram */
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(-10px);
+  }
+}
