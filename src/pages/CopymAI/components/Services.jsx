@@ -5,7 +5,6 @@ import Button from "./Button";
 import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
-import { curve } from "../assets";
 import {
   PhotoChatMessage,
   VideoBar,
@@ -24,13 +23,6 @@ const Services = () => {
                Why Choose{" "}
                <span className="inline-block relative font-semibold">
                  COPYM AI
-                 <img
-                   src={curve}
-                   className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                   width={624}
-                   height={28}
-                   alt="Curve"
-                 />
                </span>
              </>
            }
@@ -52,7 +44,7 @@ const Services = () => {
 
             <div className="relative z-1 max-w-[25rem] ml-auto bg-blue-100 opacity-70 rounded-2xl p-4">
               <div className="bg-blue-100 opacity-70 rounded-2xl mb-6">
-               <h4 className="h4 mb-4 text-black">COPYM AI</h4>
+               <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM AI</h4>
                               <p className="body-2 mb-[3rem] text-black">
                   COPYM-AI is the first unified platform that integrates the world's leading RWA platforms with advanced AI capabilities, creating a seamless tokenization experience.
                 </p>
@@ -109,7 +101,7 @@ const Services = () => {
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
               <div className="bg-blue-100 p-4 opacity-70 rounded-2xl mb-6">
-                                 <h4 className="h4 mb-4 text-black">COPYM-AI Real Estate</h4>
+                                 <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM-AI Real Estate</h4>
                  <p className="body-2 mb-[3rem] text-black">
                    COPYM-AI's proprietary AI models for real estate valuation and rental income prediction, enhanced by RealT's proven tokenization infrastructure.
                  </p>
@@ -121,7 +113,7 @@ const Services = () => {
 
             <div className="p-4 bg-transparent rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                                 <h4 className="h4 mb-4 text-black">COPYM-AI Smart Contracts</h4>
+                                 <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM-AI Smart Contracts</h4>
                  <p className="body-2 mb-[2rem] text-black">
                    COPYM-AI's intelligent smart contract generation and atomic transfer optimization, powered by Algorand's advanced blockchain technology.
                  </p>
@@ -177,7 +169,7 @@ const Services = () => {
 
         {/* Comparison Table */}
         <div className="mt-20">
-          <h3 className="h3 text-center mb-12 text-black">Institutional Advantage: COPYmAI vs Traditional Platforms</h3>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight text-center mb-12 text-black uppercase anton-regular">Institutional Advantage: COPYmAI vs Traditional Platforms</h3>
           <div className="relative z-1 border border-gray-300 rounded-3xl overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -198,60 +190,70 @@ const Services = () => {
                        </td>
                        <td className="p-6 text-center">
                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                           Basic / None
+                           Basic
                          </span>
                        </td>
-                    </tr>
-                    <tr className="border-b border-gray-300">
-                    <td className="p-6 font-semibold text-black">Minimum Investment</td>
-                    <td className="p-6 text-center text-color-1 font-bold">$100</td>
-                    <td className="p-6 text-center text-black">$10K+</td>
-                  </tr>
-                                       <tr className="border-b border-gray-300">
-                       <td className="p-6 font-semibold text-black">Asset Verification</td>
-                                            <td className="p-6 text-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                            AI + Expert Review
-                          </span>
-                        </td>
-                        <td className="p-6 text-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                            Manual / Limited
-                          </span>
-                        </td>
                      </tr>
                      <tr className="border-b border-gray-300">
-                    <td className="p-6 font-semibold text-black">Liquidity</td>
-                                         <td className="p-6 text-center">
-                       <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                         Instant Trades
-                       </span>
-                     </td>
-                    <td className="p-6 text-center text-black">Weeks / Months</td>
-                  </tr>
-                  <tr>
-                    <td className="p-6 font-semibold text-black">Portfolio Management</td>
-                                         <td className="p-6 text-center">
-                       <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                         AI-Optimized
-                       </span>
-                     </td>
-                     <td className="p-6 text-center">
-                                              <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                         Manual / Limited
-                       </span>
-                     </td>
-                   </tr>
-                 </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+                       <td className="p-6 font-semibold text-black">Cross-Chain Support</td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
+                           Multi-Chain
+                         </span>
+                       </td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
+                           Single Chain
+                         </span>
+                       </td>
+                     </tr>
+                     <tr className="border-b border-gray-300">
+                       <td className="p-6 font-semibold text-black">Compliance Automation</td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
+                           AI-Powered
+                         </span>
+                       </td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
+                           Manual
+                         </span>
+                       </td>
+                     </tr>
+                     <tr className="border-b border-gray-300">
+                       <td className="p-6 font-semibold text-black">Real-Time Analytics</td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
+                           Advanced
+                         </span>
+                       </td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
+                           Limited
+                         </span>
+                       </td>
+                     </tr>
+                     <tr>
+                       <td className="p-6 font-semibold text-black">Smart Contract Security</td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
+                           Military-Grade
+                         </span>
+                       </td>
+                       <td className="p-6 text-center">
+                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
+                           Standard
+                         </span>
+                       </td>
+                     </tr>
+                   </tbody>
+                 </table>
+               </div>
+             </div>
+           </div>
+         </div>
+       </Section>
+     );
+   };
 
-
-      </div>
-    </Section>
-  );
-};
-
-export default Services;
+   export default Services;

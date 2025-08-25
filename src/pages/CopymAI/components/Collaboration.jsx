@@ -1,4 +1,4 @@
-import { brainwaveSymbol, copymWhiteIcon, copymColoredIcon, check, curve } from "../assets";
+import { brainwaveSymbol, copymWhiteIcon, copymColoredIcon, check } from "../assets";
 import { collabApps, collabContent, collabText } from "../constants";
 import Button from "./Button";
 import { LeftCurve, RightCurve } from "./design/Collaboration";
@@ -13,13 +13,6 @@ const Collaboration = () => {
             AI-Powered RWA Tokenization for Seamless
             <span className="inline-block relative font-semibold">
               Asset Management
-              <img
-                src={curve}
-                className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                width={624}
-                height={28}
-                alt="Curve"
-              />
             </span>
           </h2>
 
