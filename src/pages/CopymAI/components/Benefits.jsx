@@ -4,7 +4,6 @@ import { benefits } from "../constants";
 import { GradientLight } from "./design/Benefits";
 import Heading from "./Heading";
 import Section from "./Section";
-import { curve } from "../assets";
 
 const Benefits = () => {
   return (
@@ -17,13 +16,6 @@ const Benefits = () => {
               RWA Tokenization Powered by{" "}
               <span className="inline-block relative font-semibold">
                 COPYM-AI
-                <img
-                  src={curve}
-                  className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                  width={624}
-                  height={28}
-                  alt="Curve"
-                />
               </span>
             </>
           }
@@ -39,7 +31,7 @@ const Benefits = () => {
               key={benefit.id}
             >
               <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="h5 mb-5 text-black">{benefit.title}</h5>
+                <h5 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-5 text-black uppercase anton-regular">{benefit.title}</h5>
                 <p className="body-2 mb-6 text-black">{benefit.text}</p>
                 <div className="flex items-center mt-auto">
                   <img

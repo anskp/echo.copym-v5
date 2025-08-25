@@ -35,10 +35,16 @@ import {
     yourlogo,
     avalanche,
     bitcoin,
+    bnb,
     ethereum,
+    lympo,
+    near,
     optimism,
+    polkadot,
     polygon,
     solana,
+    stellar,
+    uniswap,
 } from "../assets";
 import { links } from "../config";
 
@@ -75,7 +81,20 @@ export const heroIcons = [homeSmile, file02, searchMd, plusSquare];
 
 export const notificationImages = [notification4, notification3, notification2];
 
-export const companyLogos = [avalanche, bitcoin, ethereum, optimism, polygon, solana, ];
+export const companyLogos = [
+    avalanche,
+    bitcoin,
+    bnb,
+    ethereum,
+    lympo,
+    near,
+    optimism,
+    polkadot,
+    polygon,
+    solana,
+    stellar,
+    uniswap
+];
 
 export const brainwaveServices = [
     "RWA Tokenization",

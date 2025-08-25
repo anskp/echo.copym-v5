@@ -64,7 +64,7 @@ const Roadmap = () => (
                       alt={item.title}
                     />
                   </div>
-                  <h4 className="h4 mb-4 text-black">{item.title}</h4>
+                  <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">{item.title}</h4>
                   <p className="body-2 text-black">{item.text}</p>
                 </div>
               </div>
