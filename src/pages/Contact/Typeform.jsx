@@ -213,16 +213,20 @@ export default function Typeform() {
   };
 
   return (
-    <div className={`min-h-screen ${THEME.pageBg} text-[#0f1f3d] flex items-center justify-center px-4 py-8`}>
-      <div className="relative w-full max-w-3xl bg-white/90 backdrop-blur-xl rounded-3xl p-8 sm:p-12 shadow-2xl border border-white/60 overflow-hidden transition-all duration-300">
+    <div className="min-h-screen text-white flex items-center justify-center px-4 py-2">
+      <div className="relative w-full max-w-4xl bg-gradient-to-r from-black via-green-600 to-black backdrop-blur-xl rounded-[50px] p-8 sm:p-12 shadow-2xl border border-white/20 overflow-hidden transition-all duration-300">
         
         {/* Enhanced Brand */}
         <div className="absolute top-8 left-8 flex items-center gap-4">
-          <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#3B82F6] to-[#60A5FA] grid place-items-center shadow-xl">
-            <span className="font-black text-white text-lg">C</span>
+          <div className="h-12 w-12 rounded-2xl bg-white/10 backdrop-blur-sm border border-white/30 grid place-items-center shadow-xl overflow-hidden">
+            <img 
+              src="/assets/copym/png/Copym-05-1.png" 
+              alt="Copym Logo" 
+              className="w-8 h-8 object-contain"
+            />
           </div>
           <div className="leading-tight">
-            <p className="font-bold tracking-wide text-lg text-[#1E3A8A]">Copym</p>
+            <p className="font-bold tracking-wide text-lg text-white">Copym</p>
           </div>
         </div>
 
@@ -230,39 +234,60 @@ export default function Typeform() {
         <div className="min-h-[400px] pt-16">
           <AnimatePresence mode="wait">
             {!showForm ? (
-              // Enhanced Landing Screen
+              // Enhanced Landing Screen with MarketSlider-inspired styling
               <motion.div
                 key="landing"
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="text-center max-w-2xl mx-auto"
+                className="text-center max-w-4xl mx-auto"
               >
-                <div className="mb-8">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-100 mb-6">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm font-medium text-blue-700">Quick & Secure</span>
+                {/* Enhanced Section Header */}
+                <motion.div 
+                  className="mb-16"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/20 backdrop-blur-sm rounded-full border border-white/30 mb-8">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-sm font-semibold text-white">Quick & Secure Process</span>
                   </div>
-                  <h1 className="text-3xl sm:text-4xl font-bold text-[#1E3A8A] leading-tight mb-6">
-                    Ready to Tokenize Your Assets?
+                  
+                  <h1 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+                    <span className="text-white">READY TO </span>
+                    <span className="text-black">TOKENIZE YOUR ASSETS?</span>
                   </h1>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-2">
-                    This form takes only <span className="font-semibold text-[#2563EB]">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
+                  
+                  <p className="text-xl text-black/80 max-w-3xl mx-auto mb-8">
+                    This form takes only <span className="font-bold text-white bg-black/20 px-2 py-1 rounded-lg">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
                   </p>
-                  <p className="text-base text-gray-500">
+                  
+                  <p className="text-lg text-black/70 max-w-2xl mx-auto">
                     Join the future of Real World Asset tokenization with Copym.
                   </p>
-                </div>
-                <motion.button
-                  onClick={() => setShowForm(true)}
-                  className={`px-10 py-4 rounded-2xl ${THEME.ctaGrad} font-bold text-lg shadow-xl ${THEME.ctaHover} ${THEME.ring} transition-all duration-200`}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </motion.div>
+
+                {/* Enhanced CTA Button */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
                 >
-                  Get Started →
-                </motion.button>
-                <p className="text-xs text-gray-400 mt-4">Secure & confidential</p>
+                  <motion.button
+                    onClick={() => setShowForm(true)}
+                    className="px-12 py-5 rounded-2xl bg-[#255f99] text-white font-bold text-xl shadow-2xl border border-white/30 hover:bg-[#1e4a7a] transition-all duration-300 backdrop-blur-sm"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.98 }}
+                  >
+                    Get Started →
+                  </motion.button>
+                  
+                  <p className="text-sm text-black/60 mt-6 font-medium">Secure & confidential • Enterprise-grade encryption</p>
+                </motion.div>
               </motion.div>
             ) : !submitted ? (
               // Enhanced Form Screen
@@ -276,19 +301,19 @@ export default function Typeform() {
                 {/* Progress Indicator */}
                 <div className="mb-8">
                   <div className="flex justify-between items-center mb-4">
-                    <span className="text-sm font-medium text-gray-500">
+                    <span className="text-sm font-medium text-white/70">
                       Question {stepIndex + 1} of {steps.length}
                     </span>
                     <div className="flex items-center gap-2">
-                      <div className="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
+                      <div className="w-32 h-2 bg-white/20 rounded-full overflow-hidden">
                         <motion.div 
-                          className="h-full bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] rounded-full"
+                          className="h-full bg-gradient-to-r from-[#255f99] to-[#1e4a7a] rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
                           transition={{ duration: 0.5 }}
                         />
                       </div>
-                      <span className="text-xs font-medium text-[#2563EB]">
+                      <span className="text-xs font-medium text-white">
                         {Math.round(((stepIndex + 1) / steps.length) * 100)}%
                       </span>
                     </div>
@@ -300,21 +325,21 @@ export default function Typeform() {
                   <div className="flex items-start gap-4 mb-6">
                     <motion.button
                       onClick={handleBack}
-                      className="p-3 rounded-2xl hover:bg-[#F7FAFF] border border-[#E0E7FF] transition-all hover:shadow-md"
+                      className="p-3 rounded-2xl hover:bg-white/10 border border-white/30 transition-all hover:shadow-md"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <ArrowLeft className="w-5 h-5 text-[#2563EB]" />
+                      <ArrowLeft className="w-5 h-5 text-white" />
                     </motion.button>
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#EFF4FF] to-[#E0E7FF] grid place-items-center border border-[#E0E7FF] shadow-sm">
-                          <step.icon className="w-6 h-6" style={{ color: THEME.accent.mid }} />
+                        <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#255f99] to-[#1e4a7a] grid place-items-center border border-white/30 shadow-sm">
+                          <step.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
-                          <h2 className="text-2xl sm:text-3xl font-bold text-[#1E3A8A] leading-tight">{step.label}</h2>
+                          <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">{step.label}</h2>
                           {step.helper && (
-                            <p className="text-base text-gray-600 mt-2">{step.helper}</p>
+                            <p className="text-base text-white/70 mt-2">{step.helper}</p>
                           )}
                         </div>
                       </div>
@@ -334,14 +359,14 @@ export default function Typeform() {
 
                 {error && (
                   <motion.div 
-                    className="mb-6 p-4 bg-red-50 border border-red-200 rounded-2xl flex items-center gap-3"
+                    className="mb-6 p-4 bg-red-500/20 border border-red-400/30 rounded-2xl flex items-center gap-3 backdrop-blur-sm"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                   >
-                    <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center">
-                      <span className="text-red-600 text-sm">⚠</span>
+                    <div className="w-8 h-8 bg-red-500/30 rounded-full flex items-center justify-center">
+                      <span className="text-red-200 text-sm">⚠</span>
                     </div>
-                    <span className="text-red-700 font-medium">{error}</span>
+                    <span className="text-red-200 font-medium">{error}</span>
                   </motion.div>
                 )}
 
@@ -351,7 +376,7 @@ export default function Typeform() {
                     <motion.button
                       onClick={handleNext}
                       disabled={!form[step.id]}
-                      className={`px-8 py-4 rounded-2xl ${THEME.ctaGrad} font-bold text-lg shadow-xl ${THEME.ctaHover} ${THEME.ring} transition-all duration-200 ${
+                      className={`px-8 py-4 rounded-2xl bg-[#255f99] text-white font-bold text-lg shadow-xl hover:bg-[#1e4a7a] transition-all duration-200 ${
                         !form[step.id] ? 'opacity-50 cursor-not-allowed hover:scale-100' : ''
                       }`}
                       whileHover={form[step.id] ? { scale: 1.05 } : {}}
@@ -364,7 +389,7 @@ export default function Typeform() {
                   {["text", "email", "url", "number", "textarea", "group"].includes(step.type) && (
                     <motion.button
                       onClick={handleNext}
-                      className={`px-8 py-4 rounded-2xl ${THEME.ctaGrad} font-bold text-lg shadow-xl ${THEME.ctaHover} ${THEME.ring} transition-all duration-200`}
+                      className="px-8 py-4 rounded-2xl bg-[#255f99] text-white font-bold text-lg shadow-xl hover:bg-[#1e4a7a] transition-all duration-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -402,7 +427,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                 step.type === "number" ? e.target.value.replace(/[^0-9.]/g, "") : e.target.value
               )
             }
-            className={`w-full px-6 py-5 text-lg rounded-2xl bg-white border-2 border-[#E0E7FF] placeholder-[#9AA7C7] outline-none ${THEME.ring} ${THEME.inputFocus} transition-all duration-200`}
+            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200"
             placeholder="Type your answer..."
             autoFocus
           />
@@ -420,7 +445,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
             rows={6}
             value={value || ""}
             onChange={(e) => onChange(step.id, e.target.value)}
-            className={`w-full px-6 py-5 text-lg rounded-2xl bg-white border-2 border-[#E0E7FF] placeholder-[#9AA7C7] outline-none resize-none ${THEME.ring} ${THEME.inputFocus} transition-all duration-200`}
+            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none resize-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200"
             placeholder="Share your thoughts here..."
             autoFocus
           />
@@ -443,8 +468,8 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                 onClick={() => onChange(step.id, opt)}
                 className={`w-full text-left px-6 py-5 rounded-2xl border-2 transition-all duration-200 text-lg font-medium ${
                   active
-                    ? "border-[#60A5FA] bg-gradient-to-r from-[#EAF2FF] to-[#F0F7FF] text-[#1E3A8A] shadow-lg transform scale-[1.02]"
-                    : "border-[#E0E7FF] bg-white hover:bg-[#F7FAFF] hover:border-[#C7D2FE] hover:shadow-md hover:scale-[1.01]"
+                    ? "border-[#255f99] bg-gradient-to-r from-[#255f99] to-[#1e4a7a] text-white shadow-lg transform scale-[1.02]"
+                    : "border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 hover:shadow-md hover:scale-[1.01] text-white"
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -455,8 +480,8 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                 <div className="flex items-center justify-between">
                   <span>{opt}</span>
                   {active && (
-                    <div className="w-6 h-6 bg-[#60A5FA] rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm">✓</span>
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#255f99] text-sm">✓</span>
                     </div>
                   )}
                 </div>
@@ -481,7 +506,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
               value={address?.[f.key] || ""}
               onChange={(e) => onAddressChange(f.key, e.target.value)}
               placeholder={f.label}
-              className={`px-6 py-4 rounded-2xl bg-white border-2 border-[#E0E7FF] placeholder-[#9AA7C7] outline-none ${THEME.ring} ${THEME.inputFocus} transition-all duration-200 text-lg ${f.key === 'line2' ? 'sm:col-span-2' : ''}`}
+              className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200 text-lg ${f.key === 'line2' ? 'sm:col-span-2' : ''}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -503,7 +528,7 @@ function ThankYou() {
       className="text-center max-w-2xl mx-auto"
     >
       <motion.div 
-        className="mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-[#10B981] to-[#34D399] grid place-items-center shadow-2xl mb-8"
+        className="mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-[#255f99] to-[#1e4a7a] grid place-items-center shadow-2xl mb-8"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
@@ -516,35 +541,35 @@ function ThankYou() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
-        <h2 className="text-4xl font-bold mb-4" style={{ color: THEME.accent.deep }}>
+        <h2 className="text-4xl font-bold mb-4 text-white">
           Application Submitted! 🎉
         </h2>
-        <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+        <p className="text-xl text-white/80 mb-6 leading-relaxed">
           Thank you for your interest in tokenizing with{" "}
-          <span className="text-[#2563EB] font-bold">Copym</span>
+          <span className="text-white font-bold">Copym</span>
         </p>
         
-        <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-          <h3 className="font-semibold text-[#1E3A8A] mb-2">What happens next?</h3>
-          <div className="text-left space-y-2 text-gray-700">
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/30">
+          <h3 className="font-semibold text-white mb-2">What happens next?</h3>
+          <div className="text-left space-y-2 text-white/80">
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
               <span>Our team will review your application within 24 hours</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
               <span>We'll schedule a consultation call to discuss your tokenization goals</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
               <span>You'll receive a personalized tokenization strategy</span>
             </div>
           </div>
         </div>
         
-        <p className="text-sm text-gray-500 mt-6">
+        <p className="text-sm text-white/60 mt-6">
           Questions? Contact us at{" "}
-          <a href="mailto:hello@copym.xyz" className="text-[#2563EB] hover:underline font-medium">
+          <a href="mailto:hello@copym.xyz" className="text-white hover:underline font-medium">
             hello@copym.xyz
           </a>
         </p>

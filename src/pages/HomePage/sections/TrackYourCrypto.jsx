@@ -44,7 +44,7 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-10 text-center lg:text-left">
             <div className="space-y-8">
-              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight anton-regular">
                 Track your Assets. <span className="text-green-600">Anywhere.</span>
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
