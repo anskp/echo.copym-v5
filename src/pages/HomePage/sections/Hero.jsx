@@ -119,51 +119,51 @@ export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+    <section className="relative min-h-screen sm:min-h-[80vh] lg:min-h-[70vh] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-8 pb-4 sm:pb-6 lg:pb-8">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start h-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 pb-8 sm:pb-12 lg:pb-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center min-h-[calc(100vh-4rem)] sm:min-h-[calc(80vh-6rem)] lg:min-h-[calc(70vh-8rem)]">
           {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left lg:pt-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
+          <div className="text-center lg:text-left order-2 lg:order-1 w-full">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular px-1 sm:px-2 md:px-0 break-words">
               <span className="text-gray-900">UNLOCK </span>
               <span className="text-green-600">EXCLUSIVE</span>
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-gray-900">ASSETS, INVEST WITH </span>
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-green-600">CONFIDENCE</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 px-1 sm:px-2 md:px-4 lg:px-0 break-words">
               Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start px-1 sm:px-2 md:px-4 lg:px-0 w-full">
               <Link
                 to="/marketplace"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 py-3 sm:py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl sm:rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm md:text-base w-full sm:w-auto max-w-full overflow-hidden"
               >
-                Start Investing
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="truncate">Start Investing</span>
+                <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 flex-shrink-0" />
               </Link>
 
               <button
                 onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-2xl sm:rounded-3xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-2 sm:px-3 md:px-4 lg:px-6 xl:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl sm:rounded-2xl lg:rounded-3xl transition-all duration-300 transform hover:scale-105 text-xs sm:text-sm md:text-base w-full sm:w-auto max-w-full overflow-hidden"
               >
-                Watch Demo
+                <span className="truncate">Watch Demo</span>
               </button>
             </div>
           </div>
 
           {/* Right Side - Dual Phone Mockups */}
-          <div className="flex justify-center lg:justify-start lg:pt-16 lg:pl-2 mt-8 lg:mt-0">
-            <div className="flex gap-4 sm:gap-6 items-center">
+          <div className="flex justify-center lg:justify-start order-1 lg:order-2 mb-8 lg:mb-0 w-full">
+            <div className="flex gap-1 sm:gap-2 md:gap-3 lg:gap-4 xl:gap-6 items-center scale-40 sm:scale-50 md:scale-75 lg:scale-90 xl:scale-100 max-w-full">
               <HeroPhone3D />
               <HeroPhone3DWallet />
             </div>
@@ -171,46 +171,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Curved Transition Section */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[5rem] transform translate-y-1/2"></div>
 
-        {/* Investor's Toolkit Section */}
-        <div className="relative z-10 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[5rem] pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-14 lg:pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-14 lg:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Investor's toolkit</h2>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <FeatureCard
-                icon={Wallet}
-                title="Link what you love"
-                description="Connect your wallets and exchanges effortlessly. Delta brings all your crypto together in one place."
-                color="from-green-500 to-emerald-600"
-              />
-              <FeatureCard
-                icon={TrendingUp}
-                title="Stay ahead"
-                description="Stay informed with tailored alerts and updates. From Why Is It Moving to price predictions."
-                color="from-yellow-500 to-orange-600"
-              />
-              <FeatureCard
-                icon={BarChart3}
-                title="Master your portfolio"
-                description="Track every coin, every move, and your entire portfolio with crystal clarity."
-                color="from-pink-500 to-purple-600"
-              />
-              <FeatureCard
-                icon={Zap}
-                title="Uncover new horizons"
-                description="Discover opportunities and market trends with tools like What's Moving and advanced analytics."
-                color="from-blue-500 to-cyan-600"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
 
       {isVideoOpen && (
         <div
