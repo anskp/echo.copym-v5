@@ -326,16 +326,16 @@ const Contact = () => {
         initial="hidden"
         animate="visible"
       >
-        {/* Header - Enhanced Mobile Responsiveness */}
-        <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
-            Keep in <span className="text-[#065f46]">Touch</span>
-          </h1>
-          <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
-            Connect with our team for investor onboarding, asset tokenization,
-            legal compliance, or technical integration.
-          </p>
-        </motion.div>
+                 {/* Header - Enhanced Mobile Responsiveness */}
+         <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
+           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
+             Let's <span className="text-[#065f46]">Connect</span>
+           </h1>
+           <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
+             Connect with our team for investor onboarding, asset tokenization,
+             legal compliance, or technical integration.
+           </p>
+         </motion.div>
 
         {/* Quick Contact Cards - Smart 3-Column Layout */}
         {/* <motion.div className="grid gap-3 sm:gap-4 lg:gap-6 grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-12" variants={itemVariants}>
@@ -389,12 +389,14 @@ const Contact = () => {
         {/* Main Content Grid - Fixed Responsive Layout */}
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Form - Optimized for all screens */}
-          <motion.div className="lg:col-span-2" variants={itemVariants}>
+          <motion.div className="lg:col-span-3" variants={itemVariants}>
             <Typeform />
           </motion.div>
+        </div>
 
-          {/* Sidebar - Fixed for better screen utilization */}
-          <motion.div className="space-y-6" variants={itemVariants}>
+        {/* Horizontal Sidebar Sections */}
+        <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {/* Contact Information - Single Consolidated Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
               <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Contact Information</h3>
@@ -425,7 +427,7 @@ const Contact = () => {
                   </div>
                 ))}
               </div>
-              </div>
+            </div>
               
             {/* Social Media & Resources - Combined Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
@@ -466,9 +468,9 @@ const Contact = () => {
                       <span className="text-gray-700 text-xs">{r.name}</span>
                     </a>
                   ))}
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
 
             {/* Why Partner With Us - Simplified */}
             <div className="bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-2xl p-4 sm:p-6 text-white">
@@ -485,8 +487,8 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-          </motion.div>
-        </div>
+          </div>
+        </motion.div>
 
         {/* Map Section - Optimized layout */}
         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
