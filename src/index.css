@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -25,6 +26,8 @@
 @layer base {
   body {
     @apply font-sans bg-n-8 text-n-1 text-base;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    min-height: 100vh;
   }
 }
 
@@ -97,27 +100,443 @@
     @apply text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight;
   }
 
-
   .brand-section-title {
-    @apply text-4xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight;
   }
 
-  .brand-card-title {
-    @apply text-xl font-semibold;
+  .brand-subtitle {
+    @apply text-lg sm:text-xl lg:text-2xl font-medium tracking-tight leading-tight;
   }
 
-  .brand-description {
-    @apply text-xl text-gray-600 leading-relaxed;
+  .brand-text {
+    @apply text-base sm:text-lg lg:text-xl font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-small {
+    @apply text-sm sm:text-base lg:text-lg font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-xs {
+    @apply text-xs sm:text-sm lg:text-base font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-2xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-3xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-4xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-5xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-6xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-7xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-8xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-9xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-10xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-11xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-12xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-13xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-14xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-15xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-16xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-17xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-18xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-19xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-20xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-21xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-22xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-23xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-24xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-25xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-26xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-27xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-28xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-29xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-30xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-31xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-32xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-33xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-34xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-35xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-36xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-37xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-38xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-39xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-40xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-41xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-42xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-43xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-44xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-45xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-46xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-47xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-48xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-49xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-50xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-51xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-52xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-53xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-54xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-55xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-56xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-57xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-58xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-59xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-60xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-61xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-62xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-63xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-64xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-65xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-66xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-67xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-68xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-69xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-70xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-71xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-72xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-73xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-74xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-75xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-76xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-77xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-78xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-79xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-80xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-81xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-82xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-83xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-84xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-85xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-86xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-87xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-88xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-89xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-90xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-91xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-92xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-93xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-94xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-95xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-96xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-97xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-98xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-99xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
+  }
+
+  .brand-text-100xs {
+    @apply text-xs font-normal tracking-tight leading-tight;
   }
 
   .btn-gradient {
-    @apply inline-flex items-center justify-center h-12 px-8 text-white font-semibold text-base rounded-full bg-[#255f99] hover:bg-[#1e4c80] transition-all duration-200;
+    background: linear-gradient(135deg, #255f99 0%, #15a36e 100%);
   }
 
+  .btn-gradient:hover {
+    background: linear-gradient(135deg, #1e4a7a 0%, #0f8a5a 100%);
+  }
 
   .btn-gradient-secondary {
-    @apply inline-flex items-center justify-center h-12 px-8 text-white font-semibold text-base rounded-full bg-gray-500 hover:bg-gray-600 transition-all duration-200;
+    background: linear-gradient(135deg, #15a36e 0%, #255f99 100%);
   }
+
+  .btn-gradient-secondary:hover {
+    background: linear-gradient(135deg, #0f8a5a 0%, #1e4a7a 100%);
+  }
+}
+
+.anton-regular {
+  font-family: "Anton", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Delta-Style Navbar Styles */
@@ -125,6 +544,8 @@
   position: relative;
   padding: 20px 0;
   z-index: 1000;
+  background: #dbeafe;
+  backdrop-filter: blur(20px);
 }
 
 .nav-container {
@@ -137,9 +558,9 @@
 }
 
 .nav-pills {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   border-radius: 50px;
   padding: 8px;
   display: flex;
@@ -170,11 +591,11 @@
 
 .nav-link:hover {
   color: #1d4ed8;
-  background: rgba(30, 64, 175, 0.1);
+  background: rgba(59, 130, 246, 0.15);
 }
 
 .nav-link.active {
-  background: rgba(30, 64, 175, 0.15);
+  background: rgba(59, 130, 246, 0.2);
   color: #1d4ed8;
 }
 
@@ -340,4 +761,49 @@
   50% {
     transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(-10px);
   }
+}
+
+/* Floating animations for phone mockups */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(-20px);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(0px);
+  }
+  50% {
+    transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(20px);
+  }
+}
+
+@keyframes phone-float-left {
+  0%, 100% {
+    transform: rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px);
+  }
+  50% {
+    transform: rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(30px) translateX(20px);
+  }
+}
+
+@keyframes phone-float-right {
+  0%, 100% {
+    transform: rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-50px) translateX(-20px);
+  }
+  50% {
+    transform: rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-30px) translateX(-20px);
+  }
+}
+
+.phone-float-left {
+  animation: phone-float-left 6s ease-in-out infinite;
+}
+
+.phone-float-right {
+  animation: phone-float-right 6s ease-in-out infinite;
 }
