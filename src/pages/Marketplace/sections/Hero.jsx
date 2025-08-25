@@ -4,7 +4,12 @@ import { LavaLamp } from '../../../components/ui/fluid-blob';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-white via-white to-green-50">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      {/* Blue Background Pattern - Same as Homepage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      </div>
+
       {/* Fluid Blob Background */}
       <div className="absolute inset-0 opacity-30">
         <LavaLamp />
@@ -21,27 +26,25 @@ export default function Hero() {
         </div>
 
         <div className="text-center">
-          {/* Main Title - Full Width */}
-          <h1 className="brand-title rounded-lg px-6 py-4 inline-block mb-8">
-            <div className="text-[#255f99]">Explore Tokenized Real-World</div>
-            <div className="text-[#15a36e]">Assets</div>
+          {/* Main Title - Full Width with Homepage Font Styles */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-8 uppercase anton-regular">
+            <div className="text-gray-900">EXPLORE TOKENIZED</div>
+            <div className="text-green-600">REAL-WORLD ASSETS</div>
           </h1>
 
-          {/* Description */}
-          <p className="text-xl brand-description text-gray-700 leading-relaxed mb-12 max-w-4xl mx-auto px-8 py-6">
-            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks.
+          {/* Description with Homepage Style */}
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
+            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            {/* Primary Button – Enhanced gradient fill */}
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white btn-gradient hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-xl">
+          {/* CTA Buttons with Homepage Style */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Enter Marketplace
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
 
-            {/* Secondary Button – Enhanced styling */}
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white btn-gradient-secondary hover:shadow-2xl transform hover:scale-105 transition-all duration-300 rounded-xl">
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300 transform hover:scale-105">
               <Play className="mr-2 h-5 w-5" />
               Watch Demo
             </button>

@@ -19,7 +19,7 @@ import Launchkit from './pages/Launchkit/Launchkit';
 import AccessPage from './pages/AccessPage/AccessPage';
 import SplashScreen from './components/SplashScreen';
 import { animate } from 'animejs';
-import HeroTest from './pages/HeroTest';
+
 
 
 function App() {
@@ -77,7 +77,7 @@ function App() {
       ) : (
         <Box
         ref={appRef} 
-                   className={`min-h-screen relative text-text-primary overflow-x-hidden bg-white`}>
+                   className={`min-h-screen relative text-text-primary overflow-x-hidden`}>
           <ScrollToTop />
           <Header />
           <main className="relative z-20 overflow-x-hidden">
@@ -92,7 +92,6 @@ function App() {
               <Route path="/copym-ai" element={<CopymAI />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/access" element={<AccessPage />} />
-              <Route path="/hero-test" element={<HeroTest />} />
             </Routes>
           </main>
           <Footer />
