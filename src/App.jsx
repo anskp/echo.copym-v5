@@ -21,6 +21,7 @@ import SplashScreen from './components/SplashScreen';
 import { animate } from 'animejs';
 
 
+
 function App() {
   const location = useLocation();
    const [showSplash, setShowSplash] = useState(true);
@@ -28,6 +29,8 @@ function App() {
   
   // Check if we're on the copym-ai page
   const isCopymAIPage = location.pathname === "/copym-ai";
+  // Check if we're on the marketplace page (has its own header)
+  const isMarketplacePage = location.pathname === "/marketplace";
 
   // Handle splash screen timing
   useEffect(() => {
@@ -74,7 +77,7 @@ function App() {
       ) : (
         <Box
         ref={appRef} 
-         className={`min-h-screen relative text-text-primary overflow-x-hidden ${isCopymAIPage ? 'bg-blue-100' : 'bg-blue-100'}`}>
+                   className={`min-h-screen relative text-text-primary overflow-x-hidden`}>
           <ScrollToTop />
           <Header />
           <main className="relative z-20 overflow-x-hidden">

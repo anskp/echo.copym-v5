@@ -1,103 +1,69 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { ArrowRight, Play } from 'lucide-react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import { LavaLamp } from '../../../components/ui/fluid-blob';
 
 export default function Hero() {
-  const playerRef = useRef(null);
-
-  // Handle animation completion - stop at final frame
-  const handleComplete = () => {
-    if (playerRef.current) {
-      playerRef.current.pause();
-    }
-  };
-
   return (
-    <section className="relative pt-6 md:pt-4 pb-16 overflow-hidden w-full">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none">
-          <path
-            d="M100 100C200 200 300 50 400 150C500 250 600 100 700 200C800 300 900 150 1000 250"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-black"
-          />
-          <path
-            d="M0 300C100 400 200 250 300 350C400 450 500 300 600 400C700 500 800 350 900 450"
-            stroke="currentColor"
-            strokeWidth="2"
-            className="text-black"
-          />
-        </svg>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+      {/* Blue Background Pattern - Same as Homepage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
+      {/* Fluid Blob Background */}
+      <div className="absolute inset-0 opacity-30">
+        <LavaLamp />
+      </div>
+
+      {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 rounded-full text-sm font-medium text-gray-700 mb-5">
-              <span className="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
-              AI-Powered
-            </div>
+        {/* AI-Powered Badge - Top of Content */}
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
+            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            AI-Powered
+          </div>
+        </div>
 
-            <h1 className="brand-title rounded-lg px-4 py-2 inline-block">
-              <span className="text-[#255f99]">Explore Tokenized Real-World </span>
-              <span className="text-[#15a36e]">Assets</span>
-            </h1>
+        <div className="text-center">
+          {/* Main Title - Full Width with Homepage Font Styles */}
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-8 uppercase anton-regular">
+            <div className="text-gray-900">EXPLORE TOKENIZED</div>
+            <div className="text-green-600">REAL-WORLD ASSETS</div>
+          </h1>
 
-            <p className="text-lg brand-description text-black leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0">
-              Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks.
-            </p>
+          {/* Description with Homepage Style */}
+          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
+            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets.
+          </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              {/* Primary Button – Full gradient fill */}
-              <button className="inline-flex items-center justify-center px-6 py-2.5 font-semibold  text-white btn-gradient">
-                Enter Marketplace
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
+          {/* CTA Buttons with Homepage Style */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+              Enter Marketplace
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </button>
 
-              {/* Secondary Button – Muted gradient fill */}
-              <button className="inline-flex items-center justify-center px-6 py-2.5 font-semibold text-white btn-gradient-secondary">
-                <Play className="mr-2 h-5 w-5" />
-                Watch Demo
-              </button>
-            </div>
-
-            {/* Stats */}
-            {/* <div className="flex items-center justify-center lg:justify-start space-x-8 mt-10 text-sm text-gray-500">
-              <div>
-                <div className="font-semibold text-black text-lg">500K+</div>
-                <div>Active Users</div>
-              </div>
-              <div>
-                <div className="font-semibold text-black text-lg">$2.5B+</div>
-                <div>Assets Managed</div>
-              </div>
-              <div>
-                <div className="font-semibold text-black text-lg">15.2%</div>
-                <div>Avg. Returns</div>
-              </div>
-            </div> */}
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300 transform hover:scale-105">
+              <Play className="mr-2 h-5 w-5" />
+              Watch Demo
+            </button>
           </div>
 
-          {/* Right Content */}
-          {/* Dashboard Lottie Animation */}
-          <div className="flex items-start justify-center -mt-28 md:-mt-0 overflow-hidden">
-            <Player
-              ref={playerRef}
-              autoplay
-              loop={false}
-              keepLastFrame={true}
-              src="/assets/lottie/Online Business/Online Business.json"
-              style={{ height: '500px', width: '500px' }}
-              onEvent={(event) => {
-                if (event === 'complete') {
-                  handleComplete();
-                }
-              }}
-            />
+          {/* Additional UI Elements */}
+          <div className="mt-16 flex justify-center space-x-8 opacity-60">
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Secure</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">Compliant</span>
+            </div>
+            <div className="flex items-center space-x-2">
+              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+              <span className="text-sm text-gray-600">AI-Enhanced</span>
+            </div>
           </div>
         </div>
       </div>

@@ -5,7 +5,6 @@ import Button from "./Button";
 import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
-import { curve } from "../assets";
 import {
   PhotoChatMessage,
   VideoBar,
@@ -18,24 +17,17 @@ const Services = () => {
   return (
     <Section id="how-to-use">
       <div className="container">
-                 <Heading
-           title={
-             <>
-               Why Choose{" "}
-               <span className="inline-block relative font-semibold">
-                 COPYM AI
-                 <img
-                   src={curve}
-                   className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                   width={624}
-                   height={28}
-                   alt="Curve"
-                 />
-               </span>
-             </>
-           }
-           text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
-         />
+        <Heading
+          title={
+            <>
+              Why Choose{" "}
+              <span className="inline-block relative font-semibold">
+                COPYM AI
+              </span>
+            </>
+          }
+          text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
+        />
 
         <div className="relative">
           {/* Service 1 */}
@@ -52,11 +44,11 @@ const Services = () => {
 
             <div className="relative z-1 max-w-[25rem] ml-auto bg-blue-100 opacity-70 rounded-2xl p-4">
               <div className="bg-blue-100 opacity-70 rounded-2xl mb-6">
-               <h4 className="h4 mb-4 text-black">COPYM AI</h4>
-                              <p className="body-2 mb-[3rem] text-black">
+                <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM AI</h4>
+                <p className="body-2 mb-[3rem] text-black">
                   COPYM-AI is the first unified platform that integrates the world's leading RWA platforms with advanced AI capabilities, creating a seamless tokenization experience.
                 </p>
-                </div>
+              </div>
               <ul className="body-2">
                 <li className="flex items-start py-4 border-t border-gray-300">
                   <img
@@ -108,12 +100,12 @@ const Services = () => {
               </div>
 
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
-              <div className="bg-blue-100 p-4 opacity-70 rounded-2xl mb-6">
-                                 <h4 className="h4 mb-4 text-black">COPYM-AI Real Estate</h4>
-                 <p className="body-2 mb-[3rem] text-black">
-                   COPYM-AI's proprietary AI models for real estate valuation and rental income prediction, enhanced by RealT's proven tokenization infrastructure.
-                 </p>
-                 </div>
+                <div className="bg-green-50 p-4 opacity-90 rounded-2xl mb-6 border border-green-200">
+                  <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-green-800 uppercase anton-regular">COPYM-AI Real Estate</h4>
+                  <p className="body-2 mb-[3rem] text-green-700">
+                    COPYM-AI's proprietary AI models for real estate valuation and rental income prediction, enhanced by RealT's proven tokenization infrastructure.
+                  </p>
+                </div>
               </div>
 
               <PhotoChatMessage />
@@ -121,10 +113,10 @@ const Services = () => {
 
             <div className="p-4 bg-transparent rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
-                                 <h4 className="h4 mb-4 text-black">COPYM-AI Smart Contracts</h4>
-                 <p className="body-2 mb-[2rem] text-black">
-                   COPYM-AI's intelligent smart contract generation and atomic transfer optimization, powered by Algorand's advanced blockchain technology.
-                 </p>
+                <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM-AI Smart Contracts</h4>
+                <p className="body-2 mb-[2rem] text-black">
+                  COPYM-AI's intelligent smart contract generation and atomic transfer optimization, powered by Algorand's advanced blockchain technology.
+                </p>
 
                 <ul className="flex items-center justify-between">
                   {brainwaveServicesIcons.map((icon, i) => (
@@ -177,78 +169,93 @@ const Services = () => {
 
         {/* Comparison Table */}
         <div className="mt-20">
-          <h3 className="h3 text-center mb-12 text-black">Institutional Advantage: COPYmAI vs Traditional Platforms</h3>
-          <div className="relative z-1 border border-gray-300 rounded-3xl overflow-hidden">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                                 <thead>
-                   <tr className="border-b border-gray-300">
-                     <th className="p-6 text-left bg-transparent text-black">Feature</th>
-                     <th className="p-6 text-center bg-transparent text-color-1 font-bold">COPYM AI</th>
-                     <th className="p-6 text-center bg-transparent text-black">Traditional Platforms</th>
-                   </tr>
-                 </thead>
-                                  <tbody>
-                    <tr className="border-b border-gray-300">
-                      <td className="p-6 font-semibold text-black">AI-Driven Decisioning</td>
-                                           <td className="p-6 text-center">
-                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                           Advanced
-                         </span>
-                       </td>
-                       <td className="p-6 text-center">
-                         <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                           Basic / None
-                         </span>
-                       </td>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight leading-tight text-center mb-12 text-black uppercase anton-regular">Enterprise-Grade RWA Tokenization Platform</h3>
+          
+          {/* Card Container with Light Blue Backdrop */}
+          <div className="bg-blue-50 p-8 rounded-3xl">
+            {/* White Card */}
+            <div className="bg-white rounded-2xl shadow-lg p-8">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead>
+                    <tr className="border-b border-gray-200">
+                      <th className="p-6 text-left bg-transparent text-black font-bold">Platform Capabilities</th>
+                      <th className="p-6 text-center bg-transparent text-color-1 font-bold">COPYM AI</th>
+                      <th className="p-6 text-center bg-transparent text-black font-bold">Market Standard</th>
                     </tr>
-                    <tr className="border-b border-gray-300">
-                    <td className="p-6 font-semibold text-black">Minimum Investment</td>
-                    <td className="p-6 text-center text-color-1 font-bold">$100</td>
-                    <td className="p-6 text-center text-black">$10K+</td>
-                  </tr>
-                                       <tr className="border-b border-gray-300">
-                       <td className="p-6 font-semibold text-black">Asset Verification</td>
-                                            <td className="p-6 text-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                            AI + Expert Review
-                          </span>
-                        </td>
-                        <td className="p-6 text-center">
-                          <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                            Manual / Limited
-                          </span>
-                        </td>
-                     </tr>
-                     <tr className="border-b border-gray-300">
-                    <td className="p-6 font-semibold text-black">Liquidity</td>
-                                         <td className="p-6 text-center">
-                       <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                         Instant Trades
-                       </span>
-                     </td>
-                    <td className="p-6 text-center text-black">Weeks / Months</td>
-                  </tr>
-                  <tr>
-                    <td className="p-6 font-semibold text-black">Portfolio Management</td>
-                                         <td className="p-6 text-center">
-                       <span className="inline-flex items-center px-3 py-1 rounded-full bg-color-4/20 text-color-4 text-sm font-semibold">
-                         AI-Optimized
-                       </span>
-                     </td>
-                     <td className="p-6 text-center">
-                                              <span className="inline-flex items-center px-3 py-1 rounded-full bg-gray-200 text-black text-sm">
-                         Manual / Limited
-                       </span>
-                     </td>
-                   </tr>
-                 </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200">
+                      <td className="p-6 font-semibold text-black">AI-Powered Investment Intelligence</td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+                          Predictive Analytics
+                        </span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-semibold">
+                          Historical Data
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="p-6 font-semibold text-black">Multi-Chain Infrastructure</td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+                          Cross-Chain Native
+                        </span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-semibold">
+                          Single Chain
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="p-6 font-semibold text-black">Regulatory Compliance</td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+                          Automated KYC/AML
+                        </span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-semibold">
+                          Manual Process
+                        </span>
+                      </td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="p-6 font-semibold text-black">Real-Time Portfolio Analytics</td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+                          Live Dashboard
+                        </span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-semibold">
+                          Periodic Reports
+                        </span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="p-6 font-semibold text-black">Smart Contract Security</td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-green-100 text-green-700 text-sm font-semibold">
+                          Enterprise-Grade
+                        </span>
+                      </td>
+                      <td className="p-6 text-center">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-100 text-gray-700 text-sm font-semibold">
+                          Basic Security
+                        </span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
     </Section>
   );
