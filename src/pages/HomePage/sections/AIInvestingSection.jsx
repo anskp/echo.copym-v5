@@ -22,13 +22,13 @@ export default function AIInvestingSection() {
             
             {/* Main Headline */}
             <div className="space-y-2">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight">
-                Redefining Investing
+              <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-white leading-tight anton-regular">
+                AI That Invests
                 <br />
-                <span className="text-green-400">With the Power of AI</span>
+                <span className="text-green-400">With You</span>
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Experience the future of investment with AI-powered insights, real-time analysis, and intelligent portfolio management.
+                From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
               </p>
             </div>
             
