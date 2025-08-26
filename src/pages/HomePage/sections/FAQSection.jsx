@@ -36,20 +36,20 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "Can I track all my crypto assets with Delta?",
-      answer: "Connect to top exchanges like Binance, Coinbase, Kraken, and your on chain activity such as Bitcoin and Ethereum. Delta automatically pulls in your balances and transaction history."
+      question: "What is Copym and how does it work?",
+      answer: "Copym is a real-world asset tokenization platform that allows you to invest in fractional ownership of high-value assets like real estate, commodities, carbon credits, and luxury items. Our marketplace connects investors with exclusive investment opportunities."
     },
     {
-      question: "What kind of insights do I get for my crypto?",
-      answer: "Get real-time market analysis, portfolio performance tracking, risk assessment, and AI-powered investment recommendations to help you make informed decisions."
+      question: "What types of assets can I invest in on Copym?",
+      answer: "Our marketplace offers diverse real-world assets including commercial and residential real estate, precious metals, renewable energy projects, carbon credits, fine art, and luxury collectibles - all available for fractional ownership starting from small amounts."
     },
     {
-      question: "How secure is my investment data?",
-      answer: "Your data is protected with bank-level security, end-to-end encryption, and we never store your private keys. Your assets remain in your control at all times."
+      question: "How secure is my investment on Copym?",
+      answer: "Your investments are protected with institutional-grade security, blockchain transparency, and regulatory compliance. All assets are legally tokenized and backed by real-world value, with your ownership recorded on secure blockchain technology."
     },
     {
-      question: "What types of assets can I invest in?",
-      answer: "From real estate and commodities to carbon credits and luxury assets - our platform offers fractional ownership of high-value investments that were previously out of reach."
+      question: "What are the benefits of investing through Copym?",
+      answer: "Enjoy passive income from rental yields and asset appreciation, diversify your portfolio with institutional-grade investments, access previously unavailable opportunities, and trade your fractional ownership anytime through our integrated marketplace."
     }
   ];
 
@@ -58,7 +58,7 @@ export default function FAQSection() {
 
 
       {/* Main Content */}
-      <div className="relative z-10 bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+      <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* FAQ Content */}
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16">
