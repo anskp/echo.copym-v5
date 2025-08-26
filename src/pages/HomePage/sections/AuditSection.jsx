@@ -133,7 +133,7 @@ export default function AuditSection() {
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 anton-regular">
             <span className="text-gray-900">Security & </span>
-            <span className="text-green-600">Audit</span>
+            <span className="text-emerald-600">Audit</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
@@ -184,7 +184,7 @@ export default function AuditSection() {
         {/* Legend */}
         <div className="flex justify-center items-center space-x-8 mt-12">
           <div className="flex items-center space-x-2">
-            <div className="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+            <div className="w-4 h-4 bg-emerald-600 rounded-full flex items-center justify-center">
               <CheckCircle className="w-2 h-2 text-white" />
             </div>
             <span className="text-sm text-gray-600">Audit Companies</span>
