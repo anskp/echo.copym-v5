@@ -39,7 +39,7 @@ export default function Hero() {
 
           {/* CTA Buttons with Homepage Style */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <button className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Start Tokenizing
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
