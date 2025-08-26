@@ -118,7 +118,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative pt-8 pb-0 -mt-20 bg-gradient-to-r from-black/90 via-green-600 to-black/90 rounded-[50px] mx-4">
+    <section className="relative pt-8 pb-0 -mt-20 bg-[#10B981] rounded-[50px] mx-4">
       {/* Decorative Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>

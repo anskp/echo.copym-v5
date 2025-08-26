@@ -371,7 +371,7 @@ const MarketplaceGlimpse = () => {
        </section>
 
              {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
-       <section className="bg-gradient-to-r from-black via-green-600 to-black rounded-[50px] mx-4 py-24">
+       <section className="bg-[#10B981] rounded-[50px] mx-4 py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Enhanced Section Header */}
           <motion.div 

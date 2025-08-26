@@ -71,41 +71,6 @@ export default function TrustAndData() {
             </div>
           ))}
         </div>
-
-        {/* Part B: Analytics & Final CTA */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column: Data-Driven Decisions */}
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Data-Driven Decisions
-            </h3>
-            <p className="text-gray-300 mb-8 text-lg">
-              Comprehensive analytics and reporting tools for data-driven decision making.
-            </p>
-            <div className="space-y-4">
-              {analyticsFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center text-gray-300">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
-                  <span className="text-lg">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Right Column: Final CTA */}
-          <div className="text-center lg:text-left">
-            <h3 className="text-4xl font-bold text-white mb-6">
-              Ready to Build the Future?
-            </h3>
-            <p className="text-gray-300 mb-8 text-lg">
-              Start your tokenization journey today with enterprise-grade security and compliance.
-            </p>
-            <button className="bg-green-500 text-white font-semibold px-8 py-4 rounded-xl hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center">
-              Start Tokenizing
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

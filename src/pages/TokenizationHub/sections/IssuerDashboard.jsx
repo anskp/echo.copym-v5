@@ -28,14 +28,14 @@ export default function IssuerDashboard() {
   };
 
   return (
-    <section className="bg-black py-24">
+    <section className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="anton-regular uppercase font-black text-4xl md:text-5xl mb-4">
-            <span className="text-white">ISSUER</span>
-            <span className="text-green-500"> DASHBOARD</span>
+            <span className="text-black">ISSUER</span>
+            <span className="text-green-600"> DASHBOARD</span>
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto text-lg">
+          <p className="text-gray-700 max-w-3xl mx-auto text-lg">
             Comprehensive control center for managing your tokenized assets and investor relationships.
           </p>
         </div>
@@ -62,31 +62,31 @@ export default function IssuerDashboard() {
                 animationDuration: '3s'
               }}
             >
-              <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-6 w-64 transition-all duration-300 hover:bg-white/10 hover:scale-105">
-                <div className="flex items-start">
-                  <div className="p-3 border border-white/20 rounded-2xl mr-4 bg-white/10">
-                    <feature.icon className="h-6 w-6 text-green-500" />
-                  </div>
-                  <div>
-                    <h4 className="text-white font-semibold mb-2 text-sm">{feature.title}</h4>
-                    <p className="text-gray-300 text-xs leading-relaxed">{feature.description}</p>
-                  </div>
-                </div>
-              </div>
+                             <div className="bg-white/80 backdrop-blur-md border border-gray-200 rounded-2xl p-6 w-64 transition-all duration-300 hover:bg-white hover:scale-105 shadow-lg">
+                 <div className="flex items-start">
+                   <div className="p-3 border border-gray-200 rounded-2xl mr-4 bg-green-50">
+                     <feature.icon className="h-6 w-6 text-green-600" />
+                   </div>
+                   <div>
+                     <h4 className="text-gray-900 font-semibold mb-2 text-sm">{feature.title}</h4>
+                     <p className="text-gray-600 text-xs leading-relaxed">{feature.description}</p>
+                   </div>
+                 </div>
+               </div>
             </div>
           ))}
 
           {/* Background Glow Effects */}
-          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
-          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-green-500/20 rounded-full blur-2xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-blue-500/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-100/50 to-blue-100/50 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-green-200/40 rounded-full blur-2xl animate-pulse"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-blue-200/40 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         </div>
 
         {/* Additional Mission Control Elements */}
         <div className="mt-16 text-center">
-          <div className="inline-flex items-center px-6 py-3 bg-white/5 backdrop-blur-md border border-white/10 rounded-full">
-            <div className="w-2 h-2 bg-green-500 rounded-full mr-3 animate-pulse"></div>
-            <span className="text-white text-sm font-medium">Mission Control Active</span>
+          <div className="inline-flex items-center px-6 py-3 bg-green-50 backdrop-blur-md border border-green-200 rounded-full shadow-sm">
+            <div className="w-2 h-2 bg-green-600 rounded-full mr-3 animate-pulse"></div>
+            <span className="text-green-800 text-sm font-medium">Mission Control Active</span>
           </div>
         </div>
       </div>

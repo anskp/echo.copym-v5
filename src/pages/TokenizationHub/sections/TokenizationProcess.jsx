@@ -53,19 +53,19 @@ export default function TokenizationProcess({ onLaunchCreator }) {
   ];
 
   return (
-    <section className="bg-black py-24">
+    <section className="bg-[#10B981] py-24 rounded-[50px] mx-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="anton-regular uppercase font-black text-4xl md:text-5xl mb-4">
             <span className="text-white">TOKENIZATION</span>
-            <span className="text-green-500"> PROCESS</span>
+            <span className="text-black"> PROCESS</span>
           </h2>
-          <p className="text-gray-300 max-w-3xl mx-auto mb-8 text-lg">
+          <p className="text-black/80 max-w-3xl mx-auto mb-8 text-lg">
             Our streamlined process transforms your real-world assets into compliant digital tokens in just three simple steps.
           </p>
           <button 
             onClick={onLaunchCreator} 
-            className="bg-green-500 text-white font-semibold px-8 py-4 rounded-xl hover:bg-green-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            className="bg-black text-white font-semibold px-8 py-4 rounded-xl hover:bg-black/80 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <Play className="mr-2 h-5 w-5 inline" />
             Launch Token Creator Demo
@@ -79,22 +79,22 @@ export default function TokenizationProcess({ onLaunchCreator }) {
                 <div className="relative">
                   <div className={`w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-xl transition-all duration-500 ${
                     step.stepNumber === 3 
-                      ? 'bg-gradient-to-r from-green-500 to-blue-500 scale-110 shadow-xl' 
-                      : 'bg-white border border-white/10 scale-100 shadow-lg'
+                      ? 'bg-black scale-110 shadow-xl' 
+                      : 'bg-white border border-white/30 scale-100 shadow-lg'
                   }`}>
                     {step.stepNumber === 3 ? (
                       <CheckCircle className="w-10 h-10 text-white" />
                     ) : (
-                      <span className="text-gray-900">{step.stepNumber}</span>
+                      <span className="text-black">{step.stepNumber}</span>
                     )}
                   </div>
                 </div>
                 
                 {index < stepCards.length - 1 && (
-                  <div className="w-32 h-1 mx-6 transition-all duration-500 rounded-full bg-white/10">
+                  <div className="w-32 h-1 mx-6 transition-all duration-500 rounded-full bg-white/30">
                     <div className={`h-full rounded-full transition-all duration-500 ${
                       step.status === 'completed' 
-                        ? 'bg-gradient-to-r from-transparent via-green-500 to-transparent' 
+                        ? 'bg-black' 
                         : 'bg-transparent'
                     }`} />
                   </div>
@@ -109,15 +109,15 @@ export default function TokenizationProcess({ onLaunchCreator }) {
           {stepCards.map((step, index) => (
             <div 
               key={index} 
-              className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8 transition-all duration-300 hover:bg-white/10"
+              className="bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-8 transition-all duration-300 hover:bg-white/30 shadow-lg"
             >
               <div className="flex items-center mb-4">
-                <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mr-4">
-                  <step.icon className="w-6 h-6 text-green-500" />
+                <div className="w-12 h-12 rounded-full bg-white/30 flex items-center justify-center mr-4">
+                  <step.icon className="w-6 h-6 text-black" />
                 </div>
-                <h3 className="text-white font-semibold text-lg">{step.title}</h3>
+                <h3 className="text-black font-semibold text-lg">{step.title}</h3>
               </div>
-              <p className="text-gray-300">
+              <p className="text-black/80">
                 {step.stepNumber === 1 && "Choose from real estate, commodities, art, or any asset type"}
                 {step.stepNumber === 2 && "Select your preferred blockchain network for deployment"}
                 {step.stepNumber === 3 && "Pick the appropriate token standard for your use case"}
