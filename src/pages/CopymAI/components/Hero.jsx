@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
+import { LavaLamp } from "../../../components/ui/fluid-blob";
 
 import { heroIcons } from "../constants";
 import "./HeroIconsBlack.css";
@@ -23,7 +24,17 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div ref={parallaxRef} className="container relative">
+      {/* Blue Background Pattern - Same as Marketplace */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      </div>
+
+      {/* Fluid Blob Background - Same as Marketplace */}
+      <div className="absolute inset-0 opacity-30">
+        <LavaLamp />
+      </div>
+
+      <div ref={parallaxRef} className="container relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Grid - Content from Screenshot */}
           <div className="relative z-1 text-left">
