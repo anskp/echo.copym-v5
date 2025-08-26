@@ -10,7 +10,7 @@ import SupportedAssets from "./sections/SupportedAssets";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-blue-100">
+    <div className="min-h-screen bg-blue-100 p-0 m-0">
       <Hero />
       <CurvedSectionDivider />
       <TrackYourCrypto />

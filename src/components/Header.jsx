@@ -14,6 +14,24 @@ export default function Header() {
   // Check if we're on the copym-ai page
   const isCopymAIPage = location.pathname === "/copym-ai";
 
+  // Function to get header background color based on current page
+  const getHeaderBackground = () => {
+    const pathname = location.pathname;
+    
+    // Tokenization page has white background
+    if (pathname.includes('/tokenization')) {
+      return 'bg-white';
+    }
+    
+    // Marketplace page has white/transparent background
+    if (pathname.includes('/marketplace')) {
+      return 'bg-white';
+    }
+    
+    // All other pages use blue-100 background
+    return 'bg-blue-100';
+  };
+
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
@@ -86,8 +104,81 @@ export default function Header() {
 
   return (
     <>
+      {/* Desktop Navigation Pills - Fixed */}
+      <div className="nav-pills">
+        {Object.keys(navigationData).map((navItem) => (
+            <div
+              key={navItem}
+            className="nav-item"
+              onMouseEnter={() => setActiveDropdown(navItem)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+            <a href="#" className="nav-link">
+              {navItem}
+              <svg className="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            
+            {/* Dropdown Menu */}
+            <AnimatePresence>
+              {activeDropdown === navItem && (
+                <motion.div
+                  className="dropdown"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  <div className="dropdown-grid">
+                    {navigationData[navItem].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="dropdown-item"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <div className={`dropdown-icon-wrapper ${item.iconBg}`}>
+                          <img 
+                            src={item.image} 
+                            alt={item.title}
+                            className="w-full h-full object-cover rounded-lg"
+                          />
+                        </div>
+                        <div className="dropdown-content">
+                          <div className="dropdown-title">{item.title}</div>
+                          <div className="dropdown-description">{item.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            </div>
+          ))}
+        
+        {/* Fixed Download Button - Shows when scrolled */}
+        {isScrolled && (
+          <motion.div
+            className="nav-item"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button className="nav-link bg-green-500 hover:bg-green-600 text-white border-0">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+              Download
+            </button>
+          </motion.div>
+        )}
+      </div>
+
       {/* Delta-Style Navbar */}
-      <nav className="navbar">
+      <nav className={`navbar ${getHeaderBackground()}`}>
         <div className="nav-container">
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
@@ -97,79 +188,6 @@ export default function Header() {
                 className="h-16 w-auto object-contain sm:h-18 md:h-20"
               />
             </Link>
-
-          {/* Desktop Navigation Pills */}
-          <div className="nav-pills">
-            {Object.keys(navigationData).map((navItem) => (
-                <div
-                  key={navItem}
-                className="nav-item"
-                  onMouseEnter={() => setActiveDropdown(navItem)}
-                  onMouseLeave={() => setActiveDropdown(null)}
-                >
-                <a href="#" className="nav-link">
-                  {navItem}
-                  <svg className="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="6,9 12,15 18,9"></polyline>
-                  </svg>
-                </a>
-                
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === navItem && (
-                    <motion.div
-                      className="dropdown"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
-                    >
-                      <div className="dropdown-grid">
-                        {navigationData[navItem].map((item, index) => (
-                          <Link
-                            key={index}
-                            to={item.path}
-                            className="dropdown-item"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <div className={`dropdown-icon-wrapper ${item.iconBg}`}>
-                              <img 
-                                src={item.image} 
-                                alt={item.title}
-                                className="w-full h-full object-cover rounded-lg"
-                              />
-                            </div>
-                            <div className="dropdown-content">
-                              <div className="dropdown-title">{item.title}</div>
-                              <div className="dropdown-description">{item.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-                </div>
-              ))}
-            
-            {/* Fixed Download Button - Shows when scrolled */}
-            {isScrolled && (
-              <motion.div
-                className="nav-item"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.8 }}
-                transition={{ duration: 0.3 }}
-              >
-                <button className="nav-link bg-green-500 hover:bg-green-600 text-white border-0">
-                  <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
-                  </svg>
-                  Download
-                </button>
-              </motion.div>
-            )}
-          </div>
 
           {/* Download Button */}
           <div className="flex items-center ml-auto">

@@ -136,14 +136,14 @@ export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
 
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+    <div className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-8 pb-4 sm:pb-6 lg:pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32 sm:pb-40 lg:pb-48">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start h-full">
           {/* Left Side - Text Content */}
           <div className="text-center lg:text-left lg:pt-16">
@@ -215,6 +215,6 @@ export default function Hero() {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 }
