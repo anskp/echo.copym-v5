@@ -7,7 +7,6 @@ import Hero from "./sections/Hero.jsx";
 import TokenizationProcess from "./sections/TokenizationProcess.jsx";
 import MinimalTokenizationDashboard from "./sections/IssuerSection.jsx";
 import TokenDistribution from "./sections/TokenDistribution.jsx";
-// import IssuerDashboard from "./sections/IssuerDashboard.jsx";
 import InvestorManagement from "./sections/InvestorManagement.jsx";
 import TrustAndData from "./sections/TrustAndData.jsx";
 import FinalCTA from "./sections/FinalCTA.jsx";
@@ -35,7 +34,6 @@ export default function TokenizationHub() {
       <TokenizationProcess onLaunchCreator={openCreateModal} />
       <MinimalTokenizationDashboard />
       <TokenDistribution />
-      {/* <IssuerDashboard /> */}
       <InvestorManagement />
       <TrustAndData />
       <FinalCTA />

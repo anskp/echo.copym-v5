@@ -18,9 +18,9 @@ export default function InvestorRoadmap() {
       title: "Platform Access",
       description: "Secure login and access to the investment platform",
       icon: RocketLaunchIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 2,
@@ -28,9 +28,9 @@ export default function InvestorRoadmap() {
       title: "KYC/AML Verification",
       description: "Complete KYC/AML verification for investment access",
       icon: BadgeIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 3,
@@ -38,9 +38,9 @@ export default function InvestorRoadmap() {
       title: "Token Purchase", 
       description: "Purchase RWA tokens through the marketplace",
       icon: DiamondIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 4,
@@ -48,9 +48,9 @@ export default function InvestorRoadmap() {
       title: "Trading Tools",
       description: "Access advanced trading tools and analytics",
       icon: AnalyticsIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 5,
@@ -58,9 +58,9 @@ export default function InvestorRoadmap() {
       title: "P2P Trading",
       description: "Engage in peer-to-peer token trading",
       icon: HandshakeIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 6,
@@ -68,9 +68,9 @@ export default function InvestorRoadmap() {
       title: "Portfolio Management",
       description: "Monitor portfolio performance and market trends",
       icon: TrendingUpIcon,
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
-      borderColor: "border-green-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     }
   ];
 
@@ -81,7 +81,7 @@ export default function InvestorRoadmap() {
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-green-500 via-blue-500 to-emerald-500"></div>
+      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-emerald-600 to-emerald-700"></div>
       
       <div className="space-y-8">
         {roadmapData.map((item, index) => {
@@ -95,7 +95,7 @@ export default function InvestorRoadmap() {
               className="relative"
             >
               {/* Timeline Dot */}
-              <div className="absolute left-6 w-4 h-4 bg-white border-4 border-green-500 rounded-full shadow-lg z-10"></div>
+              <div className="absolute left-6 w-4 h-4 bg-white border-4 border-emerald-500 rounded-full shadow-lg z-10"></div>
               
               {/* Card */}
               <motion.div
