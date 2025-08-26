@@ -352,7 +352,7 @@ export default function AccessPage() {
 
           {/* CTA Button */}
           <motion.button
-            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+             className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -360,8 +360,8 @@ export default function AccessPage() {
             transition={{ duration: 0.8, delay: 0.8 }}
             data-scroll-to="#benefits-section"
           >
-            Mint Your Pass Now
-            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              Mint Your Pass Now
+             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </motion.button>
         </div>
 
@@ -369,7 +369,7 @@ export default function AccessPage() {
 
         {/* Benefits Section */}
         <div id="benefits-section" ref={benefitsRef} className="mb-20">
-          <div className="space-y-8">
+            <div className="space-y-8">
               {/* Section Title */}
               <div className="text-left">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
@@ -381,11 +381,11 @@ export default function AccessPage() {
                 </p>
               </div>
 
-                             {/* Benefits Cards */}
+              {/* Benefits Cards */}
                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                 {benefits.map((benefit, index) => (
-                   <div
-                     key={index}
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
                      className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                    >
                      {/* Background gradient overlay */}
@@ -396,13 +396,13 @@ export default function AccessPage() {
                        <div className="flex items-center justify-between mb-6">
                          <Box
                            className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                           sx={{
+                        sx={{
                              background: "linear-gradient(135deg, #22c55e, #16a34a)",
                              boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
-                           }}
-                         >
+                        }}
+                      >
                            <benefit.icon className="h-8 w-8 text-white" />
-                         </Box>
+                      </Box>
                          
                          {/* Number badge */}
                          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
@@ -412,18 +412,18 @@ export default function AccessPage() {
                        
                        {/* Content */}
                        <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
-                         {benefit.title}
-                       </h3>
+                        {benefit.title}
+                      </h3>
                        <p className="text-gray-700 leading-relaxed text-base">
-                         {benefit.description}
-                       </p>
+                        {benefit.description}
+                      </p>
                        
                        {/* Bottom accent line */}
                        <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                     </div>
-                   </div>
-                 ))}
-               </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
 
@@ -438,13 +438,13 @@ export default function AccessPage() {
             <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
-                     {/* Mobile Layout - Stacked vertically */}
-           <div className="lg:hidden space-y-8">
-             {/* Mobile: First 3 features */}
-             <div className="space-y-6">
-               {unlockFeatures.slice(0, 3).map((feature, index) => (
-                 <div
-                   key={index}
+          {/* Mobile Layout - Stacked vertically */}
+          <div className="lg:hidden space-y-8">
+            {/* Mobile: First 3 features */}
+            <div className="space-y-6">
+              {unlockFeatures.slice(0, 3).map((feature, index) => (
+                <div
+                  key={index}
                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
                    {/* Background gradient overlay */}
@@ -467,55 +467,55 @@ export default function AccessPage() {
                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
                          {index + 1}
                        </div>
-                     </div>
+                  </div>
                      
                      {/* Content */}
                      <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
-                       {feature.text}
-                     </span>
+                    {feature.text}
+                  </span>
                    </div>
                    
                    {/* Bottom accent line */}
                    <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
-                 </div>
-               ))}
-             </div>
+                </div>
+              ))}
+            </div>
 
-             {/* Mobile: Credential Card */}
-             <div className="flex justify-center py-6 px-4">
-               <div className="text-center w-full max-w-xs mx-auto">
+            {/* Mobile: Credential Card */}
+            <div className="flex justify-center py-6 px-4">
+              <div className="text-center w-full max-w-xs mx-auto">
                  <h3 className="text-lg font-black text-center text-gray-900 mb-2 uppercase anton-regular">
-                   Your Access Credential
-                 </h3>
+                  Your Access Credential
+                </h3>
                  <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
-                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                 </p>
+                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                </p>
                  <div className="flex justify-end w-[380px] mt-12">
-                   <div className="w-full max-w-[350px]">
-                     <CredentialCard
-                       user={{
-                         name: "Alex Morgan",
-                         employeeNumber: "EMP-2048",
-                         passNumber: "PASS-7F32",
-                         points: "1,250",
-                         qrImage: "/assets/svg/copym_qr.svg",
-                       }}
-                       variant="bottleGreen"
-                       stacked
-                       backVariant="darkBlue"
-                       logoSrc="/assets/copym/png/Copym-05-1.png"
-                       logoSize={20}
-                     />
-                   </div>
-                 </div>
-               </div>
-             </div>
+                  <div className="w-full max-w-[350px]">
+                    <CredentialCard
+                      user={{
+                        name: "Alex Morgan",
+                        employeeNumber: "EMP-2048",
+                        passNumber: "PASS-7F32",
+                        points: "1,250",
+                        qrImage: "/assets/svg/copym_qr.svg",
+                      }}
+                      variant="bottleGreen"
+                      stacked
+                      backVariant="darkBlue"
+                      logoSrc="/assets/copym/png/Copym-05-1.png"
+                      logoSize={20}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-             {/* Mobile: Last 3 features */}
-             <div className="space-y-6">
-               {unlockFeatures.slice(3, 6).map((feature, index) => (
-                 <div
-                   key={index + 3}
+            {/* Mobile: Last 3 features */}
+            <div className="space-y-6">
+              {unlockFeatures.slice(3, 6).map((feature, index) => (
+                <div
+                  key={index + 3}
                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
                    {/* Background gradient overlay */}
@@ -538,28 +538,28 @@ export default function AccessPage() {
                        <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
                          {index + 4}
                        </div>
-                     </div>
+                  </div>
                      
                      {/* Content */}
                      <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
-                       {feature.text}
-                     </span>
+                    {feature.text}
+                  </span>
                    </div>
                    
                    {/* Bottom accent line */}
                    <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
-                 </div>
-               ))}
-             </div>
-           </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
            {/* Desktop Layout - 3 columns */}
-           <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-start">
-              {/* Left Grid - First 3 Unlock Features */}
+          <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-start">
+             {/* Left Grid - First 3 Unlock Features */}
               <div className="grid grid-cols-1 gap-8">
-                {unlockFeatures.slice(0, 3).map((feature, index) => (
-                  <div
-                    key={index}
+               {unlockFeatures.slice(0, 3).map((feature, index) => (
+                 <div
+                   key={index}
                     className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                   >
                     {/* Background gradient overlay */}
@@ -582,51 +582,51 @@ export default function AccessPage() {
                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                           {index + 1}
                         </div>
-                      </div>
+                   </div>
                       
                       {/* Content */}
                       <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
-                        {feature.text}
-                      </span>
+                     {feature.text}
+                   </span>
                       
                       {/* Bottom accent line */}
                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                 </div>
+               ))}
+             </div>
 
-              {/* Center Grid - Credential Card */}
-              <div className="flex justify-center">
-                <div className="">
+             {/* Center Grid - Credential Card */}
+             <div className="flex justify-center">
+               <div className="">
                   <h3 className="text-xl font-black text-center text-gray-900 mb-2 uppercase anton-regular">
-                    Your Access Credential
-                  </h3>
+                   Your Access Credential
+                 </h3>
                   <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
-                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                  </p>
-                  <CredentialCard
-                    user={{
-                      name: "Alex Morgan",
-                      employeeNumber: "EMP-2048",
-                      passNumber: "PASS-7F32",
-                      points: "1,250",
-                      qrImage: "/assets/svg/copym_qr.svg",
-                    }}
-                    variant="bottleGreen"
-                    stacked
-                    backVariant="darkBlue"
-                    logoSrc="/assets/copym/png/Copym-05-1.png"
-                    logoSize={28}
-                  />
-                </div>
-              </div>
+                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                 </p>
+                 <CredentialCard
+                   user={{
+                     name: "Alex Morgan",
+                     employeeNumber: "EMP-2048",
+                     passNumber: "PASS-7F32",
+                     points: "1,250",
+                     qrImage: "/assets/svg/copym_qr.svg",
+                   }}
+                   variant="bottleGreen"
+                   stacked
+                   backVariant="darkBlue"
+                   logoSrc="/assets/copym/png/Copym-05-1.png"
+                   logoSize={28}
+                 />
+               </div>
+             </div>
 
-              {/* Right Grid - Last 3 Unlock Features */}
-              <div className="grid grid-cols-1 gap-8">
-                {unlockFeatures.slice(3, 6).map((feature, index) => (
-                  <div
-                    key={index + 3}
+             {/* Right Grid - Last 3 Unlock Features */}
+             <div className="grid grid-cols-1 gap-8">
+               {unlockFeatures.slice(3, 6).map((feature, index) => (
+                 <div
+                   key={index + 3}
                     className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                   >
                     {/* Background gradient overlay */}
@@ -649,20 +649,20 @@ export default function AccessPage() {
                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                           {index + 4}
                         </div>
-                      </div>
+                   </div>
                       
                       {/* Content */}
                       <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
-                        {feature.text}
-                      </span>
+                     {feature.text}
+                   </span>
                       
                       {/* Bottom accent line */}
                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                     </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+                 </div>
+               ))}
+             </div>
+           </div>
         </div>
 
         {/* Platform Features */}
@@ -675,9 +675,9 @@ export default function AccessPage() {
           </div>
 
                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-             {features.map((feature, index) => (
-               <div
-                 key={index}
+            {features.map((feature, index) => (
+              <div
+                key={index}
                  className="feature-item group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                >
                  {/* Background gradient overlay */}
@@ -688,13 +688,13 @@ export default function AccessPage() {
                    <div className="flex items-center justify-between mb-6">
                      <Box
                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                       sx={{
+                  sx={{
                          background: "linear-gradient(135deg, #22c55e, #16a34a)",
                          boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
-                       }}
-                     >
+                  }}
+                >
                        <feature.icon className="h-8 w-8 text-white" />
-                     </Box>
+                </Box>
                      
                      {/* Number badge */}
                      <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
@@ -704,18 +704,18 @@ export default function AccessPage() {
                    
                    {/* Content */}
                    <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
-                     {feature.title}
-                   </h3>
+                    {feature.title}
+                  </h3>
                    <p className="text-gray-700 leading-relaxed text-base">
-                     {feature.description}
-                   </p>
+                    {feature.description}
+                  </p>
                    
                    {/* Bottom accent line */}
                    <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                 </div>
-               </div>
-             ))}
-           </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Benefits Comparison */}
@@ -844,7 +844,7 @@ export default function AccessPage() {
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-            <button className="magnetic-button group bg-white/20 backdrop-blur-sm px-8 py-4 rounded-full font-bold text-lg hover:bg-white/30 transition-all duration-300 flex items-center mx-auto">
+                         <button className="btn-gradient magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto text-black">
               <Sparkles className="mr-3 w-5 h-5" />
               Get Your Access Pass Now
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
