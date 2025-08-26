@@ -17,9 +17,9 @@ export default function HomePage() {
       <AIInvestingSection />
       <AuditSection />
       <FAQSection />
+      <Testimonials />
       <NewsletterSection />
       {/* <SupportedAssets /> */}
-      <Testimonials />
     </div>
   );
 }

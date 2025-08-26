@@ -28,7 +28,7 @@ export default function TrackYourCrypto() {
                   className="w-96 lg:w-[500px] xl:w-[600px] h-auto drop-shadow-2xl relative z-10"
                 />
                 {/* Download Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-green-500 rounded-full p-4 shadow-xl hover:bg-green-600 transition-colors duration-300 z-20">
+                <div className="absolute -bottom-6 -right-6 bg-emerald-600 rounded-full p-4 shadow-xl hover:bg-emerald-700 transition-colors duration-300 z-20">
                   <Download className="w-7 h-7 text-white" />
                 </div>
               </div>
@@ -45,7 +45,7 @@ export default function TrackYourCrypto() {
           <div className="space-y-10 text-center lg:text-left">
             <div className="space-y-8">
               <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight anton-regular">
-                Track your Assets. <span className="text-green-600">Anywhere.</span>
+                Track your Assets. <span className="text-emerald-600">Anywhere.</span>
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                 Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
@@ -76,7 +76,7 @@ export default function TrackYourCrypto() {
               <div className="flex justify-center lg:justify-start">
                 <Link
                   to="/marketplace"
-                  className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Marketplace
                   <ArrowRight className="ml-2 h-5 w-5" />
