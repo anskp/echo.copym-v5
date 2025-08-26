@@ -561,19 +561,58 @@
   }
 
   .btn-gradient {
-    background: linear-gradient(135deg, #255f99 0%, #15a36e 100%);
+    background: transparent;
+    border: 2px solid #15a36e;
+    transition: all 0.3s ease;
   }
 
   .btn-gradient:hover {
-    background: linear-gradient(135deg, #1e4a7a 0%, #0f8a5a 100%);
+    background: #15a36e;
+    border: 2px solid #15a36e;
+    box-shadow: 0 0 15px rgba(21, 163, 110, 0.4);
+    color: white;
   }
 
   .btn-gradient-secondary {
-    background: linear-gradient(135deg, #15a36e 0%, #255f99 100%);
+    background: transparent;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
   }
 
   .btn-gradient-secondary:hover {
-    background: linear-gradient(135deg, #0f8a5a 0%, #1e4a7a 100%);
+    background: transparent;
+    border: 2px solid #15a36e;
+    box-shadow: 0 0 10px rgba(21, 163, 110, 0.3);
+  }
+
+  .btn-circle {
+    background: transparent;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .btn-circle:hover {
+    background: transparent;
+    border: 2px solid #15a36e;
+    box-shadow: 0 0 15px rgba(21, 163, 110, 0.4);
+    transform: scale(1.05);
+  }
+
+  .btn-circle-small {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn-circle-large {
+    width: 80px;
+    height: 80px;
   }
 }
 

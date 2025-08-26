@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import React from 'react';
+import { motion } from 'framer-motion';
 import LockIcon from '@mui/icons-material/Lock';
 import VerifiedIcon from '@mui/icons-material/Verified';
 import TokenIcon from '@mui/icons-material/Token';
@@ -8,9 +8,6 @@ import AssignmentIcon from '@mui/icons-material/Assignment';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 export default function RWARoadmap() {
-  const roadmapRef = useRef(null);
-  const [activeSection, setActiveSection] = useState(0);
-
   const roadmapData = [
     {
       id: 1,
@@ -74,16 +71,12 @@ export default function RWARoadmap() {
     }
   ];
 
-  useEffect(() => {
-    setActiveSection(0);
-  }, []);
-
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-green-500 to-emerald-500"></div>
+      <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-green-500 to-emerald-500"></div>
       
-      <div className="space-y-8">
+      <div className="space-y-6 sm:space-y-8">
         {roadmapData.map((item, index) => {
           const IconComponent = item.icon;
           return (
@@ -95,38 +88,38 @@ export default function RWARoadmap() {
               className="relative"
             >
               {/* Timeline Dot */}
-              <div className="absolute left-6 w-4 h-4 bg-white border-4 border-blue-500 rounded-full shadow-lg z-10"></div>
+              <div className="absolute left-2 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 bg-white border-2 sm:border-4 border-blue-500 rounded-full shadow-lg z-10"></div>
               
               {/* Card */}
               <motion.div
-                className={`ml-16 p-6 rounded-2xl border-2 ${item.borderColor} bg-gradient-to-br ${item.bgColor} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
+                className={`ml-8 sm:ml-16 p-4 sm:p-6 rounded-xl sm:rounded-2xl border-2 ${item.borderColor} bg-gradient-to-br ${item.bgColor} shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1`}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                <div className="flex items-start space-x-4">
+                <div className="flex items-start space-x-3 sm:space-x-4">
                   {/* Icon */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white shadow-lg`}>
-                    <IconComponent sx={{ fontSize: 24 }} />
+                  <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-gradient-to-br ${item.color} flex items-center justify-center text-white shadow-lg`}>
+                    <IconComponent sx={{ fontSize: { xs: 20, sm: 24 } }} />
                   </div>
                   
                   {/* Content */}
-                  <div className="flex-1">
+                  <div className="flex-1 min-w-0">
                     {/* Step Badge */}
-                    <div className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${item.color} shadow-md mb-3`}>
+                    <div className={`inline-block px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${item.color} shadow-md mb-2 sm:mb-3`}>
                       {item.step}
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-xl font-bold text-gray-800 mb-2">{item.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-1 sm:mb-2">{item.title}</h3>
                     
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{item.description}</p>
                     
                     {/* Progress Bar */}
-                    <div className="mt-4">
-                      <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="mt-3 sm:mt-4">
+                      <div className="w-full bg-gray-200 rounded-full h-1.5 sm:h-2">
                         <motion.div
-                          className={`h-2 rounded-full bg-gradient-to-r ${item.color}`}
+                          className={`h-1.5 sm:h-2 rounded-full bg-gradient-to-r ${item.color}`}
                           initial={{ width: 0 }}
                           animate={{ width: `${((index + 1) / roadmapData.length) * 100}%` }}
                           transition={{ duration: 0.8, delay: index * 0.1 }}
