@@ -29,7 +29,6 @@ import {
   DollarSign
 } from 'lucide-react';
 import CredentialCard from '../../components/CredentialCard';
-import CoinGeckoChart from '../../components/CoinGeckoChart';
 
 // Import blockchain logos
 import EthereumLogo from '/assets/blockchains/ethereum-eth-logo.svg';
@@ -131,34 +130,7 @@ export default function AccessPage() {
       }
     );
 
-    // Chart zoom effect
-    gsap.fromTo('.chart-overflow',
-      { scale: 0.7, opacity: 0.7 },
-      {
-        scale: 1,
-        opacity: 1,
-        duration: 1.5,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: benefitsRef.current,
-          start: 'top 70%',
-          end: 'center 30%',
-          scrub: 1,
-          onUpdate: (self) => {
-            // Dynamic zoom based on scroll progress - uniform scaling (no distortion)
-            const progress = self.progress;
-            const scale = 0.7 + (progress * 0.4); // Uniform scale from 0.7 to 1.1
-            const opacity = 0.7 + (progress * 0.3); // Opacity from 0.7 to 1
-            
-            gsap.set('.chart-overflow', {
-              scale: scale,
-              opacity: opacity,
-              transformOrigin: 'center center'
-            });
-          }
-        }
-      }
-    );
+
 
     // Benefits cards stagger animation
     gsap.fromTo('.benefit-card',
@@ -350,45 +322,37 @@ export default function AccessPage() {
   });
 
   return (
-    <div ref={pageRef} className="min-h-screen relative overflow-hidden">
-      {/* Enhanced Background Elements */}
-      {/* <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(37,95,153,0.1),transparent_50%)]"></div>
-        <div className="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(21,163,110,0.1),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(37,95,153,0.03)_25%,rgba(37,95,153,0.03)_50%,transparent_50%,transparent_75%,rgba(37,95,153,0.03)_75%)] bg-[length:40px_40px]"></div>
-      </div> */}
+    <div ref={pageRef} className="min-h-screen relative overflow-hidden bg-blue-100">
+      {/* Background Pattern - Same as HomePage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      </div>
 
       {/* Enhanced Floating Elements with GSAP */}
-      <div className="floating-bg-1 absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-[#255f99]/10 to-[#15a36e]/10 rounded-full blur-3xl"></div>
-      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-[#15a36e]/10 to-[#255f99]/10 rounded-full blur-3xl"></div>
+      <div className="floating-bg-1 absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
-        <div ref={heroRef} className="text-center mb-20 p-12 ">
+        <div ref={heroRef} className="text-center mb-20 p-12">
           {/* Main Title */}
-          <h1 className="brand-title mb-8 text-[#255f99] reveal-text">
-            Your Gateway to{" "}
-            <span className="relative text-[#15a36e]">
-              COPYM's Exclusive World
-              <motion.div
-                className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] rounded-full"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 1.2 }}
-              />
-            </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text">
+            <span className="text-gray-900">YOUR GATEWAY TO </span>
+            <span className="text-green-600">COPYM'S</span>
+            <br />
+            <span className="text-gray-900">EXCLUSIVE WORLD</span>
           </h1>
 
           {/* Description */}
-          <p className="brand-description max-w-3xl mx-auto mb-12 reveal-text">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto reveal-text">
             Unlock premium access to real-world assets, member-only rewards, and
             the next wave of Web3 innovation with your exclusive access pass.
           </p>
 
           {/* CTA Button */}
           <motion.button
-            className="magnetic-button group relative px-12 py-4 bg-gradient-to-r from-[#255f99] to-[#15a36e] text-white font-bold text-lg rounded-full shadow-2xl hover:shadow-3xl transition-all duration-500 overflow-hidden"
+            className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -396,272 +360,377 @@ export default function AccessPage() {
             transition={{ duration: 0.8, delay: 0.8 }}
             data-scroll-to="#benefits-section"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            <span className="relative flex items-center">
-              Mint Your Pass Now
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-            </span>
+            Mint Your Pass Now
+            <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
           </motion.button>
         </div>
 
 
 
-        {/* Benefits Grid with Chart Overflow */}
-        <div id="benefits-section" ref={benefitsRef} className="mb-20 relative">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            {/* Left Grid - Content */}
-            <div className="space-y-8">
+        {/* Benefits Section */}
+        <div id="benefits-section" ref={benefitsRef} className="mb-20">
+          <div className="space-y-8">
               {/* Section Title */}
               <div className="text-left">
-                <h2 className="brand-section-title text-[#255f99] mb-4 reveal-text">
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
                   Why Get the COPYM Access Pass?
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] rounded-full"></div>
-                <p className="text-black mt-6 text-lg leading-relaxed">
+                <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
+                <p className="text-gray-700 mt-6 text-lg leading-relaxed">
                   Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
                 </p>
               </div>
 
-              {/* Benefits Cards */}
-              {/* Benefits Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="benefit-card group relative  backdrop-blur-sm p-6 rounded-2xl hover:shadow-2xl transition-all duration-500 overflow-hidden"
-                  >
-                    <div className="relative">
-                      <Box
-                        className="w-12 h-12 rounded-2xl mb-4 flex items-center border border-blue-200 justify-center text-2xl card-icon"
-                        sx={{
-                          background: "rgba(255, 255, 255, 0.9)",
-                          backdropFilter: "blur(5px)",
-                          boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
-                        }}
-                      >
-                        <benefit.icon className="h-6 w-6 text-blue-500" />
-                      </Box>
-                      <h3 className="font-bold text-lg mb-3 text-gray-900 group-hover:text-[#255f99] transition-colors">
-                        {benefit.title}
-                      </h3>
-                      <p className="text-black leading-relaxed text-sm">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                             {/* Benefits Cards */}
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                 {benefits.map((benefit, index) => (
+                   <div
+                     key={index}
+                     className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
+                   >
+                     {/* Background gradient overlay */}
+                     <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                     
+                     <div className="relative z-10">
+                       {/* Icon with enhanced styling */}
+                       <div className="flex items-center justify-between mb-6">
+                         <Box
+                           className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
+                           sx={{
+                             background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                             boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                           }}
+                         >
+                           <benefit.icon className="h-8 w-8 text-white" />
+                         </Box>
+                         
+                         {/* Number badge */}
+                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                           {index + 1}
+                         </div>
+                       </div>
+                       
+                       {/* Content */}
+                       <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
+                         {benefit.title}
+                       </h3>
+                       <p className="text-gray-700 leading-relaxed text-base">
+                         {benefit.description}
+                       </p>
+                       
+                       {/* Bottom accent line */}
+                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                     </div>
+                   </div>
+                 ))}
+               </div>
             </div>
 
-            {/* Right Grid - Chart with Overflow - Only visible on large screens */}
-            <div className="relative hidden lg:block">
-              <div className="chart-overflow absolute -right-1/2 top-0 w-min-6xl h-auto">
-                <div className="rounded-3xl overflow-hidden shadow-2xl">
-                  <CoinGeckoChart />
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Chart for small screens - positioned normally in document flow */}
-          <div className="lg:hidden mt-12 relative -right-1/4 top-0 w-min-6xl h-auto">
-            <div className="rounded-3xl overflow-hidden shadow-2xl max-w-md mx-auto">
-              <CoinGeckoChart />
-            </div>
-          </div>
         </div>
 
         {/* Unlock Features */}
         <div className="unlock-features mb-20">
           <div className="text-center mb-12">
-            <h2 className="brand-section-title text-[#255f99] mb-4 reveal-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Everything Your Pass Unlocks
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
-          {/* Mobile Layout - Stacked vertically */}
-          <div className="lg:hidden space-y-8">
-            {/* Mobile: First 3 features */}
-            <div className="space-y-6">
-              {unlockFeatures.slice(0, 3).map((feature, index) => (
-                <div
-                  key={index}
-                  className="unlock-feature group flex items-start gap-4 p-6 backdrop-blur-sm rounded-xl hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white border border-blue-200 flex items-center justify-center shadow-sm transition-all duration-300 flex-shrink-0">
-                    <feature.icon className="h-5 w-5 text-blue-500" />
-                  </div>
-                  <span className="text-gray-700 font-medium leading-relaxed text-sm">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile: Credential Card */}
-            <div className="flex justify-center py-6 px-4">
-              <div className="text-center w-full max-w-xs mx-auto">
-                <h3 className="text-lg font-bold text-center text-[#255f99] mb-2">
-                  Your Access Credential
-                </h3>
-                <p className="text-black text-center text-xs mb-6 max-w-xs mx-auto">
-                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                </p>
-                <div className="flex justify-end w-[380px] mt-12 ">
-                  <div className="w-full max-w-[350px]">
-                    <CredentialCard
-                      user={{
-                        name: "Alex Morgan",
-                        employeeNumber: "EMP-2048",
-                        passNumber: "PASS-7F32",
-                        points: "1,250",
-                        qrImage: "/assets/svg/copym_qr.svg",
-                      }}
-                      variant="bottleGreen"
-                      stacked
-                      backVariant="darkBlue"
-                      logoSrc="/assets/copym/png/Copym-05-1.png"
-                      logoSize={20}
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Mobile: Last 3 features */}
-            <div className="space-y-6">
-              {unlockFeatures.slice(3, 6).map((feature, index) => (
-                <div
-                  key={index + 3}
-                  className="unlock-feature group flex items-start gap-4 p-6 backdrop-blur-sm rounded-xl hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="w-10 h-10 rounded-xl bg-white border border-blue-200 flex items-center justify-center shadow-sm transition-all duration-300 flex-shrink-0">
-                    <feature.icon className="h-5 w-5 text-blue-500" />
-                  </div>
-                  <span className="text-gray-700 font-medium leading-relaxed text-sm">
-                    {feature.text}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Desktop Layout - 3 columns (unchanged) */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-start">
-             {/* Left Grid - First 3 Unlock Features */}
-             <div className="grid grid-cols-1 gap-8 ">
+                     {/* Mobile Layout - Stacked vertically */}
+           <div className="lg:hidden space-y-8">
+             {/* Mobile: First 3 features */}
+             <div className="space-y-6">
                {unlockFeatures.slice(0, 3).map((feature, index) => (
                  <div
                    key={index}
-                   className="unlock-feature group flex mx-10 items-start gap-4 p-8 backdrop-blur-sm rounded-xl  hover:shadow-xl transition-all duration-300"
+                   className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
-                   <div className="w-12 h-12 rounded-2xl bg-white border border-blue-200 flex items-center justify-center shadow-sm  transition-all duration-300 flex-shrink-0">
-                     <feature.icon className="h-6 w-6 text-blue-500" />
+                   {/* Background gradient overlay */}
+                   <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                   
+                   <div className="relative z-10 flex items-start gap-4">
+                     {/* Icon with enhanced styling */}
+                     <div className="flex items-center justify-between mb-0">
+                       <Box
+                         className="w-12 h-12 rounded-xl flex items-center justify-center text-xl card-icon group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                         sx={{
+                           background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                           boxShadow: "0 6px 20px rgba(34, 197, 94, 0.3)",
+                         }}
+                       >
+                         <feature.icon className="h-6 w-6 text-white" />
+                       </Box>
+                       
+                       {/* Number badge */}
+                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
+                         {index + 1}
+                       </div>
+                     </div>
+                     
+                     {/* Content */}
+                     <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
+                       {feature.text}
+                     </span>
                    </div>
-                   <span className="text-gray-700 font-medium leading-relaxed">
-                     {feature.text}
-                   </span>
+                   
+                   {/* Bottom accent line */}
+                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
                  </div>
                ))}
              </div>
 
-             {/* Center Grid - Credential Card */}
-             <div className="flex justify-center">
-               <div className="">
-                 <h3 className="text-xl font-bold text-center text-[#255f99] mb-2">
+             {/* Mobile: Credential Card */}
+             <div className="flex justify-center py-6 px-4">
+               <div className="text-center w-full max-w-xs mx-auto">
+                 <h3 className="text-lg font-black text-center text-gray-900 mb-2 uppercase anton-regular">
                    Your Access Credential
                  </h3>
-                 <p className="text-black m-auto text-center text-sm mb-8 max-w-xs">
+                 <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                  </p>
-                 <CredentialCard
-                   user={{
-                     name: "Alex Morgan",
-                     employeeNumber: "EMP-2048",
-                     passNumber: "PASS-7F32",
-                     points: "1,250",
-                     qrImage: "/assets/svg/copym_qr.svg",
-                   }}
-                   variant="bottleGreen"
-                   stacked
-                   backVariant="darkBlue"
-                   logoSrc="/assets/copym/png/Copym-05-1.png"
-                   logoSize={28}
-                 />
+                 <div className="flex justify-end w-[380px] mt-12">
+                   <div className="w-full max-w-[350px]">
+                     <CredentialCard
+                       user={{
+                         name: "Alex Morgan",
+                         employeeNumber: "EMP-2048",
+                         passNumber: "PASS-7F32",
+                         points: "1,250",
+                         qrImage: "/assets/svg/copym_qr.svg",
+                       }}
+                       variant="bottleGreen"
+                       stacked
+                       backVariant="darkBlue"
+                       logoSrc="/assets/copym/png/Copym-05-1.png"
+                       logoSize={20}
+                     />
+                   </div>
+                 </div>
                </div>
              </div>
 
-             {/* Right Grid - Last 3 Unlock Features */}
-             <div className="grid grid-cols-1 gap-8">
+             {/* Mobile: Last 3 features */}
+             <div className="space-y-6">
                {unlockFeatures.slice(3, 6).map((feature, index) => (
                  <div
                    key={index + 3}
-                   className="unlock-feature group flex items-start mx-10 gap-4 p-8 backdrop-blur-sm rounded-xl hover:shadow-xl transition-all duration-300"
+                   className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
-                   <div className="w-12 h-12 rounded-2xl bg-white border border-blue-200 flex items-center justify-center shadow-sm  transition-all duration-300 flex-shrink-0">
-                     <feature.icon className="h-6 w-6 text-blue-500" />
+                   {/* Background gradient overlay */}
+                   <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                   
+                   <div className="relative z-10 flex items-start gap-4">
+                     {/* Icon with enhanced styling */}
+                     <div className="flex items-center justify-between mb-0">
+                       <Box
+                         className="w-12 h-12 rounded-xl flex items-center justify-center text-xl card-icon group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                         sx={{
+                           background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                           boxShadow: "0 6px 20px rgba(34, 197, 94, 0.3)",
+                         }}
+                       >
+                         <feature.icon className="h-6 w-6 text-white" />
+                       </Box>
+                       
+                       {/* Number badge */}
+                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
+                         {index + 4}
+                       </div>
+                     </div>
+                     
+                     {/* Content */}
+                     <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
+                       {feature.text}
+                     </span>
                    </div>
-                   <span className="text-gray-700 font-medium leading-relaxed">
-                     {feature.text}
-                   </span>
+                   
+                   {/* Bottom accent line */}
+                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
                  </div>
                ))}
              </div>
            </div>
+
+           {/* Desktop Layout - 3 columns */}
+           <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-start">
+              {/* Left Grid - First 3 Unlock Features */}
+              <div className="grid grid-cols-1 gap-8">
+                {unlockFeatures.slice(0, 3).map((feature, index) => (
+                  <div
+                    key={index}
+                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
+                  >
+                    {/* Background gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      {/* Icon with enhanced styling */}
+                      <div className="flex items-center justify-between mb-6">
+                        <Box
+                          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
+                          sx={{
+                            background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                            boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                          }}
+                        >
+                          <feature.icon className="h-8 w-8 text-white" />
+                        </Box>
+                        
+                        {/* Number badge */}
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                          {index + 1}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
+                        {feature.text}
+                      </span>
+                      
+                      {/* Bottom accent line */}
+                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Center Grid - Credential Card */}
+              <div className="flex justify-center">
+                <div className="">
+                  <h3 className="text-xl font-black text-center text-gray-900 mb-2 uppercase anton-regular">
+                    Your Access Credential
+                  </h3>
+                  <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
+                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                  </p>
+                  <CredentialCard
+                    user={{
+                      name: "Alex Morgan",
+                      employeeNumber: "EMP-2048",
+                      passNumber: "PASS-7F32",
+                      points: "1,250",
+                      qrImage: "/assets/svg/copym_qr.svg",
+                    }}
+                    variant="bottleGreen"
+                    stacked
+                    backVariant="darkBlue"
+                    logoSrc="/assets/copym/png/Copym-05-1.png"
+                    logoSize={28}
+                  />
+                </div>
+              </div>
+
+              {/* Right Grid - Last 3 Unlock Features */}
+              <div className="grid grid-cols-1 gap-8">
+                {unlockFeatures.slice(3, 6).map((feature, index) => (
+                  <div
+                    key={index + 3}
+                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
+                  >
+                    {/* Background gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    
+                    <div className="relative z-10">
+                      {/* Icon with enhanced styling */}
+                      <div className="flex items-center justify-between mb-6">
+                        <Box
+                          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
+                          sx={{
+                            background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                            boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                          }}
+                        >
+                          <feature.icon className="h-8 w-8 text-white" />
+                        </Box>
+                        
+                        {/* Number badge */}
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                          {index + 4}
+                        </div>
+                      </div>
+                      
+                      {/* Content */}
+                      <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
+                        {feature.text}
+                      </span>
+                      
+                      {/* Bottom accent line */}
+                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
         </div>
 
         {/* Platform Features */}
         <div ref={featuresRef} className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="brand-section-title text-[#255f99] mb-4 reveal-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Platform Features
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="feature-item group flex items-start gap-6 p-8 bg-green-50 backdrop-blur-sm rounded-2xl border border-white/50 shadow-xl hover:shadow-2xl transition-all duration-500"
-              >
-                <Box
-                  className="w-12 h-12 rounded-2xl mb-4 flex items-center border border-blue-200 justify-center text-2xl card-icon"
-                  sx={{
-                    background: "rgba(255, 255, 255, 0.9)",
-                    backdropFilter: "blur(5px)",
-                    boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)",
-                  }}
-                >
-                  <feature.icon className="h-6 w-6 text-blue-500" />
-                </Box>
-                <div>
-                  <h3 className="font-bold text-xl mb-3 text-gray-900 group-hover:text-[#255f99] transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-black leading-relaxed">
-                    {feature.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+             {features.map((feature, index) => (
+               <div
+                 key={index}
+                 className="feature-item group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
+               >
+                 {/* Background gradient overlay */}
+                 <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                 
+                 <div className="relative z-10">
+                   {/* Icon with enhanced styling */}
+                   <div className="flex items-center justify-between mb-6">
+                     <Box
+                       className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
+                       sx={{
+                         background: "linear-gradient(135deg, #22c55e, #16a34a)",
+                         boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                       }}
+                     >
+                       <feature.icon className="h-8 w-8 text-white" />
+                     </Box>
+                     
+                     {/* Number badge */}
+                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                       {index + 1}
+                     </div>
+                   </div>
+                   
+                   {/* Content */}
+                   <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
+                     {feature.title}
+                   </h3>
+                   <p className="text-gray-700 leading-relaxed text-base">
+                     {feature.description}
+                   </p>
+                   
+                   {/* Bottom accent line */}
+                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                 </div>
+               </div>
+             ))}
+           </div>
         </div>
 
         {/* Benefits Comparison */}
         <div className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="brand-section-title text-[#255f99] mb-4 reveal-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Benefits Comparison
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="comparison-table backdrop-blur-sm rounded-3xl border border-white/30 overflow-hidden shadow-2xl overflow-x-auto">
+          <div className="comparison-table bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-200/50 overflow-hidden shadow-2xl overflow-x-auto">
             <div className="grid grid-cols-3 text-sm font-bold text-gray-700 border-b border-gray-200/50 min-w-[700px]">
               <div className="px-6 py-4">FEATURE</div>
-              <div className="px-6 py-4 text-[#15a36e] text-center">
+              <div className="px-6 py-4 text-green-600 text-center">
                 TOKENIZATION
               </div>
               <div className="px-6 py-4 text-center">
@@ -706,10 +775,10 @@ export default function AccessPage() {
                 className="grid grid-cols-3 text-sm border-b border-gray-100/30 last:border-b-0 hover:bg-gray-50/50 transition-colors min-w-[700px]"
               >
                 <div className="px-6 py-5 font-semibold text-gray-900 flex items-center gap-3">
-                  <row.icon className="w-5 h-5 text-[#255f99] flex-shrink-0" />
+                  <row.icon className="w-5 h-5 text-green-600 flex-shrink-0" />
                   <span>{row.feature}</span>
                 </div>
-                <div className="px-6 py-5 text-[#15a36e] font-bold flex items-center justify-center gap-3">
+                <div className="px-6 py-5 text-green-600 font-bold flex items-center justify-center gap-3">
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                   <span>{row.tokenization}</span>
                 </div>
@@ -724,10 +793,10 @@ export default function AccessPage() {
         {/* Supported Networks */}
         <div ref={networksRef} className="mb-20">
           <div className="text-center mb-12">
-            <h2 className="brand-section-title text-[#255f99] mb-4 reveal-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase anton-regular reveal-text">
               Supported Networks
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-[#15a36e] to-[#255f99] mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
@@ -766,9 +835,9 @@ export default function AccessPage() {
 
         {/* Final CTA */}
         <div ref={ctaRef} className="text-center">
-          <div className="bg-gradient-to-r from-[#255f99] to-[#15a36e] rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl p-12 text-white">
             <Crown className="w-16 h-16 mx-auto mb-6 text-white/80" />
-            <h3 className="text-3xl font-bold mb-4 reveal-text">
+            <h3 className="text-3xl font-black mb-4 uppercase anton-regular reveal-text">
               Ready to Join the Elite?
             </h3>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto reveal-text">

@@ -154,8 +154,9 @@ export default function TestimonialsSection() {
       {/* heading */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#255f99] mb-4">
-            Trusted by Industry Leaders
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 anton-regular">
+            <span className="text-gray-900">Trusted by Industry </span>
+            <span className="text-emerald-600">Leaders</span>
           </h2>
           <p className="text-black max-w-2xl mx-auto text-lg">
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
