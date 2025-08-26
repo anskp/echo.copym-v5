@@ -13,15 +13,15 @@ const Benefits = () => {
           className="md:max-w-md lg:max-w-2xl"
           title={
             <>
-              RWA Tokenization Powered by{" "}
+              FEATURES{" "}
               <span className="inline-block relative font-semibold">
-                COPYM-AI
+            
               </span>
             </>
           }
         />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
           {benefits.map((benefit) => (
             <div
               className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] transition-transform duration-300 hover:scale-105 hover:shadow-lg"
@@ -54,14 +54,14 @@ const Benefits = () => {
                 className="absolute inset-0.5 bg-gray-50"
                 style={{ clipPath: "url(#benefits)" }}
               >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10">
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10 flex items-center justify-center">
                   {benefit.imageUrl && (
                     <img
                       src={benefit.imageUrl}
-                      width={380}
-                      height={362}
+                      width={120}
+                      height={120}
                       alt={benefit.title}
-                      className="w-full h-full object-cover"
+                      className="object-contain"
                     />
                   )}
                 </div>
