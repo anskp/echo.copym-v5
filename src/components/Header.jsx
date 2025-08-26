@@ -161,7 +161,7 @@ export default function Header() {
         {/* Fixed Download Button - Shows when scrolled */}
         {isScrolled && (
           <motion.div
-            className="nav-item"
+            className="nav-item hidden md:block"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
@@ -169,7 +169,7 @@ export default function Header() {
           >
             <button className="nav-link bg-green-500 hover:bg-green-600 text-white border-0">
               <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM10 3a1 1 0 01-1 1v7.586L7.707 10.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V4a1 1 0 00-1-1z"/>
               </svg>
               Download
             </button>
@@ -179,21 +179,21 @@ export default function Header() {
 
       {/* Delta-Style Navbar */}
       <nav className={`navbar ${getHeaderBackground()}`}>
-        <div className="nav-container">
+        <div className="nav-container px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
               <img
-                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
+                src={isCopymAIPage ? "/assets/copym/png/Copym-02-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
                 alt="COPYM"
                 className="h-16 w-auto object-contain sm:h-18 md:h-20"
               />
             </Link>
 
-          {/* Download Button */}
-          <div className="flex items-center ml-auto">
-            <button className="btn-gradient hidden md:flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
+          {/* Download Button - Desktop Only */}
+          <div className="hidden lg:flex items-center ml-auto">
+            <button className="btn-gradient flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
+                <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM10 3a1 1 0 01-1 1v7.586L7.707 10.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V4a1 1 0 00-1-1z"/>
               </svg>
               Download
             </button>
@@ -201,10 +201,10 @@ export default function Header() {
 
             {/* Mobile Toggle */}
             <button
-            className="md:hidden ml-4 text-white hover:text-gray-300 transition-colors duration-200 p-2 rounded-lg"
+            className="md:hidden ml-6 text-white hover:text-gray-300 transition-colors duration-200 p-3 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
             </button>
           </div>
       </nav>
