@@ -2,7 +2,6 @@ import { useState } from "react";
 import { service1, service2, service3, check } from "../assets";
 import { brainwaveServices, brainwaveServicesIcons } from "../constants";
 import Button from "./Button";
-import Generating from "./Generating";
 import Heading from "./Heading";
 import Section from "./Section";
 import {
@@ -20,72 +19,13 @@ const Services = () => {
         <Heading
           title={
             <>
-              Why Choose{" "}
-              <span className="inline-block relative font-semibold">
-                COPYM AI
-              </span>
+              Why Choose CORA{" "}
             </>
           }
           text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
         />
 
         <div className="relative">
-          {/* Service 1 */}
-          <div className="relative z-1 flex items-center h-[39rem] mb-5 p-8 border border-gray-300 rounded-3xl overflow-hidden lg:p-20 xl:h-[46rem]">
-            <div className="absolute top-0 left-0 w-full h-full pointer-events-none select-none md:w-3/5 xl:w-auto">
-              <img
-                className="w-full h-full object-cover ml-6 mt-10 md:object-right scale-[1.29]"
-                width={800}
-                height={730}
-                alt="Smartest AI"
-                src={service1}
-              />
-            </div>
-
-            <div className="relative z-1 max-w-[25rem] ml-auto bg-blue-100 opacity-70 rounded-2xl p-4">
-              <div className="bg-blue-100 opacity-70 rounded-2xl mb-6">
-                <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">COPYM AI</h4>
-                <p className="body-2 mb-[3rem] text-black">
-                  COPYM-AI is the first unified platform that integrates the world's leading RWA platforms with advanced AI capabilities, creating a seamless tokenization experience.
-                </p>
-              </div>
-              <ul className="body-2">
-                <li className="flex items-start py-4 border-t border-gray-300">
-                  <img
-                    width={24}
-                    height={24}
-                    src={check}
-                    alt="check"
-                    className="pointer-events-none select-none"
-                  />
-                  <p className="ml-4 text-black">Securitize Compliance AI</p>
-                </li>
-                <li className="flex items-start py-4 border-t border-gray-300">
-                  <img
-                    width={24}
-                    height={24}
-                    src={check}
-                    alt="check"
-                    className="pointer-events-none select-none"
-                  />
-                  <p className="ml-4 text-black">Polymath Security Intelligence</p>
-                </li>
-                <li className="flex items-start py-4 border-t border-gray-300">
-                  <img
-                    width={24}
-                    height={24}
-                    src={check}
-                    alt="check"
-                    className="pointer-events-none select-none"
-                  />
-                  <p className="ml-4 text-black">Centrifuge DeFi Integration</p>
-                </li>
-              </ul>
-            </div>
-
-            <Generating className="absolute left-4 right-4 bottom-4 border-n-1/10 border lg:left-1/2 lg:right-auto lg:bottom-8 lg:-translate-x-1/2" />
-          </div>
-
           {/* Service 2 & 3 */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-gray-300 rounded-3xl overflow-hidden">
