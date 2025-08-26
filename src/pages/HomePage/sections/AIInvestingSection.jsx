@@ -48,26 +48,10 @@ export default function AIInvestingSection() {
            <div className="relative flex justify-center lg:justify-end">
              <div className="relative">
                                <img 
-                  src="/assets/Images/copyai.png" 
+                  src="/assets/Images/aiagentphones99.png" 
                   alt="Copym AI Voice Assistant Interface" 
-                  className="w-32 h-auto rounded-2xl object-contain shadow-2xl"
+                  className="w-56 sm:w-72 lg:w-96 h-auto rounded-2xl object-contain shadow-2xl"
                 />
-               
-               {/* AI Waveform Effect */}
-               <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2">
-                 <div className="flex space-x-1">
-                   {[...Array(8)].map((_, i) => (
-                     <div 
-                       key={i}
-                       className="w-1 bg-green-400 rounded-full animate-pulse"
-                       style={{ 
-                         height: `${Math.random() * 20 + 10}px`,
-                         animationDelay: `${i * 0.1}s`
-                       }}
-                     ></div>
-                   ))}
-                 </div>
-               </div>
              </div>
            </div>
         </div>
