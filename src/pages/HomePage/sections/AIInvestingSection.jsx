@@ -1,19 +1,14 @@
 import React from 'react';
-import { ArrowRight, Brain, TrendingUp, BarChart3, MessageSquare } from 'lucide-react';
+import { ArrowRight, Brain } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function AIInvestingSection() {
   return (
-    <section className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 py-4 sm:py-6 lg:py-8">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-400/10 to-blue-400/10"></div>
-      </div>
-      
+    <section className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 py-4 sm:py-6 lg:py-8 overflow-visible">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
           {/* Left Side - Content */}
-          <div className="text-center lg:text-left space-y-4">
+          <div className="text-center lg:text-left space-y-4 flex-1">
             {/* Section Label */}
             <div className="inline-flex items-center space-x-2 text-green-400 font-medium text-sm">
               <Brain className="w-4 h-4" />
@@ -34,26 +29,27 @@ export default function AIInvestingSection() {
             
             {/* CTA Button */}
             <div className="flex justify-center lg:justify-start">
-                             <Link
-                 to="/marketplace"
-                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-xl transition-all duration-300 transform hover:scale-105"
-               >
-                 See the Reveal
-                 <ArrowRight className="ml-2 h-4 w-4" />
-               </Link>
+              <Link
+                to="/marketplace"
+                className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-xl transition-all duration-300 transform hover:scale-105"
+              >
+                See the Reveal
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
             </div>
           </div>
           
-                     {/* Right Side - AI Interface Image */}
-           <div className="relative flex justify-center lg:justify-end">
-             <div className="relative">
-                               <img 
-                  src="/assets/Images/aiagentphones99.png" 
-                  alt="Copym AI Voice Assistant Interface" 
-                  className="w-56 sm:w-72 lg:w-96 h-auto rounded-2xl object-contain shadow-2xl"
-                />
-             </div>
-           </div>
+          {/* Right Side - AI Interface Image with Extended Effect */}
+          <div className="relative -my-20 lg:-my-32 w-80 sm:w-96 lg:w-[32rem] xl:w-[36rem] h-auto">
+            <img 
+              src="/assets/Images/aiagentphones99.png" 
+              alt="Copym AI Voice Assistant Interface" 
+              className="w-full h-auto rounded-2xl object-contain transform scale-125"
+              style={{
+                zIndex: 20
+              }}
+            />
+          </div>
         </div>
       </div>
     </section>

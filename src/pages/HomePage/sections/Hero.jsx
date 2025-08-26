@@ -136,18 +136,18 @@ export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
 
   return (
-    <div className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+    <div className="relative overflow-visible">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-32 sm:pb-40 lg:pb-48">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start h-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 sm:pt-24 lg:pt-28 pb-12 sm:pb-16 lg:pb-20">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center min-h-[30vh]">
           {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left lg:pt-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
+          <div className="text-center lg:text-left">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 sm:mb-8 uppercase anton-regular">
               <span className="text-gray-900">UNLOCK </span>
               <span className="text-emerald-600">EXCLUSIVE</span>
               <br />
@@ -156,11 +156,11 @@ export default function Hero() {
               <span className="text-emerald-600">CONFIDENCE</span>
             </h1>
 
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0">
               Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start mb-10">
               <Link
                 to="/marketplace"
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
@@ -179,8 +179,8 @@ export default function Hero() {
           </div>
 
           {/* Right Side - Dual Phone Mockups */}
-          <div className="flex justify-center lg:justify-start lg:pt-16 lg:pl-2 mt-8 lg:mt-0">
-            <div className="flex gap-2 sm:gap-4 md:gap-6 items-center">
+          <div className="flex justify-center lg:justify-start lg:pl-2">
+            <div className="flex gap-2 sm:gap-4 md:gap-6 items-center" style={{ transform: 'translateY(72px)' }}>
               <HeroPhone3D />
               <HeroPhone3DWallet />
             </div>

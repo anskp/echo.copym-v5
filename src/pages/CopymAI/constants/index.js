@@ -139,22 +139,22 @@ export const roadmap = [{
 ];
 
 export const collabText =
-    "A unified platform that fractionalizes real-world assets and bridges them with leading blockchain and DeFi protocols — delivering liquidity, compliance, and security at scale.";
+    "Enterprise-grade platform that transforms real-world assets into digital tokens, connecting traditional finance with blockchain technology for enhanced liquidity, regulatory compliance, and institutional security.";
 
 export const collabContent = [{
         id: "0",
-        title: "Platform Integration",
-        text: "Digitize and fractionalize assets such as real estate, commodities, and securities. Seamlessly integrate with Ethereum, Polygon, Solana, Avalanche, and more for global liquidity.",
+        title: "Asset Tokenization Platform",
+        text: "Convert real estate, commodities, and securities into digital tokens. Seamlessly integrate with major blockchain networks including Ethereum, Polygon, Solana, and Avalanche for global market access.",
     },
     {
         id: "1",
-        title: "AI Compliance",
-        text: "Automated KYC/AML, identity verification, and transaction monitoring powered by AI — ensuring adherence to FATF, SEC, and jurisdictional regulations.",
+        title: "AI-Powered Compliance",
+        text: "Advanced AI-driven KYC/AML verification, identity authentication, and real-time transaction monitoring ensuring full compliance with FATF, SEC, and international regulatory frameworks.",
     },
     {
         id: "2",
-        title: "Cross-Chain Security",
-        text: "MPC-based custody, trustless settlement, and interoperability across chains — ensuring institutional-grade protection for asset-backed transactions.",
+        title: "Institutional Security",
+        text: "Multi-party computation (MPC) custody solutions with cross-chain interoperability and trustless settlement protocols providing enterprise-grade security for digital asset transactions.",
     },
 ];
 
@@ -203,14 +203,14 @@ export const collabApps = [{
     {
         id: "6",
         title: "Algorand",
-        icon: ethereum,
+        icon: near,
         width: 26,
         height: 34,
     },
     {
         id: "7",
         title: "Swarm",
-        icon: bitcoin,
+        icon: stellar,
         width: 38,
         height: 32,
     },
@@ -257,7 +257,7 @@ export const pricing = [{
 export const benefits = [{
         id: "0",
         title: "The Problem We Solve",
-        text: "Traditional RWA investment is broken: too expensive ($10,000+ minimums), illiquid (weeks/months to trade), and complex (requires deep knowledge). Great opportunities are missed by everyday investors.",
+        text: "Traditional RWA investment is broken: too expensive, illiquid, and complex. Great opportunities missed by everyday investors.",
         backgroundUrl: "/src/assets/benefits/card-1.svg",
         iconUrl: benefitIcon1,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
@@ -265,7 +265,7 @@ export const benefits = [{
     {
         id: "1",
         title: "AI-Powered Tokenization",
-        text: "Our platform converts real-world assets into secure, blockchain-based tokens with AI verification. Start investing with as little as $100 in fractional ownership of high-value assets.",
+        text: "Convert real-world assets into secure blockchain tokens with AI verification. Start investing with just $100.",
         backgroundUrl: "/src/assets/benefits/card-2.svg",
         iconUrl: benefitIcon2,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
@@ -274,7 +274,7 @@ export const benefits = [{
     {
         id: "2",
         title: "Integrated Marketplace",
-        text: "Buy, sell, and trade fractional ownership instantly with our integrated marketplace. No more waiting weeks or months to liquidate your investments.",
+        text: "Buy, sell, and trade fractional ownership instantly. No more waiting weeks to liquidate investments.",
         backgroundUrl: "/src/assets/benefits/card-3.svg",
         iconUrl: benefitIcon3,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
@@ -282,7 +282,7 @@ export const benefits = [{
     {
         id: "3",
         title: "AI Investment Advisor",
-        text: "Our AI predicts which assets will grow in value with 23% better accuracy than traditional tools. Get personalized recommendations for your investment portfolio.",
+        text: "AI predicts asset growth with 23% better accuracy than traditional tools. Get personalized recommendations.",
         backgroundUrl: "/src/assets/benefits/card-4.svg",
         iconUrl: benefitIcon4,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
@@ -291,7 +291,7 @@ export const benefits = [{
     {
         id: "4",
         title: "Smart Asset Verification",
-        text: "AI + human experts verify every asset's value and authenticity. Bank-level security for storing your tokens with advanced compliance and KYC/AML.",
+        text: "AI + human experts verify every asset's value and authenticity. Bank-level security with compliance.",
         backgroundUrl: "/src/assets/benefits/card-5.svg",
         iconUrl: benefitIcon1,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
@@ -299,7 +299,7 @@ export const benefits = [{
     {
         id: "5",
         title: "Business Model",
-        text: "Revenue through 2.5% tokenization fees, 1% marketplace fees, premium AI insights ($29-$299/month), and 0.75% annual management fees. Projected $18M/year by Year 3.",
+        text: "Revenue through tokenization fees, marketplace fees, premium AI insights, and management fees.",
         backgroundUrl: "/src/assets/benefits/card-6.svg",
         iconUrl: benefitIcon2,
         imageUrl: "/assets/copym/png/Copym-05-1.png",
