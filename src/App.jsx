@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Header from './components/Header';
 import Hero from './pages/HomePage/sections/Hero';
-import MarketplacePreview from './pages/HomePage/sections/MarketplacePreview';
+
 import Footer from './components/Footer';
 import TokenizationHub from './pages/TokenizationHub/TokenizationHub';
 import Marketplace from './pages/Marketplace/Marketplace';

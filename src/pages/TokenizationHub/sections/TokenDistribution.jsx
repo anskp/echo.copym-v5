@@ -54,7 +54,7 @@ export default function TokenDistribution() {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -62,7 +62,7 @@ export default function TokenDistribution() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="text-center group"
+              className="text-center group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg"
             >
               {/* Icon */}
               <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
@@ -80,15 +80,11 @@ export default function TokenDistribution() {
             </motion.div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            Start Distribution
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </button>
-        </div>
       </div>
+      
+      {/* Section Divider */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-60"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black to-transparent opacity-30"></div>
     </section>
   );
 }
