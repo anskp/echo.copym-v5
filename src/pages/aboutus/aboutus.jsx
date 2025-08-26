@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { LavaLamp } from "../../components/ui/fluid-blob";
 
 const AboutUs = () => {
     const [openDropdown, setOpenDropdown] = useState(null);
@@ -10,6 +11,16 @@ const AboutUs = () => {
         <div className="min-h-screen bg-blue-100">
             {/* Section 1: Hero Section */}
             <section className="relative min-h-screen bg-gradient-to-br from-blue-50 via-white to-green-50 flex items-center justify-center overflow-hidden">
+                {/* Blue Background Pattern - Same as Marketplace */}
+                <div className="absolute inset-0 opacity-10">
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+                </div>
+
+                {/* Fluid Blob Background - Same as Marketplace */}
+                <div className="absolute inset-0 opacity-30">
+                    <LavaLamp />
+                </div>
+
                 {/* Background Pattern */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
                 
@@ -73,9 +84,9 @@ const AboutUs = () => {
                                             We bridge tangible value and digital innovation, enabling physical assets — from <span className="font-semibold text-[#15a36e]">real estate and commodities</span> to <span className="font-semibold text-[#255f99]">collectibles and intellectual property</span> — to be securely digitized, fractionalized, and traded on a global scale.
                                         </p>
                                     </div>
-                                    </div>
-                                    </div>
                                 </div>
+                            </div>
+                        </div>
 
                         <div className="relative">
                             <div className="bg-gradient-to-br from-[#255f99]/10 to-[#15a36e]/10 rounded-3xl p-8 flex items-center justify-center">
@@ -89,10 +100,10 @@ const AboutUs = () => {
                                             By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
                                         </p>
                                     </div>
-                                    </div>
                                 </div>
-                                    </div>
-                                    </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -268,112 +279,103 @@ const AboutUs = () => {
                         <div className="w-24 h-1 bg-gradient-to-r from-[#255f99] to-[#15a36e] mx-auto rounded-full"></div>
                             </div>
 
+                    {/* Timeline Data */}
+                    {(() => {
+                        const timelineData = [
+                            {
+                                year: "2021",
+                                title: "Foundation",
+                                description: "Founded COPYm to revolutionize asset ownership through blockchain innovation.",
+                                progress: { width: "25%", height: "h-2" },
+                                gradient: "from-[#255f99] to-[#15a36e]"
+                            },
+                            {
+                                year: "2022",
+                                title: "Innovation",
+                                description: "Pioneered real estate tokenization with flagship projects alongside industry-leading developers.",
+                                progress: { width: "40%", height: "h-3" },
+                                gradient: "from-[#15a36e] to-[#255f99]"
+                            },
+                            {
+                                year: "2023",
+                                title: "Expansion",
+                                description: "Expanded into commodities and IP tokenization, securing strategic enterprise partnerships.",
+                                progress: { width: "60%", height: "h-4" },
+                                gradient: "from-[#255f99] to-[#15a36e]"
+                            },
+                            {
+                                year: "2024",
+                                title: "Scaling",
+                                description: "Scaled to $500M in tokenized assets across 15 countries, empowering 10,000+ users.",
+                                progress: { width: "80%", height: "h-5" },
+                                gradient: "from-[#15a36e] to-[#255f99]"
+                            },
+                            {
+                                year: "2025",
+                                title: "Global Growth",
+                                description: "Accelerating global expansion with enterprise-grade compliance and multi-chain infrastructure.",
+                                progress: { width: "100%", height: "h-6" },
+                                gradient: "from-[#255f99] to-[#15a36e]",
+                                isActive: true
+                            }
+                        ];
+
+                        return (
                     <div className="relative">
                         {/* Timeline container */}
-                        <div className="bg-black rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-800">
-                            <div className="text-center mb-12">
-    
+                                <div className="bg-black rounded-3xl p-4 sm:p-6 lg:p-12 shadow-xl border border-gray-800">
+                                    <div className="text-center mb-8 sm:mb-12">
                                 <div className="w-16 h-1 bg-gradient-to-r from-[#255f99] to-[#15a36e] mx-auto rounded-full"></div>
                             </div>
                             
                             {/* Interactive Timeline */}
                             <div className="relative">
                                 {/* Timeline Line */}
-                                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-[#255f99] via-[#15a36e] to-[#255f99] rounded-full shadow-lg"></div>
+                                        <div className="absolute top-1/2 transform -translate-y-1/2 w-full h-1 bg-gradient-to-r from-[#255f99] via-[#15a36e] to-[#255f99] rounded-full shadow-lg"></div>
                                 
                                 {/* Timeline Items */}
-                                <div className="space-y-16 lg:space-y-20">
-                                    {/* 2021 */}
-                                    <div className="relative flex items-center group">
-                                        <div className="flex-1 text-right pr-8 lg:pr-12">
-                                            <div className="bg-gradient-to-r from-[#255f99] to-[#15a36e] text-white px-4 py-2 rounded-full inline-block mb-3 font-bold text-lg anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                2021
-                                            </div>
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                                                <p className="text-gray-700 leading-relaxed">
-                                                    Founded COPYm to revolutionize asset ownership through blockchain innovation.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-[#255f99] to-[#15a36e] rounded-full border-4 border-white shadow-lg z-10 group-hover:scale-125 transition-transform duration-300"></div>
-                                        <div className="flex-1 pl-8 lg:pl-12"></div>
+                                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6 relative z-10">
+                                            {timelineData.map((item, index) => (
+                                            <div 
+                                                key={item.year}
+                                                className="relative flex flex-col items-center group"
+                                                role="listitem"
+                                                aria-label={`Timeline item ${item.year}: ${item.title}`}
+                                            >
+                                                {/* Year Badge */}
+                                                <div 
+                                                    className={`bg-gradient-to-r ${item.gradient} text-white px-3 py-2 rounded-full inline-block mb-4 font-bold text-sm anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300 ${item.isActive ? 'animate-pulse' : ''}`}
+                                                >
+                                                    {item.year}
                                     </div>
                                     
-                                    {/* 2022 */}
-                                    <div className="relative flex items-center group">
-                                        <div className="flex-1 pr-8 lg:pr-12"></div>
-                                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-[#15a36e] to-[#255f99] rounded-full border-4 border-white shadow-lg z-10 group-hover:scale-125 transition-transform duration-300"></div>
-                                        <div className="flex-1 text-left pl-8 lg:pl-12">
-                                            <div className="bg-gradient-to-r from-[#15a36e] to-[#255f99] text-white px-4 py-2 rounded-full inline-block mb-3 font-bold text-lg anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                2022
-                                            </div>
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                                                <p className="text-gray-700 leading-relaxed">
-                                                    Pioneered real estate tokenization with flagship projects alongside industry-leading developers.
+                                                {/* Content Card */}
+                                                <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 w-full text-center relative min-h-[120px]">
+                                                    {/* Growing Graph Bar */}
+                                                    <div className={`absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r ${item.gradient} rounded-b-2xl opacity-60`}></div>
+                                                    <div 
+                                                        className={`absolute bottom-0 left-0 ${item.progress.height} bg-gradient-to-r ${item.gradient} rounded-t-lg ${item.isActive ? 'animate-pulse' : ''}`}
+                                                        style={{ width: item.progress.width }}
+                                                    ></div>
+                                                    
+                                                    {/* Title */}
+                                                    <h4 className="font-semibold text-gray-800 text-xs mb-2 anton-regular">
+                                                        {item.title}
+                                                    </h4>
+                                                    
+                                                    {/* Description */}
+                                                    <p className="text-gray-700 leading-relaxed text-xs">
+                                                        {item.description}
                                                 </p>
                                             </div>
+                                            </div>
+                                        ))}
                                         </div>
                                     </div>
-                                    
-                                    {/* 2023 */}
-                                    <div className="relative flex items-center group">
-                                        <div className="flex-1 text-right pr-8 lg:pr-12">
-                                            <div className="bg-gradient-to-r from-[#255f99] to-[#15a36e] text-white px-4 py-2 rounded-full inline-block mb-3 font-bold text-lg anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                2023
-                                            </div>
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                                                <p className="text-gray-700 leading-relaxed">
-                                                    Expanded into commodities and IP tokenization, securing strategic enterprise partnerships.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-[#255f99] to-[#15a36e] rounded-full border-4 border-white shadow-lg z-10 group-hover:scale-125 transition-transform duration-300"></div>
-                                        <div className="flex-1 pl-8 lg:pl-12"></div>
-                                    </div>
-                                    
-                                    {/* 2024 */}
-                                    <div className="relative flex items-center group">
-                                        <div className="flex-1 pr-8 lg:pr-12"></div>
-                                        <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-[#15a36e] to-[#255f99] rounded-full border-4 border-white shadow-lg z-10 group-hover:scale-125 transition-transform duration-300"></div>
-                                        <div className="flex-1 text-left pl-8 lg:pl-12">
-                                            <div className="bg-gradient-to-r from-[#15a36e] to-[#255f99] text-white px-4 py-2 rounded-full inline-block mb-3 font-bold text-lg anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                2024
-                                            </div>
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300">
-                                                <p className="text-gray-700 leading-relaxed">
-                                                    Scaled to $500M in tokenized assets across 15 countries, empowering 10,000+ users.
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    {/* 2025 */}
-                                    <div className="relative flex items-center group">
-                                        <div className="flex-1 text-right pr-8 lg:pr-12">
-                                            <div className="bg-gradient-to-r from-[#255f99] to-[#15a36e] text-white px-4 py-2 rounded-full inline-block mb-3 font-bold text-lg anton-regular shadow-lg group-hover:scale-105 transition-transform duration-300 animate-pulse">
-                                                2025
-                                            </div>
-                                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-200 group-hover:shadow-xl group-hover:scale-105 transition-all duration-300 border-l-4 border-l-[#15a36e]">
-                                                <p className="text-gray-700 leading-relaxed font-medium">
-                                                    Accelerating global expansion with enterprise-grade compliance and multi-chain infrastructure.
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div className="absolute left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradient-to-r from-[#255f99] to-[#15a36e] rounded-full border-4 border-white shadow-lg z-10 group-hover:scale-125 transition-transform duration-300 animate-pulse"></div>
-                                        <div className="flex-1 pl-8 lg:pl-12"></div>
-                                    </div>
-                                </div>
-                                
-                                {/* Decorative Elements */}
-                                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                                    <div className="w-4 h-4 bg-gradient-to-r from-[#255f99] to-[#15a36e] rounded-full shadow-lg animate-bounce"></div>
-                                </div>
-                                <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
-                                    <div className="w-4 h-4 bg-gradient-to-r from-[#15a36e] to-[#255f99] rounded-full shadow-lg"></div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                                                 );
+                     })()}
                                 </div>
             </section>
 

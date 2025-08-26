@@ -394,9 +394,9 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Horizontal Sidebar Sections */}
-        <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                 {/* Horizontal Sidebar Sections */}
+         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Information - Single Consolidated Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
               <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Contact Information</h3>
@@ -472,21 +472,7 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Why Partner With Us - Simplified */}
-            <div className="bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-2xl p-4 sm:p-6 text-white">
-              <h3 className="font-semibold text-base sm:text-lg mb-4">Why Partner With Us</h3>
-              <div className="space-y-3">
-                {features.map((f, i) => (
-                  <div key={i} className="flex items-start space-x-3">
-                    <f.icon className="w-5 h-5 text-white/80 flex-shrink-0 mt-0.5" />
-                    <div>
-                      <p className="font-medium text-sm">{f.title}</p>
-                      <p className="text-white/70 text-xs">{f.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </motion.div>
 
