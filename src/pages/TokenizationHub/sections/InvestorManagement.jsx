@@ -1,68 +1,101 @@
 // src/pages/TokenizationHub/sections/InvestorManagement.jsx
 
 import React from 'react';
-import { Box } from '@mui/material';
-import { UserCheck, Database, Activity, PieChart } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Users, BarChart3, Shield, MessageSquare } from 'lucide-react';
 
 export default function InvestorManagement() {
-  const managementTools = [
-    { title: 'KYC/AML Verification', description: 'Automated identity verification and anti-money laundering checks.', icon: UserCheck, stats: '99.9% accuracy' },
-    { title: 'Investor Portal', description: 'Dedicated portal for investors to track holdings and receive updates.', icon: Database, stats: '24/7 access' },
-    { title: 'Communication Hub', description: 'Direct communication channels with investors and stakeholders.', icon: Activity, stats: 'Real-time messaging' },
-    { title: 'Reporting & Analytics', description: 'Comprehensive investor analytics and performance reporting.', icon: PieChart, stats: 'Custom reports' }
+  const features = [
+    {
+      icon: Users,
+      title: "Investor Dashboard",
+      description: "Comprehensive dashboard for tracking investments, returns, and portfolio performance.",
+      color: "from-pink-500 to-teal-500",
+      stats: "10K+ Active"
+    },
+    {
+      icon: BarChart3,
+      title: "Portfolio Analytics",
+      description: "Advanced analytics and reporting tools for investment performance tracking.",
+      color: "from-yellow-500 to-green-500",
+      stats: "Real-time"
+    },
+    {
+      icon: Shield,
+      title: "Compliance Management",
+      description: "Automated compliance monitoring and regulatory reporting for all investors.",
+      color: "from-pink-500 via-blue-500 to-green-500",
+      stats: "100% Compliant"
+    },
+    {
+      icon: MessageSquare,
+      title: "Communication Hub",
+      description: "Integrated communication tools for investor updates and announcements.",
+      color: "from-orange-500 to-red-500",
+      stats: "24/7 Support"
+    }
   ];
 
   return (
-    <section className="bg-white py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[100px]"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="anton-regular uppercase font-black text-4xl md:text-5xl mb-4">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight anton-regular mb-6">
             <span className="text-gray-900">INVESTOR</span>
-            <span className="text-green-600"> MANAGEMENT</span>
+            <br />
+            <span className="text-emerald-600">MANAGEMENT</span>
           </h2>
-          <p className="text-gray-700 max-w-3xl mx-auto text-lg">
-            Streamlined tools for managing investor relationships, compliance, and communications.
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 justify-items-center">
-          {managementTools.map((tool, index) => (
-            <div key={index} className="w-full max-w-sm">
-              <div className="relative group">
-                {/* Glow Effect */}
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-2xl blur opacity-0 group-hover:opacity-75 transition duration-500"></div>
-                
-                {/* Main Card */}
-                <div className="relative bg-white rounded-xl p-8 w-full text-center shadow-lg hover:shadow-xl transition-all duration-300">
-                  <Box 
-                    className="w-16 h-16 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon mx-auto" 
-                    sx={{ 
-                      background: "rgba(255, 255, 255, 0.9)", 
-                      backdropFilter: "blur(5px)", 
-                      boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.05)" 
-                    }}
-                  >
-                    <tool.icon className="h-8 w-8 text-green-600 transition-colors duration-300" />
-                  </Box>
-                  
-                  <div className="flex items-center justify-center mb-3">
-                    <h3 className="text-gray-900 font-bold text-lg text-center transition-colors duration-300">
-                      {tool.title}
-                    </h3>
-                  </div>
-                  
-                  <div>
-                    <p className="text-gray-700 mb-4 text-sm leading-relaxed">
-                      {tool.description}
-                    </p>
-                    <div className="inline-flex items-center px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium transition-colors duration-300">
-                      {tool.stats}
-                    </div>
-                  </div>
-                </div>
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              {/* Icon */}
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                <feature.icon className="w-8 h-8 text-white" />
               </div>
-            </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p className="text-gray-700 leading-relaxed mb-4">{feature.description}</p>
+
+              {/* Stats Badge */}
+              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 mb-4">
+                {feature.stats}
+              </div>
+
+              {/* CTA Link */}
+              <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200">
+                Learn More <ArrowRight className="ml-1 w-4 h-4" />
+              </button>
+            </motion.div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            Manage Investors
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>

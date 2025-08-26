@@ -1,20 +1,35 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
-import { LavaLamp } from "../../../components/ui/fluid-blob";
 
+import { curve, robot } from "../assets";
 import { heroIcons } from "../constants";
 import "./HeroIconsBlack.css";
 import Button from "./Button";
 import CompanyLogos from "./CompanyLogos";
-import { Gradient } from "./design/Hero";
+import { BackgroundCircles, Gradient } from "./design/Hero";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
-import fonviewImage from "../assets/notification/fonview.jpg";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
+
+  // Add CSS animation styles
+  React.useEffect(() => {
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes robotTurn {
+        0% { transform: rotateY(0deg); }
+        25% { transform: rotateY(-15deg); }
+        50% { transform: rotateY(0deg); }
+        75% { transform: rotateY(15deg); }
+        100% { transform: rotateY(0deg); }
+      }
+    `;
+    document.head.appendChild(style);
+    return () => document.head.removeChild(style);
+  }, []);
 
   return (
     <Section
@@ -24,30 +39,20 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      {/* Blue Background Pattern - Same as Marketplace */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
-      </div>
-
-      {/* Fluid Blob Background - Same as Marketplace */}
-      <div className="absolute inset-0 opacity-30">
-        <LavaLamp />
-      </div>
-
-      <div ref={parallaxRef} className="container relative z-10">
+      <div ref={parallaxRef} className="container relative">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
-          {/* Left Grid - Content from Screenshot */}
+          {/* Left Grid - Content */}
           <div className="relative z-1 text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-black uppercase anton-regular">
-              EXPLORE THE POSSIBILITIES OF
+            <h1 className="h1 mb-6 text-black text-left">
+              Explore the Possibilities of
               <br />
               <Typewriter
                 options={{
                   strings: [
-                    "CROSS-CHAIN INTELLIGENCE",
-                    "RWA TOKENIZATION",
-                    "AI COMPLIANCE",
-                    "DEFI INTEGRATION",
+                    "RWA Tokenization",
+                    "AI Compliance",
+                    "DeFi Integration",
+                    "Cross-Chain Intelligence",
                   ],
                   autoStart: true,
                   loop: true,
@@ -55,14 +60,23 @@ const Hero = () => {
               />
             </h1>
 
-            <p className="body-1 mb-8 text-black text-left">
+            <p className="body-1 mb-6 text-black text-left lg:mb-8">
               Our AI Agent has shown <span className="text-color-1 font-bold">23% better accuracy</span> in predicting asset appreciation vs top market tools. 
               Experience the future of finance with{" "}
-              <span className="text-color-1 font-bold">COPYM-AI</span>
+              <span className="inline-block relative font-semibold">
+                CORA
+                <img
+                  src={curve}
+                  className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
+                  width={624}
+                  height={28}
+                  alt="Curve"
+                />
+              </span>
               , the unified RWA tokenization AI platform.
             </p>
 
-            {/* Market Potential Stats - Horizontal Layout */}
+            {/* Market Potential Stats */}
             <div className="flex flex-wrap gap-8 mb-8">
               <div className="text-left animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 <div className="text-3xl font-bold text-color-1 mb-2">$16T</div>
@@ -83,19 +97,21 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Right Grid - Image */}
+          {/* Right Grid - Robot Image */}
           <div className="relative z-1 flex items-center justify-center">
-            <img 
-              src={fonviewImage} 
-              alt="AI Platform Interface" 
-              className="w-full max-w-lg h-auto rounded-2xl shadow-2xl"
+            <img
+              src={robot}
+              className="w-full max-w-6xl pointer-events-none select-none animate-robot-turn"
+              width={1024}
+              height={490}
+              alt="AI"
+              style={{
+                filter: 'brightness(1.1) contrast(1.2)',
+                backgroundColor: 'transparent',
+                animation: 'robotTurn 6s ease-in-out infinite'
+              }}
             />
           </div>
-        </div>
-
-        {/* Unified Access to All Major Blockchains - Moved Below */}
-        <div className="relative z-1">
-          <CompanyLogos className="w-full" />
         </div>
       </div>
 
