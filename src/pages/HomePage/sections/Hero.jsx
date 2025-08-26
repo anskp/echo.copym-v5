@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, Play, X, TrendingUp, Wallet, BarChart3, Zap } from 'lucide-react';
+import { ArrowRight, Play, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // 3D Phone Component for Hero - First Phone (Marketplace)
@@ -102,18 +102,7 @@ const HeroPhone3DWallet = () => {
   );
 };
 
-// Feature Card Component
-const FeatureCard = ({ icon: Icon, title, description, color }) => {
-  return (
-    <div className="text-center">
-      <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br ${color} flex items-center justify-center`}>
-        <Icon className="w-8 h-8 text-white" />
-      </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-2">{title}</h3>
-      <p className="text-gray-600 text-sm leading-relaxed">{description}</p>
-    </div>
-  );
-};
+
 
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
@@ -171,46 +160,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Curved Transition Section */}
-      <div className="relative">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[5rem] transform translate-y-1/2"></div>
 
-        {/* Investor's Toolkit Section */}
-        <div className="relative z-10 bg-gradient-to-br from-blue-50 to-blue-100 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[5rem] pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-14 lg:pb-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12 sm:mb-14 lg:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">Investor's toolkit</h2>
-            </div>
-
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-              <FeatureCard
-                icon={Wallet}
-                title="Link what you love"
-                description="Connect your wallets and exchanges effortlessly. Delta brings all your crypto together in one place."
-                color="from-green-500 to-emerald-600"
-              />
-              <FeatureCard
-                icon={TrendingUp}
-                title="Stay ahead"
-                description="Stay informed with tailored alerts and updates. From Why Is It Moving to price predictions."
-                color="from-yellow-500 to-orange-600"
-              />
-              <FeatureCard
-                icon={BarChart3}
-                title="Master your portfolio"
-                description="Track every coin, every move, and your entire portfolio with crystal clarity."
-                color="from-pink-500 to-purple-600"
-              />
-              <FeatureCard
-                icon={Zap}
-                title="Uncover new horizons"
-                description="Discover opportunities and market trends with tools like What's Moving and advanced analytics."
-                color="from-blue-500 to-cyan-600"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
 
       {isVideoOpen && (
         <div
