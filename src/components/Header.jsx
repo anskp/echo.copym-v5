@@ -191,7 +191,7 @@ export default function Header() {
 
           {/* Download Button */}
           <div className="flex items-center ml-auto">
-            <button className="btn-gradient hidden md:flex items-center justify-center px-6 py-3 font-semibold text-black transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            <button className="btn-gradient hidden md:flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
               <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
               </svg>
@@ -287,7 +287,7 @@ export default function Header() {
               <div className="border-t border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] px-4 py-4 flex-shrink-0">
                 {/* Mobile Download Button */}
                 <div className="mb-4">
-                  <button className="btn-gradient w-full flex items-center justify-center px-6 py-3 font-semibold text-black transition-all duration-300 transform hover:scale-105 shadow-lg">
+                  <button className="btn-gradient w-full flex items-center justify-center px-6 py-5 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg rounded-full" style={{ minHeight: '56px' }}>
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>
