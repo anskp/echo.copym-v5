@@ -260,7 +260,7 @@ export const benefits = [{
         text: "Traditional RWA investment is broken: too expensive ($10,000+ minimums), illiquid (weeks/months to trade), and complex (requires deep knowledge). Great opportunities are missed by everyday investors.",
         backgroundUrl: "/src/assets/benefits/card-1.svg",
         iconUrl: benefitIcon1,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
     },
     {
         id: "1",
@@ -268,7 +268,7 @@ export const benefits = [{
         text: "Our platform converts real-world assets into secure, blockchain-based tokens with AI verification. Start investing with as little as $100 in fractional ownership of high-value assets.",
         backgroundUrl: "/src/assets/benefits/card-2.svg",
         iconUrl: benefitIcon2,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
         light: true,
     },
     {
@@ -277,7 +277,7 @@ export const benefits = [{
         text: "Buy, sell, and trade fractional ownership instantly with our integrated marketplace. No more waiting weeks or months to liquidate your investments.",
         backgroundUrl: "/src/assets/benefits/card-3.svg",
         iconUrl: benefitIcon3,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
     },
     {
         id: "3",
@@ -285,7 +285,7 @@ export const benefits = [{
         text: "Our AI predicts which assets will grow in value with 23% better accuracy than traditional tools. Get personalized recommendations for your investment portfolio.",
         backgroundUrl: "/src/assets/benefits/card-4.svg",
         iconUrl: benefitIcon4,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
         light: true,
     },
     {
@@ -294,7 +294,7 @@ export const benefits = [{
         text: "AI + human experts verify every asset's value and authenticity. Bank-level security for storing your tokens with advanced compliance and KYC/AML.",
         backgroundUrl: "/src/assets/benefits/card-5.svg",
         iconUrl: benefitIcon1,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
     },
     {
         id: "5",
@@ -302,7 +302,7 @@ export const benefits = [{
         text: "Revenue through 2.5% tokenization fees, 1% marketplace fees, premium AI insights ($29-$299/month), and 0.75% annual management fees. Projected $18M/year by Year 3.",
         backgroundUrl: "/src/assets/benefits/card-6.svg",
         iconUrl: benefitIcon2,
-        imageUrl: "/src/pages/CopymAI/assets/Copym-05-1.png",
+        imageUrl: "/assets/copym/png/Copym-05-1.png",
     },
 ];
 
