@@ -560,10 +560,16 @@
     @apply text-xs font-normal tracking-tight leading-tight;
   }
 
+  /* Make all native buttons pill-shaped by default */
+  button {
+    border-radius: 9999px;
+  }
+
   .btn-gradient {
     background: transparent;
     border: 2px solid #15a36e;
     transition: all 0.3s ease;
+    border-radius: 9999px;
   }
 
   .btn-gradient:hover {
@@ -577,6 +583,7 @@
     background: transparent;
     border: 2px solid transparent;
     transition: all 0.3s ease;
+    border-radius: 9999px;
   }
 
   .btn-gradient-secondary:hover {

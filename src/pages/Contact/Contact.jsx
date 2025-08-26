@@ -312,7 +312,7 @@ const Contact = () => {
             </div>
             <div className="p-3 sm:p-4">
               <p className="text-xs sm:text-sm text-black mb-3">Start a conversation with our support team.</p>
-              <button className="w-full bg-[#065f46] text-white py-2 px-4 rounded-lg text-xs sm:text-sm font-medium hover:bg-[#064e3b] transition-colors">
+              <button className="btn-gradient w-full py-2 px-4 text-xs sm:text-sm font-medium text-black transition-colors">
                 Start Chat
               </button>
             </div>
