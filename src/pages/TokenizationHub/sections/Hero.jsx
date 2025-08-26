@@ -4,7 +4,7 @@ import { LavaLamp } from '../../../components/ui/fluid-blob';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-50">
       {/* Blue Background Pattern - Same as Homepage */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
