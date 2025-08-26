@@ -10,6 +10,7 @@ import { Gradient } from "./design/Hero";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
+import fonviewImage from "../assets/notification/fonview.jpg";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -23,7 +24,7 @@ const Hero = () => {
       id="hero"
     >
       <div ref={parallaxRef} className="container relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Grid - Content from Screenshot */}
           <div className="relative z-1 text-left">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 text-black uppercase anton-regular">
@@ -71,10 +72,19 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Right Grid - Company Logos or Additional Content */}
+          {/* Right Grid - Image */}
           <div className="relative z-1 flex items-center justify-center">
-            <CompanyLogos className="w-full" />
+            <img 
+              src={fonviewImage} 
+              alt="AI Platform Interface" 
+              className="w-full max-w-lg h-auto rounded-2xl shadow-2xl"
+            />
           </div>
+        </div>
+
+        {/* Unified Access to All Major Blockchains - Moved Below */}
+        <div className="relative z-1">
+          <CompanyLogos className="w-full" />
         </div>
       </div>
 
