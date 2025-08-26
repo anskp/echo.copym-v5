@@ -67,51 +67,60 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
 
 // Store Download Button Component
 const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, textColor, position }) => {
+  const getStoreIcon = () => {
+    if (store === "Google Play") {
+      return <img src="/assets/Images/android.png" alt="Android" className="w-4 h-4" />;
+    } else if (store === "App Store") {
+      return <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-4 h-4" />;
+    }
+    return <div className="w-4 h-4 bg-gray-800 rounded"></div>;
+  };
+
   return (
     <motion.div 
-      className={`flex flex-col items-center ${position === 'left' ? 'mr-8 md:mr-12' : 'ml-8 md:ml-12'}`}
+      className={`flex flex-col items-center ${position === 'left' ? 'mr-2 md:mr-4' : 'ml-2 md:ml-4'}`}
       initial={{ opacity: 0, x: position === 'left' ? -20 : 20 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
       {/* QR Code */}
-      <div className="mb-4 p-3 bg-white rounded-2xl shadow-lg">
-        <div className="w-20 h-20 bg-gray-100 rounded-xl flex items-center justify-center">
-          <QrCode className="w-12 h-12 text-gray-400" />
+      <div className="mb-1 p-1 bg-white rounded-md shadow-sm">
+        <div className="w-8 h-8 bg-gray-100 rounded-md flex items-center justify-center">
+          <QrCode className="w-4 h-4 text-gray-400" />
         </div>
       </div>
       
       {/* Store Button */}
-      <div className={`${bgColor} ${textColor} rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer`}>
-        <div className="flex items-center space-x-3">
+      <div className={`${bgColor} ${textColor} rounded-md p-1.5 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 cursor-pointer`}>
+        <div className="flex items-center space-x-1.5">
           {/* Store Logo */}
-          <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-            <div className="w-6 h-6 bg-gray-800 rounded"></div>
+          <div className="w-5 h-5 bg-white rounded flex items-center justify-center">
+            {getStoreIcon()}
           </div>
           
           {/* Store Info */}
           <div className="flex flex-col">
             <span className="text-xs opacity-80">Download on</span>
-            <span className="font-semibold text-lg">{store}</span>
+            <span className="font-semibold text-xs">{store}</span>
           </div>
           
-          <Download className="w-5 h-5" />
+          <Download className="w-2.5 h-2.5" />
         </div>
       </div>
       
       {/* Rating */}
-      <div className="mt-3 flex items-center space-x-1">
+      <div className="mt-1 flex items-center space-x-1">
         <div className="flex">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className={`w-4 h-4 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+            <Star key={i} className={`w-2.5 h-2.5 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
           ))}
         </div>
-        <span className="text-sm text-gray-600 ml-1">{rating}.0</span>
+        <span className="text-xs text-gray-600 ml-1">{rating}.0</span>
       </div>
       
       {/* Downloads */}
-      <span className="text-xs text-gray-500 mt-1">{downloads}</span>
+      <span className="text-xs text-gray-500">{downloads}</span>
     </motion.div>
   );
 };
@@ -154,19 +163,32 @@ export default function AppPeekSection() {
           </div>
 
           {/* Main Content with Phones and Download Buttons */}
-          <div className="flex justify-center items-center relative mb-8">
-            {/* Left Download Button - Google Play Store */}
-            <StoreDownloadButton 
-              store="Google Play"
-              rating={4}
-              downloads="1M+ downloads"
-              bgColor="bg-black"
-              textColor="text-white"
-              position="left"
-            />
+          <div className="flex flex-col lg:flex-row justify-center items-center relative mb-8 gap-6 lg:gap-8">
+            {/* Download Buttons - Top on mobile, left/right on desktop */}
+            <div className="flex lg:hidden justify-end items-center space-x-6 order-1 lg:order-none px-4">
+              {/* Google Play Store Button */}
+              <StoreDownloadButton 
+                store="Google Play"
+                rating={4}
+                downloads="1M+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="left"
+              />
+              
+              {/* Apple App Store Button */}
+              <StoreDownloadButton 
+                store="App Store"
+                rating={5}
+                downloads="500K+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="right"
+              />
+            </div>
             
-            {/* Dual 3D Phones - Compact layout */}
-            <div className="flex justify-center items-center gap-3 md:gap-6 relative overflow-visible" style={{ perspective: '1000px' }}>
+            {/* Dual 3D Phones - Centered layout */}
+            <div className="flex justify-center items-center gap-3 md:gap-6 relative overflow-visible order-2 lg:order-none" style={{ perspective: '1000px' }}>
               {/* Left Device - Blue phone with forward tilt */}
               <div 
                 className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
@@ -183,7 +205,7 @@ export default function AppPeekSection() {
                   }}
                 >
                   <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-                    <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
+                    <div className="w-full h-full bg-black rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
                       <img 
                         src="/assets/Images/devices/marketplace01.jpg" 
                         alt="App Interface"
@@ -225,7 +247,7 @@ export default function AppPeekSection() {
                   }}
                 >
                   <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-                    <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
+                    <div className="w-full h-full bg-black rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
                       <img 
                         src="/assets/Images/devices/marketplace02.jpg" 
                         alt="Wallet Interface"
@@ -252,15 +274,28 @@ export default function AppPeekSection() {
               </div>
             </div>
             
-            {/* Right Download Button - Apple App Store */}
-            <StoreDownloadButton 
-              store="App Store"
-              rating={5}
-              downloads="500K+ downloads"
-              bgColor="bg-black"
-              textColor="text-white"
-              position="right"
-            />
+            {/* Desktop Download Buttons - Hidden on mobile, shown on desktop */}
+            <div className="hidden lg:flex flex-col items-end space-y-3 order-3 lg:order-none">
+              {/* Google Play Store Button */}
+              <StoreDownloadButton 
+                store="Google Play"
+                rating={4}
+                downloads="1M+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="right"
+              />
+              
+              {/* Apple App Store Button */}
+              <StoreDownloadButton 
+                store="App Store"
+                rating={5}
+                downloads="500K+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="right"
+              />
+            </div>
           </div>
         </div>
       </div>

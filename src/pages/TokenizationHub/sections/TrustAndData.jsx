@@ -19,8 +19,7 @@ export default function TrustAndData() {
           {/* Security Section */}
           <div className="text-center mb-16">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular">
-              <span className="text-white">TRUST &</span>
-              <br />
+              <span className="text-white">TRUST & </span>
               <span className="text-black">DATA</span>
             </h2>
             <p className="text-white/80 max-w-3xl mx-auto text-lg mb-8">

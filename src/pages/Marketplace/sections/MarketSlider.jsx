@@ -394,9 +394,54 @@ const MarketplaceGlimpse = () => {
 
              {/* PART 3: The Final CTA - A Grand Finale */}
        <section className="relative py-16 overflow-hidden mt-16">
-         {/* Background Video/Image with Dark Overlay */}
-         <div className="absolute inset-0 bg-gradient-to-r from-gray-900 via-black to-gray-900">
-           <div className="absolute inset-0 bg-black/60" />
+         {/* Background Pattern - Same as WhyInvestWithUs */}
+         <div className="absolute inset-0 opacity-10">
+           <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+         </div>
+
+         {/* Fluid Blob Background - Same as WhyInvestWithUs */}
+         <div className="absolute inset-0 overflow-hidden">
+           <motion.div
+             className="absolute -top-40 -right-40 w-80 h-80 bg-green-400/20 rounded-full blur-3xl"
+             animate={{
+               x: [0, 30, 0],
+               y: [0, -30, 0],
+               scale: [1, 1.1, 1],
+             }}
+             transition={{
+               duration: 20,
+               repeat: Infinity,
+               ease: "easeInOut",
+             }}
+           />
+           <motion.div
+             className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
+             animate={{
+               x: [0, -40, 0],
+               y: [0, 40, 0],
+               scale: [1, 1.2, 1],
+             }}
+             transition={{
+               duration: 25,
+               repeat: Infinity,
+               ease: "easeInOut",
+               delay: 2,
+             }}
+           />
+           <motion.div
+             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400/15 rounded-full blur-3xl"
+             animate={{
+               x: [0, 20, 0],
+               y: [0, -20, 0],
+               scale: [1, 1.15, 1],
+             }}
+             transition={{
+               duration: 18,
+               repeat: Infinity,
+               ease: "easeInOut",
+               delay: 1,
+             }}
+           />
          </div>
          
          <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -407,10 +452,10 @@ const MarketplaceGlimpse = () => {
              viewport={{ once: true }}
            >
              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
-               <span className="text-white">READY TO BUILD YOUR </span>
-               <span className="text-green-500">FUTURE PORTFOLIO?</span>
+               <span className="text-gray-900">READY TO BUILD YOUR </span>
+               <span className="text-green-600">FUTURE PORTFOLIO?</span>
              </h2>
-             <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
+             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                Join thousands of investors accessing exclusive real-world assets. The full marketplace awaits.
              </p>
              <Link 
