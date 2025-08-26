@@ -163,11 +163,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Link
                 to="/marketplace"
-<<<<<<< HEAD
-                className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-=======
                 className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
->>>>>>> 68066e012ef0af77c17bd4c318545633d423af38
               >
                 Start Investing
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
