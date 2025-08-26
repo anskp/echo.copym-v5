@@ -10,9 +10,9 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
       background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
       glowColor: 'via-blue-300'
     },
-    green: {
-      background: 'linear-gradient(135deg, #22c55e, #10b981, #22c55e)',
-      glowColor: 'via-green-300'
+    emerald: {
+      background: 'linear-gradient(135deg, #10b981, #059669, #10b981)',
+      glowColor: 'via-emerald-300'
     }
   };
 
@@ -25,7 +25,7 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
     >
       {/* 3D Phone Container */}
       <div 
-        className="relative w-full h-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
+        className="relative w-full h-full bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
         style={{
           background: currentColor.background,
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
@@ -118,148 +118,150 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative pt-8 pb-0 -mt-20 bg-[#10B981] rounded-[50px] mx-4">
-      {/* Decorative Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
-        <div className="absolute bottom-10 right-10 w-48 h-48 bg-green-400 rounded-full blur-3xl"></div>
-      </div>
-      
-      {/* Content Container */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-                 {/* Header */}
-         <div className="text-center p-2 mb-12">
-                     <motion.h1 
-             className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-2 uppercase anton-regular"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <span className="text-white">PEEK INTO OUR </span>
-            <span className="text-black">WEB3 </span>
-            <span className="text-white">INVESTMENT HUB</span>
-          </motion.h1>
-          
-          <motion.p 
-            className="text-lg sm:text-xl text-black/80 leading-relaxed max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Experience our platform's features through an immersive journey
-          </motion.p>
+    <section className="relative">
+      {/* Main Content with Curved Background - HomePage Style */}
+      <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-8 sm:pt-12 lg:pt-16 pb-0">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-emerald-500/20"></div>
         </div>
-
-                 {/* Main Content with Phones and Download Buttons */}
-         <div className="flex justify-center items-center relative mb-8">
-          {/* Left Download Button - Google Play Store */}
-          <StoreDownloadButton 
-            store="Google Play"
-            rating={4}
-            downloads="1M+ downloads"
-            bgColor="bg-black"
-            textColor="text-white"
-            position="left"
-          />
-          
-          {/* Dual 3D Phones - Compact layout */}
-          <div className="flex justify-center items-center gap-3 md:gap-6 relative overflow-visible" style={{ perspective: '1000px' }}>
-            {/* Left Device - Blue phone with forward tilt */}
-            <div 
-              className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
-              style={{ perspective: '1000px' }}
+        
+        {/* Content Container */}
+        <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+            <motion.h1 
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
             >
-              {/* 3D Phone Container */}
-              <div 
-                className="relative w-full h-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
-                style={{
-                  background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
-                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-                  transform: 'rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px)',
-                  transformStyle: 'preserve-3d'
-                }}
-              >
-                <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-                  <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
-                    <img 
-                      src="/assets/Images/devices/marketplace01.jpg" 
-                      alt="App Interface"
-                      className="w-full h-full object-cover rounded-[2.3rem]"
-                    />
-                  </div>
-                </div>
-                
-                <div 
-                  className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
-                  style={{
-                    transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
-                    transformOrigin: 'center top'
-                  }}
-                ></div>
-                
-                <div 
-                  className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
-                  style={{
-                    transform: 'translateZ(-10px)'
-                  }}
-                ></div>
-              </div>
-            </div>
-
-            {/* Right Device - Green phone with backward tilt */}
-            <div 
-              className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
-              style={{ perspective: '1000px' }}
+              <span className="text-white">PEEK INTO OUR </span>
+              <span className="text-black">WEB3 </span>
+              <span className="text-white">INVESTMENT HUB</span>
+            </motion.h1>
+            
+            <motion.p 
+              className="text-lg sm:text-xl text-black/80 leading-relaxed max-w-2xl mx-auto"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
             >
-              {/* 3D Phone Container - Green */}
-              <div 
-                className="relative w-full h-full bg-gradient-to-br from-green-400 via-emerald-400 to-green-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
-                style={{
-                  background: 'linear-gradient(135deg, #22c55e, #10b981, #22c55e)',
-                  boxShadow: '0 25px 50px -12px rgba(128, 125, 125, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-                  transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-20px) translateX(-20px)',
-                  transformStyle: 'preserve-3d'
-                }}
-              >
-                <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-                  <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
-                    <img 
-                      src="/assets/Images/devices/marketplace02.jpg" 
-                      alt="Wallet Interface"
-                      className="w-full h-full object-cover rounded-[2.3rem]"
-                    />
-                  </div>
-                </div>
-                
-                <div 
-                  className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-green-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
-                  style={{
-                    transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
-                    transformOrigin: 'center top'
-                  }}
-                ></div>
-                
-                <div 
-                  className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
-                  style={{
-                    transform: 'translateZ(-10px)'
-                  }}
-                ></div>
-              </div>
-            </div>
+              Experience our platform's features through an immersive journey
+            </motion.p>
           </div>
-          
-          {/* Right Download Button - Apple App Store */}
-          <StoreDownloadButton 
-            store="App Store"
-            rating={5}
-            downloads="500K+ downloads"
-            bgColor="bg-black"
-            textColor="text-white"
-            position="right"
-          />
+
+          {/* Main Content with Phones and Download Buttons */}
+          <div className="flex justify-center items-center relative mb-8">
+            {/* Left Download Button - Google Play Store */}
+            <StoreDownloadButton 
+              store="Google Play"
+              rating={4}
+              downloads="1M+ downloads"
+              bgColor="bg-black"
+              textColor="text-white"
+              position="left"
+            />
+            
+            {/* Dual 3D Phones - Compact layout */}
+            <div className="flex justify-center items-center gap-3 md:gap-6 relative overflow-visible" style={{ perspective: '1000px' }}>
+              {/* Left Device - Blue phone with forward tilt */}
+              <div 
+                className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
+                style={{ perspective: '1000px' }}
+              >
+                {/* 3D Phone Container */}
+                <div 
+                  className="relative w-full h-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
+                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                    transform: 'rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px)',
+                    transformStyle: 'preserve-3d'
+                  }}
+                >
+                  <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
+                    <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
+                      <img 
+                        src="/assets/Images/devices/marketplace01.jpg" 
+                        alt="App Interface"
+                        className="w-full h-full object-cover rounded-[2.3rem]"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div 
+                    className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
+                    style={{
+                      transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
+                      transformOrigin: 'center top'
+                    }}
+                  ></div>
+                  
+                  <div 
+                    className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
+                    style={{
+                      transform: 'translateZ(-10px)'
+                    }}
+                  ></div>
+                </div>
+              </div>
+
+              {/* Right Device - Emerald phone with backward tilt */}
+              <div 
+                className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
+                style={{ perspective: '1000px' }}
+              >
+                {/* 3D Phone Container - Emerald */}
+                <div 
+                  className="relative w-full h-full bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
+                  style={{
+                    background: 'linear-gradient(135deg, #10b981, #059669, #10b981)',
+                    boxShadow: '0 25px 50px -12px rgba(128, 125, 125, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
+                    transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-20px) translateX(-20px)',
+                    transformStyle: 'preserve-3d'
+                  }}
+                >
+                  <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
+                    <div className="w-full h-full bg-white rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
+                      <img 
+                        src="/assets/Images/devices/marketplace02.jpg" 
+                        alt="Wallet Interface"
+                        className="w-full h-full object-cover rounded-[2.3rem]"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div 
+                    className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-emerald-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
+                    style={{
+                      transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
+                      transformOrigin: 'center top'
+                    }}
+                  ></div>
+                  
+                  <div 
+                    className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
+                    style={{
+                      transform: 'translateZ(-10px)'
+                    }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right Download Button - Apple App Store */}
+            <StoreDownloadButton 
+              store="App Store"
+              rating={5}
+              downloads="500K+ downloads"
+              bgColor="bg-black"
+              textColor="text-white"
+              position="right"
+            />
+          </div>
         </div>
       </div>
     </section>

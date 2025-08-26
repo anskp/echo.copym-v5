@@ -1,71 +1,92 @@
 // src/pages/TokenizationHub/sections/TokenDistribution.jsx
 
 import React from 'react';
-import { Box } from '@mui/material';
-import { Users, Globe, Layers3, Repeat2, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { ArrowRight, Globe, Users, TrendingUp, Shield } from 'lucide-react';
 
 export default function TokenDistribution() {
-  const distributionMethods = [
-    { title: 'Private Sales', description: 'Exclusive token sales to accredited investors with customizable terms.', icon: Users, features: ['KYC/AML Integration', 'Investor Accreditation', 'Custom Terms'] },
-    { title: 'Public Offerings', description: 'Compliant public token offerings with regulatory oversight.', icon: Globe, features: ['Regulatory Compliance', 'Public Trading', 'Market Liquidity'] },
-    { title: 'Fractional Distribution', description: 'Enable fractional ownership through token fractionalization.', icon: Layers3, features: ['Micro-Investments', 'Shared Ownership', 'Liquidity Access'] },
-    { title: 'Automated Distributions', description: 'Smart contract-based dividend and revenue distributions.', icon: Repeat2, features: ['Automatic Payouts', 'Transparent Records', 'Real-time Updates'] }
+  const features = [
+    {
+      icon: Globe,
+      title: "Global Distribution",
+      description: "Reach investors worldwide with automated compliance and multi-jurisdictional support.",
+      color: "from-pink-500 to-teal-500"
+    },
+    {
+      icon: Users,
+      title: "Investor Onboarding",
+      description: "Streamlined KYC/AML verification with instant investor qualification and onboarding.",
+      color: "from-yellow-500 to-green-500"
+    },
+    {
+      icon: TrendingUp,
+      title: "Liquidity Management",
+      description: "Automated market making and liquidity provision for seamless trading experience.",
+      color: "from-pink-500 via-blue-500 to-green-500"
+    },
+    {
+      icon: Shield,
+      title: "Regulatory Compliance",
+      description: "Built-in compliance frameworks ensuring adherence to global securities regulations.",
+      color: "from-orange-500 to-red-500"
+    }
   ];
 
   return (
-    <section className="bg-[#10B981] py-24 rounded-[50px] mx-4">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      </div>
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[100px]"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="anton-regular uppercase font-black text-4xl md:text-5xl mb-4">
-            <span className="text-white">TOKEN</span>
-            <span className="text-black"> DISTRIBUTION</span>
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight anton-regular mb-6">
+            <span className="text-gray-900">TOKEN</span>
+            <br />
+            <span className="text-emerald-600">DISTRIBUTION</span>
           </h2>
-          <p className="text-black/80 max-w-3xl mx-auto text-lg">
-            Flexible distribution mechanisms to reach your target investors through multiple channels.
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+            Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:items-start">
-          {distributionMethods.map((method, index) => (
-            <div key={index} className="relative group">
-              {/* Glow Effect */}
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-white/50 to-white/30 rounded-2xl blur opacity-0 group-hover:opacity-50 transition duration-500"></div>
-              
-              {/* Main Card */}
-              <div className="relative bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl p-6 h-full flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-white/30">
-                <Box 
-                  className="w-16 h-16 rounded-2xl mb-4 flex items-center justify-center text-2xl card-icon" 
-                  sx={{ 
-                    background: "rgba(255, 255, 255, 0.3)", 
-                    backdropFilter: "blur(5px)", 
-                    boxShadow: "inset 0 0 0 1px rgba(255, 255, 255, 0.1)" 
-                  }}
-                >
-                  <method.icon className="h-8 w-8 text-black transition-colors duration-300" />
-                </Box>
-                
-                <div className="flex items-center justify-center mb-3">
-                  <h3 className="text-black font-bold text-lg text-center transition-colors duration-300">
-                    {method.title}
-                  </h3>
-                </div>
-                
-                <div className="flex-1">
-                  <p className="text-black/80 mb-4 text-sm leading-relaxed">
-                    {method.description}
-                  </p>
-                  <ul className="space-y-2">
-                    {method.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-black/70 transition-colors duration-300">
-                        <CheckCircle className="h-4 w-4 text-black mr-2 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="text-center group"
+            >
+              {/* Icon */}
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                <feature.icon className="w-8 h-8 text-white" />
               </div>
-            </div>
+
+              {/* Content */}
+              <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">{feature.description}</p>
+
+              {/* CTA Link */}
+              <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200">
+                Learn More <ArrowRight className="ml-1 w-4 h-4" />
+              </button>
+            </motion.div>
           ))}
+        </div>
+
+        {/* Bottom CTA */}
+        <div className="text-center mt-16">
+          <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            Start Distribution
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </button>
         </div>
       </div>
     </section>

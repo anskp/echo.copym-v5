@@ -4,8 +4,8 @@ import { LavaLamp } from '../../../components/ui/fluid-blob';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden w-full bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-50">
-      {/* Blue Background Pattern - Same as Homepage */}
+    <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
@@ -15,37 +15,38 @@ export default function Hero() {
         <LavaLamp />
       </div>
 
-      {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-8 pb-4 sm:pb-6 lg:pb-8">
         {/* AI-Powered Badge - Top of Content */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
-            <span className="w-2 h-2 bg-green-500 rounded-full mr-2 animate-pulse"></span>
+            <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
             Tokenization Portal is Open
           </div>
         </div>
 
         <div className="text-center">
           {/* Main Title - Full Width with Homepage Font Styles */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-8 uppercase anton-regular">
-            <div className="text-gray-900">TOKENIZE REAL-WORLD</div>
-            <div className="text-green-600">ASSETS</div>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
+            <span className="text-gray-900">TOKENIZE REAL-WORLD</span>
+            <br />
+            <span className="text-emerald-600">ASSETS</span>
           </h1>
 
           {/* Description with Homepage Style */}
-          <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto">
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 
           {/* CTA Buttons with Homepage Style */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-green-500 hover:bg-green-600 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+            <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
               Start Tokenizing
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </button>
 
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-xl transition-all duration-300 transform hover:scale-105">
-              <Play className="mr-2 h-5 w-5" />
+            <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-2xl sm:rounded-3xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
+              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Watch Demo
             </button>
           </div>
@@ -57,7 +58,7 @@ export default function Hero() {
               <span className="text-sm text-gray-600">Secure</span>
             </div>
             <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
               <span className="text-sm text-gray-600">Compliant</span>
             </div>
             <div className="flex items-center space-x-2">
