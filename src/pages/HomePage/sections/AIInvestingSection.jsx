@@ -40,11 +40,11 @@ export default function AIInvestingSection() {
           </div>
           
           {/* Right Side - AI Interface Image with Extended Effect */}
-          <div className="relative -my-20 lg:-my-32 w-80 sm:w-96 lg:w-[32rem] xl:w-[36rem] h-auto">
+          <div className="relative -my-20 lg:-my-32 w-80 sm:w-96 lg:w-[32rem] xl:w-[36rem] h-auto px-12 sm:px-0 py-16 sm:py-0">
             <img 
               src="/assets/Images/aiagentphones99.png" 
               alt="Copym AI Voice Assistant Interface" 
-              className="w-full h-auto rounded-2xl object-contain transform scale-125"
+              className="w-full h-auto rounded-2xl object-contain transform scale-125 sm:translate-y-0 translate-y-8"
               style={{
                 zIndex: 20
               }}

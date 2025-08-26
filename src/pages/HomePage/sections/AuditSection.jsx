@@ -48,9 +48,9 @@ const injectCSS = () => {
 
 const BlockchainSpiral = ({ 
   centralLogo = copymColoredIcon, 
-  centralLogoSize = 64, 
+  centralLogoSize = 48, 
   blockchainLogos = [], 
-  containerSize = "w-[22rem]", 
+  containerSize = "w-[18rem]", 
   scale = "scale-75 md:scale-100",
   showConnectingLines = true 
 }) => {
@@ -77,14 +77,14 @@ const BlockchainSpiral = ({
 
   // Default blockchain logos if none provided
   const defaultBlockchainLogos = [
-    { id: "0", title: "Ethereum", icon: ethereum, width: 26, height: 36 },
-    { id: "1", title: "Polygon", icon: polygon, width: 34, height: 36 },
-    { id: "2", title: "Bitcoin", icon: bitcoin, width: 36, height: 28 },
-    { id: "3", title: "Solana", icon: solana, width: 34, height: 35 },
-    { id: "4", title: "Avalanche", icon: avalanche, width: 34, height: 34 },
-    { id: "5", title: "Optimism", icon: optimism, width: 34, height: 34 },
-    { id: "6", title: "Near", icon: near, width: 26, height: 34 },
-    { id: "7", title: "Stellar", icon: stellar, width: 38, height: 32 },
+    { id: "0", title: "Ethereum", icon: ethereum, width: 20, height: 28 },
+    { id: "1", title: "Polygon", icon: polygon, width: 26, height: 28 },
+    { id: "2", title: "Bitcoin", icon: bitcoin, width: 28, height: 22 },
+    { id: "3", title: "Solana", icon: solana, width: 26, height: 27 },
+    { id: "4", title: "Avalanche", icon: avalanche, width: 26, height: 26 },
+    { id: "5", title: "Optimism", icon: optimism, width: 26, height: 26 },
+    { id: "6", title: "Near", icon: near, width: 20, height: 26 },
+    { id: "7", title: "Stellar", icon: stellar, width: 30, height: 24 },
   ];
 
   const logos = blockchainLogos.length > 0 ? blockchainLogos : defaultBlockchainLogos;
@@ -104,7 +104,7 @@ const BlockchainSpiral = ({
         transformOrigin: 'center'
       }}>
         {/* Central Logo Container */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex w-60 aspect-square border border-black rounded-full">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex w-48 aspect-square border border-black rounded-full">
           <div className="flex items-center justify-center w-full h-full">
             {centralLogo ? (
               <img
@@ -119,8 +119,8 @@ const BlockchainSpiral = ({
                 }}
               />
             ) : (
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">LOGO</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-sm">LOGO</span>
                 </div>
               )}
           </div>
@@ -134,18 +134,18 @@ const BlockchainSpiral = ({
               return (
                 <li
                   key={logo.id}
-                  className="absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom"
+                  className="absolute top-0 left-1/2 h-1/2 -ml-[1.2rem] origin-bottom"
                   style={{ transform: `rotate(${rotationAngle}deg)` }}
                 >
                   <div
-                    className="relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] animate-pulse"
+                    className="relative -top-[1.2rem] flex w-[2.4rem] h-[2.4rem] animate-pulse"
                     style={{ transform: `rotate(-${rotationAngle}deg)` }}
                   >
                     <img
                       src={logo.icon}
                       alt={`${logo.title} blockchain logo`}
-                      width={logo.width || 24}
-                      height={logo.height || 24}
+                      width={logo.width || 20}
+                      height={logo.height || 20}
                       className="m-auto pointer-events-none select-none"
                       onError={(e) => {
                         e.target.style.display = 'none';
@@ -164,11 +164,11 @@ const BlockchainSpiral = ({
         <>
           {/* Left Curve - Show for both true and left-only */}
           {(showConnectingLines === true || showConnectingLines === "left-only") && (
-            <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-6 pointer-events-none select-none xl:block">
+            <div className="hidden absolute top-1/2 right-full w-[20rem] -mt-1 mr-6 pointer-events-none select-none 2xl:block">
               <img 
                 src={curve1} 
-                width={522} 
-                height={182} 
+                width={320} 
+                height={112} 
                 alt="Decorative left curve" 
                 onError={(e) => {
                   e.target.style.display = 'none';
@@ -180,11 +180,11 @@ const BlockchainSpiral = ({
 
           {/* Right Curve - Only show for true, not for left-only */}
           {showConnectingLines === true && (
-            <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-8 ml-6 pointer-events-none select-none xl:block">
+            <div className="hidden absolute top-1/2 left-full w-[6rem] -mt-6 ml-6 pointer-events-none select-none 2xl:block">
               <img 
                 src={curve2} 
-                width={162} 
-                height={76} 
+                width={96} 
+                height={45} 
                 alt="Decorative right curve"
                 onError={(e) => {
                   e.target.style.display = 'none';
@@ -221,32 +221,32 @@ export default function AuditSection() {
         </div>
 
           {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-6 items-center">
-                        {/* Left Grid - Blockchain Spiral */}
-            <div className="flex justify-center lg:justify-start mt-28">
+          <div className="grid lg:grid-cols-2 gap-6 items-center justify-items-center lg:justify-items-start">
+            {/* Left Grid - Blockchain Spiral */}
+            <div className="flex justify-center lg:justify-start mt-20 lg:mt-28 order-1 lg:order-1">
               <BlockchainSpiral 
-                containerSize="w-[22rem]"
-                scale="scale-90"
+                containerSize="w-[16rem]"
+                scale="scale-80"
                 showConnectingLines="left-only"
               />
             </div>
 
             {/* Right Grid - Blockchain Spiral */}
-            <div className="flex justify-center lg:justify-end -mt-20">
+            <div className="flex justify-center lg:justify-start mt-8 lg:mt-0 order-2 lg:order-2">
               <BlockchainSpiral 
-                containerSize="w-[25rem]"
-                scale="scale-90"
-                showConnectingLines={true}
+                containerSize="w-[18rem]"
+                scale="scale-80"
+                showConnectingLines={false}
                 blockchainLogos={[
-                  { id: "0", title: "H", icon: hIcon, width: 52, height: 52, angle: 0 },
-                  { id: "1", title: "IC", icon: icIcon, width: 52, height: 52, angle: 72 },
-                  { id: "2", title: "Z", icon: zIcon, width: 52, height: 52, angle: 144 },
-                  { id: "3", title: "Cervik", icon: cervikIcon, width: 52, height: 52, angle: 216 },
-                  { id: "4", title: "Audit0", icon: audit0Icon, width: 52, height: 52, angle: 288 }
+                  { id: "0", title: "H", icon: hIcon, width: 40, height: 40, angle: 0 },
+                  { id: "1", title: "IC", icon: icIcon, width: 40, height: 40, angle: 72 },
+                  { id: "2", title: "Z", icon: zIcon, width: 40, height: 40, angle: 144 },
+                  { id: "3", title: "Cervik", icon: cervikIcon, width: 40, height: 40, angle: 216 },
+                  { id: "4", title: "Audit0", icon: audit0Icon, width: 40, height: 40, angle: 288 }
                 ]}
-            />
+              />
+            </div>
           </div>
-        </div>
 
         {/* Legend */}
         <div className="flex justify-center items-center space-x-8 mt-12">

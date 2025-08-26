@@ -42,7 +42,7 @@ export default function TrackYourCrypto() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Phone Mockup */}
-          <div ref={imageRef} className="relative flex justify-center lg:justify-start ml-40">
+          <div ref={imageRef} className="relative flex justify-center lg:justify-start lg:ml-40">
             <div className="relative">
               {/* Hologram Background Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-blue-500/20 to-cyan-400/30 rounded-3xl blur-xl transform scale-110 -rotate-6"></div>
