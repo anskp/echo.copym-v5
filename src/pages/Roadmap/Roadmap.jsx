@@ -87,7 +87,7 @@ export default function Roadmap() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button 
-              className="btn-gradient"
+              className="btn-gradient rounded-full px-8 py-4 text-black font-semibold"
               whileHover={{ 
                 scale: 1.05,
                 boxShadow: "0 10px 30px rgba(59, 130, 246, 0.3)"
