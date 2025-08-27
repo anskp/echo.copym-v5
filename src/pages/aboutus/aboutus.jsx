@@ -61,41 +61,41 @@ const AboutUs = () => {
                 {/* Main Content */}
                 <div className="relative z-10 bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-16">
+                    <div className="text-center mb-16">
                             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 anton-regular uppercase">
                                 Company <span className="text-green-400">Overview</span>
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
-                        </div>
+                </div>
 
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="space-y-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="space-y-6">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
-                                    <div className="space-y-6">
-                                        <div className="space-y-4">
+                                <div className="space-y-6">
+                                    <div className="space-y-4">
                                             <p className="text-white/90 leading-relaxed font-medium">
                                                 COPYm is a cutting-edge <span className="font-semibold text-green-400">Real World Asset (RWA) tokenization platform</span> designed to transform how the world perceives and manages ownership.
-                                            </p>
-                                            
+                                        </p>
+                                        
                                             <p className="text-white/80 leading-relaxed">
                                                 We bridge tangible value and digital innovation, enabling physical assets — from <span className="font-semibold text-green-400">real estate and commodities</span> to <span className="font-semibold text-green-400">collectibles and intellectual property</span> — to be securely digitized, fractionalized, and traded on a global scale.
-                                            </p>
-                                        </div>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="relative">
+                        <div className="relative">
                                 <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 flex items-center justify-center border border-white/20">
-                                    <div className="text-center space-y-6">
+                                <div className="text-center space-y-6">
                                         <h3 className="text-2xl font-bold text-green-400 anton-regular">Why We Exist</h3>
-                                        <div className="space-y-4 text-left">
+                                    <div className="space-y-4 text-left">
                                             <p className="text-white/90 leading-relaxed">
                                                 The traditional asset market is <span className="font-semibold text-green-400">fragmented, slow, and geographically restricted</span>. COPYm is here to change that.
-                                            </p>
+                                        </p>
                                             <p className="text-white/80 leading-relaxed">
-                                                By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
-                                            </p>
+                                            By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
+                                        </p>
                                         </div>
                                     </div>
                                 </div>
@@ -113,7 +113,7 @@ const AboutUs = () => {
                             Mission & <span className="text-blue-600">Vision</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
-                    </div>
+                                </div>
 
                     <div className="grid lg:grid-cols-2 gap-8">
                         {/* Mission - Left Side */}
@@ -121,8 +121,8 @@ const AboutUs = () => {
                             <div className="p-8">
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center">
-                                        <span className="text-white font-bold text-2xl">M</span>
-                                    </div>
+                                    <span className="text-white font-bold text-2xl">M</span>
+                                </div>
                                     <h3 className="text-2xl font-bold text-blue-600 anton-regular">Our Mission</h3>
                                 </div>
                                 
@@ -145,8 +145,8 @@ const AboutUs = () => {
                             <div className="p-8">
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full flex items-center justify-center">
-                                        <span className="text-white font-bold text-2xl">V</span>
-                                    </div>
+                                    <span className="text-white font-bold text-2xl">V</span>
+                                </div>
                                     <h3 className="text-2xl font-bold text-green-600 anton-regular">Our Vision</h3>
                                 </div>
                                 
@@ -164,10 +164,10 @@ const AboutUs = () => {
                                         Ultimately, our vision is to pioneer the next evolution of capitalism — one that is more inclusive, transparent, and efficient for generations to come.
                                     </p>
                                 </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
             </section>
 
             {/* Section 4: Core Values */}
@@ -222,14 +222,14 @@ const AboutUs = () => {
                                     Pushing the boundaries of asset technology.
                                 </p>
                             </div>
-                        </div>
+                                </div>
 
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
                                 <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z" />
                                 </svg>
-                            </div>
+                                </div>
                             <div className="space-y-3">
                                 <h4 className="text-xl font-bold text-green-600 anton-regular">Inclusivity</h4>
                                 <p className="text-gray-600 leading-relaxed text-sm">
@@ -238,7 +238,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                                </div>
             </section>
 
             {/* Section 5: Company Timeline */}
@@ -249,7 +249,7 @@ const AboutUs = () => {
                             From Vision to <span className="text-blue-600">Reality</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
-                    </div>
+                            </div>
 
                     {/* New Vertical Timeline Structure */}
                     <div className="relative">
@@ -280,14 +280,14 @@ const AboutUs = () => {
                                             <span className="text-sm text-gray-600">Platform Foundation</span>
                                         </div>
                                     </div>
-                                </div>
-                                
+                            </div>
+                            
                                 {/* Timeline Dot */}
                                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-green-600 to-green-500 rounded-full border-4 border-white shadow-lg z-10"></div>
                                 
                                 <div className="w-full lg:w-1/2 lg:pl-8"></div>
-                            </div>
-
+                                    </div>
+                                    
                             {/* 2022 - Innovation */}
                             <div className="relative flex items-center">
                                 <div className="w-full lg:w-1/2 lg:pr-8"></div>
@@ -365,7 +365,7 @@ const AboutUs = () => {
                                                 <h3 className="text-2xl font-bold text-green-600 anton-regular">Scaling</h3>
                                                 <div className="w-12 h-1 bg-gradient-to-r from-green-600 to-green-500 rounded-full"></div>
                                             </div>
-                                        </div>
+                                            </div>
                                         <p className="text-gray-700 leading-relaxed">
                                             Scaled to $500M in tokenized assets across 15 countries, empowering 10,000+ users. 
                                             Launched institutional-grade compliance features.
@@ -413,7 +413,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                                </div>
             </section>
 
             {/* Section 6: Leadership Team */}
@@ -424,29 +424,9 @@ const AboutUs = () => {
                             Leadership <span className="text-green-600">Team</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
-                    </div>
+                            </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8">
-                        {/* Raayif Aarif - CTO */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
-                                <img 
-                                    src="/assets/Images/team/Raayif-aarif.png" 
-                                    alt="Raayif Aarif" 
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
-                            <div className="space-y-4">
-                                <div>
-                                    <h4 className="text-xl font-bold text-gray-900 anton-regular">Raayif Aarif</h4>
-                                    <p className="text-blue-600 font-semibold text-lg">CTO</p>
-                                </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Former blockchain architect at a leading fintech with 15+ years in asset management.
-                                </p>
-                            </div>
-                        </div>
-
                         {/* Kuldeep - CEO */}
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
@@ -461,9 +441,23 @@ const AboutUs = () => {
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Kuldeep</h4>
                                     <p className="text-blue-600 font-semibold text-lg">CEO</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Expert in distributed systems and cryptography with multiple patents in blockchain security.
-                                </p>
+                            </div>
+                        </div>
+
+                        {/* Rameez - COO */}
+                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
+                                <img 
+                                    src="/assets/Images/team/Rameez.png" 
+                                    alt="Rameez" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="space-y-4">
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 anton-regular">Rameez</h4>
+                                    <p className="text-green-600 font-semibold text-lg">COO</p>
+                                </div>
                             </div>
                         </div>
 
@@ -481,9 +475,23 @@ const AboutUs = () => {
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Azwaan</h4>
                                     <p className="text-green-600 font-semibold text-lg">HR</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Former regulator with deep expertise in global financial compliance frameworks.
-                                </p>
+                            </div>
+                        </div>
+
+                        {/* Raayif Aarif - CTO */}
+                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                            <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
+                                <img 
+                                    src="/assets/Images/team/Raayif-aarif.png" 
+                                    alt="Raayif Aarif" 
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                            <div className="space-y-4">
+                                <div>
+                                    <h4 className="text-xl font-bold text-gray-900 anton-regular">Raayif Aarif</h4>
+                                    <p className="text-blue-600 font-semibold text-lg">CTO</p>
+                                </div>
                             </div>
                         </div>
 
@@ -491,7 +499,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/ansab.png" 
+                                    src="/assets/Images/team/Ansab.png" 
                                     alt="Ansab" 
                                     className="w-full h-full object-cover"
                                 />
@@ -499,11 +507,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Ansab</h4>
-                                    <p className="text-blue-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-blue-600 font-semibold text-lg">Blockchain Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Full-stack developer specializing in blockchain integration and smart contract development.
-                                </p>
                             </div>
                         </div>
 
@@ -511,7 +516,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/abhishek.png" 
+                                    src="/assets/Images/team/Abhishek.png" 
                                     alt="Abhishek" 
                                     className="w-full h-full object-cover"
                                 />
@@ -519,11 +524,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Abhishek</h4>
-                                    <p className="text-green-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-green-600 font-semibold text-lg">Mobile UI/UX Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Full-stack developer with expertise in fintech solutions and blockchain development.
-                                </p>
                             </div>
                         </div>
 
@@ -531,7 +533,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/hanan.png" 
+                                    src="/assets/Images/team/Hanan.png" 
                                     alt="Hanan Arif" 
                                     className="w-full h-full object-cover"
                                 />
@@ -539,11 +541,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Hanan Arif</h4>
-                                    <p className="text-blue-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-blue-600 font-semibold text-lg">Infrastructure & Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Frontend developer specializing in React and modern web technologies.
-                                </p>
                             </div>
                         </div>
 
@@ -551,7 +550,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/anas.png" 
+                                    src="/assets/Images/team/Anas K.P.png" 
                                     alt="Anas KP" 
                                     className="w-full h-full object-cover"
                                 />
@@ -559,11 +558,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Anas KP</h4>
-                                    <p className="text-green-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-green-600 font-semibold text-lg">Blockchain Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Backend developer focusing on API development and database optimization.
-                                </p>
                             </div>
                         </div>
 
@@ -571,7 +567,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/nada.png" 
+                                    src="/assets/Images/team/Nada.png" 
                                     alt="Nada Abdulla" 
                                     className="w-full h-full object-cover"
                                 />
@@ -579,11 +575,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Nada Abdulla</h4>
-                                    <p className="text-blue-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-blue-600 font-semibold text-lg">UI/UX Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Frontend developer with expertise in UI implementation and responsive design.
-                                </p>
                             </div>
                         </div>
 
@@ -591,7 +584,7 @@ const AboutUs = () => {
                         <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
-                                    src="/assets/Images/team/nuha.png" 
+                                    src="/assets/Images/team/Nuha.png" 
                                     alt="Nuha Fathima" 
                                     className="w-full h-full object-cover"
                                 />
@@ -599,11 +592,8 @@ const AboutUs = () => {
                             <div className="space-y-4">
                                 <div>
                                     <h4 className="text-xl font-bold text-gray-900 anton-regular">Nuha Fathima</h4>
-                                    <p className="text-green-600 font-semibold text-lg">Developer</p>
+                                    <p className="text-green-600 font-semibold text-lg">React Native Developer</p>
                                 </div>
-                                <p className="text-gray-600 leading-relaxed text-sm">
-                                    Mobile developer specializing in React Native and cross-platform applications.
-                                </p>
                             </div>
                         </div>
                     </div>
@@ -621,59 +611,124 @@ const AboutUs = () => {
                     </div>
                     
                     <div className="grid lg:grid-cols-2 gap-16">
+                        {/* Left Column - Technology Integration */}
                         <div className="space-y-8">
-                            {/* Tech Stack Cards */}
                             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
-                                <h3 className="text-2xl font-bold text-blue-600 mb-6 anton-regular">Technology Stack</h3>
-                                <div className="h-64 flex items-center justify-center text-gray-500">
-                                    [Technology Stack - Step 2]
+                                <h3 className="text-2xl font-bold text-blue-600 mb-6 anton-regular">Technology Integration</h3>
+                                <div className="grid grid-cols-3 gap-6">
+                                    {/* Solana */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/solana-sol-logo.svg" alt="Solana" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Polygon */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/polygon-matic-logo.svg" alt="Polygon" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Optimism */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/optimism-ethereum-op-logo.svg" alt="Optimism" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Ethereum */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/ethereum-eth-logo.svg" alt="Ethereum" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Bitcoin */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/bitcoin-btc-logo.svg" alt="Bitcoin" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                    
+                                    {/* Avalanche */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/blockchains/avalanche-avax-logo.svg" alt="Avalanche" className="w-full h-full" />
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                {/* Audit & Security Partners */}
+                                <div className="mt-8 pt-6 border-t border-gray-200">
+                                    <h4 className="text-lg font-semibold text-gray-800 mb-4 text-center">Audit & Security Partners</h4>
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div className="flex flex-col items-center space-y-2">
+                                            <div className="w-12 h-12 bg-white rounded-xl p-2 shadow-md flex items-center justify-center">
+                                                <img src="/assets/svg/audit0.png" alt="Audit Partner" className="w-full h-full" />
+                                            </div>
+                                            <span className="text-xs font-medium text-gray-600">Audit Partner</span>
+                                        </div>
+                                        <div className="flex flex-col items-center space-y-2">
+                                            <div className="w-12 h-12 bg-white rounded-xl p-2 shadow-md flex items-center justify-center">
+                                                <img src="/assets/svg/cervik.png" alt="Cervik" className="w-full h-full" />
+                                            </div>
+                                            <span className="text-xs font-medium text-gray-600">Cervik</span>
+                                        </div>
+                                        <div className="flex flex-col items-center space-y-2">
+                                            <div className="w-12 h-12 bg-white rounded-xl p-2 shadow-md flex items-center justify-center">
+                                                <img src="/assets/svg/h.png" alt="Security Partner" className="w-full h-full" />
+                                            </div>
+                                            <span className="text-xs font-medium text-gray-600">Security Partner</span>
+                                        </div>
+                                        <div className="flex flex-col items-center space-y-2">
+                                            <div className="w-12 h-12 bg-white rounded-xl p-2 shadow-md flex items-center justify-center">
+                                                <img src="/assets/svg/ic.png" alt="IC Partner" className="w-full h-full" />
+                                            </div>
+                                            <span className="text-xs font-medium text-gray-600">IC Partner</span>
+                                        </div>
+                                        <div className="flex flex-col items-center space-y-2">
+                                            <div className="w-12 h-12 bg-white rounded-xl p-2 shadow-md flex items-center justify-center">
+                                                <img src="/assets/svg/z.png" alt="Z Partner" className="w-full h-full" />
+                                            </div>
+                                            <span className="text-xs font-medium text-gray-600">Z Partner</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
+                        {/* Right Column - Platform Integration */}
                         <div className="space-y-8">
-                            {/* Platform Integration */}
                             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
                                 <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
-                                <div className="space-y-6">
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                                        <div>
-                                            <h4 className="font-semibold text-green-600 text-lg mb-2">Fireblocks</h4>
-                                            <p className="text-gray-600 leading-relaxed text-sm">
-                                                Institutional-grade MPC wallet security for safeguarding assets.
-                                            </p>
+                                <div className="grid grid-cols-2 gap-6">
+                                    {/* Fireblocks */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
                                         </div>
                                     </div>
-                                    
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                                        <div>
-                                            <h4 className="font-semibold text-blue-600 text-lg mb-2">Crossmint</h4>
-                                            <p className="text-gray-600 leading-relaxed text-sm">
-                                                Decentralized Identity (DID) and Verifiable Credential issuance.
-                                            </p>
-                                        </div>
+                                </div>
+                                
+                                {/* Crossmint */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/Crossmint_idPetUnPey_0.png" alt="Crossmint" className="w-full h-full" />
                                     </div>
-                                    
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-3 h-3 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                                        <div>
-                                            <h4 className="font-semibold text-green-600 text-lg mb-2">Sumsub</h4>
-                                            <p className="text-gray-600 leading-relaxed text-sm">
-                                                Seamless KYC/AML compliance to meet global regulations.
-                                            </p>
-                                        </div>
+                                </div>
+                                
+                                {/* Imperial PFS */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/Imperial PFS_id6TGACQIO_1.png" alt="Imperial PFS" className="w-full h-full" />
                                     </div>
-                                    
-                                    <div className="flex items-start gap-4">
-                                        <div className="w-3 h-3 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                                        <div>
-                                            <h4 className="font-semibold text-blue-600 text-lg mb-2">IPFS</h4>
-                                            <p className="text-gray-600 leading-relaxed text-sm">
-                                                Tamper-proof, decentralized data storage ensuring immutability.
-                                            </p>
-                                        </div>
+                                </div>
+                                
+                                {/* Sumsub */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/sumsub.png" alt="Sumsub" className="w-full h-full" />
                                     </div>
                                 </div>
                             </div>

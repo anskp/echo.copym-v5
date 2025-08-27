@@ -187,23 +187,20 @@ export default function AppPeekSection() {
               />
             </div>
             
-            {/* Dual 3D Phones - Centered layout */}
-            <div className="flex justify-center items-center gap-3 md:gap-6 relative overflow-visible order-2 lg:order-none" style={{ perspective: '1000px' }}>
-              {/* Left Device - Blue phone with forward tilt */}
-              <div 
-                className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
-                style={{ perspective: '1000px' }}
-              >
-                {/* 3D Phone Container */}
-                <div 
-                  className="relative w-full h-full bg-gradient-to-br from-blue-400 via-cyan-400 to-blue-500 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
-                  style={{
-                    background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
-                    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-                    transform: 'rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px)',
-                    transformStyle: 'preserve-3d'
-                  }}
-                >
+                         {/* Single Phone - Centered layout */}
+             <div className="flex justify-center items-center relative overflow-visible order-2 lg:order-none">
+               {/* Single Device - Blue phone */}
+               <div 
+                 className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
+               >
+                                                   {/* Phone Container */}
+                  <div 
+                    className="relative w-full h-full bg-gradient-to-br from-gray-800 via-gray-900 to-black rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
+                    style={{
+                      background: 'linear-gradient(135deg, #1f2937, #111827, #000000)',
+                      boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+                    }}
+                  >
                   <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
                     <div className="w-full h-full bg-black rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
                       <img 
@@ -214,55 +211,13 @@ export default function AppPeekSection() {
                     </div>
                   </div>
                   
-                  <div 
-                    className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-blue-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
-                    style={{
-                      transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
-                      transformOrigin: 'center top'
-                    }}
-                  ></div>
-                  
-                  <div 
-                    className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
-                    style={{
-                      transform: 'translateZ(-10px)'
-                    }}
-                  ></div>
-                </div>
-              </div>
-
-              {/* Right Device - Emerald phone with backward tilt */}
-              <div 
-                className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
-                style={{ perspective: '1000px' }}
-              >
-                {/* 3D Phone Container - Emerald */}
-                <div 
-                  className="relative w-full h-full bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
-                  style={{
-                    background: 'linear-gradient(135deg, #10b981, #059669, #10b981)',
-                    boxShadow: '0 25px 50px -12px rgba(128, 125, 125, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-                    transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-20px) translateX(-20px)',
-                    transformStyle: 'preserve-3d'
-                  }}
-                >
-                  <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-                    <div className="w-full h-full bg-black rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
-                      <img 
-                        src="/assets/Images/devices/marketplace02.jpg" 
-                        alt="Wallet Interface"
-                        className="w-full h-full object-cover rounded-[2.3rem]"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div 
-                    className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-emerald-300 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
-                    style={{
-                      transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
-                      transformOrigin: 'center top'
-                    }}
-                  ></div>
+                                     <div 
+                     className="absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-40 blur-xl md:blur-2xl rounded-full"
+                     style={{
+                       transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
+                       transformOrigin: 'center top'
+                     }}
+                   ></div>
                   
                   <div 
                     className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
