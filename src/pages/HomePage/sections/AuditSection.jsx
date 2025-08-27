@@ -212,8 +212,8 @@ export default function AuditSection() {
                 {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 anton-regular">
-              <span className="text-gray-900">Hey CORA, give this chart </span>
-              <span className="text-emerald-600">a boost!</span>
+              <span className="text-gray-900">SECURE & </span>
+              <span className="text-emerald-600">AUDITED</span>
           </h2>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
