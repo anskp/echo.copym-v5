@@ -267,12 +267,9 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-blue-100 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none">
-          <path d="M100 100C200 200 300 50 400 150C500 250 600 100 700 200C800 300 900 150 1000 250" stroke="currentColor" strokeWidth="2" fill="none" className="text-black" />
-          <path d="M0 300C100 400 200 250 300 350C400 450 500 300 600 400C700 500 800 350 900 450" stroke="currentColor" strokeWidth="2" fill="none" className="text-black" />
-        </svg>
+      {/* Background Pattern - Same as HomePage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
       {/* Gradient Orbs - Removed for consistent background */}
@@ -286,7 +283,7 @@ const Contact = () => {
       >
         <button
           onClick={() => setShowLiveChat(!showLiveChat)}
-          className="bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation"
+          className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation"
           aria-label="Open live chat"
         >
           <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
@@ -300,8 +297,8 @@ const Contact = () => {
           >
             <div className="p-3 sm:p-4 border-b flex justify-between items-center">
               <div>
-                <h3 className="font-semibold text-[#1e40af] text-sm sm:text-base">Live Chat</h3>
-                <p className="text-xs sm:text-sm text-black">We're online and ready to help!</p>
+                <h3 className="font-semibold text-emerald-600 text-sm sm:text-base">Live Chat</h3>
+                <p className="text-xs sm:text-sm text-gray-700">We're online and ready to help!</p>
               </div>
               <button
                 onClick={() => setShowLiveChat(false)}
@@ -311,8 +308,8 @@ const Contact = () => {
               </button>
             </div>
             <div className="p-3 sm:p-4">
-              <p className="text-xs sm:text-sm text-black mb-3">Start a conversation with our support team.</p>
-              <button className="btn-gradient w-full py-2 px-4 text-xs sm:text-sm font-medium text-black transition-colors">
+              <p className="text-xs sm:text-sm text-gray-700 mb-3">Start a conversation with our support team.</p>
+              <button className="bg-emerald-600 hover:bg-emerald-700 w-full py-2 px-4 text-xs sm:text-sm font-medium text-white rounded-lg transition-colors">
                 Start Chat
               </button>
             </div>
@@ -328,8 +325,8 @@ const Contact = () => {
       >
                  {/* Header - Enhanced Mobile Responsiveness */}
          <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
-           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
-             Let's <span className="text-[#065f46]">Connect</span>
+           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-gray-900 font-black uppercase anton-regular px-2">
+             Let's <span className="text-emerald-600">Connect</span>
            </h1>
            <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
              Connect with our team for investor onboarding, asset tokenization,
@@ -342,17 +339,17 @@ const Contact = () => {
           {contactTypes.map((type) => (
             <motion.div
               key={type.value}
-              className="bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200 hover:border-[#065f46] hover:shadow-md transition-all cursor-pointer hover:-translate-y-1 active:scale-95 touch-manipulation"
+              className="bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200 hover:border-emerald-500 hover:shadow-md transition-all cursor-pointer hover:-translate-y-1 active:scale-y-95 touch-manipulation"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => handleQuickContact(type.value)}
             >
               <div className="p-2 sm:p-4 lg:p-6 text-center">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4">
                   <type.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                 </div>
-                <h3 className="font-semibold text-[#1e40af] mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base leading-tight">{type.label}</h3>
-                <p className="text-xs text-black leading-tight">Secure email for qualified parties</p>
+                <h3 className="font-semibold text-emerald-600 mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base leading-tight">{type.label}</h3>
+                <p className="text-xs text-gray-700 leading-tight">Secure email for qualified parties</p>
               </div>
             </motion.div>
           ))}
@@ -366,7 +363,7 @@ const Contact = () => {
                 onClick={() => setShowTypeform(false)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   !showTypeform 
-                    ? 'bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white shadow-md' 
+                    ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-md' 
                     : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
                 }`}
               >
@@ -376,7 +373,7 @@ const Contact = () => {
                 onClick={() => setShowTypeform(true)}
                 className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
                   showTypeform 
-                    ? 'bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white shadow-md' 
+                    ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-md' 
                     : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
                 }`}
               >
@@ -399,17 +396,17 @@ const Contact = () => {
            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Information - Single Consolidated Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
-              <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Contact Information</h3>
+              <h3 className="font-semibold text-gray-900 mb-4 text-base sm:text-lg">Contact Information</h3>
               <div className="space-y-4">
                 {contactInfo.map((info, idx) => (
                   <div key={idx} className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-full flex items-center justify-center flex-shrink-0">
+                    <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-full flex items-center justify-center flex-shrink-0">
                       <info.icon className="w-4 h-4 text-white" />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-[#1e40af] text-sm">{info.title}</h4>
+                      <h4 className="font-medium text-gray-900 text-sm">{info.title}</h4>
                       {info.details.map((d, i) => (
-                        <p key={i} className="text-black text-xs mb-1 break-words">{d}</p>
+                        <p key={i} className="text-gray-700 text-xs mb-1 break-words">{d}</p>
                       ))}
                       <p className="text-gray-500 text-xs mt-1">{info.description}</p>
                       {info.action && (
@@ -417,7 +414,7 @@ const Contact = () => {
                           href={info.action}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-[#065f46] text-xs mt-1 hover:underline"
+                          className="inline-flex items-center text-emerald-600 text-xs mt-1 hover:underline"
                         >
                           <ExternalLink className="w-3 h-3 mr-1" />
                           {info.action.includes('mailto') ? 'Email Us' : info.action.includes('tel') ? 'Call' : 'View Map'}
@@ -431,7 +428,7 @@ const Contact = () => {
               
             {/* Social Media & Resources - Combined Card */}
             <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
-              <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Connect & Resources</h3>
+              <h3 className="font-semibold text-gray-900 mb-4 text-base sm:text-lg">Connect & Resources</h3>
               
               {/* Social Media */}
               <div className="mb-6">
@@ -446,7 +443,7 @@ const Contact = () => {
                       className={`w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center transition-colors ${social.color} touch-manipulation`}
                       aria-label={`Follow us on ${social.name}`}
                     >
-                      <social.icon className="w-4 h-4 text-black" />
+                      <social.icon className="w-4 h-4 text-gray-700" />
                     </a>
                   ))}
                 </div>
@@ -464,7 +461,7 @@ const Contact = () => {
                       rel="noopener noreferrer"
                       className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors touch-manipulation"
                     >
-                      <r.icon className="w-4 h-4 text-[#065f46] flex-shrink-0" />
+                      <r.icon className="w-4 h-4 text-emerald-600 flex-shrink-0" />
                       <span className="text-gray-700 text-xs">{r.name}</span>
                     </a>
                   ))}
@@ -479,8 +476,8 @@ const Contact = () => {
         {/* Map Section - Optimized layout */}
         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1e40af] mb-3 sm:mb-4">Find Us</h2>
-            <p className="text-black text-sm sm:text-base">Visit our office or get in touch</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Find Us</h2>
+            <p className="text-gray-700 text-sm sm:text-base">Visit our office or get in touch</p>
           </div>
           
           <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 overflow-hidden">

@@ -15,16 +15,16 @@ import {
  */
 
 const THEME = {
-  pageBg: "bg-gradient-to-br from-[#EBF3FF] via-[#E6F0FF] to-[#DDEAFF]",
-  ctaGrad: "bg-gradient-to-r from-[#3B82F6] to-[#60A5FA] text-white",
-  ctaHover: "hover:from-[#2563EB] hover:to-[#3B82F6] transform hover:scale-[1.02] active:scale-[0.98]",
-  ring: "focus:ring-2 focus:ring-[#93C5FD] focus:ring-offset-2",
-  inputFocus: "focus:border-[#60A5FA] focus:bg-white focus:shadow-lg",
+  pageBg: "bg-gradient-to-br from-blue-50 via-blue-100 to-cyan-50",
+  ctaGrad: "bg-gradient-to-r from-emerald-500 to-emerald-600 text-white",
+  ctaHover: "hover:from-emerald-600 hover:to-emerald-700 transform hover:scale-[1.02] active:scale-[0.98]",
+  ring: "focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2",
+  inputFocus: "focus:border-emerald-500 focus:bg-white focus:shadow-lg",
   accent: {
-    deep: "#1E3A8A",
-    mid: "#2563EB", 
-    light: "#93C5FD",
-    ultraLight: "#F0F7FF",
+    deep: "#059669",
+    mid: "#10b981", 
+    light: "#34d399",
+    ultraLight: "#ecfdf5",
   },
 };
 
@@ -279,7 +279,7 @@ export default function Typeform() {
                 >
                   <motion.button
                     onClick={() => setShowForm(true)}
-                    className="px-12 py-5 rounded-2xl bg-[#255f99] text-white font-bold text-xl shadow-2xl border border-white/30 hover:bg-[#1e4a7a] transition-all duration-300 backdrop-blur-sm"
+                    className="px-12 py-5 rounded-2xl bg-emerald-600 text-white font-bold text-xl shadow-2xl border border-white/30 hover:bg-emerald-700 transition-all duration-300 backdrop-blur-sm"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -307,7 +307,7 @@ export default function Typeform() {
                     <div className="flex items-center gap-2">
                       <div className="w-32 h-2 bg-white/20 rounded-full overflow-hidden">
                         <motion.div 
-                          className="h-full bg-gradient-to-r from-[#255f99] to-[#1e4a7a] rounded-full"
+                          className="h-full bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
                           transition={{ duration: 0.5 }}
@@ -333,7 +333,7 @@ export default function Typeform() {
                     </motion.button>
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-[#255f99] to-[#1e4a7a] grid place-items-center border border-white/30 shadow-sm">
+                        <div className="h-12 w-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-emerald-600 grid place-items-center border border-white/30 shadow-sm">
                           <step.icon className="w-6 h-6 text-white" />
                         </div>
                         <div>
@@ -376,7 +376,7 @@ export default function Typeform() {
                     <motion.button
                       onClick={handleNext}
                       disabled={!form[step.id]}
-                      className={`px-8 py-4 rounded-2xl bg-[#255f99] text-white font-bold text-lg shadow-xl hover:bg-[#1e4a7a] transition-all duration-200 ${
+                      className={`px-8 py-4 rounded-2xl bg-emerald-600 text-white font-bold text-lg shadow-xl hover:bg-emerald-700 transition-all duration-200 ${
                         !form[step.id] ? 'opacity-50 cursor-not-allowed hover:scale-100' : ''
                       }`}
                       whileHover={form[step.id] ? { scale: 1.05 } : {}}
@@ -389,7 +389,7 @@ export default function Typeform() {
                   {["text", "email", "url", "number", "textarea", "group"].includes(step.type) && (
                     <motion.button
                       onClick={handleNext}
-                      className="px-8 py-4 rounded-2xl bg-[#255f99] text-white font-bold text-lg shadow-xl hover:bg-[#1e4a7a] transition-all duration-200"
+                      className="px-8 py-4 rounded-2xl bg-emerald-600 text-white font-bold text-lg shadow-xl hover:bg-emerald-700 transition-all duration-200"
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -427,7 +427,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                 step.type === "number" ? e.target.value.replace(/[^0-9.]/g, "") : e.target.value
               )
             }
-            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200"
+            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-200"
             placeholder="Type your answer..."
             autoFocus
           />
@@ -445,7 +445,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
             rows={6}
             value={value || ""}
             onChange={(e) => onChange(step.id, e.target.value)}
-            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none resize-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200"
+            className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none resize-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-200"
             placeholder="Share your thoughts here..."
             autoFocus
           />
@@ -468,7 +468,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                 onClick={() => onChange(step.id, opt)}
                 className={`w-full text-left px-6 py-5 rounded-2xl border-2 transition-all duration-200 text-lg font-medium ${
                   active
-                    ? "border-[#255f99] bg-gradient-to-r from-[#255f99] to-[#1e4a7a] text-white shadow-lg transform scale-[1.02]"
+                    ? "border-emerald-500 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white shadow-lg transform scale-[1.02]"
                     : "border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 hover:shadow-md hover:scale-[1.01] text-white"
                 }`}
                 initial={{ opacity: 0, y: 20 }}
@@ -481,7 +481,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
                   <span>{opt}</span>
                   {active && (
                     <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-[#255f99] text-sm">✓</span>
+                      <span className="text-emerald-600 text-sm">✓</span>
                     </div>
                   )}
                 </div>
@@ -506,7 +506,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
               value={address?.[f.key] || ""}
               onChange={(e) => onAddressChange(f.key, e.target.value)}
               placeholder={f.label}
-              className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-[#255f99] focus:bg-white/20 transition-all duration-200 text-lg ${f.key === 'line2' ? 'sm:col-span-2' : ''}`}
+              className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-200 text-lg ${f.key === 'line2' ? 'sm:col-span-2' : ''}`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
@@ -528,7 +528,7 @@ function ThankYou() {
       className="text-center max-w-2xl mx-auto"
     >
       <motion.div 
-        className="mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-[#255f99] to-[#1e4a7a] grid place-items-center shadow-2xl mb-8"
+        className="mx-auto w-24 h-24 rounded-3xl bg-gradient-to-br from-emerald-500 to-emerald-600 grid place-items-center shadow-2xl mb-8"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
@@ -553,15 +553,15 @@ function ThankYou() {
           <h3 className="font-semibold text-white mb-2">What happens next?</h3>
           <div className="text-left space-y-2 text-white/80">
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
               <span>Our team will review your application within 24 hours</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
               <span>We'll schedule a consultation call to discuss your tokenization goals</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#255f99] rounded-full"></div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
               <span>You'll receive a personalized tokenization strategy</span>
             </div>
           </div>
