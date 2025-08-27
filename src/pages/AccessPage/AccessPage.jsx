@@ -489,19 +489,11 @@ export default function AccessPage() {
                  <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                 </p>
-<<<<<<< HEAD
-                 <div className="flex justify-center w-full mt-6">
-                  <div className="w-full max-w-[280px] sm:max-w-[320px]">
-                                         <CredentialCard
-                       user={{
-                         name: "Alex Morgan",
-=======
                  <div className="flex justify-end w-[380px] mt-12">
                   <div className="w-full max-w-[350px]">
                     <CredentialCard
                       user={{
                         name: "Alex Morgan",
->>>>>>> fbc05fd3e5e02c80853f6214af4632575cbce847
                          employeeNumber: "C-2028",
                          passNumber: "56",
                         points: "1,250",
