@@ -335,9 +335,20 @@ export default function AccessPage() {
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
-        <div ref={heroRef} className="text-center mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48">
+        <div ref={heroRef} className="relative mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48">
+          {/* Glass Pill Layer */}
+          <div 
+            className="absolute right-[-150px] top-1/2 transform -translate-y-1/2 w-[600px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[60px] flex justify-center items-center text-white text-2xl font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50"
+            style={{
+              WebkitBackdropFilter: 'blur(10px)',
+              backdropFilter: 'blur(10px)'
+            }}
+          >
+            Mint Your Token Now ➡
+          </div>
+
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text text-left">
             <span className="text-gray-900">YOUR GATEWAY TO </span>
             <span className="text-emerald-600">COPYM'S</span>
             <br />
@@ -345,24 +356,12 @@ export default function AccessPage() {
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto reveal-text">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl reveal-text text-left">
             Unlock premium access to real-world assets, member-only rewards, and
             the next wave of Web3 innovation with your exclusive access pass.
           </p>
 
-          {/* CTA Button */}
-          <motion.button
-             className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            data-scroll-to="#benefits-section"
-          >
-              Mint Your Pass Now
-             <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-          </motion.button>
+
         </div>
 
 
@@ -490,22 +489,30 @@ export default function AccessPage() {
                  <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                 </p>
+<<<<<<< HEAD
                  <div className="flex justify-center w-full mt-6">
                   <div className="w-full max-w-[280px] sm:max-w-[320px]">
                                          <CredentialCard
                        user={{
                          name: "Alex Morgan",
+=======
+                 <div className="flex justify-end w-[380px] mt-12">
+                  <div className="w-full max-w-[350px]">
+                    <CredentialCard
+                      user={{
+                        name: "Alex Morgan",
+>>>>>>> fbc05fd3e5e02c80853f6214af4632575cbce847
                          employeeNumber: "C-2028",
                          passNumber: "56",
-                         points: "1,250",
-                         qrImage: "/assets/svg/copym_qr.svg",
-                       }}
-                       variant="bottleGreen"
-                       stacked
-                       backVariant="darkBlue"
-                       logoSrc="/assets/copym/png/Copym-05-1.png"
-                       logoSize={20}
-                     />
+                        points: "1,250",
+                        qrImage: "/assets/svg/copym_qr.svg",
+                      }}
+                      variant="bottleGreen"
+                      stacked
+                      backVariant="darkBlue"
+                      logoSrc="/assets/copym/png/Copym-05-1.png"
+                      logoSize={20}
+                    />
                   </div>
                 </div>
               </div>
@@ -605,6 +612,7 @@ export default function AccessPage() {
                   <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                  </p>
+<<<<<<< HEAD
                   <div className="flex justify-center">
                     <div className="w-full max-w-[320px] lg:max-w-[350px]">
                                       <CredentialCard
@@ -623,6 +631,22 @@ export default function AccessPage() {
                      />
                     </div>
                   </div>
+=======
+                 <CredentialCard
+                   user={{
+                     name: "Alex Morgan",
+                      employeeNumber: "C-2028",
+                      passNumber: "56",
+                     points: "1,250",
+                     qrImage: "/assets/svg/copym_qr.svg",
+                   }}
+                   variant="bottleGreen"
+                   stacked
+                   backVariant="darkBlue"
+                   logoSrc="/assets/copym/png/Copym-05-1.png"
+                   logoSize={28}
+                 />
+>>>>>>> fbc05fd3e5e02c80853f6214af4632575cbce847
                </div>
              </div>
 
@@ -670,55 +694,65 @@ export default function AccessPage() {
         </div>
 
         {/* Platform Features */}
-        <div ref={featuresRef} className="mb-20">
+        <div ref={featuresRef} className="relative mb-20 min-h-[600px]">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
-              Platform Features
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
+            {/* Heading and underline removed */}
           </div>
 
-                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                 className="feature-item group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-               >
-                 {/* Background gradient overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                 
-                 <div className="relative z-10">
-                   {/* Icon with enhanced styling */}
-                   <div className="flex items-center justify-between mb-6">
-                     <Box
-                       className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                  sx={{
-                         background: "linear-gradient(135deg, #10b981, #059669)",
-                         boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
-                  }}
-                >
-                       <feature.icon className="h-8 w-8 text-white" />
-                </Box>
-                     
-                     {/* Number badge */}
-                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                       {index + 1}
-                     </div>
-                   </div>
-                   
-                   {/* Content */}
-                   <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
-                    {feature.title}
-                  </h3>
-                   <p className="text-gray-700 leading-relaxed text-base">
-                    {feature.description}
-                  </p>
-                   
-                   {/* Bottom accent line */}
-                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                    {/* Glass Capsules Layout */}
+          <div className="relative w-full h-[500px]">
+            {/* Capsule 1 - Top Left */}
+            <div className="absolute top-[10%] left-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
+              <div className="flex items-center gap-4">
+                <Shield className="w-6 h-6 text-white" />
+                <div className="text-left">
+                  <div className="font-bold text-white uppercase text-sm">Compliance-first</div>
+                  <div className="text-white/80 text-xs">KYC/AML, transfer restrictions, whitelisting and audit trails</div>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Capsule 2 - Top Right */}
+            <div className="absolute top-[10%] right-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
+              <div className="flex items-center gap-4">
+                <Wallet className="w-6 h-6 text-white" />
+                <div className="text-left">
+                  <div className="font-bold text-white uppercase text-sm">Utility & Access</div>
+                  <div className="text-white/80 text-xs">Early allocations, fee discounts, governance & staking perks</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Capsule 3 - Middle Center */}
+            <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 w-[400px] h-20 bg-black backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(0,0,0,0.7)] z-20 border border-gray-800">
+              <div className="flex items-center">
+                <div className="text-center">
+                  <div className="font-bold text-white uppercase text-xl">Platform Features</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Capsule 4 - Bottom Left */}
+            <div className="absolute top-[70%] left-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
+              <div className="flex items-center gap-4">
+                <Diamond className="w-6 h-6 text-white" />
+                <div className="text-left">
+                  <div className="font-bold text-white uppercase text-sm">Institutional Rails</div>
+                  <div className="text-white/80 text-xs">Custody, settlement, and data rooms integrated</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Capsule 5 - Bottom Right */}
+            <div className="absolute top-[70%] right-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
+              <div className="flex items-center gap-4">
+                <Shield className="w-6 h-6 text-white" />
+                <div className="text-left">
+                  <div className="font-bold text-white uppercase text-sm">Security & Trust</div>
+                  <div className="text-white/80 text-xs">Enterprise-grade security with multi-layer protection</div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
