@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Building2, Users, Globe } from 'lucide-react';
 import { Globe as GlobeComponent } from '../../../components/globe';
-import ErrorBoundary from '../../../components/ErrorBoundary';
+
 
 const investorGroups = [
   { name: 'Institutional', value: 45, color: '#3B82F6' },
@@ -83,8 +83,8 @@ const MinimalTokenizationDashboard = () => {
 
         {/* Card 3: Investor Groups with Globe */}
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="mb-4">
-            <h3 className="text-xl font-semibold text-gray-800 flex items-center">
+          <div className="mb-4 text-center">
+            <h3 className="text-xl font-semibold text-gray-800 flex items-center justify-center">
               <Globe className="mr-2 text-purple-600" size={24} />
               Global Distribution
             </h3>
@@ -101,10 +101,10 @@ const MinimalTokenizationDashboard = () => {
                 </div>
               ))}
             </div>
-            <div className="relative w-full h-48 md:h-64 lg:h-80 flex items-center justify-center">
-              <ErrorBoundary>
+            <div className="w-full h-48 md:h-64 lg:h-80 flex items-center justify-center px-4">
+              <div className="w-full max-w-[280px] md:max-w-[400px] lg:max-w-[500px] flex justify-center">
                 <GlobeComponent className="w-full h-full" />
-              </ErrorBoundary>
+              </div>
             </div>
           </div>
         </div>

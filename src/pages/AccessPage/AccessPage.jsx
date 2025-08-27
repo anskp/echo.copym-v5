@@ -330,16 +330,16 @@ export default function AccessPage() {
 
       {/* Enhanced Floating Elements with GSAP */}
       <div className="floating-bg-1 absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
-      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-green-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
+      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-emerald-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
-        <div ref={heroRef} className="text-center mb-20 p-12">
+        <div ref={heroRef} className="text-center mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48">
           {/* Main Title */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text">
             <span className="text-gray-900">YOUR GATEWAY TO </span>
-            <span className="text-green-600">COPYM'S</span>
+            <span className="text-emerald-600">COPYM'S</span>
             <br />
             <span className="text-gray-900">EXCLUSIVE WORLD</span>
           </h1>
@@ -352,7 +352,7 @@ export default function AccessPage() {
 
           {/* CTA Button */}
           <motion.button
-             className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+             className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             initial={{ opacity: 0, y: 20 }}
@@ -371,12 +371,12 @@ export default function AccessPage() {
         <div id="benefits-section" ref={benefitsRef} className="mb-20">
             <div className="space-y-8">
               {/* Section Title */}
-              <div className="text-left">
+              <div className="text-center">
                 <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
                   Why Get the COPYM Access Pass?
                 </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full"></div>
-                <p className="text-gray-700 mt-6 text-lg leading-relaxed">
+                <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mx-auto"></div>
+                <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
                   Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
                 </p>
               </div>
@@ -389,7 +389,7 @@ export default function AccessPage() {
                      className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                    >
                      {/* Background gradient overlay */}
-                     <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                      
                      <div className="relative z-10">
                        {/* Icon with enhanced styling */}
@@ -397,21 +397,21 @@ export default function AccessPage() {
                          <Box
                            className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
                         sx={{
-                             background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                             boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                             background: "linear-gradient(135deg, #10b981, #059669)",
+                             boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
                         }}
                       >
                            <benefit.icon className="h-8 w-8 text-white" />
                       </Box>
                          
                          {/* Number badge */}
-                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                            {index + 1}
                          </div>
                        </div>
                        
                        {/* Content */}
-                       <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
+                       <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
                         {benefit.title}
                       </h3>
                        <p className="text-gray-700 leading-relaxed text-base">
@@ -419,7 +419,7 @@ export default function AccessPage() {
                       </p>
                        
                        {/* Bottom accent line */}
-                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                     </div>
                   </div>
                 ))}
@@ -435,7 +435,7 @@ export default function AccessPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Everything Your Pass Unlocks
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
           {/* Mobile Layout - Stacked vertically */}
@@ -448,7 +448,7 @@ export default function AccessPage() {
                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
                    {/* Background gradient overlay */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                    
                    <div className="relative z-10 flex items-start gap-4">
                      {/* Icon with enhanced styling */}
@@ -456,15 +456,15 @@ export default function AccessPage() {
                        <Box
                          className="w-12 h-12 rounded-xl flex items-center justify-center text-xl card-icon group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
                          sx={{
-                           background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                           boxShadow: "0 6px 20px rgba(34, 197, 94, 0.3)",
+                           background: "linear-gradient(135deg, #10b981, #059669)",
+                           boxShadow: "0 6px 20px rgba(16, 185, 129, 0.3)",
                          }}
                        >
                          <feature.icon className="h-6 w-6 text-white" />
                        </Box>
                        
                        {/* Number badge */}
-                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
+                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
                          {index + 1}
                        </div>
                   </div>
@@ -476,7 +476,7 @@ export default function AccessPage() {
                    </div>
                    
                    {/* Bottom accent line */}
-                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
+                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
                 </div>
               ))}
             </div>
@@ -492,20 +492,20 @@ export default function AccessPage() {
                 </p>
                  <div className="flex justify-end w-[380px] mt-12">
                   <div className="w-full max-w-[350px]">
-                    <CredentialCard
-                      user={{
-                        name: "Alex Morgan",
-                        employeeNumber: "EMP-2048",
-                        passNumber: "PASS-7F32",
-                        points: "1,250",
-                        qrImage: "/assets/svg/copym_qr.svg",
-                      }}
-                      variant="bottleGreen"
-                      stacked
-                      backVariant="darkBlue"
-                      logoSrc="/assets/copym/png/Copym-05-1.png"
-                      logoSize={20}
-                    />
+                                         <CredentialCard
+                       user={{
+                         name: "Alex Morgan",
+                         employeeNumber: "C-2028",
+                         passNumber: "56",
+                         points: "1,250",
+                         qrImage: "/assets/svg/copym_qr.svg",
+                       }}
+                       variant="bottleGreen"
+                       stacked
+                       backVariant="darkBlue"
+                       logoSrc="/assets/copym/png/Copym-05-1.png"
+                       logoSize={20}
+                     />
                   </div>
                 </div>
               </div>
@@ -563,7 +563,7 @@ export default function AccessPage() {
                     className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                   >
                     {/* Background gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     
                     <div className="relative z-10">
                       {/* Icon with enhanced styling */}
@@ -571,15 +571,15 @@ export default function AccessPage() {
                         <Box
                           className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
                           sx={{
-                            background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                            boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                            background: "linear-gradient(135deg, #10b981, #059669)",
+                            boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
                           }}
                         >
                           <feature.icon className="h-8 w-8 text-white" />
                         </Box>
                         
                         {/* Number badge */}
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                           {index + 1}
                         </div>
                    </div>
@@ -590,7 +590,7 @@ export default function AccessPage() {
                    </span>
                       
                       {/* Bottom accent line */}
-                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                     </div>
                  </div>
                ))}
@@ -605,20 +605,20 @@ export default function AccessPage() {
                   <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                  </p>
-                 <CredentialCard
-                   user={{
-                     name: "Alex Morgan",
-                     employeeNumber: "EMP-2048",
-                     passNumber: "PASS-7F32",
-                     points: "1,250",
-                     qrImage: "/assets/svg/copym_qr.svg",
-                   }}
-                   variant="bottleGreen"
-                   stacked
-                   backVariant="darkBlue"
-                   logoSrc="/assets/copym/png/Copym-05-1.png"
-                   logoSize={28}
-                 />
+                                   <CredentialCard
+                    user={{
+                      name: "Alex Morgan",
+                      employeeNumber: "C-2028",
+                      passNumber: "56",
+                      points: "1,250",
+                      qrImage: "/assets/svg/copym_qr.svg",
+                    }}
+                    variant="bottleGreen"
+                    stacked
+                    backVariant="darkBlue"
+                    logoSrc="/assets/copym/png/Copym-05-1.png"
+                    logoSize={28}
+                  />
                </div>
              </div>
 
@@ -671,7 +671,7 @@ export default function AccessPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Platform Features
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -681,7 +681,7 @@ export default function AccessPage() {
                  className="feature-item group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                >
                  {/* Background gradient overlay */}
-                 <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                 <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                  
                  <div className="relative z-10">
                    {/* Icon with enhanced styling */}
@@ -689,21 +689,21 @@ export default function AccessPage() {
                      <Box
                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
                   sx={{
-                         background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                         boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
+                         background: "linear-gradient(135deg, #10b981, #059669)",
+                         boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
                   }}
                 >
                        <feature.icon className="h-8 w-8 text-white" />
                 </Box>
                      
                      {/* Number badge */}
-                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                     <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                        {index + 1}
                      </div>
                    </div>
                    
                    {/* Content */}
-                   <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-green-600 transition-colors uppercase anton-regular">
+                   <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
                     {feature.title}
                   </h3>
                    <p className="text-gray-700 leading-relaxed text-base">
@@ -711,7 +711,7 @@ export default function AccessPage() {
                   </p>
                    
                    {/* Bottom accent line */}
-                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
+                   <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                 </div>
               </div>
             ))}
@@ -724,7 +724,7 @@ export default function AccessPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
               Benefits Comparison
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="comparison-table bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-200/50 overflow-hidden shadow-2xl overflow-x-auto">
@@ -775,10 +775,10 @@ export default function AccessPage() {
                 className="grid grid-cols-3 text-sm border-b border-gray-100/30 last:border-b-0 hover:bg-gray-50/50 transition-colors min-w-[700px]"
               >
                 <div className="px-6 py-5 font-semibold text-gray-900 flex items-center gap-3">
-                  <row.icon className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <row.icon className="w-5 h-5 text-emerald-600 flex-shrink-0" />
                   <span>{row.feature}</span>
                 </div>
-                <div className="px-6 py-5 text-green-600 font-bold flex items-center justify-center gap-3">
+                <div className="px-6 py-5 text-emerald-600 font-bold flex items-center justify-center gap-3">
                   <CheckCircle className="w-5 h-5 flex-shrink-0" />
                   <span>{row.tokenization}</span>
                 </div>
@@ -796,7 +796,7 @@ export default function AccessPage() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase anton-regular reveal-text">
               Supported Networks
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-green-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
@@ -835,7 +835,7 @@ export default function AccessPage() {
 
         {/* Final CTA */}
         <div ref={ctaRef} className="text-center">
-          <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 text-white">
             <Crown className="w-16 h-16 mx-auto mb-6 text-white/80" />
             <h3 className="text-3xl font-black mb-4 uppercase anton-regular reveal-text">
               Ready to Join the Elite?
@@ -844,7 +844,7 @@ export default function AccessPage() {
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-                         <button className="btn-gradient magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto text-black">
+                         <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
               <Sparkles className="mr-3 w-5 h-5" />
               Get Your Access Pass Now
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

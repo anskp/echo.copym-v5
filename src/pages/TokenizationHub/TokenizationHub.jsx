@@ -7,9 +7,9 @@ import Hero from "./sections/Hero.jsx";
 import TokenizationProcess from "./sections/TokenizationProcess.jsx";
 import MinimalTokenizationDashboard from "./sections/IssuerSection.jsx";
 import TokenDistribution from "./sections/TokenDistribution.jsx";
-import IssuerDashboard from "./sections/IssuerDashboard.jsx";
 import InvestorManagement from "./sections/InvestorManagement.jsx";
 import TrustAndData from "./sections/TrustAndData.jsx";
+import FinalCTA from "./sections/FinalCTA.jsx";
 
 export default function TokenizationHub() {
   // State management remains in the parent component
@@ -28,15 +28,15 @@ export default function TokenizationHub() {
   }), []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-blue-100">
       {/* Step 2: Render the section components in order */}
       <Hero />
       <TokenizationProcess onLaunchCreator={openCreateModal} />
       <MinimalTokenizationDashboard />
       <TokenDistribution />
-      <IssuerDashboard />
       <InvestorManagement />
       <TrustAndData />
+      <FinalCTA />
 
       {/* The Modal remains in the parent component */}
       <BWThemeProvider theme={bwTheme}>
