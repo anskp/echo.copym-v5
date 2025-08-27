@@ -1,4 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+
+// Import blockchain icons
 import { 
   ethereum, 
   polygon, 
@@ -7,194 +10,214 @@ import {
   avalanche, 
   optimism, 
   near, 
-  stellar,
-  copymColoredIcon
+  stellar
 } from '../../CopymAI/assets';
 
-// Import new PNG images for right spiral
+// Import audit icons
 import hIcon from '/assets/svg/h.png';
 import icIcon from '/assets/svg/ic.png';
 import zIcon from '/assets/svg/z.png';
 import cervikIcon from '/assets/svg/cervik.png';
 import audit0Icon from '/assets/svg/audit0.png';
 
-// Import curve assets
-import curve1 from '../../CopymAI/assets/collaboration/curve-1.svg';
-import curve2 from '../../CopymAI/assets/collaboration/curve-2.svg';
+// Blockchain icons with real logos
+const BlockchainIcon = ({ icon, name }) => (
+  <div className="flex flex-col items-center justify-center">
+    <div className="w-8 h-8 flex items-center justify-center">
+      <img
+        src={icon}
+        alt={`${name} blockchain logo`}
+        className="w-full h-full object-contain"
+        onError={(e) => {
+          e.target.style.display = 'none';
+          console.warn('Failed to load blockchain logo:', name);
+        }}
+      />
+    </div>
+  </div>
+);
 
-// Global CSS for rotation animation (injected once)
-const spinStyles = `
-  @keyframes spin-slow {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-  .animate-spin-slow {
-    animation: spin-slow 20s linear infinite;
-  }
-`;
+const slides = [
+  { icon: bitcoin, name: "BTC" },
+  { icon: ethereum, name: "ETH" },
+  { icon: solana, name: "SOL" },
+  { icon: polygon, name: "MATIC" },
+  { icon: avalanche, name: "AVAX" },
+  { icon: optimism, name: "OP" },
+  { icon: near, name: "NEAR" },
+  { icon: stellar, name: "XLM" },
+];
 
-// Inject CSS only once globally
-let cssInjected = false;
-const injectCSS = () => {
-  if (!cssInjected) {
-    const style = document.createElement('style');
-    style.id = 'blockchain-spiral-styles';
-    style.textContent = spinStyles;
-    document.head.appendChild(style);
-    cssInjected = true;
-    console.log('CSS injected successfully for blockchain spiral rotation');
-  }
-};
+const auditSlides = [
+  { icon: hIcon, name: "H" },
+  { icon: icIcon, name: "IC" },
+  { icon: zIcon, name: "Z" },
+  { icon: cervikIcon, name: "Cervik" },
+  { icon: audit0Icon, name: "Audit0" },
+];
 
-const BlockchainSpiral = ({ 
-  centralLogo = copymColoredIcon, 
-  centralLogoSize = 64, 
-  blockchainLogos = [], 
-  containerSize = "w-[22rem]", 
-  scale = "scale-75 md:scale-100",
-  showConnectingLines = true 
-}) => {
-  // Inject CSS only once
+const SliderDesign2 = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const duplicatedSlides = [...slides, ...slides, ...slides]; // Triple the slides for seamless loop
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
+  
+  // Continuously check which item is closest to the center
   useEffect(() => {
-    injectCSS();
-    
-    // Also add CSS directly to ensure it works
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes spin-slow {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-    `;
-    document.head.appendChild(style);
-    
-    return () => {
-      if (style.parentNode) {
-        style.parentNode.removeChild(style);
-      }
+    const checkActive = () => {
+      if (!containerRef.current) return;
+      const containerCenter =
+        containerRef.current.getBoundingClientRect().left +
+        containerRef.current.offsetWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+      itemsRef.current.forEach((el, i) => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(containerCenter - itemCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = i % slides.length;
+        }
+      });
+      setActiveIndex(closestIndex);
+      requestAnimationFrame(checkActive); // keep updating in sync with animation
     };
+    requestAnimationFrame(checkActive);
   }, []);
-
-  // Default blockchain logos if none provided
-  const defaultBlockchainLogos = [
-    { id: "0", title: "Ethereum", icon: ethereum, width: 26, height: 36 },
-    { id: "1", title: "Polygon", icon: polygon, width: 34, height: 36 },
-    { id: "2", title: "Bitcoin", icon: bitcoin, width: 36, height: 28 },
-    { id: "3", title: "Solana", icon: solana, width: 34, height: 35 },
-    { id: "4", title: "Avalanche", icon: avalanche, width: 34, height: 34 },
-    { id: "5", title: "Optimism", icon: optimism, width: 34, height: 34 },
-    { id: "6", title: "Near", icon: near, width: 26, height: 34 },
-    { id: "7", title: "Stellar", icon: stellar, width: 38, height: 32 },
-  ];
-
-  const logos = blockchainLogos.length > 0 ? blockchainLogos : defaultBlockchainLogos;
 
         return (
           <div
-      className={`relative left-1/2 flex ${containerSize} aspect-square rounded-full -translate-x-1/2 ${scale}`}
-      role="img"
-      aria-label="Blockchain integration spiral with rotating blockchain logos"
+      ref={containerRef}
+      className="relative h-full overflow-hidden py-12 mx-auto"
     >
-            {/* Static Border Container */}
-      <div className="absolute inset-0 border-2 border-black rounded-full"></div>
-      
-      {/* Rotating Content Container */}
-      <div className="relative w-full h-full" style={{
-        animation: 'spin-slow 20s linear infinite',
-        transformOrigin: 'center'
-      }}>
-        {/* Central Logo Container */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex w-60 aspect-square border border-black rounded-full">
-          <div className="flex items-center justify-center w-full h-full">
-            {centralLogo ? (
-              <img
-                src={centralLogo}
-                width={centralLogoSize}
-                height={centralLogoSize}
-                alt="Copym Central Logo"
-                className="pointer-events-none select-none"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  console.warn('Failed to load central logo:', centralLogo);
-                }}
-              />
-            ) : (
-              <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">LOGO</span>
-                </div>
-              )}
-          </div>
-            </div>
-
-                  {/* Blockchain Logos Around the Circle */}
-          <ul role="list" aria-label="Blockchain network logos">
-            {logos.map((logo, i) => {
-              // Use custom angle if provided, otherwise fall back to default 45° spacing
-              const rotationAngle = logo.angle !== undefined ? logo.angle : i * 45;
-              return (
-                <li
-                  key={logo.id}
-                  className="absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom"
-                  style={{ transform: `rotate(${rotationAngle}deg)` }}
+      {/* Fade edges - transparent to match section background */}
+      <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-transparent before:to-transparent after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-transparent after:to-transparent"></div>
+      <motion.div
+        className="flex items-center justify-center"
+        animate={{
+          x: ["0%", "-33.33%"],
+        }}
+        transition={{
+          ease: "linear",
+          duration: 15,
+          repeat: Infinity,
+        }}
+      >
+        {duplicatedSlides.map((slide, index) => {
+          const slideIndex = index % slides.length;
+          const isActive = slideIndex === activeIndex;
+          return (
+            <div
+              key={index}
+              ref={(el) => (itemsRef.current[index] = el)}
+              className="flex-shrink-0 px-8"
+            >
+              <div className="flex items-center justify-center">
+                <div
+                  className={`w-20 h-20 rounded-full border-2 flex items-center justify-center transition-all duration-300 ease-in-out ${
+                    isActive
+                      ? "border-blue-500 bg-blue-50 scale-125"
+                      : "border-gray-300 bg-white scale-90"
+                  }`}
                 >
                   <div
-                    className="relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] animate-pulse"
-                    style={{ transform: `rotate(-${rotationAngle}deg)` }}
+                    className={`flex items-center justify-center transition-colors duration-300 ${
+                      isActive ? "text-blue-600" : "text-gray-700"
+                    }`}
                   >
-                    <img
-                      src={logo.icon}
-                      alt={`${logo.title} blockchain logo`}
-                      width={logo.width || 24}
-                      height={logo.height || 24}
-                      className="m-auto pointer-events-none select-none"
-                      onError={(e) => {
-                        e.target.style.display = 'none';
-                        console.warn('Failed to load blockchain logo:', logo.title, logo.icon);
-                      }}
-                    />
+                    <BlockchainIcon icon={slide.icon} name={slide.name} />
+                  </div>
+                </div>
+          </div>
             </div>
-                </li>
+          );
+        })}
+      </motion.div>
+    </div>
+  );
+};
+
+const AuditSlider = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const duplicatedSlides = [...auditSlides, ...auditSlides, ...auditSlides]; // Triple the slides for seamless loop
+  const containerRef = useRef(null);
+  const itemsRef = useRef([]);
+  
+  // Continuously check which item is closest to the center
+  useEffect(() => {
+    const checkActive = () => {
+      if (!containerRef.current) return;
+      const containerCenter =
+        containerRef.current.getBoundingClientRect().left +
+        containerRef.current.offsetWidth / 2;
+      let closestIndex = 0;
+      let closestDistance = Infinity;
+      itemsRef.current.forEach((el, i) => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        const itemCenter = rect.left + rect.width / 2;
+        const distance = Math.abs(containerCenter - itemCenter);
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          closestIndex = i % auditSlides.length;
+        }
+      });
+      setActiveIndex(closestIndex);
+      requestAnimationFrame(checkActive); // keep updating in sync with animation
+    };
+    requestAnimationFrame(checkActive);
+  }, []);
+ 
+  return (
+    <div
+      ref={containerRef}
+      className="relative h-full overflow-hidden py-12 mx-auto"
+    >
+      {/* Fade edges - transparent to match section background */}
+      <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-transparent before:to-transparent after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-transparent after:to-transparent"></div>
+      <motion.div
+        className="flex items-center justify-center"
+        animate={{
+          x: ["0%", "33.33%"],
+        }}
+        transition={{
+          ease: "linear",
+          duration: 15,
+          repeat: Infinity,
+        }}
+      >
+        {duplicatedSlides.map((slide, index) => {
+          const slideIndex = index % auditSlides.length;
+          const isActive = slideIndex === activeIndex;
+              return (
+            <div
+              key={index}
+              ref={(el) => (itemsRef.current[index] = el)}
+              className="flex-shrink-0 px-8"
+            >
+              <div className="flex items-center justify-center">
+                <div
+                  className={`w-20 h-20 rounded-full border-2 flex items-center justify-center transition-all duration-300 ease-in-out ${
+                    isActive
+                      ? "border-emerald-500 bg-emerald-50 scale-125"
+                      : "border-gray-300 bg-white scale-90"
+                  }`}
+                >
+                  <div
+                    className={`flex items-center justify-center transition-colors duration-300 ${
+                      isActive ? "text-emerald-600" : "text-gray-700"
+                    }`}
+                  >
+                    <BlockchainIcon icon={slide.icon} name={slide.name} />
+                  </div>
+                </div>
+              </div>
+            </div>
         );
       })}
-          </ul>
-        </div>
-
-      {/* Curved Lines (Same as CopymAI page) */}
-      {showConnectingLines && (
-        <>
-          {/* Left Curve - Show for both true and left-only */}
-          {(showConnectingLines === true || showConnectingLines === "left-only") && (
-            <div className="hidden absolute top-1/2 right-full w-[32.625rem] -mt-1 mr-4 pointer-events-none select-none xl:block">
-              <img 
-                src={curve1} 
-                width={522} 
-                height={182} 
-                alt="Decorative left curve" 
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  console.warn('Failed to load left curve');
-                }}
-              />
-            </div>
-          )}
-
-          {/* Right Curve - Only show for true, not for left-only */}
-          {showConnectingLines === true && (
-            <div className="hidden absolute top-1/2 left-full w-[10.125rem] -mt-8 ml-2 pointer-events-none select-none xl:block">
-              <img 
-                src={curve2} 
-                width={162} 
-                height={76} 
-                alt="Decorative right curve"
-                onError={(e) => {
-                  e.target.style.display = 'none';
-                  console.warn('Failed to load right curve');
-                }}
-              />
-            </div>
-          )}
-        </>
-      )}
+      </motion.div>
           </div>
         );
 };
@@ -220,32 +243,28 @@ export default function AuditSection() {
           </p>
         </div>
 
-          {/* Two Column Layout */}
-          <div className="grid lg:grid-cols-2 gap-6 items-center justify-items-center lg:justify-items-stretch">
-            {/* Left Grid - Blockchain Spiral */}
-            <div className="flex justify-center lg:justify-start mt-48">
-              <BlockchainSpiral 
-                containerSize="w-[20rem]"
-                scale="scale-75"
-                showConnectingLines="left-only"
-              />
+          {/* Blockchain Section */}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 anton-regular">
+              <span className="text-gray-900">BLOCKCHAIN</span>
+            </h3>
+          </div>
+
+          {/* Blockchain Slider */}
+          <div className="flex justify-center items-center">
+            <SliderDesign2 />
             </div>
 
-            {/* Right Grid - Blockchain Spiral */}
-            <div className="flex justify-center lg:justify-start mt-4">
-              <BlockchainSpiral 
-                containerSize="w-[22rem]"
-                scale="scale-75"
-                showConnectingLines={true}
-                blockchainLogos={[
-                  { id: "0", title: "H", icon: hIcon, width: 48, height: 48, angle: 0 },
-                  { id: "1", title: "IC", icon: icIcon, width: 48, height: 48, angle: 72 },
-                  { id: "2", title: "Z", icon: zIcon, width: 48, height: 48, angle: 144 },
-                  { id: "3", title: "Cervik", icon: cervikIcon, width: 48, height: 48, angle: 216 },
-                  { id: "4", title: "Audit0", icon: audit0Icon, width: 48, height: 48, angle: 288 }
-                ]}
-              />
+                    {/* Audit Section */}
+          <div className="text-center mb-12 mt-16">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 anton-regular">
+              <span className="text-emerald-600">AUDIT</span>
+            </h3>
             </div>
+
+          {/* Audit Slider */}
+          <div className="flex justify-center items-center">
+            <AuditSlider />
           </div>
 
         {/* Legend */}
