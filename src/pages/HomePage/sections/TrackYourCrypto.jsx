@@ -104,11 +104,7 @@ export default function TrackYourCrypto() {
               <div className="flex justify-center lg:justify-start">
                 <Link
                   to="/marketplace"
-<<<<<<< HEAD
                   className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-=======
-                  className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
->>>>>>> 15711c7a9b3ed14922be7354b735cf96a1324202
                 >
                   Explore Marketplace
                   <ArrowRight className="ml-2 h-5 w-5" />
