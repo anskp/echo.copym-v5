@@ -60,7 +60,7 @@ const AboutUs = () => {
             <section className="relative">
                 {/* Main Content */}
                 <div className="relative z-10 bg-gradient-to-br from-green-900 via-green-800 to-emerald-900 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 anton-regular uppercase">
                                 Company <span className="text-green-400">Overview</span>
@@ -608,7 +608,7 @@ const AboutUs = () => {
                             Technology & <span className="text-blue-600">Innovation</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
-                                </div>
+                    </div>
                     
                     <div className="grid lg:grid-cols-2 gap-16">
                         <div className="space-y-8">
@@ -698,6 +698,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     
                     <div className="space-y-8">
                         {/* Platform Integration */}
@@ -708,6 +709,20 @@ const AboutUs = () => {
                                 <div className="flex items-center justify-center">
                                     <div className="w-16 h-16 flex items-center justify-center">
                                         <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
+=======
+
+                    <div className="grid lg:grid-cols-2 gap-16">
+                        <div className="space-y-8">
+                            {/* Platform Integration */}
+                            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
+                                <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
+                                <div className="grid grid-cols-2 gap-6">
+                                    {/* Fireblocks */}
+                                    <div className="flex items-center justify-center">
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
+                                        </div>
+>>>>>>> 58528fc5852ea1cfdbcbbdf3e836c950b6950a67
                                     </div>
                                 </div>
                                 
