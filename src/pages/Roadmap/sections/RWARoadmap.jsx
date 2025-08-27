@@ -15,9 +15,9 @@ export default function RWARoadmap() {
       title: "Platform Registration",
       description: "Secure login and access to the tokenization platform",
       icon: LockIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 2,
@@ -25,9 +25,9 @@ export default function RWARoadmap() {
       title: "KYC/AML Verification",
       description: "Complete KYC/AML verification process",
       icon: VerifiedIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 3,
@@ -35,9 +35,9 @@ export default function RWARoadmap() {
       title: "Asset Tokenization", 
       description: "Convert real-world assets into digital tokens",
       icon: TokenIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 4,
@@ -45,9 +45,9 @@ export default function RWARoadmap() {
       title: "Network Selection",
       description: "Choose the optimal blockchain network",
       icon: LanguageIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 5,
@@ -55,9 +55,9 @@ export default function RWARoadmap() {
       title: "Token Standards",
       description: "Select appropriate token standards (ERC-20, ERC-721, etc.)",
       icon: AssignmentIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     },
     {
       id: 6,
@@ -65,16 +65,16 @@ export default function RWARoadmap() {
       title: "Marketplace Listing",
       description: "List tokens on the marketplace for trading",
       icon: TrendingUpIcon,
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
-      borderColor: "border-blue-200"
+      color: "from-emerald-500 to-emerald-600",
+      bgColor: "from-emerald-50 to-emerald-100",
+      borderColor: "border-emerald-200"
     }
   ];
 
   return (
     <div className="relative">
       {/* Timeline Line */}
-      <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-green-500 to-emerald-500"></div>
+      <div className="absolute left-4 sm:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-emerald-500 via-emerald-600 to-emerald-700"></div>
       
       <div className="space-y-6 sm:space-y-8">
         {roadmapData.map((item, index) => {
@@ -88,7 +88,7 @@ export default function RWARoadmap() {
               className="relative"
             >
               {/* Timeline Dot */}
-              <div className="absolute left-2 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 bg-white border-2 sm:border-4 border-blue-500 rounded-full shadow-lg z-10"></div>
+              <div className="absolute left-2 sm:left-6 w-3 h-3 sm:w-4 sm:h-4 bg-white border-2 sm:border-4 border-emerald-500 rounded-full shadow-lg z-10"></div>
               
               {/* Card */}
               <motion.div

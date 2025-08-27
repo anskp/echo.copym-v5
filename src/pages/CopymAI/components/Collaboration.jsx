@@ -7,16 +7,21 @@ import Section from "./Section";
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex">
-        <div className="max-w-[25rem]">
+      <div className="container lg:flex lg:gap-12">
+        <div className="lg:w-1/2">
           <h2 className="h2 mb-4 md:mb-8 text-black">
-            AI-Powered RWA Tokenization for Seamless
+            CORA: AI-Powered
+            <br />
             <span className="inline-block relative font-semibold">
-              Asset Management
+              Real-World Asset Tokenization
+            </span>
+            <br />
+            <span className="text-2xl font-medium text-gray-600">
+              Enterprise Asset Management Platform
             </span>
           </h2>
 
-          <ul className="max-w-[22rem] mb-10 md:mb-14">
+          <ul className="mb-10 md:mb-14">
             {collabContent.map((item) => (
               <li className="mb-3 py-3" key={item.id}>
                 <div className="flex items-center">
@@ -40,22 +45,20 @@ const Collaboration = () => {
           <Button>TOKENIZE NOW</Button>
         </div>
 
-        <div className="lg:ml-auto xl:w-[38rem] mt-4">
-          <p className="body-2 mb-4 text-black md:mb-16 lg:mb-32 lg:w-[32rem] lg:mx-auto">
+        <div className="lg:w-1/2 mt-4">
+          <p className="body-2 mb-4 text-black md:mb-16 lg:mb-32">
             {collabText}
           </p>
 
           <div className="relative left-1/2 flex w-[22rem] aspect-square border border-gray-300 rounded-full -translate-x-1/2 scale-75 md:scale-100">
             <div className="flex w-60 aspect-square m-auto border border-gray-300 rounded-full">
-              <div className="w-[6rem] aspect-square m-auto p-[0.2rem] bg-conic-gradient rounded-full">
-                <div className="flex items-center justify-center w-full h-full bg-gray-50 rounded-full">
-                  <img
-                    src={copymColoredIcon}
-                    width={48}
-                    height={48}
-                    alt="brainwave"
-                  />
-                </div>
+              <div className="flex items-center justify-center w-full h-full">
+                <img
+                  src={copymColoredIcon}
+                  width={64}
+                  height={64}
+                  alt="brainwave"
+                />
               </div>
             </div>
 
@@ -67,19 +70,19 @@ const Collaboration = () => {
                     i * 45
                   }`}
                 >
-                  <div
-                    className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] bg-gray-200 border border-gray-300 rounded-xl -rotate-${
-                      i * 45
-                    } animate-pulse`}
-                  >
-                    <img
-                      src={app.icon}
-                      alt={app.title}
-                      width={app.height}
-                      height={app.height}
-                      className="m-auto"
-                    />
-                  </div>
+                                     <div
+                     className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] -rotate-${
+                       i * 45
+                     } animate-pulse`}
+                   >
+                     <img
+                       src={app.icon}
+                       alt={app.title}
+                       width={app.height}
+                       height={app.height}
+                       className="m-auto"
+                     />
+                   </div>
                 </li>
               ))}
             </ul>

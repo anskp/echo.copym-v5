@@ -1,8 +1,36 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Apple, Play, Star, Download, QrCode, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
+import useGSAP from '../../../hooks/useGSAPAnimations';
 
 export default function TrackYourCrypto() {
+  const imageRef = useRef();
+  useGSAP(imageRef, () => {
+    gsap.fromTo(
+      imageRef.current,
+      { y: 250, opacity: 0, scale: 0.95, rotate: 2 },
+      {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        rotate: 0,
+        ease: 'power3.out',
+        duration: 1,
+        immediateRender: false,
+        scrollTrigger: {
+          trigger: imageRef.current,
+          start: 'top 90%',
+          end: 'top 40%',
+          scrub: 0.6,
+          once: false
+        }
+      }
+    );
+  });
+
   return (
     <section className="relative py-20">
       {/* Background Pattern */}
@@ -14,7 +42,7 @@ export default function TrackYourCrypto() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-32">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Phone Mockup */}
-          <div className="relative flex justify-center lg:justify-start">
+          <div ref={imageRef} className="relative flex justify-center lg:justify-start lg:ml-40">
             <div className="relative">
               {/* Hologram Background Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/30 via-blue-500/20 to-cyan-400/30 rounded-3xl blur-xl transform scale-110 -rotate-6"></div>
@@ -23,9 +51,9 @@ export default function TrackYourCrypto() {
               {/* Main Phone Mockup */}
               <div className="relative">
                 <img 
-                  src="/assets/Images/newmock1.png" 
+                  src="/assets/Images/mobile-ads.png" 
                   alt="Copym App Interface" 
-                  className="w-96 lg:w-[500px] xl:w-[600px] h-auto drop-shadow-2xl relative z-10"
+                  className="w-40 lg:w-56 xl:w-64 h-auto drop-shadow-2xl relative z-10"
                 />
                 {/* Download Badge */}
                 <div className="absolute -bottom-6 -right-6 bg-emerald-600 rounded-full p-4 shadow-xl hover:bg-emerald-700 transition-colors duration-300 z-20">
@@ -57,14 +85,14 @@ export default function TrackYourCrypto() {
               {/* Download Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <button className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  <Apple className="w-6 h-6" />
+                  <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-6 h-6" />
                   <div className="text-left">
                     <div className="text-xs text-gray-500">Download on the</div>
                     <div className="font-semibold">App Store</div>
                   </div>
                 </button>
                 <button className="bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 flex items-center justify-center space-x-3 px-8 py-4 rounded-2xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
-                  <Play className="w-6 h-6" />
+                  <img src="/assets/Images/android.png" alt="Android" className="w-6 h-6" />
                   <div className="text-left">
                     <div className="text-xs text-gray-500">Get it on</div>
                     <div className="font-semibold">Google Play</div>
@@ -76,7 +104,11 @@ export default function TrackYourCrypto() {
               <div className="flex justify-center lg:justify-start">
                 <Link
                   to="/marketplace"
+<<<<<<< HEAD
                   className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+=======
+                  className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+>>>>>>> 15711c7a9b3ed14922be7354b735cf96a1324202
                 >
                   Explore Marketplace
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -102,11 +134,11 @@ export default function TrackYourCrypto() {
             {/* Platform Availability */}
             <div className="flex items-center justify-center lg:justify-start space-x-8 text-sm text-gray-600">
               <div className="flex items-center space-x-2">
-                <Apple className="w-4 h-4" />
+                <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-4 h-4" />
                 <span>iOS</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Play className="w-4 h-4" />
+                <img src="/assets/Images/android.png" alt="Android" className="w-4 h-4" />
                 <span>Android</span>
               </div>
             </div>
