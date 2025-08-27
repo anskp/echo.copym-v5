@@ -611,8 +611,8 @@ const AboutUs = () => {
                     </div>
                     
                     <div className="grid lg:grid-cols-2 gap-16">
+                        {/* Left Column - Technology Integration */}
                         <div className="space-y-8">
-                            {/* Technology Integration */}
                             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
                                 <h3 className="text-2xl font-bold text-blue-600 mb-6 anton-regular">Technology Integration</h3>
                                 <div className="grid grid-cols-3 gap-6">
@@ -697,11 +697,9 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div className="grid lg:grid-cols-2 gap-16">
+                        {/* Right Column - Platform Integration */}
                         <div className="space-y-8">
-                            {/* Platform Integration */}
                             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
                                 <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
                                 <div className="grid grid-cols-2 gap-6">
