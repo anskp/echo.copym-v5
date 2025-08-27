@@ -6,8 +6,10 @@ const CTA = () => {
     <Section className="bg-gradient-to-r from-color-1 to-color-4">
       <div className="container text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="h2 mb-6 text-white">
-            Ready to Transform Your RWA Tokenization?
+          <h2 className="h2 mb-6 text-white anton-regular">
+            <span className="text-white">Ready to Transform Your </span>
+            <span className="text-emerald-400">RWA Tokenization</span>
+            <span className="text-white">?</span>
           </h2>
           <p className="body-1 mb-8 text-white/90">
             Join leading financial institutions and start leveraging AI-powered RWA tokenization today. 

@@ -1,10 +1,10 @@
 import React from 'react';
-import { Wallet, TrendingUp, BarChart3, Zap, ArrowRight } from 'lucide-react';
+import { Shield, Lock, FileCheck, AlertCircle, ArrowRight } from 'lucide-react';
 
 const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
   return (
     <div className="text-center">
-      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-4 mx-auto`}>
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center mb-4 mx-auto">
         <Icon className="w-6 h-6 text-white" />
       </div>
       <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
@@ -33,28 +33,28 @@ export default function CurvedSectionDivider() {
           {/* Feature Cards Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <FeatureCard
-              icon={Wallet}
+              icon={Shield}
               title="Own a Piece of Big Investments"
               description="Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about."
               ctaText="Start Investing"
               color="from-pink-500 to-teal-500"
             />
             <FeatureCard
-              icon={TrendingUp}
+              icon={Lock}
               title="Earn Without the Hassle"
               description="Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management."
               ctaText="View Returns"
               color="from-yellow-500 to-green-500"
             />
             <FeatureCard
-              icon={BarChart3}
+              icon={FileCheck}
               title="Explore a World of Assets"
               description="From property and gold to private equity and art—our AI picks out smart opportunities so you don't have to dig through endless research."
               ctaText="Explore Assets"
               color="from-pink-500 via-blue-500 to-green-500"
             />
             <FeatureCard
-              icon={Zap}
+              icon={AlertCircle}
               title="Trade Anytime, Anywhere"
               description="Want out? Sell instantly. Want in? Buy in seconds. With your built-in wallet, you can manage and trade smoothly—just like sending money to a friend."
               ctaText="Trade Now"

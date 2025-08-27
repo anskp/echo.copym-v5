@@ -33,7 +33,12 @@ const Testimonials = () => {
     <Section id="testimonials">
       <div className="container">
         <Heading
-          title="Trusted by Industry Leaders"
+          title={
+            <>
+              <span className="text-gray-900">Trusted by </span>
+              <span className="text-emerald-600">Industry Leaders</span>
+            </>
+          }
           text="See what leading financial institutions say about COPYM-AI"
         />
         
