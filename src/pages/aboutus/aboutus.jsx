@@ -697,22 +697,6 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div>
-<<<<<<< HEAD
-=======
-                    </div>
-<<<<<<< HEAD
-                    
-                    <div className="space-y-8">
-                        {/* Platform Integration */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
-                            <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
-                            <div className="grid grid-cols-2 gap-6">
-                                {/* Fireblocks */}
-                                <div className="flex items-center justify-center">
-                                    <div className="w-16 h-16 flex items-center justify-center">
-                                        <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
-=======
->>>>>>> 8080f69955da152f78fda0f9608d3774ee720f03
 
                         {/* Right Column - Platform Integration */}
                         <div className="space-y-8">
@@ -724,7 +708,6 @@ const AboutUs = () => {
                                         <div className="w-16 h-16 flex items-center justify-center">
                                             <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
                                         </div>
->>>>>>> 58528fc5852ea1cfdbcbbdf3e836c950b6950a67
                                     </div>
                                 </div>
                                 

@@ -481,15 +481,15 @@ export default function AccessPage() {
             </div>
 
             {/* Mobile: Credential Card */}
-            <div className="flex justify-center py-6 px-4">
-              <div className="text-center w-full max-w-xs mx-auto">
-                 <h3 className="text-lg font-black text-center text-gray-900 mb-2 uppercase anton-regular">
+            <div className="flex justify-start py-6 px-4 -ml-2">
+              <div className="text-left w-full max-w-xs">
+                 <h3 className="text-lg font-black text-left text-gray-900 mb-2 uppercase anton-regular">
                   Your Access Credential
                 </h3>
-                 <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
+                 <p className="text-gray-700 text-left text-xs mb-6 max-w-xs">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                 </p>
-                                   <div className="flex justify-center w-full mt-6">
+                                   <div className="flex justify-start w-full mt-6">
                    <div className="w-full max-w-[280px] sm:max-w-[320px]">
                      <CredentialCard
                        user={{
@@ -595,16 +595,16 @@ export default function AccessPage() {
                ))}
              </div>
 
-             {/* Center Grid - Credential Card */}
-             <div className="flex justify-center">
-               <div className="text-center">
-                  <h3 className="text-xl font-black text-center text-gray-900 mb-2 uppercase anton-regular">
+                           {/* Center Grid - Credential Card */}
+              <div className="flex justify-start -ml-4">
+                <div className="text-left">
+                  <h3 className="text-xl font-black text-left text-gray-900 mb-2 uppercase anton-regular">
                    Your Access Credential
                  </h3>
-                                     <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
+                                     <p className="text-gray-700 text-left text-sm mb-8 max-w-xs">
                     Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                   </p>
-                   <div className="flex justify-center">
+                   <div className="flex justify-start">
                      <div className="w-full max-w-[320px] lg:max-w-[350px]">
                                        <CredentialCard
                         user={{
