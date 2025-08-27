@@ -63,13 +63,8 @@ const AboutUs = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                             <h2 className="text-4xl sm:text-5xl font-black text-white mb-6 anton-regular uppercase">
-<<<<<<< HEAD
                                 Company <span className="text-green-400">Overview</span>
-                        </h2>
-=======
-                                <span className="text-green-400">Overview</span>
                             </h2>
->>>>>>> 15711c7a9b3ed14922be7354b735cf96a1324202
                             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
                 </div>
 
@@ -619,11 +614,6 @@ const AboutUs = () => {
                         <div className="space-y-8">
                             {/* Technology Integration */}
                             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
-<<<<<<< HEAD
-                                <h3 className="text-2xl font-bold text-blue-600 mb-6 anton-regular">Technology Stack</h3>
-                                <div className="h-64 flex items-center justify-center text-gray-500">
-                                    [Technology Stack - Step 2]
-=======
                                 <h3 className="text-2xl font-bold text-blue-600 mb-6 anton-regular">Technology Integration</h3>
                                 <div className="grid grid-cols-3 gap-6">
                                     {/* Solana */}
@@ -705,42 +695,40 @@ const AboutUs = () => {
                                         </div>
                                     </div>
                                 </div>
->>>>>>> 15711c7a9b3ed14922be7354b735cf96a1324202
                             </div>
                         </div>
                     </div>
-
-                        <div className="space-y-8">
-                            {/* Platform Integration */}
-                            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
-                                <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
-                                <div className="grid grid-cols-2 gap-6">
-                                    {/* Fireblocks */}
-                                    <div className="flex items-center justify-center">
-                                        <div className="w-16 h-16 flex items-center justify-center">
-                                            <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
-                                        </div>
+                    
+                    <div className="space-y-8">
+                        {/* Platform Integration */}
+                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/60">
+                            <h3 className="text-2xl font-bold text-green-600 mb-6 anton-regular">Platform Integration</h3>
+                            <div className="grid grid-cols-2 gap-6">
+                                {/* Fireblocks */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/Fireblocks.svg" alt="Fireblocks" className="w-full h-full" />
                                     </div>
-                                    
-                                    {/* Crossmint */}
-                                    <div className="flex items-center justify-center">
-                                        <div className="w-16 h-16 flex items-center justify-center">
-                                            <img src="/assets/svg/Crossmint_idPetUnPey_0.png" alt="Crossmint" className="w-full h-full" />
-                                        </div>
+                                </div>
+                                
+                                {/* Crossmint */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/Crossmint_idPetUnPey_0.png" alt="Crossmint" className="w-full h-full" />
                                     </div>
-                                    
-                                    {/* Imperial PFS */}
-                                    <div className="flex items-center justify-center">
-                                        <div className="w-16 h-16 flex items-center justify-center">
-                                            <img src="/assets/svg/Imperial PFS_id6TGACQIO_1.png" alt="Imperial PFS" className="w-full h-full" />
-                                        </div>
+                                </div>
+                                
+                                {/* Imperial PFS */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/Imperial PFS_id6TGACQIO_1.png" alt="Imperial PFS" className="w-full h-full" />
                                     </div>
-                                    
-                                    {/* Sumsub */}
-                                    <div className="flex items-center justify-center">
-                                        <div className="w-16 h-16 flex items-center justify-center">
-                                            <img src="/assets/svg/sumsub.png" alt="Sumsub" className="w-full h-full" />
-                                        </div>
+                                </div>
+                                
+                                {/* Sumsub */}
+                                <div className="flex items-center justify-center">
+                                    <div className="w-16 h-16 flex items-center justify-center">
+                                        <img src="/assets/svg/sumsub.png" alt="Sumsub" className="w-full h-full" />
                                     </div>
                                 </div>
                             </div>
