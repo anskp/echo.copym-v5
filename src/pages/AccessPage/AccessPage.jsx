@@ -490,8 +490,8 @@ export default function AccessPage() {
                  <p className="text-gray-700 text-center text-xs mb-6 max-w-xs mx-auto">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                 </p>
-                 <div className="flex justify-end w-[380px] mt-12">
-                  <div className="w-full max-w-[350px]">
+                 <div className="flex justify-center w-full mt-6">
+                  <div className="w-full max-w-[280px] sm:max-w-[320px]">
                                          <CredentialCard
                        user={{
                          name: "Alex Morgan",
@@ -598,27 +598,31 @@ export default function AccessPage() {
 
              {/* Center Grid - Credential Card */}
              <div className="flex justify-center">
-               <div className="">
+               <div className="text-center">
                   <h3 className="text-xl font-black text-center text-gray-900 mb-2 uppercase anton-regular">
                    Your Access Credential
                  </h3>
                   <p className="text-gray-700 m-auto text-center text-sm mb-8 max-w-xs">
                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                  </p>
-                                   <CredentialCard
-                    user={{
-                      name: "Alex Morgan",
-                      employeeNumber: "C-2028",
-                      passNumber: "56",
-                      points: "1,250",
-                      qrImage: "/assets/svg/copym_qr.svg",
-                    }}
-                    variant="bottleGreen"
-                    stacked
-                    backVariant="darkBlue"
-                    logoSrc="/assets/copym/png/Copym-05-1.png"
-                    logoSize={28}
-                  />
+                  <div className="flex justify-center">
+                    <div className="w-full max-w-[320px] lg:max-w-[350px]">
+                                      <CredentialCard
+                       user={{
+                         name: "Alex Morgan",
+                         employeeNumber: "C-2028",
+                         passNumber: "56",
+                         points: "1,250",
+                         qrImage: "/assets/svg/copym_qr.svg",
+                       }}
+                       variant="bottleGreen"
+                       stacked
+                       backVariant="darkBlue"
+                       logoSrc="/assets/copym/png/Copym-05-1.png"
+                       logoSize={28}
+                     />
+                    </div>
+                  </div>
                </div>
              </div>
 
@@ -737,6 +741,7 @@ export default function AccessPage() {
                 TRADITIONAL
               </div>
             </div>
+            
 
             {[
               {
