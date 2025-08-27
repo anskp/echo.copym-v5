@@ -6,11 +6,7 @@ import {
   Phone,
   MapPin,
   Clock,
-  Send,
-  CheckCircle,
-  AlertCircle,
   Building2,
-  HeadphonesIcon,
   MessageSquare,
   Users,
   Shield,
@@ -25,10 +21,8 @@ import {
   MessageCircle,
   ExternalLink,
   Download,
-  Star,
   Scale,
   Lock,
-  Award,
   X
 } from 'lucide-react';
 
@@ -191,8 +185,6 @@ const Contact = () => {
     }
   };
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
@@ -266,16 +258,15 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-blue-100 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <svg className="w-full h-full" viewBox="0 0 1000 1000" fill="none">
-          <path d="M100 100C200 200 300 50 400 150C500 250 600 100 700 200C800 300 900 150 1000 250" stroke="currentColor" strokeWidth="2" fill="none" className="text-black" />
-          <path d="M0 300C100 400 200 250 300 350C400 450 500 300 600 400C700 500 800 350 900 450" stroke="currentColor" strokeWidth="2" fill="none" className="text-black" />
-        </svg>
+    <div className="min-h-screen relative overflow-hidden bg-blue-100">
+      {/* Background Pattern - Same as AccessPage */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      {/* Gradient Orbs - Removed for consistent background */}
+      {/* Enhanced Floating Elements with GSAP - Same as AccessPage */}
+      <div className="floating-bg-1 absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
+      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-emerald-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
 
       {/* Live Chat Widget - Mobile Responsive */}
       <motion.div 
@@ -300,8 +291,8 @@ const Contact = () => {
           >
             <div className="p-3 sm:p-4 border-b flex justify-between items-center">
               <div>
-                <h3 className="font-semibold text-[#1e40af] text-sm sm:text-base">Live Chat</h3>
-                <p className="text-xs sm:text-sm text-black">We're online and ready to help!</p>
+                <h3 className="font-semibold text-gray-900 text-sm sm:text-base">Live Chat</h3>
+                <p className="text-sm text-black">We're online and ready to help!</p>
               </div>
               <button
                 onClick={() => setShowLiveChat(false)}
@@ -311,8 +302,8 @@ const Contact = () => {
               </button>
             </div>
             <div className="p-3 sm:p-4">
-              <p className="text-xs sm:text-sm text-black mb-3">Start a conversation with our support team.</p>
-              <button className="btn-gradient w-full py-2 px-4 text-xs sm:text-sm font-medium text-black transition-colors">
+              <p className="text-sm text-black mb-3">Start a conversation with our support team.</p>
+              <button className="w-full py-2 px-4 text-sm font-medium bg-gradient-to-r from-emerald-500 to-blue-500 text-white rounded-lg hover:from-emerald-600 hover:to-blue-600 transition-all duration-200">
                 Start Chat
               </button>
             </div>
@@ -321,70 +312,21 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-4 sm:pt-8 pb-8 sm:pb-16"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
-                 {/* Header - Enhanced Mobile Responsiveness */}
-         <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
-           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-[#1e40af] font-bold px-2">
-             Let's <span className="text-[#065f46]">Connect</span>
-           </h1>
-           <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
-             Connect with our team for investor onboarding, asset tokenization,
-             legal compliance, or technical integration.
-           </p>
-         </motion.div>
-
-        {/* Quick Contact Cards - Smart 3-Column Layout */}
-        {/* <motion.div className="grid gap-3 sm:gap-4 lg:gap-6 grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 mb-8 sm:mb-12" variants={itemVariants}>
-          {contactTypes.map((type) => (
-            <motion.div
-              key={type.value}
-              className="bg-white/80 backdrop-blur-sm rounded-lg border border-gray-200 hover:border-[#065f46] hover:shadow-md transition-all cursor-pointer hover:-translate-y-1 active:scale-95 touch-manipulation"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              onClick={() => handleQuickContact(type.value)}
-            >
-              <div className="p-2 sm:p-4 lg:p-6 text-center">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-full flex items-center justify-center mx-auto mb-2 sm:mb-3 lg:mb-4">
-                  <type.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                </div>
-                <h3 className="font-semibold text-[#1e40af] mb-1 sm:mb-2 text-xs sm:text-sm lg:text-base leading-tight">{type.label}</h3>
-                <p className="text-xs text-black leading-tight">Secure email for qualified parties</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
-        {/* Form Type Toggle */}
-        {/* <motion.div className="flex justify-center mb-6 sm:mb-8" variants={itemVariants}>
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-2">
-            <div className="flex">
-              <button
-                onClick={() => setShowTypeform(false)}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                  !showTypeform 
-                    ? 'bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white shadow-md' 
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
-                }`}
-              >
-                Standard Form
-              </button>
-              <button
-                onClick={() => setShowTypeform(true)}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-200 ${
-                  showTypeform 
-                    ? 'bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white shadow-md' 
-                    : 'text-gray-600 hover:text-gray-800 hover:bg-gray-50'
-                }`}
-              >
-                Interactive Typeform
-              </button>
-            </div>
-          </div>
-        </motion.div> */}
+        {/* Header - Enhanced Mobile Responsiveness */}
+        <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-gray-900 font-black tracking-tight uppercase anton-regular">
+            Let's <span className="text-emerald-600">Connect</span>
+          </h1>
+          <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
+            Connect with our team for investor onboarding, asset tokenization,
+            legal compliance, or technical integration.
+          </p>
+        </motion.div>
 
         {/* Main Content Grid - Fixed Responsive Layout */}
         <div className="grid lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-12">
@@ -394,97 +336,114 @@ const Contact = () => {
           </motion.div>
         </div>
 
-                 {/* Horizontal Sidebar Sections */}
-         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+        {/* Horizontal Sidebar Sections */}
+        <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Contact Information - Single Consolidated Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
-              <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Contact Information</h3>
-              <div className="space-y-4">
-                {contactInfo.map((info, idx) => (
-                  <div key={idx} className="flex items-start space-x-3">
-                    <div className="w-8 h-8 bg-gradient-to-br from-[#1e40af] to-[#065f46] rounded-full flex items-center justify-center flex-shrink-0">
-                      <info.icon className="w-4 h-4 text-white" />
+            <div className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-4 sm:p-6 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50">
+              {/* Background gradient overlay - Same as AccessPage */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              
+              <div className="relative z-10">
+                <h3 className="font-black text-base sm:text-lg mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">Contact Information</h3>
+                <div className="space-y-4">
+                  {contactInfo.map((info, idx) => (
+                    <div key={idx} className="flex items-start space-x-3">
+                      <div className="w-8 h-8 bg-gradient-to-br from-emerald-500 to-blue-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <info.icon className="w-4 h-4 text-white" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-medium text-gray-900 text-sm">{info.title}</h4>
+                        {info.details.map((d, i) => (
+                          <p key={i} className="text-gray-700 text-sm mb-1 break-words">{d}</p>
+                        ))}
+                        <p className="text-gray-500 text-sm mt-1">{info.description}</p>
+                        {info.action && (
+                          <a
+                            href={info.action}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-emerald-600 text-sm mt-1 hover:underline"
+                          >
+                            <ExternalLink className="w-4 h-4 mr-1" />
+                            {info.action.includes('mailto') ? 'Email Us' : info.action.includes('tel') ? 'Call' : 'View Map'}
+                          </a>
+                        )}
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-medium text-[#1e40af] text-sm">{info.title}</h4>
-                      {info.details.map((d, i) => (
-                        <p key={i} className="text-black text-xs mb-1 break-words">{d}</p>
-                      ))}
-                      <p className="text-gray-500 text-xs mt-1">{info.description}</p>
-                      {info.action && (
-                        <a
-                          href={info.action}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-[#065f46] text-xs mt-1 hover:underline"
-                        >
-                          <ExternalLink className="w-3 h-3 mr-1" />
-                          {info.action.includes('mailto') ? 'Email Us' : info.action.includes('tel') ? 'Call' : 'View Map'}
-                        </a>
-                      )}
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
+                
+                {/* Bottom accent line - Same as AccessPage */}
+                <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
               </div>
             </div>
               
             {/* Social Media & Resources - Combined Card */}
-            <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 p-4 sm:p-6">
-              <h3 className="font-semibold text-[#1e40af] mb-4 text-base sm:text-lg">Connect & Resources</h3>
+            <div className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-4 sm:p-6 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50">
+              {/* Background gradient overlay - Same as AccessPage */}
+              <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
-              {/* Social Media */}
-              <div className="mb-6">
-                <h4 className="font-medium text-gray-700 mb-3 text-sm">Follow Us</h4>
-                <div className="flex flex-wrap gap-2">
-                  {socialMedia.map((social, index) => (
-                    <a
-                      key={index}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={`w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center transition-colors ${social.color} touch-manipulation`}
-                      aria-label={`Follow us on ${social.name}`}
-                    >
-                      <social.icon className="w-4 h-4 text-black" />
-                    </a>
-                  ))}
+              <div className="relative z-10">
+                <h3 className="font-black text-base sm:text-lg mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">Connect & Resources</h3>
+                
+                {/* Social Media */}
+                <div className="mb-6">
+                  <h4 className="font-medium text-gray-700 mb-3 text-sm">Follow Us</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {socialMedia.map((social, index) => (
+                      <a
+                        key={index}
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center transition-colors ${social.color} touch-manipulation`}
+                        aria-label={`Follow us on ${social.name}`}
+                      >
+                        <social.icon className="w-4 h-4 text-gray-700" />
+                      </a>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              {/* Resources */}
-              <div>
-                <h4 className="font-medium text-gray-700 mb-3 text-sm">Resources</h4>
-                <div className="space-y-2">
-                  {resources.map((r, i) => (
-                    <a
-                      key={i}
-                      href={r.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors touch-manipulation"
-                    >
-                      <r.icon className="w-4 h-4 text-[#065f46] flex-shrink-0" />
-                      <span className="text-gray-700 text-xs">{r.name}</span>
-                    </a>
-                  ))}
+                {/* Resources */}
+                <div>
+                  <h4 className="font-medium text-gray-700 mb-3 text-sm">Resources</h4>
+                  <div className="space-y-2">
+                    {resources.map((r, i) => (
+                      <a
+                        key={i}
+                        href={r.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors touch-manipulation"
+                      >
+                        <r.icon className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                        <span className="text-gray-700 text-sm">{r.name}</span>
+                      </a>
+                    ))}
+                  </div>
                 </div>
+                
+                {/* Bottom accent line - Same as AccessPage */}
+                <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
               </div>
             </div>
-
-
           </div>
         </motion.div>
 
         {/* Map Section - Optimized layout */}
         <motion.div className="mt-12 sm:mt-16" variants={itemVariants}>
           <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1e40af] mb-3 sm:mb-4">Find Us</h2>
-            <p className="text-black text-sm sm:text-base">Visit our office or get in touch</p>
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-black text-gray-900 mb-3 sm:mb-4 uppercase anton-regular">Find Us</h2>
+            <p className="text-gray-700 text-sm sm:text-base">Visit our office or get in touch</p>
           </div>
           
-          <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-            <div className="aspect-w-16 aspect-h-9 h-64 sm:h-80 lg:h-96">
+          <div className="group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50">
+            {/* Background gradient overlay - Same as AccessPage */}
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <div className="relative z-10 aspect-w-16 aspect-h-9 h-64 sm:h-80 lg:h-96">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.886539!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sWhitefield%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"
@@ -495,11 +454,12 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Copym Office Location - Bangalore"
               ></iframe>
-      </div>
+            </div>
+            
+            {/* Bottom accent line - Same as AccessPage */}
+            <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 absolute bottom-0 left-0"></div>
           </div>
         </motion.div>
-
-
       </motion.div>
     </div>
   );
