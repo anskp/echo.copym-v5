@@ -85,13 +85,7 @@ export default function Header() {
         image: "/assets/Images/navbar/5.png",
         iconBg: "icon-about"
       },
-      {
-        title: "Roadmap",
-        description: "Discover our future plans and upcoming features and developments.",
-        path: "/roadmap",
-        image: "/assets/Images/navbar/6.png",
-        iconBg: "icon-roadmap"
-      },
+
       {
         title: "Contact Us",
         description: "Get in touch with our team for support and business inquiries.",

@@ -135,17 +135,7 @@ export const AboutUsIcon = ({ className = "" }) => (
   </svg>
 );
 
-export const RoadmapIcon = ({ className = "" }) => (
-  <svg viewBox="0 0 80 80" className={className}>
-    <path d="M15 40 L25 30 L35 35 L45 25 L55 30 L65 20 L75 25" stroke="currentColor" strokeWidth="3" fill="none" className="text-icon-purple" />
-    <circle cx="25" cy="30" r="4" fill="currentColor" className="text-icon-green" />
-    <circle cx="35" cy="35" r="4" fill="currentColor" className="text-icon-green" />
-    <circle cx="45" cy="25" r="4" fill="currentColor" className="text-icon-purple" />
-    <circle cx="55" cy="30" r="4" fill="currentColor" className="text-icon-gray" />
-    <circle cx="65" cy="20" r="4" fill="currentColor" className="text-icon-gray" />
-    <circle cx="75" cy="25" r="4" fill="currentColor" className="text-icon-gray" />
-  </svg>
-);
+
 
 export const ContactIcon = ({ className = "" }) => (
   <svg viewBox="0 0 80 80" className={className}>

@@ -16,7 +16,7 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 sm:pt-8 lg:pt-8 pb-4 sm:pb-6 lg:pb-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
         {/* AI-Powered Badge - Top of Content */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
