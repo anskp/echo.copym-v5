@@ -312,16 +312,16 @@ const Contact = () => {
       </motion.div>
 
       <motion.div
-        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-24 lg:py-32"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
       >
         {/* Header - Enhanced Mobile Responsiveness */}
         <motion.div className="text-center mb-8 sm:mb-12 lg:mb-16" variants={itemVariants}>
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-gray-900 font-black tracking-tight uppercase anton-regular">
-            Let's <span className="text-emerald-600">Connect</span>
-          </h1>
+                     <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight mb-3 sm:mb-4 lg:mb-6 text-black font-black tracking-tight uppercase anton-regular">
+             Let's <span className="text-blue-600">Connect</span>
+           </h1>
           <p className="text-sm sm:text-base lg:text-xl max-w-2xl sm:max-w-3xl mx-auto text-gray-700 px-4">
             Connect with our team for investor onboarding, asset tokenization,
             legal compliance, or technical integration.
