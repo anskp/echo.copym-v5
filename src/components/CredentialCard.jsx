@@ -88,10 +88,17 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
     display: 'grid',
     gridTemplateColumns: cardWidth <= 320 ? '1fr 100px' : '1fr 140px',
     gap: cardWidth <= 320 ? 16 : 20,
-    alignItems: 'center',
+    alignItems: 'start',
   };
 
-  const personRowStyle = { display: 'flex', alignItems: 'center', gap: 12, marginBottom: 12 };
+  const personRowStyle = { 
+    display: 'flex', 
+    alignItems: 'flex-start', 
+    gap: 12, 
+    marginBottom: 16,
+    alignSelf: 'flex-start'
+  };
+  
   const avatarStyle = {
     width: cardWidth <= 320 ? 36 : 44,
     height: cardWidth <= 320 ? 36 : 44,
@@ -102,11 +109,25 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
     alignItems: 'center',
     justifyContent: 'center',
     fontWeight: 800,
-    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.08)'
+    boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.8), 0 2px 8px rgba(0,0,0,0.08)',
+    flexShrink: 0
   };
 
-  const labelStyle = { color: '#6b7280', fontSize: cardWidth <= 320 ? 11 : 12, fontWeight: 500, marginBottom: 4 };
-  const valueStyle = { color: '#111827', fontSize: cardWidth <= 320 ? 14 : 16, fontWeight: 600, letterSpacing: 0.2 };
+  const labelStyle = { 
+    color: '#6b7280', 
+    fontSize: cardWidth <= 320 ? 11 : 12, 
+    fontWeight: 500, 
+    marginBottom: 6,
+    lineHeight: 1.2
+  };
+  
+  const valueStyle = { 
+    color: '#111827', 
+    fontSize: cardWidth <= 320 ? 14 : 16, 
+    fontWeight: 600, 
+    letterSpacing: 0.2,
+    lineHeight: 1.3
+  };
 
   const qrPanelStyle = {
     background: '#ffffff',
@@ -115,16 +136,8 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
     boxShadow: '0 10px 24px rgba(0,64,32,0.12), inset 0 1px 0 rgba(255,255,255,0.8)',
     border: '1px solid #e6f4ee',
     textAlign: 'center',
-  };
-
-  const footerStyle = {
-    background: '#f9fafb',
-    borderTop: '1px solid #eef2f7',
-    padding: cardWidth <= 320 ? '10px 16px' : '12px 20px',
-    fontSize: cardWidth <= 320 ? 11 : 12,
-    color: '#6b7280',
-    display: 'flex',
-    justifyContent: 'space-between',
+    alignSelf: 'center',
+    marginTop: cardWidth <= 320 ? 8 : 12
   };
 
   // Stacked presentation: render a back card and the main card with subtle rotation/offset
@@ -167,32 +180,41 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
       </div>
 
       <div style={bodyStyle}>
-        <div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+          {/* Name Section */}
           <div style={personRowStyle}>
             <div style={avatarStyle}>{getInitials(user.name)}</div>
-            <div>
+            <div style={{ flex: 1, minWidth: 0 }}>
               <div style={labelStyle}>Name</div>
               <div style={valueStyle}>{user.name}</div>
             </div>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 14 }}>
+          {/* IDs Section - Better aligned grid */}
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: '1fr 1fr', 
+            gap: 16,
+            alignItems: 'start'
+          }}>
             <div>
-              <div style={labelStyle}>Employee No.</div>
+              <div style={labelStyle}>Customer ID</div>
               <div style={valueStyle}>{user.employeeNumber}</div>
             </div>
             <div>
-              <div style={labelStyle}>Pass No.</div>
+              <div style={labelStyle}>Blockchain No</div>
               <div style={valueStyle}>{user.passNumber}</div>
             </div>
           </div>
 
-          <div style={{ marginTop: 14 }}>
+          {/* Points Section */}
+          <div>
             <div style={labelStyle}>Points</div>
             <div style={valueStyle}>{user.points}</div>
           </div>
         </div>
 
+        {/* QR Code Panel - Better positioned */}
         <div style={qrPanelStyle}>
           {user.qrImage ? (
             <img
@@ -214,13 +236,13 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
               color: '#9ca3af' 
             }}>QR</div>
           )}
-          <div style={{ marginTop: 8, fontSize: cardWidth <= 320 ? 10 : 11, color: '#6b7280' }}>Scan to verify</div>
+          <div style={{ 
+            marginTop: 8, 
+            fontSize: cardWidth <= 320 ? 10 : 11, 
+            color: '#6b7280',
+            lineHeight: 1.2
+          }}>Scan to verify</div>
         </div>
-      </div>
-
-      <div style={footerStyle}>
-        <div>ID: {user.employeeNumber}</div>
-        <div>Pass: {user.passNumber}</div>
       </div>
     </div>
   );

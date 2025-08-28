@@ -2,33 +2,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Users, BarChart3, Shield, MessageSquare } from 'lucide-react';
+import { ArrowRight, Shield, Lock, FileCheck, AlertCircle } from 'lucide-react';
 
 export default function InvestorManagement() {
   const features = [
     {
-      icon: Users,
+      icon: Shield,
       title: "Investor Dashboard",
       description: "Comprehensive dashboard for tracking investments, returns, and portfolio performance.",
       color: "from-pink-500 to-teal-500",
       stats: "10K+ Active"
     },
     {
-      icon: BarChart3,
+      icon: Lock,
       title: "Portfolio Analytics",
       description: "Advanced analytics and reporting tools for investment performance tracking.",
       color: "from-yellow-500 to-green-500",
       stats: "Real-time"
     },
     {
-      icon: Shield,
+      icon: FileCheck,
       title: "Compliance Management",
       description: "Automated compliance monitoring and regulatory reporting for all investors.",
       color: "from-pink-500 via-blue-500 to-green-500",
       stats: "100% Compliant"
     },
     {
-      icon: MessageSquare,
+      icon: AlertCircle,
       title: "Communication Hub",
       description: "Integrated communication tools for investor updates and announcements.",
       color: "from-orange-500 to-red-500",
@@ -73,8 +73,8 @@ export default function InvestorManagement() {
                 className="text-center group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg"
               >
               {/* Icon */}
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}>
-                <feature.icon className="w-8 h-8 text-white" />
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <feature.icon className="w-8 h-8 text-emerald-600" />
               </div>
 
               {/* Content */}

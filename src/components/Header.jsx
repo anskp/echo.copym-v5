@@ -70,7 +70,7 @@ export default function Header() {
         iconBg: "icon-accesspass"
       },
       {
-        title: "Copy AI",
+        title: "CORA AI",
         description: "Advanced AI-powered content generation and automation tools.",
         path: "/copym-ai",
         image: "/assets/Images/navbar/4.png",
@@ -183,7 +183,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
               <img
-                src={isCopymAIPage ? "/assets/copym/png/Copym-02-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
+                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
                 alt="COPYM"
                 className="h-16 w-auto object-contain sm:h-18 md:h-20"
               />
