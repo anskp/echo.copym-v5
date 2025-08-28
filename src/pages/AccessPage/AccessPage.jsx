@@ -29,6 +29,7 @@ import {
   DollarSign
 } from 'lucide-react';
 import CredentialCard from '../../components/CredentialCard';
+import { LavaLamp } from '../../components/ui/fluid-blob';
 
 // Import blockchain logos
 import EthereumLogo from '/assets/blockchains/ethereum-eth-logo.svg';
@@ -90,29 +91,6 @@ export default function AccessPage() {
       gsap.registerPlugin(ScrollTrigger);
     }
 
-    // Parallax background elements
-    gsap.to('.floating-bg-1', {
-      yPercent: -50,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: pageRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1
-      }
-    });
-
-    gsap.to('.floating-bg-2', {
-      yPercent: 30,
-      ease: 'none',
-      scrollTrigger: {
-        trigger: pageRef.current,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1.5
-      }
-    });
-
     // Hero section animations
     gsap.fromTo(heroRef.current,
       { opacity: 0, y: 100 },
@@ -129,8 +107,6 @@ export default function AccessPage() {
         }
       }
     );
-
-
 
     // Benefits cards stagger animation
     gsap.fromTo('.benefit-card',
@@ -272,49 +248,6 @@ export default function AccessPage() {
       }
     );
 
-    // Smooth scroll to sections
-    const smoothScrollTo = (target) => {
-      gsap.to(window, {
-        duration: 1.5,
-        scrollTo: { y: target, offsetY: 100 },
-        ease: 'power2.inOut'
-      });
-    };
-
-    // Add click handlers for smooth scrolling
-    document.querySelectorAll('[data-scroll-to]').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const target = document.querySelector(button.getAttribute('data-scroll-to'));
-        if (target) smoothScrollTo(target);
-      });
-    });
-
-    // Magnetic effect for buttons
-    document.querySelectorAll('.magnetic-button').forEach(button => {
-      button.addEventListener('mousemove', (e) => {
-        const rect = button.getBoundingClientRect();
-        const x = e.clientX - rect.left - rect.width / 2;
-        const y = e.clientY - rect.top - rect.height / 2;
-
-        gsap.to(button, {
-          x: x * 0.3,
-          y: y * 0.3,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
-      });
-
-      button.addEventListener('mouseleave', () => {
-        gsap.to(button, {
-          x: 0,
-          y: 0,
-          duration: 0.3,
-          ease: 'power2.out'
-        });
-      });
-    });
-
     // Cleanup function
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
@@ -322,180 +255,192 @@ export default function AccessPage() {
   });
 
   return (
-    <div ref={pageRef} className="min-h-screen relative overflow-hidden bg-blue-100">
-      {/* Background Pattern - Same as HomePage */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
-      </div>
-
-      {/* Enhanced Floating Elements with GSAP */}
-      <div className="floating-bg-1 absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-blue-400/10 to-cyan-400/10 rounded-full blur-3xl"></div>
-      <div className="floating-bg-2 absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-emerald-400/10 to-blue-400/10 rounded-full blur-3xl"></div>
-
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Hero Section */}
-        <div ref={heroRef} className="relative mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48 text-center">
-          {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text text-center">
-            <span className="text-gray-900">YOUR GATEWAY TO </span>
-            <span className="text-emerald-600">COPYM'S</span>
-            <br />
-            <span className="text-gray-900">EXCLUSIVE WORLD</span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl reveal-text text-center mx-auto">
-            Unlock premium access to real-world assets, member-only rewards, and
-            the next wave of Web3 innovation with your exclusive access pass.
-          </p>
-
-          {/* Glass Pill Layer - Now positioned below text */}
-          <div 
-            className="relative w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8"
-            style={{
-              WebkitBackdropFilter: 'blur(10px)',
-              backdropFilter: 'blur(10px)'
-            }}
-          >
-            Mint Your Token Now ➡
-          </div>
-
-
+    <div ref={pageRef} className="min-h-screen bg-blue-100">
+      {/* Hero Section with TokenizationHub Style */}
+      <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
         </div>
 
-
-
-        {/* Benefits Section */}
-        <div id="benefits-section" ref={benefitsRef} className="mb-20">
-            <div className="space-y-8">
-              {/* Section Title */}
-              <div className="text-center">
-                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
-                  Why Get the COPYM Access Pass?
-                </h2>
-                <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mx-auto"></div>
-                <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
-                  Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
-                </p>
-              </div>
-
-              {/* Benefits Cards */}
-               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                     className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-                   >
-                     {/* Background gradient overlay */}
-                     <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                     
-                     <div className="relative z-10">
-                       {/* Icon with enhanced styling */}
-                       <div className="flex items-center justify-between mb-6">
-                         <Box
-                           className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                        sx={{
-                             background: "linear-gradient(135deg, #10b981, #059669)",
-                             boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
-                        }}
-                      >
-                           <benefit.icon className="h-8 w-8 text-white" />
-                      </Box>
-                         
-                         {/* Number badge */}
-                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                           {index + 1}
-                         </div>
-                       </div>
-                       
-                       {/* Content */}
-                       <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
-                        {benefit.title}
-                      </h3>
-                       <p className="text-gray-700 leading-relaxed text-base">
-                        {benefit.description}
-                      </p>
-                       
-                       {/* Bottom accent line */}
-                       <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-
+        {/* Fluid Blob Background */}
+        <div className="absolute inset-0 opacity-30">
+          <LavaLamp />
         </div>
 
-        {/* Unlock Features */}
-        <div className="unlock-features mb-20">
+        {/* Hero Content */}
+        <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
+          {/* AI-Powered Badge - Top of Content */}
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
-              Everything Your Pass Unlocks
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
+              <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
+              Exclusive Access Portal
+            </div>
           </div>
 
-          {/* Mobile Layout - Stacked vertically */}
-          <div className="lg:hidden space-y-8">
-            {/* Mobile: First 3 features */}
-            <div className="space-y-6">
-              {unlockFeatures.slice(0, 3).map((feature, index) => (
-                <div
-                  key={index}
-                   className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-                 >
-                   {/* Background gradient overlay */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                   
-                   <div className="relative z-10 flex items-start gap-4">
-                     {/* Icon with enhanced styling */}
-                     <div className="flex items-center justify-between mb-0">
-                       <Box
-                         className="w-12 h-12 rounded-xl flex items-center justify-center text-xl card-icon group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
-                         sx={{
-                           background: "linear-gradient(135deg, #10b981, #059669)",
-                           boxShadow: "0 6px 20px rgba(16, 185, 129, 0.3)",
-                         }}
-                       >
-                         <feature.icon className="h-6 w-6 text-white" />
-                       </Box>
-                       
-                       {/* Number badge */}
-                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
-                         {index + 1}
-                       </div>
-                  </div>
-                     
-                     {/* Content */}
-                     <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
-                    {feature.text}
-                  </span>
-                   </div>
-                   
-                   {/* Bottom accent line */}
-                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
-                </div>
-              ))}
+          <div className="text-center">
+            {/* Main Title - Full Width with Homepage Font Styles */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text">
+              <span className="text-gray-900">YOUR GATEWAY TO </span>
+              <span className="text-emerald-600">COPYM'S</span>
+              <br />
+              <span className="text-gray-900">EXCLUSIVE WORLD</span>
+            </h1>
+
+            {/* Description with Homepage Style */}
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text">
+              Unlock premium access to real-world assets, member-only rewards, and
+              the next wave of Web3 innovation with your exclusive access pass.
+            </p>
+
+            {/* Glass Pill Layer - Curved div style */}
+            <div 
+              className="relative w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8"
+              style={{
+                WebkitBackdropFilter: 'blur(10px)',
+                backdropFilter: 'blur(10px)'
+              }}
+            >
+              Mint Your Token Now ➡
             </div>
 
-            {/* Mobile: Credential Card */}
-            <div className="flex justify-start py-6 px-4 -ml-2">
-              <div className="text-left w-full max-w-xs">
-                 <h3 className="text-lg font-black text-left text-gray-900 mb-2 uppercase anton-regular">
-                  Your Access Credential
-                </h3>
-                 <p className="text-gray-700 text-left text-xs mb-6 max-w-xs">
-                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                </p>
-                                   <div className="flex justify-start w-full mt-6">
-                   <div className="w-full max-w-[280px] sm:max-w-[320px]">
+            {/* Additional UI Elements */}
+            <div className="mt-16 flex justify-center space-x-8 opacity-60">
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">Exclusive</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">Premium</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
+                <span className="text-sm text-gray-600">VIP Access</span>
+              </div>
+            </div>
+          </div>
+        </div>
+             </section>
+
+               {/* Unlock Features - Reimagined with Platform Features Style */}
+       <section className="relative">
+         {/* Main Content with Curved Background */}
+         <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+           {/* Background Pattern */}
+           <div className="absolute inset-0 opacity-10">
+             <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-emerald-500/20"></div>
+           </div>
+           
+           {/* Content Container */}
+           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             {/* Section Title */}
+             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 anton-regular">
+                 <span className="text-white">EVERYTHING YOUR</span>
+                 <br />
+                 <span className="text-black">PASS UNLOCKS</span>
+               </h2>
+               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4">
+                 Discover the exclusive benefits and features that come with your COPYM Access Pass
+               </p>
+             </div>
+
+             {/* Feature Cards Grid - Platform Features Style */}
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
+               {/* Card 1: Token-gated Content */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <FileText className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Token-gated Content</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Access to insider market reports and exclusive content only available to pass holders.
+                 </p>
+               </div>
+
+               {/* Card 2: Lower Fees */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Percent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Lower Platform Fees</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Reduced trading fees and transaction costs across all platform activities.
+                 </p>
+               </div>
+
+               {/* Card 3: NFT Collectibles */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Image className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Limited NFT Collectibles</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Exclusive access to limited-edition NFT collectibles and digital assets.
+                 </p>
+               </div>
+
+               {/* Card 4: IRL Events */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">IRL Events Access</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Invitations to COPYM meetups, global summits, and exclusive networking events.
+                 </p>
+               </div>
+
+               {/* Card 5: Early Access */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Zap className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Early Asset Access</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Priority access to new asset tokenizations before public release.
+                 </p>
+               </div>
+
+               {/* Card 6: Governance Rights */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Vote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Governance Rights</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Voting rights in COPYM DAO decisions and platform governance.
+                 </p>
+               </div>
+             </div>
+
+             {/* Credential Card Section */}
+             <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+               <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8">
+                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Your Access Credential</h3>
+                 <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base">
+                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                 </p>
+                 <div className="flex justify-center">
+                   <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
                      <CredentialCard
                        user={{
                          name: "Alex Morgan",
-                          employeeNumber: "C-2028",
-                          passNumber: "56",
+                         employeeNumber: "C-2028",
+                         passNumber: "56",
                          points: "1,250",
                          qrImage: "/assets/svg/copym_qr.svg",
                        }}
@@ -503,309 +448,188 @@ export default function AccessPage() {
                        stacked
                        backVariant="darkBlue"
                        logoSrc="/assets/copym/png/Copym-05-1.png"
-                       logoSize={20}
+                       logoSize={24}
                      />
                    </div>
                  </div>
-              </div>
-            </div>
+               </div>
+             </div>
+           </div>
+         </div>
+               </section>
 
-            {/* Mobile: Last 3 features */}
-            <div className="space-y-6">
-              {unlockFeatures.slice(3, 6).map((feature, index) => (
-                <div
-                  key={index + 3}
-                   className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-6 rounded-2xl hover:shadow-xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
+        {/* Breathing Space After Unlock Features */}
+        <div className="py-16 sm:py-20 lg:py-24"></div>
+
+        {/* Benefits Section */}
+       <div id="benefits-section" ref={benefitsRef} className="mb-20">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div className="space-y-8">
+             {/* Section Title */}
+             <div className="text-center">
+               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
+                 Why Get the COPYM Access Pass?
+               </h2>
+               <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mx-auto"></div>
+               <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
+                 Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
+               </p>
+             </div>
+
+             {/* Benefits Cards */}
+             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+               {benefits.map((benefit, index) => (
+                 <div
+                   key={index}
+                   className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
                  >
                    {/* Background gradient overlay */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                    
-                   <div className="relative z-10 flex items-start gap-4">
+                   <div className="relative z-10">
                      {/* Icon with enhanced styling */}
-                     <div className="flex items-center justify-between mb-0">
+                     <div className="flex items-center justify-between mb-6">
                        <Box
-                         className="w-12 h-12 rounded-xl flex items-center justify-center text-xl card-icon group-hover:scale-110 transition-transform duration-300 flex-shrink-0"
+                         className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
                          sx={{
-                           background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                           boxShadow: "0 6px 20px rgba(34, 197, 94, 0.3)",
+                           background: "linear-gradient(135deg, #10b981, #059669)",
+                           boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
                          }}
                        >
-                         <feature.icon className="h-6 w-6 text-white" />
+                         <benefit.icon className="h-8 w-8 text-white" />
                        </Box>
                        
                        {/* Number badge */}
-                       <div className="w-6 h-6 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-xs ml-2">
-                         {index + 4}
+                       <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
+                         {index + 1}
                        </div>
-                  </div>
+                     </div>
                      
                      {/* Content */}
-                     <span className="text-gray-700 font-medium leading-relaxed text-sm group-hover:text-gray-900 transition-colors">
-                    {feature.text}
-                  </span>
+                     <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
+                       {benefit.title}
+                     </h3>
+                     <p className="text-gray-700 leading-relaxed text-base">
+                       {benefit.description}
+                     </p>
+                     
+                     {/* Bottom accent line */}
+                     <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                    </div>
-                   
-                   {/* Bottom accent line */}
-                   <div className="w-0 group-hover:w-full h-0.5 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-4"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-           {/* Desktop Layout - 3 columns */}
-          <div className="hidden lg:grid lg:grid-cols-3 gap-12 items-start">
-             {/* Left Grid - First 3 Unlock Features */}
-              <div className="grid grid-cols-1 gap-8">
-               {unlockFeatures.slice(0, 3).map((feature, index) => (
-                 <div
-                   key={index}
-                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-                  >
-                    {/* Background gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <div className="relative z-10">
-                      {/* Icon with enhanced styling */}
-                      <div className="flex items-center justify-between mb-6">
-                        <Box
-                          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                          sx={{
-                            background: "linear-gradient(135deg, #10b981, #059669)",
-                            boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
-                          }}
-                        >
-                          <feature.icon className="h-8 w-8 text-white" />
-                        </Box>
-                        
-                        {/* Number badge */}
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                          {index + 1}
-                        </div>
-                   </div>
-                      
-                      {/* Content */}
-                      <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
-                     {feature.text}
-                   </span>
-                      
-                      {/* Bottom accent line */}
-                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                    </div>
-                 </div>
-               ))}
-             </div>
-
-                           {/* Center Grid - Credential Card */}
-              <div className="flex justify-start -ml-4">
-                <div className="text-left">
-                  <h3 className="text-xl font-black text-left text-gray-900 mb-2 uppercase anton-regular">
-                   Your Access Credential
-                 </h3>
-                                     <p className="text-gray-700 text-left text-sm mb-8 max-w-xs">
-                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                  </p>
-                   <div className="flex justify-start">
-                     <div className="w-full max-w-[320px] lg:max-w-[350px]">
-                                       <CredentialCard
-                        user={{
-                          name: "Alex Morgan",
-                          employeeNumber: "C-2028",
-                          passNumber: "56",
-                          points: "1,250",
-                          qrImage: "/assets/svg/copym_qr.svg",
-                        }}
-                        variant="bottleGreen"
-                        stacked
-                        backVariant="darkBlue"
-                        logoSrc="/assets/copym/png/Copym-05-1.png"
-                        logoSize={28}
-                      />
-                     </div>
-                   </div>
-               </div>
-             </div>
-
-             {/* Right Grid - Last 3 Unlock Features */}
-             <div className="grid grid-cols-1 gap-8">
-               {unlockFeatures.slice(3, 6).map((feature, index) => (
-                 <div
-                   key={index + 3}
-                    className="unlock-feature group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-                  >
-                    {/* Background gradient overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                    
-                    <div className="relative z-10">
-                      {/* Icon with enhanced styling */}
-                      <div className="flex items-center justify-between mb-6">
-                        <Box
-                          className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                          sx={{
-                            background: "linear-gradient(135deg, #22c55e, #16a34a)",
-                            boxShadow: "0 8px 32px rgba(34, 197, 94, 0.3)",
-                          }}
-                        >
-                          <feature.icon className="h-8 w-8 text-white" />
-                        </Box>
-                        
-                        {/* Number badge */}
-                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                          {index + 4}
-                        </div>
-                   </div>
-                      
-                      {/* Content */}
-                      <span className="text-gray-700 font-medium leading-relaxed text-base group-hover:text-gray-900 transition-colors">
-                     {feature.text}
-                   </span>
-                      
-                      {/* Bottom accent line */}
-                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-green-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                    </div>
                  </div>
                ))}
              </div>
            </div>
-        </div>
+         </div>
+       </div>
 
-        {/* Platform Features */}
-        <div ref={featuresRef} className="relative mb-20 min-h-[600px]">
-          <div className="text-center mb-12">
-            {/* Heading and underline removed */}
-          </div>
+              {/* Platform Features - TokenizationHub Style Cards */}
+       <section className="relative">
+         {/* Main Content with Curved Background */}
+         <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             {/* Section Title */}
+             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 anton-regular">
+                 <span className="text-white">PLATFORM</span>
+                 <br />
+                 <span className="text-black">FEATURES</span>
+               </h2>
+               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4">
+                 Enterprise-grade features designed for institutional-grade tokenization and compliance.
+               </p>
+             </div>
 
-                    {/* Glass Capsules Layout */}
-          <div className="relative w-full h-[500px]">
-            {/* Capsule 1 - Top Left */}
-            <div className="absolute top-[10%] left-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
-              <div className="flex items-center gap-4">
-                <Shield className="w-6 h-6 text-white" />
-                <div className="text-left">
-                  <div className="font-bold text-white uppercase text-sm">Compliance-first</div>
-                  <div className="text-white/80 text-xs">KYC/AML, transfer restrictions, whitelisting and audit trails</div>
-                </div>
-              </div>
-            </div>
+             {/* Feature Cards Grid */}
+             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
+               {/* Card 1: Compliance-first */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Compliance-first</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
+                 </p>
+               </div>
 
-            {/* Capsule 2 - Top Right */}
-            <div className="absolute top-[10%] right-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
-              <div className="flex items-center gap-4">
-                <Wallet className="w-6 h-6 text-white" />
-                <div className="text-left">
-                  <div className="font-bold text-white uppercase text-sm">Utility & Access</div>
-                  <div className="text-white/80 text-xs">Early allocations, fee discounts, governance & staking perks</div>
-                </div>
-              </div>
-            </div>
+               {/* Card 2: Utility & Access */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Wallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Utility & Access</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Early allocations, fee discounts, governance & staking perks for token holders.
+                 </p>
+               </div>
 
-            {/* Capsule 3 - Middle Center */}
-            <div className="absolute top-[40%] left-[50%] transform -translate-x-1/2 w-[400px] h-20 bg-black backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(0,0,0,0.7)] z-20 border border-gray-800">
-              <div className="flex items-center">
-                <div className="text-center">
-                  <div className="font-bold text-white uppercase text-xl">Platform Features</div>
-                </div>
-              </div>
-            </div>
+               {/* Card 3: Multi-asset Support */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Multi-asset Support</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Equity, debt, real estate, commodities, carbon & more asset classes supported.
+                 </p>
+               </div>
 
-            {/* Capsule 4 - Bottom Left */}
-            <div className="absolute top-[70%] left-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
-              <div className="flex items-center gap-4">
-                <Diamond className="w-6 h-6 text-white" />
-                <div className="text-left">
-                  <div className="font-bold text-white uppercase text-sm">Institutional Rails</div>
-                  <div className="text-white/80 text-xs">Custody, settlement, and data rooms integrated</div>
-                </div>
-              </div>
-            </div>
+               {/* Card 4: Institutional Rails */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Diamond className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Institutional Rails</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Custody, settlement, and data rooms integrated for institutional investors.
+                 </p>
+               </div>
 
-            {/* Capsule 5 - Bottom Right */}
-            <div className="absolute top-[70%] right-[5%] w-[400px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-10 border border-emerald-700/50">
-              <div className="flex items-center gap-4">
-                <Shield className="w-6 h-6 text-white" />
-                <div className="text-left">
-                  <div className="font-bold text-white uppercase text-sm">Security & Trust</div>
-                  <div className="text-white/80 text-xs">Enterprise-grade security with multi-layer protection</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+               {/* Card 5: Security & Trust */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Lock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Security & Trust</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   Enterprise-grade security with multi-layer protection and audit trails.
+                 </p>
+               </div>
 
-        {/* Benefits Comparison */}
-        <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
-              Benefits Comparison
-            </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
-          </div>
+               {/* Card 6: Global Access */}
+               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
+                 <div className="flex items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                   </div>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Global Access</h3>
+                 </div>
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                   24/7 global access to tokenized assets with real-time market data.
+                 </p>
+               </div>
+             </div>
+           </div>
+         </div>
+               </section>
 
-          <div className="comparison-table bg-white/80 backdrop-blur-sm rounded-3xl border border-gray-200/50 overflow-hidden shadow-2xl overflow-x-auto">
-            <div className="grid grid-cols-3 text-sm font-bold text-gray-700 border-b border-gray-200/50 min-w-[700px]">
-              <div className="px-6 py-4">FEATURE</div>
-              <div className="px-6 py-4 text-green-600 text-center">
-                TOKENIZATION
-              </div>
-              <div className="px-6 py-4 text-center">
-                TRADITIONAL
-              </div>
-            </div>
-            
+        {/* Breathing Space After Platform Features */}
+        <div className="py-16 sm:py-20 lg:py-24"></div>
 
-            {[
-              {
-                feature: "Minimum Investment",
-                tokenization: "$50-$500",
-                traditional: "$50K+",
-                icon: DollarSign,
-              },
-              {
-                feature: "Liquidity",
-                tokenization: "24/7 global",
-                traditional: "Months",
-                icon: TrendingUp,
-              },
-              {
-                feature: "Transparency",
-                tokenization: "On-chain",
-                traditional: "Opaque",
-                icon: Shield,
-              },
-              {
-                feature: "Fees",
-                tokenization: "0.5-2%",
-                traditional: "5-15%",
-                icon: Percent,
-              },
-              {
-                feature: "Access",
-                tokenization: "Global",
-                traditional: "Local",
-                icon: Globe,
-              },
-            ].map((row, index) => (
-              <div
-                key={index}
-                className="grid grid-cols-3 text-sm border-b border-gray-100/30 last:border-b-0 hover:bg-gray-50/50 transition-colors min-w-[700px]"
-              >
-                <div className="px-6 py-5 font-semibold text-gray-900 flex items-center gap-3">
-                  <row.icon className="w-5 h-5 text-emerald-600 flex-shrink-0" />
-                  <span>{row.feature}</span>
-                </div>
-                <div className="px-6 py-5 text-emerald-600 font-bold flex items-center justify-center gap-3">
-                  <CheckCircle className="w-5 h-5 flex-shrink-0" />
-                  <span>{row.tokenization}</span>
-                </div>
-                <div className="px-6 py-5 text-black text-center flex items-center justify-center">
-                  <span>{row.traditional}</span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Supported Networks */}
-        <div ref={networksRef} className="mb-20">
+       {/* Supported Networks */}
+      <div ref={networksRef} className="mb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase anton-regular reveal-text">
               Supported Networks
@@ -815,12 +639,12 @@ export default function AccessPage() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
             {networks.map((network) => (
-                             <motion.div
-                 key={network.key}
-                 className="network-card group relative text-center"
-                 whileHover={{ y: -4, scale: 1.05 }}
-                 whileTap={{ scale: 0.98 }}
-               >
+              <motion.div
+                key={network.key}
+                className="network-card group relative text-center"
+                whileHover={{ y: -4, scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <div className="relative">
                   <div className="flex items-center justify-center mx-auto mb-4 transition-all duration-300">
                     {network.logo ? (
@@ -838,17 +662,17 @@ export default function AccessPage() {
                   <div className="font-bold text-lg text-gray-900 mb-1">
                     {network.name}
                   </div>
-                                     <div className="text-sm text-gray-500">{network.ticker}</div>
+                  <div className="text-sm text-gray-500">{network.ticker}</div>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
+      </div>
 
-
-
-        {/* Final CTA */}
-        <div ref={ctaRef} className="text-center">
+      {/* Final CTA */}
+      <div ref={ctaRef} className="text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 text-white">
             <Crown className="w-16 h-16 mx-auto mb-6 text-white/80" />
             <h3 className="text-3xl font-black mb-4 uppercase anton-regular reveal-text">
@@ -858,7 +682,7 @@ export default function AccessPage() {
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-                         <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
               <Sparkles className="mr-3 w-5 h-5" />
               Get Your Access Pass Now
               <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />

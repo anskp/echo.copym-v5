@@ -277,7 +277,7 @@ const Contact = () => {
       >
         <button
           onClick={() => setShowLiveChat(!showLiveChat)}
-          className="bg-gradient-to-r from-[#1e40af] to-[#065f46] text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation"
+          className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation"
           aria-label="Open live chat"
         >
           <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
