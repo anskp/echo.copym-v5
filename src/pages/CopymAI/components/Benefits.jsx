@@ -38,9 +38,9 @@ const Benefits = () => {
             {/* Top Section: "Why is it Moving?" - Spans full width */}
             <div className="col-span-12 bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 flex items-center justify-between">
               <div className="flex-1">
-                <h3 className="text-2xl font-bold text-white mb-3">Why is it Moving?</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Daily Market Recap</h3>
                 <p className="text-gray-300 text-base max-w-2xl">
-                  Get quick, digestible insights into market movements with COPYM-AI's concise breakdown of the factors driving asset changes.
+                  Start your day with Cora AI's intelligent market analysis. Get instant insights into what's driving price movements, key market events, and actionable trading opportunities delivered in simple, digestible summaries.
                 </p>
               </div>
               <div className="bg-gray-800/60 rounded-xl p-4 border border-gray-600/50 min-w-[280px]">
@@ -50,9 +50,9 @@ const Benefits = () => {
 
             {/* Middle-Left: "Handy Widgets" */}
             <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 h-auto">
-              <h3 className="text-xl font-bold text-white mb-2">Handy Widgets</h3>
+              <h3 className="text-xl font-bold text-white mb-2">Smart Price Alerts</h3>
               <p className="text-gray-300 text-sm mb-3">
-                Customize your home screen with widgets that display live portfolio data and market trends at a glance.
+                Set intelligent price alerts with Cora AI's predictive analysis. Get notified before major price movements with AI-powered insights and automated trading signals.
               </p>
               
               {/* SolCard Component */}
@@ -71,9 +71,9 @@ const Benefits = () => {
 
             {/* Middle-Right: "COPYM Direct" */}
             <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-3">COPYM Direct</h3>
+              <h3 className="text-xl font-bold text-white mb-3">AI Portfolio Insights</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Stay connected with real-time updates and official announcements directly from companies you follow.
+                Get intelligent portfolio breakdowns and diversification recommendations powered by Cora AI. Track your asset allocation across technology, real estate, and digital art with smart rebalancing suggestions.
               </p>
               
               {/* PortfolioBreakdown Component */}
@@ -85,11 +85,11 @@ const Benefits = () => {
             {/* Combined Card: "Insider Moves" & "Custom Price Alerts" */}
             <div className="col-span-7 bg-gradient-to-br from-gray-900/80 h-[11rem] to-gray-800/80 backdrop-blur-sm rounded-2xl p-5 border border-gray-700/50">
               <div className="grid grid-cols-2 gap-5">
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-3">Real-Time Alerts</h3>
-                  <p className="text-gray-300 text-sm">
-                   Stay ahead with custom notifications for price changes, significant events, and end-of-day updates tailored to your portfolio.</p>
-                </div>
+                                 <div>
+                   <h3 className="text-xl font-bold text-white mb-3">Real-Time Alerts</h3>
+                   <p className="text-gray-300 text-sm">
+                    Get instant Cora AI notifications for price alerts, market news, and portfolio updates. Stay informed with intelligent alerts that adapt to your trading patterns and market conditions.</p>
+                 </div>
                                 <div className="scale-76 transform -m-28">
                   <StepRectangles />
                 </div>
@@ -98,9 +98,9 @@ const Benefits = () => {
 
             {/* Bottom-Center: Graph Component */}
             <div className="col-span-5 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-3">Market Analytics</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Crypto Market Intelligence</h3>
               <p className="text-gray-300 text-sm mb-4">
-                Real-time market data visualization with cryptocurrency performance tracking.
+                Cora AI's advanced charting and market analysis. Track Bitcoin, Ethereum, and BNB performance with AI-powered trend predictions and real-time price alerts.
               </p>
               <div className="flex justify-center items-center scale-75 transform -m-6">
                 <Graph />
