@@ -73,7 +73,7 @@ const Benefits = () => {
           </div>
 
           {/* New Layout: AI Features Overview + Core Capabilities + Mission & Vision + Tech/Platform */}
-          <section className="w-full space-y-10 p-10 bg-gradient-to-br from-gray-900 via-black to-gray-900">
+          <section className="w-full space-y-10 p-10 ">
 
             {/* AI Features Overview */}
             <div className="w-full shadow-xl rounded-3xl p-8 bg-white/10 backdrop-blur-sm border border-white/20">
@@ -118,7 +118,7 @@ const Benefits = () => {
                 </div>
 
                 {/* Cora Notification Card */}
-                <div className="scale-75 transform -m-8">
+                <div className="scale-5 transform -m-8 -mt-48 ">
                   <CoraNotification />
                 </div>
               </div>
@@ -203,11 +203,11 @@ const Benefits = () => {
           </section>
 
           {/* Original Benefits Grid - Kept for reference */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-20">
+          {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-20">
             {benefits.map((benefit) => (
               <FeatureCard key={benefit.id} benefit={benefit} />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
