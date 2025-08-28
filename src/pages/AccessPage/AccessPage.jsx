@@ -335,20 +335,9 @@ export default function AccessPage() {
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Hero Section */}
-        <div ref={heroRef} className="relative mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48">
-          {/* Glass Pill Layer */}
-          <div 
-            className="absolute right-[-150px] top-1/2 transform -translate-y-1/2 w-[600px] h-20 bg-emerald-900/80 backdrop-blur-[10px] rounded-[60px] flex justify-center items-center text-white text-2xl font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50"
-            style={{
-              WebkitBackdropFilter: 'blur(10px)',
-              backdropFilter: 'blur(10px)'
-            }}
-          >
-            Mint Your Token Now ➡
-          </div>
-
+        <div ref={heroRef} className="relative mb-20 pt-32 pb-32 sm:pb-40 lg:pb-48 text-center">
           {/* Main Title */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text text-left">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text text-center">
             <span className="text-gray-900">YOUR GATEWAY TO </span>
             <span className="text-emerald-600">COPYM'S</span>
             <br />
@@ -356,10 +345,21 @@ export default function AccessPage() {
           </h1>
 
           {/* Description */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl reveal-text text-left">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl reveal-text text-center mx-auto">
             Unlock premium access to real-world assets, member-only rewards, and
             the next wave of Web3 innovation with your exclusive access pass.
           </p>
+
+          {/* Glass Pill Layer - Now positioned below text */}
+          <div 
+            className="relative w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8"
+            style={{
+              WebkitBackdropFilter: 'blur(10px)',
+              backdropFilter: 'blur(10px)'
+            }}
+          >
+            Mint Your Token Now ➡
+          </div>
 
 
         </div>
