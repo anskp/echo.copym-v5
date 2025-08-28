@@ -75,30 +75,46 @@ export default function RWAAssetsSection() {
              
              {/* Right Side - Premium Asset Cards */}
              <div className="grid grid-cols-2 gap-6">
-               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                   <Coins className="w-8 h-8 text-white" />
+                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                    <img 
+                      src="/assets/Images/rwa-section/coin.png" 
+                      alt="Gold & Metals" 
+                      className="w-full h-full object-cover rounded-2xl"
+                    />
+                  </div>
+                  <p className="font-semibold text-white">Gold & Metals</p>
+                </div>
+               
+                                                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                   <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                     <img 
+                       src="/assets/Images/rwa-section/art-and-design.png" 
+                       alt="Fine Art" 
+                       className="w-full h-full object-cover rounded-2xl"
+                     />
+                   </div>
+                   <p className="font-semibold text-white">Fine Art</p>
                  </div>
-                 <p className="font-semibold text-white">Gold & Metals</p>
-               </div>
                
                <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                   <Palette className="w-8 h-8 text-white" />
-                 </div>
-                 <p className="font-semibold text-white">Fine Art</p>
-               </div>
-               
-               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-16 h-16 bg-gradient-to-br from-green-400 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                   <Leaf className="w-8 h-8 text-white" />
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                   <img 
+                     src="/assets/Images/rwa-section/carbon-credit.png" 
+                     alt="Carbon Credits" 
+                     className="w-full h-full object-cover rounded-2xl"
+                   />
                  </div>
                  <p className="font-semibold text-white">Carbon Credits</p>
                </div>
                
                <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-16 h-16 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                   <Building2 className="w-8 h-8 text-white" />
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+                   <img 
+                     src="/assets/Images/rwa-section/real-estate.png" 
+                     alt="Real Estate" 
+                     className="w-full h-full object-cover rounded-2xl"
+                   />
                  </div>
                  <p className="font-semibold text-white">Real Estate</p>
                </div>

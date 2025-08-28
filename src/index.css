@@ -262,10 +262,10 @@ main {
 }
 
 .nav-pills {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(16, 185, 129, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.2);
   border-radius: 50px;
   padding: 8px;
   display: flex;
@@ -276,9 +276,9 @@ main {
   transform: translateX(-50%) !important;
   z-index: 1001 !important;
   box-shadow: 
-    0 8px 32px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2),
-    inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+    0 8px 32px rgba(16, 185, 129, 0.1),
+    inset 0 1px 0 rgba(16, 185, 129, 0.2),
+    inset 0 -1px 0 rgba(16, 185, 129, 0.1);
 }
 
 .nav-item {
@@ -409,9 +409,8 @@ main {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: transparent;
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: #10b981;
+  border: 1px solid #059669;
   border-radius: 24px;
   padding: 24px;
   min-width: 640px;
@@ -419,8 +418,9 @@ main {
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.3);
   z-index: 1000;
+  overflow: hidden;
 }
 
 .nav-item:hover .dropdown {
@@ -441,8 +441,8 @@ main {
   gap: 16px;
   padding: 20px;
   border-radius: 16px;
-  background: #e0f2fe;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
@@ -450,9 +450,10 @@ main {
 }
 
 .dropdown-item:hover {
-  background: #b3e5fc;
-  border-color: rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
   transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.2);
 }
 
 .dropdown-icon-wrapper {
@@ -474,34 +475,99 @@ main {
 .dropdown-title {
   font-size: 16px;
   font-weight: 600;
-  color: #1e40af;
+  color: #ffffff;
   margin-bottom: 6px;
 }
 
 .dropdown-description {
   font-size: 14px;
-  color: #6b7280;
+  color: #ffffff;
   line-height: 1.4;
 }
 
 .dropdown-item img {
-  background: #e0f2fe;
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .dropdown-item:hover img {
-  background: #b3e5fc;
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
 }
 
 /* Icon backgrounds */
-.icon-tokenization { background: linear-gradient(135deg, #ff6b6b 0%, #ff8e53 100%); }
-.icon-marketplace { background: linear-gradient(135deg, #4ecdc4 0%, #44a08d 100%); }
-.icon-accesspass { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-.icon-copymi { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
-.icon-about { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
-.icon-roadmap { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
-.icon-contact { background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%); }
+.icon-tokenization { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-marketplace { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-accesspass { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-copymi { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-about { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-roadmap { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
+.icon-contact { 
+  background: rgba(37, 99, 235, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  box-shadow: 
+    0 4px 16px rgba(37, 99, 235, 0.1),
+    inset 0 1px 0 rgba(37, 99, 235, 0.2),
+    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
+}
 
 /* Responsive */
 @media (max-width: 768px) {
