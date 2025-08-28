@@ -9,12 +9,10 @@ const Collaboration = () => {
     <Section crosses>
       <div className="container lg:flex lg:gap-12">
         <div className="lg:w-1/2">
-          <h2 className="h2 mb-4 md:mb-8 text-black">
-            CORA: AI-Powered
+          <h2 className="h2 mb-4 md:mb-8 text-left anton-regular">
+            <span className="text-gray-900">CORA: AI-Powered</span>
             <br />
-            <span className="inline-block relative font-semibold">
-              Real-World Asset Tokenization
-            </span>
+            <span className="text-emerald-600">Real-World Asset Tokenization</span>
             <br />
             <span className="text-2xl font-medium text-gray-600">
               Enterprise Asset Management Platform

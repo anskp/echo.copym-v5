@@ -4,75 +4,74 @@ import { benefits } from "../constants";
 import { GradientLight } from "./design/Benefits";
 import Heading from "./Heading";
 import Section from "./Section";
+import { Shield, Lock, FileCheck, AlertCircle, ArrowRight } from 'lucide-react';
+
+const FeatureCard = ({ benefit }) => {
+  // Map benefit titles to appropriate Lucide icons
+  const getIcon = (title) => {
+    switch (title) {
+      case "The Problem We Solve":
+        return AlertCircle;
+      case "AI-Powered Tokenization":
+        return Shield;
+      case "Integrated Marketplace":
+        return Lock;
+      case "AI Investment Advisor":
+        return FileCheck;
+      case "Smart Asset Verification":
+        return Shield;
+      case "Business Model":
+        return AlertCircle;
+      default:
+        return Shield;
+    }
+  };
+
+  const IconComponent = getIcon(benefit.title);
+
+  return (
+    <div className="text-center">
+      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500/20 to-green-600/10 flex items-center justify-center mb-4 mx-auto">
+        <IconComponent className="w-6 h-6 text-green-500" />
+      </div>
+      <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
+      <p className="text-white/80 text-sm leading-relaxed mb-4">{benefit.text}</p>
+      <button className="inline-flex items-center text-green-400 font-semibold text-sm hover:text-green-300 transition-colors duration-200">
+        Explore more <ArrowRight className="ml-1 w-4 h-4" />
+      </button>
+    </div>
+  );
+};
 
 const Benefits = () => {
   return (
-    <Section id="features">
-      <div className="container relative z-2">
-        <Heading
-          className="md:max-w-md lg:max-w-2xl"
-          title={
-            <>
-              FEATURES{" "}
-              <span className="inline-block relative font-semibold">
-            
-              </span>
-            </>
-          }
-        />
+    <section className="relative">
+      {/* Main Content */}
+      <div className="relative z-10 bg-black rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Section Title */}
+          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular">
+              <span className="text-white">FEATURES</span>
+            </h2>
+            <p className="text-white/80 text-lg sm:text-xl max-w-3xl mx-auto">
+              <span className="text-white">Revolutionizing Real-World Asset Investment with </span>
+              <span className="text-green-500">AI and Blockchain Technology</span>
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10">
-          {benefits.map((benefit) => (
-            <div
-              className="block relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem] transition-transform duration-300 hover:scale-105 hover:shadow-lg"
-              style={{
-                backgroundImage: `url(${benefit.backgroundUrl})`,
-              }}
-              key={benefit.id}
-            >
-              <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem] pointer-events-none">
-                <h5 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-5 text-black uppercase anton-regular">{benefit.title}</h5>
-                <p className="body-2 mb-6 text-black">{benefit.text}</p>
-                <div className="flex items-center mt-auto">
-                  <img
-                    src={benefit.iconUrl}
-                    width={48}
-                    height={48}
-                    alt={benefit.title}
-                  />
-
-                  <p className="ml-auto font-code text-xs font-bold text-black uppercase tracking-wider">
-                    Explore more
-                  </p>
-                  <Arrow />
-                </div>
-              </div>
-
-              {benefit.light && <GradientLight />}
-
-              <div
-                className="absolute inset-0.5 bg-gray-50"
-                style={{ clipPath: "url(#benefits)" }}
-              >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10 flex items-center justify-center">
-                  {benefit.imageUrl && (
-                    <img
-                      src={benefit.imageUrl}
-                      width={120}
-                      height={120}
-                      alt={benefit.title}
-                      className="object-contain"
-                    />
-                  )}
-                </div>
-              </div>
-
-              <ClipPath />
-            </div>
-          ))}
+          {/* Feature Cards Grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {benefits.map((benefit, index) => (
+              <FeatureCard
+                key={benefit.id}
+                benefit={benefit}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 };
 

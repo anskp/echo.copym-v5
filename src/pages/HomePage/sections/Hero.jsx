@@ -11,9 +11,8 @@ const HeroPhone3D = () => {
     >
       {/* iPhone Container */}
       <div 
-        className="relative w-full h-full bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] p-1.5 sm:p-2 shadow-2xl"
+        className="relative w-full h-full bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] p-1.5 sm:p-2"
         style={{
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
           transform: 'rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px)',
           transformStyle: 'preserve-3d'
         }}
@@ -53,14 +52,6 @@ const HeroPhone3D = () => {
             transformOrigin: 'center top'
           }}
         ></div>
-        
-        {/* Additional shadow for depth */}
-        <div 
-          className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 w-full h-full bg-black opacity-10 rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] -z-10"
-          style={{
-            transform: 'translateZ(-10px)'
-          }}
-        ></div>
       </div>
     </div>
   );
@@ -75,9 +66,8 @@ const HeroPhone3DWallet = () => {
     >
       {/* iPhone Container */}
       <div 
-        className="relative w-full h-full bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] p-1.5 sm:p-2 shadow-2xl"
+        className="relative w-full h-full bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] p-1.5 sm:p-2"
         style={{
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
           transform: 'rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-50px) translateX(-20px)',
           transformStyle: 'preserve-3d'
         }}
@@ -115,14 +105,6 @@ const HeroPhone3DWallet = () => {
           style={{
             transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
             transformOrigin: 'center top'
-          }}
-        ></div>
-        
-        {/* Additional shadow for depth */}
-        <div 
-          className="absolute top-2 sm:top-3 lg:top-4 left-2 sm:left-3 lg:left-4 w-full h-full bg-black opacity-10 rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] -z-10"
-          style={{
-            transform: 'translateZ(-10px)'
           }}
         ></div>
       </div>
@@ -163,7 +145,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start mb-10">
               <Link
                 to="/marketplace"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl sm:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 Start Investing
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
