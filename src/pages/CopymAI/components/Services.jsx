@@ -12,6 +12,11 @@ import {
 
 const Services = () => {
   const [isPlaying, setIsPlaying] = useState(true);
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  const toggleDropdown = (dropdown) => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
 
   return (
     <Section id="how-to-use">
@@ -26,7 +31,8 @@ const Services = () => {
           text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
         />
 
-        <div className="relative">
+        {/* Original Service Cards - Kept for reference */}
+        <div className="relative mt-20">
           {/* Service 2 & 3 */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-gray-300 rounded-3xl overflow-hidden">
@@ -110,8 +116,6 @@ const Services = () => {
               </div>
             </div>
           </div>
-
-          {/* Gradient removed to eliminate purple and blue background colors */}
         </div>
 
         {/* Comparison Table */}

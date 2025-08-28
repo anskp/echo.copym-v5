@@ -60,12 +60,6 @@ export default function TrackYourCrypto() {
                   <Download className="w-7 h-7 text-white" />
                 </div>
               </div>
-              
-              {/* QR Code Card */}
-              <div className="absolute -top-10 -right-10 bg-white p-5 rounded-xl shadow-2xl border border-gray-100 z-20">
-                <QrCode className="w-20 h-20 text-gray-900" />
-                <p className="text-sm text-gray-600 mt-3 text-center font-medium">Scan to download</p>
-              </div>
             </div>
           </div>
           
@@ -100,8 +94,8 @@ export default function TrackYourCrypto() {
                 </button>
               </div>
               
-              {/* Marketplace Button */}
-              <div className="flex justify-center lg:justify-start">
+              {/* Marketplace Button and QR Code Row */}
+              <div className="flex flex-col sm:flex-row gap-6 justify-center lg:justify-start items-center">
                 <Link
                   to="/marketplace"
                   className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -109,6 +103,12 @@ export default function TrackYourCrypto() {
                   Explore Marketplace
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
+                
+                {/* QR Code Card - Moved to right side and made bigger */}
+                <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                  <QrCode className="w-24 h-24 text-gray-900" />
+                  <p className="text-sm text-gray-600 mt-3 text-center font-medium">Scan to download</p>
+                </div>
               </div>
             </div>
             
