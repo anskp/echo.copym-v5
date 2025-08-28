@@ -101,7 +101,7 @@ export default function FAQSection() {
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Support
                   <ArrowUpRight className="ml-2 w-4 h-4" />

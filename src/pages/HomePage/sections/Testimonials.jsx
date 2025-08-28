@@ -74,7 +74,7 @@ function TestimonialCard({ testimonial }) {
   
   return (
     <motion.div 
-      className="flex-shrink-0 w-[320px] h-[280px] bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 flex flex-col justify-between"
+      className="flex-shrink-0 w-[320px] h-[280px] bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 flex flex-col justify-between overflow-hidden"
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
@@ -88,12 +88,12 @@ function TestimonialCard({ testimonial }) {
             />
           ))}
         </div>
-        <IconComponent className="h-5 w-5 text-white/80" />
+        <IconComponent className="h-5 w-5 text-white/80 flex-shrink-0" />
       </div>
 
       {/* Quote */}
-      <div className="flex-1 mb-6">
-        <p className="text-slate-200 text-sm leading-relaxed italic">
+      <div className="flex-1 mb-6 overflow-hidden">
+        <p className="text-slate-200 text-sm leading-relaxed italic break-words">
           <span className="text-green-400 text-lg font-bold">"</span>
           {testimonial.quote}
           <span className="text-green-400 text-lg font-bold">"</span>
@@ -101,15 +101,15 @@ function TestimonialCard({ testimonial }) {
       </div>
 
       {/* Reviewer Info */}
-      <div className="flex items-center justify-between">
-        <div className="flex-1">
-          <p className="text-white font-semibold text-base mb-1">{testimonial.name}</p>
-          <p className="text-green-400 text-sm font-medium mb-1">{testimonial.title}</p>
-          <p className="text-slate-400 text-xs">{testimonial.company}</p>
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex-1 min-w-0">
+          <p className="text-white font-semibold text-base mb-1 break-words">{testimonial.name}</p>
+          <p className="text-green-400 text-sm font-medium mb-1 break-words">{testimonial.title}</p>
+          <p className="text-slate-400 text-xs break-words">{testimonial.company}</p>
         </div>
-        <div className="flex items-center gap-2 ml-4">
-          <CheckCircle className="h-4 w-4 text-green-400 flex-shrink-0" />
-          <span className="text-green-400 text-xs font-medium whitespace-nowrap">Verified Professional</span>
+        <div className="flex items-center gap-2 flex-shrink-0">
+          <CheckCircle className="h-4 w-4 text-green-400" />
+          <span className="text-green-400 text-xs font-medium whitespace-nowrap">Verified</span>
         </div>
       </div>
     </motion.div>

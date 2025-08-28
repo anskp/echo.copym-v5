@@ -31,7 +31,7 @@ export default function AIInvestingSection() {
             <div className="flex justify-center lg:justify-start">
               <Link
                 to="/marketplace"
-                className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-xl transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 See the Reveal
                 <ArrowRight className="ml-2 h-4 w-4" />

@@ -42,23 +42,23 @@ const Testimonials = () => {
           text="See what leading financial institutions say about COPYM-AI"
         />
         
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300"
+              className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden"
             >
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-color-1 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4">
+              <div className="flex items-start mb-4">
+                <div className="w-12 h-12 bg-color-1 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 flex-shrink-0">
                   {testimonial.name.charAt(0)}
                 </div>
-                <div>
-                  <h4 className="text-lg font-black tracking-tight leading-tight text-black uppercase anton-regular">{testimonial.name}</h4>
-                  <p className="text-sm text-black">{testimonial.role}</p>
-                  <p className="text-xs text-color-1">{testimonial.company}</p>
+                <div className="min-w-0 flex-1">
+                  <h4 className="text-lg font-black tracking-tight leading-tight text-black uppercase anton-regular break-words">{testimonial.name}</h4>
+                  <p className="text-sm text-black break-words">{testimonial.role}</p>
+                  <p className="text-xs text-color-1 break-words">{testimonial.company}</p>
                 </div>
               </div>
-              <p className="text-black italic">"{testimonial.content}"</p>
+              <p className="text-black italic text-sm leading-relaxed break-words">"{testimonial.content}"</p>
             </div>
           ))}
         </div>

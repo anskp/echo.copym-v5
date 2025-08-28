@@ -3,6 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Play, CheckCircle, Briefcase, Cpu, Code, Building2, Coins, BookCopy, TrendingUp, Shield, ArrowRight, ArrowUpDown, User, Globe, BarChart3, Clock, Eye } from 'lucide-react';
+import Silk from '../../../components/Silk';
 
 export default function TokenizationProcess({ onLaunchCreator }) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -107,7 +108,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
             </p>
             <button 
               onClick={onLaunchCreator} 
-              className="bg-white text-emerald-600 font-semibold px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
+              className="bg-white text-emerald-600 font-semibold px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
             >
               <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 inline" />
               Launch Token Creator Demo
