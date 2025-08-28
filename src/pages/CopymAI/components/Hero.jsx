@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 import { curve, robot } from "../assets";
 import heroPhoneTilted from "../assets/hero/hero-phone-tilted.png";
@@ -16,6 +19,7 @@ import Section from "./Section";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
+  const phoneRef = useRef(null);
 
   // Add CSS animation styles
   React.useEffect(() => {
@@ -31,6 +35,48 @@ const Hero = () => {
     `;
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
+  }, []);
+
+  // Phone animation effect
+  React.useEffect(() => {
+    // Wait for the next tick to ensure DOM is ready
+    const timer = setTimeout(() => {
+      if (phoneRef.current) {
+        gsap.fromTo(
+          phoneRef.current,
+          { y: 250, opacity: 0, scale: 0.95, rotate: 2 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            ease: 'power3.out',
+            duration: 1.5,
+            delay: 0.5,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: phoneRef.current,
+              start: 'top 90%',
+              end: 'top 40%',
+              scrub: 0.6,
+              once: false
+            }
+          }
+        );
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      // Clean up ScrollTrigger
+      if (phoneRef.current) {
+        ScrollTrigger.getAll().forEach(trigger => {
+          if (trigger.vars.trigger === phoneRef.current) {
+            trigger.kill();
+          }
+        });
+      }
+    };
   }, []);
 
   return (
@@ -102,11 +148,11 @@ const Hero = () => {
           </div>
 
           {/* Right Grid - Phone Images */}
-          <div className="relative z-1 flex items-center justify-center">
+          <div ref={phoneRef} className="relative z-1 flex items-center justify-center">
             <div className="flex gap-2 items-center">
               <img
                 src={heroPhone}
-                className="w-48  mt-48 scale-[2.1] -mb-64 h-auto pointer-events-none select-none"
+                className="w-48 mt-48 scale-[2.1] -mb-64 h-auto pointer-events-none select-none drop-shadow-2xl"
                 alt="Hero Phone"
               />
               {/* <img

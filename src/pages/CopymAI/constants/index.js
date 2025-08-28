@@ -143,18 +143,18 @@ export const collabText =
 
 export const collabContent = [{
         id: "0",
-        title: "Asset Tokenization Platform",
-        text: "Convert real estate, commodities, and securities into digital tokens. Seamlessly integrate with major blockchain networks including Ethereum, Polygon, Solana, and Avalanche for global market access.",
+        title: "INSTANT ASSET DIGITIZATION",
+        text: "Transform real estate, commodities, and securities into blockchain tokens in minutes. Native integration with Ethereum, Polygon, Solana, and Avalanche.",
     },
     {
         id: "1",
-        title: "AI-Powered Compliance",
-        text: "Advanced AI-driven KYC/AML verification, identity authentication, and real-time transaction monitoring ensuring full compliance with FATF, SEC, and international regulatory frameworks.",
+        title: "COMPLIANCE ON AUTOPILOT",
+        text: "AI-driven KYC/AML that works 24/7. Automatic FATF, SEC and global regulatory compliance with zero human intervention.",
     },
     {
         id: "2",
-        title: "Institutional Security",
-        text: "Multi-party computation (MPC) custody solutions with cross-chain interoperability and trustless settlement protocols providing enterprise-grade security for digital asset transactions.",
+        title: "FORTRESS-LEVEL SECURITY",
+        text: "MPC custody with cross-chain atomic settlements. Enterprise-grade protection for every digital asset transaction.",
     },
 ];
 
