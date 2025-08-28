@@ -55,10 +55,6 @@ export default function TrackYourCrypto() {
                   alt="Copym App Interface" 
                   className="w-40 lg:w-56 xl:w-64 h-auto drop-shadow-2xl relative z-10"
                 />
-                {/* Download Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-emerald-600 rounded-full p-4 shadow-xl hover:bg-emerald-700 transition-colors duration-300 z-20">
-                  <Download className="w-7 h-7 text-white" />
-                </div>
               </div>
             </div>
           </div>
