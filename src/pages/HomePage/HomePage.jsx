@@ -2,6 +2,7 @@ import Hero from "./sections/Hero";
 import CurvedSectionDivider from "./sections/CurvedSectionDivider";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
 import AIInvestingSection from "./sections/AIInvestingSection";
+import RWAAssetsSection from "./sections/RWAAssetsSection";
 import AuditSection from "./sections/AuditSection";
 import FAQSection from "./sections/FAQSection";
 import NewsletterSection from "./sections/NewsletterSection";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <CurvedSectionDivider />
       <TrackYourCrypto />
       <AIInvestingSection />
+      <RWAAssetsSection />
       <AuditSection />
       <FAQSection />
       <Testimonials />

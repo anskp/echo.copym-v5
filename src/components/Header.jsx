@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
+import Silk from './Silk';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -124,7 +125,18 @@ export default function Header() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  <div className="dropdown-grid">
+                  {/* Silk Background */}
+                  <div className="absolute inset-0 opacity-10">
+                    <Silk
+                      speed={2}
+                      scale={1.5}
+                      color="#ffffff"
+                      noiseIntensity={0.8}
+                      rotation={0.1}
+                    />
+                  </div>
+                  
+                  <div className="dropdown-grid relative z-10">
                     {navigationData[navItem].map((item, index) => (
                       <Link
                         key={index}
@@ -221,7 +233,7 @@ export default function Header() {
           
           {/* Menu Container */}
           <motion.div 
-              className="absolute top-20 left-4 right-4 bg-[#e0f2fe] backdrop-blur-md rounded-2xl border border-[rgba(0,0,0,0.1)] overflow-hidden max-h-[80vh] flex flex-col"
+              className="absolute top-20 left-4 right-4 bg-gradient-to-br from-emerald-500 to-emerald-600 backdrop-blur-md rounded-2xl border border-[rgba(255,255,255,0.2)] overflow-hidden max-h-[80vh] flex flex-col"
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -237,7 +249,7 @@ export default function Header() {
                   transition={{ delay: index * 0.1, duration: 0.3 }}
                     className="mb-6 last:mb-0"
                   >
-                    <h3 className="text-[#1e40af] font-semibold text-lg mb-4">{navItem}</h3>
+                    <h3 className="text-white font-semibold text-lg mb-4">{navItem}</h3>
                     <div className="space-y-3">
                           {navigationData[navItem].map((item, itemIndex) => (
                             <Link
@@ -247,7 +259,7 @@ export default function Header() {
                               onClick={() => setIsMenuOpen(false)}
                             >
                               <motion.div
-                            className="flex items-start gap-4 p-4 rounded-xl bg-[rgba(255,255,255,0.03)] border border-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.08)] transition-all duration-200"
+                            className="flex items-start gap-4 p-4 rounded-xl bg-[rgba(255,255,255,0.1)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-200"
                                 initial={{ opacity: 0, x: -10 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ delay: itemIndex * 0.05, duration: 0.2 }}
@@ -262,10 +274,10 @@ export default function Header() {
                               />
                                   </div>
                                   <div className="flex-1 min-w-0">
-                              <h4 className="font-semibold text-[#1e40af] text-sm leading-tight mb-1">
+                              <h4 className="font-semibold text-white text-sm leading-tight mb-1">
                                       {item.title}
                                     </h4>
-                              <p className="text-xs text-[#6b7280] leading-relaxed line-clamp-2">
+                              <p className="text-xs text-white/80 leading-relaxed line-clamp-2">
                                       {item.description}
                                     </p>
                                 </div>
@@ -278,7 +290,7 @@ export default function Header() {
             </div>
             
               {/* Mobile Menu Footer */}
-              <div className="border-t border-[rgba(255,255,255,0.1)] bg-[rgba(255,255,255,0.03)] px-4 py-4 flex-shrink-0">
+              <div className="border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] px-4 py-4 flex-shrink-0">
                 {/* Mobile Download Button */}
                 <div className="mb-4">
                   <button className="btn-gradient w-full flex items-center justify-center px-6 py-5 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg rounded-full" style={{ minHeight: '56px' }}>
@@ -289,7 +301,7 @@ export default function Header() {
                   </button>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="text-sm text-[#6b7280]">
+                  <div className="text-sm text-white/60">
                     © 2024 Copym
                   </div>
                 </div>
