@@ -11,6 +11,7 @@ import PortfolioBreakdown from "./design/coracard2";
 import PortfolioEventsCard from "./design/coracard3";
 import StepRectangles from "./design/stackedcora";
 import SolCard from "./design/solcard";
+import DailyAI from "./design/daily-ai";
 
 const Benefits = () => {
   return (
@@ -42,20 +43,7 @@ const Benefits = () => {
                 </p>
               </div>
               <div className="bg-gray-800/60 rounded-xl p-4 border border-gray-600/50 min-w-[280px]">
-                <div className="flex items-center gap-3 mb-2">
-                  <div className="w-7 h-7 bg-gray-700 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">🍎</span>
-                  </div>
-                  <span className="text-green-400 font-semibold text-sm">is up +3.63%</span>
-                </div>
-                <p className="text-gray-300 text-sm">
-                  Apple shares are trading higher after the company announced its Vision Pro headset will be available in the US Feb 2.
-                </p>
-                <div className="flex gap-1 mt-2">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
-                </div>
+                <DailyAI />
               </div>
             </div>
 
@@ -73,14 +61,11 @@ const Benefits = () => {
             </div>
 
             {/* Middle-Center (Top): "Real-Time Alerts" */}
-            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-2">Real-Time Alerts</h3>
-              <p className="text-gray-300 text-sm mb-3">
-                Stay ahead with custom notifications for price changes, significant events, and end-of-day updates tailored to your portfolio.
-              </p>
-              
+            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50">
               {/* Stacked Cards Component */}
-              
+              <div className="scale-75 transform -m-6">
+                <PortfolioEventsCard />
+              </div>
             </div>
 
             {/* Middle-Right: "COPYM Direct" */}
@@ -90,34 +75,9 @@ const Benefits = () => {
                 Stay connected with real-time updates and official announcements directly from companies you follow.
               </p>
               
-              {/* Mobile Interface Mockup */}
-              <div className="bg-gray-800/60 rounded-xl p-3 border border-gray-600/50">
-                <div className="text-white font-bold mb-2 text-sm">> DIRECT</div>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">00</span>
-                    </div>
-                    <span className="text-gray-300 text-xs">Financial statement</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">📄</span>
-                    </div>
-                    <span className="text-gray-300 text-xs">Press releases</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">📰</span>
-                    </div>
-                    <span className="text-gray-300 text-xs">Company updates</span>
-                  </div>
-                </div>
-                <div className="mt-3 flex justify-end">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">T</span>
-                  </div>
-                </div>
+              {/* PortfolioBreakdown Component */}
+              <div className="scale-75 transform -m-6">
+                <PortfolioBreakdown />
               </div>
             </div>
 
