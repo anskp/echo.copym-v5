@@ -17,7 +17,7 @@ const AboutUs = () => {
                 <div className="absolute inset-0 opacity-30">
                     <LavaLamp />
                 </div>
-
+                
                 {/* Background Pattern */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
                 
