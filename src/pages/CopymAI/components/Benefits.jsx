@@ -12,6 +12,7 @@ import PortfolioEventsCard from "./design/coracard3";
 import StepRectangles from "./design/stackedcora";
 import SolCard from "./design/solcard";
 import DailyAI from "./design/daily-ai";
+import Graph from "./design/graph";
 
 const Benefits = () => {
   return (
@@ -89,49 +90,20 @@ const Benefits = () => {
                   <p className="text-gray-300 text-sm">
                    Stay ahead with custom notifications for price changes, significant events, and end-of-day updates tailored to your portfolio.</p>
                 </div>
-                <div className="scale-75 transform -m-6">
-                <StepRectangles />
-              </div>
+                                <div className="scale-76 transform -m-28">
+                  <StepRectangles />
+                </div>
               </div>
             </div>
 
-            {/* Bottom-Center: Visual for "Custom Price Alerts" */}
+            {/* Bottom-Center: Graph Component */}
             <div className="col-span-5 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              {/* ADBE Card */}
-              <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 rounded-xl p-3 border border-gray-600/50 mb-3">
-                <div className="flex items-center justify-between mb-1">
-                  <span className="text-white font-bold text-sm">ADBE</span>
-                  <div className="flex items-center gap-1">
-                    <span className="text-green-400 font-semibold text-xs">+0.90</span>
-                    <div className="flex gap-0.5">
-                      <div className="w-1 h-1 bg-green-400 rounded-full"></div>
-                      <div className="w-1 h-1 bg-green-400 rounded-full"></div>
-                    </div>
-                  </div>
-                </div>
-                <div className="text-white font-bold text-lg mb-1">$455.60</div>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-300 text-xs">Adobe Inc.</span>
-                  <div className="flex items-center gap-1">
-                    <button className="w-5 h-5 bg-green-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xs">+</span>
-                    </button>
-                    <Bell className="w-3 h-3 text-gray-400" />
-                  </div>
-                </div>
-              </div>
-              
-              {/* Price Alert Notification */}
-              <div className="bg-green-500/20 rounded-lg h-[5rem] p-2 border border-green-500/30 flex items-center gap-2">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">Δ</span>
-                </div>
-                <div className="flex-1">
-                  <div className="text-white font-semibold text-sm">Price alert</div>
-                </div>
-                <div className="w-5 h-5 bg-gray-700 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-xs">A</span>
-                </div>
+              <h3 className="text-xl font-bold text-white mb-3">Market Analytics</h3>
+              <p className="text-gray-300 text-sm mb-4">
+                Real-time market data visualization with cryptocurrency performance tracking.
+              </p>
+              <div className="flex justify-center items-center scale-75 transform -m-6">
+                <Graph />
               </div>
             </div>
 
