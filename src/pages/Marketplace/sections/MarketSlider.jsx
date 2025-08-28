@@ -453,14 +453,14 @@ const MarketplaceGlimpse = () => {
            >
              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
                <span className="text-gray-900">READY TO BUILD YOUR </span>
-               <span className="text-green-600">FUTURE PORTFOLIO?</span>
+               <span className="text-emerald-600">FUTURE PORTFOLIO?</span>
              </h2>
              <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
                Join thousands of investors accessing exclusive real-world assets. The full marketplace awaits.
              </p>
              <Link 
                to="/marketplace"
-               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-green-500 hover:bg-green-600 text-white font-bold rounded-2xl shadow-2xl hover:shadow-green-500/25 transition-all duration-300 transform hover:scale-105"
+               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
              >
                Explore the Full Marketplace
                <ArrowRight className="w-5 h-5" />
