@@ -4,6 +4,7 @@ import {
   User, Mail, Building2, Briefcase, DollarSign, MapPin,
   ShieldCheck, CheckCircle, LinkIcon, FileText, Layers, ArrowLeft
 } from "lucide-react";
+import Silk from "../../components/Silk";
 
 /**
  * Copym — RWA Tokenized Marketplace
@@ -185,8 +186,8 @@ export default function Typeform() {
             }
             
             if (!value) {
-              setError(`${f.label} is required.`);
-              return false;
+            setError(`${f.label} is required.`);
+            return false;
             }
           }
         }
@@ -218,6 +219,16 @@ export default function Typeform() {
   return (
     <div className="min-h-screen text-white flex items-center justify-center px-4 py-2">
       <div className="relative w-full max-w-4xl group bg-blue-600 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
+        {/* Silk Background */}
+        <div className="absolute inset-0 opacity-15">
+          <Silk
+            speed={2}
+            scale={1.5}
+            color="#ffffff"
+            noiseIntensity={0.8}
+            rotation={0.1}
+          />
+        </div>
         
                 {/* Enhanced Brand */}
         <div className="absolute top-8 left-8 flex items-center gap-4 z-10">
@@ -557,17 +568,17 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
 
             // Handle regular input fields
             return (
-              <motion.input
-                key={f.key}
+            <motion.input
+              key={f.key}
                 type={f.key === "email" ? "email" : "text"}
                 value={fieldValue}
                 onChange={onChangeFunction}
-                placeholder={f.label}
+              placeholder={f.label}
                 className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-white focus:bg-white/20 transition-all duration-200 text-lg`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-              />
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.1 }}
+            />
             );
           })}
         </motion.div>
