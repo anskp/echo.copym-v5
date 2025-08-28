@@ -16,6 +16,7 @@ import { BackgroundCircles, Gradient } from "./design/Hero";
 import Generating from "./Generating";
 import Notification from "./Notification";
 import Section from "./Section";
+import StepRectangles from "./design/meetcora1";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
@@ -149,7 +150,12 @@ const Hero = () => {
 
           {/* Right Grid - Phone Images */}
           <div ref={phoneRef} className="relative z-1 flex items-center justify-center">
-            <div className="flex gap-2 items-center">
+            <div className="flex gap-2 items-center relative">
+              {/* Meet Cora Component - Positioned on top */}
+              <div className="absolute -top-[5rem] lg:top-[5rem] left-1/2 transform -translate-x-1/2 -translate-y-20 z-50 scale-75">
+                <StepRectangles />
+              </div>
+              
               <img
                 src={heroPhone}
                 className="w-48 mt-48 scale-[2.1] -mb-64 h-auto pointer-events-none select-none drop-shadow-2xl"
