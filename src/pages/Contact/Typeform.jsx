@@ -218,7 +218,7 @@ export default function Typeform() {
 
   return (
     <div className="min-h-screen text-white flex items-center justify-center px-4 py-2">
-      <div className="relative w-full max-w-4xl group bg-blue-600 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
+      <div className="relative w-full max-w-[90rem] group bg-blue-600 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
         {/* Silk Background */}
         <div className="absolute inset-0 opacity-15">
           <Silk
@@ -243,7 +243,7 @@ export default function Typeform() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="text-center max-w-4xl mx-auto"
+                className="text-center max-w-7xl mx-auto"
               >
                 {/* Enhanced Section Header */}
                 <motion.div 
@@ -263,11 +263,11 @@ export default function Typeform() {
                     <span className="text-black">TOKENIZE YOUR ASSETS?</span>
                   </h1>
                   
-                  <p className="text-xl text-black/80 max-w-3xl mx-auto mb-4">
+                  <p className="text-xl text-black/80 max-w-4xl mx-auto mb-4">
                     This form takes only <span className="font-bold text-white bg-black/20 px-2 py-1 rounded-lg">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
                   </p>
                   
-                  <p className="text-lg text-black/70 max-w-2xl mx-auto">
+                  <p className="text-lg text-black/70 max-w-3xl mx-auto">
                     Join the future of Real World Asset tokenization with Copym.
                   </p>
                 </motion.div>
@@ -584,7 +584,7 @@ function ThankYou() {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="text-center max-w-2xl mx-auto"
+      className="text-center max-w-4xl mx-auto"
     >
       <motion.div 
         className="mx-auto w-24 h-24 rounded-3xl bg-white grid place-items-center shadow-2xl mb-8"
