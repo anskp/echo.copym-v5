@@ -23,12 +23,12 @@ const Benefits = () => {
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight anton-regular mb-6">
-              <span className="text-white">AI FEATURES</span>
+              <span className="text-white">CORA AI</span>
               <br />
-              <span className="text-green-500">OVERVIEW</span>
+              <span className="text-green-500">POWERS YOUR TRADING</span>
             </h2>
             <p className="text-white/80 text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4">
-              Revolutionizing Real-World Asset Investment with AI and Blockchain Technology
+              Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
             </p>
           </div>
 
