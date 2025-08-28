@@ -1,5 +1,6 @@
 import React from 'react';
 import { Shield, Lock, FileCheck, AlertCircle, ArrowRight } from 'lucide-react';
+import Silk from '../../../components/Silk';
 
 const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
   return (
@@ -20,18 +21,29 @@ export default function CurvedSectionDivider() {
   return (
     <section className="relative">
       {/* Main Content */}
-      <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+        {/* Silk Background */}
+        <div className="absolute inset-0 opacity-15">
+          <Silk
+            speed={2}
+            scale={1.5}
+            color="#ffffff"
+            noiseIntensity={0.8}
+            rotation={0.1}
+          />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular">
               <span className="text-white">Own. Earn. </span>
-              <span className="text-black">Explore. Trade.</span>
+              <span className="text-emerald-300">Explore. Trade.</span>
             </h2>
           </div>
 
           {/* Feature Cards Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
             <FeatureCard
               icon={Shield}
               title="Own a Piece of Big Investments"

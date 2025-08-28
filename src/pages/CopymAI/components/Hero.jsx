@@ -1,8 +1,13 @@
 import React, { useRef } from "react";
 import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 import { curve, robot } from "../assets";
+import heroPhoneTilted from "../assets/hero/hero-phone-tilted.png";
+import heroPhone from "../assets/hero/hero-phone.png";
 import { heroIcons } from "../constants";
 import "./HeroIconsBlack.css";
 import Button from "./Button";
@@ -14,6 +19,7 @@ import Section from "./Section";
 
 const Hero = () => {
   const parallaxRef = useRef(null);
+  const phoneRef = useRef(null);
 
   // Add CSS animation styles
   React.useEffect(() => {
@@ -29,6 +35,48 @@ const Hero = () => {
     `;
     document.head.appendChild(style);
     return () => document.head.removeChild(style);
+  }, []);
+
+  // Phone animation effect
+  React.useEffect(() => {
+    // Wait for the next tick to ensure DOM is ready
+    const timer = setTimeout(() => {
+      if (phoneRef.current) {
+        gsap.fromTo(
+          phoneRef.current,
+          { y: 250, opacity: 0, scale: 0.95, rotate: 2 },
+          {
+            y: 0,
+            opacity: 1,
+            scale: 1,
+            rotate: 0,
+            ease: 'power3.out',
+            duration: 1.5,
+            delay: 0.5,
+            immediateRender: false,
+            scrollTrigger: {
+              trigger: phoneRef.current,
+              start: 'top 90%',
+              end: 'top 40%',
+              scrub: 0.6,
+              once: false
+            }
+          }
+        );
+      }
+    }, 100);
+
+    return () => {
+      clearTimeout(timer);
+      // Clean up ScrollTrigger
+      if (phoneRef.current) {
+        ScrollTrigger.getAll().forEach(trigger => {
+          if (trigger.vars.trigger === phoneRef.current) {
+            trigger.kill();
+          }
+        });
+      }
+    };
   }, []);
 
   return (
@@ -62,7 +110,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="body-1 mb-6 text-black text-left lg:mb-8">
+            <p className="body-1 mb-6 text-black text-left lg:mb-6 ">
               Our AI Agent has shown <span className="text-color-1 font-bold">23% better accuracy</span> in predicting asset appreciation vs top market tools. 
               Experience the future of finance with{" "}
               <span className="inline-block relative font-semibold">
@@ -79,17 +127,17 @@ const Hero = () => {
             </p>
 
             {/* Market Potential Stats */}
-            <div className="flex flex-wrap gap-8 mb-8">
+            <div className="flex flex-wrap gap-8 mb-4">
               <div className="text-left animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <div className="text-3xl font-bold text-color-1 mb-2">$16T</div>
+                <div className="text-2xl font-bold text-color-1 mb-1">$16T</div>
                 <div className="text-sm text-black">Total RWA value by 2025</div>
               </div>
               <div className="text-left animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <div className="text-3xl font-bold text-color-4 mb-2">43%</div>
+                <div className="text-2xl font-bold text-color-4 mb-1">43%</div>
                 <div className="text-sm text-black">Market CAGR</div>
               </div>
               <div className="text-left animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                <div className="text-3xl font-bold text-color-1 mb-2">$1.5B</div>
+                <div className="text-2xl font-bold text-color-1 mb-1">$1.5B</div>
                 <div className="text-sm text-black">Year 1 target market</div>
               </div>
             </div>
@@ -99,20 +147,20 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Right Grid - Robot Image */}
-          <div className="relative z-1 flex items-center justify-center">
-            <img
-              src={robot}
-              className="w-full max-w-6xl pointer-events-none select-none animate-robot-turn"
-              width={1024}
-              height={490}
-              alt="AI"
-              style={{
-                filter: 'brightness(1.1) contrast(1.2)',
-                backgroundColor: 'transparent',
-                animation: 'robotTurn 6s ease-in-out infinite'
-              }}
-            />
+          {/* Right Grid - Phone Images */}
+          <div ref={phoneRef} className="relative z-1 flex items-center justify-center">
+            <div className="flex gap-2 items-center">
+              <img
+                src={heroPhone}
+                className="w-48 mt-48 scale-[2.1] -mb-64 h-auto pointer-events-none select-none drop-shadow-2xl"
+                alt="Hero Phone"
+              />
+              {/* <img
+                src={heroPhoneTilted}
+                className="w-48 h-auto pointer-events-none select-none"
+                alt="Hero Phone Tilted"
+              /> */}
+            </div>
           </div>
         </div>
       </div>

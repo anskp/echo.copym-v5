@@ -4,6 +4,7 @@ import {
   User, Mail, Building2, Briefcase, DollarSign, MapPin,
   ShieldCheck, CheckCircle, LinkIcon, FileText, Layers, ArrowLeft
 } from "lucide-react";
+import Silk from "../../components/Silk";
 
 /**
  * Copym — RWA Tokenized Marketplace
@@ -31,7 +32,7 @@ const THEME = {
 const steps = [
   {
     id: "tokenGoal",
-    label: "First, what are your Tokenization goals?",
+    label: "What are your Tokenization goals?",
     helper: "Choose the area you want to tokenize with Copym",
     type: "segmented",
     icon: Layers,
@@ -45,12 +46,31 @@ const steps = [
       "Other",
     ],
   },
-  { id: "companyName", label: "What is the name of your company?", type: "text", icon: Building2, required: true },
-  { id: "firstName", label: "What is your First Name?", type: "text", icon: User, required: true },
-  { id: "lastName", label: "What is your Last Name?", type: "text", icon: User, required: true },
-  { id: "email", label: "What is your email?", type: "email", icon: Mail, required: true, validate: v => /\S+@\S+\.\S+/.test(v || "") },
-  { id: "title", label: "What is your title?", type: "text", icon: Briefcase, required: true },
-  { id: "website", label: "What is your website?", type: "url", icon: LinkIcon, required: true, validate: v => /^https?:\/\//i.test(v || "") },
+  {
+    id: "contactInfo",
+    label: "Your Contact Information",
+    type: "group",
+    icon: User,
+    required: true,
+    fields: [
+      { key: "firstName", label: "First Name", required: true },
+      { key: "lastName", label: "Last Name", required: true },
+      { key: "email", label: "Email", required: true },
+      { key: "phone", label: "Phone Number", required: false },
+    ],
+  },
+  {
+    id: "companyInfo",
+    label: "Company Information",
+    type: "group",
+    icon: Building2,
+    required: true,
+    fields: [
+      { key: "companyName", label: "Company Name", required: true },
+      { key: "title", label: "Your Title", required: true },
+      { key: "website", label: "Website", required: true },
+    ],
+  },
   {
     id: "industry",
     label: "What Industry is your company in?",
@@ -68,65 +88,38 @@ const steps = [
     ],
   },
   {
-    id: "summary",
-    label: "Please give us a brief summary about the company",
+    id: "companyDetails",
+    label: "Tell us about your company",
     type: "textarea",
     icon: FileText,
     required: true,
-  },
-  {
-    id: "traction",
-    label: "Please share any applicable traction on the company",
-    type: "textarea",
-    icon: FileText,
-    required: true,
-  },
-  {
-    id: "raised",
-    label: "How much $ has the company raised to date? (In Millions)",
-    helper: "Use decimals if under $1M, e.g., 0.5",
-    type: "number",
-    icon: DollarSign,
-    required: true,
+    placeholder: "Brief summary about your company, traction, and funding raised to date..."
   },
   {
     id: "address",
-    label: "What is the company's address?",
+    label: "Company Address",
     type: "group",
     icon: MapPin,
     required: true,
     fields: [
       { key: "street", label: "Address", required: true },
-      { key: "line2", label: "Address line 2", required: false },
       { key: "city", label: "City/Town", required: true },
-      { key: "state", label: "State/Region/Province", required: true },
+      { key: "state", label: "State/Region", required: true },
       { key: "zip", label: "Zip/Post code", required: true },
       { key: "country", label: "Country", required: true },
     ],
   },
   {
-    id: "incUS",
-    label: "Is the company incorporated in the U.S?",
-    type: "segmented",
+    id: "companyStatus",
+    label: "Company Status",
+    type: "group",
     icon: ShieldCheck,
     required: true,
-    options: ["Yes", "No"],
-  },
-  {
-    id: "productAvailable",
-    label: "Is your product available (for sale) in market?",
-    type: "segmented",
-    icon: ShieldCheck,
-    required: true,
-    options: ["Yes", "No"],
-  },
-  {
-    id: "revenue",
-    label: "Is your company generating revenue?",
-    type: "segmented",
-    icon: ShieldCheck,
-    required: true,
-    options: ["Yes", "No"],
+    fields: [
+      { key: "incUS", label: "Incorporated in U.S?", type: "segmented", options: ["Yes", "No"], required: true },
+      { key: "productAvailable", label: "Product available in market?", type: "segmented", options: ["Yes", "No"], required: true },
+      { key: "revenue", label: "Generating revenue?", type: "segmented", options: ["Yes", "No"], required: true },
+    ],
   },
   {
     id: "raiseStructure",
@@ -147,20 +140,12 @@ const steps = [
 
 const initialForm = {
   tokenGoal: "",
-  companyName: "",
-  firstName: "",
-  lastName: "",
-  email: "",
-  title: "",
-  website: "",
+  contactInfo: { firstName: "", lastName: "", email: "", phone: "" },
+  companyInfo: { companyName: "", title: "", website: "" },
   industry: "",
-  summary: "",
-  traction: "",
-  raised: "",
-  address: { street: "", line2: "", city: "", state: "", zip: "", country: "" },
-  incUS: "",
-  productAvailable: "",
-  revenue: "",
+  companyDetails: "",
+  address: { street: "", city: "", state: "", zip: "", country: "" },
+  companyStatus: { incUS: "", productAvailable: "", revenue: "" },
   raiseStructure: "",
 };
 
@@ -174,17 +159,36 @@ export default function Typeform() {
   const step = useMemo(() => steps[stepIndex], [stepIndex]);
 
   const setValue = (id, value) => setForm(prev => ({ ...prev, [id]: value }));
+  const setContactInfo = (k, v) =>
+    setForm(prev => ({ ...prev, contactInfo: { ...prev.contactInfo, [k]: v } }));
+  const setCompanyInfo = (k, v) =>
+    setForm(prev => ({ ...prev, companyInfo: { ...prev.companyInfo, [k]: v } }));
   const setAddress = (k, v) =>
     setForm(prev => ({ ...prev, address: { ...prev.address, [k]: v } }));
+  const setCompanyStatus = (k, v) =>
+    setForm(prev => ({ ...prev, companyStatus: { ...prev.companyStatus, [k]: v } }));
 
   const validateCurrent = () => {
     setError("");
     if (step.required) {
       if (step.type === "group") {
         for (const f of step.fields) {
-          if (f.required && !form.address[f.key]) {
+          if (f.required) {
+            let value;
+            if (step.id === "contactInfo") {
+              value = form.contactInfo[f.key];
+            } else if (step.id === "companyInfo") {
+              value = form.companyInfo[f.key];
+            } else if (step.id === "address") {
+              value = form.address[f.key];
+            } else if (step.id === "companyStatus") {
+              value = form.companyStatus[f.key];
+            }
+            
+            if (!value) {
             setError(`${f.label} is required.`);
             return false;
+            }
           }
         }
       } else if (!form[step.id]) {
@@ -214,7 +218,17 @@ export default function Typeform() {
 
   return (
     <div className="min-h-screen text-white flex items-center justify-center px-4 py-2">
-      <div className="relative w-full max-w-4xl group bg-emerald-500 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
+      <div className="relative w-full max-w-4xl group bg-blue-600 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
+        {/* Silk Background */}
+        <div className="absolute inset-0 opacity-15">
+          <Silk
+            speed={2}
+            scale={1.5}
+            color="#ffffff"
+            noiseIntensity={0.8}
+            rotation={0.1}
+          />
+        </div>
         
                 {/* Enhanced Brand */}
         <div className="absolute top-8 left-8 flex items-center gap-4 z-10">
@@ -352,6 +366,9 @@ export default function Typeform() {
                     address={form.address}
                     onChange={setValue}
                     onAddressChange={setAddress}
+                    onContactInfoChange={setContactInfo}
+                    onCompanyInfoChange={setCompanyInfo}
+                    onCompanyStatusChange={setCompanyStatus}
                   />
                 </div>
 
@@ -409,7 +426,7 @@ export default function Typeform() {
   );
 }
 
-function Question({ step, value, address, onChange, onAddressChange }) {
+function Question({ step, value, address, onChange, onAddressChange, onContactInfoChange, onCompanyInfoChange, onCompanyStatusChange }) {
   return (
     <>
       {/* Enhanced text / email / url / number inputs */}
@@ -447,7 +464,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
             value={value || ""}
             onChange={(e) => onChange(step.id, e.target.value)}
             className="w-full px-6 py-5 text-lg rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none resize-none focus:border-white focus:bg-white/20 transition-all duration-200"
-            placeholder="Share your thoughts here..."
+            placeholder={step.placeholder || "Share your thoughts here..."}
             autoFocus
           />
         </motion.div>
@@ -492,7 +509,7 @@ function Question({ step, value, address, onChange, onAddressChange }) {
         </motion.div>
       )}
 
-      {/* Enhanced grouped address */}
+      {/* Enhanced grouped fields */}
       {step.type === "group" && (
         <motion.div 
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6"
@@ -500,19 +517,70 @@ function Question({ step, value, address, onChange, onAddressChange }) {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, staggerChildren: 0.1 }}
         >
-          {step.fields.map((f, index) => (
+          {step.fields.map((f, index) => {
+            // Get the appropriate value and onChange function based on step type
+            let fieldValue = "";
+            let onChangeFunction = null;
+            
+            if (step.id === "contactInfo") {
+              fieldValue = value?.[f.key] || "";
+              onChangeFunction = (e) => onContactInfoChange(f.key, e.target.value);
+            } else if (step.id === "companyInfo") {
+              fieldValue = value?.[f.key] || "";
+              onChangeFunction = (e) => onCompanyInfoChange(f.key, e.target.value);
+            } else if (step.id === "address") {
+              fieldValue = address?.[f.key] || "";
+              onChangeFunction = (e) => onAddressChange(f.key, e.target.value);
+            } else if (step.id === "companyStatus") {
+              fieldValue = value?.[f.key] || "";
+              onChangeFunction = (val) => onCompanyStatusChange(f.key, val);
+            }
+
+            // Handle segmented fields within groups
+            if (f.type === "segmented") {
+              return (
+                <motion.div key={f.key} className="sm:col-span-2">
+                  <label className="block text-white/80 text-sm font-medium mb-3">{f.label}</label>
+                  <div className="flex gap-3">
+                    {f.options.map((opt) => {
+                      const active = fieldValue === opt;
+                      return (
+                        <motion.button
+                          key={opt}
+                          onClick={() => onChangeFunction(opt)}
+                          className={`flex-1 px-4 py-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${
+                            active
+                              ? "border-white bg-white text-emerald-500 shadow-lg"
+                              : "border-white/30 bg-white/10 backdrop-blur-sm hover:bg-white/20 hover:border-white/50 text-white"
+                          }`}
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          {opt}
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              );
+            }
+
+            // Handle regular input fields
+            return (
             <motion.input
               key={f.key}
-              type="text"
-              value={address?.[f.key] || ""}
-              onChange={(e) => onAddressChange(f.key, e.target.value)}
+                type={f.key === "email" ? "email" : "text"}
+                value={fieldValue}
+                onChange={onChangeFunction}
               placeholder={f.label}
-              className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-white focus:bg-white/20 transition-all duration-200 text-lg ${f.key === 'line2' ? 'sm:col-span-2' : ''}`}
+                className={`px-6 py-4 rounded-2xl bg-white/10 backdrop-blur-sm border-2 border-white/30 placeholder-white/50 text-white outline-none focus:border-white focus:bg-white/20 transition-all duration-200 text-lg`}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
             />
-          ))}
+            );
+          })}
         </motion.div>
       )}
     </>
