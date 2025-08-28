@@ -230,17 +230,7 @@ export default function Typeform() {
           />
         </div>
         
-                {/* Enhanced Brand */}
-        <div className="absolute top-8 left-8 flex items-center gap-4 z-10">
-          <img 
-            src="/assets/copym/png/Copym-05-1.png" 
-            alt="Copym Logo" 
-            className="w-12 h-12 object-contain"
-          />
-          <div className="leading-tight">
-            <p className="font-black tracking-wide text-xl text-blue-900">COPYM</p>
-          </div>
-        </div>
+        
 
         {/* Main Content */}
         <div className="min-h-[300px] pt-12 relative z-10">
@@ -289,14 +279,14 @@ export default function Typeform() {
                   transition={{ duration: 0.6, delay: 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <motion.button
-                    onClick={() => setShowForm(true)}
-                    className="px-12 py-5 rounded-2xl bg-white text-emerald-500 font-bold text-xl shadow-2xl border border-white hover:bg-gray-50 transition-all duration-300"
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.98 }}
-                  >
-                    Get Started →
-                  </motion.button>
+                                     <motion.button
+                     onClick={() => setShowForm(true)}
+                     className="px-12 py-5 rounded-full bg-white text-emerald-500 font-bold text-xl shadow-2xl border border-white hover:bg-gray-50 transition-all duration-300"
+                     whileHover={{ scale: 1.05, y: -2 }}
+                     whileTap={{ scale: 0.98 }}
+                   >
+                     Get Started →
+                   </motion.button>
                   
                   <p className="text-sm text-black/60 mt-4 font-medium">Secure & confidential • Enterprise-grade encryption</p>
                 </motion.div>

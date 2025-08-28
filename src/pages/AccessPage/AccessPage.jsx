@@ -295,7 +295,7 @@ export default function AccessPage() {
 
             {/* Glass Pill Layer - Curved div style */}
             <div 
-              className="relative w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8"
+              className="relative w-full max-w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8 px-6"
               style={{
                 WebkitBackdropFilter: 'blur(10px)',
                 backdropFilter: 'blur(10px)'
@@ -682,10 +682,10 @@ export default function AccessPage() {
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-            <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
-              <Sparkles className="mr-3 w-5 h-5" />
+            <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
+              <Sparkles className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
               Get Your Access Pass Now
-              <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
         </div>
