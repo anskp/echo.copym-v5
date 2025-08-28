@@ -70,7 +70,7 @@ export default function Header() {
         iconBg: "icon-accesspass"
       },
       {
-        title: "Copy AI",
+        title: "CORA AI",
         description: "Advanced AI-powered content generation and automation tools.",
         path: "/copym-ai",
         image: "/assets/Images/navbar/4.png",
