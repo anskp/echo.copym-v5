@@ -49,11 +49,11 @@ const Services = () => {
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <div className="bg-green-50 p-4 opacity-90 rounded-2xl mb-6 border border-green-200">
                   <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-green-800 uppercase anton-regular">
-                    <span className="text-gray-900">COPYM-AI </span>
-                    <span className="text-emerald-600">Real Estate</span>
+                    <span className="text-gray-900">Cora AI </span>
+                    <span className="text-emerald-600">Real Estate Intelligence</span>
                   </h4>
                   <p className="body-2 mb-[3rem] text-green-700">
-                    COPYM-AI's proprietary AI models for real estate valuation and rental income prediction, enhanced by RealT's proven tokenization infrastructure.
+                    Transform real estate investment with Cora AI's revolutionary predictive analytics. Our advanced AI algorithms deliver precise property valuations, rental yield forecasts, and market trend predictions, powered by cutting-edge machine learning and blockchain technology.
                   </p>
                 </div>
               </div>
@@ -64,11 +64,11 @@ const Services = () => {
             <div className="p-4 bg-transparent rounded-3xl overflow-hidden lg:min-h-[46rem]">
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="text-xl sm:text-2xl font-black tracking-tight leading-tight mb-4 text-black uppercase anton-regular">
-                  <span className="text-gray-900">COPYM-AI </span>
-                  <span className="text-emerald-600">Smart Contracts</span>
+                  <span className="text-gray-900">Cora AI </span>
+                  <span className="text-emerald-600">Predictive Analytics</span>
                 </h4>
                 <p className="body-2 mb-[2rem] text-black">
-                  COPYM-AI's intelligent smart contract generation and atomic transfer optimization, powered by Algorand's advanced blockchain technology.
+                  Harness the power of Cora AI's advanced machine learning algorithms for real-time market predictions, portfolio optimization, and intelligent investment recommendations across multiple asset classes.
                 </p>
 
                 <ul className="flex items-center justify-between">
