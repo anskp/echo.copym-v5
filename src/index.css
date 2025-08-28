@@ -380,11 +380,7 @@ main {
 }
 
 .copym-ai-page .hero-section {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-  border-radius: 20px;
-  margin: 20px;
-  padding: 40px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  background: transparent;
 }
 
 /* Ensure proper background for CopymAI components */

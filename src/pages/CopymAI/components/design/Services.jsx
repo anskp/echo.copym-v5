@@ -2,7 +2,6 @@ import Typewriter from "typewriter-effect";
 
 import {
   brainwaveWhiteSymbol,
-  copymWhiteIcon,
   copymColoredIcon,
   gradient,
   loading,
@@ -61,7 +60,7 @@ export const VideoChatMessage = ({ isPlaying }) => {
       />
       <div className="absolute left-5 -bottom-[1.125rem] flex items-center justify-center w-[2.25rem] h-[2.25rem] bg-color-4 rounded-[0.75rem]">
         <img
-          src={copymWhiteIcon}
+          src={copymColoredIcon}
           width={46}
           height={46}
           alt="Copym"

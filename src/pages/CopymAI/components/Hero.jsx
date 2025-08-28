@@ -33,31 +33,33 @@ const Hero = () => {
 
   return (
     <Section
-      className="hero-section pt-[12rem] -mt-[5.25rem] md:-mt-[10.55rem]"
+      className="hero-section pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
       id="hero"
     >
-      <div ref={parallaxRef} className="container relative">
+      <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           {/* Left Grid - Content */}
           <div className="relative z-1 text-left">
-            <h1 className="h1 mb-6 text-black text-left">
-              Explore the Possibilities of
+            <h1 className="h1 mb-6 text-left anton-regular">
+              <span className="text-gray-900">Explore the Possibilities of</span>
               <br />
-              <Typewriter
-                options={{
-                  strings: [
-                    "RWA Tokenization",
-                    "AI Compliance",
-                    "DeFi Integration",
-                    "Cross-Chain Intelligence",
-                  ],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
+              <span className="text-emerald-600">
+                <Typewriter
+                  options={{
+                    strings: [
+                      "RWA Tokenization",
+                      "AI Compliance",
+                      "DeFi Integration",
+                      "CrossChain Intelligence",
+                    ],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </span>
             </h1>
 
             <p className="body-1 mb-6 text-black text-left lg:mb-8">
