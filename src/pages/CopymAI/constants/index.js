@@ -24,9 +24,7 @@ import {
     raindrop,
     recording01,
     recording03,
-    roadmap1,
-    roadmap2,
-    roadmap3,
+
     searchMd,
     slack,
     sliders04,
@@ -64,11 +62,7 @@ export const navigation = [{
         title: "How to use",
         url: "#how-to-use",
     },
-    {
-        id: "3",
-        title: "Roadmap",
-        url: "#roadmap",
-    },
+
     {
         id: "4",
         title: "Source Code",
@@ -111,32 +105,7 @@ export const brainwaveServicesIcons = [
     sliders04,
 ];
 
-export const roadmap = [{
-        id: "0",
-        title: "Q1 2024 - Platform Foundation",
-        text: "Established core tokenization infrastructure with regulatory compliance framework. Successfully onboarded initial real-world assets and implemented AI-driven verification systems.",
-        date: "Q1 2024",
-        status: "done",
-        imageUrl: roadmap1,
-        colorful: true,
-    },
-    {
-        id: "1",
-        title: "Q3 2024 - AI Integration & Asset Expansion",
-        text: "Deployed advanced AI investment advisor with predictive analytics. Expanded asset portfolio to 100+ tokenized properties and achieved 5,000+ verified users with enhanced compliance protocols.",
-        date: "Q3 2024",
-        status: "progress",
-        imageUrl: roadmap2,
-    },
-    {
-        id: "2",
-        title: "Q1 2025 - Global Expansion & Mobile Platform",
-        text: "Secured institutional partnerships and launched cross-platform mobile application. Integrated multiple asset classes including commodities, securities, and infrastructure projects with enhanced liquidity features.",
-        date: "Q1 2025",
-        status: "done",
-        imageUrl: roadmap3,
-    },
-];
+
 
 export const collabText =
     "Enterprise-grade platform that transforms real-world assets into digital tokens, connecting traditional finance with blockchain technology for enhanced liquidity, regulatory compliance, and institutional security.";

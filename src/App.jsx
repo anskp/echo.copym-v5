@@ -14,7 +14,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import { Box } from "@mui/material";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Roadmap from './pages/Roadmap/Roadmap';
+
 import Launchkit from './pages/Launchkit/Launchkit';
 import AccessPage from './pages/AccessPage/AccessPage';
 import SplashScreen from './components/SplashScreen';
@@ -84,7 +84,7 @@ function App() {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutUs />} />
-              <Route path="/roadmap" element={<Roadmap />} />
+
               <Route path="/marketplace" element={<Marketplace />} />
               <Route path="/tokenization" element={<TokenizationHub />} />
               <Route path="/launchkit" element={<Launchkit />} />
