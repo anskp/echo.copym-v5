@@ -80,7 +80,9 @@ const Benefits = () => {
               </p>
               
               {/* Stacked Cards Component */}
-              
+              <div className="scale-75 transform -m-6">
+                <StepRectangles />
+              </div>
             </div>
 
             {/* Middle-Right: "COPYM Direct" */}
