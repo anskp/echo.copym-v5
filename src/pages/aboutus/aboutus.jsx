@@ -749,7 +749,7 @@ const AboutUs = () => {
 
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
 
-                            </div>
+        </div>
 
 
 
