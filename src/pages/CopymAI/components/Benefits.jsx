@@ -10,6 +10,7 @@ import CoraNotification from "./design/coracard1";
 import PortfolioBreakdown from "./design/coracard2";
 import PortfolioEventsCard from "./design/coracard3";
 import StepRectangles from "./design/stackedcora";
+import SolCard from "./design/solcard";
 
 const Benefits = () => {
   return (
@@ -30,7 +31,7 @@ const Benefits = () => {
           </div>
 
           {/* Perfect Bento Grid Layout */}
-          <div className="grid grid-cols-12 gap-4 h-[700px]">
+          <div className="grid grid-cols-12 gap-4">
             
             {/* Top Section: "Why is it Moving?" - Spans full width */}
             <div className="col-span-12 bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50 flex items-center justify-between">
@@ -59,34 +60,15 @@ const Benefits = () => {
             </div>
 
             {/* Middle-Left: "Handy Widgets" */}
-            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-3">Handy Widgets</h3>
-              <p className="text-gray-300 text-sm mb-4">
+            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 h-auto">
+              <h3 className="text-xl font-bold text-white mb-2">Handy Widgets</h3>
+              <p className="text-gray-300 text-sm mb-3">
                 Customize your home screen with widgets that display live portfolio data and market trends at a glance.
               </p>
               
-              {/* Widget Stack */}
-              <div className="relative">
-                {/* BTC Widget (Front) */}
-                <div className="bg-gradient-to-br from-purple-900/60 to-blue-900/60 rounded-xl p-3 border border-gray-600/50 mb-2">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-white font-bold text-sm">BTC</span>
-                    <TrendingUp className="w-3 h-3 text-green-400" />
-                  </div>
-                  <div className="text-white font-bold text-lg">$19,606.51</div>
-                  <div className="text-green-400 text-xs">+0.90</div>
-                  <div className="w-full h-0.5 bg-green-400/30 rounded-full mt-1"></div>
-                </div>
-                
-                {/* BNB Widget (Back) */}
-                <div className="bg-gradient-to-br from-red-900/60 to-orange-900/60 rounded-xl p-3 border border-gray-600/50 absolute top-1 left-1 w-full opacity-70">
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="text-white font-bold text-sm">BNB</span>
-                    <TrendingUp className="w-3 h-3 text-red-400 rotate-180" />
-                  </div>
-                  <div className="text-white font-bold text-lg">$312.45</div>
-                  <div className="text-red-400 text-xs">-2.50%</div>
-                </div>
+              {/* SolCard Component */}
+              <div className="scale-75 transform -m-4">
+                <SolCard />
               </div>
             </div>
 
@@ -98,9 +80,7 @@ const Benefits = () => {
               </p>
               
               {/* Stacked Cards Component */}
-              <div className="scale-75 transform -m-6">
-                <StepRectangles />
-              </div>
+              
             </div>
 
             {/* Middle-Right: "COPYM Direct" */}
@@ -141,20 +121,18 @@ const Benefits = () => {
               </div>
             </div>
 
-            {/* Middle-Center (Bottom): "Insider Moves" */}
-            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-3">Insider Moves</h3>
-              <p className="text-gray-300 text-sm">
-                Stay informed on major insider moves, like CEO trades and big sells, for smarter investment decisions.
-              </p>
-            </div>
-
-            {/* Bottom-Left: "Custom Price Alerts" */}
-            <div className="col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
-              <h3 className="text-xl font-bold text-white mb-3">Custom Price Alerts</h3>
-              <p className="text-gray-300 text-sm">
-                Set personalized price alerts for any asset, so you never miss a critical movement in the market.
-              </p>
+            {/* Combined Card: "Insider Moves" & "Custom Price Alerts" */}
+            <div className="col-span-8 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-6 border border-gray-700/50">
+              <div className="grid grid-cols-2 gap-6">
+                <div>
+                  <h3 className="text-xl font-bold text-white mb-3">Real-Time Alerts</h3>
+                  <p className="text-gray-300 text-sm">
+                   Stay ahead with custom notifications for price changes, significant events, and end-of-day updates tailored to your portfolio.                  </p>
+                </div>
+                <div className="scale-75 transform -m-6">
+                <StepRectangles />
+              </div>
+              </div>
             </div>
 
             {/* Bottom-Center: Visual for "Custom Price Alerts" */}
