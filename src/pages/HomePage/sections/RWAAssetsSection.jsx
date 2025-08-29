@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Coins, Building2, Palette, Leaf, ArrowRight } from 'lucide-react';
+import { Building2, Palette, Leaf, ArrowRight } from 'lucide-react';
+import { GiCube } from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function RWAAssetsSection() {
@@ -41,7 +42,7 @@ export default function RWAAssetsSection() {
                {/* Premium Badge */}
                <div className="flex items-center gap-4">
                  <div className="w-14 h-14 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20">
-                   <Coins className="w-7 h-7 text-white" />
+                   <GiCube size={28} className="text-white drop-shadow-lg" />
                  </div>
                  <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
                    <span className="text-sm font-semibold text-white">Real World Assets</span>
