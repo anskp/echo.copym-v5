@@ -3,8 +3,9 @@ import { TrendingUp, Twitter, Linkedin, Github, Mail } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="relative">
+      <div className="relative z-10 bg-black backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="md:col-span-1">
@@ -178,6 +179,7 @@ export default function Footer() {
             <span className="text-gray-400 text-sm">SOC 2 Compliant</span>
           </div>
         </div>
+      </div>
       </div>
     </footer>
   );
