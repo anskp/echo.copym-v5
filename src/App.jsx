@@ -93,8 +93,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/access" element={<AccessPage />} />
             </Routes>
+            <Footer />
           </main>
-          <Footer />
         </Box>
       )}
     </AnimatePresence>
