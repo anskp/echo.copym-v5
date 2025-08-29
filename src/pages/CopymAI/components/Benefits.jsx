@@ -4,7 +4,7 @@ import { benefits } from "../constants";
 import { GradientLight } from "./design/Benefits";
 import Heading from "./Heading";
 import Section from "./Section";
-import { Shield, Lock, FileCheck, AlertCircle, ArrowRight, TrendingUp, Bell, Smartphone, BarChart3, DollarSign } from 'lucide-react';
+import { GiShield, GiLockedChest, GiFiles, GiCompass, GiArrowDunk, GiChart, GiChatBubble, GiSmartphone, GiChart as GiBarChart, GiCoins } from 'react-icons/gi';
 import { useState } from "react";
 import CoraNotification from "./design/coracard1";
 import PortfolioBreakdown from "./design/coracard2";

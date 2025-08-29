@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, Brain } from 'lucide-react';
+import { GiArrowDunk, GiBrain } from 'react-icons/gi';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 export default function AIInvestingSection() {
@@ -11,7 +12,7 @@ export default function AIInvestingSection() {
           <div className="text-center lg:text-left space-y-4 flex-1">
             {/* Section Label */}
             <div className="inline-flex items-center space-x-2 text-green-400 font-medium text-sm">
-              <Brain className="w-4 h-4" />
+              <GiBrain className="w-4 h-4" />
               <span>Copym AI</span>
             </div>
             
@@ -34,7 +35,7 @@ export default function AIInvestingSection() {
                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 See the Reveal
-                <ArrowRight className="ml-2 h-4 w-4" />
+                <GiArrowDunk className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>

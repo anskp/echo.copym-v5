@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Star, QrCode, Download } from "lucide-react";
+import { GiArrowDunk, GiRoundStar, GiCompass } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Silk from "../../../components/Silk";
@@ -88,7 +88,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
       {/* QR Code */}
       <div className="mb-1 p-1 bg-white rounded-md shadow-sm">
         <div className="w-8 h-8 bg-gray-100 rounded-md flex items-center justify-center">
-          <QrCode className="w-4 h-4 text-gray-400" />
+          <GiCompass className="w-4 h-4 text-gray-400" />
         </div>
       </div>
       
@@ -106,7 +106,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
             <span className="font-semibold text-xs">{store}</span>
           </div>
           
-          <Download className="w-2.5 h-2.5" />
+          <GiArrowDunk className="w-2.5 h-2.5" />
         </div>
       </div>
       
@@ -114,7 +114,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
       <div className="mt-1 flex items-center space-x-1">
         <div className="flex">
           {[...Array(5)].map((_, i) => (
-            <Star key={i} className={`w-2.5 h-2.5 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+            <GiRoundStar key={i} className={`w-2.5 h-2.5 ${i < rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
           ))}
         </div>
         <span className="text-xs text-gray-600 ml-1">{rating}.0</span>

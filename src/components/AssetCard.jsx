@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, TrendingUp, ArrowRight } from "lucide-react";
+import { GiCompass, GiChart, GiArrowDunk } from "react-icons/gi";
 
 export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -66,13 +66,13 @@ export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
                 {/* Location & ROI Info */}
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-white/90">
-                    <MapPin className="w-4 h-4 text-green-400" />
+                    <GiMapPin className="w-4 h-4 text-gray-500" />
                     <span className="text-sm font-medium">{asset.location}</span>
                   </div>
-                  <div className="flex items-center gap-2 text-white/90">
-                    <TrendingUp className="w-4 h-4 text-green-400" />
-                    <span className="text-sm font-medium">{asset.expectedRoi || asset.roi} ROI</span>
-                  </div>
+                                     <div className="flex items-center gap-2 text-white/90">
+                     <GiChart className="w-4 h-4 text-green-500" />
+                     <span className="text-sm font-medium">{asset.expectedRoi || asset.roi} ROI</span>
+                   </div>
                 </div>
 
                 {/* Price Display */}
@@ -90,7 +90,7 @@ export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span>View Asset</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <GiArrowDunk className="w-4 h-4" />
                 </motion.button>
               </div>
             </motion.div>

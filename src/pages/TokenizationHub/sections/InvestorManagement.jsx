@@ -2,33 +2,34 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Lock, FileCheck, AlertCircle } from 'lucide-react';
+import { GiPerson, GiShield, GiGlobe, GiArrowDunk } from 'react-icons/gi';
+import Silk from '../../../components/Silk';
 
 export default function InvestorManagement() {
   const features = [
     {
-      icon: Shield,
+      icon: GiPerson,
       title: "Investor Dashboard",
       description: "Comprehensive dashboard for tracking investments, returns, and portfolio performance.",
       color: "from-pink-500 to-teal-500",
       stats: "10K+ Active"
     },
     {
-      icon: Lock,
+      icon: GiShield,
       title: "Portfolio Analytics",
       description: "Advanced analytics and reporting tools for investment performance tracking.",
       color: "from-yellow-500 to-green-500",
       stats: "Real-time"
     },
     {
-      icon: FileCheck,
+      icon: GiGlobe,
       title: "Compliance Management",
       description: "Automated compliance monitoring and regulatory reporting for all investors.",
       color: "from-pink-500 via-blue-500 to-green-500",
       stats: "100% Compliant"
     },
     {
-      icon: AlertCircle,
+      icon: GiPerson,
       title: "Communication Hub",
       description: "Integrated communication tools for investor updates and announcements.",
       color: "from-orange-500 to-red-500",
@@ -88,7 +89,7 @@ export default function InvestorManagement() {
 
               {/* CTA Link */}
               <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200">
-                Learn More <ArrowRight className="ml-1 w-4 h-4" />
+                Learn More <GiArrowDunk className="ml-1 w-4 h-4" />
               </button>
             </motion.div>
           ))}
@@ -98,7 +99,7 @@ export default function InvestorManagement() {
         <div className="text-center mt-16">
           <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
             Manage Investors
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <GiArrowDunk className="ml-2 h-5 w-5" />
           </button>
         </div>
       </div>

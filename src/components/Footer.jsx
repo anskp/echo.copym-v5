@@ -1,5 +1,5 @@
 import React from 'react';
-import { TrendingUp, Twitter, Linkedin, Github, Mail } from 'lucide-react';
+import { GiChart, GiChatBubble, GiLinkedRings, GiNetworkBars, GiMailbox } from 'react-icons/gi';
 
 export default function Footer() {
   return (
@@ -20,10 +20,10 @@ export default function Footer() {
               platform designed for the next generation.
             </p>
             <div className="flex space-x-4">
-              <Twitter className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <Linkedin className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <Github className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <Mail className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <GiChatBubble className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <GiLinkedRings className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <GiNetworkBars className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <GiMailbox className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
             </div>
           </div>
 

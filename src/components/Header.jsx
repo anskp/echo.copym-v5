@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { GiHamburgerMenu, GiCrossedSwords, GiArrowDunk } from 'react-icons/gi';
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import Silk from './Silk';
@@ -210,7 +210,7 @@ export default function Header() {
             className="md:hidden ml-6 text-white hover:text-gray-300 transition-colors duration-200 p-3 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <X className="w-7 h-7" /> : <Menu className="w-7 h-7" />}
+              {isMenuOpen ? <GiCrossedSwords className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
             </button>
           </div>
       </nav>

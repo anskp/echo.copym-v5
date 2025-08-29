@@ -3,31 +3,27 @@ import { motion } from 'framer-motion';
 import { useGSAP } from '../../hooks/useGSAPAnimations';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import {
-  Diamond,
-  Shield,
-  Wallet,
-  Globe,
-  Rocket,
-  Gift,
-  Users,
-  Ticket,
-  FileText,
-  Percent,
-  Image,
-  Calendar,
-  Zap,
-  Vote,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  TrendingUp,
-  Lock,
-  Award,
-  Crown,
-  Sparkles,
-  DollarSign
-} from 'lucide-react';
+import { 
+  GiRocket, 
+  GiPresent, 
+  GiPerson, 
+  GiTicket, 
+  GiShield, 
+  GiWallet, 
+  GiGlobe, 
+  GiDiamonds, 
+  GiFiles, 
+  GiChart, 
+  GiPalette, 
+  GiCalendar, 
+  GiPowerLightning, 
+  GiVote, 
+  GiLockedChest, 
+  GiCrown, 
+  GiSparkSpirit, 
+  GiCoins,
+  GiArrowDunk
+} from 'react-icons/gi';
 import CredentialCard from '../../components/CredentialCard';
 import { LavaLamp } from '../../components/ui/fluid-blob';
 
@@ -62,26 +58,26 @@ export default function AccessPage() {
   ];
 
   const benefits = [
-    { icon: Rocket, title: "Priority Drops", description: "First in line for high-demand real-world asset listings", color: "from-blue-500 to-cyan-500" },
-    { icon: Gift, title: "Exclusive Rewards", description: "Special NFT airdrops, discounts, and fee reductions", color: "from-purple-500 to-pink-500" },
-    { icon: Users, title: "Community Power", description: "Vote on future asset listings & platform features", color: "from-emerald-500 to-teal-500" },
-    { icon: Ticket, title: "VIP Events", description: "Access to private IRL & virtual events", color: "from-orange-500 to-red-500" }
+    { icon: GiRocket, title: "Priority Drops", description: "First in line for high-demand real-world asset listings", color: "from-blue-500 to-cyan-500" },
+    { icon: GiPresent, title: "Exclusive Rewards", description: "Special NFT airdrops, discounts, and fee reductions", color: "from-purple-500 to-pink-500" },
+    { icon: GiPerson, title: "Community Power", description: "Vote on future asset listings & platform features", color: "from-emerald-500 to-teal-500" },
+    { icon: GiTicket, title: "VIP Events", description: "Access to private IRL & virtual events", color: "from-orange-500 to-red-500" }
   ];
 
   const features = [
-    { icon: Shield, title: "Compliance-first", description: "KYC/AML, transfer restrictions, whitelisting and audit trails", color: "from-blue-500 to-cyan-500" },
-    { icon: Wallet, title: "Utility & Access", description: "Early allocations, fee discounts, governance & staking perks", color: "from-purple-500 to-pink-500" },
-    { icon: Globe, title: "Multi-asset Support", description: "Equity, debt, real estate, commodities, carbon & more", color: "from-emerald-500 to-teal-500" },
-    { icon: Diamond, title: "Institutional Rails", description: "Custody, settlement, and data rooms integrated", color: "from-orange-500 to-red-500" }
+    { icon: GiShield, title: "Compliance-first", description: "KYC/AML, transfer restrictions, whitelisting and audit trails", color: "from-blue-500 to-cyan-500" },
+    { icon: GiWallet, title: "Utility & Access", description: "Early allocations, fee discounts, governance & staking perks", color: "from-purple-500 to-pink-500" },
+    { icon: GiGlobe, title: "Multi-asset Support", description: "Equity, debt, real estate, commodities, carbon & more", color: "from-emerald-500 to-teal-500" },
+    { icon: GiDiamonds, title: "Institutional Rails", description: "Custody, settlement, and data rooms integrated", color: "from-orange-500 to-red-500" }
   ];
 
   const unlockFeatures = [
-    { icon: FileText, text: "Token-gated content and insider market reports" },
-    { icon: Percent, text: "Lower platform trading fees" },
-    { icon: Image, text: "Limited-edition NFT collectibles" },
-    { icon: Calendar, text: "Invitations to COPYM IRL meetups and global summits" },
-    { icon: Zap, text: "Early access to new asset tokenizations" },
-    { icon: Vote, text: "Governance voting rights in COPYM DAO decisions" }
+    { icon: GiFiles, text: "Token-gated content and insider market reports" },
+    { icon: GiChart, text: "Lower platform trading fees" },
+    { icon: GiPalette, text: "Limited-edition NFT collectibles" },
+    { icon: GiCalendar, text: "Invitations to COPYM IRL meetups and global summits" },
+    { icon: GiPowerLightning, text: "Early access to new asset tokenizations" },
+    { icon: GiVote, text: "Governance voting rights in COPYM DAO decisions" }
   ];
 
   // Advanced GSAP Animations
@@ -294,7 +290,7 @@ export default function AccessPage() {
             </p>
 
             {/* Glass Pill Layer - Curved div style */}
-            <div 
+            <div
               className="relative w-full max-w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8 px-6"
               style={{
                 WebkitBackdropFilter: 'blur(10px)',
@@ -331,7 +327,7 @@ export default function AccessPage() {
            <div className="absolute inset-0 opacity-10">
              <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-emerald-500/20"></div>
            </div>
-           
+
            {/* Content Container */}
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
@@ -352,7 +348,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <FileText className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiFiles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Token-gated Content</h3>
                  </div>
@@ -365,7 +361,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Percent className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiChart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Lower Platform Fees</h3>
                  </div>
@@ -378,7 +374,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Image className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiPalette className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Limited NFT Collectibles</h3>
                  </div>
@@ -391,7 +387,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Calendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiCalendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">IRL Events Access</h3>
                  </div>
@@ -404,7 +400,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Zap className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiPowerLightning className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Early Asset Access</h3>
                  </div>
@@ -417,7 +413,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Vote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiVote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Governance Rights</h3>
                  </div>
@@ -485,7 +481,7 @@ export default function AccessPage() {
                  >
                    {/* Background gradient overlay */}
                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                   
+
                    <div className="relative z-10">
                      {/* Icon with enhanced styling */}
                      <div className="flex items-center justify-between mb-6">
@@ -498,13 +494,13 @@ export default function AccessPage() {
                        >
                          <benefit.icon className="h-8 w-8 text-white" />
                        </Box>
-                       
+
                        {/* Number badge */}
                        <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
                          {index + 1}
                        </div>
                      </div>
-                     
+
                      {/* Content */}
                      <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
                        {benefit.title}
@@ -512,7 +508,7 @@ export default function AccessPage() {
                      <p className="text-gray-700 leading-relaxed text-base">
                        {benefit.description}
                      </p>
-                     
+
                      {/* Bottom accent line */}
                      <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
                    </div>
@@ -546,7 +542,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Shield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiShield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Compliance-first</h3>
                  </div>
@@ -559,7 +555,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Wallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiWallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Utility & Access</h3>
                  </div>
@@ -572,7 +568,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Multi-asset Support</h3>
                  </div>
@@ -585,7 +581,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Diamond className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiDiamonds className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Institutional Rails</h3>
                  </div>
@@ -598,7 +594,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Lock className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiLockedChest className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Security & Trust</h3>
                  </div>
@@ -611,7 +607,7 @@ export default function AccessPage() {
                <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
                  <div className="flex items-center mb-3 sm:mb-4">
                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <Globe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Global Access</h3>
                  </div>
@@ -674,7 +670,7 @@ export default function AccessPage() {
       <div ref={ctaRef} className="text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 text-white">
-            <Crown className="w-16 h-16 mx-auto mb-6 text-white/80" />
+            <GiCrown className="w-16 h-16 mx-auto mb-6 text-white/80" />
             <h3 className="text-3xl font-black mb-4 uppercase anton-regular reveal-text">
               Ready to Join the Elite?
             </h3>
@@ -683,9 +679,9 @@ export default function AccessPage() {
               asset tokenization.
             </p>
             <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
-              <Sparkles className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
-              Get Your Access Pass Now
-              <ArrowRight className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                              <GiSparkSpirit className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
+                Get Your Access Pass Now
+                <GiArrowDunk className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
           </div>
         </div>

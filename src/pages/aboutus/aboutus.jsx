@@ -1,6 +1,22 @@
 import React from "react";
 import { LavaLamp } from "../../components/ui/fluid-blob";
-import { Shield, Lock, Lightbulb, Users, Building2, Rocket, Globe, Heart, Zap, Target, Star } from "lucide-react";
+import { 
+  GiShield,
+  GiLockedChest,
+  GiPowerLightning,
+  GiPerson,
+  GiHouse,
+  GiRocket,
+  GiGlobe,
+  GiHalfHeart,
+  GiTargetArrows,
+  GiRoundStar,
+  GiChart,
+  GiTimeBomb,
+  GiTreasureMap,
+  GiBinoculars,
+  GiHourglass
+} from "react-icons/gi";
 import Silk from "../../components/Silk";
 
 const AboutUs = () => {
@@ -187,7 +203,7 @@ const AboutUs = () => {
                         {/* Value 1 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <Heart className="w-8 h-8 text-white" />
+                                <GiHalfHeart className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Integrity</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -198,7 +214,7 @@ const AboutUs = () => {
                         {/* Value 2 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <Shield className="w-8 h-8 text-white" />
+                                <GiShield className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Security</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -209,7 +225,7 @@ const AboutUs = () => {
                         {/* Value 3 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <Zap className="w-8 h-8 text-white" />
+                                <GiPowerLightning className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Innovation</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -220,7 +236,7 @@ const AboutUs = () => {
                         {/* Value 4 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <Target className="w-8 h-8 text-white" />
+                                <GiTargetArrows className="w-8 h-8 text-white" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Inclusivity</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -259,7 +275,7 @@ const AboutUs = () => {
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
                                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto flex items-center justify-center">
-                                        <Building2 className="w-6 h-6 text-white" />
+                                        <GiHouse className="w-6 h-6 text-white" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2023 - Foundation</h3>
@@ -272,7 +288,7 @@ const AboutUs = () => {
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
                                     <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto flex items-center justify-center">
-                                        <Rocket className="w-6 h-6 text-white" />
+                                        <GiRocket className="w-6 h-6 text-white" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2024 - Platform Launch</h3>
@@ -285,7 +301,7 @@ const AboutUs = () => {
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
                                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto flex items-center justify-center">
-                                        <Globe className="w-6 h-6 text-white" />
+                                        <GiGlobe className="w-6 h-6 text-white" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2025 - Global Expansion</h3>

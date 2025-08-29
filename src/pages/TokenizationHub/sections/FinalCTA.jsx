@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { GiArrowDunk, GiCheckMark } from 'react-icons/gi';
+import { Link } from 'react-router-dom';
 
 export default function FinalCTA() {
   const analyticsFeatures = [
@@ -25,7 +26,7 @@ export default function FinalCTA() {
             <div className="space-y-4">
               {analyticsFeatures.map((feature, index) => (
                 <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 flex-shrink-0" />
+                  <GiCheckMark className="w-5 h-5 text-green-400" />
                   <span className="text-gray-700">{feature}</span>
                 </div>
               ))}
@@ -40,7 +41,7 @@ export default function FinalCTA() {
             </p>
             <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Start Tokenizing
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <GiArrowDunk className="ml-2 h-5 w-5" />
             </button>
           </div>
         </div>

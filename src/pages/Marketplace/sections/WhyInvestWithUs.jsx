@@ -1,11 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  Shield, 
-  Lock, 
-  FileCheck,
-  ArrowRight
-} from "lucide-react";
+import { GiShield, GiChart, GiGlobe, GiArrowDunk } from "react-icons/gi";
+import Silk from '../../../components/Silk';
 
 export default function WhyInvestWithUs() {
   return (
@@ -87,14 +83,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <Shield className="w-6 h-6 text-emerald-600" />
+              <GiShield className="w-6 h-6 text-emerald-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Grade Security</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Your investments are protected with multi-layer security protocols and institutional-grade custody solutions.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              Learn More <ArrowRight className="ml-1 w-4 h-4" />
+              Learn More <GiArrowDunk className="ml-2 h-5 w-5" />
             </button>
           </motion.div>
 
@@ -106,14 +102,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <Lock className="w-6 h-6 text-emerald-600" />
+              <GiChart className="w-6 h-6 text-emerald-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Radical Transparency</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Every transaction is recorded on an immutable blockchain ledger, providing auditable proof of ownership.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              View Details <ArrowRight className="ml-1 w-4 h-4" />
+              View Details <GiArrowDunk className="ml-2 h-5 w-5" />
             </button>
           </motion.div>
 
@@ -125,14 +121,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <FileCheck className="w-6 h-6 text-emerald-600" />
+              <GiGlobe className="w-6 h-6 text-emerald-600" />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Liquidity</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Trade your tokenized assets on our secondary market, turning illiquid investments into flexible opportunities.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              Start Trading <ArrowRight className="ml-1 w-4 h-4" />
+              Start Trading <GiArrowDunk className="ml-2 h-5 w-5" />
             </button>
           </motion.div>
         </div>

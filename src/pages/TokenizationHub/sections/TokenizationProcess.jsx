@@ -2,7 +2,20 @@
 // src/pages/TokenizationHub/sections/TokenizationProcess.jsx
 
 import React, { useState, useRef } from 'react';
-import { Play, CheckCircle, Briefcase, Cpu, Code, Building2, Coins, BookCopy, TrendingUp, Shield, ArrowRight, ArrowUpDown, User, Globe, BarChart3, Clock, Eye } from 'lucide-react';
+import { GiPlayButton, GiArrowDunk } from 'react-icons/gi';
+import { 
+  GiChart, 
+  GiPerson, 
+  GiGlobe, 
+  GiShield, 
+  GiLockedChest, 
+  GiScrollUnfurled,
+  GiHouse,
+  GiCoins,
+  GiBookCover,
+  GiCpu,
+  GiFiles
+} from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function TokenizationProcess({ onLaunchCreator }) {
@@ -13,37 +26,37 @@ export default function TokenizationProcess({ onLaunchCreator }) {
   
   // Data arrays remain here as they are specific to this component
   const assetTypes = [
-    { id: 1, name: 'Real Estate', desc: 'Properties & Land', icon: Building2, value: 'High Value', color: 'from-blue-500 to-blue-600' },
-    { id: 2, name: 'Commodities', desc: 'Gold, Silver, Oil', icon: Coins, value: 'Stable', color: 'from-yellow-500 to-yellow-600' },
-    { id: 3, name: 'Art & Collectibles', desc: 'Paintings, NFTs', icon: BookCopy, value: 'Unique', color: 'from-purple-500 to-purple-600' },
-    { id: 4, name: 'Private Equity', desc: 'Company Shares', icon: TrendingUp, value: 'Growth', color: 'from-green-500 to-green-600' },
-    { id: 5, name: 'Carbon Credits', desc: 'Environmental Assets', icon: Shield, value: 'ESG', color: 'from-emerald-500 to-emerald-600' }
+    { id: 1, name: 'Real Estate', desc: 'Properties & Land', icon: GiHouse, value: 'High Value', color: 'from-blue-500 to-blue-600' },
+    { id: 2, name: 'Commodities', desc: 'Gold, Silver, Oil', icon: GiCoins, value: 'Stable', color: 'from-yellow-500 to-yellow-600' },
+    { id: 3, name: 'Art & Collectibles', desc: 'Paintings, NFTs', icon: GiBookCover, value: 'Unique', color: 'from-purple-500 to-purple-600' },
+    { id: 4, name: 'Private Equity', desc: 'Company Shares', icon: GiChart, value: 'Growth', color: 'from-green-500 to-green-600' },
+    { id: 5, name: 'Carbon Credits', desc: 'Environmental Assets', icon: GiShield, value: 'ESG', color: 'from-emerald-500 to-emerald-600' }
   ];
 
   const blockchains = [
-    { id: 1, name: 'Ethereum', desc: 'Smart Contracts', icon: Cpu, value: 'ERC-20', color: 'from-indigo-500 to-indigo-600' },
-    { id: 2, name: 'Polygon', desc: 'Low Cost', icon: Cpu, value: 'MATIC', color: 'from-purple-500 to-purple-600' },
-    { id: 3, name: 'Solana', desc: 'High Speed', icon: Cpu, value: 'SOL', color: 'from-pink-500 to-pink-600' },
-    { id: 4, name: 'Avalanche', desc: 'Scalable', icon: Cpu, value: 'AVAX', color: 'from-red-500 to-red-600' },
-    { id: 5, name: 'Binance Smart Chain', desc: 'Compatible', icon: Cpu, value: 'BSC', color: 'from-yellow-500 to-yellow-600' },
-    { id: 6, name: 'Optimism', desc: 'Layer 2', icon: Cpu, value: 'OP', color: 'from-blue-500 to-blue-600' }
+    { id: 1, name: 'Ethereum', desc: 'Smart Contracts', icon: GiCpu, value: 'ERC-20', color: 'from-indigo-500 to-indigo-600' },
+    { id: 2, name: 'Polygon', desc: 'Low Cost', icon: GiCpu, value: 'MATIC', color: 'from-purple-500 to-purple-600' },
+    { id: 3, name: 'Solana', desc: 'High Speed', icon: GiCpu, value: 'SOL', color: 'from-pink-500 to-pink-600' },
+    { id: 4, name: 'Avalanche', desc: 'Scalable', icon: GiCpu, value: 'AVAX', color: 'from-red-500 to-red-600' },
+    { id: 5, name: 'Binance Smart Chain', desc: 'Compatible', icon: GiCpu, value: 'BSC', color: 'from-yellow-500 to-yellow-600' },
+    { id: 6, name: 'Optimism', desc: 'Layer 2', icon: GiCpu, value: 'OP', color: 'from-blue-500 to-blue-600' }
   ];
 
   const tokenStandards = {
     ethereum: [
-      { id: 1, name: 'ERC-20', desc: 'Fungible Tokens', icon: Code, value: 'Standard', color: 'from-green-500 to-green-600' },
-      { id: 2, name: 'ERC-721', desc: 'Non-Fungible Tokens', icon: Code, value: 'NFT', color: 'from-blue-500 to-blue-600' },
-      { id: 3, name: 'ERC-1155', desc: 'Multi-Token Standard', icon: Code, value: 'Hybrid', color: 'from-purple-500 to-purple-600' },
-      { id: 4, name: 'ERC-1400', desc: 'Security Token Standard', icon: Code, value: 'Security', color: 'from-red-500 to-red-600' }
+      { id: 1, name: 'ERC-20', desc: 'Fungible Tokens', icon: GiFiles, value: 'Standard', color: 'from-green-500 to-green-600' },
+      { id: 2, name: 'ERC-721', desc: 'Non-Fungible Tokens', icon: GiFiles, value: 'NFT', color: 'from-blue-500 to-blue-600' },
+      { id: 3, name: 'ERC-1155', desc: 'Multi-Token Standard', icon: GiFiles, value: 'Hybrid', color: 'from-purple-500 to-purple-600' },
+      { id: 4, name: 'ERC-1400', desc: 'Security Token Standard', icon: GiFiles, value: 'Security', color: 'from-red-500 to-red-600' }
     ],
     polygon: [
-      { id: 1, name: 'ERC-20', desc: 'Fungible Tokens', icon: Code, value: 'Standard', color: 'from-green-500 to-green-600' },
-      { id: 2, name: 'ERC-721', desc: 'Non-Fungible Tokens', icon: Code, value: 'NFT', color: 'from-blue-500 to-blue-600' },
-      { id: 3, name: 'ERC-1155', desc: 'Multi-Token Standard', icon: Code, value: 'Hybrid', color: 'from-purple-500 to-purple-600' }
+      { id: 1, name: 'ERC-20', desc: 'Fungible Tokens', icon: GiFiles, value: 'Standard', color: 'from-green-500 to-green-600' },
+      { id: 2, name: 'ERC-721', desc: 'Non-Fungible Tokens', icon: GiFiles, value: 'NFT', color: 'from-blue-500 to-blue-600' },
+      { id: 3, name: 'ERC-1155', desc: 'Multi-Token Standard', icon: GiFiles, value: 'Hybrid', color: 'from-purple-500 to-purple-600' }
     ],
     solana: [
-      { id: 1, name: 'SPL Token', desc: 'Fungible Tokens', icon: Code, value: 'Standard', color: 'from-green-500 to-green-600' },
-      { id: 2, name: 'Metaplex', desc: 'NFT Standard', icon: Code, value: 'NFT', color: 'from-blue-500 to-blue-600' }
+      { id: 1, name: 'SPL Token', desc: 'Fungible Tokens', icon: GiFiles, value: 'Standard', color: 'from-blue-500 to-blue-600' },
+      { id: 2, name: 'Metaplex', desc: 'NFT Standard', icon: GiFiles, value: 'NFT', color: 'from-blue-500 to-blue-600' }
     ]
   };
 
@@ -51,32 +64,32 @@ export default function TokenizationProcess({ onLaunchCreator }) {
     { 
       title: "Programable terms", 
       description: "Program the transfer-restrictions and investment terms that are required between different asset and investor (KYC) classifications.",
-      icon: ArrowUpDown
+      icon: GiScrollUnfurled
     },
     { 
       title: "Increased accessibility", 
       description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
-      icon: User
+      icon: GiPerson
     },
     { 
       title: "Global reach", 
       description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
-      icon: Globe
+      icon: GiGlobe
     },
     { 
       title: "Lower costs", 
       description: "Tokenization reduces costs such as custody, transfer, and administration, resulting in lower fees for investors and increased returns for fund managers.",
-      icon: BarChart3
+      icon: GiLockedChest
     },
     { 
       title: "Faster settlement times", 
       description: "Tokenization speeds up trade settlements, enabling investors to receive their funds faster after selling their shares in the fund.",
-      icon: Clock
+      icon: GiChart
     },
     { 
       title: "Greater transparency", 
       description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
-      icon: Eye
+      icon: GiShield
     }
   ];
 
@@ -110,7 +123,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
               onClick={onLaunchCreator} 
               className="bg-white text-emerald-600 font-semibold px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-sm sm:text-base"
             >
-              <Play className="mr-2 h-4 w-4 sm:h-5 sm:w-5 inline" />
+              <GiPlayButton className="mr-2 h-4 w-4 sm:h-5 sm:w-5 inline" />
               Launch Token Creator Demo
             </button>
           </div>
