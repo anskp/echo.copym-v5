@@ -12,7 +12,7 @@
   --font-sora: "Sora", sans-serif;
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
-  color-scheme: dark;
+  color-scheme: light;
   
   /* shadcn/ui CSS variables */
   --background: 0 0% 100%;
@@ -75,6 +75,7 @@ html, body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
+  background-color: white;
 }
 
 main {
@@ -84,9 +85,9 @@ main {
 
 @layer base {
   body {
-    @apply font-sans bg-n-8 text-n-1 text-base;
-    background: transparent;
+    @apply font-sans bg-white text-gray-900 text-base;
     min-height: 100vh;
+    background-color: white !important;
   }
 }
 
