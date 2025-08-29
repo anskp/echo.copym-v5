@@ -467,7 +467,7 @@ const MarketplaceGlimpse = () => {
              </p>
              <Link 
                to="/marketplace"
-               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-2xl shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
+               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
              >
                Explore the Full Marketplace
                <ArrowRight className="w-5 h-5" />

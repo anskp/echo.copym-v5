@@ -93,7 +93,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
       </div>
       
       {/* Store Button */}
-      <div className={`${bgColor} ${textColor} rounded-md p-1.5 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 cursor-pointer`}>
+      <div className={`${bgColor} ${textColor} rounded-full p-1.5 shadow-sm hover:shadow-md transition-all duration-300 transform hover:scale-105 cursor-pointer`}>
         <div className="flex items-center space-x-1.5">
           {/* Store Logo */}
           <div className="w-5 h-5 bg-white rounded flex items-center justify-center">

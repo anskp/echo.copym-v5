@@ -38,7 +38,7 @@ export default function FinalCTA() {
             <p className="text-gray-700 mb-8">
               Join thousands of issuers who trust our platform for their tokenization needs.
             </p>
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Start Tokenizing
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
