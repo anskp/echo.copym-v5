@@ -1,15 +1,16 @@
 // src/pages/TokenizationHub/sections/TrustAndData.jsx
 
 import React from 'react';
-import { Shield, Lock, FileCheck, AlertCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { GiShield, GiLockedChest, GiEyeball, GiArrowDunk } from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function TrustAndData() {
   const securityFeatures = [
-    { title: 'Multi-Signature Wallets', description: 'Enhanced security with multi-signature wallet infrastructure.', icon: Lock, level: 'Enterprise', features: ['256-bit encryption', 'Hardware security', 'Audit trail'] },
-    { title: 'Smart Contract Audits', description: 'Thoroughly audited smart contracts by leading security firms.', icon: FileCheck, level: 'Certified', features: ['Third-party audits', 'Vulnerability testing', 'Compliance checks'] },
-    { title: 'Compliance Framework', description: 'Built-in regulatory compliance and risk management protocols.', icon: Shield, level: 'Regulatory', features: ['SEC compliance', 'KYC/AML', 'Regulatory reporting'] },
-    { title: 'Fraud Detection', description: 'AI-powered fraud detection and prevention systems.', icon: AlertCircle, level: 'Advanced', features: ['Real-time monitoring', 'AI algorithms', 'Threat prevention'] }
+    { title: 'Multi-Signature Wallets', description: 'Enhanced security with multi-signature wallet infrastructure.', icon: GiLockedChest, level: 'Enterprise', features: ['256-bit encryption', 'Hardware security', 'Audit trail'] },
+    { title: 'Smart Contract Audits', description: 'Thoroughly audited smart contracts by leading security firms.', icon: GiEyeball, level: 'Certified', features: ['Third-party audits', 'Vulnerability testing', 'Compliance checks'] },
+    { title: 'Compliance Framework', description: 'Built-in regulatory compliance and risk management protocols.', icon: GiShield, level: 'Regulatory', features: ['SEC compliance', 'KYC/AML', 'Regulatory reporting'] },
+    { title: 'Fraud Detection', description: 'AI-powered fraud detection and prevention systems.', icon: GiShield, level: 'Advanced', features: ['Real-time monitoring', 'AI algorithms', 'Threat prevention'] }
   ];
 
   return (

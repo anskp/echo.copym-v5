@@ -1,9 +1,13 @@
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  User, Mail, Building2, Briefcase, DollarSign, MapPin,
-  ShieldCheck, CheckCircle, LinkIcon, FileText, Layers, ArrowLeft
-} from "lucide-react";
+import { 
+  GiCheckMark, 
+  GiArrowDunk, 
+  GiPerson, 
+  GiHouse, 
+  GiGlobe, 
+  GiShield 
+} from "react-icons/gi";
 import Silk from "../../components/Silk";
 
 /**
@@ -35,7 +39,7 @@ const steps = [
     label: "What are your Tokenization goals?",
     helper: "Choose the area you want to tokenize with Copym",
     type: "segmented",
-    icon: Layers,
+    icon: GiHouse,
     required: true,
     options: [
       "Tokenize Real Estate",
@@ -50,7 +54,7 @@ const steps = [
     id: "contactInfo",
     label: "Your Contact Information",
     type: "group",
-    icon: User,
+    icon: GiPerson,
     required: true,
     fields: [
       { key: "firstName", label: "First Name", required: true },
@@ -63,7 +67,7 @@ const steps = [
     id: "companyInfo",
     label: "Company Information",
     type: "group",
-    icon: Building2,
+    icon: GiHouse,
     required: true,
     fields: [
       { key: "companyName", label: "Company Name", required: true },
@@ -75,7 +79,7 @@ const steps = [
     id: "industry",
     label: "What Industry is your company in?",
     type: "segmented",
-    icon: Building2,
+    icon: GiHouse,
     required: true,
     options: [
       "Real Estate",
@@ -91,7 +95,7 @@ const steps = [
     id: "companyDetails",
     label: "Tell us about your company",
     type: "textarea",
-    icon: FileText,
+    icon: GiHouse,
     required: true,
     placeholder: "Brief summary about your company, traction, and funding raised to date..."
   },
@@ -99,7 +103,7 @@ const steps = [
     id: "address",
     label: "Company Address",
     type: "group",
-    icon: MapPin,
+    icon: GiGlobe,
     required: true,
     fields: [
       { key: "street", label: "Address", required: true },
@@ -113,7 +117,7 @@ const steps = [
     id: "companyStatus",
     label: "Company Status",
     type: "group",
-    icon: ShieldCheck,
+    icon: GiShield,
     required: true,
     fields: [
       { key: "incUS", label: "Incorporated in U.S?", type: "segmented", options: ["Yes", "No"], required: true },
@@ -125,7 +129,7 @@ const steps = [
     id: "raiseStructure",
     label: "How would you like to structure your raise on Copym?",
     type: "segmented",
-    icon: DollarSign,
+    icon: GiCheckMark,
     required: true,
     options: [
       "Tokenized Equity",
@@ -331,7 +335,7 @@ export default function Typeform() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <ArrowLeft className="w-5 h-5 text-white" />
+                      <GiArrowDunk className="w-5 h-5 text-white" />
                     </motion.button>
                     <div className="flex-1">
                       <div className="flex items-center gap-4 mb-4">
@@ -592,7 +596,7 @@ function ThankYou() {
         animate={{ scale: 1 }}
         transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
       >
-        <CheckCircle className="w-12 h-12 text-emerald-500" />
+        <GiCheckMark className="w-12 h-12 text-emerald-500" />
       </motion.div>
       
       <motion.div

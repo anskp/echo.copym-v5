@@ -1,6 +1,10 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
-import { Building2, Users, Globe } from 'lucide-react';
+import { 
+  GiLockedChest,
+  GiChart,
+  GiGlobe
+} from 'react-icons/gi';
 import { Globe as GlobeComponent } from '../../../components/globe';
 
 
@@ -32,7 +36,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-              <Building2 className="mr-2 text-blue-600" size={24} />
+              <GiLockedChest className="mr-2 text-blue-600" size={24} />
               We can tokenize any asset
             </h3>
           </div>
@@ -56,7 +60,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-              <Users className="mr-2 text-green-600" size={24} />
+              <GiChart className="mr-2 text-green-600" size={24} />
               One simple token management interface
             </h3>
           </div>
@@ -85,7 +89,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4 text-center">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center justify-center">
-              <Globe className="mr-2 text-purple-600" size={24} />
+              <GiGlobe className="mr-2 text-purple-600" size={24} />
               Global Distribution
             </h3>
           </div>
@@ -97,14 +101,12 @@ const MinimalTokenizationDashboard = () => {
                     <div className="w-3 h-3 rounded-full" style={{ backgroundColor: group.color }}></div>
                     <span className="text-sm text-gray-700">{group.name}</span>
                   </div>
-                  <span className="text-sm font-medium text-gray-800">{group.value}%</span>
+                  <span className="text-sm font-semibold text-gray-900">{group.value}%</span>
                 </div>
               ))}
             </div>
-            <div className="w-full h-48 md:h-64 lg:h-80 flex items-center justify-center px-4">
-              <div className="w-full max-w-[280px] md:max-w-[400px] lg:max-w-[500px] flex justify-center">
-                <GlobeComponent className="w-full h-full" />
-              </div>
+            <div className="flex justify-center">
+              <GlobeComponent />
             </div>
           </div>
         </div>

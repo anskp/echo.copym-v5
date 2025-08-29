@@ -2,29 +2,27 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import Typeform from './Typeform';
 import {
-  Mail,
-  Phone,
-  MapPin,
-  Clock,
-  Building2,
-  MessageSquare,
-  Users,
-  Shield,
-  Zap,
-  FileText,
-  Globe,
-  Linkedin,
-  Twitter,
-  Facebook,
-  Instagram,
-  Youtube,
-  MessageCircle,
-  ExternalLink,
-  Download,
-  Scale,
-  Lock,
-  X
-} from 'lucide-react';
+  GiMailbox,
+  GiPhone,
+  GiCompass,
+  GiTimeSynchronization,
+  GiHouse,
+  GiPerson,
+  GiShield,
+  GiPowerLightning,
+  GiFiles,
+  GiGlobe,
+  GiLinkedRings,
+  GiChatBubble,
+  GiNetworkBars,
+  GiPalette,
+  GiPlayButton,
+  GiArrowDunk,
+
+  GiTemporaryShield,
+  GiLockedChest,
+  GiCrossedSwords
+} from 'react-icons/gi';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -51,12 +49,12 @@ const Contact = () => {
 
   // RWA-specific contact types
   const contactTypes = [
-    { value: 'investor', label: 'Investor Inquiry', icon: Users },
-    { value: 'issuer', label: 'Asset Issuer / Sponsor', icon: Building2 },
-    { value: 'partner', label: 'Institutional Partnership', icon: Users },
-    { value: 'legal', label: 'Legal & Compliance', icon: Scale },
-    { value: 'tech', label: 'Technical Integration', icon: Globe },
-    { value: 'support', label: 'Platform Support', icon: Shield }
+    { value: 'investor', label: 'Investor Inquiry', icon: GiPerson },
+    { value: 'issuer', label: 'Asset Issuer / Sponsor', icon: GiHouse },
+    { value: 'partner', label: 'Institutional Partnership', icon: GiPerson },
+    { value: 'legal', label: 'Legal & Compliance', icon: GiTemporaryShield },
+    { value: 'tech', label: 'Technical Integration', icon: GiGlobe },
+    { value: 'support', label: 'Platform Support', icon: GiShield }
   ];
 
   // RWA-specific asset types
@@ -83,28 +81,28 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: Mail,
+      icon: GiMailbox,
       title: 'Email Support',
       details: ['support@copym.xyz', 'hello@copym.xyz'],
       description: 'Get in touch via email for any inquiries',
       action: 'mailto:support@copym.xyz'
     },
     {
-      icon: Phone,
+      icon: GiPhone,
       title: 'Direct Line',
       details: ['+1 (555) 123-4567'],
       description: 'Speak directly with our team',
       action: 'tel:+15551234567'
     },
     {
-      icon: MapPin,
+      icon: GiCompass,
       title: 'Visit Us',
       details: ['123 Tech Park, Whitefield', 'Bangalore, Karnataka 560066, India'],
       description: 'Drop by our office for a meeting',
       action: 'https://maps.app.goo.gl/tRFiZ3JenBnBVG158?g_st=ac'
     },
     {
-      icon: Clock,
+      icon: GiTimeSynchronization,
       title: 'Business Hours',
       details: ['24/7 Support Available', 'Round the clock assistance'],
       description: 'We\'re here when you need us',
@@ -113,36 +111,36 @@ const Contact = () => {
   ];
 
   const socialMedia = [
-    { name: 'LinkedIn', icon: Linkedin, url: 'https://linkedin.com/company/rwa-platform', color: 'hover:text-blue-600' },
-    { name: 'Twitter', icon: Twitter, url: 'https://twitter.com/rwa-platform', color: 'hover:text-blue-400' },
-    { name: 'Facebook', icon: Facebook, url: 'https://facebook.com/rwa-platform', color: 'hover:text-blue-700' },
-    { name: 'Instagram', icon: Instagram, url: 'https://instagram.com/rwa-platform', color: 'hover:text-pink-600' },
-    { name: 'YouTube', icon: Youtube, url: 'https://youtube.com/rwa-platform', color: 'hover:text-red-600' }
+    { name: 'LinkedIn', icon: GiLinkedRings, url: 'https://linkedin.com/company/rwa-platform', color: 'hover:text-blue-600' },
+    { name: 'Twitter', icon: GiChatBubble, url: 'https://twitter.com/rwa-platform', color: 'hover:text-blue-400' },
+    { name: 'Facebook', icon: GiNetworkBars, url: 'https://facebook.com/rwa-platform', color: 'hover:text-blue-700' },
+    { name: 'Instagram', icon: GiPalette, url: 'https://instagram.com/rwa-platform', color: 'hover:text-pink-600' },
+    { name: 'YouTube', icon: GiPlayButton, url: 'https://youtube.com/rwa-platform', color: 'hover:text-red-600' }
   ];
 
   const features = [
     {
-      icon: Shield,
+      icon: GiShield,
       title: 'Regulatory Compliance',
       description: 'Fully compliant with SEC, KYC, and AML standards'
     },
     {
-      icon: Scale,
+      icon: GiTemporaryShield,
       title: 'Legal Framework',
       description: 'Robust legal structure for asset tokenization'
     },
     {
-      icon: Lock,
+      icon: GiLockedChest,
       title: 'Secure Infrastructure',
       description: 'Enterprise-grade security and audit trails'
     }
   ];
 
   const resources = [
-    { name: 'Investor Deck', icon: Download, url: '/resources/investor-deck.pdf' },
-    { name: 'Whitepaper', icon: FileText, url: '/resources/whitepaper.pdf' },
-    { name: 'Compliance Framework', icon: Shield, url: '/compliance' },
-    { name: 'API Documentation', icon: Globe, url: '/api' }
+    { name: 'Investor Deck', icon: GiArrowDunk, url: '/resources/investor-deck.pdf' },
+    { name: 'Whitepaper', icon: GiFiles, url: '/resources/whitepaper.pdf' },
+    { name: 'Compliance Framework', icon: GiShield, url: '/compliance' },
+    { name: 'API Documentation', icon: GiGlobe, url: '/api' }
   ];
 
   const validateForm = () => {
@@ -280,7 +278,7 @@ const Contact = () => {
           className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white p-3 sm:p-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 touch-manipulation"
           aria-label="Open live chat"
         >
-          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6" />
+          <GiChatBubble className="w-5 h-5 sm:w-6 sm:h-6" />
         </button>
         
         {showLiveChat && (
@@ -298,7 +296,7 @@ const Contact = () => {
                 onClick={() => setShowLiveChat(false)}
                 className="p-1 hover:bg-gray-100 rounded-full transition-colors"
               >
-                <X className="w-4 h-4 text-gray-500" />
+                <GiCrossedSwords className="w-4 h-4 text-gray-500" />
               </button>
             </div>
             <div className="p-3 sm:p-4">
@@ -365,7 +363,7 @@ const Contact = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-emerald-600 text-sm mt-1 hover:underline"
                           >
-                            <ExternalLink className="w-4 h-4 mr-1" />
+                            <GiArrowDunk className="w-4 h-4 mr-1" />
                             {info.action.includes('mailto') ? 'Email Us' : info.action.includes('tel') ? 'Call' : 'View Map'}
                           </a>
                         )}

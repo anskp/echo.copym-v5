@@ -1,5 +1,5 @@
 import { Button } from './button'
-import { ArrowRight, Mail, Menu, SendHorizonal, X } from 'lucide-react'
+import { GiArrowDunk, GiMail, GiHamburgerMenu, GiSend, GiCrossedSwords } from 'react-icons/gi'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -32,8 +32,8 @@ export function HeroSection() {
                                     onClick={() => setMenuState(!menuState)}
                                     aria-label={menuState == true ? 'Close Menu' : 'Open Menu'}
                                     className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
-                                    <Menu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
-                                    <X className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
+                                    <GiHamburgerMenu className="group-data-[state=active]:rotate-180 group-data-[state=active]:scale-0 group-data-[state=active]:opacity-0 m-auto size-6 duration-200" />
+                                    <GiCrossedSwords className="group-data-[state=active]:rotate-0 group-data-[state=active]:scale-100 group-data-[state=active]:opacity-100 absolute inset-0 m-auto size-6 -rotate-180 scale-0 opacity-0 duration-200" />
                                 </button>
                             </div>
 
@@ -88,7 +88,7 @@ export function HeroSection() {
                                     <span className="text-sm">Introduction Tailark Html</span>
                                     <span className="bg-(--color-border) block h-4 w-px"></span>
 
-                                    <ArrowRight className="size-4" />
+                                    <GiArrowDunk className="size-4" />
                                 </a>
 
                                 <h1 className="mt-10 text-balance text-4xl font-bold md:text-5xl xl:text-5xl">Production Ready Digital Marketing blocks</h1>
@@ -98,8 +98,8 @@ export function HeroSection() {
                                     <form
                                         action=""
                                         className="mx-auto my-10 max-w-sm lg:my-12 lg:ml-0 lg:mr-auto">
-                                        <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[1rem] border pr-1 shadow shadow-zinc-950/5 has-[input:focus]:ring-2">
-                                            <Mail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
+                                        <div className="bg-background has-[input:focus]:ring-muted relative grid grid-cols-[1fr_auto] items-center rounded-[1rem] border pr-1 shadow shadow-zinc-950/50 has-[input:focus]:ring-2">
+                                            <GiMail className="text-caption pointer-events-none absolute inset-y-0 left-5 my-auto size-5" />
 
                                             <input
                                                 placeholder="Your mail address"
@@ -112,7 +112,7 @@ export function HeroSection() {
                                                     aria-label="submit"
                                                 >
                                                     <span className="hidden md:block">Get Started</span>
-                                                    <SendHorizonal
+                                                    <GiSend
                                                         className="relative mx-auto size-5 md:hidden"
                                                         strokeWidth={2}
                                                     />

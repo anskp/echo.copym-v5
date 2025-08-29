@@ -30,29 +30,29 @@ import {
   LinearProgress
 } from '@mui/material';
 import {
-  Close as CloseIcon,
-  ArrowBack as ArrowBackIcon,
-  CheckCircle as CheckCircleIcon,
-  AccountBalance as AccountBalanceIcon,
-  Token as TokenIcon,
-  Palette as PaletteIcon,
-  Settings as SettingsIcon,
-  Security as SecurityIcon,
-  Verified as VerifiedIcon,
-  Memory as MemoryIcon,
-  CloudQueue as CloudQueueIcon,
-  MonetizationOn as MonetizationOnIcon,
-  Inventory as InventoryIcon,
-  Home as HomeIcon,
-  Public as PublicIcon,
-  FlashOn as FlashIcon,
-  Brush as BrushIcon,
-  CardGiftcard as CardGiftcardIcon,
-  Smartphone as SmartphoneIcon,
-  Description as DescriptionIcon,
-  Stars as StarsIcon,
-  Business as BusinessIcon
-} from '@mui/icons-material';
+  GiCrossedSwords as CloseIcon,
+  GiArrowDunk as ArrowBackIcon,
+  GiCheckMark as CheckCircleIcon,
+  GiBank as AccountBalanceIcon,
+  GiToken as TokenIcon,
+  GiPalette as PaletteIcon,
+  GiSettingsKnobs as SettingsIcon,
+  GiShield as SecurityIcon,
+  GiShield as VerifiedIcon,
+  GiBrain as MemoryIcon,
+  GiCloudRing as CloudQueueIcon,
+  GiCoins as MonetizationOnIcon,
+  GiChest as InventoryIcon,
+  GiHouse as HomeIcon,
+  GiGlobe as PublicIcon,
+  GiPowerLightning as FlashIcon,
+  GiPaintBrush as BrushIcon,
+  GiPresent as CardGiftcardIcon,
+  GiSmartphone as SmartphoneIcon,
+  GiFiles as DescriptionIcon,
+  GiRoundStar as StarsIcon,
+  GiHouse as BusinessIcon
+} from 'react-icons/gi';
 
 const CreateAssetModal = ({ open, onClose }) => {
   const [currentStep, setCurrentStep] = useState(0);

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { Apple, Play, Star, Download, QrCode, ArrowRight } from 'lucide-react';
+import { GiPlayButton, GiRoundStar, GiCompass, GiArrowDunk } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -97,12 +97,12 @@ export default function TrackYourCrypto() {
                   className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Marketplace
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <GiArrowDunk className="ml-2 h-5 w-5" />
                 </Link>
                 
                 {/* QR Code Card - Moved to right side and made bigger */}
                 <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                  <QrCode className="w-24 h-24 text-gray-900" />
+                  <GiCompass className="w-24 h-24 text-gray-900" />
                   <p className="text-sm text-gray-600 mt-3 text-center font-medium">Scan to download</p>
                 </div>
               </div>
@@ -113,7 +113,7 @@ export default function TrackYourCrypto() {
               <div className="flex items-center space-x-3">
                 <div className="flex text-yellow-500">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
+                    <GiRoundStar key={i} className="w-5 h-5 fill-current" />
                   ))}
                 </div>
                 <span className="text-gray-600 font-medium">Rated 4.5 in app stores</span>

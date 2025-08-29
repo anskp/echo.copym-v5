@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, MessageCircle, ArrowUpRight } from 'lucide-react';
+import { GiArrowDunk, GiWideArrowDunk } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Silk from '../../../components/Silk';
 
@@ -13,9 +13,9 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         <h3 className="text-lg font-semibold text-white pr-4">{question}</h3>
         <div className="flex-shrink-0 transition-transform duration-300">
           {isOpen ? (
-            <ChevronUp className="w-5 h-5 text-green-400" />
+            <GiWideArrowDunk className="w-5 h-5 text-green-400" />
           ) : (
-            <ChevronDown className="w-5 h-5 text-white/60" />
+            <GiArrowDunk className="w-5 h-5 text-white/60" />
           )}
         </div>
       </button>
@@ -104,7 +104,7 @@ export default function FAQSection() {
                   className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
                 >
                   Contact Support
-                  <ArrowUpRight className="ml-2 w-4 h-4" />
+                  <GiArrowDunk className="ml-2 w-4 h-4" />
                 </Link>
               </div>
             </div>

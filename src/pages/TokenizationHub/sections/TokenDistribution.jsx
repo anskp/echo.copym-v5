@@ -2,31 +2,31 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Shield, Lock, FileCheck, AlertCircle } from 'lucide-react';
+import { GiChart, GiPerson, GiGlobe, GiArrowDunk } from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function TokenDistribution() {
   const features = [
     {
-      icon: Shield,
+      icon: GiChart,
       title: "Global Distribution",
       description: "Reach investors worldwide with automated compliance and multi-jurisdictional support.",
       color: "from-pink-500 to-teal-500"
     },
     {
-      icon: Lock,
+      icon: GiPerson,
       title: "Investor Onboarding",
       description: "Streamlined KYC/AML verification with instant investor qualification and onboarding.",
       color: "from-yellow-500 to-green-500"
     },
     {
-      icon: FileCheck,
+      icon: GiGlobe,
       title: "Liquidity Management",
       description: "Automated market making and liquidity provision for seamless trading experience.",
       color: "from-pink-500 via-blue-500 to-green-500"
     },
     {
-      icon: AlertCircle,
+      icon: GiChart,
       title: "Regulatory Compliance",
       description: "Built-in compliance frameworks ensuring adherence to global securities regulations.",
       color: "from-orange-500 to-red-500"
@@ -83,7 +83,7 @@ export default function TokenDistribution() {
 
                 {/* CTA Link */}
                 <button className="inline-flex items-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200">
-                  Learn More <ArrowRight className="ml-1 w-4 h-4" />
+                  Learn More <GiArrowDunk className="ml-2 h-5 w-5" />
                 </button>
               </motion.div>
             ))}

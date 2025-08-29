@@ -1,7 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building2, Palette, Leaf, ArrowRight } from 'lucide-react';
-import { GiCube } from 'react-icons/gi';
+import { 
+  GiPalette, 
+  GiArrowDunk,
+  GiLockedChest, 
+  GiRoundStar, 
+  GiShield, 
+  GiTreasureMap,
+  GiCoins,
+  GiHouse,
+  GiGlobe
+} from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function RWAAssetsSection() {
@@ -41,9 +50,9 @@ export default function RWAAssetsSection() {
              <div className="space-y-8">
                {/* Premium Badge */}
                <div className="flex items-center gap-4">
-                 <div className="w-14 h-14 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20">
-                   <GiCube size={28} className="text-white drop-shadow-lg" />
-                 </div>
+                                   <div className="w-14 h-14 bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20">
+                    <GiLockedChest size={28} className="text-white drop-shadow-lg" />
+                  </div>
                  <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20">
                    <span className="text-sm font-semibold text-white">Real World Assets</span>
                  </div>
@@ -60,7 +69,7 @@ export default function RWAAssetsSection() {
                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
                  <button className="bg-gradient-to-r from-emerald-400 to-blue-400 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-300 hover:to-blue-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-emerald-500/25 flex items-center gap-3 backdrop-blur-sm border border-white/20">
                    Explore Assets
-                   <ArrowRight className="w-5 h-5" />
+                   <GiArrowDunk className="ml-2 h-5 w-5" />
                  </button>
                  <div className="flex items-center gap-3 text-white/70">
                    <span className="text-sm">Gold</span>
@@ -76,46 +85,30 @@ export default function RWAAssetsSection() {
              
              {/* Right Side - Premium Asset Cards */}
              <div className="grid grid-cols-2 gap-6">
-                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
-                    <img 
-                      src="/assets/Images/rwa-section/coin.png" 
-                      alt="Gold & Metals" 
-                      className="w-full h-full object-cover rounded-2xl"
-                    />
-                  </div>
-                  <p className="font-semibold text-white">Gold & Metals</p>
-                </div>
-               
-                                                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                   <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
-                     <img 
-                       src="/assets/Images/rwa-section/art-and-design.png" 
-                       alt="Fine Art" 
-                       className="w-full h-full object-cover rounded-2xl"
-                     />
-                   </div>
-                   <p className="font-semibold text-white">Fine Art</p>
-                 </div>
-               
                <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
-                   <img 
-                     src="/assets/Images/rwa-section/carbon-credit.png" 
-                     alt="Carbon Credits" 
-                     className="w-full h-full object-cover rounded-2xl"
-                   />
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                   <GiCoins size={40} className="text-white drop-shadow-lg" />
                  </div>
-                 <p className="font-semibold text-white">Carbon Credits</p>
+                 <p className="font-semibold text-white">Gold & Metals</p>
                </div>
                
                <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
-                   <img 
-                     src="/assets/Images/rwa-section/real-estate.png" 
-                     alt="Real Estate" 
-                     className="w-full h-full object-cover rounded-2xl"
-                   />
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                   <GiPalette size={40} className="text-white drop-shadow-lg" />
+                 </div>
+                 <p className="font-semibold text-white">Fine Art</p>
+               </div>
+               
+                                                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                   <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                     <GiGlobe size={40} className="text-white drop-shadow-lg" />
+                   </div>
+                   <p className="font-semibold text-white">Carbon Credits</p>
+                 </div>
+               
+               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                   <GiHouse size={40} className="text-white drop-shadow-lg" />
                  </div>
                  <p className="font-semibold text-white">Real Estate</p>
                </div>

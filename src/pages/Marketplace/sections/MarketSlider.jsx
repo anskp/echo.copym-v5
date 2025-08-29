@@ -1,18 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  MapPin, 
-  TrendingUp, 
-  X, 
-  ChevronDown, 
-  DollarSign, 
-  Building2,
-  Palette,
-  Coins,
-  Wrench,
-  Rocket,
-  ArrowRight
-} from "lucide-react";
+  GiArrowDunk, 
+  GiRoundStar, 
+  GiChart, 
+  GiShield, 
+  GiGlobe, 
+  GiPerson 
+} from "react-icons/gi";
 import { Link } from "react-router-dom";
 import Silk from "../../../components/Silk";
 
@@ -171,8 +166,8 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
       <div className="relative z-20 p-6 space-y-4 text-white">
         <h3 className="text-2xl font-bold leading-tight">{card.title}</h3>
         <div className="flex flex-col gap-2 text-base font-semibold border-t border-b border-white/20 py-3">
-          <p className="flex items-center gap-2"><MapPin size={20} className="text-green-400" />{card.location}</p>
-          <p className="flex items-center gap-2"><TrendingUp size={20} className="text-green-400" />{card.expectedRoi} ROI</p>
+          <p className="flex items-center gap-2"><GiArrowDunk size={20} className="text-green-400" />{card.location}</p>
+          <p className="flex items-center gap-2"><GiChart size={20} className="text-green-400" />{card.expectedRoi} ROI</p>
         </div>
         <div className="flex items-end justify-between pt-2">
           <div>
@@ -470,7 +465,7 @@ const MarketplaceGlimpse = () => {
                className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
              >
                Explore the Full Marketplace
-               <ArrowRight className="w-5 h-5" />
+               <GiArrowDunk className="w-5 h-5" />
              </Link>
            </motion.div>
          </div>
@@ -497,7 +492,9 @@ const MarketplaceGlimpse = () => {
               exit={{ scale: 0, rotate: -90 }}
               whileHover={{ scale: 1.1 }}
             >
-              <X size={24} />
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
             </motion.button>
           </motion.div>
         )}

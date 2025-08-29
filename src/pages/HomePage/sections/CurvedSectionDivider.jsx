@@ -1,28 +1,23 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { 
-  GiCube, 
-  GiRocket, 
-  GiBoatFishing, 
-  GiChart 
-} from 'react-icons/gi';
+import { motion } from 'framer-motion';
+import { GiArrowDunk, GiRoundStar, GiHouse, GiGlobe, GiChart } from 'react-icons/gi';
 
 // Prebuilt 3D-style icons from react-icons
 const Cube3D = () => (
   <div className="text-center">
-    <GiCube size={80} className="text-white drop-shadow-lg" />
+    <GiRoundStar size={80} className="text-white drop-shadow-lg" />
   </div>
 );
 
 const Rocket3D = () => (
   <div className="text-center">
-    <GiRocket size={80} className="text-white drop-shadow-lg" />
+    <GiHouse size={80} className="text-white drop-shadow-lg" />
   </div>
 );
 
 const Ship3D = () => (
   <div className="text-center">
-    <GiBoatFishing size={80} className="text-white drop-shadow-lg" />
+    <GiGlobe size={80} className="text-white drop-shadow-lg" />
   </div>
 );
 
@@ -34,14 +29,14 @@ const Chart3D = () => (
 
 const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
   return (
-    <div className="text-center group">
-      <div className="mb-6 flex justify-center">
+    <div className="text-center group flex flex-col items-center justify-start h-full">
+      <div className="mb-6 flex justify-center items-center">
         <Icon />
       </div>
-      <h3 className="text-xl font-bold text-white mb-3">{title}</h3>
-      <p className="text-white/80 text-sm leading-relaxed mb-4">{description}</p>
-      <button className="inline-flex items-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200">
-        {ctaText} <ArrowRight className="ml-1 w-4 h-4" />
+      <h3 className="text-xl font-bold text-white mb-3 leading-tight">{title}</h3>
+      <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs">{description}</p>
+      <button className="inline-flex items-center justify-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200 mt-auto">
+        {ctaText} <GiArrowDunk className="ml-2 h-5 w-5" />
       </button>
     </div>
   );
@@ -52,19 +47,18 @@ export default function CurvedSectionDivider() {
     <section className="relative">
       {/* Main Content */}
       <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
-
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular">
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular leading-tight">
               <span className="text-white">Own. Earn. </span>
               <span className="text-black">Explore. Trade.</span>
             </h2>
           </div>
 
           {/* Feature Cards Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 relative z-10">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 relative z-10">
             <FeatureCard
               icon={Cube3D}
               title="Own a Piece of Big Investments"

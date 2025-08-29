@@ -1,4 +1,4 @@
-import { Star, Building2, Sparkles, Palette, CheckCircle } from "lucide-react";
+import { GiRoundStar, GiHouse, GiSparkSpirit, GiPalette, GiCheckMark } from "react-icons/gi";
 import { motion } from "framer-motion";
 
 const testimonials = [
@@ -8,7 +8,7 @@ const testimonials = [
     title: "Investment Director",
     company: "Venture Capital Partners",
     rating: 5,
-    icon: Building2,
+    icon: GiHouse,
   },
   {
     quote: "Finally, a platform that makes RWA investment accessible to everyone. CopymAI's tokenization process is seamless and secure.",
@@ -16,7 +16,7 @@ const testimonials = [
     title: "Portfolio Manager",
     company: "Wealth Management Group",
     rating: 4,
-    icon: Sparkles,
+    icon: GiSparkSpirit,
   },
   {
     quote: "The CopymAgent AI provides unprecedented insights into asset performance. This is the future of investment platforms.",
@@ -24,7 +24,7 @@ const testimonials = [
     title: "Chief Technology Officer",
     company: "FinTech Solutions",
     rating: 5,
-    icon: Palette,
+    icon: GiPalette,
   },
   {
     quote: "Revolutionary approach to real-world asset tokenization. The compliance automation saved us months of work.",
@@ -32,7 +32,7 @@ const testimonials = [
     title: "Head of Digital Assets",
     company: "Goldman Sachs",
     rating: 5,
-    icon: Building2,
+    icon: GiHouse,
   },
   {
     quote: "Cross-chain intelligence and seamless DeFi integration make this the most comprehensive RWA platform available.",
@@ -40,7 +40,7 @@ const testimonials = [
     title: "Blockchain Strategist", 
     company: "JPMorgan Chase",
     rating: 5,
-    icon: Sparkles,
+    icon: GiSparkSpirit,
   },
   {
     quote: "The AI-driven portfolio optimization increased our returns by 31% while reducing risk exposure significantly.",
@@ -48,7 +48,7 @@ const testimonials = [
     title: "Fund Manager",
     company: "BlackRock",
     rating: 5,
-    icon: Palette,
+    icon: GiPalette,
   },
   {
     quote: "Seamless tokenization process with institutional-grade security. This is the future of asset management.",
@@ -56,7 +56,7 @@ const testimonials = [
     title: "Risk Management Director",
     company: "Morgan Stanley",
     rating: 5,
-    icon: Building2,
+    icon: GiHouse,
   },
   {
     quote: "The analytics dashboard provides insights we never had before. ROI tracking is incredibly detailed.",
@@ -64,7 +64,7 @@ const testimonials = [
     title: "Portfolio Analyst",
     company: "Fidelity Investments",
     rating: 5,
-    icon: Sparkles,
+    icon: GiSparkSpirit,
   },
 ];
 
@@ -82,7 +82,7 @@ function TestimonialCard({ testimonial }) {
       <div className="flex items-center justify-between mb-4">
         <div className="flex text-yellow-400 gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
-            <Star 
+            <GiRoundStar 
               key={i} 
               className={`h-4 w-4 ${i < testimonial.rating ? 'fill-yellow-400 text-yellow-400' : 'text-slate-600'}`} 
             />
@@ -108,7 +108,7 @@ function TestimonialCard({ testimonial }) {
           <p className="text-slate-400 text-xs break-words">{testimonial.company}</p>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
-          <CheckCircle className="h-4 w-4 text-green-400" />
+          <GiCheckMark className="h-4 w-4 text-green-400" />
           <span className="text-green-400 text-xs font-medium whitespace-nowrap">Verified</span>
         </div>
       </div>
