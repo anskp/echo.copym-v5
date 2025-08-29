@@ -78,6 +78,10 @@ function App() {
         <Box
         ref={appRef} 
                    className={`min-h-screen relative text-text-primary overflow-x-hidden`}>
+          {/* Background Pattern */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+          </div>
           <ScrollToTop />
           <Header />
           <main className="relative z-20 overflow-x-hidden">
@@ -93,8 +97,8 @@ function App() {
               <Route path="/contact" element={<Contact />} />
               <Route path="/access" element={<AccessPage />} />
             </Routes>
-            <Footer />
-          </main>
+            </main>
+          <Footer />
         </Box>
       )}
     </AnimatePresence>
