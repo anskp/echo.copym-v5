@@ -57,7 +57,7 @@ export default function RWAAssetsSection() {
                
                {/* Premium CTA */}
                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-                 <button className="bg-gradient-to-r from-emerald-400 to-blue-400 text-white px-8 py-4 rounded-2xl font-semibold hover:from-emerald-300 hover:to-blue-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-emerald-500/25 flex items-center gap-3 backdrop-blur-sm border border-white/20">
+                 <button className="bg-gradient-to-r from-emerald-400 to-blue-400 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-300 hover:to-blue-300 transition-all duration-300 transform hover:scale-105 shadow-2xl hover:shadow-emerald-500/25 flex items-center gap-3 backdrop-blur-sm border border-white/20">
                    Explore Assets
                    <ArrowRight className="w-5 h-5" />
                  </button>
