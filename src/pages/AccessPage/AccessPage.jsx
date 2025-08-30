@@ -289,16 +289,16 @@ export default function AccessPage() {
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
-            {/* Glass Pill Layer - Curved div style */}
-            <div
-              className="relative w-full max-w-[400px] h-16 bg-emerald-900/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(6,78,59,0.5)] z-20 border border-emerald-700/50 mx-auto mt-8 px-6"
-              style={{
-                WebkitBackdropFilter: 'blur(10px)',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              Mint Your Token Now ➡
-            </div>
+                         {/* Glass Pill Layer - Curved div style */}
+             <div
+               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-8 px-6"
+               style={{
+                 WebkitBackdropFilter: 'blur(10px)',
+                 backdropFilter: 'blur(10px)'
+               }}
+             >
+               Mint Your Token Now ➡
+             </div>
 
             {/* Additional UI Elements */}
             <div className="mt-16 flex justify-center space-x-8 opacity-60">
@@ -345,12 +345,12 @@ export default function AccessPage() {
              {/* Feature Cards Grid - Platform Features Style */}
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
                {/* Card 1: Token-gated Content */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiFiles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Token-gated Content</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Token-gated Content</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Access to insider market reports and exclusive content only available to pass holders.
@@ -358,12 +358,12 @@ export default function AccessPage() {
                </div>
 
                {/* Card 2: Lower Fees */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiChart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Lower Platform Fees</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Lower Platform Fees</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Reduced trading fees and transaction costs across all platform activities.
@@ -371,12 +371,12 @@ export default function AccessPage() {
                </div>
 
                {/* Card 3: NFT Collectibles */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiPalette className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Limited NFT Collectibles</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Limited NFT Collectibles</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Exclusive access to limited-edition NFT collectibles and digital assets.
@@ -384,12 +384,12 @@ export default function AccessPage() {
                </div>
 
                {/* Card 4: IRL Events */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiCalendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">IRL Events Access</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">IRL Events Access</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Invitations to COPYM meetups, global summits, and exclusive networking events.
@@ -397,12 +397,12 @@ export default function AccessPage() {
                </div>
 
                {/* Card 5: Early Access */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiPowerLightning className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Early Asset Access</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Early Asset Access</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Priority access to new asset tokenizations before public release.
@@ -410,12 +410,12 @@ export default function AccessPage() {
                </div>
 
                {/* Card 6: Governance Rights */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+               <div className="text-center">
+                 <div className="flex flex-col items-center mb-3 sm:mb-4">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                      <GiVote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Governance Rights</h3>
+                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Governance Rights</h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                    Voting rights in COPYM DAO decisions and platform governance.
@@ -423,33 +423,31 @@ export default function AccessPage() {
                </div>
              </div>
 
-             {/* Credential Card Section */}
-             <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-               <div className="bg-white/10 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8">
-                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Your Access Credential</h3>
-                 <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base">
-                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                 </p>
-                 <div className="flex justify-center">
-                   <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
-                     <CredentialCard
-                       user={{
-                         name: "Alex Morgan",
-                         employeeNumber: "C-2028",
-                         passNumber: "56",
-                         points: "1,250",
-                         qrImage: "/assets/svg/copym_qr.svg",
-                       }}
-                       variant="bottleGreen"
-                       stacked
-                       backVariant="darkBlue"
-                       logoSrc="/assets/copym/png/Copym-05-1.png"
-                       logoSize={24}
-                     />
-                   </div>
-                 </div>
-               </div>
-             </div>
+                           {/* Credential Card Section */}
+              <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Your Access Credential</h3>
+                <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base">
+                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                </p>
+                <div className="flex justify-center">
+                  <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                    <CredentialCard
+                      user={{
+                        name: "Alex Morgan",
+                        employeeNumber: "C-2028",
+                        passNumber: "56",
+                        points: "1,250",
+                        qrImage: "/assets/svg/copym_qr.svg",
+                      }}
+                      variant="bottleGreen"
+                      stacked
+                      backVariant="darkBlue"
+                      logoSrc="/assets/copym/png/Copym-05-1.png"
+                      logoSize={24}
+                    />
+                  </div>
+                </div>
+              </div>
            </div>
          </div>
                </section>
@@ -472,49 +470,36 @@ export default function AccessPage() {
                </p>
              </div>
 
-             {/* Benefits Cards */}
-             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-               {benefits.map((benefit, index) => (
-                 <div
-                   key={index}
-                   className="benefit-card group relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-sm p-8 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/30 hover:border-green-300/50"
-                 >
-                   {/* Background gradient overlay */}
-                   <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/30 to-blue-50/30 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                           {/* Benefits Cards */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="text-center group"
+                  >
+                    {/* Icon with enhanced styling */}
+                    <div className="flex justify-center mb-6">
+                      <Box
+                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
+                        sx={{
+                          background: "linear-gradient(135deg, #10b981, #059669)",
+                          boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
+                        }}
+                      >
+                        <benefit.icon className="h-8 w-8 text-white" />
+                      </Box>
+                    </div>
 
-                   <div className="relative z-10">
-                     {/* Icon with enhanced styling */}
-                     <div className="flex items-center justify-between mb-6">
-                       <Box
-                         className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                         sx={{
-                           background: "linear-gradient(135deg, #10b981, #059669)",
-                           boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
-                         }}
-                       >
-                         <benefit.icon className="h-8 w-8 text-white" />
-                       </Box>
-
-                       {/* Number badge */}
-                       <div className="w-8 h-8 rounded-full bg-gradient-to-r from-emerald-500 to-blue-500 flex items-center justify-center text-white font-bold text-sm">
-                         {index + 1}
-                       </div>
-                     </div>
-
-                     {/* Content */}
-                     <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
-                       {benefit.title}
-                     </h3>
-                     <p className="text-gray-700 leading-relaxed text-base">
-                       {benefit.description}
-                     </p>
-
-                     {/* Bottom accent line */}
-                     <div className="w-0 group-hover:w-full h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full transition-all duration-500 mt-6"></div>
-                   </div>
-                 </div>
-               ))}
-             </div>
+                    {/* Content */}
+                    <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-700 leading-relaxed text-base">
+                      {benefit.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
            </div>
          </div>
        </div>
@@ -536,86 +521,86 @@ export default function AccessPage() {
                </p>
              </div>
 
-             {/* Feature Cards Grid */}
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
-               {/* Card 1: Compliance-first */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiShield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Compliance-first</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
-                 </p>
-               </div>
+                           {/* Feature Cards Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
+                {/* Card 1: Compliance-first */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiShield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Compliance-first</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
+                  </p>
+                </div>
 
-               {/* Card 2: Utility & Access */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiWallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Utility & Access</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Early allocations, fee discounts, governance & staking perks for token holders.
-                 </p>
-               </div>
+                {/* Card 2: Utility & Access */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiWallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Utility & Access</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    Early allocations, fee discounts, governance & staking perks for token holders.
+                  </p>
+                </div>
 
-               {/* Card 3: Multi-asset Support */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Multi-asset Support</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Equity, debt, real estate, commodities, carbon & more asset classes supported.
-                 </p>
-               </div>
+                {/* Card 3: Multi-asset Support */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Multi-asset Support</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    Equity, debt, real estate, commodities, carbon & more asset classes supported.
+                  </p>
+                </div>
 
-               {/* Card 4: Institutional Rails */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiDiamonds className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Institutional Rails</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Custody, settlement, and data rooms integrated for institutional investors.
-                 </p>
-               </div>
+                {/* Card 4: Institutional Rails */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiDiamonds className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Institutional Rails</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    Custody, settlement, and data rooms integrated for institutional investors.
+                  </p>
+                </div>
 
-               {/* Card 5: Security & Trust */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiLockedChest className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Security & Trust</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Enterprise-grade security with multi-layer protection and audit trails.
-                 </p>
-               </div>
+                {/* Card 5: Security & Trust */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiLockedChest className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Security & Trust</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    Enterprise-grade security with multi-layer protection and audit trails.
+                  </p>
+                </div>
 
-               {/* Card 6: Global Access */}
-               <div className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl">
-                 <div className="flex items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
-                     <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">Global Access</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   24/7 global access to tokenized assets with real-time market data.
-                 </p>
-               </div>
-             </div>
+                {/* Card 6: Global Access */}
+                <div className="text-center">
+                  <div className="flex flex-col items-center mb-3 sm:mb-4">
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                      <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    </div>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Global Access</h3>
+                  </div>
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                    24/7 global access to tokenized assets with real-time market data.
+                  </p>
+                </div>
+              </div>
            </div>
          </div>
                </section>

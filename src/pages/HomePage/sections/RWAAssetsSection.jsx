@@ -11,7 +11,6 @@ import {
   GiHouse,
   GiGlobe
 } from 'react-icons/gi';
-import Silk from '../../../components/Silk';
 
 export default function RWAAssetsSection() {
   return (
@@ -34,16 +33,6 @@ export default function RWAAssetsSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-                     {/* Silk Background */}
-           <div className="absolute inset-0 opacity-15">
-             <Silk
-               speed={2}
-               scale={1.5}
-               color="#ffffff"
-               noiseIntensity={0.8}
-               rotation={0.1}
-             />
-           </div>
            
            <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
              {/* Left Side - Content */}
@@ -85,28 +74,28 @@ export default function RWAAssetsSection() {
              
              {/* Right Side - Premium Asset Cards */}
              <div className="grid grid-cols-2 gap-6">
-               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+               <div className="group text-center">
                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                    <GiCoins size={40} className="text-white drop-shadow-lg" />
                  </div>
                  <p className="font-semibold text-white">Gold & Metals</p>
                </div>
                
-               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+               <div className="group text-center">
                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                    <GiPalette size={40} className="text-white drop-shadow-lg" />
                  </div>
                  <p className="font-semibold text-white">Fine Art</p>
                </div>
                
-                                                               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-                   <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                     <GiGlobe size={40} className="text-white drop-shadow-lg" />
-                   </div>
-                   <p className="font-semibold text-white">Carbon Credits</p>
+               <div className="group text-center">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                   <GiGlobe size={40} className="text-white drop-shadow-lg" />
                  </div>
+                 <p className="font-semibold text-white">Carbon Credits</p>
+               </div>
                
-               <div className="group bg-white/10 backdrop-blur-sm rounded-3xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
+               <div className="group text-center">
                  <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                    <GiHouse size={40} className="text-white drop-shadow-lg" />
                  </div>

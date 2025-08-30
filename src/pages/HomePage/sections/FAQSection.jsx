@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { GiArrowDunk, GiWideArrowDunk } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
-import Silk from '../../../components/Silk';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
@@ -60,16 +59,6 @@ export default function FAQSection() {
 
       {/* Main Content */}
       <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
-        {/* Silk Background */}
-        <div className="absolute inset-0 opacity-15">
-          <Silk
-            speed={2}
-            scale={1.5}
-            color="#ffffff"
-            noiseIntensity={0.8}
-            rotation={0.1}
-          />
-        </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* FAQ Content */}
