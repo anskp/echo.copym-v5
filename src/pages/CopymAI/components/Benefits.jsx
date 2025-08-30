@@ -43,9 +43,7 @@ const Benefits = () => {
                   Start your day with Cora AI's intelligent market analysis. Get instant insights into what's driving price movements, key market events, and actionable trading opportunities delivered in simple, digestible summaries.
                 </p>
               </div>
-              <div className="bg-gray-800/60 rounded-xl p-3 sm:p-4 border border-gray-600/50 w-full sm:w-auto sm:min-w-[280px]">
-                <DailyAI />
-              </div>
+              <DailyAI />
             </div>
 
             {/* Middle-Left: "Smart Price Alerts" */}
