@@ -7,23 +7,21 @@ const DailyAI = () => {
       {/* Inner Card */}
       <rect x="10" y="10" width="300" height="40" rx="25" fill="#14002d" stroke="#2a184f" strokeWidth="1"/>
 
-      {/* Currency Icons */}
-      <circle cx="25" cy="25" r="12" fill="#2a184f" />
-      <text x="25" y="30" fontSize="12" fontFamily="Arial, sans-serif" fill="white" textAnchor="middle" fontWeight="bold">€</text>
-      <circle cx="25" cy="25" r="10" fill="none" stroke="white" strokeWidth="1"/>
-      <circle cx="25" cy="25" r="8" fill="#2a184f" />
-      <text x="25" y="29" fontSize="10" fontFamily="Arial, sans-serif" fill="white" textAnchor="middle">$</text>
+      {/* Left Icon - White 'S' in dark purple circle */}
+      <circle cx="30" cy="30" r="15" fill="#2a184f" />
+      <text x="30" y="35" fontSize="16" fontFamily="Arial, sans-serif" fill="white" textAnchor="middle" fontWeight="bold">S</text>
+      <circle cx="30" cy="30" r="13" fill="none" stroke="white" strokeWidth="1"/>
 
-      {/* Text */}
-      <text x="50" y="30" fontSize="14" fontFamily="Segoe UI, sans-serif" fill="white" fontWeight="600">Daily recap</text>
+      {/* Text - Better positioned */}
+      <text x="55" y="28" fontSize="14" fontFamily="Segoe UI, sans-serif" fill="white" fontWeight="600">Daily recap</text>
 
-      {/* Progress Bar - With more space and shifted left */}
-      <line x1="55" y1="40" x2="235" y2="40" stroke="#4a184f" strokeWidth="3" />
-      <circle cx="55" cy="40" r="4" fill="white" />
+      {/* Progress Bar - Better positioned below text */}
+      <line x1="55" y1="42" x2="240" y2="42" stroke="#4a184f" strokeWidth="3" />
+      <circle cx="60" cy="42" r="4" fill="white" />
 
-      {/* Play Button */}
-      <circle cx="280" cy="30" r="15" fill="#2a184f" />
-      <path d="M275 25 L285 30 L275 35 Z" fill="white" />
+      {/* Play Button - Better positioned and sized */}
+      <circle cx="285" cy="30" r="16" fill="#2a184f" />
+      <path d="M278 24 L290 30 L278 36 Z" fill="white" />
     </svg>
   );
 };
