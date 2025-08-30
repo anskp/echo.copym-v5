@@ -2,7 +2,6 @@ import React from "react";
 import { GiArrowDunk, GiRoundStar, GiCompass } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Silk from "../../../components/Silk";
 
 // 3D Phone Component
 const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = "blue" }) => {
@@ -131,16 +130,6 @@ export default function AppPeekSection() {
     <section className="relative">
       {/* Main Content with Curved Background - HomePage Style */}
       <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-8 sm:pt-12 lg:pt-16 pb-0 overflow-hidden">
-        {/* Silk Background */}
-        <div className="absolute inset-0 opacity-15">
-          <Silk
-            speed={2}
-            scale={1.5}
-            color="#ffffff"
-            noiseIntensity={0.8}
-            rotation={0.1}
-          />
-        </div>
         
         {/* Content Container */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">

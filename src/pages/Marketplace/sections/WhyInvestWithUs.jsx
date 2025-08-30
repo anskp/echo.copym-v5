@@ -65,8 +65,8 @@ export default function WhyInvestWithUs() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
-            <span className="text-gray-900">WHY INVEST </span>
-            <span className="text-green-600">WITH US?</span>
+            <span className="text-black">WHY INVEST </span>
+            <span className="text-emerald-600">WITH US?</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             We combine cutting-edge blockchain technology with traditional investment wisdom to create a secure, transparent, and accessible investment platform.

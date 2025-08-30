@@ -3,7 +3,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { GiChart, GiPerson, GiGlobe, GiArrowDunk } from 'react-icons/gi';
-import Silk from '../../../components/Silk';
 
 export default function TokenDistribution() {
   const features = [
@@ -37,16 +36,6 @@ export default function TokenDistribution() {
     <section className="relative">
       {/* Main Content */}
       <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
-        {/* Silk Background */}
-        <div className="absolute inset-0 opacity-15">
-          <Silk
-            speed={2}
-            scale={1.5}
-            color="#ffffff"
-            noiseIntensity={0.8}
-            rotation={0.1}
-          />
-        </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
@@ -70,7 +59,7 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group relative p-6 bg-white/20 backdrop-blur-md border border-white/30 rounded-2xl hover:bg-white/30 transition-all duration-300 hover:shadow-lg"
+                className="text-center group relative"
               >
                 {/* Icon */}
                 <div className="w-16 h-16 rounded-2xl bg-white/30 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">

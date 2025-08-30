@@ -16,7 +16,6 @@ import {
   GiCpu,
   GiFiles
 } from 'react-icons/gi';
-import Silk from '../../../components/Silk';
 
 export default function TokenizationProcess({ onLaunchCreator }) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -97,16 +96,6 @@ export default function TokenizationProcess({ onLaunchCreator }) {
     <section className="relative">
       {/* Main Content */}
       <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
-        {/* Silk Background */}
-        <div className="absolute inset-0 opacity-15">
-          <Silk
-            speed={2}
-            scale={1.5}
-            color="#ffffff"
-            noiseIntensity={0.8}
-            rotation={0.1}
-          />
-        </div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
@@ -131,15 +120,12 @@ export default function TokenizationProcess({ onLaunchCreator }) {
           {/* Why Tokenize Features Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
             {whyTokenizeFeatures.map((feature, index) => (
-              <div 
-                key={index} 
-                className="bg-white/20 backdrop-blur-md border border-white/30 rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 transition-all duration-300 hover:bg-white/30 shadow-lg hover:shadow-xl"
-              >
-                <div className="flex items-center mb-3 sm:mb-4">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mr-3 sm:mr-4">
+              <div key={index} className="text-center">
+                <div className="flex flex-col items-center mb-3 sm:mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
                     <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                   </div>
-                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg">{feature.title}</h3>
+                  <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">{feature.title}</h3>
                 </div>
                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                   {feature.description}
