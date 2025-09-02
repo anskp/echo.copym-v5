@@ -1,29 +1,44 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { GiArrowDunk, GiRoundStar, GiHouse, GiGlobe, GiChart } from 'react-icons/gi';
+import { GiArrowDunk } from 'react-icons/gi';
 
-// Prebuilt 3D-style icons from react-icons
-const Cube3D = () => (
+// Image-based 3D-style icons from public assets
+const PuzzleIcon = () => (
   <div className="text-center">
-    <GiRoundStar size={80} className="text-white drop-shadow-lg" />
+    <img
+      src="/assets/Images/icons/puzzle.png"
+      alt="Puzzle icon"
+      className="w-20 h-20 drop-shadow-lg"
+    />
   </div>
 );
 
-const Rocket3D = () => (
+const House3DIcon = () => (
   <div className="text-center">
-    <GiHouse size={80} className="text-white drop-shadow-lg" />
+    <img
+      src="/assets/Images/icons/3d-house.png"
+      alt="3D house icon"
+      className="w-20 h-20 drop-shadow-lg"
+    />
   </div>
 );
 
-const Ship3D = () => (
+const WorldwideIcon = () => (
   <div className="text-center">
-    <GiGlobe size={80} className="text-white drop-shadow-lg" />
+    <img
+      src="/assets/Images/icons/worldwide.png"
+      alt="Worldwide icon"
+      className="w-20 h-20 drop-shadow-lg"
+    />
   </div>
 );
 
-const Chart3D = () => (
+const GrowthChartIcon = () => (
   <div className="text-center">
-    <GiChart size={80} className="text-white drop-shadow-lg" />
+    <img
+      src="/assets/Images/icons/growth-chart.png"
+      alt="Growth chart icon"
+      className="w-20 h-20 drop-shadow-lg"
+    />
   </div>
 );
 
@@ -60,28 +75,28 @@ export default function CurvedSectionDivider() {
           {/* Feature Cards Grid */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-10 relative z-10">
             <FeatureCard
-              icon={Cube3D}
+              icon={PuzzleIcon}
               title="Own a Piece of Big Investments"
               description="Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about."
               ctaText="Start Investing"
               color="from-pink-500 to-teal-500"
             />
             <FeatureCard
-              icon={Rocket3D}
+              icon={House3DIcon}
               title="Earn Without the Hassle"
               description="Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management."
               ctaText="View Returns"
               color="from-yellow-500 to-green-500"
             />
             <FeatureCard
-              icon={Ship3D}
+              icon={WorldwideIcon}
               title="Explore a World of Assets"
               description="From property and gold to private equity and art—our AI picks out smart opportunities so you don't have to dig through endless research."
               ctaText="Explore Assets"
               color="from-pink-500 via-blue-500 to-green-500"
             />
             <FeatureCard
-              icon={Chart3D}
+              icon={GrowthChartIcon}
               title="Trade Anytime, Anywhere"
               description="Want out? Sell instantly. Want in? Buy in seconds. With your built-in wallet, you can manage and trade smoothly—just like sending money to a friend."
               ctaText="Trade Now"
