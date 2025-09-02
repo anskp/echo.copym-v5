@@ -97,7 +97,7 @@ export default function TrackYourCrypto() {
                   className="btn-gradient inline-flex items-center justify-center px-8 py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
                 >
                   Explore Marketplace
-                  <GiArrowDunk className="ml-2 h-5 w-5" />
+                  
                 </Link>
                 
                 {/* QR Code Card - Moved to right side and made bigger */}

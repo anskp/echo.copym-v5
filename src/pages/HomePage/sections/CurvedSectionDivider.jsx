@@ -51,7 +51,7 @@ const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
       <h3 className="text-xl font-bold text-white mb-3 leading-tight">{title}</h3>
       <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs">{description}</p>
       <button className="inline-flex items-center justify-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200 mt-auto">
-        {ctaText} <GiArrowDunk className="ml-2 h-5 w-5" />
+      
       </button>
     </div>
   );
@@ -78,28 +78,28 @@ export default function CurvedSectionDivider() {
               icon={PuzzleIcon}
               title="Own a Piece of Big Investments"
               description="Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about."
-              ctaText="Start Investing"
+              
               color="from-pink-500 to-teal-500"
             />
             <FeatureCard
               icon={House3DIcon}
               title="Earn Without the Hassle"
               description="Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management."
-              ctaText="View Returns"
+              
               color="from-yellow-500 to-green-500"
             />
             <FeatureCard
               icon={WorldwideIcon}
               title="Explore a World of Assets"
               description="From property and gold to private equity and art—our AI picks out smart opportunities so you don't have to dig through endless research."
-              ctaText="Explore Assets"
+              
               color="from-pink-500 via-blue-500 to-green-500"
             />
             <FeatureCard
               icon={GrowthChartIcon}
               title="Trade Anytime, Anywhere"
               description="Want out? Sell instantly. Want in? Buy in seconds. With your built-in wallet, you can manage and trade smoothly—just like sending money to a friend."
-              ctaText="Trade Now"
+              
               color="from-orange-500 to-red-500"
             />
           </div>
