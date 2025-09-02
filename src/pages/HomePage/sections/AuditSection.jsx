@@ -23,7 +23,7 @@ import audit0Icon from '/assets/svg/audit0.png';
 // Blockchain icons with real logos
 const BlockchainIcon = ({ icon, name }) => (
   <div className="flex flex-col items-center justify-center">
-    <div className="w-8 h-8 flex items-center justify-center">
+    <div className="w-8 h-8 flex items-center justify-center" aria-hidden>
       <img
         src={icon}
         alt={`${name} blockchain logo`}
@@ -61,9 +61,14 @@ const SliderDesign2 = () => {
   const duplicatedSlides = [...slides, ...slides, ...slides]; // Triple the slides for seamless loop
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
+  const [reducedMotion, setReducedMotion] = useState(false);
   
   // Continuously check which item is closest to the center
   useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(media.matches);
+    const handler = () => setReducedMotion(media.matches);
+    media.addEventListener?.('change', handler);
     const checkActive = () => {
       if (!containerRef.current) return;
       const containerCenter =
@@ -85,25 +90,24 @@ const SliderDesign2 = () => {
       requestAnimationFrame(checkActive); // keep updating in sync with animation
     };
     requestAnimationFrame(checkActive);
+    return () => {
+      media.removeEventListener?.('change', handler);
+    };
   }, []);
 
         return (
           <div
       ref={containerRef}
       className="relative h-full overflow-hidden py-12 mx-auto"
+      role="region"
+      aria-label="Supported blockchains"
     >
-      {/* Fade edges - transparent to match section background */}
-      <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-transparent before:to-transparent after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-transparent after:to-transparent"></div>
+      {/* Fade edges with glass effect; adapts to dark mode */}
+      <div className="absolute inset-0 z-20 pointer-events-none before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-white/0 before:to-white/10 before:dark:from-transparent before:dark:to-black/20 after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-white/0 after:to-white/10 after:dark:from-transparent after:dark:to-black/20"></div>
       <motion.div
         className="flex items-center justify-center"
-        animate={{
-          x: ["0%", "-33.33%"],
-        }}
-        transition={{
-          ease: "linear",
-          duration: 15,
-          repeat: Infinity,
-        }}
+        animate={reducedMotion ? undefined : { x: ["0%", "-33.33%"] }}
+        transition={reducedMotion ? undefined : { ease: "linear", duration: 15, repeat: Infinity }}
       >
         {duplicatedSlides.map((slide, index) => {
           const slideIndex = index % slides.length;
@@ -116,15 +120,17 @@ const SliderDesign2 = () => {
             >
               <div className="flex items-center justify-center">
                 <div
-                  className={`w-20 h-20 rounded-full border-2 flex items-center justify-center transition-all duration-300 ease-in-out ${
+                  className={`w-20 h-20 rounded-2xl border flex items-center justify-center transition-all duration-300 ease-in-out backdrop-blur-md bg-white/60 dark:bg-white/5 shadow-sm ${
                     isActive
-                      ? "border-blue-500 bg-blue-50 scale-125"
-                      : "border-gray-300 bg-white scale-90"
+                      ? "border-blue-500/60 ring-4 ring-blue-500/10 scale-110"
+                      : "border-gray-200/60 dark:border-white/10 scale-95"
                   }`}
+                  tabIndex={0}
+                  aria-label={`${slide.name} blockchain`}
                 >
                   <div
                     className={`flex items-center justify-center transition-colors duration-300 ${
-                      isActive ? "text-blue-600" : "text-gray-700"
+                      isActive ? "text-blue-600" : "text-gray-700 dark:text-gray-200"
                     }`}
                   >
                     <BlockchainIcon icon={slide.icon} name={slide.name} />
@@ -144,9 +150,14 @@ const AuditSlider = () => {
   const duplicatedSlides = [...auditSlides, ...auditSlides, ...auditSlides]; // Triple the slides for seamless loop
   const containerRef = useRef(null);
   const itemsRef = useRef([]);
+  const [reducedMotion, setReducedMotion] = useState(false);
   
   // Continuously check which item is closest to the center
   useEffect(() => {
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReducedMotion(media.matches);
+    const handler = () => setReducedMotion(media.matches);
+    media.addEventListener?.('change', handler);
     const checkActive = () => {
       if (!containerRef.current) return;
       const containerCenter =
@@ -168,25 +179,23 @@ const AuditSlider = () => {
       requestAnimationFrame(checkActive); // keep updating in sync with animation
     };
     requestAnimationFrame(checkActive);
+    return () => {
+      media.removeEventListener?.('change', handler);
+    };
   }, []);
  
   return (
     <div
       ref={containerRef}
       className="relative h-full overflow-hidden py-12 mx-auto"
+      role="region"
+      aria-label="Audit partners"
     >
-      {/* Fade edges - transparent to match section background */}
-      <div className="absolute inset-0 z-20 before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-transparent before:to-transparent after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-transparent after:to-transparent"></div>
+      <div className="absolute inset-0 z-20 pointer-events-none before:absolute before:left-0 before:top-0 before:w-1/4 before:h-full before:bg-gradient-to-r before:from-white/0 before:to-white/10 before:dark:from-transparent before:dark:to-black/20 after:absolute after:right-0 after:top-0 after:w-1/4 after:h-full after:bg-gradient-to-l after:from-white/0 after:to-white/10 after:dark:from-transparent after:dark:to-black/20"></div>
       <motion.div
         className="flex items-center justify-center"
-        animate={{
-          x: ["0%", "33.33%"],
-        }}
-        transition={{
-          ease: "linear",
-          duration: 15,
-          repeat: Infinity,
-        }}
+        animate={reducedMotion ? undefined : { x: ["0%", "33.33%"] }}
+        transition={reducedMotion ? undefined : { ease: "linear", duration: 15, repeat: Infinity }}
       >
         {duplicatedSlides.map((slide, index) => {
           const slideIndex = index % auditSlides.length;
@@ -199,15 +208,17 @@ const AuditSlider = () => {
             >
               <div className="flex items-center justify-center">
                 <div
-                  className={`w-20 h-20 rounded-full border-2 flex items-center justify-center transition-all duration-300 ease-in-out ${
+                  className={`w-20 h-20 rounded-2xl border flex items-center justify-center transition-all duration-300 ease-in-out backdrop-blur-md bg-white/60 dark:bg-white/5 shadow-sm ${
                     isActive
-                      ? "border-emerald-500 bg-emerald-50 scale-125"
-                      : "border-gray-300 bg-white scale-90"
+                      ? "border-emerald-500/60 ring-4 ring-emerald-500/10 scale-110"
+                      : "border-gray-200/60 dark:border-white/10 scale-95"
                   }`}
+                  tabIndex={0}
+                  aria-label={`${slide.name} audit partner`}
                 >
                   <div
                     className={`flex items-center justify-center transition-colors duration-300 ${
-                      isActive ? "text-emerald-600" : "text-gray-700"
+                      isActive ? "text-emerald-600" : "text-gray-700 dark:text-gray-200"
                     }`}
                   >
                     <BlockchainIcon icon={slide.icon} name={slide.name} />
@@ -225,28 +236,29 @@ const AuditSlider = () => {
 export default function AuditSection() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+      {/* Background - subtle grid with gradient, supports dark mode */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-emerald-500/5 to-transparent dark:via-emerald-400/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.08),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(59,130,246,0.06),transparent_40%)]"></div>
       </div>
       
       <div className="relative z-10 py-16 sm:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section Header */}
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 anton-regular">
-              <span className="text-gray-900">SECURE & </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 anton-regular">
+              <span className="text-gray-900 dark:text-black">SECURE & </span>
               <span className="text-emerald-600">AUDITED</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
+          <p className="text-lg sm:text-xl text-black dark:text-black max-w-3xl mx-auto leading-relaxed">
+              Our contracts are continuously monitored and vetted by trusted security partners and seamlessly integrated with leading blockchain networks.
           </p>
         </div>
 
           {/* Blockchain Section */}
           <div className="text-center mb-12">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 anton-regular">
-              <span className="text-gray-900">BLOCKCHAIN</span>
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-black mb-8 anton-regular">
+              <span className="text-black">BLOCKCHAIN</span>
             </h3>
           </div>
 
@@ -257,7 +269,7 @@ export default function AuditSection() {
 
                     {/* Audit Section */}
           <div className="text-center mb-12 mt-16">
-            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-8 anton-regular">
+            <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-black mb-8 anton-regular">
               <span className="text-emerald-600">AUDIT</span>
             </h3>
             </div>
@@ -267,9 +279,16 @@ export default function AuditSection() {
             <AuditSlider />
           </div>
 
-        {/* Legend */}
-        <div className="flex justify-center items-center space-x-8 mt-12">
-          </div>
+        {/* CTA - minimalist */}
+        <div className="flex justify-center items-center mt-12">
+          <a
+            href="#security"
+            className="inline-flex items-center px-5 py-3 rounded-xl bg-emerald-600 text-white font-semibold shadow-lg shadow-emerald-600/20 hover:bg-emerald-500 focus:outline-none focus-visible:ring-4 focus-visible:ring-emerald-400/30 transition-colors"
+            aria-label="Learn more about our security practices"
+          >
+            Learn about our security
+          </a>
+        </div>
         </div>
       </div>
     </section>
