@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
-import { GiPlayButton, GiRoundStar, GiCompass, GiArrowDunk } from 'react-icons/gi';
+import { GiPlayButton, GiRoundStar, GiArrowDunk } from 'react-icons/gi';
+import { QrCodeIcon } from '@heroicons/react/24/outline';
 import { Link } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -100,11 +101,11 @@ export default function TrackYourCrypto() {
                   
                 </Link>
                 
-                {/* QR Code Card - Moved to right side and made bigger */}
-                <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
-                  <GiCompass className="w-24 h-24 text-gray-900" />
-                  <p className="text-sm text-gray-600 mt-3 text-center font-medium">Scan to download</p>
-                </div>
+                                 {/* QR Code Card - Moved to right side and made bigger */}
+                 <div className="bg-white p-6 rounded-xl shadow-2xl border border-gray-100 hover:shadow-3xl transition-all duration-300 transform hover:scale-105">
+                   <QrCodeIcon className="w-24 h-24 text-gray-900" />
+                   <p className="text-sm text-gray-600 mt-3 text-center font-medium">Scan to download</p>
+                 </div>
               </div>
             </div>
             
