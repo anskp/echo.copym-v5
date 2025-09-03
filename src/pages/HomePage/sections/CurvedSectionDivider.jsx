@@ -15,9 +15,9 @@ const PuzzleIcon = () => (
 const House3DIcon = () => (
   <div className="text-center">
     <img
-      src="/assets/Images/icons/3d-house.png"
+      src="/assets/Images/icons/cs2.png"
       alt="3D house icon"
-      className="w-20 h-20 drop-shadow-lg"
+      className="w-57 -pt-6 h-21 drop-shadow-lg filter grayscale brightness-90 contrast-110"
     />
   </div>
 );
