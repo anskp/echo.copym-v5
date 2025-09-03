@@ -25,9 +25,9 @@ const House3DIcon = () => (
 const WorldwideIcon = () => (
   <div className="text-center">
     <img
-      src="/assets/Images/icons/worldwide.png"
+      src="/assets/Images/icons/cs3.png"
       alt="Worldwide icon"
-      className="w-20 h-20 drop-shadow-lg"
+      className="w-57 -pt-6 h-21 drop-shadow-lg"
     />
   </div>
 );
