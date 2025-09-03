@@ -13,7 +13,6 @@ import StepRectangles from "./design/stackedcora";
 import SolCard from "./design/solcard";
 import DailyAI from "./design/daily-ai";
 import Graph from "./design/graph";
-
 const Benefits = () => {
   return (
     <section className="relative">
@@ -34,7 +33,6 @@ const Benefits = () => {
 
           {/* Perfect Bento Grid Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 lg:gap-4">
-            
             {/* Top Section: "Daily Market Recap" - Spans full width on mobile, 12 cols on desktop */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-12 bg-gradient-to-r from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/50 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex-1 text-center sm:text-left">
@@ -45,14 +43,12 @@ const Benefits = () => {
               </div>
               <DailyAI />
             </div>
-
             {/* Middle-Left: "Smart Price Alerts" */}
             <div className="col-span-1 sm:col-span-1 lg:col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-4 border border-gray-700/50 h-auto">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-2">Smart Price Alerts</h3>
               <p className="text-gray-300 text-xs sm:text-sm mb-3">
                 Set intelligent price alerts with Cora AI's predictive analysis. Get notified before major price movements with AI-powered insights and automated trading signals.
               </p>
-              
               {/* SolCard Component */}
               <div className="scale-50 sm:scale-75 transform -m-4 sm:-m-4">
                 <SolCard />
@@ -70,7 +66,6 @@ const Benefits = () => {
                 <PortfolioEventsCard />
               </div>
             </div>
-
             {/* Middle-Right: "AI Portfolio Insights" */}
             <div className="col-span-1 sm:col-span-2 lg:col-span-4 bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 border border-gray-700/50">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-3">AI Portfolio Insights</h3>
@@ -109,7 +104,6 @@ const Benefits = () => {
                 <Graph />
               </div>
             </div>
-
           </div>
         </div>
       </div>
