@@ -5,9 +5,9 @@ import { GiArrowDunk } from 'react-icons/gi';
 const PuzzleIcon = () => (
   <div className="text-center">
     <img
-      src="/assets/Images/icons/puzzle.png"
+      src="/assets/Images/icons/cs1.png"
       alt="Puzzle icon"
-      className="w-20 h-20 drop-shadow-lg"
+      className="w-40 -pt-6 h-21 drop-shadow-lg "
     />
   </div>
 );
@@ -17,7 +17,7 @@ const House3DIcon = () => (
     <img
       src="/assets/Images/icons/cs2.png"
       alt="3D house icon"
-      className="w-57 -pt-6 h-21 drop-shadow-lg filter grayscale brightness-90 contrast-110"
+      className="w-40 -pt-6 h-21 drop-shadow-lg "
     />
   </div>
 );
@@ -27,7 +27,7 @@ const WorldwideIcon = () => (
     <img
       src="/assets/Images/icons/cs3.png"
       alt="Worldwide icon"
-      className="w-57 -pt-6 h-21 drop-shadow-lg"
+      className="w-40 -pt-6 h-21 drop-shadow-lg "
     />
   </div>
 );
@@ -37,7 +37,7 @@ const GrowthChartIcon = () => (
     <img
       src="/assets/Images/icons/cs4.png"
       alt="Growth chart icon"
-      className="w-57 -pt-6 h-21 drop-shadow-lg"
+      className="w-40 -pt-6 h-22 drop-shadow-lg "
     />
   </div>
 );
@@ -45,11 +45,11 @@ const GrowthChartIcon = () => (
 const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
   return (
     <div className="text-center group flex flex-col items-center justify-start h-full">
-      <div className="mb-6 flex justify-center items-center">
+      <div className="mb-8 flex justify-center items-center min-h-[5rem]">
         <Icon />
       </div>
-      <h3 className="text-xl font-bold text-white mb-3 leading-tight">{title}</h3>
-      <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs">{description}</p>
+      <h3 className="text-xl font-bold text-white mb-4 leading-tight max-w-xs mx-auto">{title}</h3>
+      <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs mx-auto">{description}</p>
       <button className="inline-flex items-center justify-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200 mt-auto">
       
       </button>
