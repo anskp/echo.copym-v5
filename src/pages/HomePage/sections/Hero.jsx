@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { GiArrowDunk, GiPlayButton, GiCrossedSwords } from 'react-icons/gi';
+import { GiPlayButton, GiCrossedSwords } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
 // Realistic iPhone Component for Hero - First Phone (Marketplace)
@@ -148,7 +148,6 @@ export default function Hero() {
                 className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 Start Investing
-                <GiArrowDunk className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Link>
 
               <button

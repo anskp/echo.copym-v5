@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiPerson, GiShield, GiGlobe, GiArrowDunk } from 'react-icons/gi';
+import { GiPerson, GiShield, GiGlobe } from 'react-icons/gi';
 import Silk from '../../../components/Silk';
 
 export default function InvestorManagement() {
@@ -89,7 +89,7 @@ export default function InvestorManagement() {
 
               {/* CTA Link */}
               <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200">
-                Learn More <GiArrowDunk className="ml-1 w-4 h-4" />
+                Learn More <span className="ml-1">→</span>
               </button>
             </motion.div>
           ))}
@@ -98,8 +98,7 @@ export default function InvestorManagement() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-            Manage Investors
-            <GiArrowDunk className="ml-2 h-5 w-5" />
+            Manage Investors <span className="ml-2">→</span>
           </button>
         </div>
       </div>
