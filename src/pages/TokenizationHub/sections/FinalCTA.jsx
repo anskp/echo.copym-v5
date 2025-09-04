@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiArrowDunk, GiCheckMark } from 'react-icons/gi';
+import {GiCheckMark } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
 export default function FinalCTA() {
@@ -41,7 +41,7 @@ export default function FinalCTA() {
             </p>
             <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
               Start Tokenizing
-              <GiArrowDunk className="ml-2 h-5 w-5" />
+            
             </button>
           </div>
         </div>

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiChart, GiPerson, GiGlobe, GiArrowDunk } from 'react-icons/gi';
+import { GiChart, GiPerson, GiGlobe } from 'react-icons/gi';
 
 export default function TokenDistribution() {
   const features = [
@@ -72,7 +72,7 @@ export default function TokenDistribution() {
 
                 {/* CTA Link */}
                 <button className="inline-flex items-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200">
-                  Learn More <GiArrowDunk className="ml-2 h-5 w-5" />
+                  Learn More <span className="ml-2">→</span>
                 </button>
               </motion.div>
             ))}

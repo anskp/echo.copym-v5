@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiArrowDunk, GiPlayButton } from 'react-icons/gi';
+import { GiPlayButton } from 'react-icons/gi';
 import { LavaLamp } from '../../../components/ui/fluid-blob';
 import { Link } from 'react-router-dom';
 
@@ -43,7 +43,6 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
             <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
               Start Tokenizing
-              <GiArrowDunk className="ml-2 h-5 w-5" />
             </button>
 
             <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">

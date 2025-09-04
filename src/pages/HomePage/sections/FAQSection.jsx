@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { GiArrowDunk, GiWideArrowDunk } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
@@ -11,11 +10,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
       >
         <h3 className="text-lg font-semibold text-white pr-4">{question}</h3>
         <div className="flex-shrink-0 transition-transform duration-300">
-          {isOpen ? (
-            <GiWideArrowDunk className="w-5 h-5 text-green-400" />
-          ) : (
-            <GiArrowDunk className="w-5 h-5 text-white/60" />
-          )}
+          <span className="w-5 h-5 inline-block text-green-400">{isOpen ? '▾' : '▸'}</span>
         </div>
       </button>
              <div 
@@ -64,40 +59,40 @@ export default function FAQSection() {
           {/* FAQ Content */}
           <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 relative z-10">
                          {/* Left Side - FAQ List */}
-             <div className="lg:col-span-2">
-               {faqs.map((faq, index) => (
-                 <FAQItem
-                   key={index}
-                   question={faq.question}
-                   answer={faq.answer}
-                   isOpen={openFAQ === index}
-                   onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-                 />
-               ))}
-             </div>
-
-            {/* Right Side - Support Info */}
-            <div className="lg:col-span-1 flex flex-col justify-center">
-              <div className="text-center lg:text-left">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                  FAQs
-                </h3>
-                <p className="text-white/80 text-lg mb-6">
-                  Still got questions?
-                </p>
-                <p className="text-white/70 text-base mb-8 leading-relaxed">
-                  These frequently asked questions might have the answer, but if not, our support team is just a message away!
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-                >
-                  Contact Support
-                  <GiArrowDunk className="ml-2 w-4 h-4" />
-                </Link>
-              </div>
+            <div className="lg:col-span-2">
+              {faqs.map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openFAQ === index}
+                  onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+                />
+              ))}
             </div>
-          </div>
+
+           {/* Right Side - Support Info */}
+           <div className="lg:col-span-1 flex flex-col justify-center">
+             <div className="text-center lg:text-left">
+               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                 FAQs
+               </h3>
+               <p className="text-white/80 text-lg mb-6">
+                 Still got questions?
+               </p>
+               <p className="text-white/70 text-base mb-8 leading-relaxed">
+                 These frequently asked questions might have the answer, but if not, our support team is just a message away!
+               </p>
+               <Link
+                 to="/contact"
+                 className="inline-flex items-center justify-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+               >
+                 Contact Support
+                 <span className="ml-2">→</span>
+               </Link>
+             </div>
+           </div>
+         </div>
         </div>
       </div>
     </section>

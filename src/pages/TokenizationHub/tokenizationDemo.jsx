@@ -31,7 +31,6 @@ import {
 } from '@mui/material';
 import {
   GiCrossedSwords as CloseIcon,
-  GiArrowDunk as ArrowBackIcon,
   GiCheckMark as CheckCircleIcon,
   GiBank as AccountBalanceIcon,
   GiToken as TokenIcon,
@@ -515,7 +514,7 @@ const CreateAssetModal = ({ open, onClose }) => {
                   '&:hover': { bgcolor: 'grey.200' }
                 }}
               >
-                <ArrowBackIcon />
+                <span style={{ fontSize: 18 }}>←</span>
               </IconButton>
             )}
             <IconButton 

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiShield, GiLockedChest, GiEyeball, GiArrowDunk } from 'react-icons/gi';
+import { GiShield, GiLockedChest, GiEyeball } from 'react-icons/gi';
 
 export default function TrustAndData() {
   const securityFeatures = [

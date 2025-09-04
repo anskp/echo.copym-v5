@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiArrowDunk, GiBrain } from 'react-icons/gi';
+import { GiBrain } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -35,7 +35,6 @@ export default function AIInvestingSection() {
                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 font-semibold text-green-400 bg-transparent border-2 border-green-400 hover:bg-green-400 hover:text-black rounded-full transition-all duration-300 transform hover:scale-105"
               >
                 See the Reveal
-                <GiArrowDunk className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
