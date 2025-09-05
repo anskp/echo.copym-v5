@@ -2,34 +2,37 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiPerson, GiShield, GiGlobe } from 'react-icons/gi';
+import t8Image from '/assets/Images/icons/t8.png';
+import t10Image from '/assets/Images/icons/t10.png';
+import t12Image from '/assets/Images/icons/t12.png';
+import t13Image from '/assets/Images/icons/t13.png';
 import Silk from '../../../components/Silk';
 
 export default function InvestorManagement() {
   const features = [
     {
-      icon: GiPerson,
+      image: t8Image,
       title: "Investor Dashboard",
       description: "Comprehensive dashboard for tracking investments, returns, and portfolio performance.",
       color: "from-pink-500 to-teal-500",
       stats: "10K+ Active"
     },
     {
-      icon: GiShield,
+      image: t12Image,
       title: "Portfolio Analytics",
       description: "Advanced analytics and reporting tools for investment performance tracking.",
       color: "from-yellow-500 to-green-500",
       stats: "Real-time"
     },
     {
-      icon: GiGlobe,
+      image: t13Image,
       title: "Compliance Management",
       description: "Automated compliance monitoring and regulatory reporting for all investors.",
       color: "from-pink-500 via-blue-500 to-green-500",
       stats: "100% Compliant"
     },
     {
-      icon: GiPerson,
+      image: t10Image,
       title: "Communication Hub",
       description: "Integrated communication tools for investor updates and announcements.",
       color: "from-orange-500 to-red-500",
@@ -75,7 +78,11 @@ export default function InvestorManagement() {
               >
               {/* Icon */}
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                <feature.icon className="w-8 h-8 text-emerald-600" />
+                {feature.image ? (
+                  <img src={feature.image} alt={feature.title} style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
+                ) : (
+                  <feature.icon className="w-8 h-8 text-emerald-600" />
+                )}
               </div>
 
               {/* Content */}

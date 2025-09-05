@@ -1,5 +1,5 @@
 import React from "react";
-import { GiArrowDunk, GiRoundStar, GiCompass } from "react-icons/gi";
+import { GiRoundStar, GiCompass } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -105,7 +105,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
             <span className="font-semibold text-xs">{store}</span>
           </div>
           
-          <GiArrowDunk className="w-2.5 h-2.5" />
+          <span className="text-xs">→</span>
         </div>
       </div>
       

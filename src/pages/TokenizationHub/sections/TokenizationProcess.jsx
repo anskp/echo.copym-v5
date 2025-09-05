@@ -2,20 +2,25 @@
 // src/pages/TokenizationHub/sections/TokenizationProcess.jsx
 
 import React, { useState, useRef } from 'react';
-import { GiPlayButton, GiArrowDunk } from 'react-icons/gi';
+import { GiPlayButton } from 'react-icons/gi';
 import { 
   GiChart, 
   GiPerson, 
   GiGlobe, 
   GiShield, 
   GiLockedChest, 
-  GiScrollUnfurled,
   GiHouse,
   GiCoins,
   GiBookCover,
   GiCpu,
   GiFiles
 } from 'react-icons/gi';
+import t1Image from '/assets/Images/icons/t1.png';
+import t2Image from '/assets/Images/icons/t2.png';
+import t3Image from '/assets/Images/icons/t3.png';
+import t4Image from '/assets/Images/icons/t4.png';
+import t5Image from '/assets/Images/icons/t5.png';
+import t6Image from '/assets/Images/icons/t6.png';
 
 export default function TokenizationProcess({ onLaunchCreator }) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -63,32 +68,32 @@ export default function TokenizationProcess({ onLaunchCreator }) {
     { 
       title: "Programable terms", 
       description: "Program the transfer-restrictions and investment terms that are required between different asset and investor (KYC) classifications.",
-      icon: GiScrollUnfurled
+      image: t1Image
     },
     { 
       title: "Increased accessibility", 
       description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
-      icon: GiPerson
+      image: t2Image
     },
     { 
       title: "Global reach", 
       description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
-      icon: GiGlobe
-    },
+      image: t3Image
+    },  
     { 
       title: "Lower costs", 
       description: "Tokenization reduces costs such as custody, transfer, and administration, resulting in lower fees for investors and increased returns for fund managers.",
-      icon: GiLockedChest
+      image: t4Image
     },
     { 
       title: "Faster settlement times", 
       description: "Tokenization speeds up trade settlements, enabling investors to receive their funds faster after selling their shares in the fund.",
-      icon: GiChart
+      image: t5Image
     },
     { 
       title: "Greater transparency", 
       description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
-      icon: GiShield
+      image: t6Image
     }
   ];
 
@@ -122,8 +127,12 @@ export default function TokenizationProcess({ onLaunchCreator }) {
             {whyTokenizeFeatures.map((feature, index) => (
               <div key={index} className="text-center">
                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                    <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                  <div className="mb-3 sm:mb-4">
+                    {feature.image ? (
+                      <img src={feature.image} alt={feature.title} style={{ width: '5rem', height: '5rem', objectFit: 'contain' }} />
+                    ) : (
+                      <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                    )}
                   </div>
                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">{feature.title}</h3>
                 </div>

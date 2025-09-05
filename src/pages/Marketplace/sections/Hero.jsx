@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiArrowDunk, GiPlayButton } from 'react-icons/gi';
+import { GiPlayButton } from 'react-icons/gi';
 import { LavaLamp } from '../../../components/ui/fluid-blob';
 import { Link } from 'react-router-dom';
 
@@ -44,7 +44,6 @@ export default function Hero() {
             <Link to="/marketplace">
               <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
                 Enter Marketplace
-                <GiArrowDunk className="ml-2 h-5 w-5" />
               </button>
             </Link>
 

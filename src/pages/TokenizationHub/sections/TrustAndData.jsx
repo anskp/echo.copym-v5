@@ -34,7 +34,7 @@ export default function TrustAndData() {
             {securityFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
                 {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-white/20 to-white/10 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="h-6 w-6 text-white" />
                 </div>
                 
