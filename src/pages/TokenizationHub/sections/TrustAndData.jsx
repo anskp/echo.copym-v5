@@ -2,14 +2,13 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiShield, GiLockedChest, GiEyeball } from 'react-icons/gi';
 
 export default function TrustAndData() {
   const securityFeatures = [
-    { title: 'Multi-Signature Wallets', description: 'Enhanced security with multi-signature wallet infrastructure.', icon: GiLockedChest, level: 'Enterprise', features: ['256-bit encryption', 'Hardware security', 'Audit trail'] },
-    { title: 'Smart Contract Audits', description: 'Thoroughly audited smart contracts by leading security firms.', icon: GiEyeball, level: 'Certified', features: ['Third-party audits', 'Vulnerability testing', 'Compliance checks'] },
-    { title: 'Compliance Framework', description: 'Built-in regulatory compliance and risk management protocols.', icon: GiShield, level: 'Regulatory', features: ['SEC compliance', 'KYC/AML', 'Regulatory reporting'] },
-    { title: 'Fraud Detection', description: 'AI-powered fraud detection and prevention systems.', icon: GiShield, level: 'Advanced', features: ['Real-time monitoring', 'AI algorithms', 'Threat prevention'] }
+    { title: 'Multi-Signature Wallets', description: 'Enhanced security with multi-signature wallet infrastructure.', icon: '/assets/Images/icons/t14.png', level: 'Enterprise', features: ['256-bit encryption', 'Hardware security', 'Audit trail'] },
+    { title: 'Smart Contract Audits', description: 'Thoroughly audited smart contracts by leading security firms.', icon: '/assets/Images/icons/t16.png', level: 'Certified', features: ['Third-party audits', 'Vulnerability testing', 'Compliance checks'] },
+    { title: 'Compliance Framework', description: 'Built-in regulatory compliance and risk management protocols.', icon: '/assets/Images/icons/t6.png', level: 'Regulatory', features: ['SEC compliance', 'KYC/AML', 'Regulatory reporting'] },
+    { title: 'Fraud Detection', description: 'AI-powered fraud detection and prevention systems.', icon: '/assets/Images/icons/t15.png', level: 'Advanced', features: ['Real-time monitoring', 'AI algorithms', 'Threat prevention'] }
   ];
 
   return (
@@ -34,8 +33,12 @@ export default function TrustAndData() {
             {securityFeatures.map((feature, index) => (
               <div key={index} className="text-center group">
                 {/* Icon */}
-                <div className="mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="h-6 w-6 text-white" />
+                <div className="mb-4 mx-auto flex justify-center items-center group-hover:scale-110 transition-transform duration-300">
+                  <img 
+                    src={feature.icon} 
+                    alt={feature.title}
+                    className="h-12 w-12 object-contain"
+                  />
                 </div>
                 
                 {/* Content */}
