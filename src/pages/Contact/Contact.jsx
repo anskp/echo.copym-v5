@@ -17,7 +17,6 @@ import {
   GiNetworkBars,
   GiPalette,
   GiPlayButton,
-  GiArrowDunk,
 
   GiTemporaryShield,
   GiLockedChest,
@@ -137,7 +136,7 @@ const Contact = () => {
   ];
 
   const resources = [
-    { name: 'Investor Deck', icon: GiArrowDunk, url: '/resources/investor-deck.pdf' },
+    { name: 'Investor Deck', icon: GiFiles, url: '/resources/investor-deck.pdf' },
     { name: 'Whitepaper', icon: GiFiles, url: '/resources/whitepaper.pdf' },
     { name: 'Compliance Framework', icon: GiShield, url: '/compliance' },
     { name: 'API Documentation', icon: GiGlobe, url: '/api' }
@@ -363,7 +362,6 @@ const Contact = () => {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-emerald-600 text-sm mt-1 hover:underline"
                           >
-                            <GiArrowDunk className="w-4 h-4 mr-1" />
                             {info.action.includes('mailto') ? 'Email Us' : info.action.includes('tel') ? 'Call' : 'View Map'}
                           </a>
                         )}

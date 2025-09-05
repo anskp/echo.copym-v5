@@ -210,7 +210,7 @@ const AboutUs = () => {
                         {/* Value 2 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
-                                <img src="/assets/Images/icons/ab4.png" alt="Security" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
+                                <img src="/assets/Images/icons/a5.png" alt="Security" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Security</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -221,7 +221,7 @@ const AboutUs = () => {
                         {/* Value 3 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
-                                <img src="/assets/Images/icons/a5.png" alt="Innovation" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
+                                <img src="/assets/Images/icons/ab4.png" alt="Innovation" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Innovation</h3>
                             <p className="text-gray-600 leading-relaxed">

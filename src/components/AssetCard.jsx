@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GiCompass, GiChart, GiArrowDunk } from "react-icons/gi";
+import { GiCompass, GiChart} from "react-icons/gi";
 
 export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -90,7 +90,7 @@ export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
                   whileTap={{ scale: 0.98 }}
                 >
                   <span>View Asset</span>
-                  <GiArrowDunk className="w-4 h-4" />
+                  
                 </motion.button>
               </div>
             </motion.div>
