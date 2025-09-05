@@ -2,30 +2,33 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GiChart, GiPerson, GiGlobe } from 'react-icons/gi';
+import t3Image from '/assets/Images/icons/t3.png';
+import t8Image from '/assets/Images/icons/t8.png';
+import t9Image from '/assets/Images/icons/t9.png';
+import t6Image from '/assets/Images/icons/t6.png';
 
 export default function TokenDistribution() {
   const features = [
     {
-      icon: GiChart,
+      image: t3Image,
       title: "Global Distribution",
       description: "Reach investors worldwide with automated compliance and multi-jurisdictional support.",
       color: "from-pink-500 to-teal-500"
     },
     {
-      icon: GiPerson,
+      image: t8Image,
       title: "Investor Onboarding",
       description: "Streamlined KYC/AML verification with instant investor qualification and onboarding.",
       color: "from-yellow-500 to-green-500"
     },
     {
-      icon: GiGlobe,
+      image: t9Image,
       title: "Liquidity Management",
       description: "Automated market making and liquidity provision for seamless trading experience.",
       color: "from-pink-500 via-blue-500 to-green-500"
     },
     {
-      icon: GiChart,
+      image: t6Image,
       title: "Regulatory Compliance",
       description: "Built-in compliance frameworks ensuring adherence to global securities regulations.",
       color: "from-orange-500 to-red-500"
@@ -63,7 +66,11 @@ export default function TokenDistribution() {
               >
                 {/* Icon */}
                 <div className="w-16 h-16 rounded-2xl bg-white/30 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-8 h-8 text-white" />
+                  {feature.image ? (
+                    <img src={feature.image} alt={feature.title} style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
+                  ) : (
+                    <feature.icon className="w-8 h-8 text-white" />
+                  )}
                 </div>
 
                 {/* Content */}

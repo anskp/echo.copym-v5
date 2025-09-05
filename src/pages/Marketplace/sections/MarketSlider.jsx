@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
-  GiArrowDunk, 
   GiRoundStar, 
   GiChart, 
   GiShield, 
@@ -165,7 +164,7 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
       <div className="relative z-20 p-6 space-y-4 text-white">
         <h3 className="text-2xl font-bold leading-tight">{card.title}</h3>
         <div className="flex flex-col gap-2 text-base font-semibold border-t border-b border-white/20 py-3">
-          <p className="flex items-center gap-2"><GiArrowDunk size={20} className="text-green-400" />{card.location}</p>
+          <p className="flex items-center gap-2"><span className="text-green-400">📍</span>{card.location}</p>
           <p className="flex items-center gap-2"><GiChart size={20} className="text-green-400" />{card.expectedRoi} ROI</p>
         </div>
         <div className="flex items-end justify-between pt-2">
@@ -454,7 +453,7 @@ const MarketplaceGlimpse = () => {
                className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
              >
                Explore the Full Marketplace
-               <GiArrowDunk className="w-5 h-5" />
+               <span>→</span>
              </Link>
            </motion.div>
          </div>

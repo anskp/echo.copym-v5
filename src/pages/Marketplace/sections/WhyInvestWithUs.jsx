@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { GiShield, GiChart, GiGlobe, GiArrowDunk } from "react-icons/gi";
+import { GiChart, GiGlobe } from "react-icons/gi";
+import m1Image from '/assets/Images/icons/m1.png';
+import m2Image from '/assets/Images/icons/m2.png';
+import m3Image from '/assets/Images/icons/m3.png';
 import Silk from '../../../components/Silk';
 
 export default function WhyInvestWithUs() {
@@ -83,14 +86,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <GiShield className="w-6 h-6 text-emerald-600" />
+              <img src={m1Image} alt="Bank-Grade Security" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Grade Security</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Your investments are protected with multi-layer security protocols and institutional-grade custody solutions.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              Learn More <GiArrowDunk className="ml-2 h-5 w-5" />
+              Learn More <span className="ml-2">→</span>
             </button>
           </motion.div>
 
@@ -102,14 +105,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <GiChart className="w-6 h-6 text-emerald-600" />
+              <img src={m2Image} alt="Radical Transparency" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Radical Transparency</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Every transaction is recorded on an immutable blockchain ledger, providing auditable proof of ownership.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              View Details <GiArrowDunk className="ml-2 h-5 w-5" />
+              View Details <span className="ml-2">→</span>
             </button>
           </motion.div>
 
@@ -121,14 +124,14 @@ export default function WhyInvestWithUs() {
             viewport={{ once: true }}
           >
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <GiGlobe className="w-6 h-6 text-emerald-600" />
+              <img src={m3Image} alt="Enhanced Liquidity" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Liquidity</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
               Trade your tokenized assets on our secondary market, turning illiquid investments into flexible opportunities.
             </p>
             <button className="inline-flex items-center text-green-600 font-semibold text-sm hover:text-green-700 transition-colors duration-200">
-              Start Trading <GiArrowDunk className="ml-2 h-5 w-5" />
+              Start Trading <span className="ml-2">→</span>
             </button>
           </motion.div>
         </div>
