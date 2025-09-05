@@ -65,9 +65,9 @@ export default function TokenDistribution() {
                 className="text-center group relative"
               >
                 {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-white/30 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+                <div className="flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.image ? (
-                    <img src={feature.image} alt={feature.title} style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
+                    <img src={feature.image} alt={feature.title} style={{ width: '3rem', height: '3rem', objectFit: 'contain' }} />
                   ) : (
                     <feature.icon className="w-8 h-8 text-white" />
                   )}
