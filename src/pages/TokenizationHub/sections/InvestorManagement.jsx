@@ -77,9 +77,9 @@ export default function InvestorManagement() {
                 className="text-center group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg"
               >
               {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
+              <div className="flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                 {feature.image ? (
-                  <img src={feature.image} alt={feature.title} style={{ width: '2rem', height: '2rem', objectFit: 'contain' }} />
+                  <img src={feature.image} alt={feature.title} style={{ width: '3rem', height: '3rem', objectFit: 'contain' }} className="filter brightness-75 contrast-125" />
                 ) : (
                   <feature.icon className="w-8 h-8 text-emerald-600" />
                 )}
