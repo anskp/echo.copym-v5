@@ -464,7 +464,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/t6.png" alt="Compliance-first" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/t6.png" alt="Compliance-first" className="w-6 h-6 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Compliance-first</h3>
                   </div>
@@ -477,7 +477,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/agraph.png" alt="Utility & Access" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/agraph.png" alt="Utility & Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Utility & Access</h3>
                   </div>
@@ -490,7 +490,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/m1.png" alt="Multi-asset Support" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/m1.png" alt="Multi-asset Support" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Multi-asset Support</h3>
                   </div>
@@ -503,7 +503,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/adetails.png" alt="Institutional Rails" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/adetails.png" alt="Institutional Rails" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Institutional Rails</h3>
                   </div>
@@ -516,7 +516,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/a5.png" alt="Security & Trust" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/a5.png" alt="Security & Trust" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Security & Trust</h3>
                   </div>
@@ -529,7 +529,7 @@ export default function AccessPage() {
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/t3.png" alt="Global Access" className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 object-contain filter brightness-0 invert" />
+                      <img src="/assets/Images/icons/t3.png" alt="Global Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Global Access</h3>
                   </div>

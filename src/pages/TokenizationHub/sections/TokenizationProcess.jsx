@@ -107,7 +107,6 @@ export default function TokenizationProcess({ onLaunchCreator }) {
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 anton-regular">
               <span className="text-white">WHY</span>
-              <br />
               <span className="text-black">TOKENIZE?</span>
             </h2>
             <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4">
