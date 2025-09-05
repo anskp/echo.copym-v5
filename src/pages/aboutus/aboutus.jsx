@@ -274,8 +274,8 @@ const AboutUs = () => {
                             {/* Timeline Item 1 */}
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto flex items-center justify-center">
-                                        <GiHouse className="w-6 h-6 text-white" />
+                                    <div className="w-12 h-12  mx-auto flex items-center justify-center">
+                                        <img src="/assets/Images/icons/contact1.png" alt="Foundation" className="w-13 h-13 object-contain" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2023 - Foundation</h3>
@@ -287,8 +287,8 @@ const AboutUs = () => {
                             {/* Timeline Item 2 */}
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto flex items-center justify-center">
-                                        <GiRocket className="w-6 h-6 text-white" />
+                                    <div className="w-12 h-12  mx-auto flex items-center justify-center">
+                                        <img src="/assets/Images/icons/contact3.png" alt="Platform Launch" className="w-13 h-13 object-contain" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2024 - Platform Launch</h3>
@@ -300,8 +300,8 @@ const AboutUs = () => {
                             {/* Timeline Item 3 */}
                             <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
                                 <div className="text-center mb-6">
-                                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto flex items-center justify-center">
-                                        <GiGlobe className="w-6 h-6 text-white" />
+                                    <div className="w-12 h-12 mx-auto flex items-center justify-center">
+                                        <img src="/assets/Images/icons/t3.png" alt="Global Expansion" className="w-13 h-13 object-contain" />
                                     </div>
                                 </div>
                                 <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2025 - Global Expansion</h3>
