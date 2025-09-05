@@ -12,18 +12,13 @@ import {
   GiWallet, 
   GiGlobe, 
   GiDiamonds, 
-  GiFiles, 
-  GiChart, 
-  GiPalette, 
-  GiCalendar, 
-  GiPowerLightning, 
-  GiVote, 
   GiLockedChest, 
   GiCrown, 
   GiSparkSpirit, 
   GiCoins,
   GiArrowDunk
 } from 'react-icons/gi';
+
 import CredentialCard from '../../components/CredentialCard';
 import { LavaLamp } from '../../components/ui/fluid-blob';
 
@@ -72,12 +67,12 @@ export default function AccessPage() {
   ];
 
   const unlockFeatures = [
-    { icon: GiFiles, text: "Token-gated content and insider market reports" },
-    { icon: GiChart, text: "Lower platform trading fees" },
-    { icon: GiPalette, text: "Limited-edition NFT collectibles" },
-    { icon: GiCalendar, text: "Invitations to COPYM IRL meetups and global summits" },
-    { icon: GiPowerLightning, text: "Early access to new asset tokenizations" },
-    { icon: GiVote, text: "Governance voting rights in COPYM DAO decisions" }
+    { icon: "/assets/Images/icons/a1.png", text: "Token-gated content and insider market reports" },
+    { icon: "/assets/Images/icons/t4.png", text: "Lower platform trading fees" },
+    { icon: "/assets/Images/icons/rwa2.png", text: "Limited-edition NFT collectibles" },
+    { icon: "/assets/Images/icons/a4.png", text: "Invitations to COPYM IRL meetups and global summits" },
+    { icon: "/assets/Images/icons/a5.png", text: "Early access to new asset tokenizations" },
+    { icon: "/assets/Images/icons/a6.png", text: "Governance voting rights in COPYM DAO decisions" }
   ];
 
   // Advanced GSAP Animations
@@ -344,83 +339,25 @@ export default function AccessPage() {
 
              {/* Feature Cards Grid - Platform Features Style */}
              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
-               {/* Card 1: Token-gated Content */}
-               <div className="text-center">
+               {unlockFeatures.map((feature, index) => (
+                 <div key={index} className="text-center">
                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiFiles className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
+                     <div className="flex items-center justify-center mb-3 sm:mb-4">
+                       <img 
+                         src={feature.icon} 
+                         alt={`Feature ${index + 1}`}
+                         className="w-8 h-8 object-contain filter brightness-0 invert"
+                       />
                    </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Token-gated Content</h3>
+                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">
+                       {feature.text.split(' ').slice(0, 2).join(' ')}
+                     </h3>
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Access to insider market reports and exclusive content only available to pass holders.
-                 </p>
-               </div>
-
-               {/* Card 2: Lower Fees */}
-               <div className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiChart className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Lower Platform Fees</h3>
+                     {feature.text}
+                   </p>
                  </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Reduced trading fees and transaction costs across all platform activities.
-                 </p>
-               </div>
-
-               {/* Card 3: NFT Collectibles */}
-               <div className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiPalette className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Limited NFT Collectibles</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Exclusive access to limited-edition NFT collectibles and digital assets.
-                 </p>
-               </div>
-
-               {/* Card 4: IRL Events */}
-               <div className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiCalendar className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">IRL Events Access</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Invitations to COPYM meetups, global summits, and exclusive networking events.
-                 </p>
-               </div>
-
-               {/* Card 5: Early Access */}
-               <div className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiPowerLightning className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Early Asset Access</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Priority access to new asset tokenizations before public release.
-                 </p>
-               </div>
-
-               {/* Card 6: Governance Rights */}
-               <div className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                   <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
-                     <GiVote className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
-                   </div>
-                   <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Governance Rights</h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
-                   Voting rights in COPYM DAO decisions and platform governance.
-                 </p>
-               </div>
+               ))}
              </div>
 
                            {/* Credential Card Section */}
