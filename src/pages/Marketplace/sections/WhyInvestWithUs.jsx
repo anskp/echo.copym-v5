@@ -85,8 +85,8 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <img src={m1Image} alt="Bank-Grade Security" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
+            <div className="w-12 h-12  flex items-center justify-center mb-4 mx-auto">
+              <img src={m1Image} alt="Bank-Grade Security" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Grade Security</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -104,8 +104,8 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <img src={m2Image} alt="Radical Transparency" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
+            <div className="w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+              <img src={m2Image} alt="Radical Transparency" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Radical Transparency</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
@@ -123,8 +123,8 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500/20 to-emerald-600/10 flex items-center justify-center mb-4 mx-auto">
-              <img src={m3Image} alt="Enhanced Liquidity" style={{ width: '1.5rem', height: '1.5rem', objectFit: 'contain' }} />
+            <div className="w-12 h-12  flex items-center justify-center mb-4 mx-auto">
+              <img src={m3Image} alt="Enhanced Liquidity" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Liquidity</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">
