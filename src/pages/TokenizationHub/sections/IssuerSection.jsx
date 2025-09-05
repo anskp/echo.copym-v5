@@ -36,7 +36,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-              <GiLockedChest className="mr-2 text-blue-600" size={24} />
+              
               We can tokenize any asset
             </h3>
           </div>
@@ -60,7 +60,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
-              <GiChart className="mr-2 text-green-600" size={24} />
+              
               One simple token management interface
             </h3>
           </div>
@@ -89,7 +89,7 @@ const MinimalTokenizationDashboard = () => {
         <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4 text-center">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center justify-center">
-              <GiGlobe className="mr-2 text-purple-600" size={24} />
+              
               Global Distribution
             </h3>
           </div>
