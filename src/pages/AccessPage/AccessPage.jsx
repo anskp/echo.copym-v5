@@ -14,9 +14,9 @@ import {
   GiDiamonds, 
   GiLockedChest, 
   GiCrown, 
-  GiSparkSpirit, 
+  
   GiCoins,
-  GiArrowDunk
+ 
 } from 'react-icons/gi';
 
 import CredentialCard from '../../components/CredentialCard';
@@ -355,8 +355,8 @@ export default function AccessPage() {
                  </div>
                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
                      {feature.text}
-                   </p>
-                 </div>
+                 </p>
+               </div>
                ))}
              </div>
 
@@ -463,7 +463,7 @@ export default function AccessPage() {
                 {/* Card 1: Compliance-first */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiShield className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Compliance-first</h3>
@@ -476,7 +476,7 @@ export default function AccessPage() {
                 {/* Card 2: Utility & Access */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiWallet className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Utility & Access</h3>
@@ -489,7 +489,7 @@ export default function AccessPage() {
                 {/* Card 3: Multi-asset Support */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Multi-asset Support</h3>
@@ -502,7 +502,7 @@ export default function AccessPage() {
                 {/* Card 4: Institutional Rails */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiDiamonds className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Institutional Rails</h3>
@@ -515,7 +515,7 @@ export default function AccessPage() {
                 {/* Card 5: Security & Trust */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiLockedChest className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Security & Trust</h3>
@@ -528,7 +528,7 @@ export default function AccessPage() {
                 {/* Card 6: Global Access */}
                 <div className="text-center">
                   <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 rounded-full bg-white/30 flex items-center justify-center mb-3 sm:mb-4">
+                    <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <GiGlobe className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     </div>
                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Global Access</h3>
@@ -601,9 +601,9 @@ export default function AccessPage() {
               asset tokenization.
             </p>
             <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
-                              <GiSparkSpirit className="mr-2 sm:mr-3 w-4 h-4 sm:w-5 sm:h-5" />
+                              
                 Get Your Access Pass Now
-                <GiArrowDunk className="ml-2 sm:ml-3 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                
             </button>
           </div>
         </div>
