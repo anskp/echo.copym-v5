@@ -142,9 +142,7 @@ const AboutUs = () => {
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/60 overflow-hidden transition-all duration-300 hover:shadow-2xl">
                             <div className="p-8">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full flex items-center justify-center">
-                                        <span className="text-white font-bold text-2xl">M</span>
-                                    </div>
+                                    
                                     <h3 className="text-2xl font-bold text-blue-600 anton-regular">Our Mission</h3>
                                 </div>
                                 
@@ -166,9 +164,7 @@ const AboutUs = () => {
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/60 overflow-hidden transition-all duration-300 hover:shadow-2xl">
                             <div className="p-8">
                                 <div className="flex items-center gap-4 mb-6">
-                                    <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full flex items-center justify-center">
-                                        <span className="text-white font-bold text-2xl">V</span>
-                                    </div>
+                                    
                                     <h3 className="text-2xl font-bold text-green-600 anton-regular">Our Vision</h3>
                                 </div>
                                 
@@ -202,8 +198,8 @@ const AboutUs = () => {
                     <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                         {/* Value 1 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <GiHalfHeart className="w-8 h-8 text-white" />
+                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                                <img src="/assets/Images/icons/ab3.png" alt="Integrity" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Integrity</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -213,8 +209,8 @@ const AboutUs = () => {
 
                         {/* Value 2 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <GiShield className="w-8 h-8 text-white" />
+                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                                <img src="/assets/Images/icons/ab4.png" alt="Security" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Security</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -224,8 +220,8 @@ const AboutUs = () => {
 
                         {/* Value 3 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <GiPowerLightning className="w-8 h-8 text-white" />
+                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                                <img src="/assets/Images/icons/a5.png" alt="Innovation" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Innovation</h3>
                             <p className="text-gray-600 leading-relaxed">
@@ -235,8 +231,8 @@ const AboutUs = () => {
 
                         {/* Value 4 */}
                         <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                                <GiTargetArrows className="w-8 h-8 text-white" />
+                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                                <img src="/assets/Images/icons/ab2.png" alt="Inclusivity" className="w-13 h-13 object-contain filter brightness-75 contrast-125"/>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Inclusivity</h3>
                             <p className="text-gray-600 leading-relaxed">
