@@ -96,7 +96,7 @@ const FeaturesGrid = () => {
       {features.map((feature, index) => (
         <motion.div
           key={index}
-          className="flex items-start space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+          className="flex items-start space-x-4 p-4"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: index * 0.1 }}
@@ -216,7 +216,7 @@ export default function AppPeekSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             
             {/* Left Grid - Phone and Download Buttons */}
-            <div className="flex flex-col items-center space-y-6">
+            <div className="flex justify-center items-center relative">
               {/* Phone */}
               <div className="flex justify-center items-center relative overflow-visible">
                <div 
@@ -259,7 +259,7 @@ export default function AppPeekSection() {
             </div>
             
               {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6">
+              <div className="flex flex-col items-start space-y-6 ml-6">
               {/* Google Play Store Button */}
               <StoreDownloadButton 
                 store="Google Play"
@@ -267,7 +267,7 @@ export default function AppPeekSection() {
                 downloads="1M+ downloads"
                 bgColor="bg-black"
                 textColor="text-white"
-                  position="left"
+                position="left"
               />
               
               {/* Apple App Store Button */}
@@ -277,7 +277,7 @@ export default function AppPeekSection() {
                 downloads="500K+ downloads"
                 bgColor="bg-black"
                 textColor="text-white"
-                position="right"
+                position="left"
               />
               </div>
             </div>
@@ -291,9 +291,10 @@ export default function AppPeekSection() {
                 viewport={{ once: true }}
                 className="mb-8"
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 anton-regular">
-                  Powerful Features
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold mb-4 anton-regular">
+  <span className="text-white">Powerful </span>
+  <span className="text-black">Features</span>
+</h2>
                 <p className="text-white/80 text-lg">
                   Everything you need for modern investment management
                 </p>
