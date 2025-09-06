@@ -1,5 +1,6 @@
 import React from "react";
-import { GiRoundStar, GiCompass } from "react-icons/gi";
+import { GiRoundStar } from "react-icons/gi";
+import { QrCodeIcon, ChartBarIcon, CpuChipIcon, ShieldCheckIcon, WalletIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -65,6 +66,59 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
   );
 };
 
+// Features Grid Component
+const FeaturesGrid = () => {
+  const features = [
+    {
+      icon: <ChartBarIcon className="w-6 h-6" />,
+      title: "Decentralized Investments",
+      description: "Invest in real-world assets like luxury real estate and art via blockchain."
+    },
+    {
+      icon: <ChartBarIcon className="w-6 h-6" />,
+      title: "Real-Time Portfolio Tracking",
+      description: "Monitor your investments with live price updates and performance analytics."
+    },
+    {
+      icon: <CpuChipIcon className="w-6 h-6" />,
+      title: "AI-Powered Recommendations",
+      description: "Get personalized investment suggestions based on your goals and risk profile."
+    },
+    {
+      icon: <ShieldCheckIcon className="w-6 h-6" />,
+      title: "Secure Wallet Integration",
+      description: "Seamlessly connect your wallet for fast, secure transactions."
+    }
+  ];
+
+  return (
+    <div className="space-y-6">
+      {features.map((feature, index) => (
+        <motion.div
+          key={index}
+          className="flex items-start space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
+          initial={{ opacity: 0, x: 20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-white">
+            {feature.icon}
+          </div>
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-white mb-2">
+              {feature.title}
+            </h3>
+            <p className="text-white/80 text-sm leading-relaxed">
+              {feature.description}
+            </p>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  );
+};
+
 // Store Download Button Component
 const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, textColor, position }) => {
   const getStoreIcon = () => {
@@ -87,7 +141,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
       {/* QR Code */}
       <div className="mb-1 p-1 bg-white rounded-md shadow-sm">
         <div className="w-8 h-8 bg-gray-100 rounded-md flex items-center justify-center">
-          <GiCompass className="w-4 h-4 text-gray-400" />
+          <QrCodeIcon className="w-4 h-4 text-gray-400" />
         </div>
       </div>
       
@@ -158,34 +212,13 @@ export default function AppPeekSection() {
             </motion.p>
           </div>
 
-          {/* Main Content with Phones and Download Buttons */}
-          <div className="flex flex-col lg:flex-row justify-center items-center relative mb-8 gap-6 lg:gap-8">
-            {/* Download Buttons - Top on mobile, left/right on desktop */}
-            <div className="flex lg:hidden justify-end items-center space-x-6 order-1 lg:order-none px-4">
-              {/* Google Play Store Button */}
-              <StoreDownloadButton 
-                store="Google Play"
-                rating={4}
-                downloads="1M+ downloads"
-                bgColor="bg-black"
-                textColor="text-white"
-                position="left"
-              />
-              
-              {/* Apple App Store Button */}
-              <StoreDownloadButton 
-                store="App Store"
-                rating={5}
-                downloads="500K+ downloads"
-                bgColor="bg-black"
-                textColor="text-white"
-                position="right"
-              />
-            </div>
+          {/* Two Grid Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             
-                         {/* Single Phone - Centered layout */}
-             <div className="flex justify-center items-center relative overflow-visible order-2 lg:order-none">
-               {/* Single Device - Blue phone */}
+            {/* Left Grid - Phone and Download Buttons */}
+            <div className="flex flex-col items-center space-y-6">
+              {/* Phone */}
+              <div className="flex justify-center items-center relative overflow-visible">
                <div 
                  className="relative w-[180px] h-[380px] md:w-[240px] md:h-[500px] transition-all duration-700 hover:scale-105"
                >
@@ -225,8 +258,8 @@ export default function AppPeekSection() {
               </div>
             </div>
             
-            {/* Desktop Download Buttons - Hidden on mobile, shown on desktop */}
-            <div className="hidden lg:flex flex-col items-end space-y-3 order-3 lg:order-none">
+              {/* Download Buttons */}
+              <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-6">
               {/* Google Play Store Button */}
               <StoreDownloadButton 
                 store="Google Play"
@@ -234,7 +267,7 @@ export default function AppPeekSection() {
                 downloads="1M+ downloads"
                 bgColor="bg-black"
                 textColor="text-white"
-                position="right"
+                  position="left"
               />
               
               {/* Apple App Store Button */}
@@ -246,6 +279,27 @@ export default function AppPeekSection() {
                 textColor="text-white"
                 position="right"
               />
+              </div>
+            </div>
+            
+            {/* Right Grid - Features */}
+            <div className="flex flex-col justify-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+                className="mb-8"
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 anton-regular">
+                  Powerful Features
+                </h2>
+                <p className="text-white/80 text-lg">
+                  Everything you need for modern investment management
+                </p>
+              </motion.div>
+              
+              <FeaturesGrid />
             </div>
           </div>
         </div>
