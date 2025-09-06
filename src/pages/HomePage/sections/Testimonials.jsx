@@ -78,8 +78,8 @@ function TestimonialCard({ testimonial }) {
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
-      {/* Rating and Icon */}
-      <div className="flex items-center justify-between mb-4">
+      {/* Rating */}
+      <div className="flex items-center justify-start mb-4">
         <div className="flex text-yellow-400 gap-0.5">
           {Array.from({ length: 5 }).map((_, i) => (
             <GiRoundStar 
@@ -88,7 +88,6 @@ function TestimonialCard({ testimonial }) {
             />
           ))}
         </div>
-        <IconComponent className="h-5 w-5 text-white/80 flex-shrink-0" />
       </div>
 
       {/* Quote */}
