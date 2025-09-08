@@ -5,10 +5,7 @@ import React, { useState, useRef } from 'react';
 import { GiPlayButton } from 'react-icons/gi';
 import { 
   GiChart, 
-  GiPerson, 
-  GiGlobe, 
   GiShield, 
-  GiLockedChest, 
   GiHouse,
   GiCoins,
   GiBookCover,
@@ -21,6 +18,7 @@ import t3Image from '/assets/Images/icons/t3.png';
 import t4Image from '/assets/Images/icons/t4.png';
 import t5Image from '/assets/Images/icons/t5.png';
 import t6Image from '/assets/Images/icons/t6.png';
+import { icons } from '@tabler/icons-react';
 
 export default function TokenizationProcess({ onLaunchCreator }) {
   const [currentStep, setCurrentStep] = useState(0);
@@ -68,32 +66,33 @@ export default function TokenizationProcess({ onLaunchCreator }) {
     { 
       title: "Programable terms", 
       description: "Program the transfer-restrictions and investment terms that are required between different asset and investor (KYC) classifications.",
-      image: t1Image
+      icon: t1Image
     },
     { 
       title: "Increased accessibility", 
       description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
-      image: t2Image
+      icon: t2Image
     },
     { 
       title: "Global reach", 
       description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
-      image: t3Image
+      icon: t3Image   
     },  
     { 
       title: "Lower costs", 
       description: "Tokenization reduces costs such as custody, transfer, and administration, resulting in lower fees for investors and increased returns for fund managers.",
-      image: t4Image
+      icon: t4Image   
+      
     },
     { 
       title: "Faster settlement times", 
       description: "Tokenization speeds up trade settlements, enabling investors to receive their funds faster after selling their shares in the fund.",
-      image: t5Image
+      icon: t5Image
     },
     { 
+      icon: t6Image,
       title: "Greater transparency", 
       description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
-      image: t6Image
     }
   ];
 
@@ -127,8 +126,11 @@ export default function TokenizationProcess({ onLaunchCreator }) {
               <div key={index} className="text-center">
                 <div className="flex flex-col items-center mb-3 sm:mb-4">
                   <div className="mb-3 sm:mb-4">
-                    {feature.image ? (
-                      <img src={feature.image} alt={feature.title} style={{ width: '5rem', height: '5rem', objectFit: 'contain' }} />
+                    {feature.icon ? (
+                      <img src={feature.icon} 
+                      alt={feature.title} 
+                      style={{ width: '65px', height: '65px', objectFit: 'contain' }} 
+                      className="icon filter brightness-125 contrast-125"/>
                     ) : (
                       <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white" />
                     )}

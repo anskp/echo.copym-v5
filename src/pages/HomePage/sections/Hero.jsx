@@ -152,7 +152,7 @@ export default function Hero() {
 
               <button
                 onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-2xl sm:rounded-3xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
               >
                 Watch Demo
               </button>

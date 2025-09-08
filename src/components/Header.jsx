@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { GiHamburgerMenu, GiCrossedSwords, GiArrowDunk } from 'react-icons/gi';
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
-import Silk from './Silk';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -125,16 +124,7 @@ export default function Header() {
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3, ease: "easeOut" }}
                 >
-                  {/* Silk Background */}
-                  <div className="absolute inset-0 opacity-10">
-                    <Silk
-                      speed={2}
-                      scale={1.5}
-                      color="#ffffff"
-                      noiseIntensity={0.8}
-                      rotation={0.1}
-                    />
-                  </div>
+                  {/* Removed Silk Background */}
                   
                   <div className="dropdown-grid relative z-10">
                     {navigationData[navItem].map((item, index) => (

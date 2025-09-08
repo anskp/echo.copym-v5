@@ -74,7 +74,9 @@ function TestimonialCard({ testimonial }) {
   
   return (
     <motion.div 
-      className="flex-shrink-0 w-[320px] h-[280px] bg-gradient-to-br from-slate-800/90 to-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 flex flex-col justify-between overflow-hidden"
+     className="flex-shrink-0 w-[320px] h-[280px] bg-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/30 rounded-2xl shadow-xl p-6 flex flex-col justify-between overflow-hidden hover:bg-white/15"
+
+
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
@@ -92,23 +94,23 @@ function TestimonialCard({ testimonial }) {
 
       {/* Quote */}
       <div className="flex-1 mb-6 overflow-hidden">
-        <p className="text-slate-200 text-sm leading-relaxed italic break-words">
-          <span className="text-green-400 text-lg font-bold">"</span>
+        <p className="text-slate-800 text-sm leading-relaxed italic break-words">
+          <span className="text-emerald-600 text-lg font-bold">"</span>
           {testimonial.quote}
-          <span className="text-green-400 text-lg font-bold">"</span>
+          <span className="text-emerald-600 text-lg font-bold">"</span>
         </p>
       </div>
 
       {/* Reviewer Info */}
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-white font-semibold text-base mb-1 break-words">{testimonial.name}</p>
-          <p className="text-green-400 text-sm font-medium mb-1 break-words">{testimonial.title}</p>
-          <p className="text-slate-400 text-xs break-words">{testimonial.company}</p>
+          <p className="text-gray-900 font-semibold text-base mb-1 break-words">{testimonial.name}</p>
+          <p className="text-emerald-600 text-sm font-medium mb-1 break-words">{testimonial.title}</p>
+          <p className="text-slate-600 text-xs break-words">{testimonial.company}</p>
         </div>
         <div className="flex items-center gap-2 flex-shrink-0">
-          <GiCheckMark className="h-4 w-4 text-green-400" />
-          <span className="text-green-400 text-xs font-medium whitespace-nowrap">Verified</span>
+          <GiCheckMark className="h-4 w-4 text-emerald-600" />
+          <span className="text-emerald-600 text-xs font-medium whitespace-nowrap">Verified</span>
         </div>
       </div>
     </motion.div>

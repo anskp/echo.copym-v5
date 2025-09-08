@@ -29,15 +29,15 @@ export default function TrustAndData() {
           </div>
 
           {/* Security Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
             {securityFeatures.map((feature, index) => (
-              <div key={index} className="text-center group">
+              <div key={index} className="group flex flex-col items-start text-left h-full">
                 {/* Icon */}
-                <div className="mb-4 mx-auto flex justify-center items-center group-hover:scale-110 transition-transform duration-300">
+                <div className="mb-4 flex items-center group-hover:scale-110 transition-transform duration-300">
                   <img 
                     src={feature.icon} 
                     alt={feature.title}
-                    className="h-12 w-12 object-contain"
+                    className="h-12 w-12 object-contain filter brightness-125 contrast-125"
                   />
                 </div>
                 
@@ -56,10 +56,10 @@ export default function TrustAndData() {
                 </div>
                 
                 {/* Features List */}
-                <div className="space-y-2">
+                <div className="space-y-2 w-full">
                   {feature.features.map((item, idx) => (
-                    <div key={idx} className="flex items-center text-xs text-white/70 group-hover:text-white/90 transition-colors duration-300 justify-center">
-                      <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 group-hover:bg-white transition-colors duration-300"></div>
+                    <div key={idx} className="flex items-center text-sm text-white/80 group-hover:text-white/90 transition-colors duration-300">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full mr-2 mt-0.5 group-hover:bg-white transition-colors duration-300"></div>
                       {item}
                     </div>
                   ))}

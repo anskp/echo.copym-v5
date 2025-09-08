@@ -11,28 +11,28 @@ import Silk from '../../../components/Silk';
 export default function InvestorManagement() {
   const features = [
     {
-      image: t8Image,
+      icon: t8Image,
       title: "Investor Dashboard",
       description: "Comprehensive dashboard for tracking investments, returns, and portfolio performance.",
       color: "from-pink-500 to-teal-500",
       stats: "10K+ Active"
     },
     {
-      image: t12Image,
+      icon: t12Image,
       title: "Portfolio Analytics",
       description: "Advanced analytics and reporting tools for investment performance tracking.",
       color: "from-yellow-500 to-green-500",
       stats: "Real-time"
     },
     {
-      image: t13Image,
+      icon: t13Image,
       title: "Compliance Management",
       description: "Automated compliance monitoring and regulatory reporting for all investors.",
       color: "from-pink-500 via-blue-500 to-green-500",
       stats: "100% Compliant"
     },
     {
-      image: t10Image,
+      icon: t10Image,
       title: "Communication Hub",
       description: "Integrated communication tools for investor updates and announcements.",
       color: "from-orange-500 to-red-500",
@@ -66,7 +66,7 @@ export default function InvestorManagement() {
         </div>
 
                                   {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative items-stretch">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -74,30 +74,32 @@ export default function InvestorManagement() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="text-center group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg"
+                className="group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg flex flex-col h-full text-left"
               >
-              {/* Icon */}
-              <div className="flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                {feature.image ? (
-                  <img src={feature.image} alt={feature.title} style={{ width: '3rem', height: '3rem', objectFit: 'contain' }} className="filter brightness-75 contrast-125" />
-                ) : (
-                  <feature.icon className="w-8 h-8 text-emerald-600" />
-                )}
-              </div>
+                {/* Icon */}
+                <div className="flex items-center w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300">
+                  {feature.icon ? (
+                    <img src={feature.icon} 
+                    alt={feature.title} 
+                    className="icon filter brightness-75 contrast-125" />
+                  ) : (
+                    <feature.icon className="w-8 h-8 text-emerald-600" />
+                  )}
+                </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-              <p className="text-gray-700 leading-relaxed mb-4">{feature.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+              <p className="text-gray-700 leading-relaxed mb-6">{feature.description}</p>
 
-              {/* Stats Badge */}
-              <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 mb-4">
-                {feature.stats}
+              {/* Badge + CTA Row */}
+              <div className="mt-auto flex items-center gap-3 flex-nowrap">
+                <div className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800 whitespace-nowrap">
+                  {feature.stats}
+                </div>
+                <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200 whitespace-nowrap">
+                  Learn More <span className="ml-1">→</span>
+                </button>
               </div>
-
-              {/* CTA Link */}
-              <button className="inline-flex items-center text-emerald-600 font-semibold text-sm hover:text-emerald-700 transition-colors duration-200">
-                Learn More <span className="ml-1">→</span>
-              </button>
             </motion.div>
           ))}
         </div>

@@ -7,7 +7,7 @@ const PuzzleIcon = () => (
     <img
       src="/assets/Images/icons/cs1.png"
       alt="Puzzle icon"
-      className="w-40 -pt-6 h-21 drop-shadow-lg "
+      className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125 "
     />
   </div>
 );
@@ -17,7 +17,7 @@ const House3DIcon = () => (
     <img
       src="/assets/Images/icons/cs2.png"
       alt="3D house icon"
-      className="w-40 -pt-6 h-21 drop-shadow-lg "
+      className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125"
     />
   </div>
 );
@@ -27,7 +27,7 @@ const WorldwideIcon = () => (
     <img
       src="/assets/Images/icons/cs3.png"
       alt="Worldwide icon"
-      className="w-40 -pt-6 h-21 drop-shadow-lg "
+      className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125"
     />
   </div>
 );
@@ -37,7 +37,7 @@ const GrowthChartIcon = () => (
     <img
       src="/assets/Images/icons/cs4.png"
       alt="Growth chart icon"
-      className="w-40 -pt-6 h-22 drop-shadow-lg "
+      className="w-40 -pt-6 h-22 drop-shadow-lg filter brightness-125 contrast-125"
     />
   </div>
 );

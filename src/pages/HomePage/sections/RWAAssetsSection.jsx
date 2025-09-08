@@ -66,28 +66,28 @@ export default function RWAAssetsSection() {
              {/* Right Side - Premium Asset Cards */}
              <div className="grid grid-cols-2 gap-6">
                <div className="group text-center">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg filter brightness-125 contrast-125">
                    <img src="/assets/Images/icons/rwa1.png" alt="Gold & Metals" style={{ width: 72, height: 72 }} />
                  </div>
                  <p className="font-semibold text-white">Gold & Metals</p>
                </div>
                
                <div className="group text-center">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg filter brightness-125 contrast-125">
                    <img src="/assets/Images/icons/rwa2.png" alt="Fine Art" style={{ width: 72, height: 72 }} />
                  </div>
                  <p className="font-semibold text-white">Fine Art</p>
                </div>
                
                <div className="group text-center">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg filter brightness-125 contrast-125">
                    <img src="/assets/Images/icons/rwa3.png" alt="Carbon Credits" style={{ width: 72, height: 72 }} />
                  </div>
                  <p className="font-semibold text-white">Carbon Credits</p>
                </div>
                
                <div className="group text-center">
-                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                 <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg filter brightness-125 contrast-125">
                    <img src="/assets/Images/icons/rwa4.png" alt="Real Estate" style={{ width: 78, height: 78 }} />
                  </div>
                  <p className="font-semibold text-white">Real Estate</p>
