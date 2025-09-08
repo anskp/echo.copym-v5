@@ -117,7 +117,7 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
     color: '#6b7280', 
     fontSize: cardWidth <= 320 ? 11 : 12, 
     fontWeight: 500, 
-    marginBottom: 6,
+    marginBottom: 0,
     lineHeight: 1.2
   };
   
@@ -190,11 +190,11 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
             </div>
           </div>
 
-          {/* IDs Section - Better aligned grid */}
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: '1fr 1fr', 
-            gap: 16,
+          {/* IDs and Points Section - Unified grid for better alignment */}
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '12px 16px', // Vertical and horizontal gap
             alignItems: 'start'
           }}>
             <div>
@@ -205,12 +205,10 @@ function CredentialCard({ user, variant = 'bottleGreen', logoSrc, logoSize = 24,
               <div style={labelStyle}>Blockchain No</div>
               <div style={valueStyle}>{user.passNumber}</div>
             </div>
-          </div>
-
-          {/* Points Section */}
-          <div>
-            <div style={labelStyle}>Points</div>
-            <div style={valueStyle}>{user.points}</div>
+            <div style={{ gridColumn: 'span 2' }}> {/* Points spans both columns */}
+              <div style={labelStyle}>Points</div>
+              <div style={valueStyle}>{user.points}</div>
+            </div>
           </div>
         </div>
 

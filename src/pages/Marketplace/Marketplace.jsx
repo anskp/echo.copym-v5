@@ -2,6 +2,7 @@ import Hero from "./sections/Hero";
 import MarketSlider from "./sections/MarketSlider";
 import WhyInvestWithUs from "./sections/WhyInvestWithUs";
 import AppPeekSection from "./sections/AppPeekSection";
+import FAQsection from "./sections/FAQsection";
 
 export default function Marketplace() {
   return (
@@ -12,6 +13,7 @@ export default function Marketplace() {
       <div className="text-center">
         <MarketSlider />
       </div>
+      <FAQsection />
     </div>
   );
 }

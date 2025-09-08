@@ -7,7 +7,6 @@ import {
   GiGlobe, 
   GiShield 
 } from "react-icons/gi";
-import Silk from "../../components/Silk";
 
 /**
  * Copym — RWA Tokenized Marketplace
@@ -222,16 +221,7 @@ export default function Typeform() {
   return (
     <div className="min-h-screen text-white flex items-center justify-center px-4 py-2">
       <div className="relative w-full max-w-[90rem] group bg-blue-600 rounded-3xl hover:shadow-2xl transition-all duration-500 overflow-hidden p-6 sm:p-8 shadow-xl">
-        {/* Silk Background */}
-        <div className="absolute inset-0 opacity-15">
-          <Silk
-            speed={2}
-            scale={1.5}
-            color="#ffffff"
-            noiseIntensity={0.8}
-            rotation={0.1}
-          />
-        </div>
+        {/* Removed Silk Background */}
         
         
 

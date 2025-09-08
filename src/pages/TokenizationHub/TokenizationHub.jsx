@@ -9,6 +9,7 @@ import MinimalTokenizationDashboard from "./sections/IssuerSection.jsx";
 import TokenDistribution from "./sections/TokenDistribution.jsx";
 import InvestorManagement from "./sections/InvestorManagement.jsx";
 import TrustAndData from "./sections/TrustAndData.jsx";
+import FAQSection from "./sections/FAQSection.jsx";
 import FinalCTA from "./sections/FinalCTA.jsx";
 
 export default function TokenizationHub() {
@@ -37,6 +38,7 @@ export default function TokenizationHub() {
       <InvestorManagement />
       <TrustAndData />
       <FinalCTA />
+      <FAQSection />
 
       {/* The Modal remains in the parent component */}
       <BWThemeProvider theme={bwTheme}>

@@ -74,7 +74,7 @@ export default function InvestorManagement() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="group relative p-6 border-2 border-gray-200 rounded-2xl hover:border-emerald-400 transition-all duration-300 hover:shadow-lg flex flex-col h-full text-left"
+                className="group relative p-6 border-2 border-emerald-300 rounded-2xl hover:border-emerald-500 transition-all duration-300 hover:shadow-lg flex flex-col h-full text-left"
               >
                 {/* Icon */}
                 <div className="flex items-center w-16 h-16 mb-6 group-hover:scale-110 transition-transform duration-300">

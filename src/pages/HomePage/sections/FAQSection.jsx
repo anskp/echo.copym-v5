@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
-    <div className="border-b border-white/20 last:border-b-0 mb-6">
+    <div className="border-b border-white/20 last:border-b-0 mb-2">
       <button
         onClick={onToggle}
         className="w-full text-left py-4 px-0 flex justify-between items-center hover:text-green-400 transition-colors duration-200"
@@ -53,11 +53,11 @@ export default function FAQSection() {
 
 
       {/* Main Content */}
-      <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+      <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-10 sm:pt-12 lg:pt-14 pb-12 sm:pb-14 lg:pb-16 overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* FAQ Content */}
-          <div className="grid lg:grid-cols-3 gap-12 lg:gap-16 relative z-10">
+          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
                          {/* Left Side - FAQ List */}
             <div className="lg:col-span-2">
               {faqs.map((faq, index) => (
