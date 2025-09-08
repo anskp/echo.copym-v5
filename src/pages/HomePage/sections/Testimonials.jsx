@@ -74,7 +74,7 @@ function TestimonialCard({ testimonial }) {
   
   return (
     <motion.div 
-     className="flex-shrink-0 w-[320px] h-[280px] bg-white/10 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/30 rounded-2xl shadow-xl p-6 flex flex-col justify-between overflow-hidden hover:bg-white/15"
+     className="flex-shrink-0 w-[320px] h-[280px] bg-gradient-to-r from-emerald-400/20 to-blue-500/20 backdrop-blur-xl border border-emerald-300/40 rounded-2xl shadow-xl p-6 flex flex-col justify-between overflow-hidden hover:from-emerald-400/25 hover:to-blue-500/25"
 
 
       whileHover={{ scale: 1.02, y: -2 }}
