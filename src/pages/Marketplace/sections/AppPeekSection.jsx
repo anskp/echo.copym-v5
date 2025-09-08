@@ -96,7 +96,7 @@ const FeaturesGrid = () => {
       {features.map((feature, index) => (
         <motion.div
           key={index}
-          className="flex items-start space-x-4 p-4"
+          className="flex items-start space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: index * 0.1 }}

@@ -49,6 +49,22 @@ export default function FAQSection() {
     {
       question: "How are payouts and reporting handled?",
       answer: "Dashboards automate pro‑rata USDC distributions with on‑chain receipts and downloadable statements for accounting and audits."
+    },
+    {
+      question: "What security measures are in place for wallet infrastructure?",
+      answer: "We implement enterprise-grade multi-signature wallet infrastructure featuring 256-bit encryption, hardware security modules, and comprehensive audit trails to ensure maximum protection of assets."
+    },
+    {
+      question: "How are smart contracts secured?",
+      answer: "All smart contracts undergo thorough third-party audits by leading security firms, including comprehensive vulnerability testing and compliance checks to ensure robust security."
+    },
+    {
+      question: "What compliance frameworks are implemented?",
+      answer: "Our platform incorporates built-in regulatory compliance and risk management protocols, including SEC compliance, KYC/AML procedures, and automated regulatory reporting systems."
+    },
+    {
+      question: "How do you prevent fraud?",
+      answer: "We employ advanced AI-powered fraud detection and prevention systems with real-time monitoring, sophisticated AI algorithms, and proactive threat prevention mechanisms."
     }
   ];
 
