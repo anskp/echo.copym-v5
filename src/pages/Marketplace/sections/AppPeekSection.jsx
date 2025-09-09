@@ -1,6 +1,6 @@
 import React from "react";
 import { GiRoundStar } from "react-icons/gi";
-import { QrCodeIcon, ChartBarIcon, CpuChipIcon, ShieldCheckIcon, WalletIcon } from "@heroicons/react/24/outline";
+import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -70,22 +70,22 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
 const FeaturesGrid = () => {
   const features = [
     {
-      icon: <ChartBarIcon className="w-6 h-6" />,
+      icon: <img src="/assets/Images/icons/a1.png" alt="Decentralized Investments" className="w-6 h-6 object-contain filter brightness-125 contrast-125" />,
       title: "Decentralized Investments",
       description: "Invest in real-world assets like luxury real estate and art via blockchain."
     },
     {
-      icon: <ChartBarIcon className="w-6 h-6" />,
+      icon: <img src="/assets/Images/icons/ChatGPT Image Sep 5, 2025, 07_12_18 AM.png" alt="Real-Time Portfolio Tracking" className="w-6 h-6 object-contain filter brightness-125 contrast-125" />,
       title: "Real-Time Portfolio Tracking",
       description: "Monitor your investments with live price updates and performance analytics."
     },
     {
-      icon: <CpuChipIcon className="w-6 h-6" />,
+      icon: <img src="/assets/Images/icons/aicon.png" alt="AI-Powered Recommendations" className="w-12 h-12 object-contain filter brightness-150 contrast-125" />,
       title: "AI-Powered Recommendations",
       description: "Get personalized investment suggestions based on your goals and risk profile."
     },
     {
-      icon: <ShieldCheckIcon className="w-6 h-6" />,
+      icon: <img src="/assets/Images/icons/wallett.png" alt="Secure Wallet Integration" className="w-12 h-12 object-contain filter brightness-125 contrast-125" />,
       title: "Secure Wallet Integration",
       description: "Seamlessly connect your wallet for fast, secure transactions."
     }

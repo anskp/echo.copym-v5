@@ -20,7 +20,7 @@ import {
   FaLinkedin, 
   FaTwitter, 
   FaFacebook, 
-  FaInstagram, 
+  FaGithub, 
   FaComments,
   FaFilePdf,
   FaShieldAlt,
@@ -143,7 +143,7 @@ const Contact = () => {
     { name: 'LinkedIn', icon: FaLinkedin, url: 'https://linkedin.com/company/copym', color: 'hover:text-blue-600' },
     { name: 'Twitter', icon: FaTwitter, url: 'https://twitter.com/copym', color: 'hover:text-blue-400' },
     { name: 'Facebook', icon: FaFacebook, url: 'https://facebook.com/copym', color: 'hover:text-blue-700' },
-    { name: 'Instagram', icon: FaInstagram, url: 'https://instagram.com/copym', color: 'hover:text-pink-600' }
+    { name: 'github', icon: FaGithub, url: 'https://Github.com/copym', color: 'hover:text-pink-600' }
   ];
 
   const features = [

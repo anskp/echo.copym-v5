@@ -1,5 +1,5 @@
 import React from 'react';
-import { GiChart, GiChatBubble, GiLinkedRings, GiNetworkBars, GiMailbox } from 'react-icons/gi';
+import { FaTwitter, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -20,10 +20,18 @@ export default function Footer() {
               platform designed for the next generation.
             </p>
             <div className="flex space-x-4">
-              <GiChatBubble className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <GiLinkedRings className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <GiNetworkBars className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
-              <GiMailbox className="h-5 w-5 text-gray-400 hover:text-white cursor-pointer transition-colors duration-200" />
+              <a href="#" aria-label="Twitter" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <FaTwitter className="h-5 w-5" />
+              </a>
+              <a href="#" aria-label="LinkedIn" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <FaLinkedin className="h-5 w-5" />
+              </a>
+              <a href="#" aria-label="Instagram" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <FaInstagram className="h-5 w-5" />
+              </a>
+              <a href="#" aria-label="GitHub" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors duration-200">
+                <FaGithub className="h-5 w-5" />
+              </a>
             </div>
           </div>
 
