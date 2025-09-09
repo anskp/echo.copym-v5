@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { GiChart, GiGlobe } from "react-icons/gi";
 import m1Image from '/assets/Images/icons/m1.png';
 import m2Image from '/assets/Images/icons/m2.png';
-import m3Image from '/assets/Images/icons/m3.png';
+import t9Image from '/assets/Images/icons/t9.png';
 import Silk from '../../../components/Silk';
 
 export default function WhyInvestWithUs() {
@@ -85,7 +85,7 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12  flex items-center justify-center mb-4 mx-auto">
+            <div className="w-14 h-14  flex items-center justify-center mb-4 mx-auto">
               <img src={m1Image} alt="Bank-Grade Security" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Bank-Grade Security</h3>
@@ -104,7 +104,7 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12 flex items-center justify-center mb-4 mx-auto">
+            <div className="w-14 h-14 flex items-center justify-center mb-4 mx-auto">
               <img src={m2Image} alt="Radical Transparency" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Radical Transparency</h3>
@@ -123,8 +123,8 @@ export default function WhyInvestWithUs() {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <div className="w-12 h-12  flex items-center justify-center mb-4 mx-auto">
-              <img src={m3Image} alt="Enhanced Liquidity" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
+            <div className="w-14 h-14  flex items-center justify-center mb-4 mx-auto">
+              <img src={t9Image} alt="Enhanced Liquidity" style={{ width: '8rem', height: '8rem', objectFit: 'contain' }} />
             </div>
             <h3 className="text-xl font-bold text-gray-900 mb-3">Enhanced Liquidity</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-4">

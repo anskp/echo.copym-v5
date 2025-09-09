@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { GiHamburgerMenu, GiCrossedSwords, GiArrowDunk } from 'react-icons/gi';
+import { GiHamburgerMenu, GiArrowDunk } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -200,7 +201,7 @@ export default function Header() {
             className="md:hidden ml-6 text-white hover:text-gray-300 transition-colors duration-200 p-3 rounded-lg"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
-              {isMenuOpen ? <GiCrossedSwords className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
+              {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
             </button>
           </div>
       </nav>

@@ -88,7 +88,7 @@ const Benefits = () => {
                     Get instant Cora AI notifications for price alerts, market news, and portfolio updates. Stay informed with intelligent alerts that adapt to your trading patterns and market conditions.
                   </p>
                 </div>
-                <div className="scale-50 sm:scale-[1] transform -mt-[24rem] lg:-mt-[10rem]   flex justify-center">
+                <div className="scale-50 sm:scale-[1] transform -mt-[21rem] md:-mt-[14rem] lg:-mt-[10rem]   flex justify-center">
                   <StepRectangles />
                 </div>
               </div>

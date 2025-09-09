@@ -291,7 +291,7 @@ export default function AppPeekSection() {
                 viewport={{ once: true }}
                 className="mb-8"
               >
-                <h2 className="text-3xl md:text-4xl font-bold mb-4 anton-regular">
+                <h2 className="text-3xl  md:text-4xl font-bold mb-4 anton-regular">
   <span className="text-white">Powerful </span>
   <span className="text-black">Features</span>
 </h2>
