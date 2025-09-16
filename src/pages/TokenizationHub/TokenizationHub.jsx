@@ -35,8 +35,8 @@ export default function TokenizationHub() {
       <MinimalTokenizationDashboard />
       <TokenDistribution />
       <InvestorManagement />
-      <FinalCTA />
       <FAQSection />
+      <FinalCTA />
 
       {/* The Modal remains in the parent component */}
       <BWThemeProvider theme={bwTheme}>

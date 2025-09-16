@@ -170,20 +170,7 @@ export default function AccessPage() {
       }
     });
 
-    // CTA section glow effect
-    gsap.to(ctaRef.current, {
-      boxShadow: '0 0 50px rgba(37, 95, 153, 0.3)',
-      duration: 2,
-      ease: 'power2.inOut',
-      yoyo: true,
-      repeat: -1,
-      scrollTrigger: {
-        trigger: ctaRef.current,
-        start: 'top 80%',
-        end: 'bottom 20%',
-        toggleActions: 'play none none reverse'
-      }
-    });
+
 
     // Text reveal animations
     gsap.fromTo('.reveal-text',
@@ -589,18 +576,18 @@ export default function AccessPage() {
       </div>
 
       {/* Final CTA */}
-      <div ref={ctaRef} className="text-center">
+      <div ref={ctaRef} className="text-center my-16 sm:my-24 lg:my-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 text-white">
+          <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 sm:p-16 lg:p-20 text-white">
             <GiCrown className="w-16 h-16 mx-auto mb-6 text-white/80" />
-            <h3 className="text-3xl font-black mb-4 uppercase anton-regular reveal-text">
+            <h3 className="text-3xl font-black mb-4 uppercase anton-regular">
               Ready to Join the Elite?
             </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto reveal-text">
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-            <button className="bg-white text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button className="bg-blue-100 text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto transform hover:scale-105">
                               
                 Get Your Access Pass Now
                 

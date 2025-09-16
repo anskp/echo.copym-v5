@@ -101,7 +101,7 @@ export default function FAQSection() {
                 </p>
                 <Link
                   to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-emerald-400 to-blue-400 hover:from-emerald-300 hover:to-blue-300 text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+                  className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
                 >
                   Talk to an Expert
                   <span className="ml-2">→</span>

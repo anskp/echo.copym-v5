@@ -85,9 +85,9 @@ main {
 
 @layer base {
   body {
-    @apply font-sans bg-white text-gray-900 text-base;
+    @apply font-sans bg-blue-100 text-gray-900 text-base;
     min-height: 100vh;
-    background-color: white !important;
+    background-color: #DBEAFE !important;
   }
 }
 
@@ -372,7 +372,8 @@ main {
 
 /* Page-specific background styles */
 .copym-ai-page {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #bae6fd 100%);
+  /* Changed to solid light blue background */
+  background-color: #dbeafe; /* Tailwind's blue-100 to match HomePage */
   min-height: 100vh;
 }
 
