@@ -181,11 +181,6 @@ export default function Footer() {
           <p className="text-gray-400 text-sm">
             © 2025 COPYM. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <span className="text-gray-400 text-sm">SIPC Insured</span>
-            <span className="text-gray-400 text-sm">SEC Regulated</span>
-            <span className="text-gray-400 text-sm">SOC 2 Compliant</span>
-          </div>
         </div>
       </div>
       </div>

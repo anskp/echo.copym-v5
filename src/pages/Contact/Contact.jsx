@@ -126,7 +126,7 @@ const Contact = () => {
     {
       icon: 'location',
       title: 'Visit Us',
-      details: ['123 Tech Park, Whitefield', 'Bangalore, Karnataka 560066, India'],
+      details: ['UBL City, Level 15, UB Tower', 'Vittal Mallya Road, Bangalore 560001, India'],
       description: 'Drop by our office for a meeting',
       action: 'https://maps.app.goo.gl/tRFiZ3JenBnBVG158?g_st=ac'
     },
