@@ -112,7 +112,7 @@ const Contact = () => {
     {
       icon: 'envelope',
       title: 'Email Support',
-      details: ['support@copym.xyz', 'hello@copym.xyz'],
+      details: ['support@copym.xyz'],
       description: 'Get in touch via email for any inquiries',
       action: 'mailto:support@copym.xyz'
     },
