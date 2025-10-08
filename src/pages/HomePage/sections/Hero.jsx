@@ -126,42 +126,49 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
-          {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 sm:mb-8 uppercase anton-regular">
-              <span className="text-gray-900">UNLOCK </span>
-              <span className="text-emerald-600">EXCLUSIVE</span>
+        <div className="text-left">
+          {/* Multi-line Headline */}
+          <div className="space-y-2 mb-8">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-gray-900">UNLOCK</span>
               <br />
-              <span className="text-gray-900">ASSETS, INVEST WITH </span>
+              <span className="text-emerald-500">EXCLUSIVE</span>
               <br />
-              <span className="text-emerald-600">CONFIDENCE</span>
+              <span className="text-gray-900">ASSETS,</span>
+              <br />
+              <span className="text-gray-900">INVEST WITH</span>
+              <br />
+              <span className="text-emerald-500">CONFIDENCE</span>
             </h1>
-
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0">
-              Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start mb-10">
-              <Link
-                to="/marketplace"
-                className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-              >
-                Start Investing
-              </Link>
-
-              <button
-                onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-              >
-                Watch Demo
-              </button>
-            </div>
           </div>
 
-          {/* Right Side - Empty for now */}
-          <div className="hidden lg:block">
-            {/* This space is reserved for future content */}
+          {/* Description Text */}
+          <p className="text-xl text-gray-900 leading-relaxed mb-8 max-w-4xl">
+            Seamless on-chain investment in real estate,<br />
+            commodities, carbon credits and luxury assets. 
+            <br />
+            No gas fees, no native token required.
+          </p>
+
+          {/* Call-to-Action Buttons - Stacked Vertically */}
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/marketplace"
+              className="bg-emerald-500 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-emerald-600 transition-all duration-300 flex items-center justify-start gap-3 w-fit"
+            >
+              START INVESTING
+              <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                <svg className="w-3 h-3 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+            <button
+              onClick={() => setVideoOpen(true)}
+              className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 w-fit"
+            >
+              WATCH DEMO
+            </button>
           </div>
         </div>
       </div>
