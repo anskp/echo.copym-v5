@@ -48,9 +48,9 @@ const FeatureCard = ({ icon: Icon, title, description, ctaText, color }) => {
       <div className="mb-8 flex justify-center items-center min-h-[5rem]">
         <Icon />
       </div>
-      <h3 className="text-xl font-bold text-white mb-4 leading-tight max-w-xs mx-auto">{title}</h3>
-      <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs mx-auto">{description}</p>
-      <button className="inline-flex items-center justify-center text-white font-semibold text-sm hover:text-white/80 transition-colors duration-200 mt-auto">
+      <h3 className="text-xl font-bold text-gray-900 mb-4 leading-tight max-w-xs mx-auto">{title}</h3>
+      <p className="text-gray-700 text-sm leading-relaxed mb-6 max-w-xs mx-auto">{description}</p>
+      <button className="inline-flex items-center justify-center text-gray-900 font-semibold text-sm hover:text-gray-700 transition-colors duration-200 mt-auto">
       
       </button>
     </div>
@@ -61,14 +61,14 @@ export default function CurvedSectionDivider() {
   return (
     <section className="relative">
       {/* Main Content */}
-      <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+      <div className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular leading-tight">
-              <span className="text-white">Own. Earn. </span>
-              <span className="text-black">Explore. Trade.</span>
+              <span className="text-gray-900">Own. Earn. </span>
+              <span className="text-emerald-600">Explore. Trade.</span>
             </h2>
           </div>
 

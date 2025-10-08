@@ -159,12 +159,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Side - Dual Phone Mockups */}
-          <div className="flex justify-center lg:justify-start lg:pl-2">
-            <div className="flex gap-2 sm:gap-4 md:gap-6 items-center" style={{ transform: 'translateY(72px)' }}>
-              <HeroPhone3D />
-              <HeroPhone3DWallet />
-            </div>
+          {/* Right Side - Empty for now */}
+          <div className="hidden lg:block">
+            {/* This space is reserved for future content */}
           </div>
         </div>
       </div>
