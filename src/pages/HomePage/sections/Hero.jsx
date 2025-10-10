@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { GiPlayButton, GiCrossedSwords } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import HomeCycle from '../../../components/SVG/HomeCycle.svg';
 
 // Realistic iPhone Component for Hero - First Phone (Marketplace)
 const HeroPhone3D = () => {
@@ -125,20 +126,17 @@ export default function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 lg:pb-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20">
         <div className="text-center">
           {/* Main Headline - Single Line */}
           <div className="mb-8">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-gray-900">UNLOCK EXCLUSIVE ASSETS,</span>
-              <br />
-              <span className="text-gray-900">INVEST WITH</span>
-              <span className="text-emerald-500"> CONFIDENCE</span>
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-gray-900">UNLOCK EXCLUSIVE ASSETS, INVEST WITH CONFIDENCE</span>
             </h1>
           </div>
 
           {/* Description Text */}
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed mb-12 max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Seamless on-chain investment in real estate, commodities, carbon credits and luxury assets. No gas fees, no native token required.
           </p>
 
@@ -158,7 +156,7 @@ export default function Hero() {
             </Link>
             <button
               onClick={() => setVideoOpen(true)}
-              className="border-2 border-emerald-500 text-emerald-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-500 hover:text-white transition-all duration-300 min-w-[200px]"
+              className="bg-transparent border-2 border-emerald-500 text-emerald-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-500 hover:text-white transition-all duration-300 min-w-[200px]"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               WATCH DEMO
@@ -166,80 +164,14 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Circular Diagrams Section */}
+        {/* HomeCycle SVG Section */}
         <div className="mt-20 mb-12">
-          <div className="flex justify-center items-center space-x-8 sm:space-x-16 lg:space-x-24">
-            {/* Left Diagram - Innovation */}
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Outer Circle */}
-                <div className="w-full h-full border-2 border-dashed border-blue-300 rounded-full flex items-center justify-center">
-                  {/* Inner Circle */}
-                  <div className="w-3/4 h-3/4 border-2 border-dashed border-blue-400 rounded-full flex items-center justify-center">
-                    {/* Center Hexagon */}
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-emerald-500 transform rotate-45 flex items-center justify-center">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-emerald-500 font-bold text-sm sm:text-base lg:text-lg">I</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Innovation Label */}
-                <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 -rotate-90">
-                  <span className="text-emerald-500 font-bold text-sm sm:text-base lg:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    Innovation
-                  </span>
-                </div>
-                
-                {/* Nodes around the circle */}
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">B</span>
-                </div>
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">M</span>
-                </div>
-                <div className="absolute right-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">E</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Right Diagram - Investment */}
-            <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
-              <div className="absolute inset-0 flex items-center justify-center">
-                {/* Outer Circle */}
-                <div className="w-full h-full border-2 border-dashed border-blue-300 rounded-full flex items-center justify-center">
-                  {/* Inner Circle */}
-                  <div className="w-3/4 h-3/4 border-2 border-dashed border-blue-400 rounded-full flex items-center justify-center">
-                    {/* Center Hexagon */}
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 bg-emerald-500 transform rotate-45 flex items-center justify-center">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 bg-white rounded-full flex items-center justify-center">
-                        <span className="text-emerald-500 font-bold text-sm sm:text-base lg:text-lg">$</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Investment Label */}
-                <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 rotate-90">
-                  <span className="text-emerald-500 font-bold text-sm sm:text-base lg:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    Investment
-                  </span>
-                </div>
-                
-                {/* Nodes around the circle */}
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">$</span>
-                </div>
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">P</span>
-                </div>
-                <div className="absolute left-4 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">A</span>
-                </div>
-              </div>
-            </div>
+          <div className="flex justify-center items-center">
+            <img 
+              src={HomeCycle} 
+              alt="Innovation and Investment Cycle" 
+              className="w-full max-w-4xl h-auto"
+            />
           </div>
         </div>
 
