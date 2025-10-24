@@ -189,9 +189,7 @@ export default function Header() {
           {/* Download Button - Desktop Only */}
           <div className="hidden lg:flex items-center ml-auto">
             <button className="btn-gradient flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
-              <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM10 3a1 1 0 01-1 1v7.586L7.707 10.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V4a1 1 0 00-1-1z"/>
-              </svg>
+             
               Download
             </button>
           </div>
