@@ -3,18 +3,19 @@ import { Link } from 'react-router-dom';
 
 export default function RWAAssetsSection() {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 sm:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content */}
         <div className="text-center mb-12">
           {/* Main Heading */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 mt-8 lg:mt-12">
             Tokenize Real Assets
           </h2>
           
           {/* Description */}
           <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Discover a diverse portfolio of real-world assets tokenized for digital ownership. From precious metals to fine art, we're democratizing access to premium investments.
+            Discover a diverse portfolio of real-world assets tokenized for digital ownership.<br />
+            From precious metals to fine art, we're democratizing access to premium investments.
           </p>
           
           {/* CTA Button */}
@@ -31,7 +32,7 @@ export default function RWAAssetsSection() {
         </div>
 
         {/* Asset Category Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {/* Gold and Metals Card */}
           <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-left hover:bg-green-50 hover:shadow-md transition-all duration-300 relative">
             {/* ROI Percentage */}

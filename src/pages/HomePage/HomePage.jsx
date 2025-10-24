@@ -39,7 +39,7 @@ export default function HomePage() {
       <section className="py-8 sm:py-12 lg:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
-            <div className="relative w-full max-w-6xl h-auto min-h-[400px]">
+            <div className="relative w-full max-w-6xl h-auto min-h-[300px]">
                <AnimatePresence mode="popLayout">
                 <motion.div
                   key={currentLayout}
@@ -55,7 +55,12 @@ export default function HomePage() {
                   <img 
                     src={layouts[currentLayout].src} 
                     alt={layouts[currentLayout].alt} 
-                    className="w-full h-auto"
+                    className="w-full h-auto object-contain"
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                      objectFit: 'contain'
+                    }}
                   />
                 </motion.div>
               </AnimatePresence>
