@@ -11,7 +11,7 @@ import FourLayouts from "../../components/SVG/4layouts.svg";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-blue-100 p-0 m-0">
+    <div className="min-h-screen bg-white p-0 m-0">
       <Hero />
       {/* Four Layouts SVG Section */}
       <section className="py-4 sm:py-6 lg:py-8">

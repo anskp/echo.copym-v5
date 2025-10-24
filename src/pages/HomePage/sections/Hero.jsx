@@ -160,7 +160,7 @@ export default function Hero() {
     <div className="relative overflow-visible">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+        <div className="absolute inset-0 bg-white"></div>
       </div>
 
       {/* Hero Content */}
