@@ -1,6 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GiPlayButton, GiCrossedSwords } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
+import HomeCycle from '../../../components/SVG/HomeCycle.svg';
+import HomeCycle1 from '../../../components/SVG/HomeCycle1.svg';
+import HomeCycle2 from '../../../components/SVG/HomeCycle2.svg';
+import HomeCycle3 from '../../../components/SVG/HomeCycle3.svg';
+import HomeCycle4 from '../../../components/SVG/HomeCycle4.svg';
+// import HomeCycle5 from '../../../components/SVG/HomeCycle5.svg';
+// import HomeCycle6 from '../../../components/SVG/HomeCycle6.svg';
+import WhatIsCopymSVG from '../../../components/SVG/what is copym.svg';
 
 // Realistic iPhone Component for Hero - First Phone (Marketplace)
 const HeroPhone3D = () => {
@@ -116,60 +124,111 @@ const HeroPhone3DWallet = () => {
 
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
+  const [currentSVGIndex, setCurrentSVGIndex] = useState(0);
+  
+  // Array of all HomeCycle SVG files (excluding original HomeCycle.svg)
+  const homeCycleSVGs = [
+    HomeCycle1,
+    HomeCycle2,
+    HomeCycle3,
+    HomeCycle4
+  ];
+
+  // Preload all images for smoother transitions
+  useEffect(() => {
+    homeCycleSVGs.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+
+  // Auto-rotate through SVG files matching Figma prototype settings
+  // Delay: 1ms, Duration: 300ms, Total: 301ms per frame
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSVGIndex((prevIndex) => 
+        (prevIndex + 1) % homeCycleSVGs.length
+      );
+    }, 301); // 1ms delay + 300ms duration = 301ms per frame
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="relative overflow-visible">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+        <div className="absolute inset-0 bg-white"></div>
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-28 pb-12 sm:pb-16 lg:pb-20">
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-center">
-          {/* Left Side - Text Content */}
-          <div className="text-center lg:text-left">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 sm:mb-8 uppercase anton-regular">
-              <span className="text-gray-900">UNLOCK </span>
-              <span className="text-emerald-600">EXCLUSIVE</span>
-              <br />
-              <span className="text-gray-900">ASSETS, INVEST WITH </span>
-              <br />
-              <span className="text-emerald-600">CONFIDENCE</span>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 sm:pt-40 lg:pt-48 pb-12 sm:pb-16 lg:pb-20">
+        <div className="text-center">
+          {/* Main Headline - Single Line */}
+          <div className="mb-8">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-gray-900">UNLOCK EXCLUSIVE ASSETS, INVEST WITH CONFIDENCE</span>
             </h1>
-
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-10 max-w-2xl mx-auto lg:mx-0">
-              Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets. No gas fees, no native token required.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center lg:justify-start mb-10">
-              <Link
-                to="/marketplace"
-                className="btn-gradient inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-black shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-              >
-                Start Investing
-              </Link>
-
-              <button
-                onClick={() => setVideoOpen(true)}
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base"
-              >
-                Watch Demo
-              </button>
-            </div>
           </div>
 
-          {/* Right Side - Dual Phone Mockups */}
-          <div className="flex justify-center lg:justify-start lg:pl-2">
-            <div className="flex gap-2 sm:gap-4 md:gap-6 items-center" style={{ transform: 'translateY(72px)' }}>
-              <HeroPhone3D />
-              <HeroPhone3DWallet />
+          {/* Description Text */}
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed mb-12 max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            Seamless on-chain investment in real estate, commodities, carbon credits and luxury assets. No gas fees, no native token required.
+          </p>
+
+          {/* Call-to-Action Buttons - Horizontal Layout */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <Link
+              to="/marketplace"
+              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px] shadow-lg"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              START INVESTING
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
+            <button
+              onClick={() => setVideoOpen(true)}
+              className="bg-transparent border-2 border-emerald-500 text-emerald-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-500 hover:text-white transition-all duration-300 min-w-[200px]"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              WATCH DEMO
+            </button>
+          </div>
+        </div>
+
+        {/* HomeCycle SVG Section with Rotating Animation */}
+        <div className="mt-20 mb-12">
+          <div className="flex justify-center items-center w-full">
+            <div className="relative w-full max-w-4xl h-auto flex justify-center items-center">
+              {/* Single image that changes src rapidly */}
+              <img 
+                src={homeCycleSVGs[currentSVGIndex]} 
+                alt="Innovation and Investment Cycle" 
+                className="w-full h-auto mx-auto"
+                style={{
+                  maxWidth: '100%',
+                  width: '100%',
+                  height: 'auto',
+                  display: 'block',
+                  margin: '0 auto'
+                }}
+              />
             </div>
           </div>
         </div>
+
+
+        {/* Bottom Tagline */}
+        <div className="text-center">
+          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 uppercase tracking-wider" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            OWN. EARN. EXPLORE. TRADE.
+          </p>
+        </div>
       </div>
-
-
 
       {isVideoOpen && (
         <div

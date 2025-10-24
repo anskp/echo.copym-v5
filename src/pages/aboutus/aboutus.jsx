@@ -293,7 +293,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 6: Leadership Team */}
-            <section className="py-20 bg-blue-100">
+            {/* <section className="py-20 bg-blue-100">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
@@ -304,7 +304,7 @@ const AboutUs = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8">
                         {/* Kuldeep - CEO */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Kuldeep.png" 
@@ -318,10 +318,10 @@ const AboutUs = () => {
                                     <p className="text-blue-600 font-semibold text-lg">CEO</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Rameez - COO */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Rameez.png" 
@@ -335,10 +335,10 @@ const AboutUs = () => {
                                     <p className="text-green-600 font-semibold text-lg">COO</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Azwaan - HR */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Azwaan.png" 
@@ -352,10 +352,10 @@ const AboutUs = () => {
                                     <p className="text-green-600 font-semibold text-lg">HR</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Raayif Aarif - CTO */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Raayif-aarif.png" 
@@ -369,10 +369,10 @@ const AboutUs = () => {
                                     <p className="text-blue-600 font-semibold text-lg">CTO</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Ansab */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Ansab.png" 
@@ -386,10 +386,10 @@ const AboutUs = () => {
                                     <p className="text-blue-600 font-semibold text-lg">Blockchain Developer</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Abhishek */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Abhishek.png" 
@@ -403,10 +403,10 @@ const AboutUs = () => {
                                     <p className="text-green-600 font-semibold text-lg">Mobile UI/UX Developer</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Hanan Arif */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Hanan.png" 
@@ -420,10 +420,10 @@ const AboutUs = () => {
                                     <p className="text-blue-600 font-semibold text-lg">Infrastructure & Developer</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Anas KP */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Anas K.P.png" 
@@ -437,10 +437,10 @@ const AboutUs = () => {
                                     <p className="text-green-600 font-semibold text-lg">Blockchain Developer</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Nada Abdulla */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Nada.png" 
@@ -454,10 +454,10 @@ const AboutUs = () => {
                                     <p className="text-blue-600 font-semibold text-lg">UI/UX Developer</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
                         {/* Nuha Fathima */}
-                        <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Nuha.png" 
@@ -471,10 +471,10 @@ const AboutUs = () => {
                                     <p className="text-green-600 font-semibold text-lg">React Native Developer</p>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                        </div> */}
+                    {/* </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Section 7: Technology & Innovation */}
             <section className="py-20 bg-blue-100">

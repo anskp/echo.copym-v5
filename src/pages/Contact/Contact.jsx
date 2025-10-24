@@ -112,31 +112,13 @@ const Contact = () => {
     {
       icon: 'envelope',
       title: 'Email Support',
-      details: ['support@copym.xyz', 'hello@copym.xyz'],
+      details: ['support@copym.xyz'],
       description: 'Get in touch via email for any inquiries',
       action: 'mailto:support@copym.xyz'
     },
-    {
-      icon: 'phone',
-      title: 'Direct Line',
-      details: ['+1 (555) 123-4567'],
-      description: 'Speak directly with our team',
-      action: 'tel:+15551234567'
-    },
-    {
-      icon: 'location',
-      title: 'Visit Us',
-      details: ['123 Tech Park, Whitefield', 'Bangalore, Karnataka 560066, India'],
-      description: 'Drop by our office for a meeting',
-      action: 'https://maps.app.goo.gl/tRFiZ3JenBnBVG158?g_st=ac'
-    },
-    {
-      icon: 'clock',
-      title: 'Business Hours',
-      details: ['24/7 Support Available', 'Round the clock assistance'],
-      description: 'We\'re here when you need us',
-      action: null
-    }
+    
+    
+   
   ];
 
   const socialMedia = [

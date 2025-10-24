@@ -3,25 +3,31 @@ import { Link } from 'react-router-dom';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
-    <div className="border-b border-white/20 last:border-b-0 mb-2">
+    <div 
+      className="bg-white border border-gray-200 mb-4"
+      style={{
+        borderRadius: 51,
+        boxShadow: "4px 4px 4px 0 rgba(84,82,82,0.25)"
+      }}
+    >
       <button
         onClick={onToggle}
-        className="w-full text-left py-4 px-0 flex justify-between items-center hover:text-green-400 transition-colors duration-200"
+        className="w-full text-left p-6 flex justify-between items-center transition-colors duration-200"
       >
-        <h3 className="text-lg font-semibold text-white pr-4">{question}</h3>
+        <h3 className="text-lg font-semibold text-gray-900 pr-4">{question}</h3>
         <div className="flex-shrink-0 transition-transform duration-300">
-          <span className="w-5 h-5 inline-block text-green-400">{isOpen ? '▾' : '▸'}</span>
+          <span className="w-5 h-5 inline-block text-gray-500">{isOpen ? '−' : '+'}</span>
         </div>
       </button>
-             <div 
-         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-           isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-         }`}
-       >
-         <div className="pb-4">
-           <p className="text-white/80 leading-relaxed">{answer}</p>
-         </div>
-       </div>
+      <div 
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="px-6 pb-6">
+          <p className="text-gray-600 leading-relaxed">{answer}</p>
+        </div>
+      </div>
     </div>
   );
 };
@@ -49,50 +55,57 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative">
-
-
-      {/* Main Content */}
-      <div className="relative z-10 bg-gradient-to-br from-emerald-600 to-emerald-700 backdrop-blur-sm rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-10 sm:pt-12 lg:pt-14 pb-12 sm:pb-14 lg:pb-16 overflow-hidden">
-        
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* FAQ Content */}
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
-                         {/* Left Side - FAQ List */}
-            <div className="lg:col-span-2">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openFAQ === index}
-                  onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-                />
-              ))}
-            </div>
-
-           {/* Right Side - Support Info */}
-           <div className="lg:col-span-1 flex flex-col justify-center">
-             <div className="text-center lg:text-left">
-               <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-                 FAQs
-               </h3>
-               <p className="text-white/80 text-lg mb-6">
-                 Still got questions?
-               </p>
-               <p className="text-white/70 text-base mb-8 leading-relaxed">
-                 These frequently asked questions might have the answer, but if not, our support team is just a message away!
-               </p>
+    <section className="relative py-16 sm:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+          {/* Left Side - Support Info */}
+          <div className="flex flex-col">
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-40 text-left">
+              Frequently asked
+              <br />
+              questions
+            </h3>
+            <div 
+              className="bg-gray-50 rounded-lg p-8"
+              style={{
+                filter: "drop-shadow(4px 4px 4px rgba(84,82,82,0.25))",
+                borderRadius: 55
+              }}
+            >
+              <div className="mb-6">
+                <h4 className="text-xl font-semibold text-gray-900 mb-3 text-left">
+                  Still have a question ?
+                </h4>
+                <p className="text-gray-600 leading-relaxed text-left">
+                  Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!
+                </p>
+              </div>
                <Link
-                 to="/contact"
-                 className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
+                 to="/marketplace"
+                 className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105"
+                 style={{
+                   borderRadius: 55,
+                   background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)"
+                   
+                 }}
                >
-                 Contact Support
-                 <span className="ml-2">→</span>
+                 Explore Assets
                </Link>
-             </div>
-           </div>
-         </div>
+            </div>
+          </div>
+
+          {/* Right Side - FAQ List */}
+          <div className="space-y-4">
+            {faqs.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openFAQ === index}
+                onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
