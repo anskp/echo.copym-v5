@@ -6,8 +6,8 @@ import HomeCycle1 from '../../../components/SVG/HomeCycle1.svg';
 import HomeCycle2 from '../../../components/SVG/HomeCycle2.svg';
 import HomeCycle3 from '../../../components/SVG/HomeCycle3.svg';
 import HomeCycle4 from '../../../components/SVG/HomeCycle4.svg';
-import HomeCycle5 from '../../../components/SVG/HomeCycle5.svg';
-import HomeCycle6 from '../../../components/SVG/HomeCycle6.svg';
+// import HomeCycle5 from '../../../components/SVG/HomeCycle5.svg';
+// import HomeCycle6 from '../../../components/SVG/HomeCycle6.svg';
 import WhatIsCopymSVG from '../../../components/SVG/what is copym.svg';
 
 // Realistic iPhone Component for Hero - First Phone (Marketplace)
@@ -131,9 +131,7 @@ export default function Hero() {
     HomeCycle1,
     HomeCycle2,
     HomeCycle3,
-    HomeCycle4,
-    HomeCycle5,
-    HomeCycle6
+    HomeCycle4
   ];
 
   // Preload all images for smoother transitions
@@ -223,24 +221,6 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* What is Copym Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            WHAT IS COPYM?
-          </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed max-w-4xl mx-auto mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            Copym is a next-gen platform pioneering the tokenization of real world assets (RWAs) through blockchain technology. From luxury properties to fine art to rare collectibles, commodities and Carbon credits. Copym democratizes ownership by allowing fractional investment through secure digital tokens. Built on a foundation of transparency, security and innovation. Copym bridges and tangible and digital world, offering investors access to premium assets like never before.
-          </p>
-          
-          {/* What is Copym SVG */}
-          <div className="flex justify-center items-center w-full">
-            <img 
-              src={WhatIsCopymSVG} 
-              alt="What is Copym illustration" 
-              className="w-full max-w-4xl h-auto mx-auto"
-            />
-          </div>
-        </div>
 
         {/* Bottom Tagline */}
         <div className="text-center">
