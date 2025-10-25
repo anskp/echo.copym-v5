@@ -37,7 +37,7 @@ export default function HomePage() {
       <section className="py-0 sm:py-2 lg:py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center items-center">
-            <div className="relative w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl h-auto min-h-[200px] sm:min-h-[250px] lg:min-h-[300px]">
+            <div className="relative w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl h-auto min-h-[200px] sm:min-h-[250px] lg:min-h-[300px] overflow-hidden">
                <AnimatePresence mode="popLayout">
                 <motion.div
                   key={currentLayout}
@@ -45,8 +45,9 @@ export default function HomePage() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ 
-                    duration: 0.3, 
-                    ease: "easeInOut" 
+                    duration: 0.2, 
+                    ease: "easeInOut",
+                    delay: 0.1
                   }}
                   className="absolute inset-0"
                 >
