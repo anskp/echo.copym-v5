@@ -8,7 +8,7 @@ export default function RWAAssetsSection() {
         {/* Main Content */}
         <div className="text-center mb-12">
           {/* Main Heading */}
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 mt-8 lg:mt-12">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-6 mt-8 lg:mt-12">
             Tokenize Real Assets
           </h2>
           

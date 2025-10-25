@@ -30,7 +30,7 @@ export default function Header() {
     }
     
     // All other pages use blue-100 background
-    return 'bg-blue-100';
+    return 'bg-white';
   };
 
   // Handle scroll effect

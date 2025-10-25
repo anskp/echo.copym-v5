@@ -224,7 +224,7 @@ export default function Hero() {
 
         {/* Bottom Tagline */}
         <div className="text-center">
-          <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 uppercase tracking-wider" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 uppercase tracking-wider" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             OWN. EARN. EXPLORE. TRADE.
           </p>
         </div>

@@ -40,7 +40,7 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-6 text-left">
             <div className="space-y-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-black leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
               </h2>
               <p className="text-sm sm:text-base text-black leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>

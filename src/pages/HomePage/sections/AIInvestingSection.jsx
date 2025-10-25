@@ -15,7 +15,7 @@ export default function AIInvestingSection() {
             
             {/* Main Headline */}
             <div className="space-y-2">
-              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-black leading-tight anton-regular">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-black leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Cora-AI that Invests with you
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-black leading-relaxed max-w-2xl mx-auto lg:mx-0">
