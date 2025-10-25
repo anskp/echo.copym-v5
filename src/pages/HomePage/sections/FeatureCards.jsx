@@ -113,7 +113,7 @@ export default function FeatureCards() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             OWN. EARN. EXPLORE. TRADE.
           </h2>
         </div>

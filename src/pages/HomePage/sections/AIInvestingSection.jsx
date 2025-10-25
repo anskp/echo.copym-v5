@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function AIInvestingSection() {
   return (
-    <section className="relative py-4 sm:py-6 lg:py-8 overflow-visible" style={{ backgroundColor: '#E5F2FE' }}>
+    <section className="relative -mt-24 pt-2 pb-4 sm:-mt-28 sm:pt-4 sm:pb-6 lg:-mt-32 lg:pt-6 lg:pb-8 overflow-hidden" style={{ backgroundColor: '#E5F2FE' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
           {/* Left Side - Content */}
@@ -15,7 +15,7 @@ export default function AIInvestingSection() {
             
             {/* Main Headline */}
             <div className="space-y-2">
-              <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-bold text-black leading-tight anton-regular">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold text-black leading-tight anton-regular">
                 Cora-AI that Invests with you
               </h2>
               <p className="text-sm sm:text-base lg:text-lg text-black leading-relaxed max-w-2xl mx-auto lg:mx-0">
@@ -39,23 +39,13 @@ export default function AIInvestingSection() {
            </div>
            
            {/* Right Side - AI Logo */}
-           <div className="relative w-[28rem] sm:w-[32rem] lg:w-[36rem] xl:w-[40rem] h-auto">
+           <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl h-auto">
              <img 
                src="/assets/Images/ai-logo.png" 
                alt="AI Logo" 
                className="w-full h-auto rounded-2xl object-contain scale-125"
                style={{
                  zIndex: 20
-               }}
-             />
-             {/* Mobile Ads Overlay */}
-             <img 
-               src="/assets/Images/mobile-ads.png" 
-               alt="Mobile Ads" 
-               className="absolute right-0 w-1/2 h-auto rounded-2xl object-contain"
-               style={{
-                 zIndex: 30,
-                 bottom: '-140px'
                }}
              />
            </div>
