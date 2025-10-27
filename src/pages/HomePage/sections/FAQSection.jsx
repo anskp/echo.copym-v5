@@ -55,34 +55,34 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 lg:py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Left Side - Support Info */}
-          <div className="flex flex-col">
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-40 text-left">
+          <div className="flex flex-col order-2 lg:order-1">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-40 text-center lg:text-left px-2">
               Frequently asked
               <br />
               questions
             </h3>
             <div 
-              className="bg-gray-50 rounded-lg p-8"
+              className="bg-gray-50 rounded-lg p-6 sm:p-8"
               style={{
                 filter: "drop-shadow(4px 4px 4px rgba(84,82,82,0.25))",
                 borderRadius: 55
               }}
             >
-              <div className="mb-6">
-                <h4 className="text-xl font-semibold text-gray-900 mb-3 text-left">
+              <div className="mb-4 sm:mb-6">
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 text-center lg:text-left">
                   Still have a question ?
                 </h4>
-                <p className="text-gray-600 leading-relaxed text-left">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center lg:text-left">
                   Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!
                 </p>
               </div>
                <Link
                  to="/marketplace"
-                 className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105"
+                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
                  style={{
                    borderRadius: 55,
                    background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)"
@@ -95,7 +95,7 @@ export default function FAQSection() {
           </div>
 
           {/* Right Side - FAQ List */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4 order-1 lg:order-2">
             {faqs.map((faq, index) => (
               <FAQItem
                 key={index}
