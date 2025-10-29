@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div 
-      className="bg-white border border-gray-200 mb-4"
+      className="bg-white border border-white mb-4"
       style={{
         borderRadius: 51,
         boxShadow: "4px 4px 4px 0 rgba(84,82,82,0.25)"
@@ -66,14 +66,14 @@ export default function FAQSection() {
               questions
             </h3>
             <div 
-              className="bg-gray-50 rounded-lg p-6 sm:p-8"
+              className="bg-white rounded-lg p-6 sm:p-8"
               style={{
-                filter: "drop-shadow(4px 4px 4px rgba(84,82,82,0.25))",
-                borderRadius: 55
+                filter: "drop-shadow(2px 2px 2px rgba(84,82,82,0.25))",
+                borderRadius: 51
               }}
             >
-              <div className="mb-4 sm:mb-6">
-                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 text-center lg:text-left">
+              <div className="mb-4 sm:mb-6 border border-white ">
+                <h4 className="text-lg sm:text-xl  font-semibold text-gray-900 mb-2 sm:mb-3 text-center lg:text-left ">
                   Still have a question ?
                 </h4>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center lg:text-left">
@@ -84,7 +84,7 @@ export default function FAQSection() {
                  to="/marketplace"
                  className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
                  style={{
-                   borderRadius: 55,
+                   borderRadius: 51,
                    background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)"
                    
                  }}

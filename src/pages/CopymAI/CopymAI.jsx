@@ -5,8 +5,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
-
-// import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTop from "../../components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 
@@ -19,13 +18,13 @@ const CopymAI = () => {
         <Collaboration />
         <Services />
         <Testimonials />
-        {/* <Pricing /> */}
+        <Pricing />
 
-        {/* <CTA /> */}
-        {/* <Footer /> */}
+        <CTA />
+        <Footer />
       </div>
       <ButtonGradient />
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
     </>
   );
 };
