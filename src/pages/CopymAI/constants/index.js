@@ -6,7 +6,6 @@ import {
     benefitImage2,
     chromecast,
     disc02,
-    discord,
     discordBlack,
     facebook,
     figma,

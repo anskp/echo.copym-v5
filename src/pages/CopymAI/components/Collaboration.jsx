@@ -1,92 +1,76 @@
-import { brainwaveSymbol, copymWhiteIcon, copymColoredIcon, check } from "../assets";
-import { collabApps, collabContent, collabText } from "../constants";
-import Button from "./Button";
-import { LeftCurve, RightCurve } from "./design/Collaboration";
+import { RevolutionCora } from "../assets";
 import Section from "./Section";
 
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container lg:flex lg:gap-12">
-        <div className="lg:w-1/2">
-          <h2 className="h2 mb-4 md:mb-8 text-left anton-regular">
+      <div className="container">
+        {/* Main Heading at the top */}
+        <div className="text-center mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 anton-regular">
             <span className="text-gray-900">CORA: THE RWA</span>
             <br />
-            <span className="text-emerald-600">REVOLUTION</span>
-            <br />
-            <span className="text-2xl font-medium text-gray-600">
-              TOKENIZE ANYTHING. EVERYWHERE.
-            </span>
+            <span className="text-green-500">REVOLUTION</span>
           </h2>
-
-          <ul className="mb-10 md:mb-14">
-            {collabContent.map((item) => (
-              <li className="mb-3 py-3" key={item.id}>
-                <div className="flex items-center">
-                  <img
-                    src={check}
-                    width={24}
-                    alt="check"
-                    height={24}
-                    className="pointer-events-none select-none"
-                  />
-                  <h6 className="body-2 ml-5 text-black">{item.title}</h6>
-                </div>
-
-                {item.text && (
-                  <p className="body-2 mt-3 text-black">{item.text}</p>
-                )}
-              </li>
-            ))}
-          </ul>
-
-          <Button>TOKENIZE NOW</Button>
+          <p className="text-xl text-gray-600 mb-6">
+            Tokenize Anytime. Anywhere
+          </p>
+          <p className="text-gray-700 max-w-4xl mx-auto">
+            Enterprise-grade platform that transforms real-world assets into digital tokens, connecting traditional finance with blockchain technology for enhanced liquidity, regulatory compliance, and institutional security
+          </p>
         </div>
 
-        <div className="lg:w-1/2 mt-4">
-          <p className="body-2 mb-4 text-black md:mb-16 lg:mb-32">
-            {collabText}
-          </p>
+        {/* Main Content Area */}
+        <div className="flex flex-col lg:flex-row items-start gap-12">
+          {/* Left Side - SVG Graphic */}
+          <div className="lg:w-1/2 flex justify-center lg:justify-start">
+            <div className="relative">
+              {/* Vertical dashed line */}
+             
+              
+              {/* SVG Container */}
+<div className="relative z-10 pt-0 p-8 -ml-20 md:-ml-60 -mt-16 md:-mt-24">
+  <img
+    src={RevolutionCora}
+    alt="CORA Revolution"
+    className="w-[180%] max-w-none h-auto"
+  />
+</div>
 
-          <div className="relative left-1/2 flex w-[22rem] aspect-square border border-gray-300 rounded-full -translate-x-1/2 scale-75 md:scale-100">
-            <div className="flex w-60 aspect-square m-auto border border-gray-300 rounded-full">
-              <div className="flex items-center justify-center w-full h-full">
-                <img
-                  src={copymColoredIcon}
-                  width={64}
-                  height={64}
-                  alt="brainwave"
-                />
-              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Feature Boxes */}
+          <div className=" space-y-6">
+            {/* Feature Box 1 */}
+            <div className="w-full max-w-[2187px]  bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                INSTANT ASSET DIGITIZATION
+              </h3>
+              <p className="text-gray-700">
+                Transform real estate, commodities, and securities into blockchain tokens in minutes. Native integration with Ethereum, Polygon, Solana, and Avalanche.
+              </p>
             </div>
 
-            <ul>
-              {collabApps.map((app, i) => (
-                <li
-                  key={app.id}
-                  className={`absolute top-0 left-1/2 h-1/2 -ml-[1.6rem] origin-bottom rotate-${
-                    i * 45
-                  }`}
-                >
-                                     <div
-                     className={`relative -top-[1.6rem] flex w-[3.2rem] h-[3.2rem] -rotate-${
-                       i * 45
-                     } animate-pulse`}
-                   >
-                     <img
-                       src={app.icon}
-                       alt={app.title}
-                       width={app.height}
-                       height={app.height}
-                       className="m-auto"
-                     />
-                   </div>
-                </li>
-              ))}
-            </ul>
+            {/* Feature Box 2 */}
+            <div className="w-full max-w-[2187px] bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                COMPLIANCE ON AUTOPILOT
+              </h3>
+              <p className="text-gray-700">
+                AI-driven KYC/AML that works 24/7. Automatic FATF, SEC and global regulatory compliance with zero human intervention.
+              </p>
+            </div>
 
-            <LeftCurve />
-            <RightCurve />
+            {/* Feature Box 3 */}
+            <div className="w-full max-w-[2187px] bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
+              <h3 className="text-lg font-bold text-gray-900 mb-3">
+                FORTRESS-LEVEL SECURITY
+              </h3>
+              <p className="text-gray-700">
+                MPC custody with cross-chain atomic settlements. Enterprise-grade protection for every digital asset transaction.
+              </p>
+            </div>
           </div>
         </div>
       </div>

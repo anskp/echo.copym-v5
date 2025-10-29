@@ -45,7 +45,7 @@ import robot from "./hero/robot.png";
 
 import curve1 from "./collaboration/curve-1.svg";
 import curve2 from "./collaboration/curve-2.svg";
-import discord from "./collaboration/discord.png";
+import RevolutionCora from "./collaboration/Revolution.png";
 import figma from "./collaboration/figma.png";
 import framer from "./collaboration/framer.png";
 import notion from "./collaboration/notion.png";
@@ -128,7 +128,6 @@ export {
     robot,
     curve1,
     curve2,
-    discord,
     figma,
     framer,
     notion,
@@ -141,6 +140,7 @@ export {
     service3,
     lines,
     stars,
+    RevolutionCora,
 
     notification1,
     notification2,

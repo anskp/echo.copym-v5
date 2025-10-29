@@ -8,12 +8,14 @@ import Pricing from "./components/Pricing";
 import ScrollToTop from "../../components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
+import GreenCurves from "./components/GreenCurves";
 
 const CopymAI = () => {
   return (
     <>
       <div className="copym-ai-page pt-[1.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Hero />
+        
         <Benefits />
         <Collaboration />
         <Services />
@@ -25,6 +27,7 @@ const CopymAI = () => {
       </div>
       <ButtonGradient />
       <ScrollToTop />
+      <GreenCurves />
     </>
   );
 };

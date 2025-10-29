@@ -25,14 +25,14 @@ const Services = () => {
           title={
             <>
               <span className="text-gray-900">Why Choose </span>
-              <span className="text-emerald-600">CORA</span>
+              <span className="text-emerald-700">CORA</span>
             </>
           }
           text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
         />
 
         {/* Original Service Cards - Kept for reference */}
-        <div className="relative mt-20">
+        <div className="relative mt-10 lg:mt-12">
           {/* Service 2 & 3 */}
           <div className="relative z-1 grid gap-5 lg:grid-cols-2">
             <div className="relative min-h-[39rem] border border-gray-300 rounded-3xl overflow-hidden">
