@@ -42,23 +42,43 @@ const Testimonials = () => {
           text="See what leading financial institutions say about Cora AI"
         />
         
-        <div className="grid gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-stretch gap-5 px-5 py-10 box-border">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="p-6 bg-gray-50 rounded-2xl border border-gray-200 hover:shadow-lg transition-all duration-300 overflow-hidden"
+              className="w-full md:w-[350px] rounded-[10px] bg-white shadow-[0px_4px_8px_rgba(0,0,0,0.1)] overflow-hidden relative p-[30px] box-border flex flex-col justify-start"
             >
-              <div className="flex items-start mb-4">
-                <div className="w-12 h-12 bg-color-1 rounded-full flex items-center justify-center text-white font-bold text-lg mr-4 flex-shrink-0">
-                  {testimonial.name.charAt(0)}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <h4 className="text-lg font-black tracking-tight leading-tight text-black uppercase anton-regular break-words">{testimonial.name}</h4>
-                  <p className="text-sm text-black break-words">{testimonial.role}</p>
-                  <p className="text-xs text-color-1 break-words">{testimonial.company}</p>
+              {/* Quote Mark + Name Row */}
+              <div className="flex items-start gap-2 mb-[5px]">
+                <p className="text-[48px] font-bold text-[#15a36e] leading-none m-0 flex-shrink-0">
+                  "
+                </p>
+                <div className="flex flex-col items-start">
+                  <p className="text-[24px] font-bold text-black m-0 leading-[1.2] text-left">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-[14px] text-black mt-[2px] text-left">
+                    {testimonial.role}
+                  </p>
+                  <p className="text-[14px] text-[#15a36e] mb-5 text-left">
+                    {testimonial.company}
+                  </p>
                 </div>
               </div>
-              <p className="text-black italic text-sm leading-relaxed break-words">"{testimonial.content}"</p>
+
+              {/* Quote Text */}
+              <p className="text-[16px] text-black leading-[1.5] m-0 text-left flex-1">
+                "{testimonial.content}"
+              </p>
+
+              {/* Gradient Bottom Right */}
+              <div 
+                className="absolute bottom-0 right-0 w-[100px] h-[100px] pointer-events-none"
+                style={{
+                  background: 'linear-gradient(to top left, rgba(229,255,245,0.6), transparent)',
+                  borderRadius: '0 0 5px 0'
+                }}
+              />
             </div>
           ))}
         </div>
