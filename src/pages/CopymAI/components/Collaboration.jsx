@@ -10,7 +10,7 @@ const Collaboration = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4 dm-sans">
             <span className="text-gray-900">CORA: THE RWA </span>
           
-            <span className="text-emerald-700">REVOLUTION</span>
+            <span style={{ color: "#15A36E" }}>REVOLUTION</span>
           </h2>
           <p className="text-xl text-gray-600 mb-4">
             Tokenize Anytime. Anywhere

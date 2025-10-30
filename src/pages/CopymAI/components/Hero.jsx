@@ -3,6 +3,8 @@ import { ScrollParallax } from "react-just-parallax";
 import Typewriter from "typewriter-effect";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import twocurve from "../assets/hero/twocurve.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 import { curve } from "../assets";
@@ -21,10 +23,18 @@ const Hero = () => {
       id="hero"
     >
       <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Background two-curve graphic */}
+        <div className="pointer-events-none absolute inset-0 flex justify-center">
+          <img
+            src={twocurve}
+            alt="Background curves"
+            className="opacity-70 w-[140%] max-w-none translate-y-[-2rem]"
+          />
+        </div>
         <div className="max-w-4xl mx-auto text-center mb-16">
           {/* Content */}
           <div className="relative z-1 text-center">
-            <h1 className="h1 mb-6 text-center anton-regular">
+            <h1 className="h1 mb-6 text-center dm-sans">
               <span className="text-gray-900">Explore the Possibilities of</span>
               <br />
               <span className="text-emerald-600">

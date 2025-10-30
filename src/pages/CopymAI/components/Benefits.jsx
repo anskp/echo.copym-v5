@@ -8,8 +8,8 @@ const Benefits = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight anton-regular mb-6">
-              <span className="text-green-500">CORA AI</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight dm-sans mb-6">
+              <span style={{ color: "#15A36E" }}>CORA AI </span>
               <br />
               <span className="text-black">POWERS YOUR TRADING</span>
             </h2>

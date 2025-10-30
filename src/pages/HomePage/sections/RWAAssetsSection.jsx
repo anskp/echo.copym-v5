@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function RWAAssetsSection() {
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content */}
         <div className="text-center mb-8 sm:mb-12">
@@ -14,7 +14,7 @@ export default function RWAAssetsSection() {
           
           {/* Description */}
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
-            Discover a diverse portfolio of real-world assets tokenized for digital ownership.<br />
+        Discover a diverse portfolio of real-world assets tokenized for digital ownership.
             From precious metals to fine art, we're democratizing access to premium investments.
           </p>
           
