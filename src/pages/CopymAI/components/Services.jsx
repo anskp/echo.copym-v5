@@ -74,7 +74,7 @@ const Services = () => {
 
         {/* Decorative floating bits SVG at bottom */}
         <div className="flex justify-center mt-[-300px]">
-          <img src={Floatingbits} alt="Floating decorative bits" className="w-[880px] max-w-full opacity-1000" />
+          <img src={Floatingbits} alt="Floating decorative bits" className="w-[880px] max-w-full opacity-700" />
         </div>
       </div>
     </Section>

@@ -25,6 +25,9 @@ export default {
                     5: "#4A90E2",
                     6: "#FF98E2",
                 },
+                blue: {
+                    100: '#ffffff',
+                },
                 stroke: {
                     1: "#26242C",
                 },
