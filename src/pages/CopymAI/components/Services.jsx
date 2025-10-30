@@ -44,7 +44,7 @@ const Services = () => {
           {/* Side info cards */}
           <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-12">
             <div className="order-2 md:order-1">
-              <div className="w-full md:w-[85%] md:ml-auto bg-white/80 backdrop-blur-sm border border-emerald-100 shadow-[0_8px_24px_rgba(0,0,0,0.08)] rounded-2xl p-5">
+              <div className="w-full md:w-[85%] md:ml-auto bg-white/80 textAlign-left  backdrop-blur-sm border border-emerald-100 shadow-[0_8px_24px_rgba(0,0,0,0.08)] rounded-2xl p-5">
                 <h4 className="text-base sm:text-lg font-extrabold tracking-tight mb-2 text-emerald-700 dm-sans">
                   CORA PREDICTIVE ANALYSIS
                 </h4>

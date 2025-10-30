@@ -1,5 +1,5 @@
 import React from "react";
-import { LavaLamp } from "../../components/ui/fluid-blob";
+// Removed LavaLamp background
 import { 
   GiShield,
   GiLockedChest,

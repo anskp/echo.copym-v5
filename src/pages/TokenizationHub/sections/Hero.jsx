@@ -1,23 +1,22 @@
 import React from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
+import frameAnim from '../../../components/lotties/frame001.json';
 import { GiPlayButton } from 'react-icons/gi';
-import { LavaLamp } from '../../../components/ui/fluid-blob';
+// Removed fluid blob background
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+    <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh]">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      {/* Fluid Blob Background */}
-      <div className="absolute inset-0 opacity-30">
-        <LavaLamp />
-      </div>
+      {/* Background removed */}
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-28 lg:pb-40">
         {/* AI-Powered Badge - Top of Content */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
@@ -51,21 +50,18 @@ export default function Hero() {
             </button>
           </div>
 
-          {/* Additional UI Elements */}
-          <div className="mt-16 flex justify-center space-x-8 opacity-60">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">Secure</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">Compliant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">AI-Enhanced</span>
-            </div>
+          {/* Lottie animation between buttons and next section */}
+          <div className="mt-10 sm:mt-12 lg:mt-16 flex justify-center relative z-20">
+            <Player
+              autoplay
+              loop
+              src={frameAnim}
+              className="w-[400px] h-[400px] sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] max-w-full"
+            />
           </div>
+
+          {/* Additional UI Elements */}
+          
         </div>
       </div>
     </section>

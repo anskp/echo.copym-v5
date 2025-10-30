@@ -1,14 +1,14 @@
 import ButtonGradient from "./assets/svg/ButtonGradient";
 import Benefits from "./components/Benefits";
 import Collaboration from "./components/Collaboration";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
+// import CTA from "./components/CTA";
+// import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
 import ScrollToTop from "../../components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
-import GreenCurves from "./components/GreenCurves";
+// import GreenCurves from "./components/GreenCurves";
 
 const CopymAI = () => {
   return (
@@ -21,13 +21,10 @@ const CopymAI = () => {
         <Services />
         <Testimonials />
         <Pricing />
-
-        <CTA />
-        <Footer />
       </div>
       <ButtonGradient />
       <ScrollToTop />
-      <GreenCurves />
+      {/* <GreenCurves /> */}
     </>
   );
 };

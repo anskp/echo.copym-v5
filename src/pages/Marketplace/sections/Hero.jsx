@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiPlayButton } from 'react-icons/gi';
-import { LavaLamp } from '../../../components/ui/fluid-blob';
+// Removed LavaLamp background
 import { Link } from 'react-router-dom';
 
 export default function Hero() {
@@ -11,10 +11,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      {/* Fluid Blob Background */}
-      <div className="absolute inset-0 opacity-30">
-        <LavaLamp />
-      </div>
+      {/* Background removed */}
 
       {/* Hero Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
