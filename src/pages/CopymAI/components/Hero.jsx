@@ -28,67 +28,31 @@ const Hero = () => {
           <img
             src={twocurve}
             alt="Background curves"
-            className="opacity-70 w-[140%] max-w-none translate-y-[-2rem]"
+            className="opacity-200 w-[600vw] h-[130vh] max-w-none translate-y-[-4rem] object-cover"
+ 
           />
         </div>
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          {/* Content */}
-          <div className="relative z-1 text-center">
-            <h1 className="h1 mb-6 text-center dm-sans">
-              <span className="text-gray-900">Explore the Possibilities of</span>
-              <br />
-              <span className="text-emerald-600">
-                <Typewriter
-                  options={{
-                    strings: [
-                      "RWA Tokenization",
-                      "AI Compliance",
-                      "DeFi Integration",
-                      "CrossChain Intelligence",
-                    ],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </span>
-            </h1>
-
-            <p className="body-1 mb-6 text-black text-center lg:mb-6 ">
-              Our AI Agent has shown <span className="text-color-1 font-bold">23% better accuracy</span> in predicting asset appreciation vs top market tools. 
-              Experience the future of finance with{" "}
-              <span className="inline-block relative font-semibold">
-                CORA
-                <img
-                  src={curve}
-                  className="absolute top-full left-0 w-full xl:-mt-2 pointer-events-none select-none"
-                  width={624}
-                  height={28}
-                  alt="Curve"
-                />
-              </span>
-              , the unified RWA tokenization AI platform.
-            </p>
-
-            {/* Market Potential Stats */}
-            <div className="flex flex-wrap gap-8 mb-4 justify-center">
-              <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                <div className="text-2xl font-bold text-color-1 mb-1">$16T</div>
-                <div className="text-sm text-black">Total RWA value by 2025</div>
-              </div>
-              <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                <div className="text-2xl font-bold text-color-4 mb-1">43%</div>
-                <div className="text-sm text-black">Market CAGR</div>
-              </div>
-              <div className="text-center animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                <div className="text-2xl font-bold text-color-1 mb-1">$1.5B</div>
-                <div className="text-sm text-black">Year 1 target market</div>
-              </div>
-            </div>
-
-            <Button href="#pricing" black>
-              Get started
-            </Button>
-          </div>
+        <div className="max-w-5xl mx-auto text-center relative z-10 pt-6 md:pt-8">
+          <p className="tracking-wider text-base md:text-lg lg:text-2xl font-extrabold text-gray-800 uppercase mb-3">
+            Explore the possibilities of
+            <span className="text-emerald-600 inline-block ml-1">
+              <Typewriter
+                options={{
+                  strings: [
+                    "CrossChain Intelligence",
+                    "AI Compliance",
+                    "RWA Tokenization",
+                    "DeFi Integration",
+                  ],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </span>
+          </p>
+          <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-5xl mx-auto">
+            Our AI Agent has shown <span className="text-emerald-700 font-dm-sans">23% better accuracy</span> in predicting asset appreciation vs top market tools. Experience the future of finance with <span className="font-semibold">CORA</span>, the unified RWA tokenization AI platform.
+          </p>
         </div>
       </div>
 

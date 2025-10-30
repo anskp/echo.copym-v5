@@ -1,28 +1,31 @@
 import Section from "./Section";
 import coralayoutSVG from "../../../components/SVG/coralayout.svg";
+
 const Benefits = () => {
   return (
-    <section className="relative">
+    // Reduced top margin slightly for better spacing
+    <section className="relative mt-64 sm:mt-72 lg:mt-[24rem]">
       {/* Main Content */}
-      <div className="relative z-10  rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+      <div className="relative z-10 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-32 sm:pt-36 lg:pt-44 pb-16 sm:pb-20 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
           {/* Section Title */}
-          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight dm-sans mb-6">
+          <div className="text-center mb-16 sm:mb-20 lg:mb-24 relative z-20 backdrop-blur-sm rounded-xl py-2">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight dm-sans mb-3 mt-[-120px] sm:mt-[-100px] lg:mt-[-80px]">
               <span style={{ color: "#15A36E" }}>CORA AI </span>
-              <br />
-              <span className="text-black">POWERS YOUR TRADING</span>
+              <span className="text-black ml-3">POWERS YOUR TRADING</span>
             </h2>
-            <p className="text-black text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4">
-              Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+            <p className="text-black text-base sm:text-lg lg:text-xl max-w-3xl mx-auto px-4 mt-2">
+              Master the markets with AI-driven insights, predictive alerts, and
+              real-time intelligence that give you the edge in crypto trading
             </p>
           </div>
 
           {/* SVG Layout */}
-          <div className="flex justify-center items-center">
-            <img 
-              src={coralayoutSVG} 
-              alt="Cora AI Layout" 
+          <div className="flex justify-center items-center -mt-8">
+            <img
+              src={coralayoutSVG}
+              alt="Cora AI Layout"
               className="w-full max-w-6xl h-auto"
             />
           </div>
