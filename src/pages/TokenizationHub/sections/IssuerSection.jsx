@@ -22,7 +22,7 @@ const MinimalTokenizationDashboard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-blue-100 flex flex-col items-center px-4 py-16">
+    <div className="min-h-screen bg-white flex flex-col items-center px-4 py-16">
       <div className="mb-10 mt-6 text-center">
         <h1 className="text-3xl font-semibold tracking-tight text-gray-800">
           Asset Tokenization
@@ -33,7 +33,7 @@ const MinimalTokenizationDashboard = () => {
       {/* Three Horizontal Cards */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
         {/* Card 1: We can tokenize any asset */}
-        <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
               
@@ -41,7 +41,7 @@ const MinimalTokenizationDashboard = () => {
             </h3>
           </div>
           <div className="space-y-6">
-            <div className="p-4 bg-blue-50 rounded-lg">
+            <div className="p-4 bg-white rounded-lg">
               <p className="text-sm text-blue-800">
                 Transform any real-world asset into digital tokens with our secure blockchain platform.
               </p>
@@ -57,7 +57,7 @@ const MinimalTokenizationDashboard = () => {
         </div>
 
         {/* Card 2: One simple token management interface */}
-        <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center">
               
@@ -86,7 +86,7 @@ const MinimalTokenizationDashboard = () => {
         </div>
 
         {/* Card 3: Investor Groups with Globe */}
-        <div className={`bg-blue-100 rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+        <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4 text-center">
             <h3 className="text-xl font-semibold text-gray-800 flex items-center justify-center">
               

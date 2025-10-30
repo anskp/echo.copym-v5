@@ -21,7 +21,7 @@ import {
 
 const AboutUs = () => {
     return (
-        <div className="min-h-screen bg-blue-100">
+        <div className="min-h-screen bg-white">
             {/* Section 1: Hero Section */}
             <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
                 {/* Background Pattern */}
@@ -119,7 +119,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 3: Mission & Vision */}
-            <section className="py-20 bg-blue-100">
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
@@ -177,7 +177,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 4: Core Values */}
-            <section className="py-20 bg-blue-100">
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
@@ -477,7 +477,7 @@ const AboutUs = () => {
             </section> */}
 
             {/* Section 7: Technology & Innovation */}
-            <section className="py-20 bg-blue-100">
+            <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
