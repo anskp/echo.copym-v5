@@ -376,8 +376,7 @@ main {
 
 /* Page-specific background styles */
 .copym-ai-page {
-  /* Changed to solid light blue background */
-  background-color: #dbeafe; /* Tailwind's blue-100 to match HomePage */
+  background-color: #ffffff;
   min-height: 100vh;
 }
 
