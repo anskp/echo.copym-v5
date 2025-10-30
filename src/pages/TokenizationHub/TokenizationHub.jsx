@@ -28,7 +28,7 @@ export default function TokenizationHub() {
   }), []);
 
   return (
-    <div className="min-h-screen bg-blue-100">
+    <div className="min-h-screen bg-white">
       {/* Step 2: Render the section components in order */}
       <Hero />
       <TokenizationProcess onLaunchCreator={openCreateModal} />

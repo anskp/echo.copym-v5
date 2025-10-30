@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function Marketplace() {
   return (
-    <div className="min-h-screen bg-blue-100">
+    <div className="min-h-screen bg-white">
       <Hero />
       <AppPeekSection />
       <WhyInvestWithUs />
@@ -17,7 +17,7 @@ export default function Marketplace() {
       <FAQsection />
 
       {/* Mini CTA Section */}
-      <section className="bg-blue-100 py-12 md:py-16 text-center text-gray-900">
+      <section className="bg-white py-12 md:py-16 text-center text-gray-900">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
              <span className="text-gray-900">READY TO EXPLORE </span>

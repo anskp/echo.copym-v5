@@ -266,7 +266,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-blue-100">
+    <div className="min-h-screen relative overflow-hidden bg-white">
       {/* Background Pattern - Same as AccessPage */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>

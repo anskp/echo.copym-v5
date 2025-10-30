@@ -233,7 +233,7 @@ export default function AccessPage() {
   });
 
   return (
-    <div ref={pageRef} className="min-h-screen bg-blue-100">
+    <div ref={pageRef} className="min-h-screen bg-white">
       {/* Hero Section with TokenizationHub Style */}
       <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
         {/* Background Pattern */}

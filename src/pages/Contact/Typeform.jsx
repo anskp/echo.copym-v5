@@ -18,7 +18,7 @@ import {
  */
 
 const THEME = {
-  pageBg: "bg-blue-100",
+  pageBg: "bg-white",
   ctaGrad: "bg-gradient-to-r from-emerald-500 to-blue-500 text-white",
   ctaHover: "hover:from-emerald-600 hover:to-blue-600 transform hover:scale-[1.02] active:scale-[0.98]",
   ring: "focus:ring-2 focus:ring-emerald-400 focus:ring-offset-2",
