@@ -3,8 +3,8 @@ import coralayoutSVG from "../../../components/SVG/coralayout.svg";
 
 const Benefits = () => {
   return (
-    // Reduced top margin slightly for better spacing
-    <section className="relative mt-64 sm:mt-72 lg:mt-[24rem]">
+    // Move section further down to avoid overlap
+    <section className="relative mt-72 sm:mt-80 lg:mt-[28rem]">
       {/* Main Content */}
       <div className="relative z-10 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-32 sm:pt-36 lg:pt-44 pb-16 sm:pb-20 lg:pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -22,7 +22,7 @@ const Benefits = () => {
           </div>
 
           {/* SVG Layout */}
-          <div className="flex justify-center items-center -mt-8">
+          <div className="flex justify-center items-center -mt-4 sm:-mt-6 lg:-mt-8">
             <img
               src={coralayoutSVG}
               alt="Cora AI Layout"

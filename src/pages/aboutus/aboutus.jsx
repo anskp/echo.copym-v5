@@ -29,10 +29,7 @@ const AboutUs = () => {
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
                 </div>
 
-                {/* Fluid Blob Background */}
-                <div className="absolute inset-0 opacity-30">
-                    <LavaLamp />
-                </div>
+                {/* Fluid Blob Background removed */}
                 
                 {/* Background Pattern */}
                 <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
