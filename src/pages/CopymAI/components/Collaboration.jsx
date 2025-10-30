@@ -4,75 +4,71 @@ import Section from "./Section";
 const Collaboration = () => {
   return (
     <Section crosses>
-      <div className="container">
-        {/* Main Heading at the top */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 anton-regular">
-            <span className="text-gray-900">CORA: THE RWA</span>
-            <br />
-            <span className="text-green-500">REVOLUTION</span>
+      <div className="container relative">
+        {/* ======= HEADING ======= */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 dm-sans">
+            <span className="text-gray-900">CORA: THE RWA </span>
+          
+            <span className="text-emerald-700">REVOLUTION</span>
           </h2>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-xl text-gray-600 mb-4">
             Tokenize Anytime. Anywhere
           </p>
-          <p className="text-gray-700 max-w-4xl mx-auto">
-            Enterprise-grade platform that transforms real-world assets into digital tokens, connecting traditional finance with blockchain technology for enhanced liquidity, regulatory compliance, and institutional security
+          <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            Enterprise-grade platform that transforms real-world assets into
+            digital tokens, connecting traditional finance with blockchain
+            technology for enhanced liquidity, regulatory compliance, and
+            institutional security.
           </p>
         </div>
 
-        {/* Main Content Area */}
-        <div className="flex flex-col lg:flex-row items-start gap-12">
-          {/* Left Side - SVG Graphic */}
-          <div className="lg:w-1/2 flex justify-center lg:justify-start">
-            <div className="relative">
-              {/* Vertical dashed line */}
-             
-              
-              {/* SVG Container */}
-<div className="relative z-10 pt-0 p-8 -ml-20 md:-ml-60 -mt-16 md:-mt-24">
-  <img
-    src={RevolutionCora}
-    alt="CORA Revolution"
-    className="w-[180%] max-w-none h-auto"
-  />
+         {/* ======= BACKGROUND SPIRAL ======= */}
+         <div className="absolute inset-0 flex justify-start items-center pointer-events-none">
+           <img
+             src={RevolutionCora}
+             alt="CORA Revolution"
+             className="w-[95%] md:w-[70%] max-w-none h-auto opacity-90 -ml-44 md:-ml-60 mt-52 md:mt-72"
+           />
+         </div>
+
+        {/* ======= FEATURE BOXES ======= */}
+        <div className="relative z-20 flex flex-col gap-20 md:gap-24 mt-20 md:mt-28 md:pl-16">
+  {/* Box 1 - Right aligned */}
+  <div className="w-full md:w-[75%] md:ml-80 bg-[rgba(241,241,241,0.8)] shadow-[0_4px_8px_rgba(0,0,0,0.1)] rounded-lg p-3 backdrop-blur-sm">
+    <h3 className="text-lg font-bold text-gray-900 mb-2">
+      INSTANT ASSET DIGITIZATION
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      Transform real estate, commodities, and securities into blockchain
+      tokens in minutes. Native integration with Ethereum, Polygon,
+      Solana, and Avalanche.
+    </p>
+  </div>
+
+  {/* Box 2 - Left aligned */}
+  <div className="w-full md:w-[75%] md:ml-64 bg-[rgba(241,241,241,0.8)] shadow-[0_4px_8px_rgba(0,0,0,0.1)] rounded-lg p-3 backdrop-blur-sm">
+    <h3 className="text-lg font-bold text-gray-900 mb-3">
+      COMPLIANCE ON AUTOPILOT
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      AI-driven KYC/AML that works 24/7. Automatic FATF, SEC, and global
+      regulatory compliance with zero human intervention.
+    </p>
+  </div>
+
+  {/* Box 3 - Right aligned */}
+  <div className="w-full md:w-[75%] md:ml-80 bg-[rgba(241,241,241,0.8)] shadow-[0_4px_8px_rgba(0,0,0,0.1)] rounded-lg p-3 backdrop-blur-sm">
+    <h3 className="text-lg font-bold text-gray-900 mb-3">
+      FORTRESS-LEVEL SECURITY
+    </h3>
+    <p className="text-gray-700 leading-relaxed">
+      MPC custody with cross-chain atomic settlements. Enterprise-grade
+      protection for every digital asset transaction.
+    </p>
+  </div>
 </div>
 
-            </div>
-          </div>
-
-          {/* Right Side - Feature Boxes */}
-          <div className=" space-y-6">
-            {/* Feature Box 1 */}
-            <div className="w-full max-w-[2187px]  bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                INSTANT ASSET DIGITIZATION
-              </h3>
-              <p className="text-gray-700">
-                Transform real estate, commodities, and securities into blockchain tokens in minutes. Native integration with Ethereum, Polygon, Solana, and Avalanche.
-              </p>
-            </div>
-
-            {/* Feature Box 2 */}
-            <div className="w-full max-w-[2187px] bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                COMPLIANCE ON AUTOPILOT
-              </h3>
-              <p className="text-gray-700">
-                AI-driven KYC/AML that works 24/7. Automatic FATF, SEC and global regulatory compliance with zero human intervention.
-              </p>
-            </div>
-
-            {/* Feature Box 3 */}
-            <div className="w-full max-w-[2187px] bg-[rgba(241,241,241,0.8)] shadow-[0_4px_4px_0_rgba(77,75,75,0.25)] rounded-lg p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-3">
-                FORTRESS-LEVEL SECURITY
-              </h3>
-              <p className="text-gray-700">
-                MPC custody with cross-chain atomic settlements. Enterprise-grade protection for every digital asset transaction.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
     </Section>
   );

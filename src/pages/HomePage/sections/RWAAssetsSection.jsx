@@ -13,16 +13,9 @@ export default function RWAAssetsSection() {
           </h2>
           
           {/* Description */}
-          <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto px-4"
-            style={{
-              display: '-webkit-box',
-              WebkitLineClamp: 2,
-              WebkitBoxOrient: 'vertical',
-              overflow: 'hidden',
-            }}
-          >
-            Discover a diverse portfolio of real-world assets tokenized for digital ownership. From precious metals to fine art, we're democratizing access to premium investments.
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto px-4">
+            Discover a diverse portfolio of real-world assets tokenized for digital ownership.<br />
+            From precious metals to fine art, we're democratizing access to premium investments.
           </p>
           
           {/* CTA Button */}
