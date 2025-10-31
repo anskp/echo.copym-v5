@@ -3,6 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import bitcoinflyImage from "../../../components/images/bitcoinfly.png";
 
 // 3D Phone Component
 const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = "blue" }) => {
@@ -196,9 +197,9 @@ export default function AppPeekSection() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <span className="text-white">PEEK INTO OUR </span>
+              <span className="text-[#15a36e]">PEEK INTO OUR </span>
               <span className="text-black">WEB3 </span>
-              <span className="text-white">INVESTMENT HUB</span>
+              <span className="text-[#15a36e]">INVESTMENT HUB</span>
             </motion.h1>
             
             <motion.p 
@@ -217,6 +218,20 @@ export default function AppPeekSection() {
             
             {/* Left Grid - Phone and Download Buttons */}
             <div className="flex justify-center items-center relative">
+              {/* Background Image */}
+              <img
+                src={bitcoinflyImage}
+                alt="Bitcoin Background"
+                className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
+                style={{
+                  width: '150%',
+                  height: '150%',
+                  left: '-25%',
+                  top: '-25%',
+                  objectFit: 'contain',
+                  objectPosition: 'center'
+                }}
+              />
               {/* Phone */}
               <div className="flex justify-center items-center relative overflow-visible">
                <div 

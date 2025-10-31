@@ -4,11 +4,31 @@ import WhyInvestWithUs from "./sections/WhyInvestWithUs";
 import AppPeekSection from "./sections/AppPeekSection";
 import FAQsection from "./sections/FAQsection";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import MarketplaceSVG from '../../components/SVG/marketplace1.svg';
 
 export default function Marketplace() {
   return (
     <div className="min-h-screen bg-white">
       <Hero />
+      
+      {/* SVG Image between Hero and AppPeekSection */}
+      <div className="flex justify-center items-center py-8 sm:py-12 lg:py-16">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="w-full max-w-4xl px-4 sm:px-6 lg:px-8"
+        >
+          <img 
+            src={MarketplaceSVG} 
+            alt="Marketplace" 
+            className="w-full h-auto"
+          />
+        </motion.div>
+      </div>
+
       <AppPeekSection />
       <WhyInvestWithUs />
       <div className="text-center">
