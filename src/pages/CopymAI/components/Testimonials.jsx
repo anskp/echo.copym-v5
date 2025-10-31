@@ -32,15 +32,17 @@ const Testimonials = () => {
   return (
     <Section id="testimonials">
       <div className="container">
-        <Heading
-          title={
-            <>
-              <span className="text-gray-900 whitespace-nowrap">Trusted by Industry </span>
-              <span className="text-emerald-600 whitespace-nowrap">Leaders</span>
-            </>
-          }
-          text="See what leading financial institutions say about Cora AI"
-        />
+        <div className="w-full max-w-[1200px] mx-auto px-5">
+          <Heading
+            title={
+              <>
+                <span className="text-gray-900 whitespace-nowrap">Trusted by Industry </span>
+                <span className="text-emerald-600 whitespace-nowrap">Leaders</span>
+              </>
+            }
+            text="See what leading financial institutions say about Cora AI"
+          />
+        </div>
         
         <div className="w-full max-w-[1200px] mx-auto flex flex-col md:flex-row justify-between items-stretch gap-5 px-5 py-10 box-border">
           {testimonials.map((testimonial) => (
