@@ -3,7 +3,6 @@ import { GiRoundStar } from "react-icons/gi";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import bitcoinflyImage from "../../../components/images/bitcoinfly.png";
 
 // 3D Phone Component
 const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = "blue" }) => {
@@ -12,10 +11,7 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
       background: 'linear-gradient(135deg, #3b82f6, #06b6d4, #3b82f6)',
       glowColor: 'via-blue-300'
     },
-    emerald: {
-      background: 'linear-gradient(135deg, #10b981, #059669, #10b981)',
-      glowColor: 'via-emerald-300'
-    }
+    
   };
 
   const currentColor = colorStyles[phoneColor];
@@ -26,18 +22,9 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
       style={{ perspective: '1000px' }}
     >
       {/* 3D Phone Container */}
-      <div 
-        className="relative w-full h-full bg-gradient-to-br from-emerald-400 via-emerald-500 to-emerald-600 rounded-[2rem] md:rounded-[3rem] p-1 md:p-2 shadow-2xl"
-        style={{
-          background: currentColor.background,
-          boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1)',
-          transform: `rotateX(-15deg) rotateY(-25deg) rotateZ(15deg) ${additionalTransform}`,
-          transformStyle: 'preserve-3d'
-        }}
-      >
         {/* Phone Screen */}
-        <div className="w-full h-full bg-black rounded-[1.5rem] md:rounded-[2.5rem] p-1">
-          <div className="w-full h-full rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
+      <div className="w-full h-full rounded-[1.5rem] md:rounded-[2.5rem] p-1">
+        <div className="w-full h-full rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
             <img 
               src={image} 
               alt="App Interface"
@@ -45,24 +32,7 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
             />
           </div>
         </div>
-        
         {/* Phone Reflection/Glow Effect */}
-        <div 
-          className={`absolute -bottom-8 md:-bottom-16 left-1/2 w-32 md:w-60 h-8 md:h-16 bg-gradient-to-r from-transparent ${currentColor.glowColor} to-transparent opacity-40 blur-xl md:blur-2xl rounded-full`}
-          style={{
-            transform: 'translateX(-50%) rotateX(90deg) translateZ(-20px)',
-            transformOrigin: 'center top'
-          }}
-        ></div>
-        
-        {/* Additional shadow for depth */}
-        <div 
-          className="absolute top-4 left-4 w-full h-full bg-black opacity-10 rounded-[3rem] -z-10"
-          style={{
-            transform: 'translateZ(-10px)'
-          }}
-        ></div>
-      </div>
     </div>
   );
 };
@@ -101,12 +71,12 @@ const FeaturesGrid = () => {
         const svgHeightBottom = 18;
         
         return (
-          <motion.div
-           key={index}
+        <motion.div
+          key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: index * 0.1 }}
+          viewport={{ once: true }}
                   style={{ 
                     position: 'relative',
                     marginBottom: '16px',
@@ -133,7 +103,7 @@ const FeaturesGrid = () => {
                 color: '#000', 
                 margin: '0'
               }}>{feature.title}</h3>
-            </div>
+          </div>
 
             {/* Grey Content Area */}
             <div style={{ 
@@ -148,12 +118,12 @@ const FeaturesGrid = () => {
                 lineHeight: '1.4',
                 margin: '0 0 20px 0'
               }}>
-                {feature.description}
-              </p>
+              {feature.description}
+            </p>
 
               
               
-            </div>
+          </div>
 
             {/* Straight Corner Lines - Top Right */}
             <svg width={svgWidth} height={svgHeightTop} viewBox={`0 0 ${svgWidth} ${svgHeightTop}`} fill="none"
@@ -186,7 +156,7 @@ const FeaturesGrid = () => {
               <line x1="32" y1="16" x2="2" y2="16" stroke="#7DD1B2" strokeWidth="3" />
               <line x1="2" y1="16" x2="2" y2="0" stroke="#7DD1B2" strokeWidth="3" />
             </svg>
-          </motion.div>
+        </motion.div>
         );
       })}
     </div>
@@ -255,7 +225,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative">
+    <section className="relative bg-white">
       {/* Main Content with Curved Background - HomePage Style */}
       
         
@@ -291,50 +261,44 @@ export default function AppPeekSection() {
             
             {/* Left Grid - Phone and Download Buttons */}
             <div className="flex justify-center items-center relative">
-              {/* Background Image */}
-              <img
-                src={bitcoinflyImage}
-                alt="Bitcoin Background"
-                className="absolute inset-0 w-full h-full object-cover opacity-30 -z-10"
-                style={{
-                  width: '150%',
-                  height: '150%',
-                  left: '-25%',
-                  top: '-25%',
-                  objectFit: 'contain',
-                  objectPosition: 'center'
-                }}
-              />
               {/* Phone Image Only */}
-              <div className="flex justify-center items-center relative overflow-visible">
-                <img 
-                  src="/assets/Images/mobile-ads.png" 
-                  alt="App Interface"
-                  className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] shadow-2xl transition-all duration-700 hover:scale-105"
-                />
+              <div className="flex justify-center items-center relative z-20">
+                <div className="relative bg-white rounded-[2.3rem] p-0.5">
+                  <img 
+                    src="/assets/Images/mobile-ads.png" 
+                    alt="App Interface"
+                    className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
+                    style={{
+                      filter: 'none',
+                      opacity: 1,
+                      mixBlendMode: 'normal',
+                      backgroundColor: 'transparent'
+                    }}
+                  />
               </div>
-              
+            </div>
+            
               {/* Download Buttons */}
               <div className="flex flex-col items-start space-y-6 ml-6">
-                {/* Google Play Store Button */}
-                <StoreDownloadButton 
-                  store="Google Play"
-                  rating={4}
-                  downloads="1M+ downloads"
-                  bgColor="bg-black"
-                  textColor="text-white"
-                  position="left"
-                />
-                
-                {/* Apple App Store Button */}
-                <StoreDownloadButton 
-                  store="App Store"
-                  rating={5}
-                  downloads="500K+ downloads"
-                  bgColor="bg-black"
-                  textColor="text-white"
-                  position="left"
-                />
+              {/* Google Play Store Button */}
+              <StoreDownloadButton 
+                store="Google Play"
+                rating={4}
+                downloads="1M+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="left"
+              />
+              
+              {/* Apple App Store Button */}
+              <StoreDownloadButton 
+                store="App Store"
+                rating={5}
+                downloads="500K+ downloads"
+                bgColor="bg-black"
+                textColor="text-white"
+                position="left"
+              />
               </div>
             </div>
             
