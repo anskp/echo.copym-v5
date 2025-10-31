@@ -38,11 +38,11 @@ const Services = () => {
           <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-[44rem] h-[44rem] bg-emerald-200/25 rounded-full blur-3xl" />
 
           {/* Two-column layout: left card | right card */}
-          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-12">
+          <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mt-[200px] z-10">
             {/* Left card - bottom left */}
-            <div className="order-2 md:order-1 flex md:justify-start md:items-end md:mt-32">
+            <div className="order-2 md:order-1 flex md:justify-start md:items-end md:mt-[250px]">
               <div className="w-full md:w-[90%] bg-[#f8fffc] border border-[#13a56e] rounded-2xl px-2 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.04)]">
-                <h4 className="text-left uppercase font-extrabold tracking-[0.5px] mb-2 text-[15px] dm-sans">
+                <h4 className="text-center uppercase font-extrabold tracking-[0.5px] mb-2 text-[15px] dm-sans">
                   <span className="text-[#13a56e]">Cora </span>
                   <span className="text-black">Predictive Analysis</span>
                 </h4>
@@ -53,9 +53,9 @@ const Services = () => {
             </div>
             
             {/* Right card - top right */}
-            <div className="order-1 md:order-2 flex md:justify-end md:items-start mt-10 md:mt-32">
+            <div className="order-1 md:order-2 flex md:justify-end md:items-start md:-mt-20">
               <div className="w-full md:w-[90%] bg-[#f8fffc] border border-[#13a56e] rounded-2xl px-2 py-3 shadow-[0_8px_24px_rgba(0,0,0,0.04)]">
-                <h4 className="text-left uppercase font-extrabold tracking-[0.5px] mb-2 text-[15px] dm-sans">
+                <h4 className="text-center uppercase font-extrabold tracking-[0.5px] mb-2 text-[15px] dm-sans">
                   <span className="text-[#13a56e]">Cora AI </span>
                   <span className="text-black">Real Estate</span>
                 </h4>
@@ -67,9 +67,9 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Decorative floating bits SVG at bottom */}
-        <div className="flex justify-center mt-[-300px]">
-          <img src={Floatingbits} alt="Floating decorative bits" className="w-[880px] max-w-full opacity-700" />
+        {/* Decorative floating bits SVG - fixed position outside cards container */}
+        <div className="relative flex justify-center -mt-[500px] pointer-events-none z-0">
+          <img src={Floatingbits} alt="Floating decorative bits" className="w-[710px] max-w-full opacity-700" />
         </div>
       </div>
     </Section>
