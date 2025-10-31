@@ -25,28 +25,36 @@ export default function Hero() {
 
         <div className="text-center">
           {/* Main Title - Full Width with Homepage Font Styles */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
-            <span className="text-gray-900">EXPLORE TOKENIZED</span>
-            <br />
-            <span className="text-emerald-600">REAL-WORLD ASSETS</span>
-          </h1>
+          <div className="mb-8">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-gray-900">EXPLORE TOKENIZED REAL-WORLD ASSETS</span>
+            </h1>
+          </div>
 
           {/* Description with Homepage Style */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto">
+          <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed mb-12 max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
           {/* CTA Buttons with Homepage Style */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-            <Link to="/marketplace">
-              <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-                Enter Marketplace
-              </button>
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+            <Link
+              to="/marketplace"
+              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px] shadow-lg"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              START INVESTING
+              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+                <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
             </Link>
-
-            <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-blue-600 border-2 border-blue-600 hover:bg-blue-600 hover:text-white rounded-full transition-all duration-300 transform hover:scale-105 text-sm sm:text-base">
-              <GiPlayButton className="w-6 h-6" />
-              Watch Demo
+            <button
+              className="bg-transparent border-2 border-emerald-500 text-emerald-500 px-8 py-4 rounded-full font-bold text-lg hover:bg-emerald-500 hover:text-white transition-all duration-300 min-w-[200px]"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              WATCH DEMO
             </button>
           </div>
 

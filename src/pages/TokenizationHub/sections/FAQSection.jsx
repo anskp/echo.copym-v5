@@ -3,23 +3,29 @@ import { Link } from 'react-router-dom';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
-    <div className="border-b border-white/20 last:border-b-0 mb-2">
+    <div 
+      className="bg-white border border-white mb-4"
+      style={{
+        borderRadius: 15,
+        boxShadow: "4px 4px 4px 0 rgba(84,82,82,0.25)"
+      }}
+    >
       <button
         onClick={onToggle}
-        className="w-full text-left py-4 px-0 flex justify-between items-center hover:text-green-400 transition-colors duration-200"
+        className="w-full text-left p-6 flex justify-between items-center transition-colors duration-200"
       >
-        <h3 className="text-lg font-semibold text-white pr-4 dm-sans">{question}</h3>
-        <div className="flex-shrink-0 transition-transform duration-300">
-          <span className="w-5 h-5 inline-block text-green-400">{isOpen ? '▾' : '▸'}</span>
+        <h3 className="text-lg font-semibold text-gray-900 pr-4 dm-sans">{question}</h3>
+        <div className="flex-shrink-0 transition-transform duration-300 hidden">
+          <span className="w-5 h-5 inline-block text-gray-500">{isOpen ? '−' : '+'}</span>
         </div>
       </button>
       <div 
         className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+          isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="pb-4">
-          <p className="text-white/80 leading-relaxed dm-sans">{answer}</p>
+        <div className="px-6 pb-6">
+          <p className="text-gray-600 leading-relaxed dm-sans">{answer}</p>
         </div>
       </div>
     </div>
@@ -45,69 +51,62 @@ export default function FAQSection() {
     {
       question: "How do compliance and investor eligibility work?",
       answer: "KYC/AML and jurisdiction checks are embedded. Allow/deny lists and accreditation are enforced at the token level so only eligible wallets can hold or trade."
-    },
-    {
-      question: "How are payouts and reporting handled?",
-      answer: "Dashboards automate pro‑rata USDC distributions with on‑chain receipts and downloadable statements for accounting and audits."
-    },
-    {
-      question: "What security measures are in place for wallet infrastructure?",
-      answer: "We implement enterprise-grade multi-signature wallet infrastructure featuring 256-bit encryption, hardware security modules, and comprehensive audit trails to ensure maximum protection of assets."
-    },
-    {
-      question: "How are smart contracts secured?",
-      answer: "All smart contracts undergo thorough third-party audits by leading security firms, including comprehensive vulnerability testing and compliance checks to ensure robust security."
-    },
-    {
-      question: "What compliance frameworks are implemented?",
-      answer: "Our platform incorporates built-in regulatory compliance and risk management protocols, including SEC compliance, KYC/AML procedures, and automated regulatory reporting systems."
-    },
-    {
-      question: "How do you prevent fraud?",
-      answer: "We employ advanced AI-powered fraud detection and prevention systems with real-time monitoring, sophisticated AI algorithms, and proactive threat prevention mechanisms."
     }
   ];
 
   return (
-    <section className="relative">
-      {/* Main Content */}
-      <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-10 sm:pt-12 lg:pt-14 pb-12 sm:pb-14 lg:pb-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-8 lg:gap-10 relative z-10">
-            {/* Left - FAQ List */}
-            <div className="lg:col-span-2">
-              {faqs.map((faq, index) => (
-                <FAQItem
-                  key={index}
-                  question={faq.question}
-                  answer={faq.answer}
-                  isOpen={openFAQ === index}
-                  onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-                />
-              ))}
-            </div>
-
-            {/* Right - Help CTA */}
-            <div className="lg:col-span-1 flex flex-col justify-center">
-              <div className="text-center lg:text-left">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 dm-sans">
-                 FAQs
-                </h3>
-                <p className="text-white/80 text-lg mb-6 dm-sans">
-                  Need guidance on structure, custody or compliance?
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
+          {/* Left Side - Support Info */}
+          <div className="flex flex-col order-2 lg:order-1">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-40 text-center lg:text-left px-2 dm-sans">
+              Frequently asked
+              <br />
+              questions
+            </h3>
+            <div 
+              className="bg-white rounded-lg p-8 sm:p-10"
+              style={{
+                filter: "drop-shadow(2px 2px 2px rgba(84,82,82,0.25))",
+                borderRadius: 15
+              }}
+            >
+              <div 
+                className="mb-4 sm:mb-6 border border-white"
+                style={{ borderRadius: 15 }}
+              >
+                <h4 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2 sm:mb-3 text-center lg:text-left dm-sans">
+                  Still have a question ?
+                </h4>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center lg:text-left dm-sans">
+                  Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!
                 </p>
-                <p className="text-white/70 text-base mb-8 leading-relaxed dm-sans">
-                  Our specialists can review your asset, recommend a chain/standard, and outline legal options for your jurisdiction.
-                </p>
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center px-6 py-3 bg-white hover:bg-gray-100 text-gray-900 font-semibold rounded-full transition-all duration-300 transform hover:scale-105"
-                >
-                  Talk to an Expert
-                  <span className="ml-2">→</span>
-                </Link>
               </div>
+              <Link
+                to="/marketplace"
+                className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto dm-sans"
+                style={{
+                  borderRadius: 15,
+                  background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)"
+                }}
+              >
+                Explore Assets
+              </Link>
             </div>
+          </div>
+
+          {/* Right Side - FAQ List */}
+          <div className="space-y-3 sm:space-y-4 order-1 lg:order-2">
+            {faqs.map((faq, index) => (
+              <FAQItem
+                key={index}
+                question={faq.question}
+                answer={faq.answer}
+                isOpen={openFAQ === index}
+                onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+              />
+            ))}
           </div>
         </div>
       </div>

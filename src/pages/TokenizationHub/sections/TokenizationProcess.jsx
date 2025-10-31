@@ -102,75 +102,161 @@ export default function TokenizationProcess({ onLaunchCreator }) {
   ];
 
   return (
-    <section className="relative">
+    <section className="relative -mt-[220px]">
       {/* Main Content */}
-      <div className="relative z-10 sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-6 sm:pt-8 lg:pt-10 pb-8 sm:pb-10 lg:pb-12 overflow-hidden">
+      <div className="relative z-10 sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12 overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-4 sm:mb-5 lg:mb-6">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 sm:mb-3 dm-sans">
-              <span className="text-black">WHY</span>
+              <span className="text-[#15a36e]">WHY </span>
               <span className="text-black">TOKENIZE?</span>
             </h2>
             <p className="text-white/80 max-w-3xl mx-auto text-[10px] sm:text-xs lg:text-sm mb-3 sm:mb-4 px-4 dm-sans">
               Discover the key benefits that make tokenization the future of asset management and investment.
             </p>
-            <button 
+            {/* <button 
               onClick={onLaunchCreator} 
               className="bg-white text-emerald-600 font-semibold px-2.5 sm:px-4 lg:px-5 py-1.5 sm:py-2 rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl text-[10px] sm:text-xs"
             >
               <GiPlayButton className="mr-1.5 h-2.5 w-2.5 sm:h-3 sm:w-3 inline" />
               Launch Token Creator Demo
-            </button>
+            </button> */}
           </div>
 
-          {/* Why Tokenize Features Grid - Card Layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 lg:gap-5 mt-4 sm:mt-6 lg:mt-8">
-            {whyTokenizeFeatures.map((feature, index) => (
-              <div
-                key={index}
-                className="relative bg-white rounded-[16px] shadow-[5px_4px_4px_0_rgba(173,173,173,0.25)] overflow-hidden flex flex-col"
-                style={{ minHeight: '280px' }}
-              >
-                {/* Top Section with Icon */}
-                <div className="relative h-24 sm:h-28 lg:h-32 xl:h-36 flex-shrink-0">
-                  {/* Green Gradient Icon Background */}
-                  <div
-                    className="absolute top-2 left-2 sm:top-3 sm:left-3 lg:top-3.5 lg:left-3.5 rounded-[16px] w-16 h-12 sm:w-20 sm:h-16 lg:w-24 lg:h-20 xl:w-28 xl:h-24"
-                    style={{
-                      background: 'linear-gradient(179.04deg, rgba(79,217,148,0.2) 57.8%, rgba(255,255,255,0.2) 101.33%)'
-                    }}
-                  />
-
-                  {/* Icon Image - positioned precisely */}
-                  <div className="absolute top-2.5 left-2.5 sm:top-3.5 sm:left-3.5 lg:top-4 lg:left-4 flex items-center justify-center z-10">
+          {/* Why Tokenize Features - Two Row Layout */}
+          <div className="mt-4 sm:mt-6 lg:mt-8">
+            {/* Row 1 */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '32px',
+              marginBottom: '80px',
+              flexWrap: 'wrap'
+            }}>
+              {whyTokenizeFeatures.slice(0, 3).map((feature, index) => (
+                <div
+                  key={index}
+                  style={{
+                    width: '280px',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    background: '#fff',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                    position: 'relative',
+                    overflow: 'visible',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    textAlign: 'left',
+                  }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '-30px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(179.04deg, rgba(79,217,148,0.2) 57.8%, rgba(255,255,255,0.2) 101.33%)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    zIndex: 10,
+                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  }}>
                     {feature.icon && (
                       <img
                         src={feature.icon}
                         alt={feature.title}
-                        className="w-12 h-auto sm:w-16 lg:w-20 xl:w-24"
-                        style={{
-                          maxWidth: '55%',
-                          maxHeight: '75%',
-                          objectFit: 'contain'
-                        }}
+                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
                       />
                     )}
                   </div>
+                  <div style={{ marginTop: '40px', width: '100%' }}>
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#000',
+                      margin: '0 0 8px 0',
+                      textAlign: 'center'
+                    }}>
+                      {feature.title}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#333', lineHeight: '1.5', margin: '0' }}>
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
+              ))}
+            </div>
 
-                {/* Content Section */}
-                <div className="flex-1 flex flex-col justify-end p-3 sm:p-4 lg:p-5">
-                  <h3 className="text-sm sm:text-base lg:text-lg xl:text-xl font-semibold text-black mb-1.5 sm:mb-2 text-left dm-sans leading-tight">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[10px] sm:text-xs lg:text-sm xl:text-base text-black text-left dm-sans leading-relaxed">
-                    {feature.description}
-                  </p>
+            {/* Row 2 */}
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              gap: '32px',
+              flexWrap: 'wrap'
+            }}>
+              {whyTokenizeFeatures.slice(3, 6).map((feature, index) => (
+                <div
+                  key={index + 3}
+                  style={{
+                    width: '280px',
+                    padding: '20px',
+                    borderRadius: '12px',
+                    background: '#fff',
+                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
+                    position: 'relative',
+                    overflow: 'visible',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'flex-start',
+                    textAlign: 'left',
+                  }}
+                >
+                  <div style={{
+                    position: 'absolute',
+                    top: '-30px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    width: '60px',
+                    height: '60px',
+                    borderRadius: '12px',
+                    background: 'linear-gradient(179.04deg, rgba(79,217,148,0.2) 57.8%, rgba(255,255,255,0.2) 101.33%)',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    zIndex: 10,
+                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
+                  }}>
+                    {feature.icon && (
+                      <img
+                        src={feature.icon}
+                        alt={feature.title}
+                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
+                      />
+                    )}
+                  </div>
+                  <div style={{ marginTop: '40px', width: '100%' }}>
+                    <h3 style={{
+                      fontSize: '18px',
+                      fontWeight: '600',
+                      color: '#000',
+                      margin: '0 0 8px 0',
+                      textAlign: 'center'
+                    }}>
+                      {feature.title}
+                    </h3>
+                    <p style={{ fontSize: '14px', color: '#333', lineHeight: '1.5', margin: '0' }}>
+                      {feature.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>

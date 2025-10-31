@@ -25,9 +25,9 @@ const MinimalTokenizationDashboard = () => {
   return (
     <div className="min-h-screen flex flex-col items-center px-4 py-15" style={{ backgroundColor: '#e9f6f1' }}>
       <div className="mb-10  text-center">
-        <h1 className="text-2xl font-semibold tracking-tight text-gray-800 dm-sans">
-  Asset <span className="text-[#15a36e]">Tokenization</span>
-</h1>
+        <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-gray-800 dm-sans">
+          Asset <span className="text-[#15a36e]">Tokenization</span>
+        </h1>
 
         <p className="text-gray-500 text-xs mt-1 dm-sans">Digitizing real assets on blockchain</p>
       </div>

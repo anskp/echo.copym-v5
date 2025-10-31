@@ -49,10 +49,10 @@ export default function TokenDistribution() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight dm-sans mb-6">
-  <span className="text-[#15a36e]">TOKEN </span>
-  <span className="text-black">DISTRIBUTION</span>
-</h2>
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight dm-sans mb-6">
+              <span className="text-[#15a36e]">TOKEN </span>
+              <span className="text-black">DISTRIBUTION</span>
+            </h2>
 
             <p className="text-black text-lg sm:text-xl max-w-3xl mx-auto dm-sans">
               Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.
