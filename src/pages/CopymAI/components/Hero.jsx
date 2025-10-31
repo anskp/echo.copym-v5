@@ -33,7 +33,7 @@ const Hero = () => {
           />
         </div>
         <div className="max-w-5xl mx-auto text-center relative z-10 pt-6 md:pt-8">
-          <p className="tracking-wider text-base md:text-lg lg:text-2xl font-extrabold text-gray-800 uppercase mb-3">
+          <p className="tracking-wider text-xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold text-gray-800 uppercase mb-4 md:mb-5 dm-sans">
             Explore the possibilities of
             <span className="text-emerald-600 inline-block ml-1">
               <Typewriter
@@ -50,7 +50,7 @@ const Hero = () => {
               />
             </span>
           </p>
-          <p className="text-gray-700 text-lg md:text-xl lg:text-2xl max-w-5xl mx-auto">
+<p className="text-gray-700 text-sm sm:text-base md:text-lg max-w-5xl mx-auto dm-sans">
             Our AI Agent has shown <span className="text-emerald-700 font-dm-sans">23% better accuracy</span> in predicting asset appreciation vs top market tools. Experience the future of finance with <span className="font-semibold">CORA</span>, the unified RWA tokenization AI platform.
           </p>
         </div>

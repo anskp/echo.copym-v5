@@ -155,7 +155,7 @@ export default function TestimonialsSection() {
       {/* heading */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 anton-regular">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 dm-sans ">
             <span className="text-gray-900">Trusted by Industry </span>
             <span className="text-emerald-600">Leaders</span>
           </h2>

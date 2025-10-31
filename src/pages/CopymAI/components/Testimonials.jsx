@@ -35,8 +35,8 @@ const Testimonials = () => {
         <Heading
           title={
             <>
-              <span className="text-gray-900">Trusted by </span>
-              <span className="text-emerald-600">Industry Leaders</span>
+              <span className="text-gray-900 whitespace-nowrap">Trusted by Industry </span>
+              <span className="text-emerald-600 whitespace-nowrap">Leaders</span>
             </>
           }
           text="See what leading financial institutions say about Cora AI"
@@ -54,20 +54,20 @@ const Testimonials = () => {
                   "
                 </p>
                 <div className="flex flex-col items-start">
-                  <p className="text-[24px] font-bold text-black m-0 leading-[1.2] text-left">
+                  <p className="text-[24px] font-bold text-black m-0 leading-[1.2] text-left dm-sans">
                     {testimonial.name}
                   </p>
-                  <p className="text-[14px] text-black mt-[2px] text-left">
+                  <p className="text-[14px] text-black mt-[2px] text-left dm-sans">
                     {testimonial.role}
                   </p>
-                  <p className="text-[14px] text-[#15a36e] mb-5 text-left">
+                  <p className="text-[14px] text-[#15a36e] mb-5 text-left dm-sans">
                     {testimonial.company}
                   </p>
                 </div>
               </div>
 
               {/* Quote Text */}
-              <p className="text-[16px] text-black leading-[1.5] m-0 text-left flex-1">
+              <p className="text-[16px] text-black leading-[1.5] m-0 text-left flex-1 dm-sans">
                 "{testimonial.content}"
               </p>
 
