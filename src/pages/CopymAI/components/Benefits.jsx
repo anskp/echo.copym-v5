@@ -11,7 +11,7 @@ const Benefits = () => {
           
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24 relative z-20 backdrop-blur-sm rounded-xl py-2">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight dm-sans mb-3 mt-[-180px] sm:mt-[-160px] lg:mt-[-140px]">
+            <h2 className="text-4xl md:text-5xl font-bold leading-tight dm-sans mb-3 mt-[-180px] sm:mt-[-160px] lg:mt-[-140px]">
               <span style={{ color: "#15A36E" }}>CORA AI </span>
               <span className="text-black ml-3">POWERS YOUR TRADING</span>
             </h2>
