@@ -27,14 +27,14 @@ export default function Hero() {
 
         <div className="text-center">
           {/* Main Title - Full Width with Homepage Font Styles */}
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase dm-sans">
             <span className="text-gray-900">TOKENIZE REAL-WORLD</span>
             <br />
             <span className="text-emerald-600">ASSETS</span>
           </h1>
 
           {/* Description with Homepage Style */}
-          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto dm-sans">
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 

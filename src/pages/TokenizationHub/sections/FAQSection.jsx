@@ -8,7 +8,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         onClick={onToggle}
         className="w-full text-left py-4 px-0 flex justify-between items-center hover:text-green-400 transition-colors duration-200"
       >
-        <h3 className="text-lg font-semibold text-white pr-4">{question}</h3>
+        <h3 className="text-lg font-semibold text-white pr-4 dm-sans">{question}</h3>
         <div className="flex-shrink-0 transition-transform duration-300">
           <span className="w-5 h-5 inline-block text-green-400">{isOpen ? '▾' : '▸'}</span>
         </div>
@@ -19,7 +19,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         }`}
       >
         <div className="pb-4">
-          <p className="text-white/80 leading-relaxed">{answer}</p>
+          <p className="text-white/80 leading-relaxed dm-sans">{answer}</p>
         </div>
       </div>
     </div>
@@ -90,13 +90,13 @@ export default function FAQSection() {
             {/* Right - Help CTA */}
             <div className="lg:col-span-1 flex flex-col justify-center">
               <div className="text-center lg:text-left">
-                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 dm-sans">
                  FAQs
                 </h3>
-                <p className="text-white/80 text-lg mb-6">
+                <p className="text-white/80 text-lg mb-6 dm-sans">
                   Need guidance on structure, custody or compliance?
                 </p>
-                <p className="text-white/70 text-base mb-8 leading-relaxed">
+                <p className="text-white/70 text-base mb-8 leading-relaxed dm-sans">
                   Our specialists can review your asset, recommend a chain/standard, and outline legal options for your jurisdiction.
                 </p>
                 <Link

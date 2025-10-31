@@ -55,12 +55,12 @@ export default function InvestorManagement() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight anton-regular mb-6">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900 leading-tight dm-sans mb-6">
             <span className="text-gray-900">INVESTOR</span>
             <br />
             <span className="text-emerald-600">MANAGEMENT</span>
           </h2>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto dm-sans">
             Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
           </p>
         </div>
@@ -88,8 +88,8 @@ export default function InvestorManagement() {
                 </div>
 
               {/* Content */}
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-              <p className="text-gray-700 leading-relaxed mb-6">{feature.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2 dm-sans">{feature.title}</h3>
+              <p className="text-gray-700 leading-relaxed mb-6 dm-sans">{feature.description}</p>
 
               {/* Badge + CTA Row */}
               <div className="mt-auto flex items-center gap-3 flex-nowrap">
