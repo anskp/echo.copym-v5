@@ -23,8 +23,8 @@ const MinimalTokenizationDashboard = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 py-16" style={{ backgroundColor: '#e9f6f1' }}>
-      <div className="mb-10 mt-6 text-center">
+    <div className="min-h-screen flex flex-col items-center px-4 py-15" style={{ backgroundColor: '#e9f6f1' }}>
+      <div className="mb-10  text-center">
         <h1 className="text-2xl font-semibold tracking-tight text-gray-800 dm-sans">
   Asset <span className="text-[#15a36e]">Tokenization</span>
 </h1>
@@ -33,13 +33,13 @@ const MinimalTokenizationDashboard = () => {
       </div>
 
       {/* Content with Cards and Image */}
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-8 items-start">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 items-start">
         {/* Three Horizontal Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full lg:w-2/3 mt-8 sm:mt-12 lg:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-9 w-full lg:w-2/3 mt-8 sm:mt-12 lg:mt-4">
         {/* Card 1: We can tokenize any asset */}
         <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center dm-sans">
+            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
               
               We can tokenize any asset
             </h3>
@@ -63,7 +63,7 @@ const MinimalTokenizationDashboard = () => {
         {/* Card 2: One simple token management interface */}
         <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center dm-sans">
+            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
               
               One simple token management interface
             </h3>
@@ -92,7 +92,7 @@ const MinimalTokenizationDashboard = () => {
         {/* Card 3: Investor Groups with Globe */}
         <div className={`bg-white rounded-xl shadow-lg p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-4 text-center">
-            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center justify-center dm-sans">
+            <h3 className="text-lg font-semibold text-[#15a36e] flex items-center justify-center dm-sans uppercase">
               
               Global Distribution
             </h3>
@@ -121,7 +121,7 @@ const MinimalTokenizationDashboard = () => {
           <img 
             src={BitcoinsplitImage} 
             alt="Bitcoin split"
-            className="w-full max-w-md h-auto object-contain"
+            className="w-full max-w-xs h-auto object-contain"
           />
         </div>
       </div>
