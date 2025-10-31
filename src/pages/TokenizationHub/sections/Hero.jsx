@@ -51,12 +51,12 @@ export default function Hero() {
           </div>
 
           {/* Lottie animation between buttons and next section */}
-          <div className="mt-10 sm:mt-12 lg:mt-16 flex justify-center relative z-20">
+          <div className="mt-8 sm:mt-12 lg:mt-[-120px] flex justify-center relative z-20">
             <Player
               autoplay
               loop
               src={frameAnim}
-              className="w-[400px] h-[400px] sm:w-[460px] sm:h-[460px] lg:w-[520px] lg:h-[520px] max-w-full"
+              className="w-[700px] h-[700px] sm:w-[800px] sm:h-[800px] lg:w-[900px] lg:h-[900px] max-w-full"
             />
           </div>
 
