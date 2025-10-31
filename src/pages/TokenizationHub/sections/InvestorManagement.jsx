@@ -112,7 +112,6 @@ export default function InvestorManagement() {
                     marginBottom: '16px',
                     background: '#e6f2ed',
                     borderRadius: '0px',
-                    
                     overflow: 'hidden',
                     width: '100%'
                   }}

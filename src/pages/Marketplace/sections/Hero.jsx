@@ -59,20 +59,7 @@ export default function Hero() {
           </div>
 
           {/* Additional UI Elements */}
-          <div className="mt-16 flex justify-center space-x-8 opacity-60">
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">Secure</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">Compliant</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-              <span className="text-sm text-gray-600">AI-Enhanced</span>
-            </div>
-          </div>
+         
         </div>
       </div>
     </section>

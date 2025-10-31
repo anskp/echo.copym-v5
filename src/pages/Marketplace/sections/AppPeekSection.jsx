@@ -71,51 +71,124 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
 const FeaturesGrid = () => {
   const features = [
     {
-      icon: <img src="/assets/Images/icons/a1.png" alt="Decentralized Investments" className="w-6 h-6 object-contain filter brightness-125 contrast-125" />,
       title: "Decentralized Investments",
-      description: "Invest in real-world assets like luxury real estate and art via blockchain."
+      description: "Invest in real-world assets like luxury real estate and art via blockchain.",
+      stats: "10+ Active"
     },
     {
-      icon: <img src="/assets/Images/icons/ChatGPT Image Sep 5, 2025, 07_12_18 AM.png" alt="Real-Time Portfolio Tracking" className="w-6 h-6 object-contain filter brightness-125 contrast-125" />,
       title: "Real-Time Portfolio Tracking",
-      description: "Monitor your investments with live price updates and performance analytics."
+      description: "Monitor your investments with live price updates and performance analytics.",
+      stats: "Real Time"
     },
     {
-      icon: <img src="/assets/Images/icons/aicon.png" alt="AI-Powered Recommendations" className="w-12 h-12 object-contain filter brightness-150 contrast-125" />,
       title: "AI-Powered Recommendations",
-      description: "Get personalized investment suggestions based on your goals and risk profile."
+      description: "Get personalized investment suggestions based on your goals and risk profile.",
+      stats: "100% Compliant"
     },
     {
-      icon: <img src="/assets/Images/icons/wallett.png" alt="Secure Wallet Integration" className="w-12 h-12 object-contain filter brightness-125 contrast-125" />,
       title: "Secure Wallet Integration",
-      description: "Seamlessly connect your wallet for fast, secure transactions."
+      description: "Seamlessly connect your wallet for fast, secure transactions.",
+      stats: "24/7 Support"
     }
   ];
 
   return (
-    <div className="space-y-6">
-      {features.map((feature, index) => (
-        <motion.div
-          key={index}
-          className="flex items-start space-x-4 p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20"
-          initial={{ opacity: 0, x: 20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-          viewport={{ once: true }}
-        >
-          <div className="flex-shrink-0 w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center text-white">
-            {feature.icon}
-          </div>
-          <div className="flex-1">
-            <h3 className="text-lg font-semibold text-white mb-2">
-              {feature.title}
-            </h3>
-            <p className="text-white/80 text-sm leading-relaxed">
-              {feature.description}
-            </p>
-          </div>
-        </motion.div>
-      ))}
+    <div className="flex flex-col gap-4">
+      {features.map((feature, index) => {
+        const headerHeight = '48px';
+        const svgWidth = index === 0 ? 50 : 48;
+        const svgHeightTop = 18;
+        const svgHeightBottom = 18;
+        
+        return (
+          <motion.div
+           key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  style={{ 
+                    position: 'relative',
+                    marginBottom: '16px',
+                    background: '#e6f2ed',
+                    borderRadius: '0px',
+                    overflow: 'hidden',
+                    width: '100%'
+            }}
+          >
+            {/* Green Header Bar with Heading */}
+            <div style={{ 
+              height: headerHeight, 
+              background: 'rgba(179,255,227,0.4)',
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderBottom: '2px solid #7DD1B2'
+            }}>
+              <h3 className="dm-sans" style={{ 
+                fontSize: 'clamp(14px, 2vw, 18px)', 
+                fontWeight: 600, 
+                textAlign: 'center', 
+                color: '#000', 
+                margin: '0'
+              }}>{feature.title}</h3>
+            </div>
+
+            {/* Grey Content Area */}
+            <div style={{ 
+              padding: '15px 20px', 
+              background: '#f0f5f3',
+              position: 'relative'
+            }}>
+              <p className="dm-sans" style={{ 
+                fontSize: 'clamp(12px, 1.5vw, 14px)', 
+                textAlign: 'left', 
+                color: '#000', 
+                lineHeight: '1.4',
+                margin: '0 0 20px 0'
+              }}>
+                {feature.description}
+              </p>
+
+              
+              
+            </div>
+
+            {/* Straight Corner Lines - Top Right */}
+            <svg width={svgWidth} height={svgHeightTop} viewBox={`0 0 ${svgWidth} ${svgHeightTop}`} fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
+              <line x1="0" y1="2" x2={index === 0 ? "48" : "46"} y2="2" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1={index === 0 ? "48" : "46"} y1="2" x2={index === 0 ? "48" : "46"} y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* Straight Corner Lines - Top Left */}
+            <svg width={32} height={svgHeightTop} viewBox={`0 0 32 ${svgHeightTop}`} fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
+              <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="2" y1="2" x2="2" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* Straight Corner Lines - Bottom Right */}
+            <svg width={svgWidth} height={svgHeightBottom} viewBox={`0 0 ${svgWidth} ${svgHeightBottom}`} fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
+              <line x1="0" y1="16" x2={index === 0 ? "48" : "46"} y2="16" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1={index === 0 ? "48" : "46"} y1="16" x2={index === 0 ? "48" : "46"} y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* Straight Corner Lines - Bottom Left */}
+            <svg width={32} height={svgHeightBottom} viewBox={`0 0 32 ${svgHeightBottom}`} fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
+              <line x1="32" y1="16" x2="2" y2="16" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="2" y1="16" x2="2" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+          </motion.div>
+        );
+      })}
     </div>
   );
 };
@@ -184,14 +257,14 @@ export default function AppPeekSection() {
   return (
     <section className="relative">
       {/* Main Content with Curved Background - HomePage Style */}
-      <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-8 sm:pt-12 lg:pt-16 pb-0 overflow-hidden">
+      
         
         {/* Content Container */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <motion.h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 anton-regular"
+              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 dm-sans"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -307,10 +380,10 @@ export default function AppPeekSection() {
                 className="mb-8"
               >
                 <h2 className="text-3xl  md:text-4xl font-bold mb-4 anton-regular">
-  <span className="text-white">Powerful </span>
+  <span className="text-[#15a36e]">Powerful </span>
   <span className="text-black">Features</span>
 </h2>
-                <p className="text-white/80 text-lg">
+                <p className="text-gray-700 text-lg">
                   Everything you need for modern investment management
                 </p>
               </motion.div>
@@ -319,7 +392,7 @@ export default function AppPeekSection() {
             </div>
           </div>
         </div>
-      </div>
+      
     </section>
   );
 }
