@@ -166,7 +166,7 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
       
       {/* Removed Blue Header - Cleaner Design */}
       <div className="relative z-20 p-6 space-y-4 text-white">
-        <h3 className="text-2xl font-bold leading-tight">{card.title}</h3>
+        <h3 className="text-2xl font-bold leading-tight dm-sans">{card.title}</h3>
         <div className="flex flex-col gap-2 text-base font-semibold border-t border-b border-white/20 py-3">
           <p className="flex items-center gap-2"><span className="text-green-400">📍</span>{card.location}</p>
           <p className="flex items-center gap-2"><GiChart size={20} className="text-green-400" />{card.expectedRoi} ROI</p>
@@ -204,19 +204,19 @@ const MarketplaceGlimpse = () => {
              {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
        <section className="relative">
                    {/* Main Content with Curved Background - HomePage Style */}
-          <div className="relative z-10 bg-transparent pt-8 sm:pt-12 lg:pt-16 pb-0 overflow-hidden">
+          <div className="relative z-10 bg-transparent pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
             
             {/* Content Container */}
             <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           {/* Enhanced Section Header */}
           <motion.div 
-            className="text-center mb-16"
+            className="text-center mb-8"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 uppercase dm-sans">
               <span className="text-gray-900">EXPLORE OUR </span>
               <span className="text-gray-900">CURATED ASSETS</span>
             </h2>
@@ -231,79 +231,21 @@ const MarketplaceGlimpse = () => {
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
              viewport={{ once: true }}
-             className="relative flex justify-center items-center"
+             className="relative flex justify-center items-center w-full"
            >
-             <div className="w-full max-w-6xl mx-auto flex items-center justify-center p-6">
+             <div className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
                <Player
                  autoplay
                  loop
                  src={group487}
-                 className="w-full h-full max-w-full max-h-full object-contain"
+                 className="w-full h-full object-contain"
+                 style={{ width: '100%', height: '100%' }}
                />
              </div>
           </motion.div>
         </div>
         </div>
       </section>
-
-             {/* PART 3: The Final CTA - A Grand Finale */}
-       <section className="relative py-16 overflow-hidden mt-16">
-         {/* Background Pattern - Same as WhyInvestWithUs */}
-         <div className="absolute inset-0 opacity-10">
-           <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
-         </div>
-
-         {/* Fluid Blob Background - Same as WhyInvestWithUs */}
-         <div className="absolute inset-0 overflow-hidden">
-           <motion.div
-             className="absolute -top-40 -right-40 w-80 h-80 bg-green-400/20 rounded-full blur-3xl"
-             animate={{
-               x: [0, 30, 0],
-               y: [0, -30, 0],
-               scale: [1, 1.1, 1],
-             }}
-             transition={{
-               duration: 20,
-               repeat: Infinity,
-               ease: "easeInOut",
-             }}
-           />
-           <motion.div
-             className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
-             animate={{
-               x: [0, -40, 0],
-               y: [0, 40, 0],
-               scale: [1, 1.2, 1],
-             }}
-             transition={{
-               duration: 25,
-               repeat: Infinity,
-               ease: "easeInOut",
-               delay: 2,
-             }}
-           />
-           <motion.div
-             className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400/15 rounded-full blur-3xl"
-             animate={{
-               x: [0, 20, 0],
-               y: [0, -20, 0],
-               scale: [1, 1.15, 1],
-             }}
-             transition={{
-               duration: 18,
-               repeat: Infinity,
-               ease: "easeInOut",
-               delay: 1,
-             }}
-           />
-         </div>
-         
-        
-         
-            
-          
-         
-       </section>
 
     </div>
   );

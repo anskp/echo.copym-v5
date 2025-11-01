@@ -19,12 +19,12 @@ export default function Marketplace() {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="w-full max-w-4xl px-4 sm:px-6 lg:px-8"
+          className="w-full max-w-full lg:max-w-[90vw] px-4 sm:px-6 lg:px-8"
         >
           <img 
             src={MarketplaceSVG} 
             alt="Marketplace" 
-            className="w-full h-auto"
+            className="w-full h-auto max-h-[80vh] object-contain"
           />
         </motion.div>
       </div>
@@ -39,7 +39,7 @@ export default function Marketplace() {
       {/* Mini CTA Section */}
       <section className="bg-white py-12 md:py-16 text-center text-gray-900">
         <div className="max-w-4xl mx-auto px-6 md:px-8">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 uppercase dm-sans">
              <span className="text-gray-900">READY TO EXPLORE </span>
              <span className="text-emerald-600">TOKENIZED ASSETS?</span>
            </h2>

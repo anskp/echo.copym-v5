@@ -3,6 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import bitcoinflyImage from '../../../components/images/bitcoinfly.png';
 
 // 3D Phone Component
 const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = "blue" }) => {
@@ -234,7 +235,7 @@ export default function AppPeekSection() {
           {/* Header */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <motion.h1 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 dm-sans"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 dm-sans"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -261,6 +262,29 @@ export default function AppPeekSection() {
             
             {/* Left Grid - Phone and Download Buttons */}
             <div className="flex justify-center items-center relative">
+              {/* Bitcoin Fly Background */}
+              <div 
+                className="absolute inset-0 flex justify-center items-center z-10"
+                style={{
+                  width: '150%',
+                  height: '150%',
+                  left: '-40%',
+                  top: '-25%',
+                  opacity: 120,
+                  pointerEvents: 'none'
+                }}
+              >
+                <img 
+                  src={bitcoinflyImage}
+                  alt="Background"
+                  className="w-full h-full object-contain"
+                  style={{
+                    filter: 'none',
+                    mixBlendMode: 'normal'
+                  }}
+                />
+              </div>
+              
               {/* Phone Image Only */}
               <div className="flex justify-center items-center relative z-20">
                 <div className="relative bg-white rounded-[2.3rem] p-0.5">
@@ -311,7 +335,7 @@ export default function AppPeekSection() {
                 viewport={{ once: true }}
                 className="mb-8"
               >
-                <h2 className="text-3xl  md:text-4xl font-bold mb-4 anton-regular">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-4 dm-sans">
   <span className="text-[#15a36e]">Powerful </span>
   <span className="text-black">Features</span>
 </h2>

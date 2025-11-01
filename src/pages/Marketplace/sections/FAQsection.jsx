@@ -61,7 +61,7 @@ export default function FAQsection() {
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Left Side - Support Info */}
           <div className="flex flex-col order-2 lg:order-1">
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-40 text-center lg:text-left px-2 dm-sans">
+            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight text-gray-900 mb-8 sm:mb-12 lg:mb-40 text-center lg:text-left px-2 dm-sans">
               Frequently asked
               <br />
               questions

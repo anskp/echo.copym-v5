@@ -62,7 +62,7 @@ export default function WhyInvestWithUs() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 uppercase dm-sans">
             <span className="text-black">WHY INVEST </span>
             <span className="text-emerald-600">WITH US?</span>
           </h2>
