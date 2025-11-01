@@ -159,8 +159,8 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-20 sm:h-24 lg:h-32 flex items-center justify-center">
-              <div className="w-full h-full flex items-center justify-center">
+            <div className="w-full h-12 sm:h-16 lg:h-20 flex items-center justify-center">
+              <div className="w-2/3 h-full flex items-center justify-center">
                 <Player
                   autoplay
                   loop
