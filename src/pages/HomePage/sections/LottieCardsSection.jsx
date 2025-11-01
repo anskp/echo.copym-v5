@@ -12,12 +12,12 @@ const LottieCardsSection = () => {
     <section className="relative w-full overflow-hidden bg-white py-4 sm:py-5 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* First Row - Two Cards with Horizontal Split (Text Left, Graphic Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 lg:gap-4 mb-3 lg:mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-2 mb-3 lg:mb-4">
           {/* Card 1 - "Own a piece of big Investment" - Chain with $ */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] p-3 lg:p-4 flex flex-row items-center gap-3 lg:gap-4 min-h-[200px] lg:min-h-[240px]">
-            {/* Text Section - Left */}
-            <div className="flex-1 flex flex-col justify-center">
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-right min-h-[100px] lg:min-h-[240px]">
+            {/* Text Section - Left Grid */}
+            <div className="flex flex-col justify-center">
+              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left leading-tight">
                 Own a piece of big Investment
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-medium text-black leading-relaxed text-left">
@@ -25,13 +25,13 @@ const LottieCardsSection = () => {
                 amounts and own a piece of high-value assets you actually care about.
               </p>
             </div>
-            {/* Lottie Animation - Right */}
-            <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center">
+            {/* Lottie Animation - Right Grid */}
+            <div className="flex items-center justify-center">
               <Player
                 autoplay
                 loop
-                src={group402}
-                className="w-full h-full"
+                src={group469}
+                className="w-50 h-50 sm:w-64 sm:h-64 lg:w-[250px] lg:h-[250px] scale-125"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ const LottieCardsSection = () => {
               <Player
                 autoplay
                 loop
-                src={group470}
+                src={frame71}
                 className="w-full h-full"
               />
             </div>
@@ -75,12 +75,12 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-24 sm:h-28 lg:h-32 flex items-center justify-center">
+            <div className="w-full h-10 sm:h-20 lg:h-24 flex items-center justify-center">
               <Player
                 autoplay
                 loop
-                src={frame71}
-                className="w-full h-full"
+                src={group402}
+                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-40 lg:h-40 scale-125"
               />
             </div>
           </div>
@@ -98,12 +98,12 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-24 sm:h-28 lg:h-32 flex items-center justify-center">
+            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center">
               <Player
                 autoplay
                 loop
-                src={group469}
-                className="w-full h-full"
+                src={group470}
+                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-40 lg:h-40 scale-125"
               />
             </div>
           </div>
@@ -121,12 +121,12 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-24 sm:h-28 lg:h-32 flex items-center justify-center">
+            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center">
               <Player
                 autoplay
                 loop
                 src={group470}
-                className="w-full h-full"
+                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-30 lg:h-30 scale-125"
               />
             </div>
           </div>
