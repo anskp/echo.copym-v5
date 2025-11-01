@@ -270,7 +270,7 @@ export default function AppPeekSection() {
                   height: '150%',
                   left: '-40%',
                   top: '-25%',
-                  opacity: 120,
+                  opacity: 0.3,
                   pointerEvents: 'none'
                 }}
               >

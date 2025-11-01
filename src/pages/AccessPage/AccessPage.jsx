@@ -20,6 +20,8 @@ import {
 } from 'react-icons/gi';
 
 import CredentialCard from '../../components/CredentialCard';
+import { Player } from '@lottiefiles/react-lottie-player';
+import group492 from '../../components/lotties/Group-492.json';
 // Removed LavaLamp background
 
 // Import blockchain logos
@@ -247,7 +249,7 @@ export default function AccessPage() {
         <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
           {/* AI-Powered Badge - Top of Content */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700">
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700 dm-sans">
               <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
               Exclusive Access Portal
             </div>
@@ -255,7 +257,7 @@ export default function AccessPage() {
 
           <div className="text-center">
             {/* Main Title - Full Width with Homepage Font Styles */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular reveal-text">
+            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans reveal-text">
               <span className="text-gray-900">YOUR GATEWAY TO </span>
               <span className="text-emerald-600">COPYM'S</span>
               <br />
@@ -263,14 +265,14 @@ export default function AccessPage() {
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text dm-sans">
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
                          {/* Glass Pill Layer - Curved div style */}
              <div
-               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-8 px-6"
+               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-8 px-6 dm-sans"
                style={{
                  WebkitBackdropFilter: 'blur(10px)',
                  backdropFilter: 'blur(10px)'
@@ -283,7 +285,7 @@ export default function AccessPage() {
             <div className="mt-16 flex justify-center space-x-8 opacity-60">
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Exclusive</span>
+                <span className="text-sm text-gray-600 dm-sans">Exclusive</span>
               </div>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
@@ -298,6 +300,30 @@ export default function AccessPage() {
         </div>
              </section>
 
+      {/* Lottie Animation Section */}
+      <section className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Lottie Animation */}
+          <motion.div
+            className="flex justify-center items-center w-full"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ once: true }}
+          >
+            <div className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] max-h-[800px] flex items-center justify-center">
+              <Player
+                autoplay
+                loop
+                src={group492}
+                className="w-full h-full object-contain"
+                style={{ width: '100%', height: '100%' }}
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
                {/* Unlock Features - Reimagined with Platform Features Style */}
        <section className="relative">
          {/* Main Content with Curved Background */}
@@ -311,12 +337,12 @@ export default function AccessPage() {
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 anton-regular">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
                  <span className="text-white">EVERYTHING YOUR</span>
                  <br />
                  <span className="text-black">PASS UNLOCKS</span>
                </h2>
-               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4">
+               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
                  Discover the exclusive benefits and features that come with your COPYM Access Pass
                </p>
              </div>
@@ -333,11 +359,11 @@ export default function AccessPage() {
                          className="w-8 h-8 object-contain filter brightness-0 invert"
                        />
                    </div>
-                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">
+                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">
                        {feature.text.split(' ').slice(0, 2).join(' ')}
                      </h3>
                  </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                 <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                      {feature.text}
                  </p>
                </div>
@@ -346,8 +372,8 @@ export default function AccessPage() {
 
                            {/* Credential Card Section */}
               <div className="text-center mt-12 sm:mt-16 lg:mt-20">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">Your Access Credential</h3>
-                <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base">
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 dm-sans">Your Access Credential</h3>
+                <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base dm-sans">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                 </p>
                 <div className="flex justify-center">
@@ -382,11 +408,11 @@ export default function AccessPage() {
            <div className="space-y-8">
              {/* Section Title */}
              <div className="text-center">
-               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase anton-regular reveal-text">
+               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase dm-sans reveal-text">
                  Why Get the COPYM Access Pass?
                </h2>
                <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mx-auto"></div>
-               <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto">
+               <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto dm-sans">
                  Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
                </p>
              </div>
@@ -412,10 +438,10 @@ export default function AccessPage() {
                     </div>
 
                     {/* Content */}
-                    <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase anton-regular">
+                    <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase dm-sans">
                       {benefit.title}
                     </h3>
-                    <p className="text-gray-700 leading-relaxed text-base">
+                    <p className="text-gray-700 leading-relaxed text-base dm-sans">
                       {benefit.description}
                     </p>
                   </div>
@@ -432,12 +458,12 @@ export default function AccessPage() {
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 anton-regular">
+               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
                  <span className="text-white">PLATFORM</span>
                  <br />
                  <span className="text-black">FEATURES</span>
                </h2>
-               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4">
+               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>
@@ -450,9 +476,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/t6.png" alt="Compliance-first" className="w-6 h-6 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Compliance-first</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Compliance-first</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
                   </p>
                 </div>
@@ -463,9 +489,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/agraph.png" alt="Utility & Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Utility & Access</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Utility & Access</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     Early allocations, fee discounts, governance & staking perks for token holders.
                   </p>
                 </div>
@@ -476,9 +502,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/m1.png" alt="Multi-asset Support" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Multi-asset Support</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Multi-asset Support</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     Equity, debt, real estate, commodities, carbon & more asset classes supported.
                   </p>
                 </div>
@@ -489,9 +515,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/adetails.png" alt="Institutional Rails" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Institutional Rails</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Institutional Rails</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     Custody, settlement, and data rooms integrated for institutional investors.
                   </p>
                 </div>
@@ -502,9 +528,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/a5.png" alt="Security & Trust" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Security & Trust</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Security & Trust</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     Enterprise-grade security with multi-layer protection and audit trails.
                   </p>
                 </div>
@@ -515,9 +541,9 @@ export default function AccessPage() {
                     <div className="flex items-center justify-center mb-3 sm:mb-4">
                       <img src="/assets/Images/icons/t3.png" alt="Global Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2">Global Access</h3>
+                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Global Access</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base">
+                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
                     24/7 global access to tokenized assets with real-time market data.
                   </p>
                 </div>
@@ -533,7 +559,7 @@ export default function AccessPage() {
       <div ref={networksRef} className="mb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase anton-regular reveal-text">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase dm-sans reveal-text">
               Supported Networks
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
@@ -573,18 +599,18 @@ export default function AccessPage() {
       </div>
 
       {/* Final CTA */}
-      <div ref={ctaRef} className="text-center my-16 sm:my-24 lg:my-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+ <div ref={ctaRef} className="text-center my-16 sm:my-24 lg:my-32 bg-white pb-16 sm:pb-24 lg:pb-32">        
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 sm:p-16 lg:p-20 text-white">
             <GiCrown className="w-16 h-16 mx-auto mb-6 text-white/80" />
-            <h3 className="text-3xl font-black mb-4 uppercase anton-regular">
+            <h3 className="text-3xl font-black mb-4 uppercase dm-sans">
               Ready to Join the Elite?
             </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto dm-sans">
               Don't miss out on exclusive access to the future of real-world
               asset tokenization.
             </p>
-            <button className="bg-blue-100 text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto transform hover:scale-105">
+            <button className="bg-blue-100 text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto transform hover:scale-105 dm-sans">
                               
                 Get Your Access Pass Now
                 
