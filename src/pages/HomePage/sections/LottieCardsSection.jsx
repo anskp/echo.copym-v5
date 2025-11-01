@@ -1,5 +1,8 @@
 import React from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
+import { motion } from 'framer-motion';
+import Gvariant1 from '../../../components/SVG/gvariant1.svg';
+import Gvariant2 from '../../../components/SVG/gvariant2.svg';
 
 // Import Lottie JSON files from components/lotties
 import group470 from '../../../components/lotties/Group-470.json';      // Hexagon
@@ -38,20 +41,19 @@ const LottieCardsSection = () => {
             </div>
           </div>
 
-          {/* Card 2 - "Own a piece of big Investment" - Hexagon */}
+          {/* Card 2 - "Smart Portfolio Diversification" - Candlesticks */}
           <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col md:flex-row items-center gap-3 lg:gap-4 min-h-[120px] lg:min-h-[150px] overflow-hidden">
             {/* Text Section - Left */}
             <div className="flex-1 flex flex-col justify-center overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
-                Own a piece of big Investment
+                Smart Portfolio Diversification
               </h3>
               <p className="text-xs sm:text-sm lg:text-base font-medium text-black leading-relaxed text-left">
-                Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small
-                amounts and own a piece of high-value assets you actually care about.
+                Build a balanced portfolio with real-world assets, crypto, and traditional investments. Our AI helps you spread risk and maximize returns across multiple asset classes.
               </p>
             </div>
             {/* Lottie Animation - Right */}
-            <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center overflow-hidden">
+            <div className="flex-shrink-0 w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 flex items-center justify-center overflow-hidden">
               <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
                 <Player
                   autoplay
@@ -67,20 +69,20 @@ const LottieCardsSection = () => {
         {/* Second Row - Three Cards with Vertical Split (Text Top, Graphic Bottom) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
           {/* Card 3 - "Trade anytime, anywhere" - Candlesticks */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[200px] lg:min-h-[220px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
+            <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">
                 Trade anytime, anywhere
               </h3>
-              <p className="text-xs sm:text-sm lg:text-base font-medium text-black leading-relaxed text-left">
+              <p className="text-xs sm:text-xs lg:text-sm font-medium text-black leading-snug text-left">
                 Want out ? Sell instantly. Want in ? Buy in seconds. With your built-in wallet, you can manage
                 and trade smoothly—just like sending money to a friend.
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-10 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+            <div className="w-full h-6 sm:h-8 lg:h-10 flex items-center justify-center">
+              <div className="w-1/2 h-full flex items-center justify-center">
                 <Player
                   autoplay
                   loop
@@ -91,46 +93,74 @@ const LottieCardsSection = () => {
             </div>
           </div>
 
-          {/* Card 4 - "Earn without a hassle" - Rising graph */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
+          {/* Card 4 - "Earn without a hassle" - Animated Growing Graph */}
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[200px] lg:min-h-[220px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
+            <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">
                 Earn without a hassle
               </h3>
-              <p className="text-xs sm:text-sm lg:text-base font-medium text-black leading-relaxed text-left">
+              <p className="text-xs sm:text-xs lg:text-sm font-medium text-black leading-snug text-left">
                 Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing
                 in steady returns—without the stress of paperwork or management.
               </p>
             </div>
-            {/* Lottie Animation - Bottom */}
-            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
-                <Player
-                  autoplay
-                  loop
-                  src={group470}
-                  className="w-full h-full object-contain"
-                />
+            {/* Merged Animated SVG Graphs - Growing from bottom-left to top-right */}
+            <div className="w-full h-8 sm:h-12 lg:h-16 flex items-center justify-center  relative">
+              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center relative">
+                {/* Merged Graph Container - Both SVGs layered together */}
+                <motion.div
+                  className="absolute w-full h-full flex items-center justify-center"
+                  style={{
+                    transformOrigin: 'left bottom',
+                  }}
+                  animate={{
+                    clipPath: [
+                      'polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%)',
+                      'polygon(0% 100%, 0% 70%, 40% 20%, 100% 0%, 100% 100%)',
+                      'polygon(0% 100%, 0% 0%, 100% 0%, 100% 0%, 100% 100%)',
+                      'polygon(0% 100%, 0% 100%, 0% 100%, 0% 100%)',
+                    ],
+                    scale: [0.65, 0.95, 1, 0.65],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                >
+                  {/* First SVG - Base layer */}
+                  <img
+                    src={Gvariant1}
+                    alt="Growing Graph"
+                    className="absolute w-full h-full object-contain"
+                  />
+                  {/* Second SVG - Overlay layer merged */}
+                  <img
+                    src={Gvariant2}
+                    alt="Growing Graph"
+                    className="absolute w-full h-full object-contain opacity-95"
+                  />
+                </motion.div>
               </div>
             </div>
           </div>
 
           {/* Card 5 - "Explore a world of assets" - Hexagon/Globe */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[200px] lg:min-h-[220px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
-              <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
+            <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
+              <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">
                 Explore a world of assets
               </h3>
-              <p className="text-xs sm:text-sm lg:text-base font-medium text-black leading-relaxed text-left">
+              <p className="text-xs sm:text-xs lg:text-sm font-medium text-black leading-snug text-left">
                 From property and gold to private equity and art—our AI picks out smart opportunities so you
                 don't have to dig through endless research.
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
-              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+            <div className="w-full h-20 sm:h-24 lg:h-32 flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center">
                 <Player
                   autoplay
                   loop

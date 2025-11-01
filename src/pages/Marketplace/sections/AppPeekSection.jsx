@@ -260,69 +260,75 @@ export default function AppPeekSection() {
           {/* Two Grid Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
             
-            {/* Left Grid - Phone and Download Buttons */}
-            <div className="flex justify-center items-center relative">
-              {/* Bitcoin Fly Background */}
-              <div 
-                className="absolute inset-0 flex justify-center items-center z-10"
-                style={{
-                  width: '150%',
-                  height: '150%',
-                  left: '-40%',
-                  top: '-25%',
-                  opacity: 0.3,
-                  pointerEvents: 'none'
-                }}
-              >
-                <img 
-                  src={bitcoinflyImage}
-                  alt="Background"
-                  className="w-full h-full object-contain"
+            {/* Left Grid - Phone Mockup */}
+            <div className="flex flex-col items-center">
+              <div className="flex justify-center items-center relative mb-6">
+                {/* Bitcoin Fly Background */}
+                <div 
+                  className="absolute inset-0 flex justify-center items-center z-10"
                   style={{
-                    filter: 'none',
-                    mixBlendMode: 'normal'
+                    width: '150%',
+                    height: '150%',
+                    left: '-40%',
+                    top: '-25%',
+                    opacity: 0.3,
+                    pointerEvents: 'none'
                   }}
-                />
-              </div>
-              
-              {/* Phone Image Only */}
-              <div className="flex justify-center items-center relative z-20">
-                <div className="relative bg-white rounded-[2.3rem] p-0.5">
+                >
                   <img 
-                    src="/assets/Images/mobile-ads.png" 
-                    alt="App Interface"
-                    className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
+                    src={bitcoinflyImage}
+                    alt="Background"
+                    className="w-full h-full object-contain"
                     style={{
                       filter: 'none',
-                      opacity: 1,
-                      mixBlendMode: 'normal',
-                      backgroundColor: 'transparent'
+                      mixBlendMode: 'normal'
                     }}
                   />
+                </div>
+                
+                {/* Phone Image Only */}
+                <div className="flex justify-center items-center relative z-20">
+                  <div className="relative bg-white rounded-[2.3rem] p-0.5">
+                    <img 
+                      src="/assets/Images/mobile-ads.png" 
+                      alt="App Interface"
+                      className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
+                      style={{
+                        filter: 'none',
+                        opacity: 1,
+                        mixBlendMode: 'normal',
+                        backgroundColor: 'transparent'
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            
-              {/* Download Buttons */}
-              <div className="flex flex-col items-start space-y-6 ml-6">
-              {/* Google Play Store Button */}
-              <StoreDownloadButton 
-                store="Google Play"
-                rating={4}
-                downloads="1M+ downloads"
-                bgColor="bg-black"
-                textColor="text-white"
-                position="left"
-              />
               
-              {/* Apple App Store Button */}
-              <StoreDownloadButton 
-                store="App Store"
-                rating={5}
-                downloads="500K+ downloads"
-                bgColor="bg-black"
-                textColor="text-white"
-                position="left"
-              />
+              {/* Download Buttons - Below Mockup, Left and Right */}
+              <div className="flex flex-row items-center justify-center gap-4 w-full">
+                {/* Google Play Store Button - Left */}
+                <div className="flex-shrink-0">
+                  <StoreDownloadButton 
+                    store="Google Play"
+                    rating={4}
+                    downloads="1M+ downloads"
+                    bgColor="bg-black"
+                    textColor="text-white"
+                    position="left"
+                  />
+                </div>
+                
+                {/* Apple App Store Button - Right */}
+                <div className="flex-shrink-0">
+                  <StoreDownloadButton 
+                    store="App Store"
+                    rating={5}
+                    downloads="500K+ downloads"
+                    bgColor="bg-black"
+                    textColor="text-white"
+                    position="left"
+                  />
+                </div>
               </div>
             </div>
             
