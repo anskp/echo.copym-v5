@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import { 
   GiRoundStar, 
   GiChart, 
@@ -8,8 +8,12 @@ import {
   GiPerson 
 } from "react-icons/gi";
 import { Link } from "react-router-dom";
+import { Player } from '@lottiefiles/react-lottie-player';
 
 import ChromaGrid from "../../../components/ChromaGrid";
+
+// Import Lottie JSON file
+import group487 from '../../../components/lotties/Group-487.json';
 
 // Custom CSS for hiding scrollbars
 const scrollbarHideStyles = `
@@ -193,37 +197,6 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
 // --- ENHANCED MARKETPLACE GLIMPSE COMPONENT ---
 // ====================================================================
 const MarketplaceGlimpse = () => {
-  const [selectedCard, setSelectedCard] = useState(null);
-  const [kenBurnsOffset, setKenBurnsOffset] = useState(0);
-  const [selectedCategory, setSelectedCategory] = useState("all");
-
-  // Ken Burns effect for the header background
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setKenBurnsOffset(prev => (prev + 0.001) % 1);
-    }, 50);
-    return () => clearInterval(interval);
-  }, []);
-
-  // Filter assets based on selected category
-  const filteredAssets = selectedCategory === "all" 
-    ? allCardData 
-    : allCardData.filter(asset => asset.category.toLowerCase() === selectedCategory.toLowerCase());
-
-  // Category filter options
-  const categories = [
-    { id: "all", label: "All Assets", count: allCardData.length },
-    { id: "real-estate", label: "Real Estate", count: allCardData.filter(a => a.category === "Real Estate").length },
-    { id: "art", label: "Art", count: allCardData.filter(a => a.category === "Art").length },
-    { id: "commodities", label: "Commodities", count: allCardData.filter(a => a.category === "Commodities").length },
-    { id: "infrastructure", label: "Infrastructure", count: allCardData.filter(a => a.category === "Infrastructure").length },
-    { id: "startup", label: "Startup", count: allCardData.filter(a => a.category === "Startup").length }
-  ];
-
-  const handleAssetClick = (asset) => {
-    console.log('Asset clicked:', asset.title);
-    // Handle asset click - could open modal, navigate, etc.
-  };
 
   return (
     <div className="w-full">
@@ -231,7 +204,7 @@ const MarketplaceGlimpse = () => {
              {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
        <section className="relative">
                    {/* Main Content with Curved Background - HomePage Style */}
-          <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-8 sm:pt-12 lg:pt-16 pb-0 overflow-hidden">
+          <div className="relative z-10 bg-transparent pt-8 sm:pt-12 lg:pt-16 pb-0 overflow-hidden">
             
             {/* Content Container */}
             <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
@@ -244,139 +217,30 @@ const MarketplaceGlimpse = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
-              <span className="text-white">EXPLORE OUR </span>
-              <span className="text-black">CURATED ASSETS</span>
+              <span className="text-gray-900">EXPLORE OUR </span>
+              <span className="text-gray-900">CURATED ASSETS</span>
             </h2>
-            <p className="text-xl text-black/80 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
               Discover a diverse portfolio of tokenized real-world assets, each carefully selected for their potential returns and market stability.
             </p>
           </motion.div>
 
-          {/* Smart Tabs - Enhanced Filter UI */}
-          <motion.div 
-            className="flex flex-wrap justify-center gap-3 mb-16"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            {categories.map((category) => (
-              <button
-                key={category.id}
-                onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-semibold text-sm transition-all duration-300 border ${
-                  selectedCategory === category.id
-                    ? 'bg-[#255f99] text-white shadow-lg border-[#255f99]'
-                    : 'bg-white/20 text-white hover:bg-white/30 border-white/30 hover:border-white/50 backdrop-blur-sm'
-                }`}
-              >
-                {category.label}
-                <span className="ml-2 text-xs opacity-70">({category.count})</span>
-              </button>
-            ))}
-          </motion.div>
-
-                     {/* Horizontally Scrollable Asset Cards */}
+          {/* Single Lottie Animation */}
            <motion.div
              initial={{ opacity: 0, y: 30 }}
              whileInView={{ opacity: 1, y: 0 }}
              transition={{ duration: 0.8 }}
              viewport={{ once: true }}
-             className="relative"
+             className="relative flex justify-center items-center"
            >
-             <div className="flex gap-6 overflow-x-auto pb-8 scrollbar-hide">
-               {filteredAssets.map((asset, index) => (
-                 <motion.div
-                   key={asset.id}
-                   className="flex-shrink-0 w-[320px] h-[420px] rounded-2xl overflow-hidden shadow-2xl bg-white group cursor-pointer relative"
-                   initial={{ opacity: 0, x: 50 }}
-                   whileInView={{ opacity: 1, x: 0 }}
-                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                   viewport={{ once: true }}
-                   whileHover={{ scale: 1.02, y: -5 }}
-                   onClick={() => handleAssetClick(asset)}
-                 >
-                   {/* Image Section (Top 60%) */}
-                   <div className="relative h-[60%] overflow-hidden">
-                     <img 
-                       src={asset.image} 
-                       alt={asset.title}
-                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                     />
-                     
-                     {/* Category Badge - Top Left */}
-                     <div className="absolute top-3 left-3">
-                       <span className="px-2 py-1 bg-green-600 text-white text-xs font-semibold rounded-full">
-                         {asset.category}
-                       </span>
-                     </div>
-                     
-                     {/* Action Icons - Top Right */}
-                     <div className="absolute top-3 right-3 flex gap-2">
-                       <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                         </svg>
-                       </div>
-                       <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center border border-white/30">
-                         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                         </svg>
-                       </div>
-                     </div>
-
-                     {/* Image Carousel Indicators - Bottom Center */}
-                     <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex gap-1">
-                       <div className="w-2 h-2 bg-white rounded-full"></div>
-                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                       <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-                     </div>
-                   </div>
-
-                   {/* Details Section (Bottom 40%) - Dark Green Background */}
-                   <div className="h-[40%] bg-green-800 p-4 flex flex-col justify-between">
-                     {/* Title and Location */}
-                     <div>
-                       <h3 className="text-lg font-bold text-white mb-1 line-clamp-1">
-                         {asset.title}
-                       </h3>
-                       <p className="text-sm text-white/80 mb-2">
-                         {asset.location}
-                       </p>
-                     </div>
-
-                     {/* Price and Rating Row */}
-                     <div className="flex items-center justify-between">
-                       {/* Price */}
-                       <div className="text-right">
-                         <p className="text-lg font-bold text-white">
-                           ${asset.price.toLocaleString()} USDC
-                         </p>
-                       </div>
-                       
-                       {/* Rating */}
-                       <div className="flex items-center gap-1">
-                         <div className="flex">
-                           {[...Array(5)].map((_, i) => (
-                             <svg key={i} className={`w-4 h-4 ${i < 4 ? 'text-yellow-400 fill-current' : 'text-white/30'}`} viewBox="0 0 20 20">
-                               <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                             </svg>
-                           ))}
-                         </div>
-                         <span className="text-sm text-white ml-1">4.5 (108)</span>
-                       </div>
-                     </div>
-                   </div>
-                 </motion.div>
-               ))}
+             <div className="w-full max-w-6xl mx-auto flex items-center justify-center p-6">
+               <Player
+                 autoplay
+                 loop
+                 src={group487}
+                 className="w-full h-full max-w-full max-h-full object-contain"
+               />
              </div>
-
-            {/* Scroll Indicators */}
-            <div className="flex justify-center mt-8 space-x-2">
-              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-              <div className="w-2 h-2 bg-white/50 rounded-full"></div>
-            </div>
           </motion.div>
         </div>
         </div>
@@ -434,59 +298,13 @@ const MarketplaceGlimpse = () => {
            />
          </div>
          
-         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-           <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.6 }}
-             viewport={{ once: true }}
-           >
-             <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight leading-tight mb-6 uppercase anton-regular">
-               <span className="text-gray-900">READY TO BUILD YOUR </span>
-               <span className="text-emerald-600">FUTURE PORTFOLIO?</span>
-             </h2>
-             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-               Join thousands of investors accessing exclusive real-world assets. The full marketplace awaits.
-             </p>
-             <Link 
-               to="/marketplace"
-               className="inline-flex items-center gap-3 text-lg px-8 py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-full shadow-2xl hover:shadow-emerald-500/25 transition-all duration-300 transform hover:scale-105"
-             >
-               Explore the Full Marketplace
-               <span>→</span>
-             </Link>
-           </motion.div>
-         </div>
+        
+         
+            
+          
+         
        </section>
 
-      {/* THE TAKEOVER POPUP MODAL (Enhanced) */}
-      <AnimatePresence>
-        {selectedCard && (
-          <motion.div
-            className="fixed inset-0 z-50 flex items-center justify-center p-4 backdrop-blur-sm"
-            initial={{ backgroundColor: 'rgba(0,0,0,0)' }}
-            animate={{ backgroundColor: 'rgba(0,0,0,0.8)' }}
-            exit={{ backgroundColor: 'rgba(0,0,0,0)' }}
-            onClick={() => setSelectedCard(null)}
-          >
-            <div className="w-full max-w-xl h-[90vh] max-h-[600px]" onClick={(e) => e.stopPropagation()}>
-              <AssetCard card={selectedCard} layoutId={`card-${selectedCard.id}`} isPopup={true} />
-            </div>
-            <motion.button 
-              className="absolute top-4 right-4 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center text-white border border-white/20" 
-              onClick={() => setSelectedCard(null)} 
-              initial={{ scale: 0, rotate: -90 }} 
-              animate={{ scale: 1, rotate: 0 }} 
-              exit={{ scale: 0, rotate: -90 }}
-              whileHover={{ scale: 1.1 }}
-            >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </motion.button>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 };

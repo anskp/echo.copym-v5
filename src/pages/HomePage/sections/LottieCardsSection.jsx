@@ -12,11 +12,11 @@ const LottieCardsSection = () => {
     <section className="relative w-full overflow-hidden bg-white py-4 sm:py-5 lg:py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* First Row - Two Cards with Horizontal Split (Text Left, Graphic Right) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-2 mb-3 lg:mb-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 mb-3 lg:mb-4">
           {/* Card 1 - "Own a piece of big Investment" - Chain with $ */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-right min-h-[100px] lg:min-h-[240px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-center min-h-[120px] lg:min-h-[150px] overflow-hidden">
             {/* Text Section - Left Grid */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left leading-tight">
                 Own a piece of big Investment
               </h3>
@@ -26,20 +26,22 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Right Grid */}
-            <div className="flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={group469}
-                className="w-50 h-50 sm:w-64 sm:h-64 lg:w-[250px] lg:h-[250px] scale-125"
-              />
+            <div className="flex items-center justify-center overflow-hidden max-w-full max-h-full">
+              <div className="w-full h-full max-w-[200px] max-h-[200px] sm:max-w-[240px] sm:max-h-[240px] lg:max-w-[250px] lg:max-h-[250px] flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group469}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
 
           {/* Card 2 - "Own a piece of big Investment" - Hexagon */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4  flex flex-col-reverse md:flex-row items-center gap-3 lg:gap-4 min-h-[200px] lg:min-h-[240px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col md:flex-row items-center gap-3 lg:gap-4 min-h-[120px] lg:min-h-[150px] overflow-hidden">
             {/* Text Section - Left */}
-            <div className="flex-1 flex flex-col justify-center">
+            <div className="flex-1 flex flex-col justify-center overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
                 Own a piece of big Investment
               </h3>
@@ -49,13 +51,15 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Right */}
-            <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={frame71}
-                className="w-15 h-15 sm:w-25 sm:h-25 lg:w-40 lg:h-40 scale-150"
-              />
+            <div className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={frame71}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -63,9 +67,9 @@ const LottieCardsSection = () => {
         {/* Second Row - Three Cards with Vertical Split (Text Top, Graphic Bottom) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
           {/* Card 3 - "Trade anytime, anywhere" - Candlesticks */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[320px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4">
+            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
                 Trade anytime, anywhere
               </h3>
@@ -75,20 +79,22 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-10 sm:h-20 lg:h-24 flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={group402}
-                className="w-15 h-15 sm:w-25 sm:h-25 lg:w-40 lg:h-40 scale-150"
-              />
+            <div className="w-full h-10 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group402}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
 
           {/* Card 4 - "Earn without a hassle" - Rising graph */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[280px] lg:min-h-[320px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4">
+            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
                 Earn without a hassle
               </h3>
@@ -98,20 +104,22 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={group470}
-                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-40 lg:h-40 scale-125"
-              />
+            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group470}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
 
           {/* Card 5 - "Explore a world of assets" - Hexagon/Globe */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[280px] lg:min-h-[320px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
-            <div className="flex-1 flex flex-col mb-3 lg:mb-4">
+            <div className="flex-1 flex flex-col mb-3 lg:mb-4 overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
                 Explore a world of assets
               </h3>
@@ -121,13 +129,15 @@ const LottieCardsSection = () => {
               </p>
             </div>
             {/* Lottie Animation - Bottom */}
-            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={group470}
-                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-30 lg:h-30 scale-125"
-              />
+            <div className="w-full h-16 sm:h-20 lg:h-24 flex items-center justify-center overflow-hidden">
+              <div className="w-full h-full max-w-full max-h-full flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group470}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
