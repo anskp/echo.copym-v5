@@ -14,7 +14,7 @@ const LottieCardsSection = () => {
         {/* First Row - Two Cards with Horizontal Split (Text Left, Graphic Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-2 mb-3 lg:mb-4">
           {/* Card 1 - "Own a piece of big Investment" - Chain with $ */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-right min-h-[100px] lg:min-h-[240px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-right min-h-[100px] lg:min-h-[240px]">
             {/* Text Section - Left Grid */}
             <div className="flex flex-col justify-center">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left leading-tight">
@@ -37,7 +37,7 @@ const LottieCardsSection = () => {
           </div>
 
           {/* Card 2 - "Own a piece of big Investment" - Hexagon */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] p-3 lg:p-4 flex flex-row items-center gap-3 lg:gap-4 min-h-[200px] lg:min-h-[240px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4  flex flex-col-reverse md:flex-row items-center gap-3 lg:gap-4 min-h-[200px] lg:min-h-[240px]">
             {/* Text Section - Left */}
             <div className="flex-1 flex flex-col justify-center">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
@@ -54,7 +54,7 @@ const LottieCardsSection = () => {
                 autoplay
                 loop
                 src={frame71}
-                className="w-full h-full"
+                className="w-15 h-15 sm:w-25 sm:h-25 lg:w-40 lg:h-40 scale-150"
               />
             </div>
           </div>
@@ -63,7 +63,7 @@ const LottieCardsSection = () => {
         {/* Second Row - Three Cards with Vertical Split (Text Top, Graphic Bottom) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
           {/* Card 3 - "Trade anytime, anywhere" - Candlesticks */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[280px] lg:min-h-[320px]">
+          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col min-h-[200px] lg:min-h-[320px]">
             {/* Text Section - Top */}
             <div className="flex-1 flex flex-col mb-3 lg:mb-4">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
@@ -80,7 +80,7 @@ const LottieCardsSection = () => {
                 autoplay
                 loop
                 src={group402}
-                className="w-15 h-15 sm:w-20 sm:h-20 lg:w-40 lg:h-40 scale-125"
+                className="w-15 h-15 sm:w-25 sm:h-25 lg:w-40 lg:h-40 scale-150"
               />
             </div>
           </div>
