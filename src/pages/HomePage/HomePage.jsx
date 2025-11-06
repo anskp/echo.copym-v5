@@ -5,6 +5,7 @@ import RWAAssetsSection from "./sections/RWAAssetsSection";
 import FAQSection from "./sections/FAQSection";
 import SupportedAssets from "./sections/SupportedAssets";
 import LottieCardsSection from "./sections/LottieCardsSection";
+import HomeCycleSection from "./sections/HomeCycleSection";
 
 export default function HomePage() {
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <RWAAssetsSection />
       <FAQSection />
       {/* <SupportedAssets /> */}
+      <HomeCycleSection />
     </div>
   );
 }
