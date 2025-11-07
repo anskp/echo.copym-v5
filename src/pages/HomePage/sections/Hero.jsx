@@ -24,10 +24,10 @@ export default function Hero() {
 
       {/* ====== HERO CONTENT - RIGHT BOTTOM ====== */}
       <div className="relative z-10 w-full min-h-screen flex items-end justify-end px-3 sm:px-10 lg:px-20 pb-10 sm:pb-16 lg:pb-24">
-        <div className="max-w-xl text-right">
+        <div className="max-w-xl  px-16 py-5 ">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-1xl sm:text-2xl md:text-3xl lg:text-[40px] font-bold leading-snug sm:leading-tight text-white mb-4"
+            className="text-1xl sm:text-2xl md:text-3xl lg:text-[40px]  font-bold leading-snug sm:leading-tight text-white mb-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             UNLOCK EXCLUSIVE{' '}

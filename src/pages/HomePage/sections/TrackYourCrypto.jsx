@@ -5,7 +5,7 @@ import WatchSVG from '../../../components/SVG/watch.svg';
 export default function TrackYourCrypto() {
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-black ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
@@ -38,10 +38,10 @@ export default function TrackYourCrypto() {
 
           {/* Title */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
             </p>
           </div>
@@ -50,7 +50,7 @@ export default function TrackYourCrypto() {
           <div className="flex items-center justify-center gap-4">
             {/* Download Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-3 px-4 sm:px-6 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-52 h-14 border border-gray-300">
+              <button className="bg-white hover:bg-gray-800 text-white flex items-center justify-center space-x-3 px-4 sm:px-6 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-52 h-14 border border-gray-300">
                 <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-6 h-6 brightness-0 invert" />
                 <div className="text-left">
                   <div className="text-sm text-white font-medium">Download on the</div>
@@ -101,10 +101,10 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left order-1 lg:order-2">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
               </h2>
-              <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed px-4 lg:px-0" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed px-4 lg:px-0" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
               </p>
             </div>
