@@ -1,6 +1,7 @@
 import React from 'react';
 import { QrCodeIcon } from '@heroicons/react/24/outline';
 import WatchSVG from '../../../components/SVG/watch.svg';
+import qrcode from '../../../components/SVG/qrcode.svg';
 
 export default function TrackYourCrypto() {
 
@@ -14,9 +15,9 @@ export default function TrackYourCrypto() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-4 sm:pb-6 md:pb-8">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
-        <div className="flex flex-col lg:hidden items-center text-center space-y-8 sm:space-y-10 md:space-y-12">
+        <div className="flex flex-col lg:hidden items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Watch SVG with Phone Overlay */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto flex justify-center items-center">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto flex justify-center items-center -mt-4 sm:-mt-6 md:-mt-8">
             {/* Watch SVG - Static Background */}
             <div className="relative w-full">
               <img 
@@ -69,8 +70,8 @@ export default function TrackYourCrypto() {
             </div>
             
             {/* QR Code */}
-            <div className="flex-shrink-0">
-              <QrCodeIcon className="w-12 h-12 sm:w-16 sm:h-16 text-black" />
+            <div className="flex-shrink-0 ">
+              <QrCodeIcon className="w-12 h-12 sm:w-16 sm:h-16 text-black " />
             </div>
           </div>
         </div>
@@ -78,9 +79,9 @@ export default function TrackYourCrypto() {
         {/* Desktop Layout (lg+) - Original Horizontal Layout */}
         <div className="hidden lg:grid grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Watch SVG with Overlaid Mobile */}
-          <div className="flex justify-center items-center relative order-2 lg:order-1 mt-8 sm:mt-12 md:mt-16 lg:mt-0">
+          <div className="flex justify-center items-center relative order-2 lg:order-1 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 xl:-mt-24">
             {/* Watch SVG - Static Background */}
-            <div className="relative w-full max-w-sm sm:max-w-md lg:max-w-lg">
+            <div className="relative w-full m-auto max-w-sm sm:max-w-md lg:max-w-lg">
               <img 
                 src={WatchSVG} 
                 alt="Watch illustration" 
@@ -114,7 +115,7 @@ export default function TrackYourCrypto() {
                {/* Download Buttons */}
                <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                  {/* Download Buttons */}
-                 <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                 <div className="flex flex-col sm:flex-col gap-4 w-full sm:w-auto">
                   <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-3 px-6 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-52 h-14 border border-gray-300">
                     <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-6 h-6 brightness-0 invert" />
                     <div className="text-left">
@@ -134,8 +135,12 @@ export default function TrackYourCrypto() {
                  </div>
                  
                  {/* QR Code */}
-                 <div className="flex-shrink-0">
-                   <QrCodeIcon className="w-12 h-12 sm:w-16 sm:h-16 text-black" />
+                 <div className="flex-shrink-0 p-10 rounded-lg shadow-lg">
+                   <img 
+                     src={qrcode} 
+                     alt="QR Code" 
+                     className="w-30 h-30 sm:w-[200px] sm:h-[200px] text-black" 
+                   />
                  </div>
                </div>
             </div>
