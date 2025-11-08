@@ -12,7 +12,7 @@ const TokenizeAssetsSection = () => {
       id: 1,
       title: "Gold and Metals",
       description: "Invest in precious metals and commodities. Diversify your portfolio with gold, silver, and other valuable metals through secure digital tokens.",
-      roi: "76% ROI",
+      
       apy: "80% APY",
       image: maskcard1,
       bgColor: "bg-gradient-to-b from-[#fbfbfb] to-[#f0f0f0] text-black"
@@ -21,8 +21,8 @@ const TokenizeAssetsSection = () => {
       id: 2,
       title: "Fine Art",
       description: "Own fractional shares of masterpieces and contemporary art. Access exclusive art collections and benefit from the appreciation of cultural assets.",
-      roi: "76% ROI",
-      apr: "80% APR",
+     
+      apr: "80% APY",
       image: maskcard2,
       bgColor: "bg-gradient-to-b from-[#fbfbfb] to-[#f0f0f0] text-black"
     },
@@ -30,8 +30,8 @@ const TokenizeAssetsSection = () => {
       id: 3,
       title: "Carbon Credits",
       description: "Support environmental initiatives while earning returns. Invest in verified carbon credit projects and contribute to a sustainable future.",
-      roi: "76% ROI",
-      apr: "80% APR",
+     
+      apr: "80% APY",
       image: maskcard3,
       bgColor: "bg-gradient-to-b from-[#fbfbfb] to-[#f0f0f0] text-black"
     },
@@ -39,8 +39,8 @@ const TokenizeAssetsSection = () => {
       id: 4,
       title: "Real Estate",
       description: "Access premium real estate investments globally. From luxury properties to commercial buildings, own fractional shares of high-value assets.",
-      roi: "76% ROI",
-      apr: "80% APR",
+      
+      apr: "80% APY",
       image: maskcard4,
       bgColor: "bg-gradient-to-b from-[#fbfbfb] to-[#f0f0f0] text-black"
     }
@@ -110,6 +110,32 @@ const TokenizeAssetsSection = () => {
                   {index === 0 && (
                     <div className="absolute top-4 left-4 bg-background-light rounded-xl px-4 py-1">
                       <span className="text-base font-normal" style={{ fontFamily: 'DM Sans' }}>
+                        <span className="text-[#15a36e]">76%</span>
+                        <span className="text-text-primary"> ROI</span>
+                      </span>
+                    </div>
+                  )}
+                  {index === 1 && (
+                    <div className="absolute top-4 left-4 bg-background-light rounded-xl px-4 py-1">
+                      <span className="text-base font-normal" style={{ fontFamily: 'DM Sans' }}>
+                        <span className="text-[#15a36e]">76%</span>
+                        <span className="text-text-primary"> ROI</span>
+                      </span>
+                    </div>
+                  )}
+                  {index === 2 && (
+                    <div className="absolute top-4 left-4 bg-background-light rounded-xl px-4 py-1">
+                      <span className="text-base font-normal" style={{ fontFamily: 'DM Sans' }}>
+                        <span className="text-[#15a36e]">76%</span>
+                        <span className="text-text-primary"> ROI</span>
+                      </span>
+                    </div>
+                  )}
+                  {index === 3 && (
+                    <div className="absolute top-4 left-4 bg-background-light rounded-xl px-4 py-1">
+                      <span className="text-base font-normal" 
+                      style={{ fontFamily: 'DM Sans'}} >
+      
                         <span className="text-[#15a36e]">76%</span>
                         <span className="text-text-primary"> ROI</span>
                       </span>
