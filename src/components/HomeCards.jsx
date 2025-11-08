@@ -81,13 +81,7 @@ export default function CurvedSectionDivider() {
               
               color="from-pink-500 to-teal-500"
             />
-            <FeatureCard
-              icon={House3DIcon}
-              title="Earn Without the Hassle"
-              description="Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management."
-              
-              color="from-yellow-500 to-green-500"
-            />
+           
             <FeatureCard
               icon={WorldwideIcon}
               title="Explore a World of Assets"

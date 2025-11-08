@@ -126,11 +126,7 @@ export default function FeatureCards() {
             description="Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about."
           />
           
-          <FeatureCard
-            icon={<EarnIcon />}
-            title="Earn without a hassle"
-            description="Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management."
-          />
+         
           
           <FeatureCard
             icon={<ExploreIcon />}
