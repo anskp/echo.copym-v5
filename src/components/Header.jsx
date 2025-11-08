@@ -10,27 +10,41 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   
-  // Page checks
+  // Check if we're on the agent page
   const isAgentPage = location.pathname === "/agent";
+  // Check if we're on the copym-ai page
   const isCopymAIPage = location.pathname === "/copym-ai";
 
-  // Background logic
+  // Function to get header background color based on current page
   const getHeaderBackground = () => {
     const pathname = location.pathname;
-    if (pathname.includes('/tokenization') || pathname.includes('/marketplace')) {
+    
+    // Tokenization page has white background
+    if (pathname.includes('/tokenization')) {
       return 'bg-white';
     }
-    return 'bg-white'; // or 'bg-blue-100' if you prefer
+    
+    // Marketplace page has white/transparent background
+    if (pathname.includes('/marketplace')) {
+      return 'bg-white';
+    }
+    
+    // All other pages use blue-100 background
+    return 'bg-white';
   };
 
-  // Scroll effect
+  // Handle scroll effect
   useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 100);
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 100); // Show fixed nav after 100px scroll
+    };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Navigation data
+  // Navigation data with dropdown content and images
   const navigationData = {
     Products: [
       {
@@ -72,6 +86,7 @@ export default function Header() {
         image: "/assets/Images/navbar/5.png",
         iconBg: "icon-about"
       },
+
       {
         title: "Contact Us",
         description: "Get in touch with our team for support and business inquiries.",
@@ -84,169 +99,188 @@ export default function Header() {
 
   return (
     <>
-      {/* Unified Header */}
-      <nav className={`navbar ${getHeaderBackground()} sticky top-0 z-40 transition-all duration-300`}>
+      {/* Desktop Navigation Pills - Fixed */}
+      <div className="nav-pills">
+        {Object.keys(navigationData).map((navItem) => (
+            <div
+              key={navItem}
+            className="nav-item"
+              onMouseEnter={() => setActiveDropdown(navItem)}
+              onMouseLeave={() => setActiveDropdown(null)}
+            >
+            <a href="#" className="nav-link">
+              {navItem}
+              <svg className="dropdown-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polyline points="6,9 12,15 18,9"></polyline>
+              </svg>
+            </a>
+            
+            {/* Dropdown Menu */}
+            <AnimatePresence>
+              {activeDropdown === navItem && (
+                <motion.div
+                  className="dropdown"
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {/* Removed Silk Background */}
+                  
+                  <div className="dropdown-grid relative z-10">
+                    {navigationData[navItem].map((item, index) => (
+                      <Link
+                        key={index}
+                        to={item.path}
+                        className="dropdown-item"
+                        onClick={() => setActiveDropdown(null)}
+                      >
+                        <div className={`dropdown-icon-wrapper ${item.iconBg}`}>
+                          <img 
+                            src={item.image} 
+                            alt={item.title}
+                            className="w-full h-full object-cover rounded-lg"
+                          />
+                        </div>
+                        <div className="dropdown-content">
+                          <div className="dropdown-title">{item.title}</div>
+                          <div className="dropdown-description">{item.description}</div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            </div>
+          ))}
+        
+        {/* Fixed Download Button - Shows when scrolled */}
+        {isScrolled && (
+          <motion.div
+            className="nav-item hidden md:block"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <button className="nav-link bg-green-500 hover:bg-green-600 text-white border-0">
+              <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM10 3a1 1 0 01-1 1v7.586L7.707 10.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V4a1 1 0 00-1-1z"/>
+              </svg>
+              Download
+            </button>
+          </motion.div>
+        )}
+      </div>
+
+      {/* Delta-Style Navbar */}
+      <nav className={`navbar ${getHeaderBackground()}`}>
         <div className="nav-container px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex items-center justify-between">
-          
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img
-              src={
-                isCopymAIPage 
-                  ? "/assets/copym/png/Copym-01-1.png" 
-                  : isAgentPage 
-                    ? "/assets/copym/png/Copym-02-1.png" 
-                    : "/assets/copym/png/Copym-01-1.png"
-              }
-              alt="COPYM"
-              className="h-16 w-auto object-contain sm:h-18 md:h-20"
-            />
-          </Link>
+          <Link to="/" className="flex items-center mr-8">
+              <img
+                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
+                alt="COPYM"
+                className="h-16 w-auto object-contain sm:h-18 md:h-20"
+              />
+            </Link>
 
-          {/* Desktop Navigation + Dropdowns */}
-          <div className="hidden md:flex items-center space-x-6">
-            {Object.keys(navigationData).map((navItem) => (
-              <div
-                key={navItem}
-                className="relative"
-                onMouseEnter={() => setActiveDropdown(navItem)}
-                onMouseLeave={() => setActiveDropdown(null)}
-              >
-                <a href="#" className="nav-link flex items-center text-gray-800 font-medium hover:text-green-600 transition-colors">
-                  {navItem}
-                  <svg className="ml-1 w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="6,9 12,15 18,9"></polyline>
-                  </svg>
-                </a>
-
-                {/* Dropdown Menu */}
-                <AnimatePresence>
-                  {activeDropdown === navItem && (
-                    <motion.div
-                      className="dropdown absolute left-1/2 transform -translate-x-1/2 mt-2 z-50"
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
-                    >
-                      <div className="dropdown-grid relative z-10 bg-white rounded-xl shadow-xl p-6 min-w-[600px] border border-gray-100">
-                        {navigationData[navItem].map((item, index) => (
-                          <Link
-                            key={index}
-                            to={item.path}
-                            className="dropdown-item flex items-start p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                            onClick={() => setActiveDropdown(null)}
-                          >
-                            <div className={`dropdown-icon-wrapper w-14 h-14 rounded-lg overflow-hidden flex-shrink-0 mr-4`}>
-                              <img 
-                                src={item.image} 
-                                alt={item.title}
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                            <div className="dropdown-content">
-                              <div className="dropdown-title font-semibold text-gray-900">{item.title}</div>
-                              <div className="dropdown-description text-sm text-gray-600 mt-1">{item.description}</div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-            ))}
-          </div>
-
-          {/* Download Button - Desktop */}
-          <div className="hidden md:flex items-center">
+          {/* Download Button - Desktop Only */}
+          <div className="hidden lg:flex items-center ml-auto">
             <button className="btn-gradient flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
+             
               Download
             </button>
           </div>
 
-          {/* Mobile Toggle */}
-          <button
-            className="md:hidden ml-4 text-black hover:text-gray-600 transition-colors duration-200 p-3 rounded-lg relative z-50"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
-          </button>
-        </div>
+            {/* Mobile Toggle */}
+            <button
+            className="md:hidden ml-6 text-black hover:text-gray-600 transition-colors duration-200 p-3 rounded-lg relative z-50"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
+            </button>
+          </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Dropdown Menu */}
       <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div 
-            className="fixed inset-0 z-50 md:hidden"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div 
+      {isMenuOpen && (
+        <motion.div 
+          className="fixed inset-0 z-50 md:hidden"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.3 }}
+        >
+          {/* Backdrop */}
+          <div 
               className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsMenuOpen(false)}
-            />
-            
-            <motion.div 
+            onClick={() => setIsMenuOpen(false)}
+          />
+          
+          {/* Menu Container */}
+          <motion.div 
               className="absolute top-20 left-4 right-4 bg-gradient-to-br from-emerald-500 to-emerald-600 backdrop-blur-md rounded-2xl border border-[rgba(255,255,255,0.2)] overflow-hidden max-h-[80vh] flex flex-col"
-              initial={{ opacity: 0, y: -20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            >
-              <div className="py-6 px-4 flex-1 overflow-y-auto">
-                {Object.keys(navigationData).map((navItem, index) => (
-                  <motion.div
-                    key={navItem}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.3 }}
+            initial={{ opacity: 0, y: -20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -20, scale: 0.95 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+          >
+              {/* Mobile Navigation Items */}
+            <div className="py-6 px-4 flex-1 overflow-y-auto">
+              {Object.keys(navigationData).map((navItem, index) => (
+                <motion.div
+                  key={navItem}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.3 }}
                     className="mb-6 last:mb-0"
                   >
                     <h3 className="text-white font-semibold text-lg mb-4">{navItem}</h3>
                     <div className="space-y-3">
-                      {navigationData[navItem].map((item, itemIndex) => (
-                        <Link
-                          key={itemIndex}
+                          {navigationData[navItem].map((item, itemIndex) => (
+                            <Link
+                              key={itemIndex}
                           to={item.path}
-                          className="block"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          <motion.div
+                              className="block"
+                              onClick={() => setIsMenuOpen(false)}
+                            >
+                              <motion.div
                             className="flex items-start gap-4 p-4 rounded-xl bg-[rgba(255,255,255,0.1)] backdrop-blur-sm border border-[rgba(255,255,255,0.2)] hover:bg-[rgba(255,255,255,0.2)] transition-all duration-200"
-                            initial={{ opacity: 0, x: -10 }}
-                            animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: itemIndex * 0.05, duration: 0.2 }}
-                            whileHover={{ x: 4 }}
-                            whileTap={{ scale: 0.98 }}
-                          >
+                                initial={{ opacity: 0, x: -10 }}
+                                animate={{ opacity: 1, x: 0 }}
+                                transition={{ delay: itemIndex * 0.05, duration: 0.2 }}
+                                whileHover={{ x: 4 }}
+                                whileTap={{ scale: 0.98 }}
+                              >
                             <div className="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
                               <img 
                                 src={item.image} 
                                 alt={item.title}
                                 className="w-full h-full object-cover"
                               />
-                            </div>
-                            <div className="flex-1 min-w-0">
+                                  </div>
+                                  <div className="flex-1 min-w-0">
                               <h4 className="font-semibold text-white text-sm leading-tight mb-1">
-                                {item.title}
-                              </h4>
+                                      {item.title}
+                                    </h4>
                               <p className="text-xs text-white/80 leading-relaxed line-clamp-2">
-                                {item.description}
-                              </p>
-                            </div>
-                          </motion.div>
-                        </Link>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-              
+                                      {item.description}
+                                    </p>
+                                </div>
+                              </motion.div>
+                            </Link>
+                          ))}
+                        </div>
+                </motion.div>
+              ))}
+            </div>
+            
+              {/* Mobile Menu Footer */}
               <div className="border-t border-[rgba(255,255,255,0.2)] bg-[rgba(255,255,255,0.05)] px-4 py-4 flex-shrink-0">
+                {/* Mobile Download Button */}
                 <div className="mb-4">
                   <button className="btn-gradient w-full flex items-center justify-center px-6 py-5 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg rounded-full" style={{ minHeight: '56px' }}>
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
@@ -261,9 +295,9 @@ export default function Header() {
                   </div>
                 </div>
               </div>
-            </motion.div>
           </motion.div>
-        )}
+        </motion.div>
+      )}
       </AnimatePresence>
     </>
   );

@@ -7,13 +7,13 @@ import AifonviewSVG from '../../../components/SVG/aifonview.svg';
 export default function AIInvestingSection() {
   return (
     <section className="relative py-8 sm:py-12 md:py-16 lg:-mt-32 lg:pt-6 lg:pb-8 overflow-hidden bg-white lg:bg-[#E5F2FE]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+     <div className="w-full max-w-[1452px] mx-auto px-4 sm:px-6 lg:px-14">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-8 sm:space-y-10 md:space-y-12">
           {/* Main Headline */}
           <div className="space-y-4 sm:space-y-6">
             <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              AI that Invests with you
+              <span className="text-[#15a36e]">CORA-AI</span> THAT INVESTS WITH YOU
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-black leading-relaxed max-w-2xl mx-auto px-4">
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
@@ -23,7 +23,7 @@ export default function AIInvestingSection() {
           {/* CTA Button */}
           <div className="flex justify-center">
             <Link
-              to="/marketplace"
+              to="/CopymAI"
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-bold text-white transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-transparent text-emerald-500 hover:bg-emerald-500 hover:text-white rounded-full"
             >
               See the Reveal
@@ -57,14 +57,14 @@ export default function AIInvestingSection() {
             {/* CTA Button */}
             <div className="flex justify-start">
               <Link
-                to="/marketplace"
+                to="/CopymAI"
                 className="inline-flex items-center justify-center px-6 py-4 font-bold text-white transition-all duration-300 transform hover:scale-105"
                 style={{
                   borderRadius: 57,
                   background: "linear-gradient(179.93deg, rgba(48,130,162,0.8) 0.13%, rgba(43,93,131,0.8) 76.14%)"
                 }}
               >
-                Explore Assets
+                Explore Cora-AI
               </Link>
             </div>
            </div>
