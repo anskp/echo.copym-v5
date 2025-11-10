@@ -91,7 +91,7 @@ export default function AIInvestingSection() {
                 
                 {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}
                 <div className="absolute left-[-200px] top-[130px] hidden lg:block">
-                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
+                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80 ">
                     <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
                       Cora AI is a AI technology designed by CopyM to make better investments
                     </p>

@@ -2,6 +2,7 @@ import Hero from "./sections/Hero";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
 import AIInvestingSection from "./sections/AIInvestingSection";
 import RWAAssetsSection from "./sections/RWAAssetsSection";
+import AuditSection from "./sections/AuditSection";
 import FAQSection from "./sections/FAQSection";
 import SupportedAssets from "./sections/SupportedAssets";
 import LottieCardsSection from "./sections/LottieCardsSection";
@@ -18,6 +19,7 @@ export default function HomePage() {
       <TrackYourCrypto />
       <AIInvestingSection />
       <RWAAssetsSection />
+      <AuditSection />
       <FAQSection />
     
       {/* <SupportedAssets /> */}
