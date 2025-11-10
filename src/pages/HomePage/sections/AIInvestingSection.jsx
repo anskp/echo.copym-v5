@@ -80,33 +80,31 @@ export default function AIInvestingSection() {
 </div>
 
             {/* Content Grid */}
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between min-h-[400px] lg:min-h-[572px]">
-              {/* Left Side - Text */}
-              <div className="flex-1 text-center lg:text-left p-4 sm:p-6">
-                <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-4 sm:p-6 mb-6 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
-                  <p className="text-sm sm:text-base text-black font-medium leading-relaxed" style={{ fontFamily: 'Palanquin' }}>
-                    Cora AI is a AI technology designed by CopyM to make better investments
-                  </p>
-                </div>
-              </div>
-
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[400px] lg:min-h-[500px]">
               {/* Center - Mobile SVG */}
-              <div className="flex-1 flex justify-center items-center">
-  <div className="relative z-20">
-    <img 
-      src={AifonviewSVG} 
-      alt="AI Investment Interface" 
-      className="w-64 h-80 sm:w-96 sm:h-[384px] lg:w-[570px] lg:h-[684px] "
-    />
-  </div>
-</div>
+              <div className="relative flex justify-center items-center z-20">
+                <img 
+                  src={AifonviewSVG} 
+                  alt="AI Investment Interface" 
+                  className="w-64 h-80 mt-20 sm:w-96 sm:h-[384px] lg:w-[500px] lg:h-[600px]"
+                />
+                
+                {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}
+                <div className="absolute left-[-200px] top-[130px] hidden lg:block">
+                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
+                    <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      Cora AI is a AI technology designed by CopyM to make better investments
+                    </p>
+                  </div>
+                </div>
 
-              {/* Right Side - Feature Box */}
-              <div className="flex-1 flex justify-center lg:justify-end p-4 sm:p-6">
-                <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-4 sm:p-6 mb-6 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
-                  <p className="text-sm sm:text-base text-black font-medium leading-relaxed  text-center" style={{ fontFamily: 'Palanquin' }}>
-                    AI that predicts trends, analyzes data, and guides smarter investments.
-                  </p>
+                {/* Right Text Container - positioned to bottom right of phone, aligned with "Upcoming Payouts" section */}
+                <div className="absolute right-[-180px] bottom-[100px] hidden lg:block">
+                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
+                    <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      AI that predicts trends, analyzes data, and guides smarter investments.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
