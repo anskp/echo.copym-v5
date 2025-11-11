@@ -13,7 +13,7 @@ import Testimonials from "./components/Testimonials";
 const CopymAI = () => {
   return (
     <>
-      <div className="copym-ai-page pt-[1.75rem] lg:pt-[5.25rem] overflow-hidden">
+      <div className="copym-ai-page min-h-screen bg-black text-white pt-[1.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Hero />
         
         <Benefits />

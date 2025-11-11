@@ -30,14 +30,14 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" className="bg-black text-white">
       <div className="container">
         <div className="w-full max-w-[1200px] mx-auto px-5">
           <Heading
             title={
               <>
-                <span className="text-gray-900 whitespace-nowrap">Trusted by Industry </span>
-                <span className="text-emerald-600 whitespace-nowrap">Leaders</span>
+                <span className="text-white whitespace-nowrap">Trusted by Industry </span>
+                <span className="text-emerald-400 whitespace-nowrap">Leaders</span>
               </>
             }
             text="See what leading financial institutions say about Cora AI"
@@ -48,7 +48,7 @@ const Testimonials = () => {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="w-full md:w-[350px] rounded-[10px] bg-white shadow-[0px_4px_8px_rgba(0,0,0,0.1)] overflow-hidden relative p-[30px] box-border flex flex-col justify-start"
+              className="w-full md:w-[350px] rounded-[10px] bg-[rgba(20,20,20,0.85)] border border-white/10 shadow-[0px_30px_80px_rgba(0,0,0,0.6)] overflow-hidden relative p-[30px] box-border flex flex-col justify-start backdrop-blur"
             >
               {/* Quote Mark + Name Row */}
               <div className="flex items-start gap-2 mb-[5px]">
@@ -56,10 +56,10 @@ const Testimonials = () => {
                   "
                 </p>
                 <div className="flex flex-col items-start">
-                  <p className="text-[24px] font-bold text-black m-0 leading-[1.2] text-left dm-sans">
+                  <p className="text-[24px] font-bold text-white m-0 leading-[1.2] text-left dm-sans">
                     {testimonial.name}
                   </p>
-                  <p className="text-[14px] text-black mt-[2px] text-left dm-sans">
+                  <p className="text-[14px] text-gray-300 mt-[2px] text-left dm-sans">
                     {testimonial.role}
                   </p>
                   <p className="text-[14px] text-[#15a36e] mb-5 text-left dm-sans">
@@ -69,7 +69,7 @@ const Testimonials = () => {
               </div>
 
               {/* Quote Text */}
-              <p className="text-[16px] text-black leading-[1.5] m-0 text-left flex-1 dm-sans">
+              <p className="text-[16px] text-gray-200 leading-[1.5] m-0 text-left flex-1 dm-sans">
                 "{testimonial.content}"
               </p>
 
@@ -77,7 +77,7 @@ const Testimonials = () => {
               <div 
                 className="absolute bottom-0 right-0 w-[100px] h-[100px] pointer-events-none"
                 style={{
-                  background: 'linear-gradient(to top left, rgba(229,255,245,0.6), transparent)',
+                  background: 'linear-gradient(to top left, rgba(21,163,110,0.2), transparent)',
                   borderRadius: '0 0 5px 0'
                 }}
               />
