@@ -3,7 +3,7 @@ import { GiBrain } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import AifonviewSVG from '../../../components/SVG/aifonview.svg';
-import ellipse from '../../../components/SVG/ellipse.svg';
+import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
   return (
