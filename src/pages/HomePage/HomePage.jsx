@@ -5,7 +5,7 @@ import RWAAssetsSection from "./sections/RWAAssetsSection";
 import AuditSection from "./sections/AuditSection";
 import FAQSection from "./sections/FAQSection";
 import SupportedAssets from "./sections/SupportedAssets";
-import LottieCardsSection from "./sections/LottieCardsSection";
+import FeatureSection from "./sections/FeatureSection";
 
 
 
@@ -15,7 +15,8 @@ export default function HomePage() {
      <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden">
       <Hero />
       {/* Lottie Cards Section - Replaced SVG layouts */}
-      <LottieCardsSection />
+      
+      <FeatureSection />
       <TrackYourCrypto />
       <AIInvestingSection />
       <RWAAssetsSection />
