@@ -1,5 +1,8 @@
 "use client"
 import React, { useState, useRef, useEffect } from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
+import group575 from '../../../components/lotties/Group-575.json';
+import group574 from '../../../components/lotties/Group-574 (1).json';
 import { 
   GiLockedChest,
   GiChart,
@@ -51,11 +54,14 @@ const MinimalTokenizationDashboard = () => {
               </p>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="https://republic.com/_next/static/media/graphic-tokenize-any-asset.ad38f5ce.png" 
-                alt="Tokenize any asset"
-                className="w-full h-auto max-h-64 object-contain"
-              />
+              <div className="w-full h-full max-w-[250px] max-h-[250px] flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group574}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -80,11 +86,14 @@ const MinimalTokenizationDashboard = () => {
               </div>
             </div>
             <div className="flex justify-center">
-              <img 
-                src="https://republic.com/_next/static/media/graphic-token-management.934dc1cd.png" 
-                alt="Token management interface"
-                className="w-full h-auto max-h-64 object-contain"
-              />
+              <div className="w-full h-full max-w-[250px] max-h-[250px] flex items-center justify-center">
+                <Player
+                  autoplay
+                  loop
+                  src={group575}
+                  className="w-full h-full object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
