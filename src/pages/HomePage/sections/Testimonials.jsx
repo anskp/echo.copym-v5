@@ -45,55 +45,40 @@ function TestimonialCard({ testimonial }) {
     <motion.div 
       className="relative flex-shrink-0 overflow-hidden"
       style={{
-        width: '411.63px',
-        height: '437.32px'
+        width: '320px',
+        height: '340px'
       }}
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
       {/* Background Rectangle */}
       <div 
-        className="absolute inset-0 bg-white rounded-[36px]"
+        className="absolute inset-0 bg-white rounded-[28px]"
         style={{
           border: '1px solid #ECECEC'
         }}
       ></div>
       
-      {/* Radial Gradient Ellipse - Positioned at left bottom corner */}
+      {/* Radial Gradient Ellipse - Positioned at right bottom corner within card */}
       <div 
-        className="absolute"
+        className="absolute overflow-hidden"
         style={{
           bottom: '0',
-          left: '0',
-          width: '388.42px',
-          height: '349.77px',
-          background: 'radial-gradient(circle at 0% 100%, #E5FFF5 0%, #FFFFFF 100%)',
-          borderRadius: '20px'
-        }}
-      ></div>
-      
-      {/* Outer Border Rectangle with Shadow */}
-      <div 
-        className="absolute pointer-events-none"
-        style={{
-          top: '-6px',
-          left: '-6px',
-          right: '-6px',
-          bottom: '-6px',
-          background: 'transparent',
-          border: '1px solid #ECECEC',
-          borderRadius: '36px',
-          filter: 'drop-shadow(0px 4px 4px rgba(179,178,178,0.25))'
+          right: '0',
+          width: '200px',
+          height: '200px',
+          background: 'radial-gradient(circle at 100% 100%, #E5FFF5 0%, #FFFFFF 100%)',
+          borderRadius: '0 0 28px 0'
         }}
       ></div>
       
       {/* Header Section - Profile Picture and Name/Title/Company */}
       <div 
-        className="absolute flex items-start gap-4"
+        className="absolute flex items-start gap-3"
         style={{
-          top: '30px',
-          left: '30px',
-          right: '30px',
+          top: '24px',
+          left: '24px',
+          right: '24px',
           zIndex: 5
         }}
       >
@@ -101,8 +86,8 @@ function TestimonialCard({ testimonial }) {
         <div 
           className="flex-shrink-0 rounded-full overflow-hidden"
           style={{
-            width: '80px',
-            height: '80px'
+            width: '64px',
+            height: '64px'
           }}
         >
           <img
@@ -124,12 +109,12 @@ function TestimonialCard({ testimonial }) {
             style={{
               fontFamily: 'Palanquin, sans-serif',
               fontWeight: 700,
-              fontSize: '24px',
-              lineHeight: '32px',
+              fontSize: '20px',
+              lineHeight: '28px',
               color: '#000',
               margin: 0,
               padding: 0,
-              marginBottom: '4px'
+              marginBottom: '3px'
             }}
           >
             {testimonial.name}
@@ -139,12 +124,12 @@ function TestimonialCard({ testimonial }) {
           <p 
             style={{
               fontFamily: 'Palanquin, sans-serif',
-              fontSize: '18px',
-              lineHeight: '24px',
+              fontSize: '16px',
+              lineHeight: '22px',
               color: '#000',
               margin: 0,
               padding: 0,
-              marginBottom: '4px'
+              marginBottom: '3px'
             }}
           >
             {testimonial.title}
@@ -154,8 +139,8 @@ function TestimonialCard({ testimonial }) {
           <p 
             style={{
               fontFamily: 'Palanquin, sans-serif',
-              fontSize: '18px',
-              lineHeight: '24px',
+              fontSize: '16px',
+              lineHeight: '22px',
               color: '#15A36E',
               margin: 0,
               padding: 0
@@ -170,18 +155,18 @@ function TestimonialCard({ testimonial }) {
       <div 
         className="absolute"
         style={{
-          top: '140px',
-          left: '30px',
-          right: '30px',
-          bottom: '30px',
-          paddingRight: '10px'
+          top: '110px',
+          left: '24px',
+          right: '24px',
+          bottom: '24px',
+          paddingRight: '8px'
         }}
       >
         <p 
           style={{
             fontFamily: 'Palanquin, sans-serif',
-            fontSize: '20px',
-            lineHeight: '36px',
+            fontSize: '18px',
+            lineHeight: '28px',
             color: '#000',
             margin: 0,
             padding: 0
