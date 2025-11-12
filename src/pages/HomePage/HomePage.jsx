@@ -6,6 +6,7 @@ import AuditSection from "./sections/AuditSection";
 import FAQSection from "./sections/FAQSection";
 import SupportedAssets from "./sections/SupportedAssets";
 import FeatureSection from "./sections/FeatureSection";
+import TestimonialsSection from "./sections/Testimonials";
 
 
 
@@ -22,7 +23,7 @@ export default function HomePage() {
       <RWAAssetsSection />
       <AuditSection />
       <FAQSection />
-    
+    <TestimonialsSection />
       {/* <SupportedAssets /> */}
       
     </div>

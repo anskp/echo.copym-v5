@@ -4,30 +4,78 @@ import { Link } from 'react-router-dom';
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div 
-      className="bg-white border border-white mb-4"
+      className="mb-4 transition-all duration-300"
       style={{
-        borderRadius: 51,
-        boxShadow: "4px 4px 4px 0 rgba(84,82,82,0.25)"
+        background: "rgba(228,253,243,0.6)",
+        boxShadow: "0px 4px 4px 0 rgba(159,159,159,0.25)",
+        borderRadius: "8px",
+        minHeight: isOpen ? '160px' : '60px',
+        overflow: 'hidden'
       }}
     >
       <button
         onClick={onToggle}
-        className="w-full text-left p-6 flex justify-between items-center transition-colors duration-200"
+        className="w-full text-left flex justify-between items-center transition-colors duration-200"
+        style={{
+          padding: isOpen ? '16px 20px' : '16px 20px',
+          minHeight: '60px'
+        }}
       >
-        <h3 className="text-lg font-semibold text-gray-900 pr-4">{question}</h3>
+        <h3 
+          className="pr-4 flex-1"
+          style={{
+            fontSize: '20px',
+            fontWeight: 600,
+            color: '#000',
+            textAlign: 'left'
+          }}
+        >
+          {question}
+        </h3>
         <div className="flex-shrink-0 transition-transform duration-300">
-          <span className="w-5 h-5 inline-block text-gray-500">{isOpen ? '−' : '+'}</span>
+          {isOpen ? (
+            <svg
+              width="23"
+              height="20"
+              viewBox="0 0 23 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M11.2578 0L22.5161 19.5H-0.000517845L11.2578 0Z" fill="black" />
+            </svg>
+          ) : (
+            <svg
+              width="20"
+              height="23"
+              viewBox="0 0 20 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M19.5 11.2578L0 -0.000518799V22.5161L19.5 11.2578Z" fill="black" />
+            </svg>
+          )}
         </div>
       </button>
-      <div 
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'
-        }`}
-      >
-        <div className="px-6 pb-6">
-          <p className="text-gray-600 leading-relaxed">{answer}</p>
+      {isOpen && (
+        <div 
+          className="overflow-hidden transition-all duration-300 ease-in-out"
+          style={{
+            padding: '0 20px 16px 20px'
+          }}
+        >
+          <p 
+            style={{
+              fontSize: '20px',
+              color: '#000',
+              textAlign: 'left',
+              lineHeight: '1.6',
+              marginTop: '8px'
+            }}
+          >
+            {answer}
+          </p>
         </div>
-      </div>
+      )}
     </div>
   );
 };
@@ -55,47 +103,40 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
-          {/* Left Side - Support Info */}
-          <div className="flex flex-col order-2 lg:order-1">
-            <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 lg:mb-40 text-center lg:text-left px-2">
-              Frequently asked
-              <br />
-              questions
-            </h3>
-            <div 
-              className="bg-white rounded-lg p-6 sm:p-8"
-              style={{
-                filter: "drop-shadow(4px 4px 4px rgba(84,82,82,0.25))",
-                borderRadius: 55
-              }}
-            >
-              <div className="mb-4 sm:mb-6 border-x-white">
-                <h4 className="text-lg sm:text-xl  font-semibold text-gray-900 mb-2 sm:mb-3 text-center lg:text-left ">
-                  Still have a question ?
-                </h4>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed text-center lg:text-left">
-                  Can't find the answer to your question? Send us an email and we'll get back to you as soon as possible!
-                </p>
-              </div>
-               <Link
-                 to="/marketplace"
-                 className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base w-full sm:w-auto"
-                 style={{
-                   borderRadius: 55,
-                   background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)"
-                   
-                 }}
-               >
-                 Explore Assets
-               </Link>
-            </div>
-          </div>
+        {/* Section Header */}
+        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+          <h2 
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
+          >
+            <span className="text-black">FREQUENTLY ASKED </span>
+            <span className="text-[#15a36e]">QUESTIONS</span>
+          </h2>
+          <p 
+            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
+          >
+            These frequently asked questions might have the answer, but if not, our support team is just a message away!
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
+            style={{
+              borderRadius: "55px",
+              background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)",
+              fontFamily: 'Palanquin, sans-serif',
+              minWidth: '200px'
+            }}
+          >
+            Contact Our Team
+          </Link>
+        </div>
 
-          {/* Right Side - FAQ List */}
-          <div className="space-y-3 sm:space-y-4 order-1 lg:order-2">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+          {/* Left Side - FAQ List */}
+          <div className="space-y-4 order-2 lg:order-1">
             {faqs.map((faq, index) => (
               <FAQItem
                 key={index}
@@ -105,6 +146,24 @@ export default function FAQSection() {
                 onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
               />
             ))}
+          </div>
+
+          {/* Right Side - Image and Support Info */}
+          <div className="flex flex-col order-1 lg:order-2">
+            {/* Image */}
+            <div className="mb-8 sm:mb-12 flex justify-center lg:justify-end">
+              <img 
+                src="/assets/Images/ai-overvew.png" 
+                alt="FAQ Illustration"
+                className="w-full max-w-md lg:max-w-lg h-auto object-contain"
+                style={{
+                  maxHeight: '400px'
+                }}
+              />
+            </div>
+            
+            {/* Support Card */}
+            
           </div>
         </div>
       </div>
