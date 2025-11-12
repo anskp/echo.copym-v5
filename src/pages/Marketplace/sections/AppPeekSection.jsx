@@ -226,7 +226,7 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative bg-white">
+    <section className="relative bg-white pt-16 pb-16">
       {/* Main Content with Curved Background - HomePage Style */}
       
         
