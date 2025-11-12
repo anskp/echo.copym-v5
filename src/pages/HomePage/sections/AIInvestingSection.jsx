@@ -2,7 +2,6 @@ import React from 'react';
 import { GiBrain } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import AifonviewSVG from '../../../components/SVG/aifonview.svg';
 import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
@@ -32,11 +31,11 @@ export default function AIInvestingSection() {
               </Link>
             </div>
             
-            {/* Mobile SVG */}
+            {/* Mobile Image */}
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-[100px] items-center">
               <div className="relative z-20">
                 <img 
-                  src={AifonviewSVG} 
+                  src="/assets/Images/Ai-fon-view.png" 
                   alt="AI Investment Interface" 
                   className="w-full h-auto max-w-full"
                 />
@@ -81,10 +80,10 @@ export default function AIInvestingSection() {
 
             {/* Content Grid */}
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[400px] lg:min-h-[500px]">
-              {/* Center - Mobile SVG */}
+              {/* Center - Mobile Image */}
               <div className="relative flex justify-center items-center z-20">
                 <img 
-                  src={AifonviewSVG} 
+                  src="/assets/Images/Ai-fon-view.png" 
                   alt="AI Investment Interface" 
                   className="w-64 h-80 mt-20 sm:w-96 sm:h-[384px] lg:w-[500px] lg:h-[600px]"
                 />
