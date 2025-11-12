@@ -24,14 +24,7 @@ const Hero = () => {
       id="hero"
     >
       <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
-        {/* Background two-curve graphic */}
-        <div className="pointer-events-none absolute inset-0 flex justify-center">
-          <img
-            src={twocurve}
-            alt="Background curves"
-            className="opacity-200 w-[600vw] h-[130vh] max-w-none translate-y-[-14rem] object-cover md:w-[220vw] md:h-[115vh] md:translate-y-[-12rem] lg:w-[150vw] lg:h-[105vh] lg:translate-y-[-14rem] xl:w-[110vw] xl:h-[95vh] xl:translate-y-[-16rem] 2xl:w-full 2xl:h-[90vh]"
-          />
-        </div>
+        {/* Removed background two-curve graphic */}
 
         {/* Dotted grid lines background */}
         <div className="pointer-events-none absolute inset-0 z-0">
@@ -65,7 +58,7 @@ const Hero = () => {
 
         {/* Center video - 735x735 with blue border */}
         <div className="relative z-10 flex-1 flex items-center justify-center my-8 md:my-12">
-          <div className="relative w-full max-w-[400px] h-[400px] sm:max-w-[500px] sm:h-[500px] md:max-w-[600px] md:h-[600px] lg:max-w-[735px] lg:h-[735px] border border-cyan-400/50 flex items-center justify-center">
+          <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
             <video
               autoPlay
               loop

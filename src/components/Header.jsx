@@ -182,13 +182,13 @@ export default function Header() {
               <img
                 src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
                 alt="COPYM"
-                className="h-16 w-auto object-contain sm:h-18 md:h-20"
+                className="h-16 w-auto object-contain  -mt-6 sm:h-18 md:h-20"
               />
             </Link>
 
           {/* Download Button - Desktop Only */}
-          <div className="hidden lg:flex items-center ml-auto">
-            <button className="btn-gradient flex items-center justify-center px-6 py-4 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
+          <div className="hidden lg:flex items-center ml-auto -mt-6">
+            <button className="btn-gradient flex items-center justify-center px-28 py-5 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
              
               Download
             </button>
