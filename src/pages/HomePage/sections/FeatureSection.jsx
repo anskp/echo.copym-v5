@@ -261,7 +261,7 @@ const FeatureSection = () => {
 
             {/* Content */}
             <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
-              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Own a piece of big Investment
               </h3>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
@@ -514,8 +514,8 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[140px] sm:pt-[150px] md:pt-[160px] px-3 sm:px-4 md:px-5 pb-3 sm:pb-4 md:pb-5">
-              <h3 className="text-base sm:text-lg md:text-xl text-center lg:text-2xl font-bold text-black mb-2 sm:mb-3 md:mb-4">
+            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Trade anytime, anywhere
               </h3>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
@@ -709,7 +709,7 @@ const FeatureSection = () => {
 
             {/* Content */}
             <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
-              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Earn without a hassle
               </h3>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
@@ -879,7 +879,7 @@ const FeatureSection = () => {
 
             {/* Content */}
             <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
-              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Explore a world of assets
               </h3>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
