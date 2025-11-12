@@ -23,38 +23,39 @@ export default function Hero() {
       </div>
 
       {/* ====== HERO CONTENT - RIGHT BOTTOM ====== */}
-      <div className="relative z-10 w-full min-h-screen flex items-end justify-end px-3 sm:px-10 lg:px-20 pb-10 sm:pb-16 lg:pb-24">
-        <div className="max-w-xl  px-16 py-5 ">
+      <div className="relative z-10 w-full min-h-screen flex items-end justify-end px-4 sm:px-6 lg:px-8 xl:px-12 pb-8 sm:pb-12 lg:pb-10 xl:pb-5">
+        <div className="max-w-lg sm:max-w-xl text-right">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-1xl sm:text-2xl md:text-3xl lg:text-[40px]  font-bold leading-snug sm:leading-tight text-white mb-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start font-bold leading-tight text-white mb-3 sm:mb-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             UNLOCK EXCLUSIVE{' '}
-            <span className="text-emerald-500">ASSETS, </span>
+            <span className="text-emerald-500">ASSETS,</span>
+            <br />
             <span className="text-emerald-500">INVEST </span>
             WITH CONFIDENCE
           </h1>
 
           {/* ====== DESCRIPTION ====== */}
           <p
-            className="text-sm sm:text-base md:text-lg text-white opacity-90 leading-relaxed mb-8"
+            className="text-xs sm:text-sm md:text-base text-start text-white opacity-90 leading-relaxed mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Seamless on-chain investment in real estate, commodities, carbon credits and luxury assets.
-            No gas fees, no native token required.
+            Seamless on-chain investment in real estate, <br/>commodities,carbon credits and luxury <br/> assets.
+            No gas fees,no native token required.
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
-          <div className="flex flex-wrap justify-end gap-4">
+          <div className="flex flex-wrap justify-start gap-2 sm:gap-3">
             <Link
               to="/marketplace"
-              className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+              className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               START INVESTING
               <svg
-                className="w-4 h-4 sm:w-5 sm:h-5"
+                className="w-3 h-3 sm:w-4 sm:h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -70,7 +71,7 @@ export default function Hero() {
 
             <button
               onClick={() => setVideoOpen(true)}
-              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300"
+              className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-white hover:text-gray-900 transition-all duration-300"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               WATCH DEMO

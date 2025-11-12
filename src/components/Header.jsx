@@ -188,9 +188,107 @@ export default function Header() {
 
           {/* Download Button - Desktop Only */}
           <div className="hidden lg:flex items-center ml-auto -mt-6">
-            <button className="btn-gradient flex items-center justify-center px-28 py-5 font-semibold text-white transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl rounded-full" style={{ minHeight: '56px' }}>
-             
-              Download
+            <button 
+              className="relative flex items-center justify-center text-white transition-all duration-300 transform hover:scale-105 overflow-hidden"
+              style={{
+                width: '150px',
+                height: '40px',
+                fontSize: '15px',
+              }}
+            >
+              <svg
+                width={324}
+                height={77}
+                viewBox="0 0 324 77"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ 
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  zIndex: 0
+                }}
+                preserveAspectRatio="none"
+              >
+                <mask
+                  id="mask0_878_833"
+                  style={{ maskType: "alpha" }}
+                  maskUnits="userSpaceOnUse"
+                  x={0}
+                  y={0}
+                  width={324}
+                  height={77}
+                >
+                  <path
+                    d="M0 38.142C0 17.0767 17.0767 0 38.142 0H285.469C306.534 0 323.611 17.0767 323.611 38.142C323.611 59.2072 306.534 76.284 285.469 76.284H38.1419C17.0767 76.284 0 59.2072 0 38.142Z"
+                    fill="black"
+                  />
+                </mask>
+                <g mask="url(#mask0_878_833)">
+                  <g filter="url(#filter0_f_878_833)">
+                    <circle cx={24} cy={-17} r={93} fill="url(#paint0_radial_878_833)" />
+                  </g>
+                  <g filter="url(#filter1_f_878_833)">
+                    <path
+                      d="M365 19C365 70.3625 323.362 112 272 112C220.638 112 179 70.3625 179 19C179 -32.3625 220.638 -74 272 -74C323.362 -74 365 -32.3625 365 19Z"
+                      fill="url(#paint1_radial_878_833)"
+                    />
+                  </g>
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_f_878_833"
+                    x="-118.5"
+                    y="-159.5"
+                    width={285}
+                    height={285}
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity={0} result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="24.75" result="effect1_foregroundBlur_878_833" />
+                  </filter>
+                  <filter
+                    id="filter1_f_878_833"
+                    x="129.5"
+                    y="-123.5"
+                    width={285}
+                    height={285}
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                  >
+                    <feFlood floodOpacity={0} result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feGaussianBlur stdDeviation="24.75" result="effect1_foregroundBlur_878_833" />
+                  </filter>
+                  <radialGradient
+                    id="paint0_radial_878_833"
+                    cx={0}
+                    cy={0}
+                    r={1}
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(24 -17) rotate(90) scale(93)"
+                  >
+                    <stop stopColor="#15A36E" />
+                    <stop offset={1} />
+                  </radialGradient>
+                  <radialGradient
+                    id="paint1_radial_878_833"
+                    cx={0}
+                    cy={0}
+                    r={1}
+                    gradientUnits="userSpaceOnUse"
+                    gradientTransform="translate(310 66.5) rotate(90) scale(93)"
+                  >
+                    <stop stopColor="#2983DE" />
+                    <stop offset={1} />
+                  </radialGradient>
+                </defs>
+              </svg>
+              <span className="relative z-10">Download</span>
             </button>
           </div>
 
