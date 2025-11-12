@@ -3,15 +3,15 @@ import { motion } from 'framer-motion';
 
 const FeatureSection = () => {
   return (
-    <section className="relative w-full bg-white py-8 sm:py-10 lg:py-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative w-full bg-white py-5 sm:py-6 md:py-8 lg:py-10 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Main Heading */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-center mb-6 sm:mb-8 lg:mb-10"
+          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 w-full"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           <span className="text-black">OWN. </span>
@@ -22,30 +22,30 @@ const FeatureSection = () => {
         </motion.h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
           {/* Card 1 - Own a piece of big Investment (Top Left - Larger) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[29px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden"
-            style={{ minHeight: '320px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
+            style={{ minHeight: '240px' }}
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[140px] rounded-t-[30px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Candlestick Charts */}
                 <img
                   src="/assets/Images/icons/Stack2.png"
                   alt="Trading charts"
                   className="absolute inset-0 w-full h-full object-contain object-center z-20"
-                  style={{ padding: '10px' }}
+                  style={{ padding: '6px' }}
                 />
                 {/* SVG Decorative Background - Circular Pattern */}
                 <svg
                   width="100%"
-                  height="140"
+                  height="100%"
                   viewBox="0 0 874 179"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
@@ -260,11 +260,11 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[160px] px-4 sm:px-5 pb-4 sm:pb-5">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4">
+            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
                 Own a piece of big Investment
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg font-medium text-black leading-relaxed">
+              <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
                 Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small
                 amounts and own a piece of high-value assets you actually care about.
               </p>
@@ -277,23 +277,23 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[29px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden"
-            style={{ minHeight: '320px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
+            style={{ minHeight: '240px' }}
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[140px] rounded-t-[30px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Dollar Sign Coins */}
                 <img
                   src="/assets/Images/icons/Stack1.png"
                   alt="Investment coins"
                   className="absolute inset-0 w-full h-full object-contain object-center z-20"
-                  style={{ padding: '10px' }}
+                  style={{ padding: '6px' }}
                 />
                 {/* SVG Decorative Background - Vertical Lines Pattern */}
                 <svg
                 width="100%"
-                height="140"
+                height="100%"
                 viewBox="0 0 521 179"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -514,11 +514,11 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[160px] px-4 sm:px-5 pb-4 sm:pb-5">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4">
+            <div className="relative z-20 pt-[140px] sm:pt-[150px] md:pt-[160px] px-3 sm:px-4 md:px-5 pb-3 sm:pb-4 md:pb-5">
+              <h3 className="text-base sm:text-lg md:text-xl text-center lg:text-2xl font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Trade anytime, anywhere
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg font-medium text-black leading-relaxed">
+              <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
                 Want out ? Sell instantly. Want in ? Buy in seconds. With your built-in wallet, you can manage
                 and trade smoothly—just like sending money to a friend.
               </p>
@@ -531,23 +531,23 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[29px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden"
-            style={{ minHeight: '320px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
+            style={{ minHeight: '240px' }}
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[140px] rounded-t-[30px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Growth Graph */}
                 <img
                   src="/assets/Images/icons/Stack3.png"
                   alt="Growth graph"
                   className="absolute inset-0 w-full h-full object-contain object-center z-20"
-                  style={{ padding: '10px' }}
+                  style={{ padding: '6px' }}
                 />
                 {/* SVG Decorative Background - Concentric Squares Pattern */}
                 <svg
                 width="100%"
-                height="140"
+                height="100%"
                 viewBox="0 0 714 179"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -708,11 +708,11 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[160px] px-4 sm:px-5 pb-4 sm:pb-5">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4">
+            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
                 Earn without a hassle
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg font-medium text-black leading-relaxed">
+              <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
                 Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing
                 in steady returns—without the stress of paperwork or management.
               </p>
@@ -725,23 +725,23 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[29px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden"
-            style={{ minHeight: '320px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
+            style={{ minHeight: '240px' }}
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[140px] rounded-t-[30px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Globe with Assets */}
                 <img
                   src="/assets/Images/icons/Stack4.png"
                   alt="Global assets"
                   className="absolute inset-0 w-full h-full object-contain object-center z-20"
-                  style={{ padding: '10px' }}
+                  style={{ padding: '6px' }}
                 />
                 {/* SVG Decorative Background - Horizontal Lines Pattern */}
                 <svg
                 width="100%"
-                height="140"
+                height="100%"
                 viewBox="0 0 689 179"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -878,11 +878,11 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[160px] px-4 sm:px-5 pb-4 sm:pb-5">
-              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-3 sm:mb-4">
+            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+              <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-2 md:mb-3">
                 Explore a world of assets
               </h3>
-              <p className="text-sm sm:text-base lg:text-lg font-medium text-black leading-relaxed">
+              <p className="text-xs sm:text-xs md:text-sm lg:text-base font-medium text-black leading-snug sm:leading-snug md:leading-relaxed">
                 From property and gold to private equity and art—our AI picks out smart opportunities so you
                 don't have to dig through endless research.
               </p>
