@@ -6,6 +6,7 @@ import CreateAssetModal from "./tokenizationDemo.jsx";
 import Hero from "./sections/Hero.jsx";
 import TokenizationProcess from "./sections/TokenizationProcess.jsx";
 import MinimalTokenizationDashboard from "./sections/IssuerSection.jsx";
+import HowToTokenize from "./sections/HowToTokenize.jsx";
 import TokenDistribution from "./sections/TokenDistribution.jsx";
 import InvestorManagement from "./sections/InvestorManagement.jsx";
 import FAQSection from "./sections/FAQSection.jsx";
@@ -33,6 +34,7 @@ export default function TokenizationHub() {
       <Hero />
       <TokenizationProcess onLaunchCreator={openCreateModal} />
       <MinimalTokenizationDashboard />
+      <HowToTokenize />
       <TokenDistribution />
       <InvestorManagement />
       <FAQSection />

@@ -2,7 +2,8 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import spiralssImage from '../../../components/images/spiralss.png';
+import leftStringsImage from '../../../components/images/Left-strings.png';
+import rightStringsImage from '../../../components/images/Right-strings.png';
 import t3Image from '/assets/Images/icons/t3.png';
 import t8Image from '/assets/Images/icons/t8.png';
 import t9Image from '/assets/Images/icons/t9.png';
@@ -33,28 +34,47 @@ export default function TokenDistribution() {
   ];
 
   return (
-    <section className="relative">
+    <section className="relative overflow-hidden" style={{ backgroundColor: '#000000' }}>
+      {/* String Patterns on Far Left and Right */}
+      <div 
+        className="absolute left-0 top-0 bottom-0 w-64 md:w-80 lg:w-96 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url(${leftStringsImage})`,
+          backgroundSize: '100%',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.3,
+          transform: 'scale(1.5)',
+          transformOrigin: 'left center'
+        }}
+      />
+      <div 
+        className="absolute right-0 top-0 bottom-0 w-64 md:w-80 lg:w-96 pointer-events-none z-0"
+        style={{
+          backgroundImage: `url(${rightStringsImage})`,
+          backgroundSize: '100%',
+          backgroundPosition: 'right center',
+          backgroundRepeat: 'no-repeat',
+          opacity: 0.3,
+          transform: 'scale(1.5)',
+          transformOrigin: 'right center'
+        }}
+      />
+
       {/* Main Content */}
       <div 
-        className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden "
-        style={{
-          backgroundImage: `url(${spiralssImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-          backgroundColor: 'transparent'
-        }}
+        className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32"
       >
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-16 sm:mb-20 lg:mb-24">
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight dm-sans mb-6">
-              <span className="text-[#15a36e]">TOKEN </span>
-              <span className="text-black">DISTRIBUTION</span>
+              <span className="text-white">TOKEN </span>
+              <span className="text-[#15a36e]">DISTRIBUTION</span>
             </h2>
 
-            <p className="text-black text-lg sm:text-xl max-w-3xl mx-auto dm-sans">
+            <p className="text-white text-lg sm:text-xl max-w-3xl mx-auto dm-sans">
               Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.
             </p>
           </div>
@@ -68,50 +88,38 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col"
+                className="relative flex flex-col justify-center items-center"
                 style={{
                   width: '100%',
                   minHeight: '280px',
                   borderRadius: '24px',
-                  background: '#fff',
+                  background: 'transparent',
                   borderWidth: '1px',
-                  borderColor: '#c8c8c8',
+                  borderColor: '#15a36e',
                   borderStyle: 'solid',
-                  boxShadow: '0px 4px 4px 0 rgba(0,0,0,0.25)',
                   padding: '24px 20px'
                 }}
               >
-                {/* Icon */}
-                <div className="flex items-center justify-center mb-6">
-                  {feature.icon && (
-                    <img 
-                      src={feature.icon} 
-                      alt={feature.title} 
-                      className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain filter brightness-125 contrast-125"
-                    />
-                  )}
-                </div>
-                
                 <h3 
-                  className="dm-sans mb-4 text-sm sm:text-base md:text-base lg:text-base uppercase"
+                  className="dm-sans mb-4 text-base sm:text-lg md:text-lg font-bold"
                   style={{
-                    fontWeight: 600,
                     textAlign: 'center',
-                    color: '#000'
+                    color: '#fff',
+                    textTransform: 'none'
                   }}
                 >
                   {feature.title}
                 </h3>
                 <p 
-                  className="dm-sans text-xs sm:text-xs md:text-sm lg:text-sm flex-1"
+                  className="dm-sans text-sm sm:text-base md:text-base text-center"
                   style={{
                     textAlign: 'center',
-                    color: '#000',
-                    lineHeight: '1.4',
+                    color: '#fff',
+                    lineHeight: '1.6',
                     textTransform: 'none'
                   }}
                 >
-                  {feature.description.charAt(0).toUpperCase() + feature.description.slice(1).toLowerCase()}
+                  {feature.description}
                 </p>
               </motion.div>
             ))}

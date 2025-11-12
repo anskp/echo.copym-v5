@@ -34,7 +34,7 @@ export default function Hero() {
 
           {/* Main Title - Desktop Optimized */}
           <div className="mb-6 lg:mb-8">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               TOKENIZE REAL-WORLD ASSETS
             </h1>
           </div>
