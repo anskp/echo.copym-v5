@@ -73,19 +73,19 @@ export default function TokenizationProcess({ onLaunchCreator }) {
       title: "Increased accessibility", 
       description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
       icon: t2Image,
-      iconSize: { width: '190px', height: '169px' }
+      iconSize: { width: '170px', height: '160px' }
     },
     { 
       title: "Global reach", 
       description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
       icon: t3Image,
-      iconSize: { width: '177px', height: '166px' }
+      iconSize: { width: '170px', height: '150px' }
     },  
     { 
       title: "Lower costs", 
       description: "Tokenization reduces costs such as custody, transfer, and administration, resulting in lower fees for investors and increased returns for fund managers.",
       icon: t4Image,
-      iconSize: { width: '218px', height: '226px' }
+      iconSize: { width: '218px', height: '150px' }
     },
     { 
       title: "Faster settlement times", 
@@ -103,17 +103,106 @@ export default function TokenizationProcess({ onLaunchCreator }) {
 
   return (
     <section className="relative bg-white pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 lg:pb-12">
+      {/* Decorative background */}
+      <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-visible">
+        <svg
+          className="absolute left-1/2 -translate-x-1/2 w-[2685.21px] h-[1363px]"
+          viewBox="0 0 1920 1486"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="none"
+        >
+          <g filter="url(#filter0_f_972_811)">
+            <ellipse
+              cx="654.802"
+              cy="250.062"
+              rx="654.802"
+              ry="250.062"
+              transform="matrix(0.0122606 0.999925 0.997334 -0.0729724 1759.39 114.607)"
+              fill="url(#paint0_linear_972_811)"
+            />
+          </g>
+          <path
+            d="M2045.21 1317.39C2182.94 1307.31 2291.37 1035.88 2287.39 711.127C2283.41 386.376 2168.52 131.282 2030.79 141.36C1893.05 151.438 1784.62 422.871 1788.6 747.622C1792.58 1072.37 1907.47 1327.47 2045.21 1317.39Z"
+            fill="white"
+          />
+          <g filter="url(#filter1_f_972_811)">
+            <ellipse
+              cx="654.802"
+              cy="250.062"
+              rx="654.802"
+              ry="250.062"
+              transform="matrix(-0.0122606 0.999925 -0.997334 -0.0729724 144.605 97.6074)"
+              fill="url(#paint1_linear_972_811)"
+            />
+          </g>
+          <path
+            d="M-141.209 1300.39C-278.947 1290.31 -387.377 1018.88 -383.395 694.127C-379.413 369.376 -264.527 114.282 -126.79 124.36C10.9475 134.438 119.377 405.871 115.396 730.622C111.414 1055.37 -3.47239 1310.47 -141.209 1300.39Z"
+            fill="white"
+          />
+          <defs>
+            <filter
+              id="filter0_f_972_811"
+              x="1688.19"
+              y="16.9996"
+              width="657.253"
+              height="1468.22"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="39.55" result="effect1_foregroundBlur_972_811" />
+            </filter>
+            <filter
+              id="filter1_f_972_811"
+              x="-441.444"
+              y="-0.000389099"
+              width="657.253"
+              height="1468.22"
+              filterUnits="userSpaceOnUse"
+              colorInterpolationFilters="sRGB"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur stdDeviation="39.55" result="effect1_foregroundBlur_972_811" />
+            </filter>
+            <linearGradient
+              id="paint0_linear_972_811"
+              x1="697.903"
+              y1="-5.62463"
+              x2="700.179"
+              y2="185.239"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.40392" stopColor="#E4FFE8" />
+              <stop offset="0.750165" stopColor="white" />
+            </linearGradient>
+            <linearGradient
+              id="paint1_linear_972_811"
+              x1="697.903"
+              y1="-5.62463"
+              x2="700.179"
+              y2="185.239"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0.40392" stopColor="#E4FFE8" />
+              <stop offset="0.750165" stopColor="white" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
       {/* Main Content */}
       <div className="relative z-10 overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
-              <span className="text-white">WHY TOKENIZE?</span>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans text-black">
+              WHY <span className="text-emerald-600">TOKENIZE</span> ?
             </h2>
-            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed dm-sans">
-              Discover the key benefits that make tokenization the future of asset management and investment.
+            <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed dm-sans">
+              Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
             </p>
             {/* <button 
               onClick={onLaunchCreator} 
@@ -124,137 +213,93 @@ export default function TokenizationProcess({ onLaunchCreator }) {
             </button> */}
           </div>
 
-          {/* Why Tokenize Features - Two Row Layout */}
-          <div className="mt-12 sm:mt-16 lg:mt-20">
-            {/* Row 1 */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '32px',
-              marginBottom: '80px',
-              flexWrap: 'wrap'
-            }}>
-              {whyTokenizeFeatures.slice(0, 3).map((feature, index) => (
-                <div
-                  key={index}
-                  style={{
-                    width: '280px',
-                    padding: '20px',
-                    borderRadius: '12px',
-                    background: '#fff',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                    position: 'relative',
-                    overflow: 'visible',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    textAlign: 'left',
-                  }}
+          {/* Why Tokenize Features - Alternating Two-Column Layout */}
+          <div className="relative mt-12 sm:mt-16 lg:mt-20">
+            {/* Center vertical SVG line */}
+            <svg
+              className="hidden md:block absolute inset-y-0 left-1/2 -translate-x-1/2 h-full w-[28px] pointer-events-none select-none"
+              // Width fixed, height stretches with container
+              viewBox="0 0 28 937"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+            >
+              <g filter="url(#filter0_f_967_1007)">
+                <line
+                  x1="13.8008"
+                  y1="9.80078"
+                  x2="13.8007"
+                  y2="926.801"
+                  stroke="url(#paint0_linear_967_1007)"
+                  strokeWidth={8}
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_f_967_1007"
+                  x="0.000781059"
+                  y="0.000781059"
+                  width="27.6"
+                  height="936.6"
+                  filterUnits="userSpaceOnUse"
+                  colorInterpolationFilters="sRGB"
                 >
-                  <div style={{
-                    position: 'absolute',
-                    top: '-30px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '12px',
-                    background: 'linear-gradient(179.04deg, rgba(79,217,148,0.2) 57.8%, rgba(255,255,255,0.2) 101.33%)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    zIndex: 10,
-                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                  }}>
-                    {feature.icon && (
-                      <img
-                        src={feature.icon}
-                        alt={feature.title}
-                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
-                      />
-                    )}
-                  </div>
-                  <div style={{ marginTop: '40px', width: '100%' }}>
-                    <h3 style={{
-                      fontSize: '18px',
-                      fontWeight: '600',
-                      color: '#000',
-                      margin: '0 0 8px 0',
-                      textAlign: 'center'
-                    }}>
-                      {feature.title}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#333', lineHeight: '1.5', margin: '0' }}>
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
+                  <feFlood floodOpacity={0} result="BackgroundImageFix" />
+                  <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                  <feGaussianBlur stdDeviation="4.9" result="effect1_foregroundBlur_967_1007" />
+                </filter>
+                <linearGradient
+                  id="paint0_linear_967_1007"
+                  x1="9.30078"
+                  y1="9.80078"
+                  x2="9.80078"
+                  y2="967.801"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop />
+                  <stop offset="0.35498" stopColor="#28B580" />
+                  <stop offset="0.639707" stopColor="#34CB93" />
+                  <stop offset={1} stopColor="white" />
+                </linearGradient>
+              </defs>
+            </svg>
 
-            {/* Row 2 */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              gap: '32px',
-              flexWrap: 'wrap'
-            }}>
-              {whyTokenizeFeatures.slice(3, 6).map((feature, index) => (
-                <div
-                  key={index + 3}
-                  style={{
-                    width: '280px',
-                    padding: '20px',
-                    borderRadius: '12px',
-                    background: '#fff',
-                    boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
-                    position: 'relative',
-                    overflow: 'visible',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'flex-start',
-                    textAlign: 'left',
-                  }}
-                >
-                  <div style={{
-                    position: 'absolute',
-                    top: '-30px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    width: '60px',
-                    height: '60px',
-                    borderRadius: '12px',
-                    background: 'linear-gradient(179.04deg, rgba(79,217,148,0.2) 57.8%, rgba(255,255,255,0.2) 101.33%)',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    zIndex: 10,
-                    boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
-                  }}>
-                    {feature.icon && (
-                      <img
-                        src={feature.icon}
-                        alt={feature.title}
-                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
-                      />
-                    )}
+            <div className="space-y-16 md:space-y-24">
+              {whyTokenizeFeatures.map((feature, index) => {
+                const isRight = index % 2 === 0; // even indices on the right (Programable terms etc.)
+                return (
+                  <div
+                    key={index}
+                    className={`relative flex flex-col md:flex-row ${isRight ? 'md:justify-end' : 'md:justify-start'} items-start`}
+                  >
+                    <div
+                      className={`flex items-start gap-6 max-w-lg ${isRight ? '' : 'md:flex-row-reverse text-right'}`}
+                    >
+                      {/* Icon */}
+                      {feature.icon && (
+                        <img
+                          src={feature.icon}
+                          alt={feature.title}
+                          style={{
+                            width: feature.iconSize?.width || '64px',
+                            height: feature.iconSize?.height || '64px',
+                            objectFit: 'contain'
+                          }}
+                        />
+                      )}
+                      {/* Text */}
+                      <div>
+                        <h3 className="text-emerald-600 font-semibold text-lg mb-2">
+                          {feature.title}
+                        </h3>
+                        <p className="text-gray-700 text-base leading-relaxed">
+                          {feature.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div style={{ marginTop: '40px', width: '100%' }}>
-                    <h3 style={{
-                      fontSize: '18px',
-                      fontWeight: '600',
-                      color: '#000',
-                      margin: '0 0 8px 0',
-                      textAlign: 'center'
-                    }}>
-                      {feature.title}
-                    </h3>
-                    <p style={{ fontSize: '14px', color: '#333', lineHeight: '1.5', margin: '0' }}>
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>
