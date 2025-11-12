@@ -6,7 +6,7 @@ import Stockgraph from "../assets/Stockgraph.png";
 
 const Benefits = () => {
   return (
-    <section className="relative isolate mt-16 sm:mt-20 md:mt-24 lg:mt-32 bg-black text-white px-4 sm:px-6 lg:px-8">
+    <section className="relative isolate mt-16 sm:mt-12 md:mt-24 lg:mt-32 bg-black text-white px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-x-0 top-0 -translate-y-1/3 h-[420px] bg-[radial-gradient(circle_at_top,#0c3e29,transparent_65%)] opacity-40 blur-3xl pointer-events-none" />
       <div className="absolute inset-x-0 bottom-0 translate-y-1/3 h-[380px] bg-[radial-gradient(circle_at_bottom,#09311f,transparent_60%)] opacity-40 blur-3xl pointer-events-none" />
 

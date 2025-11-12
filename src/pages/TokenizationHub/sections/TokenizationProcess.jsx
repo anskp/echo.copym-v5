@@ -102,18 +102,17 @@ export default function TokenizationProcess({ onLaunchCreator }) {
   ];
 
   return (
-    <section className="relative -mt-[220px]">
+    <section className="relative bg-white pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 lg:pb-12">
       {/* Main Content */}
-      <div className="relative z-10 sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-2 sm:pt-3 lg:pt-4 pb-8 sm:pb-10 lg:pb-12 overflow-hidden">
+      <div className="relative z-10 overflow-hidden">
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-4 sm:mb-5 lg:mb-6">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-2 sm:mb-3 dm-sans">
-              <span className="text-[#15a36e]">WHY </span>
-              <span className="text-black">TOKENIZE?</span>
+          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
+              <span className="text-white">WHY TOKENIZE?</span>
             </h2>
-            <p className="text-white/80 max-w-3xl mx-auto text-[10px] sm:text-xs lg:text-sm mb-3 sm:mb-4 px-4 dm-sans">
+            <p className="text-white text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed dm-sans">
               Discover the key benefits that make tokenization the future of asset management and investment.
             </p>
             {/* <button 
@@ -126,7 +125,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
           </div>
 
           {/* Why Tokenize Features - Two Row Layout */}
-          <div className="mt-4 sm:mt-6 lg:mt-8">
+          <div className="mt-12 sm:mt-16 lg:mt-20">
             {/* Row 1 */}
             <div style={{
               display: 'flex',
