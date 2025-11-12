@@ -63,7 +63,7 @@ const TokenizeAssetsSection = () => {
         </div>
 
         {/* Assets Grid - Responsive and fits window */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 lg:gap-7 xl:gap-8 overflow-visible w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 overflow-visible w-full">
           {assets?.map((asset, index) => {
             const isHovered = hoveredCard === asset.id;
             
@@ -77,10 +77,11 @@ const TokenizeAssetsSection = () => {
             >
               {/* Asset Card */}
               <div 
-                className={`rounded-lg p-4 sm:p-5 md:p-6 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
+                className={`rounded-lg p-3 sm:p-4 md:p-4 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
                 style={{ 
                   overflow: 'visible', 
-                  minHeight: 'fit-content',
+                  minHeight: '420px',
+                  maxHeight: '480px',
                   background: isHovered ? '#000000' : 'linear-gradient(to bottom, #fbfbfb, #f0f0f0)'
                 }}
               >
@@ -89,11 +90,11 @@ const TokenizeAssetsSection = () => {
                   className="absolute font-semibold pointer-events-none z-0 transition-colors duration-300" 
                   style={{ 
                     fontFamily: 'Palanquin, sans-serif', 
-                    fontSize: 'clamp(100px, 12vw, 200px)',
+                    fontSize: 'clamp(90px, 9vw, 90px)',
                     lineHeight: '0.9',
-                    top: '0px',
-                    left: '0px',
-                    opacity: '0.35',
+                    top: '20px',
+                    left: '-10px',
+                    opacity: '0.40',
                     transform: 'translate(-12px, -12px)',
                     color: isHovered ? '#15a36e' : '#9ca3af'
                   }}
@@ -102,50 +103,47 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* ROI Badge - positioned in top-left of card content area */}
-                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 z-20">
-                  <span className="text-xs sm:text-sm font-normal" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <div className="absolute top-2 sm:top-3 left-2 sm:left-7 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-2xl px-2 sm:px-2.5 py-0.5 sm:py-1 z-20">
+                  <span className="text-xs font-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     <span className="text-[#15a36e] font-semibold">76%</span>
                     <span className="text-black group-hover:text-black"> ROI</span>
                   </span>
                 </div>
 
                 {/* Asset Image - positioned at right side of card */}
-                <div className="flex items-center justify-end mb-1 mt-12 sm:mt-14 md:mt-16 relative z-10">
+                <div className="flex items-center justify-end mb-0 relative z-10 w-full" style={{ marginTop: index === 2 ? '-125px' : index === 3 ? '-75px' : index === 0 ? '-70px' : '-20px' }}>
                   <img 
                     src={asset?.image} 
                     alt={asset?.title}
                     className="h-auto object-contain"
                     style={{ 
-                      maxHeight: 'clamp(180px, 28vw, 350px)',
-                      maxWidth: '80%',
-                      marginRight: '-17px'
+                      maxHeight: 'clamp(320px, 45vw, 500px)',
+                      maxWidth: '100%',
+                      width: 'auto',
+                      height: 'auto',
+                      marginRight: '-17px',
+                      objectPosition: 'center'
                     }}
                   />
                 </div>
 
                 {/* Asset Info - consistent left alignment for all cards */}
-                <div className="text-left space-y-1 sm:space-y-4 relative z-10">
+                <div className="absolute bottom-0 left-0 right-0 text-left space-y-1 sm:space-y-2 md:space-y-3 z-10 px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
                   <h3 
-                    className="text-lg sm:text-xl md:text-2xl font-bold transition-colors duration-300" 
+                    className="text-base sm:text-lg md:text-xl font-bold transition-colors duration-300" 
                     style={{ fontFamily: 'Palanquin, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.title}
                   </h3>
                   
                   <p 
-                    className="text-xs sm:text-sm md:text-base font-normal leading-relaxed transition-colors duration-300" 
-                    style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
+                    className="text-xs sm:text-xs md:text-sm font-normal leading-snug transition-colors duration-300 line-clamp-3" 
+                    style={{ fontFamily: 'Palanquin, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.description}
                   </p>
                   
-                  <div className="text-xs sm:text-sm md:text-base font-semibold space-y-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    <div 
-                      className="transition-colors duration-300" 
-                      style={{ color: isHovered ? '#ffffff' : '#000000' }}
-                    >
-                      76% ROI
-                    </div>
+                  <div className="text-xs sm:text-xs md:text-sm font-semibold space-y-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     <div className="text-[#15a36e]">{asset?.apy || asset?.apr}</div>
                   </div>
                 </div>
