@@ -295,7 +295,7 @@ main {
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  color: #1e40af;
+  color: #000;
   text-decoration: none;
   border-radius: 40px;
   transition: all 0.3s ease;
@@ -376,12 +376,13 @@ main {
 
 /* Page-specific background styles */
 .copym-ai-page {
-  background-color: #ffffff;
+  /* Changed to solid light blue background */
+  background-color: black; /* Tailwind's blue-100 to match HomePage */
   min-height: 100vh;
 }
 
 .copym-ai-page .section {
-  background: transparent;
+  background:black;
 }
 
 .copym-ai-page .hero-section {
