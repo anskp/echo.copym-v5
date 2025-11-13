@@ -68,14 +68,8 @@ export default function AccessPage() {
     { icon: GiDiamonds, title: "Institutional Rails", description: "Custody, settlement, and data rooms integrated", color: "from-orange-500 to-red-500" }
   ];
 
-  const unlockFeatures = [
-    { icon: "/assets/Images/icons/a1.png", text: "Token-gated content and insider market reports" },
-    { icon: "/assets/Images/icons/t4.png", text: "Lower platform trading fees" },
-    { icon: "/assets/Images/icons/rwa2.png", text: "Limited-edition NFT collectibles" },
-    { icon: "/assets/Images/icons/a4.png", text: "Invitations to COPYM IRL meetups and global summits" },
-    { icon: "/assets/Images/icons/a5.png", text: "Early access to new asset tokenizations" },
-    { icon: "/assets/Images/icons/a6.png", text: "Governance voting rights in COPYM DAO decisions" }
-  ];
+  
+  
 
   // Advanced GSAP Animations
   useGSAP(pageRef, () => {
@@ -304,54 +298,19 @@ export default function AccessPage() {
       {/* Pass Unlocks Section */}
       <PassUnlocksSection />
 
-               {/* Unlock Features - Reimagined with Platform Features Style */}
-       <section className="relative">
-         {/* Main Content with Curved Background */}
-         <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
-           {/* Background Pattern */}
-           <div className="absolute inset-0 opacity-10">
-             <div className="absolute inset-0 bg-gradient-to-r from-emerald-400/20 to-emerald-500/20"></div>
-           </div>
+                {/* Unlock Features - Reimagined with Platform Features Style */}
+        <section className="relative">
+          {/* Main Content with Curved Background */}
+          <div className="relative z-10 bg-black rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-400/20 to-gray-500/20"></div>
+            </div>
 
            {/* Content Container */}
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-             {/* Section Title */}
-             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
-                 <span className="text-white">EVERYTHING YOUR</span>
-                 <br />
-                 <span className="text-black">PASS UNLOCKS</span>
-               </h2>
-               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
-                 Discover the exclusive benefits and features that come with your COPYM Access Pass
-               </p>
-             </div>
-
-             {/* Feature Cards Grid - Platform Features Style */}
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
-               {unlockFeatures.map((feature, index) => (
-                 <div key={index} className="text-center">
-                 <div className="flex flex-col items-center mb-3 sm:mb-4">
-                     <div className="flex items-center justify-center mb-3 sm:mb-4">
-                       <img 
-                         src={feature.icon} 
-                         alt={`Feature ${index + 1}`}
-                         className="w-8 h-8 object-contain filter brightness-0 invert"
-                       />
-                   </div>
-                     <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">
-                       {feature.text.split(' ').slice(0, 2).join(' ')}
-                     </h3>
-                 </div>
-                 <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                     {feature.text}
-                 </p>
-               </div>
-               ))}
-             </div>
-
-                           {/* Credential Card Section */}
-              <div className="text-center mt-12 sm:mt-16 lg:mt-20">
+             {/* Credential Card Section */}
+              <div className="text-center pt-8 sm:pt-12 lg:pt-16">
                 <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 dm-sans">Your Access Credential</h3>
                 <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base dm-sans">
                   Your digital identity that unlocks exclusive access to the COPYM ecosystem.
@@ -379,164 +338,134 @@ export default function AccessPage() {
          </div>
                </section>
 
-        {/* Breathing Space After Unlock Features */}
-        <div className="py-16 sm:py-20 lg:py-24"></div>
-
         {/* Benefits Section */}
        <div id="benefits-section" ref={benefitsRef} className="mb-20">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
            <div className="space-y-8">
              {/* Section Title */}
-             <div className="text-center">
-               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-4 uppercase dm-sans reveal-text">
-                 Why Get the COPYM Access Pass?
-               </h2>
-               <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 rounded-full mx-auto"></div>
-               <p className="text-gray-700 mt-6 text-lg leading-relaxed max-w-3xl mx-auto dm-sans">
-                 Unlock exclusive benefits and early access to the most promising real-world asset opportunities in the Web3 ecosystem.
-               </p>
-             </div>
+             
 
                            {/* Benefits Cards */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <div
-                    key={index}
-                    className="text-center group"
-                  >
-                    {/* Icon with enhanced styling */}
-                    <div className="flex justify-center mb-6">
-                      <Box
-                        className="w-16 h-16 rounded-2xl flex items-center justify-center text-2xl card-icon group-hover:scale-110 transition-transform duration-300"
-                        sx={{
-                          background: "linear-gradient(135deg, #10b981, #059669)",
-                          boxShadow: "0 8px 32px rgba(16, 185, 129, 0.3)",
-                        }}
-                      >
-                        <benefit.icon className="h-8 w-8 text-white" />
-                      </Box>
-                    </div>
-
-                    {/* Content */}
-                    <h3 className="font-black text-xl mb-4 text-gray-900 group-hover:text-emerald-600 transition-colors uppercase dm-sans">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-700 leading-relaxed text-base dm-sans">
-                      {benefit.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
+            
            </div>
          </div>
        </div>
 
               {/* Platform Features - TokenizationHub Style Cards */}
-       <section className="relative">
-         {/* Main Content with Curved Background */}
-         <div className="relative z-10 bg-emerald-600 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+       <section className="relative bg-white">
+         {/* Main Content */}
+         <div className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
-                 <span className="text-white">PLATFORM</span>
+                 <span className="text-black">PLATFORM</span>
                  <br />
-                 <span className="text-black">FEATURES</span>
+                 <span className="text-[#15a36e]">FEATURES</span>
                </h2>
-               <p className="text-white/80 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
+               <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>
 
                            {/* Feature Cards Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mt-8 sm:mt-12 lg:mt-16">
+              <div className="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 lg:mt-16">
                 {/* Card 1: Compliance-first */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/t6.png" alt="Compliance-first" className="w-6 h-6 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Compliance-first</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Compliance-first</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature1.png" alt="Compliance-first" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
 
                 {/* Card 2: Utility & Access */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/agraph.png" alt="Utility & Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Utility & Access</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        Early allocations, fee discounts, governance & staking perks for token holders.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Utility & Access</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    Early allocations, fee discounts, governance & staking perks for token holders.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature2.png" alt="Utility & Access" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
 
                 {/* Card 3: Multi-asset Support */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/m1.png" alt="Multi-asset Support" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Multi-asset Support</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        Equity, debt, real estate, commodities, carbon & more asset classes supported.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Multi-asset Support</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    Equity, debt, real estate, commodities, carbon & more asset classes supported.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature5.png" alt="Multi-asset Support" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
 
                 {/* Card 4: Institutional Rails */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/adetails.png" alt="Institutional Rails" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Institutional Rails</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        Custody, settlement, and data rooms integrated for institutional investors.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Institutional Rails</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    Custody, settlement, and data rooms integrated for institutional investors.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature6.png" alt="Institutional Rails" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
 
                 {/* Card 5: Security & Trust */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/a5.png" alt="Security & Trust" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Security & Trust</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        Enterprise-grade security with multi-layer protection and audit trails.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Security & Trust</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    Enterprise-grade security with multi-layer protection and audit trails.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature7.png" alt="Security & Trust" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
 
                 {/* Card 6: Global Access */}
-                <div className="text-center">
-                  <div className="flex flex-col items-center mb-3 sm:mb-4">
-                    <div className="flex items-center justify-center mb-3 sm:mb-4">
-                      <img src="/assets/Images/icons/t3.png" alt="Global Access" className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-12 object-contain filter brightness-0 invert" />
+                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                  <div className="flex items-center text-left">
+                    <div>
+                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Global Access</h3>
+                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
+                        24/7 global access to tokenized assets with real-time market data.
+                      </p>
                     </div>
-                    <h3 className="text-white font-semibold text-sm sm:text-base lg:text-lg mb-2 dm-sans">Global Access</h3>
                   </div>
-                  <p className="text-white/80 text-xs sm:text-sm lg:text-base dm-sans">
-                    24/7 global access to tokenized assets with real-time market data.
-                  </p>
+                  <div className="flex items-center justify-start">
+                    <img src="/assets/Images/icons/Feature8.png" alt="Global Access" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
+                  </div>
                 </div>
               </div>
            </div>
          </div>
                </section>
 
-        {/* Breathing Space After Platform Features */}
-        <div className="py-16 sm:py-20 lg:py-24"></div>
-
        {/* Supported Networks */}
-      <div ref={networksRef} className="mb-20">
+      <div ref={networksRef} className="bg-[#E9F6F1] py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase dm-sans reveal-text">
@@ -579,25 +508,7 @@ export default function AccessPage() {
       </div>
 
       {/* Final CTA */}
- <div ref={ctaRef} className="text-center my-16 sm:my-24 lg:my-32 bg-white pb-16 sm:pb-24 lg:pb-32">        
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-emerald-500 to-blue-500 rounded-3xl p-12 sm:p-16 lg:p-20 text-white">
-            <GiCrown className="w-16 h-16 mx-auto mb-6 text-white/80" />
-            <h3 className="text-3xl font-black mb-4 uppercase dm-sans">
-              Ready to Join the Elite?
-            </h3>
-            <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto dm-sans">
-              Don't miss out on exclusive access to the future of real-world
-              asset tokenization.
-            </p>
-            <button className="bg-blue-100 text-emerald-600 hover:bg-gray-50 magnetic-button group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-base sm:text-lg transition-all duration-300 flex items-center mx-auto transform hover:scale-105 dm-sans">
-                              
-                Get Your Access Pass Now
-                
-            </button>
-          </div>
-        </div>
-      </div>
+
     </div>
   );
 }

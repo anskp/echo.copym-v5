@@ -9,24 +9,34 @@ import ScrollToTop from "../../components/ScrollToTop";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 // import GreenCurves from "./components/GreenCurves";
+import { Player } from '@lottiefiles/react-lottie-player';
+import FlowingB from "./assets/FlowingB.json";
 
 const CopymAI = () => {
   return (
     <>
       <div className="min-h-screen w-full relative bg-black">
-        {/* Arctic Lights Background with Top Glow */}
-        <div
-          className="absolute top-0 right-0 w-full h-full z-0"
-          style={{
-            background: "radial-gradient(ellipse 80% 60% at 100% 0%, rgba(34, 197, 94, 0.25), transparent 70%), #000000",
-          }}
-        />
         
         {/* Your Content/Components */}
         <div className="copym-ai-page pt-[1.75rem] lg:pt-[5.25rem] overflow-hidden relative z-10">
           <Hero />
           
           <Benefits />
+          
+          {/* Flowing Lottie Animation */}
+          <div className="w-full bg-black py-8 sm:py-12 lg:py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-end items-center">
+                <Player
+                  autoplay
+                  loop
+                  src={FlowingB}
+                  style={{ height: '100%', width: '100%', maxWidth: '800px' }}
+                />
+              </div>
+            </div>
+          </div>
+          
           <Collaboration />
           <Services />
           <Testimonials />
