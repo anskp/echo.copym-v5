@@ -1,23 +1,8 @@
-import { useState } from "react";
-import { service1, service2, service3, check, ethereum, bitcoin, polygon, solana, copymColoredIcon } from "../assets";
 import Floatingbits from "../../../components/SVG/Floatingbits.svg";
-import { brainwaveServices, brainwaveServicesIcons } from "../constants";
-import Button from "./Button";
 import Heading from "./Heading";
 import Section from "./Section";
-import {
-  PhotoChatMessage,
-  VideoBar,
-  VideoChatMessage,
-} from "./design/Services";
 
 const Services = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const [openDropdown, setOpenDropdown] = useState(null);
-
-  const toggleDropdown = (dropdown) => {
-    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
-  };
 
   return (
     <Section id="how-to-use" className="bg-black text-white">
