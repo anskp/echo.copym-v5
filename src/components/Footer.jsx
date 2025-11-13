@@ -6,14 +6,7 @@ export default function Footer() {
     <footer className="relative bg-black text-white overflow-hidden">
       {/* Atmospheric glow */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-black/95 to-[#0b3b2c]" />
-        <div
-          className="absolute inset-x-0 bottom-[-35%] h-[70%] opacity-80"
-          style={{
-            background:
-              'radial-gradient(circle at 50% 20%, rgba(16,185,129,0.4), transparent 55%)',
-          }}
-        />
+        <div className="absolute inset-0 bg-black" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
@@ -86,31 +79,28 @@ export default function Footer() {
           {/* Newsletter */}
           <div className="space-y-6">
             <div>
-              <h3 className="uppercase tracking-[0.18em] text-xs text-gray-400 font-semibold">
-                Join Our Newsletter
+              <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline">
+                JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-4 text-sm sm:text-base text-gray-300 leading-relaxed">
-                To know more subscribe to our weekly updates.
+              <p className="mt-4 text-sm sm:text-base text-white leading-relaxed uppercase">
+                TO KNOW MORE SUBCRIBE TO OUR
               </p>
             </div>
             <form className="space-y-3">
-              <div className="flex items-center rounded-full bg-white/10 backdrop-blur border border-white/10 focus-within:border-emerald-400/70 transition">
+              <div className="flex items-center rounded-lg overflow-hidden">
                 <input
                   type="email"
                   required
-                  placeholder="Enter your e-mail address"
-                  className="flex-1 bg-transparent placeholder:text-gray-400 text-sm sm:text-base text-white px-5 py-3 focus:outline-none"
+                  placeholder="Enter your E-Mail Address"
+                  className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 text-sm sm:text-base px-5 py-3 focus:outline-none"
                 />
                 <button
                   type="submit"
-                  className="mr-1 inline-flex items-center rounded-full bg-emerald-500 px-5 py-2 text-sm font-semibold text-white hover:bg-emerald-400 transition"
+                  className="inline-flex items-center bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-400 transition"
                 >
                   Subscribe
                 </button>
               </div>
-              <p className="text-xs text-gray-500">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
             </form>
           </div>
         </div>
@@ -129,8 +119,12 @@ export default function Footer() {
       </div>
 
       {/* Massive watermark */}
-      <div className="pointer-events-none absolute bottom-[-6%] left-1/2 -translate-x-1/2 text-white/5 text-[clamp(6rem,18vw,14rem)] font-extrabold tracking-[0.15em] select-none">
-        COPYM
+      <div className="pointer-events-none absolute bottom-[-35%] left-1/2 -translate-x-1/2 opacity-100 select-none">
+        <img
+          src="/assets/copym/png/Header-copym.png"
+          alt="COPYM"
+          className="w-[1400px] h-[600px] object-contain"
+        />
       </div>
     </footer>
   );

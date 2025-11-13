@@ -17,48 +17,86 @@ import {
   GiBinoculars,
   GiHourglass
 } from "react-icons/gi";
+import Button from "../../components/ui/NewButton";
+import accesspassVideo from "../../components/Videos/Accesspass-vdo.mp4";
 
 
 const AboutUs = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Section 1: Hero Section */}
-            <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
-                {/* Background Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen lg:min-h-[800px] overflow-hidden">
+                {/* Background Video */}
+                <div className="absolute inset-0 z-0">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    >
+                        <source src={accesspassVideo} type="video/mp4" />
+                    </video>
+                    {/* Light overlay to maintain readability and light aesthetic */}
+                    <div className="absolute inset-0 bg-white/70"></div>
                 </div>
 
-                {/* Fluid Blob Background removed */}
-                
-                {/* Background Pattern */}
-                <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
-                
-                                 {/* Hero Content */}
-                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16 sm:pb-20 lg:pb-24">
-                    <div className="text-center space-y-8">
-                        {/* Badge */}
-                        <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200 shadow-lg">
-                            <div className="w-3 h-3 bg-gradient-to-r from-blue-500 to-green-600 rounded-full animate-pulse"></div>
-                            <span className="text-sm font-medium text-gray-700">Leading RWA Tokenization Platform</span>
-                        </div>
-                        
-                        {/* Main Title */}
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black tracking-tight leading-tight mb-4 sm:mb-6 uppercase anton-regular">
-                            <span className="text-gray-900">About</span>{" "}
-                            <span className="text-blue-600">COPYm</span>
-                        </h1>
-                        
-                        {/* Subtitle */}
-                        <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-2xl mx-auto">
-                            Transforming asset ownership through blockchain innovation and institutional-grade tokenization
-                        </p>
-                        
-                        {/* CTA Button */}
-                        <div className="flex justify-center pt-8">
-                            <button className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 font-semibold text-white bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 text-sm sm:text-base rounded-full">
-                                Explore Our Journey
-                            </button>
+                {/* Subtle Geometric Pattern Background */}
+                <div className="absolute inset-0 z-[1] opacity-[0.05]">
+                    <div 
+                        className="w-full h-full"
+                        style={{
+                            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,0.1) 35px, rgba(0,0,0,0.1) 70px)`,
+                        }}
+                    ></div>
+                </div>
+
+                <div className="relative z-10 w-full h-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-[56px] flex items-center justify-center">
+                    <div className="flex flex-col items-center justify-center w-full">
+                        <div className="flex flex-col items-center justify-center w-full max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px] mx-auto">
+                            
+                            {/* Main Heading */}
+                            <h1 className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-[30px] xl:mb-[40px]">
+                                <span className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold leading-[28px] sm:leading-[35px] md:leading-[42px] lg:leading-[53px] xl:leading-[60px] text-gray-900 font-palanquin">
+                                    EXPLORE TOKENIZED{' '}
+                                </span>
+                                <span className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold leading-[28px] sm:leading-[35px] md:leading-[42px] lg:leading-[53px] xl:leading-[60px] text-[#23bd83] font-palanquin">
+                                    REAL-WORLD ASSETS
+                                </span>
+                            </h1>
+                            
+                            {/* Description */}
+                            <div className="flex flex-col items-center justify-center w-full">
+                                <p className="text-[16px] sm:text-[20px] md:text-[26px] lg:text-[32px] xl:text-[36px] font-normal leading-[29px] sm:leading-[36px] md:leading-[46px] lg:leading-[57px] xl:leading-[64px] text-center text-gray-700 font-palanquin w-full mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
+                                    Transforming asset ownership through blockchain innovation and institutional-grade tokenization
+                                </p>
+                                
+                                {/* Hero Image Stack */}
+                                <div className="relative w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] h-[200px] sm:h-[280px] md:h-[360px] lg:h-[450px] xl:h-[550px] mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
+                                    <img
+                                        src="/assets/copym/png/Copym-3d.png"
+                                        alt="Real World Asset Tokenization"
+                                        className="absolute inset-0 w-full h-full object-contain"
+                                    />
+                                </div>
+                                
+                                {/* CTA Button */}
+                                <Button
+                                    text="EXPLORE OUR JOURNEY"
+                                    text_font_size="text-[11px] sm:text-[14px] md:text-[18px] lg:text-[22px] xl:text-[24px]"
+                                    text_font_family="Palanquin"
+                                    text_font_weight="font-bold"
+                                    text_line_height="leading-[20px] sm:leading-[25px] md:leading-[31px] lg:leading-[39px] xl:leading-[42px]"
+                                    text_color="text-text-white"
+                                    fill_background_color=""
+                                    border_border_radius="rounded-[18px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[36px] xl:rounded-[40px]"
+                                    padding="px-[17px] sm:px-[22px] md:px-[28px] lg:px-[34px] xl:px-[40px] py-[8px] sm:py-[10px] md:py-[13px] lg:py-[16px] xl:py-[18px]"
+                                    className="w-auto shadow-lg"
+                                    style={{
+                                        background: "linear-gradient(180deg, #23bd83cc 0%, #109261cc 100%)"
+                                    }}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
