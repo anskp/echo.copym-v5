@@ -45,8 +45,8 @@ function TestimonialCard({ testimonial }) {
     <motion.div 
       className="relative flex-shrink-0 overflow-hidden"
       style={{
-        width: '320px',
-        height: '340px'
+        width: '280px',
+        height: '300px'
       }}
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
@@ -65,8 +65,8 @@ function TestimonialCard({ testimonial }) {
         style={{
           bottom: '0',
           right: '0',
-          width: '200px',
-          height: '200px',
+          width: '160px',
+          height: '160px',
           background: 'radial-gradient(circle at 100% 100%, #E5FFF5 0%, #FFFFFF 100%)',
           borderRadius: '0 0 28px 0'
         }}
@@ -76,9 +76,9 @@ function TestimonialCard({ testimonial }) {
       <div 
         className="absolute flex items-start gap-3"
         style={{
-          top: '24px',
-          left: '24px',
-          right: '24px',
+          top: '20px',
+          left: '20px',
+          right: '20px',
           zIndex: 5
         }}
       >
@@ -86,8 +86,8 @@ function TestimonialCard({ testimonial }) {
         <div 
           className="flex-shrink-0 rounded-full overflow-hidden"
           style={{
-            width: '64px',
-            height: '64px'
+            width: '56px',
+            height: '56px'
           }}
         >
           <img
@@ -107,14 +107,14 @@ function TestimonialCard({ testimonial }) {
           {/* Name */}
           <h4 
             style={{
-              fontFamily: 'Palanquin, sans-serif',
+              fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '20px',
-              lineHeight: '28px',
+              fontSize: '18px',
+              lineHeight: '24px',
               color: '#000',
               margin: 0,
               padding: 0,
-              marginBottom: '3px'
+              marginBottom: '2px'
             }}
           >
             {testimonial.name}
@@ -123,13 +123,13 @@ function TestimonialCard({ testimonial }) {
           {/* Title */}
           <p 
             style={{
-              fontFamily: 'Palanquin, sans-serif',
-              fontSize: '16px',
-              lineHeight: '22px',
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '14px',
+              lineHeight: '20px',
               color: '#000',
               margin: 0,
               padding: 0,
-              marginBottom: '3px'
+              marginBottom: '2px'
             }}
           >
             {testimonial.title}
@@ -138,9 +138,9 @@ function TestimonialCard({ testimonial }) {
           {/* Company */}
           <p 
             style={{
-              fontFamily: 'Palanquin, sans-serif',
-              fontSize: '16px',
-              lineHeight: '22px',
+              fontFamily: 'DM Sans, sans-serif',
+              fontSize: '14px',
+              lineHeight: '20px',
               color: '#15A36E',
               margin: 0,
               padding: 0
@@ -155,18 +155,18 @@ function TestimonialCard({ testimonial }) {
       <div 
         className="absolute"
         style={{
-          top: '110px',
-          left: '24px',
-          right: '24px',
-          bottom: '24px',
+          top: '100px',
+          left: '20px',
+          right: '20px',
+          bottom: '20px',
           paddingRight: '8px'
         }}
       >
         <p 
           style={{
-            fontFamily: 'Palanquin, sans-serif',
-            fontSize: '18px',
-            lineHeight: '28px',
+            fontFamily: 'DM Sans, sans-serif',
+            fontSize: '16px',
+            lineHeight: '24px',
             color: '#000',
             margin: 0,
             padding: 0
@@ -194,7 +194,7 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
   return (
     <div className="overflow-hidden py-4">
       <motion.div
-        className="flex gap-6"
+        className="flex gap-10"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
@@ -217,11 +217,11 @@ export default function TestimonialsSection() {
       {/* heading */}
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
         <div className="text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 dm-sans ">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-gray-900">Trusted by Industry </span>
             <span className="text-emerald-600">Leaders</span>
           </h2>
-          <p className="text-black max-w-2xl mx-auto text-lg">
+          <p className="text-black max-w-2xl mx-auto text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
           </p>
         </div>

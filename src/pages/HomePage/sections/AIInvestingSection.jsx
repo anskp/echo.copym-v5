@@ -6,17 +6,17 @@ import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="w-full max-w-[1452px] mx-auto px-4 sm:px-6 lg:px-14">
+    <section className="w-full bg-background-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden">
+      <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-8 sm:space-y-10 md:space-y-12">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold leading-tight mb-4 sm:mb-6 tracking-base uppercase" style={{ fontFamily: 'Palanquin' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 tracking-base uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-[#15a36e]"> CORA-AI</span>
               <span className="text-black"> THAT INVESTS WITH YOU </span>
             </h2>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin' }}>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
             </p>
             
@@ -24,15 +24,15 @@ export default function AIInvestingSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link
                 to="/CopymAI"
-                className="inline-flex items-center justify-center px-[34px] py-[10px] text_font_family=Palanquin
-                text_font_weight=font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white  rounded-full"
+                className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
+                style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 Explore Cora-AI
               </Link>
             </div>
             
             {/* Mobile Image */}
-            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-[100px] items-center">
+            <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-12 sm:mt-16 md:mt-20 lg:mt-[100px] items-center">
               <div className="relative z-20">
                 <img 
                   src="/assets/Images/Ai-fon-view.png" 
@@ -47,12 +47,12 @@ export default function AIInvestingSection() {
         {/* Desktop Layout (lg+) - Horizontal Layout with Grid */}
         <div className="hidden lg:flex flex-col items-center">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold leading-tight mb-4 sm:mb-6 tracking-base uppercase" style={{ fontFamily: 'Palanquin' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 tracking-base uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-[#15a36e]"> CORA-AI</span>
               <span className="text-black"> THAT INVESTS WITH YOU </span>
             </h2>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin' }}>
+            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
             </p>
             
@@ -60,8 +60,8 @@ export default function AIInvestingSection() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <Link
                 to="/CopymAI"
-                className="inline-flex items-center justify-center px-[34px] py-[10px] text_font_family=Palanquin
-                text_font_weight=font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white  rounded-full"
+                className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
+                style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 Explore Cora-AI
               </Link>
@@ -69,14 +69,14 @@ export default function AIInvestingSection() {
           </div>
 
           {/* AI Visualization with Grid */}
-          <div className="relative w-full max-w-[990px] mt-[-90px] mx-auto">
+          <div className="relative w-full max-w-[1500px] mt-[-90px] mx-auto">
             <div className="absolute inset-0 flex items-center justify-center z-0">
-  <img 
-    src={ellipse} 
-    alt="Background Circle" 
-    className="w-[400px] h-[400px] lg:w-[600px] lg:h-[600px]"
-  />
-</div>
+              <img 
+                src={ellipse} 
+                alt="Background Circle" 
+                className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]"
+              />
+            </div>
 
             {/* Content Grid */}
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[400px] lg:min-h-[500px]">
@@ -85,7 +85,7 @@ export default function AIInvestingSection() {
                 <img 
                   src="/assets/Images/Ai-fon-view.png" 
                   alt="AI Investment Interface" 
-                  className="w-64 h-80 mt-20 sm:w-96 sm:h-[384px] lg:w-[500px] lg:h-[600px]"
+                  className="w-64 h-80 mt-20 sm:w-96 sm:h-[384px] lg:w-[450px] lg:h-[540px] xl:w-[500px] xl:h-[600px]"
                 />
                 
                 {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}

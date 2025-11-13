@@ -13,7 +13,7 @@ export default function TrackYourCrypto() {
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[50px] sm:rounded-t-[75px] md:rounded-t-[100px]"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-4 sm:pb-6 md:pb-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pb-4 mt-[100px] sm:pb-6 md:pb-8">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Watch SVG with Phone Overlay */}
@@ -39,7 +39,7 @@ export default function TrackYourCrypto() {
 
           {/* Title */}
           <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
@@ -102,7 +102,7 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-4 sm:space-y-6 text-center lg:text-left order-1 lg:order-2">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed px-4 lg:px-0" style={{ fontFamily: 'DM Sans, sans-serif' }}>

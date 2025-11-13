@@ -13,7 +13,7 @@ import TestimonialsSection from "./sections/Testimonials";
 export default function HomePage() {
 
   return (
-     <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden">
+     <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden w-full">
       <Hero />
       {/* Lottie Cards Section - Replaced SVG layouts */}
       

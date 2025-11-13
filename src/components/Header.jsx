@@ -4,6 +4,7 @@ import { IoClose } from 'react-icons/io5';
 import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -120,6 +121,7 @@ export default function Header() {
               {activeDropdown === navItem && (
                 <motion.div
                   className="dropdown"
+                  
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
@@ -180,7 +182,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
               <img
-                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-01-1.png"}
+                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-02-1.png"}
                 alt="COPYM"
                 className="h-16 w-auto object-contain  -mt-6 sm:h-18 md:h-20"
               />

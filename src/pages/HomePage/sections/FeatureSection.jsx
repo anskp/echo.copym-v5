@@ -11,7 +11,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 w-full"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 w-full"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           <span className="text-black">OWN. </span>

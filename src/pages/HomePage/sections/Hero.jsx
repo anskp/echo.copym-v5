@@ -24,7 +24,7 @@ export default function Hero() {
 
       {/* ====== HERO CONTENT - RIGHT BOTTOM ====== */}
       <div className="relative z-10 w-full min-h-screen flex items-end justify-end px-4 sm:px-6 lg:px-8 xl:px-12 pb-8 sm:pb-12 lg:pb-10 xl:pb-5">
-        <div className="max-w-lg sm:max-w-xl text-right">
+        <div className="max-w-lg sm:max-w-xl w-full text-right">
           {/* ====== HEADLINE ====== */}
           <h1
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start font-bold leading-tight text-white mb-3 sm:mb-4"

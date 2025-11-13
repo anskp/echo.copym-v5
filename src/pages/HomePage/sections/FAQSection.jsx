@@ -103,20 +103,20 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+    <section className="relative py-7 -mt-[190px] sm:py-10 md:py-14 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             <span className="text-black">FREQUENTLY ASKED </span>
             <span className="text-[#15a36e]">QUESTIONS</span>
           </h2>
           <p 
-            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-4 sm:mb-6"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
           </p>
@@ -126,7 +126,7 @@ export default function FAQSection() {
             style={{
               borderRadius: "55px",
               background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)",
-              fontFamily: 'Palanquin, sans-serif',
+              fontFamily: 'DM Sans, sans-serif',
               minWidth: '200px'
             }}
           >
@@ -134,7 +134,7 @@ export default function FAQSection() {
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
           {/* Left Side - FAQ List */}
           <div className="space-y-4 order-2 lg:order-1">
             {faqs.map((faq, index) => (
@@ -151,7 +151,7 @@ export default function FAQSection() {
           {/* Right Side - Image and Support Info */}
           <div className="flex flex-col order-1 lg:order-2">
             {/* Image */}
-            <div className="mb-8 sm:mb-12 flex justify-center lg:justify-end">
+            <div className="mb-0 flex justify-center lg:justify-end">
               <img 
                 src="/assets/Images/ai-overvew.png" 
                 alt="FAQ Illustration"

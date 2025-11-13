@@ -53,11 +53,11 @@ const TokenizeAssetsSection = () => {
       <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16" style={{ maxWidth: '100%' }}>
         {/* Header Section */}
         <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-[#15a36e]">TOKENIZE</span>
             <span className="text-black"> REAL ASSETS</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access.
           </p>
         </div>
@@ -89,7 +89,7 @@ const TokenizeAssetsSection = () => {
                 <div 
                   className="absolute font-semibold pointer-events-none z-0 transition-colors duration-300" 
                   style={{ 
-                    fontFamily: 'Palanquin, sans-serif', 
+                    fontFamily: 'DM Sans, sans-serif', 
                     fontSize: 'clamp(90px, 9vw, 90px)',
                     lineHeight: '0.9',
                     top: '20px',
@@ -104,7 +104,7 @@ const TokenizeAssetsSection = () => {
 
                 {/* ROI Badge - positioned in top-left of card content area */}
                 <div className="absolute top-2 sm:top-3 left-2 sm:left-7 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-2xl px-2 sm:px-2.5 py-0.5 sm:py-1 z-20">
-                  <span className="text-xs font-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-xs font-normal" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     <span className="text-[#15a36e] font-semibold">76%</span>
                     <span className="text-black group-hover:text-black"> ROI</span>
                   </span>
@@ -131,19 +131,19 @@ const TokenizeAssetsSection = () => {
                 <div className="absolute bottom-0 left-0 right-0 text-left space-y-1 sm:space-y-2 md:space-y-3 z-10 px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
                   <h3 
                     className="text-base sm:text-lg md:text-xl font-bold transition-colors duration-300" 
-                    style={{ fontFamily: 'Palanquin, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.title}
                   </h3>
                   
                   <p 
                     className="text-xs sm:text-xs md:text-sm font-normal leading-snug transition-colors duration-300 line-clamp-3" 
-                    style={{ fontFamily: 'Palanquin, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.description}
                   </p>
                   
-                  <div className="text-xs sm:text-xs md:text-sm font-semibold space-y-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <div className="text-xs sm:text-xs md:text-sm font-semibold space-y-0.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     <div className="text-[#15a36e]">{asset?.apy || asset?.apr}</div>
                   </div>
                 </div>

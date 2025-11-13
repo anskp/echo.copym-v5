@@ -53,16 +53,16 @@ const Hero = () => {
         {/* Center video - 735x735 with blue border */}
         <div className="relative z-10 flex-1 flex items-center justify-center my-8 md:my-12">
           <div className="bg-black p-4 sm:p-6 md:p-8 rounded-lg">
-            <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
-              <video
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source src={coraVideo} type="video/mp4" />
-              </video>
+          <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={coraVideo} type="video/mp4" />
+            </video>
               {/* Retina image centered over video */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <img 
