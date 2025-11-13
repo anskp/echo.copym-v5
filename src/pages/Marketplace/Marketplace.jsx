@@ -3,6 +3,7 @@ import MarketSlider from "./sections/MarketSlider";
 import WhyInvestWithUs from "./sections/WhyInvestWithUs";
 import AppPeekSection from "./sections/AppPeekSection";
 import FAQsection from "./sections/FAQsection";
+
 import { Link } from "react-router-dom";
 
 export default function Marketplace() {

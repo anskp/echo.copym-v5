@@ -21,7 +21,7 @@ import {
 
 import CredentialCard from '../../components/CredentialCard';
 import { Player } from '@lottiefiles/react-lottie-player';
-import group492 from '../../components/lotties/Group-492.json';
+import PassUnlocksSection from '../Marketplace/sections/PassUnlocksSection';
 // Removed LavaLamp background
 
 // Import blockchain logos
@@ -237,7 +237,7 @@ export default function AccessPage() {
   return (
     <div ref={pageRef} className="min-h-screen bg-white">
       {/* Hero Section with TokenizationHub Style */}
-      <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:min-h-[70vh] max-h-[90vh] sm:max-h-[85vh] lg:max-h-[90vh] overflow-hidden">
+      <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:h-screen overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
@@ -246,7 +246,7 @@ export default function AccessPage() {
         {/* Background removed */}
 
         {/* Hero Content */}
-        <div ref={heroRef} className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 lg:pb-16">
+        <div ref={heroRef} className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           {/* AI-Powered Badge - Top of Content */}
           <div className="text-center mb-12">
             <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700 dm-sans">
@@ -300,29 +300,9 @@ export default function AccessPage() {
         </div>
              </section>
 
-      {/* Lottie Animation Section */}
-      <section className="relative py-12 sm:py-16 lg:py-20 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Lottie Animation */}
-          <motion.div
-            className="flex justify-center items-center w-full"
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            <div className="w-full h-[50vh] sm:h-[60vh] md:h-[70vh] lg:h-[80vh] max-h-[800px] flex items-center justify-center">
-              <Player
-                autoplay
-                loop
-                src={group492}
-                className="w-full h-full object-contain"
-                style={{ width: '100%', height: '100%' }}
-              />
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
+      {/* Pass Unlocks Section */}
+      <PassUnlocksSection />
 
                {/* Unlock Features - Reimagined with Platform Features Style */}
        <section className="relative">
