@@ -22,6 +22,8 @@ import {
 import CredentialCard from '../../components/CredentialCard';
 import { Player } from '@lottiefiles/react-lottie-player';
 import PassUnlocksSection from '../Marketplace/sections/PassUnlocksSection';
+import EllipseGreen from '../../components/images/Ellipse-greeen.png';
+import GroupedImages from '/assets/copym/png/Grouped-images.png';
 // Removed LavaLamp background
 
 // Import blockchain logos
@@ -289,20 +291,7 @@ export default function AccessPage() {
              </div>
 
             {/* Additional UI Elements */}
-            <div className="mt-16 flex justify-center space-x-8 opacity-60">
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span className="text-sm text-gray-600 dm-sans">Exclusive</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-emerald-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">Premium</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span className="text-sm text-gray-600">VIP Access</span>
-              </div>
-            </div>
+            
           </div>
         </div>
              </section>
@@ -314,21 +303,35 @@ export default function AccessPage() {
                 {/* Unlock Features - Reimagined with Platform Features Style */}
         <section className="relative">
           {/* Main Content with Curved Background */}
-          <div className="relative z-10 bg-black rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-400/20 to-gray-500/20"></div>
-            </div>
-
+          <div className="relative z-10 bg-black pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
            {/* Content Container */}
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Credential Card Section */}
-              <div className="text-center pt-8 sm:pt-12 lg:pt-16">
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4 dm-sans">Your Access Credential</h3>
-                <p className="text-white/80 mb-6 sm:mb-8 text-sm sm:text-base dm-sans">
-                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                </p>
-                <div className="flex justify-center">
+              <div className="text-center pt-8 sm:pt-12 lg:pt-16 relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
+                {/* Green Ellipse Background */}
+                <div 
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
+                >
+                  <img 
+                    src={EllipseGreen} 
+                    alt="Green ellipse background"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                
+                {/* Heading and Subheading - Above Center */}
+                <div className="relative z-10 mb-8 sm:mb-12 lg:mb-16">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl -mt-5 font-bold mb-3 sm:mb-4 dm-sans uppercase">
+                    <span className="text-white">YOUR </span>
+                    <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
+                  </h3>
+                  <p className="text-white/80 text-sm sm:text-base dm-sans">
+                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+                  </p>
+                </div>
+
+                {/* Card - Centered on Ellipse */}
+                <div className="relative z-10 flex justify-center items-center">
                   <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
                     <CredentialCard
                       user={{
@@ -372,8 +375,7 @@ export default function AccessPage() {
              {/* Section Title */}
              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
-                 <span className="text-black">PLATFORM</span>
-                 <br />
+                 <span className="text-black">PLATFORM </span>
                  <span className="text-[#15a36e]">FEATURES</span>
                </h2>
                <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
@@ -381,97 +383,13 @@ export default function AccessPage() {
                </p>
              </div>
 
-                           {/* Feature Cards Grid */}
-              <div className="flex flex-col gap-4 sm:gap-6 mt-8 sm:mt-12 lg:mt-16">
-                {/* Card 1: Compliance-first */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Compliance-first</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        KYC/AML, transfer restrictions, whitelisting and audit trails for regulatory compliance.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature1.png" alt="Compliance-first" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
-
-                {/* Card 2: Utility & Access */}
-                <div className="grid grid-cols-2 gap-3 sm:gap-4 bg-transparent border border-[#15a36e] rounded-[4px] p-3 sm:p-3">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Utility & Access</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        Early allocations, fee discounts, governance & staking perks for token holders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature2.png" alt="Utility & Access" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
-
-                {/* Card 3: Multi-asset Support */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Multi-asset Support</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        Equity, debt, real estate, commodities, carbon & more asset classes supported.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature5.png" alt="Multi-asset Support" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
-
-                {/* Card 4: Institutional Rails */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Institutional Rails</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        Custody, settlement, and data rooms integrated for institutional investors.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature6.png" alt="Institutional Rails" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
-
-                {/* Card 5: Security & Trust */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Security & Trust</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        Enterprise-grade security with multi-layer protection and audit trails.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature7.png" alt="Security & Trust" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
-
-                {/* Card 6: Global Access */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
-                  <div className="flex items-center text-left">
-                    <div>
-                      <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Global Access</h3>
-                      <p className="text-gray-900 text-sm sm:text-base dm-sans">
-                        24/7 global access to tokenized assets with real-time market data.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center justify-start">
-                    <img src="/assets/Images/icons/Feature8.png" alt="Global Access" className="w-40 h-40 sm:w-52 sm:h-52 lg:w-64 lg:h-64 object-contain rounded-[1px]" />
-                  </div>
-                </div>
+                           {/* Grouped Images */}
+              <div className="flex justify-center items-center mt-8 sm:mt-12 lg:mt-16">
+                <img 
+                  src={GroupedImages} 
+                  alt="Platform Features"
+                  className="w-full max-w-6xl h-auto object-contain"
+                />
               </div>
            </div>
          </div>

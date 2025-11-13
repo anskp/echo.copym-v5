@@ -63,7 +63,7 @@ export default function Hero() {
                   strokeWidth={2.5}
                   d="M9 5l7 7-7 7"
                 />
-              </svg>
+                </svg>
             </button>
             <button
               className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-white hover:text-gray-900 transition-all duration-300"

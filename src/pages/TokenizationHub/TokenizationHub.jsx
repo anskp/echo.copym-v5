@@ -9,6 +9,7 @@ import MinimalTokenizationDashboard from "./sections/IssuerSection.jsx";
 import HowToTokenize from "./sections/HowToTokenize.jsx";
 import TokenDistribution from "./sections/TokenDistribution.jsx";
 import InvestorManagement from "./sections/InvestorManagement.jsx";
+import PlatformFeatures from "./sections/PlatformFeatures.jsx";
 import FAQSection from "./sections/FAQSection.jsx";
 import FinalCTA from "./sections/FinalCTA.jsx";
 
@@ -37,6 +38,7 @@ export default function TokenizationHub() {
       <HowToTokenize />
       <TokenDistribution />
       <InvestorManagement />
+      <PlatformFeatures />
       <FAQSection />
       <FinalCTA />
 

@@ -85,7 +85,7 @@ export default function InvestorManagement() {
                     strokeWidth={2.5}
                     d="M9 5l7 7-7 7"
                   />
-                </svg>
+                  </svg>
               </button>
               
               {/* LEARN MORE Button */}
