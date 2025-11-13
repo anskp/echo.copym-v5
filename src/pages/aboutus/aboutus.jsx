@@ -17,8 +17,8 @@ import {
   GiBinoculars,
   GiHourglass
 } from "react-icons/gi";
-import Button from "../../components/ui/NewButton";
 import accesspassVideo from "../../components/Videos/Accesspass-vdo.mp4";
+import TestimonialsSection from "../HomePage/sections/Testimonials";
 
 
 const AboutUs = () => {
@@ -56,23 +56,23 @@ const AboutUs = () => {
                         <div className="flex flex-col items-center justify-center w-full max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px] mx-auto">
                             
                             {/* Main Heading */}
-                            <h1 className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-[30px] xl:mb-[40px]">
-                                <span className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold leading-[28px] sm:leading-[35px] md:leading-[42px] lg:leading-[53px] xl:leading-[60px] text-gray-900 font-palanquin">
+                            <h1 className="text-center mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-gray-900">
                                     EXPLORE TOKENIZED{' '}
                                 </span>
-                                <span className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] xl:text-[48px] font-bold leading-[28px] sm:leading-[35px] md:leading-[42px] lg:leading-[53px] xl:leading-[60px] text-[#23bd83] font-palanquin">
+                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-[#15a36e]">
                                     REAL-WORLD ASSETS
                                 </span>
                             </h1>
                             
                             {/* Description */}
                             <div className="flex flex-col items-center justify-center w-full">
-                                <p className="text-[16px] sm:text-[20px] md:text-[26px] lg:text-[32px] xl:text-[36px] font-normal leading-[29px] sm:leading-[36px] md:leading-[46px] lg:leading-[57px] xl:leading-[64px] text-center text-gray-700 font-palanquin w-full mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
+                                <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal leading-relaxed text-center text-gray-700 w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     Transforming asset ownership through blockchain innovation and institutional-grade tokenization
                                 </p>
                                 
                                 {/* Hero Image Stack */}
-                                <div className="relative w-full max-w-[600px] sm:max-w-[700px] md:max-w-[800px] lg:max-w-[900px] xl:max-w-[1000px] h-[200px] sm:h-[280px] md:h-[360px] lg:h-[450px] xl:h-[550px] mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
+                                <div className="relative w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[600px] h-[150px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[320px] mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
                                     <img
                                         src="/assets/copym/png/Copym-3d.png"
                                         alt="Real World Asset Tokenization"
@@ -81,21 +81,15 @@ const AboutUs = () => {
                                 </div>
                                 
                                 {/* CTA Button */}
-                                <Button
-                                    text="EXPLORE OUR JOURNEY"
-                                    text_font_size="text-[11px] sm:text-[14px] md:text-[18px] lg:text-[22px] xl:text-[24px]"
-                                    text_font_family="Palanquin"
-                                    text_font_weight="font-bold"
-                                    text_line_height="leading-[20px] sm:leading-[25px] md:leading-[31px] lg:leading-[39px] xl:leading-[42px]"
-                                    text_color="text-text-white"
-                                    fill_background_color=""
-                                    border_border_radius="rounded-[18px] sm:rounded-[24px] md:rounded-[30px] lg:rounded-[36px] xl:rounded-[40px]"
-                                    padding="px-[17px] sm:px-[22px] md:px-[28px] lg:px-[34px] xl:px-[40px] py-[8px] sm:py-[10px] md:py-[13px] lg:py-[16px] xl:py-[18px]"
-                                    className="w-auto shadow-lg"
-                                    style={{
-                                        background: "linear-gradient(180deg, #23bd83cc 0%, #109261cc 100%)"
-                                    }}
-                                />
+                                <button
+                                    className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+                                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                                >
+                                    EXPLORE OUR ASSETS
+                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                                    </svg>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -109,43 +103,47 @@ const AboutUs = () => {
                     
                     
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="text-center mb-16">
-                            <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
-                                Company <span className="text-black">Overview</span>
+                        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <span className="text-white">COMPANY </span>
+                                <span className="text-[#15a36e]">OVERVIEW</span>
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
                         </div>
 
-                        <div className="grid lg:grid-cols-2 gap-16 items-center">
-                            <div className="space-y-6">
-                                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-white/20">
-                                    <div className="space-y-6">
-                                        <div className="space-y-4">
-                                            <p className="text-white leading-relaxed font-medium">
-                                                COPYm is a cutting-edge <span className="font-semibold text-white">Real World Asset (RWA) tokenization platform</span> designed to transform how the world perceives and manages ownership.
-                                            </p>
-                                            
-                                            <p className="text-white leading-relaxed">
-                                                We bridge tangible value and digital innovation, enabling physical assets — from <span className="font-semibold text-white">real estate and commodities</span> to <span className="font-semibold text-white">collectibles and intellectual property</span> — to be securely digitized, fractionalized, and traded on a global scale.
-                                            </p>
-                                        </div>
+                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                            {/* Left Side - Circular Image */}
+                            <div className="flex justify-center lg:justify-start">
+                                <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px]">
+                                    <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-[#15a36e]/30">
+                                        <img
+                                            src="/images/img_image_843.png"
+                                            alt="Company Team"
+                                            className="w-full h-full object-cover"
+                                        />
                                     </div>
+                                    <div className="absolute inset-0 rounded-full border-2 border-[#15a36e] opacity-50"></div>
                                 </div>
                             </div>
 
-                            <div className="relative">
-                                <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 flex items-center justify-center border border-white/20">
-                                    <div className="text-center space-y-6">
-                                        <h3 className="text-2xl font-bold text-black anton-regular">Why We Exist</h3>
-                                        <div className="space-y-4 text-left">
-                                            <p className="text-white leading-relaxed">
-                                                The traditional asset market is <span className="font-semibold text-white">fragmented, slow, and geographically restricted</span>. COPYm is here to change that.
-                                            </p>
-                                            <p className="text-white leading-relaxed">
-                                                By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
-                                            </p>
-                                        </div>
-                                    </div>
+                            {/* Right Side - Text Content */}
+                            <div className="space-y-6 lg:space-y-8">
+                                <div className="space-y-4">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                        COPYm is a leading <span className="font-semibold text-white">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
+                                    </p>
+                                </div>
+                                
+                                <div className="space-y-4">
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                        Why We Exist:
+                                    </h3>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                        The traditional asset market is <span className="font-semibold text-white">fragmented, slow, and geographically restricted</span>. COPYm is here to change that.
+                                    </p>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                        By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -154,115 +152,113 @@ const AboutUs = () => {
             </section>
 
             {/* Section 3: Mission & Vision */}
-            <section className="py-20 bg-white">
+            <section className="py-12 sm:py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
-                            Mission & <span className="text-blue-600">Vision</span>
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <span className="text-black">MISSION & </span>
+                            <span className="text-[#15a36e]">VISION</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid lg:grid-cols-2 gap-8">
+                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
                         {/* Mission - Left Side */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/60 overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                            <div className="p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    
-                                    <h3 className="text-2xl font-bold text-blue-600 anton-regular">Our Mission</h3>
-                                </div>
-                                
+                        <div className="flex flex-col">
+                            <div className="bg-black rounded-2xl p-6 lg:p-8 mb-4 flex-1">
                                 <div className="space-y-4">
-                                    <p className="text-gray-700 leading-relaxed font-medium">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
                                     </p>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
                                     </p>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         Our mission extends beyond technology — we strive to foster financial inclusion and create a more equitable economic landscape where wealth generation is not limited by geographical boundaries.
                                     </p>
                                 </div>
                             </div>
+                            <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                OUR MISSION
+                            </h3>
                         </div>
 
                         {/* Vision - Right Side */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl shadow-xl border border-white/60 overflow-hidden transition-all duration-300 hover:shadow-2xl">
-                            <div className="p-8">
-                                <div className="flex items-center gap-4 mb-6">
-                                    
-                                    <h3 className="text-2xl font-bold text-green-600 anton-regular">Our Vision</h3>
-                                </div>
-                                
+                        <div className="flex flex-col">
+                            <div className="bg-black rounded-2xl p-6 lg:p-8 mb-4 flex-1">
                                 <div className="space-y-4">
-                                    <p className="text-gray-700 leading-relaxed font-medium">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
                                     </p>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         Our vision is to create a world where investment opportunities are not limited by geography, wealth, or traditional barriers.
                                     </p>
-                                    <p className="text-gray-600 leading-relaxed">
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy.
                                     </p>
                                 </div>
                             </div>
+                            <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                OUR VISION
+                            </h3>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Section 4: Core Values */}
-            <section className="py-20 bg-white">
+            <section className="py-12 sm:py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
-                            Core <span className="text-blue-600">Values</span>
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <span className="text-black">CORE </span>
+                            <span className="text-[#15a36e]">VALUES</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Value 1 */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+                        {/* Value 1 - Integrity */}
+                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <img src="/assets/Images/icons/ab3.png" alt="Integrity" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Integrity</h3>
-                            <p className="text-gray-600 leading-relaxed">
+                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Integrity</h3>
+                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                 We operate with complete transparency and ethical practices in all our dealings.
                             </p>
                         </div>
 
-                        {/* Value 2 */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                        {/* Value 2 - Security */}
+                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <img src="/assets/Images/icons/a5.png" alt="Security" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Security</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                Enterprise-grade security measures protect every transaction and asset on our platform.
+                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Security</h3>
+                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                We prioritize robust security measures to protect our platform and user assets.
                             </p>
                         </div>
 
-                        {/* Value 3 */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
+                        {/* Value 3 - Innovation */}
+                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                 <img src="/assets/Images/icons/ab4.png" alt="Innovation" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Innovation</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                We continuously push the boundaries of what's possible in asset tokenization.
+                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Innovation</h3>
+                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                We are committed to driving innovation to deliver cutting-edge solutions.
                             </p>
                         </div>
 
-                        {/* Value 4 */}
-                        <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                            <div className="w-16 h-16  mx-auto mb-6 flex items-center justify-center">
-                                <img src="/assets/Images/icons/ab2.png" alt="Inclusivity" className="w-13 h-13 object-contain filter brightness-75 contrast-125"/>
+                        {/* Value 4 - Efficiency */}
+                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
+                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                                <img src="/assets/Images/icons/ab2.png" alt="Efficiency" className="w-13 h-13 object-contain filter brightness-75 contrast-125"/>
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-4 anton-regular">Inclusivity</h3>
-                            <p className="text-gray-600 leading-relaxed">
-                                We make premium investments accessible to everyone, regardless of background.
+                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Efficiency</h3>
+                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                We strive for operational excellence and seamless user experiences.
                             </p>
                         </div>
                     </div>
@@ -276,9 +272,10 @@ const AboutUs = () => {
 
                     
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="text-center mb-16">
-                            <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
-                                Company <span className="text-black">Timeline</span>
+                        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <span className="text-white">COMPANY </span>
+                                <span className="text-[#15a36e]">TIMELINE</span>
                             </h2>
                             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
                         </div>
@@ -512,11 +509,12 @@ const AboutUs = () => {
             </section> */}
 
             {/* Section 7: Technology & Innovation */}
-            <section className="py-20 bg-white">
+            <section className="py-12 sm:py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl sm:text-5xl font-black text-black mb-6 anton-regular uppercase">
-                            Technology & <span className="text-blue-600">Innovation</span>
+                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <span className="text-black">TECHNOLOGY & </span>
+                            <span className="text-[#15a36e]">INNOVATION</span>
                         </h2>
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
                     </div>
@@ -647,6 +645,9 @@ const AboutUs = () => {
                     </div>
                 </div>
             </section>
+
+            {/* Section 8: Testimonials */}
+            <TestimonialsSection />
         </div>
     );
 };

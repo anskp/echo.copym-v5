@@ -23,24 +23,15 @@ export default function Hero() {
 
       {/* Hero Content - Positioned on top of video */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16 sm:pb-20 lg:pb-24">
-        <div className="text-center">
-          {/* AI-Powered Badge - Top of Content */}
-          <div className="mb-8 lg:mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/90 backdrop-blur-sm">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
-              <span className="text-gray-900">Tokenization Portal is Open</span>
-            </div>
-          </div>
-
-          {/* Main Title - Desktop Optimized */}
-          <div className="mb-6 lg:mb-8">
+      
+          <div className="mb-6 lg:mb-8  text-center">
             <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               TOKENIZE REAL-WORLD ASSETS
             </h1>
           </div>
 
           {/* Description - Desktop Optimized */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-base sm:text-lg md:text-xl text-center lg:text-[28px] font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 
@@ -72,7 +63,7 @@ export default function Hero() {
               WATCH DEMO
             </button>
           </div>
-        </div>
+        
       </div>
     </section>
   );
