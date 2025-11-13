@@ -37,7 +37,7 @@ export default function PassUnlocksSection() {
 
   return (
     <section className="relative py-16 sm:py-20 lg:py-24">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
           className="text-center mb-12 sm:mb-16 lg:mb-20"

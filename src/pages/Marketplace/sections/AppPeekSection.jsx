@@ -281,6 +281,7 @@ export default function AppPeekSection() {
                     className="w-full h-full object-contain"
                     style={{
                       filter: 'none',
+                      
                       mixBlendMode: 'normal'
                     }}
                   />
@@ -288,14 +289,14 @@ export default function AppPeekSection() {
                 
                 {/* Phone Image Only */}
                 <div className="flex justify-center items-center relative z-20">
-                  <div className="relative bg-white rounded-[2.3rem] p-0.5">
+                  <div className="relative rounded-[2.3rem] p-0.5">
                     <img 
                       src="/assets/Images/mobile-ads.png" 
                       alt="App Interface"
                       className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
                       style={{
                         filter: 'none',
-                        opacity: 1,
+                        opacity: 4,
                         mixBlendMode: 'normal',
                         backgroundColor: 'transparent'
                       }}
@@ -304,39 +305,14 @@ export default function AppPeekSection() {
                 </div>
               </div>
               
-              {/* Download Buttons - Below Mockup, Left and Right */}
-              <div className="flex flex-row items-center justify-center gap-4 w-full">
-                {/* Google Play Store Button - Left */}
-                <div className="flex-shrink-0">
-                  <StoreDownloadButton 
-                    store="Google Play"
-                    rating={4}
-                    downloads="1M+ downloads"
-                    bgColor="bg-black"
-                    textColor="text-white"
-                    position="left"
-                  />
-                </div>
-                
-                {/* Apple App Store Button - Right */}
-                <div className="flex-shrink-0">
-                  <StoreDownloadButton 
-                    store="App Store"
-                    rating={5}
-                    downloads="500K+ downloads"
-                    bgColor="bg-black"
-                    textColor="text-white"
-                    position="left"
-                  />
-                </div>
-              </div>
+            
             </div>
             
             {/* Right Grid - Features */}
             <div className="flex flex-col justify-center">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 3, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
                 className="mb-8"

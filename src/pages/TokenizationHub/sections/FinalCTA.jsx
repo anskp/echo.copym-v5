@@ -21,29 +21,10 @@ export default function FinalCTA() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column: Analytics Features */}
-          <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 dm-sans">Data-Driven Decisions</h3>
-            <div className="space-y-4">
-              {analyticsFeatures.map((feature, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <GiCheckMark className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-700 dm-sans">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        
 
           {/* Right Column: Final CTA */}
-          <div className="text-center md:text-left">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4 dm-sans">Ready to Build the Future?</h3>
-            <p className="text-gray-700 mb-8 dm-sans">
-              Join thousands of issuers who trust our platform for their tokenization needs.
-            </p>
-            <button className="inline-flex items-center justify-center px-8 py-4 font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
-              Start Tokenizing
-            
-            </button>
-          </div>
+          
         </div>
       </div>
     </section>

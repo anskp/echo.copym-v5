@@ -399,7 +399,7 @@ export default function AccessPage() {
                 </div>
 
                 {/* Card 2: Utility & Access */}
-                <div className="grid grid-cols-2 gap-4 sm:gap-6 bg-transparent border border-[#15a36e] rounded-[1px] p-4 sm:p-6">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 bg-transparent border border-[#15a36e] rounded-[4px] p-3 sm:p-3">
                   <div className="flex items-center text-left">
                     <div>
                       <h3 className="text-[#15a36e] font-semibold text-base sm:text-lg lg:text-xl mb-2 dm-sans">Utility & Access</h3>
