@@ -74,7 +74,6 @@ const Collaboration = () => {
   return (
     <Section className="bg-black text-white py-16 sm:py-20 lg:py-24">
       <div className="relative isolate max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="absolute -left-40 top-1/2 -translate-y-1/2 h-[520px] w-[520px] bg-[radial-gradient(circle_at_center,#023321_0%,rgba(2,51,33,0.18)_35%,rgba(0,0,0,0)_70%)] blur-3xl opacity-70" />
 
         <div className="relative">
           {/* Centered Header Section */}

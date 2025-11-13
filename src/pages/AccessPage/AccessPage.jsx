@@ -232,18 +232,31 @@ export default function AccessPage() {
     <div ref={pageRef} className="min-h-screen bg-white">
       {/* Hero Section with TokenizationHub Style */}
       <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:h-screen overflow-hidden">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+        {/* Video Background */}
+        <div className="absolute inset-0 z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src="/assets/videos/Access-page.mp4" type="video/mp4" />
+          </video>
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
 
-        {/* Background removed */}
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10 z-[1]">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+        </div>
 
         {/* Hero Content */}
         <div ref={heroRef} className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           {/* AI-Powered Badge - Top of Content */}
           <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-gray-700 dm-sans">
+            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/90 backdrop-blur-sm text-gray-800 dm-sans">
               <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
               Exclusive Access Portal
             </div>
@@ -252,14 +265,14 @@ export default function AccessPage() {
           <div className="text-center">
             {/* Main Title - Full Width with Homepage Font Styles */}
             <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans reveal-text">
-              <span className="text-gray-900">YOUR GATEWAY TO </span>
-              <span className="text-emerald-600">COPYM'S</span>
+              <span className="text-white drop-shadow-lg">YOUR GATEWAY TO </span>
+              <span className="text-emerald-400 drop-shadow-lg">COPYM'S</span>
               <br />
-              <span className="text-gray-900">EXCLUSIVE WORLD</span>
+              <span className="text-white drop-shadow-lg">EXCLUSIVE WORLD</span>
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text dm-sans">
+            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text dm-sans drop-shadow-md">
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>

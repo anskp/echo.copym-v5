@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <Section
-      className="hero-section bg-n-12 text-white pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-28 md:min-h-screen md:flex md:items-center"
+      className="hero-section bg-black text-white pt-16 sm:pt-20 lg:pt-24 pb-12 sm:pb-16 lg:pb-28 md:min-h-screen md:flex md:items-center"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
       customPaddings
@@ -25,12 +25,6 @@ const Hero = () => {
     >
       <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col">
         {/* Removed background two-curve graphic */}
-
-        {/* Dotted grid lines background */}
-        <div className="pointer-events-none absolute inset-0 z-0">
-          <div className="absolute top-1/2 left-0 w-full h-px border-t border-dotted border-cyan-400/30"></div>
-          <div className="absolute top-0 left-1/2 w-px h-full border-l border-dotted border-cyan-400/30"></div>
-        </div>
 
         {/* Text content - top left */}
         <div className="relative z-10 pt-6 md:pt-8 lg:pt-12 text-left max-w-5xl">
@@ -58,16 +52,26 @@ const Hero = () => {
 
         {/* Center video - 735x735 with blue border */}
         <div className="relative z-10 flex-1 flex items-center justify-center my-8 md:my-12">
-          <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src={coraVideo} type="video/mp4" />
-            </video>
+          <div className="bg-black p-4 sm:p-6 md:p-8 rounded-lg">
+            <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src={coraVideo} type="video/mp4" />
+              </video>
+              {/* Retina image centered over video */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <img 
+                  src="/assets/Images/icons/Retina.png" 
+                  alt="Retina" 
+                  className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
