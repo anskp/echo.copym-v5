@@ -314,7 +314,7 @@ export default function AccessPage() {
              </div>
 
              {/* Credential Card Section */}
-              <div className="text-center relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
+              <div className="text-center relative min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
                 {/* Green Ellipse Background */}
                 <div 
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
