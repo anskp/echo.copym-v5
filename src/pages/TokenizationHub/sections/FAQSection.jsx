@@ -108,29 +108,37 @@ export default function FAQSection() {
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             <span className="text-black">FREQUENTLY ASKED </span>
             <span className="text-[#15a36e]">QUESTIONS</span>
           </h2>
           <p 
-            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2 mb-6 sm:mb-8"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
-            style={{
-              borderRadius: "55px",
-              background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)",
-              fontFamily: 'Palanquin, sans-serif',
-              minWidth: '200px'
-            }}
+            className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-md"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             Contact Our Team
+            <svg
+              className="w-3 h-3 sm:w-4 sm:h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2.5}
+                d="M9 5l7 7-7 7"
+              />
+            </svg>
           </Link>
         </div>
 

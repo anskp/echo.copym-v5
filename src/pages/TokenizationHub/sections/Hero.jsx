@@ -34,31 +34,39 @@ export default function Hero() {
 
           {/* Main Title - Desktop Optimized */}
           <div className="mb-6 lg:mb-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               TOKENIZE REAL-WORLD ASSETS
             </h1>
           </div>
 
           {/* Description - Desktop Optimized */}
-          <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 
           {/* CTA Buttons - Desktop Optimized */}
-          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
             <button
-              className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-10 py-5 rounded-full font-bold text-lg lg:text-xl hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center gap-3 min-w-[220px] lg:min-w-[260px] shadow-xl hover:shadow-2xl transform hover:scale-105"
+              className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               START INVESTING
-              <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
+              <svg
+                className="w-3 h-3 sm:w-4 sm:h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
             </button>
             <button
-              className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-full font-bold text-lg lg:text-xl hover:bg-white hover:text-emerald-600 transition-all duration-300 min-w-[220px] lg:min-w-[260px] shadow-xl hover:shadow-2xl transform hover:scale-105"
+              className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-white hover:text-gray-900 transition-all duration-300"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               WATCH DEMO

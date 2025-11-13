@@ -43,11 +43,11 @@ export default function InvestorManagement() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 leading-tight dm-sans mb-6">
-            <span className="text-gray-900">INVESTOR </span>
-            <span className="text-emerald-600">MANAGEMENT</span>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <span className="text-black">INVESTOR </span>
+            <span className="text-[#15a36e]">MANAGEMENT</span>
           </h2>
-          <p className="text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto dm-sans">
+          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
           </p>
         </div>
@@ -66,23 +66,31 @@ export default function InvestorManagement() {
             </div>
             
             {/* Two Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center -mt-[100px] items-center w-full max-w-lg">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 -mt-[100px] items-center w-full max-w-lg">
               {/* MANAGE INVESTORS Button */}
               <button 
-                className="bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-bold text-sm hover:from-emerald-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center gap-3 min-w-[200px] shadow-lg w-full sm:w-auto"
+                className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 MANAGE INVESTORS
-                <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
+                <svg
+                  className="w-3 h-3 sm:w-4 sm:h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
               </button>
               
               {/* LEARN MORE Button */}
               <button 
-                className="bg-transparent border-2 border-emerald-500 text-emerald-500 px-8 py-4 rounded-full font-bold text-sm hover:bg-emerald-500 hover:text-white transition-all duration-300 min-w-[200px] w-full sm:w-auto"
+                className="border-2 border-emerald-500 text-emerald-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-500 hover:text-white transition-all duration-300"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 LEARN MORE

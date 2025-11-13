@@ -40,8 +40,8 @@ export default function HowToTokenize() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black leading-tight mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            HOW TO <span className="text-[#15a36e]">TOKENIZE</span> ASSETS
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <span className="text-[#15a36e]">TOKENIZE</span> ASSETS
           </h2>
         </div>
 
@@ -71,10 +71,10 @@ export default function HowToTokenize() {
 
               {/* Text Content */}
               <div className="flex-1 w-full lg:w-auto">
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#15a36e] mb-4 lg:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#15a36e] mb-4 lg:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   {step.title}
                 </h3>
-                <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   {step.description}
                 </p>
               </div>

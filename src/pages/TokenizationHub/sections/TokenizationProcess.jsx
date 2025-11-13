@@ -198,10 +198,10 @@ export default function TokenizationProcess({ onLaunchCreator }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
           <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans text-black">
-              WHY <span className="text-emerald-600">TOKENIZE</span> ?
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-black uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              WHY <span className="text-[#15a36e]">TOKENIZE</span> ?
             </h2>
-            <p className="text-gray-700 text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed dm-sans">
+            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
             </p>
             {/* <button 
