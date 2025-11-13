@@ -46,11 +46,11 @@ export default function PassUnlocksSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-black">EVERYTHING YOUR </span>
             <span className="text-[#15a36e]">PASS UNLOCKS</span>
           </h2>
-          <p className="text-lg sm:text-xl text-black max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Discover the exclusive benefits and features that come with your COPYM Access Pass.
           </p>
         </motion.div>

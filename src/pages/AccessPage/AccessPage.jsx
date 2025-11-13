@@ -257,16 +257,12 @@ export default function AccessPage() {
         {/* Hero Content */}
         <div ref={heroRef} className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           {/* AI-Powered Badge - Top of Content */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/90 backdrop-blur-sm text-gray-800 dm-sans">
-              <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
-              Exclusive Access Portal
-            </div>
-          </div>
+         
+            
 
           <div className="text-center">
             {/* Main Title - Full Width with Homepage Font Styles */}
-            <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans reveal-text">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 reveal-text" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-white drop-shadow-lg">YOUR GATEWAY TO </span>
               <span className="text-emerald-400 drop-shadow-lg">COPYM'S</span>
               <br />
@@ -274,7 +270,7 @@ export default function AccessPage() {
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-base sm:text-lg lg:text-xl text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto reveal-text dm-sans drop-shadow-md">
+            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-6xl mx-auto px-2 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
@@ -321,11 +317,11 @@ export default function AccessPage() {
                 
                 {/* Heading and Subheading - Above Center */}
                 <div className="relative z-10 mb-8 sm:mb-12 lg:mb-16">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl -mt-5 font-bold mb-3 sm:mb-4 dm-sans uppercase">
+                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 -mt-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     <span className="text-white">YOUR </span>
                     <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
                   </h3>
-                  <p className="text-white/80 text-sm sm:text-base dm-sans">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/80 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                   </p>
                 </div>
@@ -374,11 +370,11 @@ export default function AccessPage() {
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 dm-sans">
+               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  <span className="text-black">PLATFORM </span>
                  <span className="text-[#15a36e]">FEATURES</span>
                </h2>
-               <p className="text-gray-700 max-w-3xl mx-auto text-sm sm:text-base lg:text-lg mb-6 sm:mb-8 px-4 dm-sans">
+               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2 mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>
@@ -399,7 +395,7 @@ export default function AccessPage() {
       <div ref={networksRef} className="bg-[#E9F6F1] py-16 sm:py-20 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-gray-900 mb-9 uppercase dm-sans reveal-text">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 text-gray-900 reveal-text" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Supported Networks
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
