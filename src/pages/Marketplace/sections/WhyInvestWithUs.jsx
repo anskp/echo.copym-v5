@@ -3,60 +3,11 @@ import { motion } from "framer-motion";
 
 export default function WhyInvestWithUs() {
   return (
-    <section className="relative py-24 overflow-hidden">
-      {/* Background Pattern - Same as Hero Section */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
-      </div>
-
-      {/* Fluid Blob Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -top-40 -right-40 w-80 h-80 bg-green-400/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -30, 0],
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-blue-400/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -40, 0],
-            y: [0, 40, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 2,
-          }}
-        />
-        <motion.div
-          className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400/15 rounded-full blur-3xl"
-          animate={{
-            x: [0, 20, 0],
-            y: [0, -20, 0],
-            scale: [1, 1.15, 1],
-          }}
-          transition={{
-            duration: 18,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-        />
-      </div>
+    <section className="relative py-24 overflow-hidden bg-white">
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-16 relative"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -71,6 +22,8 @@ export default function WhyInvestWithUs() {
           </p>
         </motion.div>
 
+       
+
         {/* Feature Cards - Exact Design */}
         <div 
           style={{
@@ -83,7 +36,8 @@ export default function WhyInvestWithUs() {
             boxSizing: 'border-box',
             maxWidth: '1200px',
             margin: '0 auto',
-            flexWrap: 'wrap'
+            flexWrap: 'wrap',
+            position: 'relative'
           }}
         >
           {/* Card 1 */}
@@ -122,20 +76,13 @@ export default function WhyInvestWithUs() {
             }} />
             
             {/* Icon */}
-            <div style={{ zIndex: 1, position: 'relative', marginBottom: '12px' }}>
-              <svg 
-                width="48" 
-                height="48" 
-                viewBox="0 0 48 48" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12"
-              >
-                <path d="M24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4Z" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M24 12L24 20" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M24 28L24 36" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M16 24H32" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <div style={{ zIndex: 1, position: 'relative', marginBottom: '20px', marginTop: '0' }}>
+              <img 
+                src="/assets/Images/icons/Marketplace2.png" 
+                alt="Bank Grade Security"
+                className="w-12 h-12 object-contain"
+                style={{ width: '48px', height: '48px' }}
+              />
             </div>
 
             {/* Title */}
@@ -206,22 +153,13 @@ export default function WhyInvestWithUs() {
             }} />
 
             {/* Icon */}
-            <div style={{ zIndex: 1, position: 'relative', marginBottom: '12px' }}>
-              <svg 
-                width="48" 
-                height="48" 
-                viewBox="0 0 48 48" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12"
-              >
-                <path d="M36 36H12V20H36V36Z" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M20 28H16V24H20V28Z" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M28 32H24V28H28V32Z" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M36 36H32V32H36V36Z" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M24 16C24 16 24 12 28 12C32 12 32 16 32 16" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M24 16C24 16 24 20 20 20C16 20 16 16 16 16" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <div style={{ zIndex: 1, position: 'relative', marginBottom: '20px', marginTop: '0' }}>
+              <img 
+                src="/assets/Images/icons/Marketplace3.png" 
+                alt="Radical Transparency"
+                className="w-12 h-12 object-contain"
+                style={{ width: '48px', height: '48px' }}
+              />
             </div>
 
             {/* Title */}
@@ -292,21 +230,13 @@ export default function WhyInvestWithUs() {
             }} />
 
             {/* Icon */}
-            <div style={{ zIndex: 1, position: 'relative', marginBottom: '12px' }}>
-              <svg 
-                width="48" 
-                height="48" 
-                viewBox="0 0 48 48" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-12 h-12"
-              >
-                <path d="M36 12L24 24L12 12" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 24L24 36L36 24" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 12H36" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 24H36" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M12 36H36" stroke="#7DD1B2" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <div style={{ zIndex: 1, position: 'relative', marginBottom: '20px', marginTop: '0' }}>
+              <img 
+                src="/assets/Images/icons/Marketplace1.png" 
+                alt="Enhanced Liquidity"
+                className="w-12 h-12 object-contain"
+                style={{ width: '48px', height: '48px' }}
+              />
             </div>
 
             {/* Title */}

@@ -13,7 +13,7 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import ChromaGrid from "../../../components/ChromaGrid";
 
 // Import Lottie JSON file
-import group487 from '../../../components/lotties/Group-487.json';
+import marketplace3rd from '../../../components/lotties/Marketplace-3rd.json';
 
 // Custom CSS for hiding scrollbars
 const scrollbarHideStyles = `
@@ -202,29 +202,12 @@ const MarketplaceGlimpse = () => {
     <div className="w-full">
       <style dangerouslySetInnerHTML={{ __html: scrollbarHideStyles }} />
              {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
-       <section className="relative">
+       <section className="relative bg-black">
                    {/* Main Content with Curved Background - HomePage Style */}
-          <div className="relative z-10 bg-transparent pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
+          <div className="relative z-10 bg-black pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
             
             {/* Content Container */}
             <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          {/* Enhanced Section Header */}
-          <motion.div 
-            className="text-center mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 uppercase dm-sans">
-              <span className="text-gray-900">EXPLORE OUR </span>
-              <span className="text-gray-900">CURATED ASSETS</span>
-            </h2>
-            <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-              Discover a diverse portfolio of tokenized real-world assets, each carefully selected for their potential returns and market stability.
-            </p>
-          </motion.div>
-
           {/* Single Lottie Animation */}
            <motion.div
              initial={{ opacity: 0, y: 30 }}
@@ -237,7 +220,7 @@ const MarketplaceGlimpse = () => {
                <Player
                  autoplay
                  loop
-                 src={group487}
+                 src={marketplace3rd}
                  className="w-full h-full object-contain"
                  style={{ width: '100%', height: '100%' }}
                />
