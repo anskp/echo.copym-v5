@@ -36,11 +36,11 @@ export default function PassUnlocksSection() {
   ];
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24">
+    <section className="relative py-12 sm:py-16 lg:py-20">
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}

@@ -270,14 +270,14 @@ export default function AccessPage() {
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-6xl mx-auto px-2 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-4 sm:mb-6 max-w-6xl mx-auto px-2 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
                          {/* Glass Pill Layer - Curved div style */}
              <div
-               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-8 px-6 dm-sans"
+               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-4 sm:mt-6 px-6 dm-sans"
                style={{
                  WebkitBackdropFilter: 'blur(10px)',
                  backdropFilter: 'blur(10px)'
@@ -299,11 +299,22 @@ export default function AccessPage() {
                 {/* Unlock Features - Reimagined with Platform Features Style */}
         <section className="relative">
           {/* Main Content with Curved Background */}
-          <div className="relative z-10 bg-black pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+          <div className="relative z-10 bg-black pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
            {/* Content Container */}
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+             {/* Heading and Subheading - At the Top */}
+             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                 <span className="text-white">YOUR </span>
+                 <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
+               </h3>
+               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/80 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                 Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+               </p>
+             </div>
+
              {/* Credential Card Section */}
-              <div className="text-center pt-8 sm:pt-12 lg:pt-16 relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
+              <div className="text-center relative min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
                 {/* Green Ellipse Background */}
                 <div 
                   className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
@@ -313,17 +324,6 @@ export default function AccessPage() {
                     alt="Green ellipse background"
                     className="w-full h-full object-contain"
                   />
-                </div>
-                
-                {/* Heading and Subheading - Above Center */}
-                <div className="relative z-10 mb-8 sm:mb-12 lg:mb-16">
-                  <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 -mt-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    <span className="text-white">YOUR </span>
-                    <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
-                  </h3>
-                  <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/80 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-                  </p>
                 </div>
 
                 {/* Card - Centered on Ellipse */}
@@ -350,37 +350,25 @@ export default function AccessPage() {
          </div>
                </section>
 
-        {/* Benefits Section */}
-       <div id="benefits-section" ref={benefitsRef} className="mb-20">
-         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-           <div className="space-y-8">
-             {/* Section Title */}
-             
-
-                           {/* Benefits Cards */}
-            
-           </div>
-         </div>
-       </div>
 
               {/* Platform Features - TokenizationHub Style Cards */}
        <section className="relative bg-white">
          {/* Main Content */}
-         <div className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32">
+         <div className="relative z-10 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
-             <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+             <div className="text-center mb-6 sm:mb-8 lg:mb-10">
                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  <span className="text-black">PLATFORM </span>
                  <span className="text-[#15a36e]">FEATURES</span>
                </h2>
-               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2 mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>
 
                            {/* Grouped Images */}
-              <div className="flex justify-center items-center mt-8 sm:mt-12 lg:mt-16">
+              <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8">
                 <img 
                   src={GroupedImages} 
                   alt="Platform Features"
@@ -392,9 +380,9 @@ export default function AccessPage() {
                </section>
 
        {/* Supported Networks */}
-      <div ref={networksRef} className="bg-[#E9F6F1] py-16 sm:py-20 lg:py-24">
+      <div ref={networksRef} className="bg-[#E9F6F1] py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8 sm:mb-10">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 text-gray-900 reveal-text" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Supported Networks
             </h2>
