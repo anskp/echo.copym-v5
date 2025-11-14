@@ -156,7 +156,7 @@ export default function Footer() {
         <img
           src="/assets/copym/png/Header-copym.png"
           alt="COPYM"
-          className="w-[1400px] h-[600px] object-contain"
+          className="max-w-7xl h-[600px] object-contain"
         />
       </div>
     </footer>

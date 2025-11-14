@@ -177,7 +177,7 @@ export default function Header() {
       </div>
 
       {/* Delta-Style Navbar */}
-      <nav className={`navbar ${getHeaderBackground()}`}>
+      <nav className="navbar bg-black">
         <div className="nav-container px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
@@ -296,7 +296,7 @@ export default function Header() {
 
             {/* Mobile Toggle */}
             <button
-            className="md:hidden ml-6 text-black hover:text-gray-600 transition-colors duration-200 p-3 rounded-lg relative z-50"
+            className="md:hidden ml-6 text-white hover:text-gray-300 transition-colors duration-200 p-3 rounded-lg relative z-50"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
               {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
