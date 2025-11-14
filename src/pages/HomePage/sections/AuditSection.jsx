@@ -10,23 +10,23 @@ export default function AuditSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
       
-      <div className="relative z-10 py-16 sm:py-20 lg:py-24 pb-24 sm:pb-32 lg:pb-40">
+      <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-12 sm:pb-16 md:pb-24 lg:pb-32">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                 {/* Section Header */}
-        <div className="text-center mb-16 sm:mb-20">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-gray-900">SECURE & </span>
               <span className="text-emerald-600">AUDITED</span>
           </h2>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
           </p>
         </div>
 
           {/* Lottie Animation */}
-          <div className="flex justify-center items-center py-4 sm:py-8 lg:py-12 w-full overflow-visible">
+          <div className="flex justify-center items-center py-4 sm:py-6 md:py-8 lg:py-12 w-full overflow-visible px-4">
             <div className="w-full h-auto flex items-center justify-center overflow-visible" style={{ 
-              transform: 'scale(1.2) translateY(-12%)',
+              transform: 'scale(1) sm:scale(1.1) md:scale(1.2) translateY(-8%) sm:translateY(-10%) md:translateY(-12%)',
               transformOrigin: 'center center'
             }}>
               <Player
@@ -37,10 +37,10 @@ export default function AuditSection() {
                   width: '100%', 
                   height: 'auto',
                   maxWidth: '100%',
-                  minHeight: '400px',
+                  minHeight: '250px',
                   objectFit: 'contain'
                 }}
-                className="w-full h-auto"
+                className="w-full h-auto sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px]"
               />
             </div>
           </div>

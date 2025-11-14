@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const FeatureSection = () => {
   return (
-    <section className="relative w-full bg-white py-5 sm:py-6 md:py-8 lg:py-10 overflow-hidden">
+    <section className="relative w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Main Heading */}
         <motion.h2
@@ -11,7 +11,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-4 sm:mb-5 md:mb-6 lg:mb-8 w-full"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-full uppercase"
           style={{ fontFamily: 'DM Sans, sans-serif' }}
         >
           <span className="text-black">OWN. </span>
@@ -22,18 +22,17 @@ const FeatureSection = () => {
         </motion.h2>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-8">
           {/* Card 1 - Own a piece of big Investment (Top Left - Larger) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
-            style={{ minHeight: '240px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full sm:min-h-[240px]"
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[80px] sm:h-[100px] md:h-[110px] lg:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Candlestick Charts */}
                 <img
@@ -260,7 +259,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+            <div className="relative z-20 pt-[100px] sm:pt-[120px] md:pt-[130px] lg:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Own a piece of big Investment
               </h3>
@@ -277,11 +276,10 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
-            style={{ minHeight: '240px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full sm:min-h-[240px]"
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[80px] sm:h-[100px] md:h-[110px] lg:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Dollar Sign Coins */}
                 <img
@@ -514,7 +512,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+            <div className="relative z-20 pt-[100px] sm:pt-[120px] md:pt-[130px] lg:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Trade anytime, anywhere
               </h3>
@@ -531,11 +529,10 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
-            style={{ minHeight: '240px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full sm:min-h-[240px]"
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[80px] sm:h-[100px] md:h-[110px] lg:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Growth Graph */}
                 <img
@@ -708,7 +705,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+            <div className="relative z-20 pt-[100px] sm:pt-[120px] md:pt-[130px] lg:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Earn without a hassle
               </h3>
@@ -725,11 +722,10 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full"
-            style={{ minHeight: '240px' }}
+            className="relative bg-white rounded-[16px] sm:rounded-[20px] lg:rounded-[24px] border-2 border-[#e4e4e4] shadow-[4px_4px_4px_-1px_rgba(216,198,198,0.25)] overflow-hidden w-full sm:min-h-[240px]"
           >
             {/* Decorative Gradient Header */}
-            <div className="absolute top-0 left-0 right-0 h-[100px] sm:h-[110px] md:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[80px] sm:h-[100px] md:h-[110px] lg:h-[120px] rounded-t-[16px] sm:rounded-t-[20px] lg:rounded-t-[24px] bg-gradient-to-b from-white to-[#f9f9f9] z-10 overflow-hidden">
               <div className="relative w-full h-full">
                 {/* Stack Image - Globe with Assets */}
                 <img
@@ -878,7 +874,7 @@ const FeatureSection = () => {
             </div>
 
             {/* Content */}
-            <div className="relative z-20 pt-[120px] sm:pt-[130px] md:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-3 md:pb-4">
+            <div className="relative z-20 pt-[100px] sm:pt-[120px] md:pt-[130px] lg:pt-[140px] px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
               <h3 className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-bold text-black mb-2 sm:mb-3 md:mb-4">
                 Explore a world of assets
               </h3>

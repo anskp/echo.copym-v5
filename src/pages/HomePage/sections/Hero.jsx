@@ -27,7 +27,7 @@ export default function Hero() {
         <div className="max-w-lg sm:max-w-xl w-full text-right">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start font-bold leading-tight text-white mb-3 sm:mb-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start font-bold leading-tight text-white mb-3 sm:mb-4 uppercase"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             UNLOCK EXCLUSIVE{' '}
@@ -42,20 +42,20 @@ export default function Hero() {
             className="text-xs sm:text-sm md:text-base text-start text-white opacity-90 leading-relaxed mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            Seamless on-chain investment in real estate, <br/>commodities,carbon credits and luxury <br/> assets.
-            No gas fees,no native token required.
+            Seamless on-chain investment in real estate, <br className="hidden sm:block"/>commodities, carbon credits and luxury <br className="hidden sm:block"/> assets.
+            No gas fees, no native token required.
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
-          <div className="flex flex-wrap justify-start gap-2 sm:gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-start gap-3 sm:gap-4">
             <Link
               to="/marketplace"
-              className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+              className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               START INVESTING
               <svg
-                className="w-3 h-3 sm:w-4 sm:h-4"
+                className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -71,7 +71,7 @@ export default function Hero() {
 
             <button
               onClick={() => setVideoOpen(true)}
-              className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-white hover:text-gray-900 transition-all duration-300"
+              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               WATCH DEMO

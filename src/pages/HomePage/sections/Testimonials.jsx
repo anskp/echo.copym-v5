@@ -43,11 +43,7 @@ const testimonials = [
 function TestimonialCard({ testimonial }) {
   return (
     <motion.div 
-      className="relative flex-shrink-0 overflow-hidden"
-      style={{
-        width: '280px',
-        height: '300px'
-      }}
+      className="relative flex-shrink-0 overflow-hidden w-[240px] h-[260px] sm:w-[260px] sm:h-[280px] md:w-[280px] md:h-[300px]"
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
@@ -84,7 +80,7 @@ function TestimonialCard({ testimonial }) {
       >
         {/* Profile Image */}
         <div 
-          className="flex-shrink-0 rounded-full overflow-hidden"
+          className="flex-shrink-0 rounded-full overflow-hidden w-12 h-12 sm:w-14 sm:h-14"
           style={{
             width: '56px',
             height: '56px'
@@ -109,7 +105,7 @@ function TestimonialCard({ testimonial }) {
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
-              fontSize: '18px',
+              fontSize: 'clamp(16px, 2vw, 18px)',
               lineHeight: '24px',
               color: '#000',
               margin: 0,
@@ -124,7 +120,7 @@ function TestimonialCard({ testimonial }) {
           <p 
             style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: '14px',
+              fontSize: 'clamp(12px, 1.5vw, 14px)',
               lineHeight: '20px',
               color: '#000',
               margin: 0,
@@ -139,7 +135,7 @@ function TestimonialCard({ testimonial }) {
           <p 
             style={{
               fontFamily: 'DM Sans, sans-serif',
-              fontSize: '14px',
+              fontSize: 'clamp(12px, 1.5vw, 14px)',
               lineHeight: '20px',
               color: '#15A36E',
               margin: 0,
@@ -165,8 +161,8 @@ function TestimonialCard({ testimonial }) {
         <p 
           style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: '16px',
-            lineHeight: '24px',
+            fontSize: 'clamp(13px, 1.6vw, 16px)',
+            lineHeight: '22px',
             color: '#000',
             margin: 0,
             padding: 0
@@ -194,7 +190,7 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
   return (
     <div className="overflow-hidden py-4">
       <motion.div
-        className="flex gap-10"
+        className="flex gap-6 sm:gap-8 md:gap-10"
         animate={{ x: ["0%", "-100%"] }}
         transition={{
           repeat: Infinity,
@@ -213,15 +209,15 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
       {/* heading */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-12">
-        <div className="text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 md:mb-12">
+        <div className="text-center px-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-gray-900">Trusted by Industry </span>
             <span className="text-emerald-600">Leaders</span>
           </h2>
-          <p className="text-black max-w-2xl mx-auto text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
           </p>
         </div>

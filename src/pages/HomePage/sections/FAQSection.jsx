@@ -15,16 +15,15 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
     >
       <button
         onClick={onToggle}
-        className="w-full text-left flex justify-between items-center transition-colors duration-200"
+        className="w-full text-left flex justify-between items-center transition-colors duration-200 p-3 sm:p-4"
         style={{
-          padding: isOpen ? '16px 20px' : '16px 20px',
-          minHeight: '60px'
+          minHeight: '50px'
         }}
       >
         <h3 
           className="pr-4 flex-1"
           style={{
-            fontSize: '20px',
+            fontSize: 'clamp(16px, 2vw, 20px)',
             fontWeight: 600,
             color: '#000',
             textAlign: 'left'
@@ -58,14 +57,11 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
       </button>
       {isOpen && (
         <div 
-          className="overflow-hidden transition-all duration-300 ease-in-out"
-          style={{
-            padding: '0 20px 16px 20px'
-          }}
+          className="overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-5 pb-4"
         >
           <p 
             style={{
-              fontSize: '20px',
+              fontSize: 'clamp(14px, 1.8vw, 18px)',
               color: '#000',
               textAlign: 'left',
               lineHeight: '1.6',
@@ -115,7 +111,7 @@ export default function FAQSection() {
             <span className="text-[#15a36e]">QUESTIONS</span>
           </h2>
           <p 
-            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-4 sm:mb-6"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-4 sm:mb-6 px-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
