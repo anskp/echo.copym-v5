@@ -68,7 +68,7 @@ const AboutUs = () => {
                             
                             {/* Description */}
                             <div className="flex flex-col items-center justify-center w-full">
-                                <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal leading-relaxed text-center text-gray-700 w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-gray-600 w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     Transforming asset ownership through blockchain innovation and institutional-grade tokenization
                                 </p>
                                 

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen w-full overflow-hidden">
+    <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen w-full overflow-hidden">
       {/* Video Background */}
       <video
         autoPlay
@@ -28,23 +28,17 @@ export default function Hero() {
       {/* Hero Content */}
       <div className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
         {/* AI-Powered Badge - Top of Content */}
-        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
-          <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium bg-white/90 backdrop-blur-sm text-gray-800">
-            <span className="w-2 h-2 bg-emerald-500 rounded-full mr-2 animate-pulse"></span>
-            AI-Powered
-          </div>
-        </div>
 
         <div className="text-center w-full">
           {/* Main Title - Full Width with Homepage Font Styles */}
           <div className="mb-4 sm:mb-6 lg:mb-8">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight px-2 uppercase dm-sans" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-white drop-shadow-lg">EXPLORE TOKENIZED REAL-WORLD ASSETS</span>
             </h1>
           </div>
 
           {/* Description with Homepage Style */}
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white leading-relaxed mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto drop-shadow-md px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed mb-6 sm:mb-8 lg:mb-10 max-w-4xl mx-auto drop-shadow-md px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
@@ -69,9 +63,6 @@ export default function Hero() {
               WATCH DEMO
             </button>
           </div>
-
-          {/* Additional UI Elements */}
-         
         </div>
       </div>
     </section>

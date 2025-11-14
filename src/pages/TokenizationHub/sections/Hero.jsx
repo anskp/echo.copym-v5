@@ -31,7 +31,7 @@ export default function Hero() {
           </div>
 
           {/* Description - Desktop Optimized */}
-          <p className="text-base sm:text-lg md:text-xl text-center lg:text-[28px] font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 

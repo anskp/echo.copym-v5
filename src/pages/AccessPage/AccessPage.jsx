@@ -258,7 +258,7 @@ export default function AccessPage() {
         <div ref={heroRef} className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
           <div className="text-center w-full">
             {/* Main Title - Full Width with Homepage Font Styles */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight uppercase mb-4 sm:mb-5 md:mb-6 reveal-text px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-4 sm:mb-5 md:mb-6 reveal-text px-2 dm-sans" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-white drop-shadow-lg">YOUR GATEWAY TO </span>
               <span className="text-emerald-400 drop-shadow-lg">COPYM'S</span>
               <br className="hidden sm:block" />
@@ -266,7 +266,7 @@ export default function AccessPage() {
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-5xl mx-auto px-4 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-5xl mx-auto px-4 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
@@ -301,7 +301,7 @@ export default function AccessPage() {
                  <span className="text-white">YOUR </span>
                  <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
                </h3>
-               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/80 leading-relaxed max-w-5xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+               <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white/80 leading-relaxed max-w-5xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                </p>
              </div>
@@ -355,7 +355,7 @@ export default function AccessPage() {
                  <span className="text-black">PLATFORM </span>
                  <span className="text-[#15a36e]">FEATURES</span>
                </h2>
-               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-black leading-relaxed max-w-5xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+               <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-5xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>

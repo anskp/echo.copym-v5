@@ -15,16 +15,15 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
     >
       <button
         onClick={onToggle}
-        className="w-full text-left flex justify-between items-center transition-colors duration-200"
+        className="w-full text-left flex justify-between items-center transition-colors duration-200 p-3 sm:p-4"
         style={{
-          padding: isOpen ? '16px 20px' : '16px 20px',
-          minHeight: '60px'
+          minHeight: '50px'
         }}
       >
         <h3 
           className="pr-4 flex-1"
           style={{
-            fontSize: '20px',
+            fontSize: 'clamp(16px, 2vw, 20px)',
             fontWeight: 600,
             color: '#000',
             textAlign: 'left'
@@ -58,14 +57,11 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
       </button>
       {isOpen && (
         <div 
-          className="overflow-hidden transition-all duration-300 ease-in-out"
-          style={{
-            padding: '0 20px 16px 20px'
-          }}
+          className="overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-5 pb-4"
         >
           <p 
             style={{
-              fontSize: '20px',
+              fontSize: 'clamp(14px, 1.8vw, 18px)',
               color: '#000',
               textAlign: 'left',
               lineHeight: '1.6',
@@ -106,37 +102,38 @@ export default function FAQsection() {
     <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
           <h2 
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans px-4"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             <span className="text-black">FREQUENTLY ASKED </span>
             <span className="text-[#15a36e]">QUESTIONS</span>
           </h2>
           <p 
-            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-6 sm:mb-8"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-8 px-4"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
           </p>
           <Link
             to="/contact"
-            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
+            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base md:text-lg"
             style={{
               borderRadius: "55px",
               background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)",
               fontFamily: 'Palanquin, sans-serif',
-              minWidth: '200px'
+              minWidth: '180px',
+              maxWidth: '280px'
             }}
           >
             Contact Our Team
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start">
           {/* Left Side - FAQ List */}
-          <div className="space-y-4 order-2 lg:order-1">
+          <div className="space-y-3 sm:space-y-4 order-2 lg:order-1">
             {faqs.map((faq, index) => (
               <FAQItem
                 key={index}
@@ -151,13 +148,13 @@ export default function FAQsection() {
           {/* Right Side - Image and Support Info */}
           <div className="flex flex-col order-1 lg:order-2">
             {/* Image */}
-            <div className="mb-8 sm:mb-12 flex justify-center lg:justify-end">
+            <div className="mb-6 sm:mb-8 md:mb-12 flex justify-center lg:justify-end">
               <img 
                 src="/assets/Images/ai-overvew.png" 
                 alt="FAQ Illustration"
-                className="w-full max-w-md lg:max-w-lg h-auto object-contain"
+                className="w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-lg h-auto object-contain"
                 style={{
-                  maxHeight: '400px'
+                  maxHeight: '300px'
                 }}
               />
             </div>

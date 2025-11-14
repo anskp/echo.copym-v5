@@ -42,7 +42,7 @@ export default function TrackYourCrypto() {
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
             </p>
           </div>

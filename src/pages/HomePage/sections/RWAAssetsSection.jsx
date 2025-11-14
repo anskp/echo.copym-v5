@@ -57,7 +57,7 @@ const TokenizeAssetsSection = () => {
             <span className="text-[#15a36e]">TOKENIZE</span>
             <span className="text-black"> REAL ASSETS</span>
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access.
           </p>
         </div>

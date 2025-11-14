@@ -74,7 +74,7 @@ export default function HowToTokenize() {
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#15a36e] mb-4 lg:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   {step.title}
                 </h3>
-                <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   {step.description}
                 </p>
               </div>

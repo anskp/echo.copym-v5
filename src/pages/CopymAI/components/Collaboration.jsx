@@ -85,7 +85,7 @@ const Collaboration = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.h2
-              className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight palanquin uppercase"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight dm-sans uppercase"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

@@ -16,7 +16,7 @@ export default function AIInvestingSection() {
               <span className="text-black"> THAT INVESTS WITH YOU </span>
             </h2>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
             </p>
             
@@ -52,7 +52,7 @@ export default function AIInvestingSection() {
               <span className="text-black"> THAT INVESTS WITH YOU </span>
             </h2>
             
-            <p className="text-lg sm:text-xl md:text-2xl lg:text-[28px] text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
             </p>
             

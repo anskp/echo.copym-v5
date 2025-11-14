@@ -74,7 +74,7 @@ export default function TokenDistribution() {
               <span className="text-[#15a36e]">DISTRIBUTION</span>
             </h2>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.
             </p>
           </div>

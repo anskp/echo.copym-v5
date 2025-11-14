@@ -108,10 +108,12 @@ const FeaturesGrid = () => {
 
             {/* Grey Content Area */}
             <div style={{ 
-              padding: '15px 20px', 
+              padding: '12px 16px', 
               background: '#f0f5f3',
               position: 'relative'
-            }}>
+            }}
+            className="sm:p-[15px_20px]"
+            >
               <p className="dm-sans" style={{ 
                 fontSize: 'clamp(12px, 1.5vw, 14px)', 
                 textAlign: 'left', 
@@ -226,16 +228,16 @@ const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, 
 
 export default function AppPeekSection() {
   return (
-    <section className="relative bg-white pt-16 pb-16">
+    <section className="relative bg-white pt-8 sm:pt-12 md:pt-16 pb-8 sm:pb-12 md:pb-16">
       {/* Main Content with Curved Background - HomePage Style */}
       
         
         {/* Content Container */}
         <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20">
             <motion.h1 
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-6 dm-sans"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 dm-sans px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -247,7 +249,7 @@ export default function AppPeekSection() {
             </motion.h1>
             
             <motion.p 
-              className="text-lg sm:text-xl text-black/80 leading-relaxed max-w-2xl mx-auto"
+              className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto px-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
@@ -258,10 +260,10 @@ export default function AppPeekSection() {
           </div>
 
           {/* Two Grid Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center mb-8">
             
             {/* Left Grid - Phone Mockup */}
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center order-2 lg:order-1">
               <div className="flex justify-center items-center relative mb-6">
                 {/* Bitcoin Fly Background */}
                 <div 
@@ -293,7 +295,7 @@ export default function AppPeekSection() {
                     <img 
                       src="/assets/Images/mobile-ads.png" 
                       alt="App Interface"
-                      className="w-[180px] h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
+                      className="w-[150px] h-[320px] sm:w-[180px] sm:h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
                       style={{
                         filter: 'none',
                         opacity: 4,
@@ -309,19 +311,19 @@ export default function AppPeekSection() {
             </div>
             
             {/* Right Grid - Features */}
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center order-1 lg:order-2">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 3, y: 0 }}
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true }}
-                className="mb-8"
+                className="mb-6 sm:mb-8 text-center lg:text-left"
               >
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight mb-4 dm-sans">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 sm:mb-4 dm-sans">
   <span className="text-[#15a36e]">Powerful </span>
   <span className="text-black">Features</span>
 </h2>
-                <p className="text-gray-700 text-lg">
+                <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl">
                   Everything you need for modern investment management
                 </p>
               </motion.div>

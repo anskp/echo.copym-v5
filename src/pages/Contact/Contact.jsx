@@ -34,10 +34,10 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="text-center sm:text-left max-w-3xl mx-auto sm:mx-0"
           >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white uppercase mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase mb-4 sm:mb-6 dm-sans" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               LET'S <span className="text-[#15a36e]">CONNECT</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-white/90 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white/90 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Connect with our team for investor onboarding, asset tokenization, legal compliance, or technical integration.
             </p>
           </motion.div>
@@ -57,7 +57,7 @@ const Contact = () => {
             {/* Green Header Bar with Heading */}
             <div className="flex h-14 sm:h-14 py-12 items-center justify-center bg-[#b3ffe3]/40 px-4 text-center">
               <h2
-                className="m-0 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide uppercase text-black"
+                className="m-0 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-black dm-sans"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
                 <span>READY TO </span>
@@ -222,7 +222,7 @@ const Contact = () => {
                 <span className="text-black">FIND </span>
                 <span className="text-[#15a36e]">US?</span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Visit our office or get in touch
               </p>
             </div>

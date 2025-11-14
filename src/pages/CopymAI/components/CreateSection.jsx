@@ -44,10 +44,10 @@ const CreateSection = () => {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-6 sm:mb-8 uppercase tracking-tight dm-sans">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-6 sm:mb-8 uppercase leading-tight dm-sans">
                 <span className="text-[#15a36e]">CREATE</span>
               </h2>
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 leading-relaxed max-w-2xl dm-sans">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 leading-relaxed max-w-2xl dm-sans">
                 Create your account with CopyM with your verified proof ID's and Sign up to register your identity and proof of your assets.
               </p>
             </motion.div>

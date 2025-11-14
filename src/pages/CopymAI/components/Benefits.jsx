@@ -10,7 +10,7 @@ const Benefits = () => {
 
       <div className="relative z-10 w-full max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 lg:mb-20 px-2">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black leading-tight palanquin mb-4 uppercase tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight dm-sans mb-4 uppercase">
             <span className="text-emerald-500">CORA AI</span>{" "}
             <span className="text-white">POWERS YOUR TRADING</span>
           </h2>

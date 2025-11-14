@@ -204,7 +204,7 @@ const MarketplaceGlimpse = () => {
              {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
        <section className="relative bg-black">
                    {/* Main Content with Curved Background - HomePage Style */}
-          <div className="relative z-10 bg-black pt-8 sm:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
+          <div className="relative z-10 bg-black pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
             
             {/* Content Container */}
             <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
@@ -216,7 +216,7 @@ const MarketplaceGlimpse = () => {
              viewport={{ once: true }}
              className="relative flex justify-center items-center w-full"
            >
-             <div className="w-full h-[60vh] sm:h-[70vh] md:h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+             <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
                <Player
                  autoplay
                  loop

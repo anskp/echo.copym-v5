@@ -201,7 +201,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-black uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               WHY <span className="text-[#15a36e]">TOKENIZE</span> ?
             </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
             </p>
             {/* <button 
