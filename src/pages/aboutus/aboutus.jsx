@@ -119,8 +119,8 @@ const AboutUs = () => {
                                 <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px]">
                                     <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-[#15a36e]/30">
                                         <img
-                                            src="/images/img_image_843.png"
-                                            alt="Company Team"
+                                            src="/assets/Images/Contact-us.png"
+                                            alt="Company Overview"
                                             className="w-full h-full object-cover"
                                         />
                                     </div>
