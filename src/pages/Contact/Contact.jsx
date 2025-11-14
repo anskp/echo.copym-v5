@@ -63,48 +63,95 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Ready to Tokenize Section */}
-      <section className="relative bg-[#15a36e]/20 py-8 sm:py-10 lg:py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-8">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#15a36e] uppercase mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              READY TO TOKENIZE YOUR ASSETS ?
-            </h2>
-          </div>
-          
-          <div className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10">
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your tokenization journey. Join the future of Real World Asset tokenization with Copym.
-            </p>
-            
-            <div className="flex justify-center">
-              <button
-                className="bg-[#15a36e] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-[#12a062] transition-all duration-300 shadow-lg"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
-                onClick={() => {
-                  const typeformSection = document.getElementById('typeform-section');
-                  if (typeformSection) {
-                    typeformSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-              >
-                GET STARTED
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Typeform Section */}
       <section id="typeform-section" className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Typeform />
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            style={{ 
+              position: 'relative',
+              background: '#e6f2ed',
+              borderRadius: '0px',
+              overflow: 'hidden',
+              width: '100%'
+            }}
+          >
+            {/* Green Header Bar with Heading */}
+            <div style={{ 
+              height: '60px', 
+              background: 'rgba(179,255,227,0.4)',
+              position: 'relative',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}>
+              <h2 style={{ 
+                fontFamily: 'DM Sans, sans-serif',
+                fontSize: 'clamp(16px, 2.5vw, 24px)', 
+                fontWeight: 600, 
+                textAlign: 'center', 
+                color: '#000', 
+                margin: '0'
+              }}>TOKENIZATION APPLICATION FORM</h2>
+            </div>
+
+            {/* Separator Line */}
+            <div style={{
+              height: '1px',
+              background: '#7DD1B2',
+              width: '100%'
+            }}></div>
+
+            {/* Grey Content Area */}
+            <div style={{ 
+              padding: '20px 24px', 
+              background: '#f0f5f3',
+              position: 'relative'
+            }}>
+              <Typeform />
+            </div>
+
+            {/* L-shaped Corner Brackets - Top Right */}
+            <svg width="50" height="18" viewBox="0 0 50 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
+              <line x1="0" y1="2" x2="48" y2="2" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="48" y1="2" x2="48" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* L-shaped Corner Brackets - Top Left */}
+            <svg width="32" height="18" viewBox="0 0 32 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
+              <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="2" y1="2" x2="2" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* L-shaped Corner Brackets - Bottom Right */}
+            <svg width="50" height="18" viewBox="0 0 50 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
+              <line x1="0" y1="16" x2="48" y2="16" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="48" y1="16" x2="48" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+
+            {/* L-shaped Corner Brackets - Bottom Left */}
+            <svg width="32" height="18" viewBox="0 0 32 18" fill="none"
+              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+              style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
+              <line x1="0" y1="16" x2="30" y2="16" stroke="#7DD1B2" strokeWidth="3" />
+              <line x1="0" y1="16" x2="0" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            </svg>
+          </motion.div>
         </div>
       </section>
 
       {/* Contact Us Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-black">CONTACT </span>
@@ -112,7 +159,7 @@ const Contact = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
             {/* Phone Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
