@@ -14,7 +14,7 @@ export default function AuditSection() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                 {/* Section Header */}
         <div className="text-center mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-gray-900">SECURE & </span>
               <span className="text-emerald-600">AUDITED</span>
           </h2>
@@ -37,10 +37,10 @@ export default function AuditSection() {
                   width: '100%', 
                   height: 'auto',
                   maxWidth: '100%',
-                  minHeight: '600px',
+                  minHeight: '550px',
                   objectFit: 'contain'
                 }}
-                className="w-full h-auto min-h-[600px] sm:min-h-[700px] md:min-h-[800px]"
+                className="w-full h-auto min-h-[500px] sm:min-h-[700px] md:min-h-[800px]"
               />
             </div>
           </div>
