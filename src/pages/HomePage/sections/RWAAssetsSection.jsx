@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import maskcard1 from '../../../components/images/Maskcard1.png';
 import maskcard2 from '../../../components/images/Maskcard2.png';
 import maskcard3 from '../../../components/images/Maskcard3.png';
@@ -68,21 +69,46 @@ const TokenizeAssetsSection = () => {
             const isHovered = hoveredCard === asset.id;
             
             return (
-            <div 
+            <motion.div 
               key={asset?.id} 
               className="relative w-full cursor-pointer" 
               style={{ overflow: 'visible' }}
               onMouseEnter={() => setHoveredCard(asset.id)}
               onMouseLeave={() => setHoveredCard(null)}
+              onTouchStart={() => setHoveredCard(asset.id)}
+              onTouchEnd={() => setHoveredCard(null)}
+              initial={{ scale: 1, y: 0 }}
+              whileHover={{ 
+                scale: 1.05, 
+                y: -10,
+                transition: { 
+                  duration: 0.3,
+                  ease: "easeOut"
+                }
+              }}
+              whileTap={{
+                scale: 1.05,
+                y: -10,
+                transition: {
+                  duration: 0.2,
+                  ease: "easeOut"
+                }
+              }}
             >
               {/* Asset Card */}
-              <div 
+              <motion.div 
                 className={`rounded-lg p-4 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
                 style={{ 
                   overflow: 'visible', 
                   minHeight: '420px',
                   maxHeight: '480px',
                   background: isHovered ? '#000000' : 'linear-gradient(to bottom, #fbfbfb, #f0f0f0)'
+                }}
+                whileHover={{
+                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
+                }}
+                whileTap={{
+                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
                 }}
               >
                 {/* Large Overlay Number - positioned in top-left, extending beyond card */}
@@ -111,7 +137,10 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* Asset Image - positioned at right side of card */}
-                <div className="flex items-center justify-end mb-0 relative z-10 w-full" style={{ marginTop: index === 2 ? '-125px' : index === 3 ? '-75px' : index === 0 ? '-70px' : '-20px' }}>
+                <div 
+                  className={`flex items-center justify-end mb-0 relative z-10 w-full ${index === 2 ? 'sm:-mt-[125px] -mt-[90px]' : index === 3 ? '-mt-[75px]' : index === 0 ? '-mt-[70px]' : '-mt-[20px]'}`}
+                  style={{ marginTop: index === 2 ? undefined : (index === 3 ? '-75px' : index === 0 ? '-70px' : '-20px') }}
+                >
                   <img 
                     src={asset?.image} 
                     alt={asset?.title}
@@ -147,8 +176,8 @@ const TokenizeAssetsSection = () => {
                     <div className="text-[#15a36e]">{asset?.apy || asset?.apr}</div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
             );
           })}
         </div>

@@ -10,9 +10,9 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid gap-1 sm:gap-1 lg:gap-2 sm:grid-cols-3 lg:grid-cols-5 items-start">
+        <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-5 items-start">
           {/* Brand */}
-          <div className="flex flex-col -mt-3 space-y-6">
+          <div className="flex flex-col -mt-3 space-y-3 sm:space-y-4 md:space-y-6">
             <div className="h-9 flex items-start">
             <img
               loading="lazy"
@@ -59,7 +59,7 @@ export default function Footer() {
               links: ['Help Centre', 'Security', 'Press', 'Terms', 'API'],
             },
           ].map((column) => (
-            <div key={column.title} className="flex flex-col space-y-5 ">
+            <div key={column.title} className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
               <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline h-6 flex items-start">
                 {column.title}
               </h3>
@@ -79,12 +79,12 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="flex flex-col space-y-5">
+          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
             <div>
               <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start">
                 JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-4 text-sm sm:text-base text-white leading-relaxed">
+              <p className="mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base text-white leading-relaxed">
                 To know more subscribe to our newsletter
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between text-sm text-gray-500">
+        <div className="mt-8 sm:mt-12 md:mt-16 border-t border-white/10 pt-6 sm:pt-7 md:pt-8 flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between text-sm text-gray-500">
           <p>© {new Date().getFullYear()} COPYM. All rights reserved.</p>
           <div className="flex items-center space-x-6">
             <a href="#" className="hover:text-emerald-400 transition-colors duration-200">
