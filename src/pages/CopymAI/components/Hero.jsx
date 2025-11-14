@@ -50,8 +50,8 @@ const Hero = () => {
         </div>
 
         {/* Heading - positioned higher */}
-        <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4">
-          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase dm-sans leading-tight">
+        <div className="absolute top-[15%] sm:top-[15%] md:top-[15%] lg:top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase mb-6 sm:mb-8 md:mb-10 lg:mb-12 dm-sans leading-tight" style={{ textShadow: '0 0 20px rgba(16, 185, 129, 0.5), 0 0 40px rgba(16, 185, 129, 0.3), 0 0 60px rgba(16, 185, 129, 0.2)' }}>
             Explore the possibilities of
             <span className="text-emerald-400 inline-block ml-1">
               <Typewriter
@@ -71,8 +71,8 @@ const Hero = () => {
         </div>
 
         {/* Paragraph - positioned lower */}
-        <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4">
-          <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto dm-sans leading-relaxed">
+        <div className="absolute top-[75%] sm:top-[75%] md:top-[75%] lg:top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto dm-sans leading-relaxed" style={{ textShadow: '0 0 15px rgba(16, 185, 129, 0.4), 0 0 30px rgba(16, 185, 129, 0.2), 0 0 45px rgba(16, 185, 129, 0.1)' }}>
             Our AI Agent has shown <span className="text-emerald-400 font-dm-sans">23% better accuracy</span> in predicting asset appreciation vs top market tools. Experience the future of finance with <span className="font-semibold text-white">CORA</span>, the unified RWA tokenization AI platform.
           </p>
         </div>
