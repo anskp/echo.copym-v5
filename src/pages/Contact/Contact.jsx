@@ -28,7 +28,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Full Video Background */}
-      <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen lg:min-h-[800px] overflow-hidden">
+      <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-screen lg:min-h-[700px] overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -51,21 +51,21 @@ const Contact = () => {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-left"
+            className="text-left w-full"
           >
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-5 lg:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               LET'S <span className="text-[#15a36e]">CONNECT</span>
             </h1>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[25px] font-normal text-white leading-relaxed max-w-4xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Connect with our team for investor onboarding,<br/> asset tokenization, legal compliance, or technical integration.
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/90 leading-relaxed max-w-4xl pr-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              Connect with our team for investor onboarding, asset tokenization, legal compliance, or technical integration.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Typeform Section */}
-      <section id="typeform-section" className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="typeform-section" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -80,20 +80,16 @@ const Contact = () => {
             }}
           >
             {/* Green Header Bar with Heading */}
-            <div style={{ 
-              height: '60px', 
+            <div className="h-12 sm:h-14 md:h-16 lg:h-[60px] flex items-center justify-center px-2 sm:px-4" style={{ 
               background: 'rgba(179,255,227,0.4)',
               position: 'relative',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
             }}>
-              <h2 style={{ 
+              <h2 className="text-center font-bold uppercase" style={{ 
                 fontFamily: 'DM Sans, sans-serif',
-                fontSize: 'clamp(18px, 2.5vw, 28px)', 
+                fontSize: 'clamp(14px, 3vw, 28px)', 
                 fontWeight: 700, 
-                textAlign: 'center', 
-                margin: '0'
+                margin: '0',
+                lineHeight: '1.2'
               }}>
                 <span style={{ color: '#000' }}>READY TO </span>
                 <span style={{ color: '#15a36e' }}>TOKENIZE </span>
@@ -109,8 +105,7 @@ const Contact = () => {
             }}></div>
 
             {/* Black Content Area */}
-            <div style={{ 
-              padding: '20px 24px', 
+            <div className="p-3 sm:p-4 md:p-5 lg:p-6" style={{ 
               background: '#000000',
               position: 'relative'
             }}>
@@ -118,7 +113,7 @@ const Contact = () => {
             </div>
 
             {/* L-shaped Corner Brackets - Top Right */}
-            <svg width="50" height="18" viewBox="0 0 50 18" fill="none"
+            <svg className="hidden sm:block" width="50" height="18" viewBox="0 0 50 18" fill="none"
               xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
               style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
               <line x1="0" y1="2" x2="48" y2="2" stroke="#7DD1B2" strokeWidth="3" />
@@ -126,7 +121,7 @@ const Contact = () => {
             </svg>
 
             {/* L-shaped Corner Brackets - Top Left */}
-            <svg width="32" height="18" viewBox="0 0 32 18" fill="none"
+            <svg className="hidden sm:block" width="32" height="18" viewBox="0 0 32 18" fill="none"
               xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
               style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
               <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
@@ -134,7 +129,7 @@ const Contact = () => {
             </svg>
 
             {/* L-shaped Corner Brackets - Bottom Right */}
-            <svg width="50" height="18" viewBox="0 0 50 18" fill="none"
+            <svg className="hidden sm:block" width="50" height="18" viewBox="0 0 50 18" fill="none"
               xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
               style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
               <line x1="0" y1="16" x2="48" y2="16" stroke="#7DD1B2" strokeWidth="3" />
@@ -142,7 +137,7 @@ const Contact = () => {
             </svg>
 
             {/* L-shaped Corner Brackets - Bottom Left */}
-            <svg width="32" height="18" viewBox="0 0 32 18" fill="none"
+            <svg className="hidden sm:block" width="32" height="18" viewBox="0 0 32 18" fill="none"
               xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
               style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
               <line x1="0" y1="16" x2="30" y2="16" stroke="#7DD1B2" strokeWidth="3" />
