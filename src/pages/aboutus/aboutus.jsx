@@ -109,7 +109,7 @@ const AboutUs = () => {
                                 <span className="text-white">COMPANY </span>
                                 <span className="text-[#15a36e]">OVERVIEW</span>
                             </h2>
-                            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
+                            
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -215,7 +215,7 @@ const AboutUs = () => {
                             <span className="text-black">CORE </span>
                             <span className="text-[#15a36e]">VALUES</span>
                         </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
+                        
                     </div>
 
                     {/* Vertical Stack of Value Cards */}
