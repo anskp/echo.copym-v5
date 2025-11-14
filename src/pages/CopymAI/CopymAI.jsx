@@ -7,7 +7,7 @@ import Hero from "./components/Hero";
 //import Pricing from "./components/Pricing";
 import ScrollToTop from "../../components/ScrollToTop";
 import Services from "./components/Services";
-import Testimonials from "./components/Testimonials";
+
 // import GreenCurves from "./components/GreenCurves";
 import { Player } from '@lottiefiles/react-lottie-player';
 import FlowingB from "./assets/FlowingB.json";
@@ -51,7 +51,7 @@ const CopymAI = () => {
           
           <Collaboration />
           <Services />
-          <Testimonials />
+          
           {/* <Pricing /> */}
         </div>
       </div>
