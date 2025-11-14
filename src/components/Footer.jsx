@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 items-start">
+        <div className="grid gap-1 sm:gap-1 lg:gap-2 sm:grid-cols-2 lg:grid-cols-5 items-start">
           {/* Brand */}
           <div className="flex flex-col -mt-3 space-y-6">
             <div className="h-9 flex items-start">
@@ -59,11 +59,11 @@ export default function Footer() {
               links: ['Help Centre', 'Security', 'Press', 'Terms', 'API'],
             },
           ].map((column) => (
-            <div key={column.title} className="flex flex-col space-y-5">
+            <div key={column.title} className="flex flex-col space-y-5 ">
               <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline h-6 flex items-start">
                 {column.title}
               </h3>
-              <ul className="space-y-3 text-sm sm:text-base text-white">
+              <ul className="space-y-2 text-sm sm:text-base text-white">
                 {column.links.map((item) => (
                   <li key={item}>
                     <a
@@ -79,7 +79,7 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-5">
             <div>
               <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start">
                 JOIN OUR NEW LETTER
@@ -89,18 +89,49 @@ export default function Footer() {
               </p>
             </div>
             <form className="space-y-3">
-              <div className="flex items-center rounded-lg overflow-hidden">
+              <div 
+                className="flex items-center overflow-hidden"
+                style={{
+                  width: '100%',
+                  maxWidth: '240px',
+                  height: '40px',
+                  background: '#fffdfd',
+                  borderRadius: '20px',
+                }}
+              >
                 <input
                   type="email"
                   required
-                  placeholder="Enter your E-Mail Address"
-                  className="flex-1 bg-white text-gray-900 placeholder:text-gray-500 text-sm sm:text-base px-5 py-3 focus:outline-none"
+                  placeholder="Enter your E-Mail ID"
+                  className="flex-1 h-full focus:outline-none rounded-l-lg placeholder:text-[#c0b5b5]"
+                  style={{
+                    paddingLeft: '16px',
+                    paddingRight: '8px',
+                    color: '#000000',
+                    fontSize: '14px',
+                    background: 'transparent',
+                  }}
                 />
                 <button
                   type="submit"
-                  className="inline-flex items-center bg-emerald-500 px-6 py-3 text-sm font-semibold text-white hover:bg-emerald-400 transition"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-lg whitespace-nowrap"
+                  style={{
+                    minWidth: '100px',
+                    paddingLeft: '12px',
+                    paddingRight: '12px',
+                    background: '#15a36e',
+                    marginLeft: '-4px',
+                  }}
                 >
-                  Subscribe
+                  <span
+                    style={{
+                      fontSize: '14px',
+                      fontWeight: 700,
+                      color: '#fffdfd',
+                    }}
+                  >
+                    Subscribe
+                  </span>
                 </button>
               </div>
             </form>
