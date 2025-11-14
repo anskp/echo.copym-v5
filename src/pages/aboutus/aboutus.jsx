@@ -365,10 +365,10 @@ const AboutUs = () => {
                     </div>
 
                     {/* Timeline Container */}
-                    <div className="relative">
+                    <div className="relative pl-8 sm:pl-12 md:pl-16 pr-8 sm:pr-12 md:pr-16">
                         {/* Glowing Vertical Timeline Line */}
                         <div 
-                            className="absolute left-8 sm:left-12 md:left-16 top-0 bottom-0 flex items-center justify-center"
+                            className="absolute left-0 top-0 bottom-0 flex items-center justify-center"
                             style={{
                                 width: 'auto',
                                 height: '100%'
@@ -392,9 +392,9 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
                             >
-                                {/* Icon - Left Side (aligned with timeline line) */}
+                                {/* Icon */}
                                 <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/Cube.png" 
@@ -403,28 +403,28 @@ const AboutUs = () => {
                                     />
                                 </div>
 
-                                {/* Content - Right Side */}
-                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
-                                    <h3 
-                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#15a36e'
-                                        }}
-                                    >
-                                        2023 - Foundation
-                                    </h3>
-                                    <p 
-                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#ffffff',
-                                            lineHeight: '1.6'
-                                        }}
-                                    >
-                                        COPYm was founded with a vision to democratize access to premium investment opportunities.
-                                    </p>
-                                </div>
+                                {/* Heading - Fixed width for uniform alignment */}
+                                <h3 
+                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#15a36e'
+                                    }}
+                                >
+                                    2023 - Foundation
+                                </h3>
+
+                                {/* Subheading */}
+                                <p 
+                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#ffffff',
+                                        lineHeight: '1.6'
+                                    }}
+                                >
+                                    COPYm was founded with a vision to democratize access to premium investment opportunities.
+                                </p>
                             </motion.div>
 
                             {/* Timeline Item 2 - 2024 Platform Launch */}
@@ -433,9 +433,9 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
                             >
-                                {/* Icon - Left Side (aligned with timeline line) */}
+                                {/* Icon */}
                                 <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/Rocket.png" 
@@ -444,28 +444,28 @@ const AboutUs = () => {
                                     />
                                 </div>
 
-                                {/* Content - Right Side */}
-                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
-                                    <h3 
-                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#15a36e'
-                                        }}
-                                    >
-                                        2024 - Platform Launch
-                                    </h3>
-                                    <p 
-                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#ffffff',
-                                            lineHeight: '1.6'
-                                        }}
-                                    >
-                                        Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.
-                                    </p>
-                                </div>
+                                {/* Heading - Fixed width for uniform alignment */}
+                                <h3 
+                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#15a36e'
+                                    }}
+                                >
+                                    2024 - Platform Launch
+                                </h3>
+
+                                {/* Subheading */}
+                                <p 
+                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#ffffff',
+                                        lineHeight: '1.6'
+                                    }}
+                                >
+                                    Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.
+                                </p>
                             </motion.div>
 
                             {/* Timeline Item 3 - 2025 Global Expansion */}
@@ -474,9 +474,9 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
                             >
-                                {/* Icon - Left Side (aligned with timeline line) */}
+                                {/* Icon */}
                                 <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/StylizedGlobe.png" 
@@ -485,28 +485,28 @@ const AboutUs = () => {
                                     />
                                 </div>
 
-                                {/* Content - Right Side */}
-                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
-                                    <h3 
-                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#15a36e'
-                                        }}
-                                    >
-                                        2025 - Global Expansion
-                                    </h3>
-                                    <p 
-                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
-                                        style={{ 
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            color: '#ffffff',
-                                            lineHeight: '1.6'
-                                        }}
-                                    >
-                                        Expanding our reach globally, making premium investments accessible worldwide.
-                                    </p>
-                                </div>
+                                {/* Heading - Fixed width for uniform alignment */}
+                                <h3 
+                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#15a36e'
+                                    }}
+                                >
+                                    2025 - Global Expansion
+                                </h3>
+
+                                {/* Subheading */}
+                                <p 
+                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
+                                    style={{ 
+                                        fontFamily: 'DM Sans, sans-serif',
+                                        color: '#ffffff',
+                                        lineHeight: '1.6'
+                                    }}
+                                >
+                                    Expanding our reach globally, making premium investments accessible worldwide.
+                                </p>
                             </motion.div>
                         </div>
                     </div>
