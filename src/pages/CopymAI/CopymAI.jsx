@@ -44,13 +44,13 @@ const CopymAI = () => {
                 {/* Right Side - Lottie Animation */}
                 <div className="flex justify-end -translate-x-2 sm:-translate-x-4 md:-translate-x-6 lg:-translate-x-14 items-center overflow-visible">
                   <div style={{ transform: 'scale(1.3) sm:scale(1.25) md:scale(1.2) lg:scale(1)', transformOrigin: 'right center' }}>
-                    <Player
-                      autoplay
-                      loop
-                      src={FlowingB}
+                  <Player
+                    autoplay
+                    loop
+                    src={FlowingB}
                       style={{ height: '100%', width: '100%', maxWidth: '100%' }}
                       className="w-full"
-                    />
+                  />
                   </div>
                 </div>
               </div>
