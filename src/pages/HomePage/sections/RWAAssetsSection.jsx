@@ -63,7 +63,7 @@ const TokenizeAssetsSection = () => {
         </div>
 
         {/* Assets Grid - Responsive and fits window */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 overflow-visible w-full">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 overflow-visible w-full">
           {assets?.map((asset, index) => {
             const isHovered = hoveredCard === asset.id;
             
@@ -77,7 +77,7 @@ const TokenizeAssetsSection = () => {
             >
               {/* Asset Card */}
               <div 
-                className={`rounded-lg p-3 sm:p-4 md:p-4 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
+                className={`rounded-lg p-4 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
                 style={{ 
                   overflow: 'visible', 
                   minHeight: '420px',
@@ -90,7 +90,7 @@ const TokenizeAssetsSection = () => {
                   className="absolute font-semibold pointer-events-none z-0 transition-colors duration-300" 
                   style={{ 
                     fontFamily: 'DM Sans, sans-serif', 
-                    fontSize: 'clamp(90px, 9vw, 90px)',
+                    fontSize: '90px',
                     lineHeight: '0.9',
                     top: '20px',
                     left: '-10px',
@@ -103,7 +103,7 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* ROI Badge - positioned in top-left of card content area */}
-                <div className="absolute top-2 sm:top-3 left-2 sm:left-7 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-2xl px-2 sm:px-2.5 py-0.5 sm:py-1 z-20">
+                <div className="absolute top-3 left-7 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-2xl px-2.5 py-1 z-20">
                   <span className="text-xs font-normal" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     <span className="text-[#15a36e] font-semibold">76%</span>
                     <span className="text-black group-hover:text-black"> ROI</span>
@@ -117,7 +117,7 @@ const TokenizeAssetsSection = () => {
                     alt={asset?.title}
                     className="h-auto object-contain"
                     style={{ 
-                      maxHeight: 'clamp(320px, 45vw, 500px)',
+                      maxHeight: '500px',
                       maxWidth: '100%',
                       width: 'auto',
                       height: 'auto',
@@ -128,22 +128,22 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* Asset Info - consistent left alignment for all cards */}
-                <div className="absolute bottom-0 left-0 right-0 text-left space-y-1 sm:space-y-2 md:space-y-3 z-10 px-3 sm:px-4 md:px-4 pb-3 sm:pb-4 md:pb-4">
+                <div className="absolute bottom-0 left-0 right-0 text-left space-y-3 z-10 px-4 pb-4">
                   <h3 
-                    className="text-base sm:text-lg md:text-xl font-bold transition-colors duration-300" 
+                    className="text-xl font-bold transition-colors duration-300" 
                     style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.title}
                   </h3>
                   
                   <p 
-                    className="text-xs sm:text-xs md:text-sm font-normal leading-snug transition-colors duration-300 line-clamp-3" 
+                    className="text-sm font-normal leading-snug transition-colors duration-300 line-clamp-3" 
                     style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
                   >
                     {asset?.description}
                   </p>
                   
-                  <div className="text-xs sm:text-xs md:text-sm font-semibold space-y-0.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                  <div className="text-sm font-semibold space-y-0.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                     <div className="text-[#15a36e]">{asset?.apy || asset?.apr}</div>
                   </div>
                 </div>
