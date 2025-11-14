@@ -52,8 +52,8 @@ const Hero = () => {
         </div>
 
         {/* Text content - overlapping video */}
-        <div className="absolute z-20 text-center max-w-3xl mx-auto bottom-[30%] sm:bottom-[30%] md:bottom-[35%] left-1/2 transform -translate-x-1/2 mt-30 px-9">
-          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase mb-20 sm:mb-20 md:mb-20 dm-sans leading-tight">
+        <div className="absolute z-20 text-center max-w-3xl mx-auto bottom-[10%] sm:bottom-[20%] md:bottom-[30%] lg:bottom-[35%] left-1/2 transform -translate-x-1/2 px-4 sm:px-6 lg:px-9">
+          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase mb-6 sm:mb-8 md:mb-10 lg:mb-12 dm-sans leading-tight">
             Explore the possibilities of
             <span className="text-emerald-400 inline-block ml-1">
               <Typewriter
