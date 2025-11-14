@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 // Removed LavaLamp background
 import { 
   GiShield,
@@ -208,7 +209,7 @@ const AboutUs = () => {
 
             {/* Section 4: Core Values */}
             <section className="py-12 sm:py-16 lg:py-20 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                             <span className="text-black">CORE </span>
@@ -217,108 +218,296 @@ const AboutUs = () => {
                         <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
                     </div>
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                        {/* Value 1 - Integrity */}
-                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <img src="/assets/Images/icons/ab3.png" alt="Integrity" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
-                            </div>
-                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Integrity</h3>
-                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                We operate with complete transparency and ethical practices in all our dealings.
-                            </p>
-                        </div>
+                    {/* Vertical Stack of Value Cards */}
+                    <div className="flex flex-col gap-4">
+                        {[
+                            {
+                                title: "Integrity",
+                                description: "We operate with complete transparency and ethical practices in all our dealings.",
+                                badge: "100% Ethical"
+                            },
+                            {
+                                title: "Security",
+                                description: "Enterprise-grade security measures protect every transaction and asset on our platform.",
+                                badge: "Secure"
+                            },
+                            {
+                                title: "Innovation",
+                                description: "We continuously push the boundaries of what's possible in asset tokenization.",
+                                badge: "Cutting-Edge"
+                            },
+                            {
+                                title: "Inclusivity",
+                                description: "We make premium investments accessible to everyone, regardless of background.",
+                                badge: "Open Access"
+                            }
+                        ].map((value, index) => {
+                            const headerHeight = '48px';
+                            const svgWidth = index === 0 ? 50 : 48;
+                            const svgHeightTop = 18;
+                            const svgHeightBottom = 18;
+                            
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                    style={{ 
+                                        position: 'relative',
+                                        marginBottom: '16px',
+                                        background: '#e6f2ed',
+                                        borderRadius: '0px',
+                                        overflow: 'hidden',
+                                        width: '100%'
+                                    }}
+                                >
+                                    {/* Green Header Bar with Heading */}
+                                    <div style={{ 
+                                        height: headerHeight, 
+                                        background: 'rgba(179,255,227,0.4)',
+                                        position: 'relative',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                    }}>
+                                        <h3 style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            fontSize: 'clamp(14px, 2vw, 18px)', 
+                                            fontWeight: 600, 
+                                            textAlign: 'center', 
+                                            color: '#000', 
+                                            margin: '0'
+                                        }}>{value.title}</h3>
+                                    </div>
 
-                        {/* Value 2 - Security */}
-                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <img src="/assets/Images/icons/a5.png" alt="Security" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
-                            </div>
-                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Security</h3>
-                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                We prioritize robust security measures to protect our platform and user assets.
-                            </p>
-                        </div>
+                                    {/* Grey Content Area */}
+                                    <div style={{ 
+                                        padding: '15px 20px', 
+                                        background: '#f0f5f3',
+                                        position: 'relative'
+                                    }}>
+                                        <p style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            fontSize: 'clamp(12px, 1.5vw, 14px)', 
+                                            textAlign: 'left', 
+                                            color: '#000', 
+                                            lineHeight: '1.4',
+                                            margin: '0 0 20px 0'
+                                        }}>
+                                            {value.description}
+                                        </p>
 
-                        {/* Value 3 - Innovation */}
-                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <img src="/assets/Images/icons/ab4.png" alt="Innovation" className="w-13 h-13 object-contain filter brightness-75 contrast-125" />
-                            </div>
-                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Innovation</h3>
-                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                We are committed to driving innovation to deliver cutting-edge solutions.
-                            </p>
-                        </div>
+                                        {/* Status Badge */}
+                                        <div style={{ 
+                                            position: 'absolute',
+                                            bottom: '5px',
+                                            right: '41px',
+                                            background: '#fff', 
+                                            padding: '3px 9px', 
+                                            borderRadius: '20px', 
+                                            fontSize: 'clamp(10px, 1.4vw, 13px)',
+                                            color: '#15a36e',
+                                            whiteSpace: 'nowrap'
+                                        }}>
+                                            {value.badge}
+                                        </div>
+                                    </div>
 
-                        {/* Value 4 - Efficiency */}
-                        <div className="bg-[#15a36e]/20 border-2 border-[#15a36e] rounded-2xl p-6 lg:p-8 text-center shadow-md hover:shadow-lg transition-all duration-300">
-                            <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                                <img src="/assets/Images/icons/ab2.png" alt="Efficiency" className="w-13 h-13 object-contain filter brightness-75 contrast-125"/>
-                            </div>
-                            <h3 className="text-lg sm:text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>Efficiency</h3>
-                            <p className="text-black leading-relaxed text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                We strive for operational excellence and seamless user experiences.
-                            </p>
-                        </div>
+                                    {/* Straight Corner Lines - Top Right */}
+                                    <svg width={svgWidth} height={svgHeightTop} viewBox={`0 0 ${svgWidth} ${svgHeightTop}`} fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                                        style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
+                                        <line x1="0" y1="2" x2={index === 0 ? "48" : "46"} y2="2" stroke="#7DD1B2" strokeWidth="3" />
+                                        <line x1={index === 0 ? "48" : "46"} y1="2" x2={index === 0 ? "48" : "46"} y2="18" stroke="#7DD1B2" strokeWidth="3" />
+                                    </svg>
+
+                                    {/* Straight Corner Lines - Top Left */}
+                                    <svg width={32} height={svgHeightTop} viewBox={`0 0 32 ${svgHeightTop}`} fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                                        style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
+                                        <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
+                                        <line x1="2" y1="2" x2="2" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+                                    </svg>
+
+                                    {/* Straight Corner Lines - Bottom Right */}
+                                    <svg width={svgWidth} height={svgHeightBottom} viewBox={`0 0 ${svgWidth} ${svgHeightBottom}`} fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                                        style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
+                                        <line x1="0" y1="16" x2={index === 0 ? "48" : "46"} y2="16" stroke="#7DD1B2" strokeWidth="3" />
+                                        <line x1={index === 0 ? "48" : "46"} y1="16" x2={index === 0 ? "48" : "46"} y2="0" stroke="#7DD1B2" strokeWidth="3" />
+                                    </svg>
+
+                                    {/* Straight Corner Lines - Bottom Left */}
+                                    <svg width={32} height={svgHeightBottom} viewBox={`0 0 32 ${svgHeightBottom}`} fill="none"
+                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
+                                        style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
+                                        <line x1="32" y1="16" x2="2" y2="16" stroke="#7DD1B2" strokeWidth="3" />
+                                        <line x1="2" y1="16" x2="2" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+                                    </svg>
+                                </motion.div>
+                            );
+                        })}
                     </div>
                 </div>
             </section>
 
             {/* Section 5: Company Timeline */}
-            <section className="relative">
-                {/* Main Content */}
-                <div className="relative z-10 bg-blue-700 rounded-t-[2rem] sm:rounded-t-[3rem] lg:rounded-t-[4rem] rounded-b-[2rem] sm:rounded-b-[3rem] lg:rounded-b-[4rem] pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+            <section className="relative bg-black py-16 sm:py-20 lg:py-24">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    {/* Section Header */}
+                    <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <span className="text-white">COMPANY </span>
+                            <span className="text-[#15a36e]">TIMELINE</span>
+                        </h2>
+                    </div>
 
-                    
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                <span className="text-white">COMPANY </span>
-                                <span className="text-[#15a36e]">TIMELINE</span>
-                            </h2>
-                            <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
+                    {/* Timeline Container */}
+                    <div className="relative">
+                        {/* Glowing Vertical Timeline Line */}
+                        <div 
+                            className="absolute left-8 sm:left-12 md:left-16 top-0 bottom-0 flex items-center justify-center"
+                            style={{
+                                width: 'auto',
+                                height: '100%'
+                            }}
+                        >
+                            <img 
+                                src="/assets/Images/carousel/Linenarrow.png" 
+                                alt="Timeline Line" 
+                                className="h-full w-auto object-contain"
+                                style={{
+                                    maxHeight: '100%'
+                                }}
+                            />
                         </div>
 
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {/* Timeline Item 1 */}
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
-                                <div className="text-center mb-6">
-                                    <div className="w-12 h-12  mx-auto flex items-center justify-center">
-                                        <img src="/assets/Images/icons/contact1.png" alt="Foundation" className="w-13 h-13 object-contain filter brightness-125 contrast-125 invert" />
-                                    </div>
+                        {/* Timeline Items */}
+                        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
+                            {/* Timeline Item 1 - 2023 Foundation */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                            >
+                                {/* Icon - Left Side (aligned with timeline line) */}
+                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                    <img 
+                                        src="/assets/Images/icons/Cube.png" 
+                                        alt="Foundation" 
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2023 - Foundation</h3>
-                                <p className="text-white/80 leading-relaxed text-center">
-                                    COPYm was founded with a vision to democratize access to premium investment opportunities.
-                                </p>
-                            </div>
 
-                            {/* Timeline Item 2 */}
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
-                                <div className="text-center mb-6">
-                                    <div className="w-12 h-12  mx-auto flex items-center justify-center">
-                                        <img src="/assets/Images/icons/contact3.png" alt="Platform Launch" className="w-13 h-13 object-contain filter brightness-125 contrast-125 invert" />
-                                    </div>
+                                {/* Content - Right Side */}
+                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
+                                    <h3 
+                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#15a36e'
+                                        }}
+                                    >
+                                        2023 - Foundation
+                                    </h3>
+                                    <p 
+                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#ffffff',
+                                            lineHeight: '1.6'
+                                        }}
+                                    >
+                                        COPYm was founded with a vision to democratize access to premium investment opportunities.
+                                    </p>
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2024 - Platform Launch</h3>
-                                <p className="text-white/80 leading-relaxed text-center">
-                                    Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.
-                                </p>
-                            </div>
+                            </motion.div>
 
-                            {/* Timeline Item 3 */}
-                            <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border border-white/20">
-                                <div className="text-center mb-6">
-                                    <div className="w-12 h-12 mx-auto flex items-center justify-center">
-                                        <img src="/assets/Images/icons/t3.png" alt="Global Expansion" className="w-13 h-13 object-contain filter brightness-125 contrast-125 invert" />
-                                    </div>
+                            {/* Timeline Item 2 - 2024 Platform Launch */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                viewport={{ once: true }}
+                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                            >
+                                {/* Icon - Left Side (aligned with timeline line) */}
+                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                    <img 
+                                        src="/assets/Images/icons/Rocket.png" 
+                                        alt="Platform Launch" 
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
-                                <h3 className="text-xl font-bold text-white mb-4 text-center anton-regular">2025 - Global Expansion</h3>
-                                <p className="text-white/80 leading-relaxed text-center">
-                                    Expanding our reach globally, making premium investments accessible worldwide.
-                                </p>
-                            </div>
+
+                                {/* Content - Right Side */}
+                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
+                                    <h3 
+                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#15a36e'
+                                        }}
+                                    >
+                                        2024 - Platform Launch
+                                    </h3>
+                                    <p 
+                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#ffffff',
+                                            lineHeight: '1.6'
+                                        }}
+                                    >
+                                        Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.
+                                    </p>
+                                </div>
+                            </motion.div>
+
+                            {/* Timeline Item 3 - 2025 Global Expansion */}
+                            <motion.div
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.6, delay: 0.4 }}
+                                viewport={{ once: true }}
+                                className="relative flex items-start gap-6 sm:gap-8 lg:gap-10"
+                            >
+                                {/* Icon - Left Side (aligned with timeline line) */}
+                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                    <img 
+                                        src="/assets/Images/icons/StylizedGlobe.png" 
+                                        alt="Global Expansion" 
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
+
+                                {/* Content - Right Side */}
+                                <div className="flex-1 pt-1 ml-auto max-w-2xl">
+                                    <h3 
+                                        className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#15a36e'
+                                        }}
+                                    >
+                                        2025 - Global Expansion
+                                    </h3>
+                                    <p 
+                                        className="text-sm sm:text-base md:text-lg leading-relaxed text-left"
+                                        style={{ 
+                                            fontFamily: 'DM Sans, sans-serif',
+                                            color: '#ffffff',
+                                            lineHeight: '1.6'
+                                        }}
+                                    >
+                                        Expanding our reach globally, making premium investments accessible worldwide.
+                                    </p>
+                                </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
