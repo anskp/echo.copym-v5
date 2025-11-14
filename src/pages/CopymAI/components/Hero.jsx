@@ -23,12 +23,37 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex flex-col justify-center">
+      <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center justify-center">
         {/* Removed background two-curve graphic */}
 
-        {/* Text content - top left */}
-        <div className="relative z-10 text-left max-w-5xl mb-6 sm:mb-8">
-          <p className="tracking-wider text-xl md:text-4xl lg:text-5xl xl:text-5xl font-extrabold text-white uppercase mb-4 md:mb-6 dm-sans leading-tight">
+        {/* Center video */}
+        <div className="relative z-0 flex items-center justify-center w-full">
+          <div className="bg-black p-4 sm:p-6 md:p-8 rounded-lg">
+          <div className="relative w-full max-w-[500px] h-[500px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[600px] lg:h-[600px] flex items-center justify-center">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src={coraVideo} type="video/mp4" />
+            </video>
+              {/* Retina image centered over video */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <img 
+                  src="/assets/Images/icons/Retina.png" 
+                  alt="Retina" 
+                  className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Text content - overlapping video */}
+        <div className="absolute z-20 text-center max-w-3xl mx-auto top-[35%] sm:top-[40%] md:top-[45%] left-1/2 transform -translate-x-1/2 px-4">
+          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase mb-3 sm:mb-4 md:mb-6 dm-sans leading-tight -mt-20 sm:-mt-24 md:-mt-28 lg:-mt-32 xl:-mt-36">
             Explore the possibilities of
             <span className="text-emerald-400 inline-block ml-1">
               <Typewriter
@@ -45,34 +70,9 @@ const Hero = () => {
               />
             </span>
           </p>
-          <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl max-w-4xl dm-sans leading-relaxed">
+          <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto dm-sans leading-relaxed">
             Our AI Agent has shown <span className="text-emerald-400 font-dm-sans">23% better accuracy</span> in predicting asset appreciation vs top market tools. Experience the future of finance with <span className="font-semibold text-white">CORA</span>, the unified RWA tokenization AI platform.
           </p>
-        </div>
-
-        {/* Center video - 735x735 with blue border */}
-        <div className="relative z-10 flex items-center justify-center">
-          <div className="bg-black p-4 sm:p-6 md:p-8 rounded-lg">
-          <div className="relative w-full max-w-[300px] h-[300px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[500px] lg:h-[500px] border border-cyan-400/50 flex items-center justify-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src={coraVideo} type="video/mp4" />
-            </video>
-              {/* Retina image centered over video */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <img 
-                  src="/assets/Images/icons/Retina.png" 
-                  alt="Retina" 
-                  className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain"
-                />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

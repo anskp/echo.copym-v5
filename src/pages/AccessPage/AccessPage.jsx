@@ -233,7 +233,7 @@ export default function AccessPage() {
   return (
     <div ref={pageRef} className="min-h-screen bg-white">
       {/* Hero Section with TokenizationHub Style */}
-      <section className="relative min-h-[80vh] sm:min-h-[65vh] lg:h-screen overflow-hidden">
+      <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden">
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
           <video
@@ -256,41 +256,34 @@ export default function AccessPage() {
 
         {/* Hero Content */}
         <div ref={heroRef} className="relative z-10 h-full w-full flex flex-col justify-center items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-          {/* AI-Powered Badge - Top of Content */}
-         
-            
-
-          <div className="text-center">
+          <div className="text-center w-full">
             {/* Main Title - Full Width with Homepage Font Styles */}
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5 reveal-text" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight uppercase mb-4 sm:mb-5 md:mb-6 reveal-text px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-white drop-shadow-lg">YOUR GATEWAY TO </span>
               <span className="text-emerald-400 drop-shadow-lg">COPYM'S</span>
-              <br />
+              <br className="hidden sm:block" />
               <span className="text-white drop-shadow-lg">EXCLUSIVE WORLD</span>
             </h1>
 
             {/* Description with Homepage Style */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/90 leading-relaxed mb-4 sm:mb-6 max-w-6xl mx-auto px-2 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 max-w-5xl mx-auto px-4 reveal-text drop-shadow-md" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Unlock premium access to real-world assets, member-only rewards, and
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
-                         {/* Glass Pill Layer - Curved div style */}
-             <div
-               className="relative w-full max-w-[400px] h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-4 sm:mt-6 px-6 dm-sans"
-               style={{
-                 WebkitBackdropFilter: 'blur(10px)',
-                 backdropFilter: 'blur(10px)'
-               }}
-             >
-               Mint Your Token Now ➡
-             </div>
-
-            {/* Additional UI Elements */}
-            
+            {/* Glass Pill Layer - Curved div style */}
+            <div
+              className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-12 sm:h-14 md:h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-sm sm:text-base md:text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-4 sm:mt-6 px-4 sm:px-6 dm-sans"
+              style={{
+                WebkitBackdropFilter: 'blur(10px)',
+                backdropFilter: 'blur(10px)'
+              }}
+            >
+              Mint Your Token Now ➡
+            </div>
           </div>
         </div>
-             </section>
+      </section>
 
 
       {/* Pass Unlocks Section */}
@@ -303,21 +296,21 @@ export default function AccessPage() {
            {/* Content Container */}
            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Heading and Subheading - At the Top */}
-             <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+             <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-4">
                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  <span className="text-white">YOUR </span>
                  <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
                </h3>
-               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-white/80 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/80 leading-relaxed max-w-5xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Your digital identity that unlocks exclusive access to the COPYM ecosystem.
                </p>
              </div>
 
              {/* Credential Card Section */}
-              <div className="text-center relative min-h-[300px] sm:min-h-[350px] lg:min-h-[400px] flex flex-col items-center justify-center outline-none border-none" style={{ outline: 'none', border: 'none' }}>
+              <div className="text-center relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] flex flex-col items-center justify-center outline-none border-none px-4" style={{ outline: 'none', border: 'none' }}>
                 {/* Green Ellipse Background */}
                 <div 
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
+                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
                 >
                   <img 
                     src={EllipseGreen} 
@@ -327,8 +320,8 @@ export default function AccessPage() {
                 </div>
 
                 {/* Card - Centered on Ellipse */}
-                <div className="relative z-10 flex justify-center items-center">
-                  <div className="w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                <div className="relative z-10 flex justify-center items-center w-full">
+                  <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[350px]">
                     <CredentialCard
                       user={{
                         name: "Alex Morgan",
@@ -357,24 +350,24 @@ export default function AccessPage() {
          <div className="relative z-10 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              {/* Section Title */}
-             <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+             <div className="text-center mb-6 sm:mb-8 lg:mb-10 px-4">
                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  <span className="text-black">PLATFORM </span>
                  <span className="text-[#15a36e]">FEATURES</span>
                </h2>
-               <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-6xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-black leading-relaxed max-w-5xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                  Enterprise-grade features designed for institutional-grade tokenization and compliance.
                </p>
              </div>
 
-                           {/* Grouped Images */}
-              <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8">
-                <img 
-                  src={GroupedImages} 
-                  alt="Platform Features"
-                  className="w-full max-w-6xl h-auto object-contain"
-                />
-              </div>
+            {/* Grouped Images */}
+            <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8 px-4">
+              <img 
+                src={GroupedImages} 
+                alt="Platform Features"
+                className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl h-auto object-contain"
+              />
+            </div>
            </div>
          </div>
                </section>
@@ -389,32 +382,32 @@ export default function AccessPage() {
             <div className="w-24 h-1 bg-gradient-to-r from-emerald-500 to-blue-500 mx-auto rounded-full"></div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {networks.map((network) => (
               <motion.div
                 key={network.key}
-                className="network-card group relative text-center"
+                className="network-card group relative text-center p-4 sm:p-6"
                 whileHover={{ y: -4, scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <div className="relative">
-                  <div className="flex items-center justify-center mx-auto mb-4 transition-all duration-300">
+                  <div className="flex items-center justify-center mx-auto mb-3 sm:mb-4 transition-all duration-300">
                     {network.logo ? (
                       <img
                         src={network.logo}
                         alt={`${network.name} logo`}
-                        className="w-16 h-16 object-contain group-hover:scale-110 transition-transform duration-300"
+                        className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     ) : (
-                      <span className="text-4xl group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-3xl sm:text-4xl group-hover:scale-110 transition-transform duration-300">
                         {network.icon}
                       </span>
                     )}
                   </div>
-                  <div className="font-bold text-lg text-gray-900 mb-1">
+                  <div className="font-bold text-base sm:text-lg text-gray-900 mb-1">
                     {network.name}
                   </div>
-                  <div className="text-sm text-gray-500">{network.ticker}</div>
+                  <div className="text-xs sm:text-sm text-gray-500">{network.ticker}</div>
                 </div>
               </motion.div>
             ))}
