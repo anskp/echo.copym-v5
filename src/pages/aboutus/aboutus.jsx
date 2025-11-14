@@ -38,7 +38,7 @@ const AboutUs = () => {
                         <source src="/assets/videos/Blue-green.mp4" type="video/mp4" />
                     </video>
                     {/* Light overlay to maintain readability and light aesthetic */}
-                    <div className="absolute inset-0 bg-white/70"></div>
+                    <div className="absolute inset-0 "></div>
                 </div>
 
                 {/* Subtle Geometric Pattern Background */}
@@ -57,7 +57,7 @@ const AboutUs = () => {
                             
                             {/* Main Heading */}
                             <h1 className="text-center mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-gray-900">
+                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-white">
                                     EXPLORE TOKENIZED{' '}
                                 </span>
                                 <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-[#15a36e]">
@@ -67,7 +67,7 @@ const AboutUs = () => {
                             
                             {/* Description */}
                             <div className="flex flex-col items-center justify-center w-full">
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-gray-600 w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-white w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     Transforming asset ownership through blockchain innovation and institutional-grade tokenization
                                 </p>
                                 

@@ -23,30 +23,35 @@ const CopymAI = () => {
           
           <Benefits />
           
-          {/* Flowing Image and Lottie Animation */}
+          {/* Flowing Video and Lottie Animation */}
           <div className="w-full bg-black py-9 sm:py-12 lg:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+              <div className="grid grid-cols-2 gap-0 sm:gap-4 items-center">
                 {/* Left Side - Video */}
-                <div className="flex justify-start -translate-x-10 items-center">
-                  <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full max-w-3xl object-contain"
-                  >
-                    <source src="/assets/videos/Flowing-green.mp4" type="video/mp4" />
-                  </video>
+                <div className="flex justify-start -translate-x-2 sm:-translate-x-4 md:-translate-x-6 lg:-translate-x-10 items-center overflow-visible">
+                  <div style={{ transform: 'scale(1.2) sm:scale(1.15) md:scale(1.1) lg:scale(1)', transformOrigin: 'left center' }}>
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full max-w-full sm:max-w-2xl lg:max-w-3xl object-contain"
+                    >
+                      <source src="/assets/videos/Flowing-green.mp4" type="video/mp4" />
+                    </video>
+                  </div>
                 </div>
                 {/* Right Side - Lottie Animation */}
-                <div className="flex justify-end  -translate-x-14 items-center">
-                  <Player
-                    autoplay
-                    loop
-                    src={FlowingB}
-                    style={{ height: '100%', width: '300%', maxWidth: '700px' }}
-                  />
+                <div className="flex justify-end -translate-x-2 sm:-translate-x-4 md:-translate-x-6 lg:-translate-x-14 items-center overflow-visible">
+                  <div style={{ transform: 'scale(1.3) sm:scale(1.25) md:scale(1.2) lg:scale(1)', transformOrigin: 'right center' }}>
+                    <Player
+                      autoplay
+                      loop
+                      src={FlowingB}
+                      style={{ height: '100%', width: '100%', maxWidth: '100%' }}
+                      className="w-full"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
