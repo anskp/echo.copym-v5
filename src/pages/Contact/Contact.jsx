@@ -5,30 +5,11 @@ import Contact1Image from '../../components/images/Contact1.png';
 import Contact2Image from '../../components/images/Contact2.png';
 import Contact3Image from '../../components/images/Conatct3.png';
 
-// Custom Icon Components
-const EnvelopeIcon = ({ className }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
-    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-  </svg>
-);
-
-const PhoneIcon = ({ className }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
-    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-  </svg>
-);
-
-const LocationIcon = ({ className }) => (
-  <svg viewBox="0 0 24 24" className={className} fill="currentColor">
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-  </svg>
-);
-
 const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Full Video Background */}
-      <section className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-screen lg:min-h-[700px] overflow-hidden">
+      <section className="relative w-full min-h-[520px] sm:min-h-[600px] lg:min-h-[760px] overflow-hidden flex items-center">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -46,17 +27,17 @@ const Contact = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 w-full h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
+        <div className="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-left w-full"
+            className="text-center sm:text-left max-w-3xl mx-auto sm:mx-0"
           >
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-white uppercase mb-3 sm:mb-4 md:mb-5 lg:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white uppercase mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               LET'S <span className="text-[#15a36e]">CONNECT</span>
             </h1>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-normal text-white/90 leading-relaxed max-w-4xl pr-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-normal text-white/90 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Connect with our team for investor onboarding, asset tokenization, legal compliance, or technical integration.
             </p>
           </motion.div>
@@ -64,84 +45,86 @@ const Contact = () => {
       </section>
 
       {/* Typeform Section */}
-      <section id="typeform-section" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
+      <section id="typeform-section" className="py-12 sm:py-16 lg:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            style={{ 
-              position: 'relative',
-              background: '#e6f2ed',
-              borderRadius: '0px',
-              overflow: 'hidden',
-              width: '100%'
-            }}
+            className="relative w-full overflow-hidden rounded-3xl border border-[#7DD1B2]/60 bg-[#e6f2ed] shadow-[0_40px_120px_rgba(15,23,42,0.15)]"
           >
             {/* Green Header Bar with Heading */}
-            <div className="h-12 sm:h-14 md:h-16 lg:h-[60px] flex items-center justify-center px-2 sm:px-4" style={{ 
-              background: 'rgba(179,255,227,0.4)',
-              position: 'relative',
-            }}>
-              <h2 className="text-center font-bold uppercase" style={{ 
-                fontFamily: 'DM Sans, sans-serif',
-                fontSize: 'clamp(14px, 3vw, 28px)', 
-                fontWeight: 700, 
-                margin: '0',
-                lineHeight: '1.2'
-              }}>
-                <span style={{ color: '#000' }}>READY TO </span>
-                <span style={{ color: '#15a36e' }}>TOKENIZE </span>
-                <span style={{ color: '#000' }}>YOUR ASSETS ?</span>
+            <div className="flex h-14 sm:h-16 items-center justify-center bg-[#b3ffe3]/40 px-4 text-center">
+              <h2
+                className="m-0 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide uppercase text-black"
+                style={{ fontFamily: 'DM Sans, sans-serif' }}
+              >
+                <span>READY TO </span>
+                <span className="text-[#15a36e]">TOKENIZE </span>
+                <span>YOUR ASSETS?</span>
               </h2>
             </div>
 
             {/* Separator Line */}
-            <div style={{
-              height: '1px',
-              background: '#7DD1B2',
-              width: '100%'
-            }}></div>
+            <div className="h-px w-full bg-[#7DD1B2]" />
 
             {/* Black Content Area */}
-            <div className="p-3 sm:p-4 md:p-5 lg:p-6" style={{ 
-              background: '#000000',
-              position: 'relative'
-            }}>
+            <div className="relative bg-black px-3 py-6 sm:px-6 sm:py-8 lg:px-10">
               <Typeform />
             </div>
 
-            {/* L-shaped Corner Brackets - Top Right */}
-            <svg className="hidden sm:block" width="50" height="18" viewBox="0 0 50 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-              style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
-              <line x1="0" y1="2" x2="48" y2="2" stroke="#7DD1B2" strokeWidth="3" />
-              <line x1="48" y1="2" x2="48" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            {/* Decorative Corners */}
+            <svg
+              width="50"
+              height="18"
+              viewBox="0 0 50 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              className="absolute top-0 right-0 hidden text-[#7DD1B2] sm:block"
+            >
+              <line x1="0" y1="2" x2="48" y2="2" stroke="currentColor" strokeWidth="3" />
+              <line x1="48" y1="2" x2="48" y2="18" stroke="currentColor" strokeWidth="3" />
             </svg>
 
-            {/* L-shaped Corner Brackets - Top Left */}
-            <svg className="hidden sm:block" width="32" height="18" viewBox="0 0 32 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-              style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
-              <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
-              <line x1="2" y1="2" x2="2" y2="18" stroke="#7DD1B2" strokeWidth="3" />
+            <svg
+              width="32"
+              height="18"
+              viewBox="0 0 32 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              className="absolute top-0 left-0 hidden text-[#7DD1B2] sm:block"
+            >
+              <line x1="32" y1="2" x2="2" y2="2" stroke="currentColor" strokeWidth="3" />
+              <line x1="2" y1="2" x2="2" y2="18" stroke="currentColor" strokeWidth="3" />
             </svg>
 
-            {/* L-shaped Corner Brackets - Bottom Right */}
-            <svg className="hidden sm:block" width="50" height="18" viewBox="0 0 50 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-              style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
-              <line x1="0" y1="16" x2="48" y2="16" stroke="#7DD1B2" strokeWidth="3" />
-              <line x1="48" y1="16" x2="48" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            <svg
+              width="50"
+              height="18"
+              viewBox="0 0 50 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              className="absolute bottom-0 right-0 hidden text-[#7DD1B2] sm:block"
+            >
+              <line x1="0" y1="16" x2="48" y2="16" stroke="currentColor" strokeWidth="3" />
+              <line x1="48" y1="16" x2="48" y2="0" stroke="currentColor" strokeWidth="3" />
             </svg>
 
-            {/* L-shaped Corner Brackets - Bottom Left */}
-            <svg className="hidden sm:block" width="32" height="18" viewBox="0 0 32 18" fill="none"
-              xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-              style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
-              <line x1="0" y1="16" x2="30" y2="16" stroke="#7DD1B2" strokeWidth="3" />
-              <line x1="0" y1="16" x2="0" y2="0" stroke="#7DD1B2" strokeWidth="3" />
+            <svg
+              width="32"
+              height="18"
+              viewBox="0 0 32 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              className="absolute bottom-0 left-0 hidden text-[#7DD1B2] sm:block"
+            >
+              <line x1="0" y1="16" x2="30" y2="16" stroke="currentColor" strokeWidth="3" />
+              <line x1="0" y1="16" x2="0" y2="0" stroke="currentColor" strokeWidth="3" />
             </svg>
           </motion.div>
         </div>
@@ -149,7 +132,7 @@ const Contact = () => {
 
       {/* Contact Us Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-12 lg:mb-16">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-black">CONTACT </span>
@@ -157,26 +140,26 @@ const Contact = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-10 sm:gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {/* Phone Card */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] px-3 sm:px-4 lg:px-5 py-4 sm:py-5 lg:py-6 text-center"
+              className="flex flex-col items-center text-center rounded-[2rem] bg-black px-6 py-8 sm:px-8 sm:py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.35)]"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-4 flex items-center justify-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
                 <img
                   src={Contact1Image}
                   alt="Phone"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 PHONE NUMBER :
               </h3>
-              <p className="text-white text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <p className="text-sm sm:text-base opacity-90" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 +91 1234567890
               </p>
             </motion.div>
@@ -187,19 +170,19 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] px-3 sm:px-4 lg:px-5 py-4 sm:py-5 lg:py-6 text-center"
+              className="flex flex-col items-center text-center rounded-[2rem] bg-black px-6 py-8 sm:px-8 sm:py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.35)]"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-4 flex items-center justify-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
                 <img
                   src={Contact2Image}
                   alt="Email"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 E-MAIL ID:
               </h3>
-              <p className="text-white text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <p className="text-sm sm:text-base opacity-90 break-words" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 support@copym.xyz
               </p>
             </motion.div>
@@ -210,20 +193,20 @@ const Contact = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
-              className="bg-black rounded-[2rem] sm:rounded-[2.5rem] lg:rounded-[3rem] px-3 sm:px-4 lg:px-5 py-4 sm:py-5 lg:py-6 text-center"
+              className="flex flex-col items-center text-center rounded-[2rem] bg-black px-6 py-8 sm:px-8 sm:py-10 text-white shadow-[0_30px_80px_rgba(15,23,42,0.35)]"
             >
-              <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto mb-4 flex items-center justify-center">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
                 <img
                   src={Contact3Image}
                   alt="Address"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 ADDRESS:
               </h3>
-              <p className="text-white text-sm sm:text-base" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                IndiraNnagar , Bangalore
+              <p className="text-sm sm:text-base opacity-90" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                Indiranagar, Bangalore
               </p>
             </motion.div>
           </div>
@@ -248,9 +231,9 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="rounded-2xl overflow-hidden shadow-xl"
+            className="rounded-[2rem] overflow-hidden border border-black/5 shadow-[0_30px_100px_rgba(15,23,42,0.2)]"
           >
-            <div className="aspect-w-16 aspect-h-9 h-64 sm:h-80 lg:h-96">
+            <div className="w-full aspect-[4/3] sm:aspect-[3/2] lg:aspect-[16/9]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.6408!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
                 width="100%"

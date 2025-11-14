@@ -14,12 +14,12 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col -mt-3 space-y-6">
             <div className="h-9 flex items-start">
-              <img
-                loading="lazy"
+            <img
+              loading="lazy"
                 src="assets/copym/png/Copym-02-1.png"
-                alt="COPYM"
+              alt="COPYM"
                 className="h-10  w-auto sm:h-14 object-contain"
-              />
+            />
             </div>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-sm">
               Investing for outliers. Build wealth with our modern investment platform designed for the next generation.
@@ -129,8 +129,8 @@ export default function Footer() {
                       fontWeight: 700,
                       color: '#fffdfd',
                     }}
-                  >
-                    Subscribe
+                >
+                  Subscribe
                   </span>
                 </button>
               </div>
