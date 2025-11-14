@@ -9,7 +9,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Full Video Background */}
-      <section className="relative w-full min-h-[520px] sm:min-h-[600px] lg:min-h-[760px] overflow-hidden flex items-center">
+      <section className="relative w-full min-h-[520px] sm:min-h-[600px] lg:h-[90vh] xl:h-screen overflow-hidden flex items-center">
         {/* Background Video */}
         <div className="absolute inset-0 z-0">
           <video
@@ -52,10 +52,10 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="relative w-full overflow-hidden rounded-3xl border border-[#7DD1B2]/60 bg-[#e6f2ed] shadow-[0_40px_120px_rgba(15,23,42,0.15)]"
+            className="relative w-full overflow-hidden border border-[#7DD1B2]/60 bg-[#e6f2ed] shadow-[0_40px_120px_rgba(15,23,42,0.15)]"
           >
             {/* Green Header Bar with Heading */}
-            <div className="flex h-14 sm:h-16 items-center justify-center bg-[#b3ffe3]/40 px-4 text-center">
+            <div className="flex h-14 sm:h-14 py-12 items-center justify-center bg-[#b3ffe3]/40 px-4 text-center">
               <h2
                 className="m-0 text-lg sm:text-xl lg:text-2xl font-bold tracking-wide uppercase text-black"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
