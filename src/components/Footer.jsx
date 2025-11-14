@@ -10,15 +10,17 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-5 items-start">
           {/* Brand */}
-          <div className="space-y-6">
-            <img
-              loading="lazy"
-              src="assets/copym/png/Copym-01-1.png"
-              alt="COPYM"
-              className="h-10 w-auto sm:h-14 object-contain"
-            />
+          <div className="flex flex-col -mt-3 space-y-6">
+            <div className="h-9 flex items-start">
+              <img
+                loading="lazy"
+                src="assets/copym/png/Copym-02-1.png"
+                alt="COPYM"
+                className="h-10  w-auto sm:h-14 object-contain"
+              />
+            </div>
             <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-sm">
               Investing for outliers. Build wealth with our modern investment platform designed for the next generation.
             </p>
@@ -57,11 +59,11 @@ export default function Footer() {
               links: ['Help Centre', 'Security', 'Press', 'Terms', 'API'],
             },
           ].map((column) => (
-            <div key={column.title} className="space-y-5">
-              <h3 className="uppercase tracking-[0.18em] text-xs text-gray-400 font-semibold">
+            <div key={column.title} className="flex flex-col space-y-5">
+              <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline h-6 flex items-start">
                 {column.title}
               </h3>
-              <ul className="space-y-3 text-sm sm:text-base text-gray-300">
+              <ul className="space-y-3 text-sm sm:text-base text-white">
                 {column.links.map((item) => (
                   <li key={item}>
                     <a
@@ -77,13 +79,13 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="space-y-6">
+          <div className="flex flex-col space-y-6">
             <div>
-              <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline">
+              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start">
                 JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-4 text-sm sm:text-base text-white leading-relaxed uppercase">
-                TO KNOW MORE SUBCRIBE TO OUR
+              <p className="mt-4 text-sm sm:text-base text-white leading-relaxed">
+                To know more subscribe to our newsletter
               </p>
             </div>
             <form className="space-y-3">
