@@ -215,37 +215,50 @@ const Contact = () => {
 
       {/* Find Us Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-black">FIND </span>
-              <span className="text-[#15a36e]">US?</span>
-            </h2>
-            <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Visit our office or get in touch
-            </p>
+        <div className="w-full">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-black">FIND </span>
+                <span className="text-[#15a36e]">US?</span>
+              </h2>
+              <p className="text-base sm:text-lg md:text-xl lg:text-[28px] font-normal text-black leading-relaxed max-w-2xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                Visit our office or get in touch
+              </p>
+            </div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="rounded-[2rem] overflow-hidden border border-black/5 shadow-[0_30px_100px_rgba(15,23,42,0.2)]"
-          >
-            <div className="w-full aspect-[4/3] sm:aspect-[3/2] lg:aspect-[16/9]">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.6408!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Copym Office Location - Indiranagar, Bengaluru"
-              ></iframe>
-            </div>
-          </motion.div>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="relative w-full border-y border-black/5 shadow-[0_30px_100px_rgba(15,23,42,0.2)]"
+            >
+              {/* Map Shadow Background */}
+              <div 
+                className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+                style={{
+                  backgroundImage: `url('/assets/Images/Map-shadow.png')`,
+                }}
+              ></div>
+              
+              <div className="relative z-10 w-full h-[55vh] sm:h-[60vh] lg:h-[70vh]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0!2d77.6408!3d12.9716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sIndiranagar%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Copym Office Location - Indiranagar, Bengaluru"
+                  className="w-full h-full"
+                ></iframe>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
     </div>
