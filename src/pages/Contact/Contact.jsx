@@ -65,7 +65,7 @@ const Contact = () => {
 
       {/* Typeform Section */}
       <section id="typeform-section" className="py-12 sm:py-16 lg:py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -90,12 +90,15 @@ const Contact = () => {
             }}>
               <h2 style={{ 
                 fontFamily: 'DM Sans, sans-serif',
-                fontSize: 'clamp(16px, 2.5vw, 24px)', 
-                fontWeight: 600, 
+                fontSize: 'clamp(18px, 2.5vw, 28px)', 
+                fontWeight: 700, 
                 textAlign: 'center', 
-                color: '#000', 
                 margin: '0'
-              }}>TOKENIZATION APPLICATION FORM</h2>
+              }}>
+                <span style={{ color: '#000' }}>READY TO </span>
+                <span style={{ color: '#15a36e' }}>TOKENIZE </span>
+                <span style={{ color: '#000' }}>YOUR ASSETS ?</span>
+              </h2>
             </div>
 
             {/* Separator Line */}
@@ -105,10 +108,10 @@ const Contact = () => {
               width: '100%'
             }}></div>
 
-            {/* Grey Content Area */}
+            {/* Black Content Area */}
             <div style={{ 
               padding: '20px 24px', 
-              background: '#f0f5f3',
+              background: '#000000',
               position: 'relative'
             }}>
               <Typeform />
