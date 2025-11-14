@@ -271,16 +271,26 @@ export default function AccessPage() {
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
-                         {/* Glass Pill Layer - Curved div style */}
-             <div
-              className="relative w-full max-w-[200px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-12 sm:h-14 md:h-16 bg-[#15A36E] backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-sm sm:text-base md:text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-4 sm:mt-6 px-4 sm:px-6 dm-sans"
-               style={{
-                 WebkitBackdropFilter: 'blur(10px)',
-                 backdropFilter: 'blur(10px)'
-               }}
+                         {/* Mint Token Button - Exact START INVESTING style */}
+             <button
+              className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md mx-auto mt-4 sm:mt-6"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
              >
-               Mint Your Token Now
-             </div>
+               MINT YOUR TOKEN NOW
+               <svg
+                 className="w-4 h-4"
+                 fill="none"
+                 stroke="currentColor"
+                 viewBox="0 0 24 24"
+               >
+                 <path
+                   strokeLinecap="round"
+                   strokeLinejoin="round"
+                   strokeWidth={2.5}
+                   d="M9 5l7 7-7 7"
+                 />
+               </svg>
+             </button>
           </div>
         </div>
              </section>
