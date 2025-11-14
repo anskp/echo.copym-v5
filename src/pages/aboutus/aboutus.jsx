@@ -26,7 +26,7 @@ const AboutUs = () => {
     return (
         <div className="min-h-screen bg-white">
             {/* Section 1: Hero Section */}
-            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen lg:min-h-[800px] overflow-hidden">
+            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden">
                 {/* Background Video */}
                 <div className="absolute inset-0 z-0">
                     <video
@@ -98,13 +98,12 @@ const AboutUs = () => {
             </section>
 
             {/* Section 2: Company Overview */}
-            <section className="relative">
+            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden flex items-center">
                 {/* Main Content */}
-                <div className="relative z-10 bg-black
-                  pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32 overflow-hidden">
+                <div className="relative z-10 bg-black w-full h-full overflow-hidden flex items-center">
                     
                     
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                 <span className="text-white">COMPANY </span>
@@ -113,10 +112,10 @@ const AboutUs = () => {
                             <div className="w-24 h-1 bg-gradient-to-r from-green-400 to-green-300 mx-auto rounded-full"></div>
                         </div>
 
-                        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
                             {/* Left Side - Circular Image */}
-                            <div className="flex justify-center lg:justify-start">
-                                <div className="relative w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] lg:w-[500px] lg:h-[500px]">
+                            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
+                                <div className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
                                     <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-[#15a36e]/30">
                                         <img
                                             src="/assets/Images/Contact-us.png"
@@ -129,7 +128,7 @@ const AboutUs = () => {
                             </div>
 
                             {/* Right Side - Text Content */}
-                            <div className="space-y-6 lg:space-y-8">
+                            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2 text-center lg:text-left">
                                 <div className="space-y-4">
                                     <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         COPYm is a leading <span className="font-semibold text-white">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
@@ -156,18 +155,11 @@ const AboutUs = () => {
             {/* Section 3: Mission & Vision */}
             <section className="py-12 sm:py-16 lg:py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                            <span className="text-black">MISSION & </span>
-                            <span className="text-[#15a36e]">VISION</span>
-                        </h2>
-                        <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-green-600 mx-auto rounded-full"></div>
-                    </div>
-
-                    <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
                         {/* Mission - Left Side */}
-                        <div className="flex flex-col">
-                            <div className="bg-black rounded-2xl p-6 lg:p-8 mb-4 flex-1">
+                        <div className="flex flex-col overflow-hidden ">
+                            {/* Black Content Area */}
+                            <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
                                 <div className="space-y-4">
                                     <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
@@ -180,14 +172,18 @@ const AboutUs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                OUR MISSION
-                            </h3>
+                            {/* Colored Footer with Title */}
+                            <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
+                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    OUR MISSION
+                                </h3>
+                            </div>
                         </div>
 
                         {/* Vision - Right Side */}
-                        <div className="flex flex-col">
-                            <div className="bg-black rounded-2xl p-6 lg:p-8 mb-4 flex-1">
+                        <div className="flex flex-col overflow-hidden ">
+                            {/* Black Content Area */}
+                            <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
                                 <div className="space-y-4">
                                     <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
@@ -200,9 +196,12 @@ const AboutUs = () => {
                                     </p>
                                 </div>
                             </div>
-                            <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                OUR VISION
-                            </h3>
+                            {/* Colored Footer with Title */}
+                            <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
+                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    OUR VISION
+                                </h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -304,7 +303,7 @@ const AboutUs = () => {
                                         <div style={{ 
                                             position: 'absolute',
                                             bottom: '5px',
-                                            right: '41px',
+                                            right: '10px',
                                             background: '#fff', 
                                             padding: '3px 9px', 
                                             borderRadius: '20px', 
@@ -366,10 +365,10 @@ const AboutUs = () => {
                     </div>
 
                     {/* Timeline Container */}
-                    <div className="relative pl-8 sm:pl-12 md:pl-16 pr-8 sm:pr-12 md:pr-16">
+                    <div className="relative pl-8 sm:pl-12 md:pl-16 pr-4 sm:pr-8 md:pr-12">
                         {/* Glowing Vertical Timeline Line */}
                         <div 
-                            className="absolute left-0 top-0 bottom-0 flex items-center justify-center"
+                            className="absolute left-0 sm:left-2 md:left-4 top-0 bottom-0 hidden sm:flex items-center justify-center"
                             style={{
                                 width: 'auto',
                                 height: '100%'
@@ -393,10 +392,10 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
+                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
                             >
                                 {/* Icon */}
-                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/Cube.png" 
                                         alt="Foundation" 
@@ -406,7 +405,7 @@ const AboutUs = () => {
 
                                 {/* Heading - Fixed width for uniform alignment */}
                                 <h3 
-                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
                                     style={{ 
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
@@ -434,10 +433,10 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.2 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
+                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
                             >
                                 {/* Icon */}
-                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/Rocket.png" 
                                         alt="Platform Launch" 
@@ -447,7 +446,7 @@ const AboutUs = () => {
 
                                 {/* Heading - Fixed width for uniform alignment */}
                                 <h3 
-                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
                                     style={{ 
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
@@ -475,10 +474,10 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
                                 viewport={{ once: true }}
-                                className="relative flex items-center gap-4 sm:gap-6 lg:gap-8"
+                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
                             >
                                 {/* Icon */}
-                                <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 relative z-10">
+                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
                                     <img 
                                         src="/assets/Images/icons/StylizedGlobe.png" 
                                         alt="Global Expansion" 
@@ -488,7 +487,7 @@ const AboutUs = () => {
 
                                 {/* Heading - Fixed width for uniform alignment */}
                                 <h3 
-                                    className="flex-shrink-0 text-lg sm:text-xl md:text-2xl font-bold w-48 sm:w-56 lg:w-64"
+                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
                                     style={{ 
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
