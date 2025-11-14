@@ -34,8 +34,8 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         <div className="flex-shrink-0 transition-transform duration-300">
           {isOpen ? (
             <svg
-              width="23"
-              height="20"
+              width="16"
+              height="14"
               viewBox="0 0 23 20"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -44,8 +44,8 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
             </svg>
           ) : (
             <svg
-              width="20"
-              height="23"
+              width="14"
+              height="16"
               viewBox="0 0 20 23"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"

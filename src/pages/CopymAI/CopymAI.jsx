@@ -11,7 +11,6 @@ import Services from "./components/Services";
 // import GreenCurves from "./components/GreenCurves";
 import { Player } from '@lottiefiles/react-lottie-player';
 import FlowingB from "./assets/FlowingB.json";
-import Flowing from "./assets/Flowing.png";
 
 const CopymAI = () => {
   return (
@@ -28,13 +27,17 @@ const CopymAI = () => {
           <div className="w-full bg-black py-9 sm:py-12 lg:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
-                {/* Left Side - Image */}
+                {/* Left Side - Video */}
                 <div className="flex justify-start -translate-x-10 items-center">
-                  <img 
-                    src={Flowing} 
-                    alt="Flowing" 
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="w-full max-w-3xl object-contain"
-                  />
+                  >
+                    <source src="/assets/videos/Flowing-green.mp4" type="video/mp4" />
+                  </video>
                 </div>
                 {/* Right Side - Lottie Animation */}
                 <div className="flex justify-end  -translate-x-14 items-center">

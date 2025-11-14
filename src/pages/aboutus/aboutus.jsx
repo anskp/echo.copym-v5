@@ -18,7 +18,6 @@ import {
   GiBinoculars,
   GiHourglass
 } from "react-icons/gi";
-import accesspassVideo from "../../components/Videos/Accesspass-vdo.mp4";
 import TestimonialsSection from "../HomePage/sections/Testimonials";
 
 
@@ -36,7 +35,7 @@ const AboutUs = () => {
                         playsInline
                         className="w-full h-full object-cover"
                     >
-                        <source src={accesspassVideo} type="video/mp4" />
+                        <source src="/assets/videos/Blue-green.mp4" type="video/mp4" />
                     </video>
                     {/* Light overlay to maintain readability and light aesthetic */}
                     <div className="absolute inset-0 bg-white/70"></div>

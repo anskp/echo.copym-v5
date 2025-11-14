@@ -41,22 +41,34 @@ export default function AIInvestingSection() {
                 />
                 
                 {/* Left Text Container - Mobile: positioned to the left */}
-                <div className="absolute left-0 sm:-left-4 md:-left-8 top-16 sm:top-20 md:top-24 lg:hidden z-30">
+                <motion.div 
+                  className="absolute left-0 sm:-left-4 md:-left-8 top-16 sm:top-20 md:top-24 lg:hidden z-30"
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
                   <div className="bg-white bg-opacity-95 rounded-[20px] sm:rounded-[24px] border-2 border-gray-200 p-3 sm:p-4 shadow-lg w-[130px] sm:w-[150px] md:w-[170px]">
                     <p className="text-[10px] sm:text-xs md:text-sm text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
                       Cora AI is a AI technology designed by CopyM to make better investments
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Right Text Container - Mobile: positioned to the right */}
-                <div className="absolute right-0 sm:-right-4 md:-right-8 bottom-12 sm:bottom-16 md:bottom-20 lg:hidden z-30">
+                <motion.div 
+                  className="absolute right-0 sm:-right-4 md:-right-8 bottom-12 sm:bottom-16 md:bottom-20 lg:hidden z-30"
+                  initial={{ opacity: 0, scale: 0.8, y: 20 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                >
                   <div className="bg-white bg-opacity-95 rounded-[20px] sm:rounded-[24px] border-2 border-gray-200 p-3 sm:p-4 shadow-lg w-[130px] sm:w-[150px] md:w-[170px]">
                     <p className="text-[10px] sm:text-xs md:text-sm text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
                       AI that predicts trends, analyzes data, and guides smarter investments.
                     </p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -107,22 +119,34 @@ export default function AIInvestingSection() {
                 />
                 
                 {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}
-                <div className="absolute left-[-200px] top-[130px] hidden lg:block">
+                <motion.div 
+                  className="absolute left-[-200px] top-[130px] hidden lg:block"
+                  initial={{ opacity: 0, scale: 0.8, x: -30 }}
+                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
                   <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80 ">
                     <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
                       Cora AI is a AI technology designed by CopyM to make better investments
                     </p>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* Right Text Container - positioned to bottom right of phone, aligned with "Upcoming Payouts" section */}
-                <div className="absolute right-[-180px] bottom-[100px] hidden lg:block">
+                <motion.div 
+                  className="absolute right-[-180px] bottom-[100px] hidden lg:block"
+                  initial={{ opacity: 0, scale: 0.8, x: 30 }}
+                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                >
                   <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
                     <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
                       AI that predicts trends, analyzes data, and guides smarter investments.
                     </p>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
