@@ -48,9 +48,9 @@ export default function TrackYourCrypto() {
           </div>
           
           {/* App Store Buttons */}
-          <div className="flex items-center justify-center gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
             {/* Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
               <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-3 px-6 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 w-full sm:w-52 h-14 border border-gray-300">
                 <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-6 h-6 brightness-0 invert" />
                 <div className="text-left">
@@ -70,7 +70,7 @@ export default function TrackYourCrypto() {
             </div>
             
             {/* QR Code */}
-            <div className="flex-shrink-0 ">
+            <div className="flex-shrink-0 flex items-center justify-center">
               <QrCodeIcon className="w-12 h-12 sm:w-16 sm:h-16 text-black " />
             </div>
           </div>
