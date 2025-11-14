@@ -24,21 +24,19 @@ const Hero = () => {
       id="hero"
     >
       <div ref={parallaxRef} className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full h-full flex items-center justify-center">
-        {/* Removed background two-curve graphic */}
-
-        {/* Center video */}
-        <div className="relative z-0 flex items-center justify-center w-full">
+        {/* Background video */}
+        <div className="absolute inset-0 z-0 flex items-center justify-center">
           <div className="bg-black p-4 sm:p-6 md:p-8 rounded-lg">
-          <div className="relative w-full max-w-[500px] h-[500px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[600px] lg:h-[600px] flex items-center justify-center">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-full object-cover"
-            >
-              <source src={coraVideo} type="video/mp4" />
-            </video>
+            <div className="relative w-full max-w-[500px] h-[500px] sm:max-w-[400px] sm:h-[400px] md:max-w-[500px] md:h-[500px] lg:max-w-[600px] lg:h-[600px] flex items-center justify-center">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source src={coraVideo} type="video/mp4" />
+              </video>
               {/* Retina image centered over video */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <img 
@@ -51,9 +49,9 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Text content - overlapping video */}
-        <div className="absolute z-20 text-center max-w-3xl mx-auto bottom-[15%] sm:bottom-[20%] md:bottom-[25%] left-1/2 transform -translate-x-1/2 px-4">
-          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase mb-3 sm:mb-4 md:mb-6 dm-sans leading-tight">
+        {/* Heading - positioned higher */}
+        <div className="absolute top-[15%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4">
+          <p className="tracking-wider text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-white uppercase dm-sans leading-tight">
             Explore the possibilities of
             <span className="text-emerald-400 inline-block ml-1">
               <Typewriter
@@ -70,6 +68,10 @@ const Hero = () => {
               />
             </span>
           </p>
+        </div>
+
+        {/* Paragraph - positioned lower */}
+        <div className="absolute top-[75%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 text-center max-w-3xl mx-auto px-4">
           <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg max-w-2xl mx-auto dm-sans leading-relaxed">
             Our AI Agent has shown <span className="text-emerald-400 font-dm-sans">23% better accuracy</span> in predicting asset appreciation vs top market tools. Experience the future of finance with <span className="font-semibold text-white">CORA</span>, the unified RWA tokenization AI platform.
           </p>
