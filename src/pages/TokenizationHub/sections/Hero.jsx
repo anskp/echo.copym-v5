@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen flex items-center justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 z-0">
         <video
@@ -22,28 +22,28 @@ export default function Hero() {
       </div>
 
       {/* Hero Content - Positioned on top of video */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-16 sm:pb-20 lg:pb-24">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-8 sm:py-12 lg:py-16">
       
-          <div className="mb-6 lg:mb-8  text-center">
-            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="mb-4 sm:mb-6 lg:mb-8 text-center">
+            <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-white uppercase px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               TOKENIZE REAL-WORLD ASSETS
             </h1>
           </div>
 
           {/* Description - Desktop Optimized */}
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-normal text-white/90 leading-relaxed mb-10 lg:mb-12 max-w-5xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center font-normal text-white/90 leading-relaxed mb-6 sm:mb-8 lg:mb-10 max-w-5xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Transform physical assets into digital tokens with enterprise-grade security, compliance, and liquidity solutions.
           </p>
 
           {/* CTA Buttons - Desktop Optimized */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
             <button
-              className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
+              className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               START INVESTING
               <svg
-                className="w-3 h-3 sm:w-4 sm:h-4"
+                className="w-4 h-4"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -57,7 +57,7 @@ export default function Hero() {
                 </svg>
             </button>
             <button
-              className="border-2 border-white text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-white hover:text-gray-900 transition-all duration-300"
+              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               WATCH DEMO

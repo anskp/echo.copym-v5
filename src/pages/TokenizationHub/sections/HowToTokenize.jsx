@@ -36,17 +36,17 @@ export default function HowToTokenize() {
   ];
 
   return (
-    <section className="relative bg-white py-16 sm:py-20 lg:py-24">
+    <section className="relative bg-white py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-[#15a36e]">TOKENIZE</span> ASSETS
           </h2>
         </div>
 
         {/* Steps */}
-        <div className="space-y-24 sm:space-y-32 lg:space-y-40">
+        <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24">
           {steps.map((step, index) => (
             <motion.div
               key={index}
@@ -56,11 +56,11 @@ export default function HowToTokenize() {
               viewport={{ once: true }}
               className={`flex flex-col ${
                 step.imagePosition === 'left' ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } items-center gap-8 lg:gap-12`}
+              } items-center gap-6 sm:gap-8 lg:gap-12 px-4`}
             >
               {/* Image */}
               <div className={`flex-1 flex ${step.imagePosition === 'left' ? 'justify-start' : 'justify-end'} w-full lg:w-auto`}>
-                <div className="relative w-full max-w-md lg:max-w-lg">
+                <div className="relative w-full max-w-[280px] sm:max-w-md lg:max-w-lg">
                   <img 
                     src={step.image} 
                     alt={step.title}
@@ -70,8 +70,8 @@ export default function HowToTokenize() {
               </div>
 
               {/* Text Content */}
-              <div className="flex-1 w-full lg:w-auto">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#15a36e] mb-4 lg:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <div className="flex-1 w-full lg:w-auto text-center lg:text-left">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-[#15a36e] mb-3 sm:mb-4 lg:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   {step.title}
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>

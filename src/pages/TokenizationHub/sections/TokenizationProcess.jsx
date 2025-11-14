@@ -102,7 +102,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
   ];
 
   return (
-    <section className="relative bg-white pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-10 lg:pb-12">
+    <section className="relative bg-white pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-8 sm:pb-10 lg:pb-12">
       {/* Decorative background */}
       <div className="absolute inset-0 z-0 pointer-events-none select-none overflow-visible">
         <svg
@@ -197,7 +197,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-black uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               WHY <span className="text-[#15a36e]">TOKENIZE</span> ?
             </h2>
@@ -217,7 +217,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
           <div className="relative mt-12 sm:mt-16 lg:mt-20">
             {/* Center vertical SVG line */}
             <svg
-              className="hidden md:block absolute inset-y-0 left-1/2 -translate-x-1/2 h-full w-[28px] pointer-events-none select-none"
+              className="hidden lg:block absolute inset-y-0 left-1/2 -translate-x-1/2 h-full w-[28px] pointer-events-none select-none"
               // Width fixed, height stretches with container
               viewBox="0 0 28 937"
               fill="none"
@@ -264,7 +264,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
               </defs>
             </svg>
 
-            <div className="space-y-16 md:space-y-24">
+            <div className="space-y-12 sm:space-y-16 md:space-y-20 lg:space-y-24 px-4">
               {whyTokenizeFeatures.map((feature, index) => {
                 const isRight = index % 2 === 0; // even indices on the right (Programable terms etc.)
                 return (
@@ -273,26 +273,27 @@ export default function TokenizationProcess({ onLaunchCreator }) {
                     className={`relative flex flex-col md:flex-row ${isRight ? 'md:justify-end' : 'md:justify-start'} items-start`}
                   >
                     <div
-                      className={`flex items-start gap-6 max-w-lg ${isRight ? '' : 'md:flex-row-reverse text-right'}`}
+                      className={`flex flex-col sm:flex-row items-start gap-4 sm:gap-6 max-w-lg ${isRight ? '' : 'md:flex-row-reverse md:text-right'}`}
                     >
                       {/* Icon */}
                       {feature.icon && (
                         <img
                           src={feature.icon}
                           alt={feature.title}
+                          className="w-20 h-20 sm:w-28 sm:h-28 md:w-32 md:h-32 lg:w-auto lg:h-auto object-contain flex-shrink-0"
                           style={{
-                            width: feature.iconSize?.width || '64px',
-                            height: feature.iconSize?.height || '64px',
+                            maxWidth: feature.iconSize?.width || '64px',
+                            maxHeight: feature.iconSize?.height || '64px',
                             objectFit: 'contain'
                           }}
                         />
                       )}
                       {/* Text */}
-                      <div>
-                        <h3 className="text-emerald-600 font-semibold text-lg mb-2">
+                      <div className="flex-1">
+                        <h3 className="text-emerald-600 font-semibold text-base sm:text-lg md:text-xl mb-2">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-700 text-base leading-relaxed">
+                        <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
                           {feature.description}
                         </p>
                       </div>

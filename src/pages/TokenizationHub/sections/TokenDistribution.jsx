@@ -63,12 +63,12 @@ export default function TokenDistribution() {
 
       {/* Main Content */}
       <div 
-        className="relative z-10 pt-16 sm:pt-20 lg:pt-24 pb-20 sm:pb-24 lg:pb-32"
+        className="relative z-10 pt-8 sm:pt-12 md:pt-16 lg:pt-20 pb-12 sm:pb-16 md:pb-20 lg:pb-24"
       >
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Title */}
-          <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+          <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-white">TOKEN </span>
               <span className="text-[#15a36e]">DISTRIBUTION</span>
@@ -80,7 +80,7 @@ export default function TokenDistribution() {
           </div>
 
           {/* Features Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6 relative">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 relative px-4">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -88,16 +88,15 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="relative flex flex-col justify-center items-center"
+                className="relative flex flex-col justify-center items-center sm:min-h-[240px] md:min-h-[280px] p-4 sm:p-5 md:p-6"
                 style={{
                   width: '100%',
-                  minHeight: '280px',
+                  minHeight: '200px',
                   borderRadius: '24px',
                   background: 'transparent',
                   borderWidth: '1px',
                   borderColor: '#15a36e',
-                  borderStyle: 'solid',
-                  padding: '24px 20px'
+                  borderStyle: 'solid'
                 }}
               >
                 <h3 

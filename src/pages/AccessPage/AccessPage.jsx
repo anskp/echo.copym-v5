@@ -271,19 +271,19 @@ export default function AccessPage() {
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
-            {/* Glass Pill Layer - Curved div style */}
-            <div
+                         {/* Glass Pill Layer - Curved div style */}
+             <div
               className="relative w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-12 sm:h-14 md:h-16 bg-emerald-600/80 backdrop-blur-[10px] rounded-[40px] flex justify-center items-center text-white text-sm sm:text-base md:text-lg font-semibold shadow-[0_10px_30px_rgba(16,185,129,0.5)] z-20 border border-emerald-500/50 mx-auto mt-4 sm:mt-6 px-4 sm:px-6 dm-sans"
-              style={{
-                WebkitBackdropFilter: 'blur(10px)',
-                backdropFilter: 'blur(10px)'
-              }}
-            >
-              Mint Your Token Now ➡
-            </div>
+               style={{
+                 WebkitBackdropFilter: 'blur(10px)',
+                 backdropFilter: 'blur(10px)'
+               }}
+             >
+               Mint Your Token Now ➡
+             </div>
           </div>
         </div>
-      </section>
+             </section>
 
 
       {/* Pass Unlocks Section */}
@@ -360,14 +360,14 @@ export default function AccessPage() {
                </p>
              </div>
 
-            {/* Grouped Images */}
+                           {/* Grouped Images */}
             <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8 px-4">
-              <img 
-                src={GroupedImages} 
-                alt="Platform Features"
+                <img 
+                  src={GroupedImages} 
+                  alt="Platform Features"
                 className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl h-auto object-contain"
-              />
-            </div>
+                />
+              </div>
            </div>
          </div>
                </section>

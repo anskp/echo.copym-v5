@@ -175,8 +175,8 @@ const AboutUs = () => {
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
                                 <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                    OUR MISSION
-                                </h3>
+                                OUR MISSION
+                            </h3>
                             </div>
                         </div>
 
@@ -199,8 +199,8 @@ const AboutUs = () => {
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
                                 <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                    OUR VISION
-                                </h3>
+                                OUR VISION
+                            </h3>
                             </div>
                         </div>
                     </div>

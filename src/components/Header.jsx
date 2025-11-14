@@ -177,12 +177,12 @@ export default function Header() {
       </div>
 
       {/* Delta-Style Navbar */}
-      <nav className="navbar bg-black">
+      <nav className="navbar bg-black ">
         <div className="nav-container px-4 sm:px-6 lg:px-8 py-4 sm:py-6 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center mr-8">
               <img
-                src={isCopymAIPage ? "/assets/copym/png/Copym-01-1.png" : isAgentPage ? "/assets/copym/png/Copym-02-1.png" : "/assets/copym/png/Copym-02-1.png"}
+                src="/assets/copym/png/Copym-02-1.png"
                 alt="COPYM"
                 className="h-16 w-auto object-contain  -mt-6 sm:h-18 md:h-20"
               />

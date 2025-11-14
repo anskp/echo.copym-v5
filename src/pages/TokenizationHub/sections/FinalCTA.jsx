@@ -11,7 +11,7 @@ export default function FinalCTA() {
   ];
 
   return (
-    <section className="relative py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
@@ -19,7 +19,7 @@ export default function FinalCTA() {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[100px]"></div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 md:gap-12 items-center">
           {/* Left Column: Analytics Features */}
         
 
