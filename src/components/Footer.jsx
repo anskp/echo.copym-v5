@@ -10,7 +10,7 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid gap-1 sm:gap-1 lg:gap-2 sm:grid-cols-2 lg:grid-cols-5 items-start">
+        <div className="grid gap-1 sm:gap-1 lg:gap-2 sm:grid-cols-3 lg:grid-cols-5 items-start">
           {/* Brand */}
           <div className="flex flex-col -mt-3 space-y-6">
             <div className="h-9 flex items-start">
@@ -90,10 +90,8 @@ export default function Footer() {
             </div>
             <form className="space-y-3">
               <div 
-                className="flex items-center overflow-hidden"
+                className="flex items-center overflow-hidden w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]"
                 style={{
-                  width: '100%',
-                  maxWidth: '240px',
                   height: '40px',
                   background: '#fffdfd',
                   borderRadius: '20px',
@@ -105,10 +103,10 @@ export default function Footer() {
                   placeholder="Enter your E-Mail ID"
                   className="flex-1 h-full focus:outline-none rounded-l-lg placeholder:text-[#c0b5b5]"
                   style={{
-                    paddingLeft: '16px',
+                    paddingLeft: '14px',
                     paddingRight: '8px',
                     color: '#000000',
-                    fontSize: '14px',
+                    fontSize: '13px',
                     background: 'transparent',
                   }}
                 />
@@ -116,16 +114,16 @@ export default function Footer() {
                   type="submit"
                   className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-lg whitespace-nowrap"
                   style={{
-                    minWidth: '100px',
-                    paddingLeft: '12px',
-                    paddingRight: '12px',
+                    minWidth: '120px',
+                    paddingLeft: '16px',
+                    paddingRight: '50px',
                     background: '#15a36e',
-                    marginLeft: '-4px',
+                    marginLeft: '-55px',
                   }}
                 >
                   <span
                     style={{
-                      fontSize: '14px',
+                      fontSize: '12px',
                       fontWeight: 700,
                       color: '#fffdfd',
                     }}

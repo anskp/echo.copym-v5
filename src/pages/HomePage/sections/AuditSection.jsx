@@ -26,7 +26,7 @@ export default function AuditSection() {
           {/* Lottie Animation */}
           <div className="flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 w-full overflow-visible px-4">
             <div className="w-full h-auto flex items-center justify-center overflow-visible" style={{ 
-              transform: 'scale(3.0) sm:scale(2.8) md:scale(2.6) lg:scale(2.4) xl:scale(2.2) translateY(-8%) sm:translateY(-10%) md:translateY(-12%) lg:translateY(-12%)',
+              transform: 'scale(4.0) sm:scale(3.6) md:scale(3.4) lg:scale(3.2) xl:scale(3.0) translateY(-8%) sm:translateY(-10%) md:translateY(-12%) lg:translateY(-12%)',
               transformOrigin: 'center center'
             }}>
               <Player
