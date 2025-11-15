@@ -38,20 +38,20 @@ const MinimalTokenizationDashboard = () => {
       </div>
 
       {/* Content with Cards and Image */}
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 sm:gap-8 items-center lg:items-start">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
         {/* Three Horizontal Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-9 w-full lg:w-2/3 mt-4 sm:mt-8 md:mt-12 lg:mt-4">
         {/* Card 1: We can tokenize any asset */}
         <div className={`bg-white rounded-xl shadow-lg p-4 sm:p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-3 sm:mb-4">
-            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center justify-center sm:justify-start dm-sans uppercase">
+            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
               
               We can tokenize any asset
             </h3>
           </div>
           <div className="space-y-4 sm:space-y-6">
             <div>
-              <p className="text-xs sm:text-sm text-center sm:text-left text-blue-800 dm-sans">
+              <p className="text-xs sm:text-sm text-left text-blue-800 dm-sans">
                 Transform any real-world asset into digital tokens with our secure blockchain platform.
               </p>
             </div>
@@ -71,7 +71,7 @@ const MinimalTokenizationDashboard = () => {
         {/* Card 2: One simple token management interface */}
         <div className={`bg-white rounded-xl shadow-lg p-4 sm:p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-3 sm:mb-4">
-            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center justify-center sm:justify-start dm-sans uppercase">
+            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
               
               One simple token management interface
             </h3>
@@ -102,14 +102,14 @@ const MinimalTokenizationDashboard = () => {
 
         {/* Card 3: Investor Groups with Globe */}
         <div className={`bg-white rounded-xl shadow-lg p-4 sm:p-6 transition-all duration-700 delay-200 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-          <div className="mb-3 sm:mb-4 text-center">
-            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center justify-center dm-sans uppercase">
+          <div className="mb-3 sm:mb-4">
+            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
               
               Global Distribution
             </h3>
           </div>
           <div className="space-y-4 sm:space-y-6">
-            <div className="hidden sm:block space-y-2">
+            <div className="space-y-2">
               {investorGroups.map((group) => (
                 <div key={group.name} className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
@@ -128,7 +128,7 @@ const MinimalTokenizationDashboard = () => {
       </div>
 
         {/* Bitcoinsplit Image on the Right */}
-        <div className="w-full lg:w-1/3 flex justify-center lg:justify-end items-center mt-6 sm:mt-8 lg:mt-0">
+        <div className="w-full lg:w-1/3 flex justify-start lg:justify-end items-center mt-6 sm:mt-8 lg:mt-0">
           <img 
             src={BitcoinsplitImage} 
             alt="Bitcoin split"
