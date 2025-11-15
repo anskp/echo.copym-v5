@@ -44,14 +44,14 @@ const MinimalTokenizationDashboard = () => {
         {/* Card 1: We can tokenize any asset */}
         <div className={`bg-white rounded-xl shadow-lg p-4 sm:p-6 transition-all duration-700 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-3 sm:mb-4">
-            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
+            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center justify-center sm:justify-start dm-sans uppercase">
               
               We can tokenize any asset
             </h3>
           </div>
           <div className="space-y-4 sm:space-y-6">
             <div>
-              <p className="text-xs sm:text-sm text-left text-blue-800 dm-sans">
+              <p className="text-xs sm:text-sm text-center sm:text-left text-blue-800 dm-sans">
                 Transform any real-world asset into digital tokens with our secure blockchain platform.
               </p>
             </div>
@@ -71,7 +71,7 @@ const MinimalTokenizationDashboard = () => {
         {/* Card 2: One simple token management interface */}
         <div className={`bg-white rounded-xl shadow-lg p-4 sm:p-6 transition-all duration-700 delay-100 ${loaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
           <div className="mb-3 sm:mb-4">
-            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center dm-sans uppercase">
+            <h3 className="text-base sm:text-lg font-semibold text-[#15a36e] flex items-center justify-center sm:justify-start dm-sans uppercase">
               
               One simple token management interface
             </h3>

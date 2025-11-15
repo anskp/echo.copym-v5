@@ -149,9 +149,8 @@ export default function InvestorManagement() {
                     background: '#f0f5f3',
                     position: 'relative'
                   }}>
-                    <p className="dm-sans" style={{ 
+                    <p className="dm-sans text-center lg:text-left" style={{ 
                       fontSize: 'clamp(12px, 1.5vw, 14px)', 
-                      textAlign: 'left', 
                       color: '#000', 
                       lineHeight: '1.4',
                       margin: '0 0 20px 0'

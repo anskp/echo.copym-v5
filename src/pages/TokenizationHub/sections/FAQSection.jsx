@@ -142,7 +142,7 @@ export default function FAQSection() {
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center lg:items-start">
           {/* Left Side - FAQ List */}
           <div className="space-y-4 order-2 lg:order-1">
             {faqs.map((faq, index) => (
