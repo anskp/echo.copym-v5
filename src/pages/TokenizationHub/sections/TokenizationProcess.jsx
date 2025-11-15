@@ -270,10 +270,10 @@ export default function TokenizationProcess({ onLaunchCreator }) {
                 return (
                   <div
                     key={index}
-                    className={`relative flex flex-col md:flex-row ${isRight ? 'md:justify-end' : 'md:justify-start'} items-start`}
+                    className={`relative flex flex-col md:flex-row ${isRight ? 'md:justify-end' : 'md:justify-start'} items-center md:items-start`}
                   >
                     <div
-                      className={`flex flex-col sm:flex-row items-start gap-4 sm:gap-6 max-w-lg ${isRight ? '' : 'md:flex-row-reverse md:text-right'}`}
+                      className={`flex flex-col sm:flex-row items-center sm:items-start gap-4 sm:gap-6 max-w-lg ${isRight ? '' : 'md:flex-row-reverse md:text-right'}`}
                     >
                       {/* Icon */}
                       {feature.icon && (
@@ -289,7 +289,7 @@ export default function TokenizationProcess({ onLaunchCreator }) {
                         />
                       )}
                       {/* Text */}
-                      <div className="flex-1">
+                      <div className="flex-1 text-center sm:text-left md:text-left">
                         <h3 className="text-emerald-600 font-semibold text-base sm:text-lg md:text-xl mb-2">
                           {feature.title}
                         </h3>

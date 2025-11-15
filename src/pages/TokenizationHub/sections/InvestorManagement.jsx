@@ -53,7 +53,7 @@ export default function InvestorManagement() {
         </div>
 
         {/* Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-8 sm:gap-10 lg:gap-12 items-start -mt-4 sm:-mt-6 lg:-mt-8">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.3fr] gap-8 sm:gap-10 lg:gap-12 items-center lg:items-start -mt-4 sm:-mt-6 lg:-mt-8">
           {/* Left Side: Image and Buttons */}
           <div className="flex flex-col items-center lg:items-start -mt-8 sm:-mt-12 lg:-mt-[124px]">
             {/* 3D Graphic Image */}

@@ -56,10 +56,10 @@ export default function HowToTokenize() {
               viewport={{ once: true }}
               className={`flex flex-col ${
                 step.imagePosition === 'left' ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } items-center gap-6 sm:gap-8 lg:gap-12 px-4`}
+              } items-center justify-center gap-6 sm:gap-8 lg:gap-12 px-4`}
             >
               {/* Image */}
-              <div className={`flex-1 flex ${step.imagePosition === 'left' ? 'justify-start' : 'justify-end'} w-full lg:w-auto`}>
+              <div className={`flex-1 flex justify-center ${step.imagePosition === 'left' ? 'lg:justify-start' : 'lg:justify-end'} w-full lg:w-auto`}>
                 <div className="relative w-full max-w-[280px] sm:max-w-md lg:max-w-lg">
                   <img 
                     src={step.image} 

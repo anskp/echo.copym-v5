@@ -38,7 +38,7 @@ const MinimalTokenizationDashboard = () => {
       </div>
 
       {/* Content with Cards and Image */}
-      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 sm:gap-8 items-start">
+      <div className="w-full max-w-7xl flex flex-col lg:flex-row gap-6 sm:gap-8 items-center lg:items-start">
         {/* Three Horizontal Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-9 w-full lg:w-2/3 mt-4 sm:mt-8 md:mt-12 lg:mt-4">
         {/* Card 1: We can tokenize any asset */}
