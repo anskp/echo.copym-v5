@@ -38,11 +38,12 @@ export default function TrackYourCrypto() {
           </div>
 
           {/* Title */}
-          <div className="space-y-4 sm:space-y-6">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
+          <div className="space-y-4 sm:space-y-6 text-left">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">DOWNLOAD COPYM</span> <span className="text-white">FROM YOUR FAVOURITE APP STORE</span>
             </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed max-w-2xl mx-auto px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <div className="w-24 sm:w-32 h-0.5 bg-white mx-2"></div>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed max-w-2xl px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
             </p>
           </div>
@@ -100,11 +101,12 @@ export default function TrackYourCrypto() {
           </div>
           
           {/* Right Side - Marketing Content */}
-          <div className="space-y-4 sm:space-y-6 text-center lg:text-left order-1 lg:order-2">
+          <div className="space-y-4 sm:space-y-6 text-left order-1 lg:order-2">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                DOWNLOAD <span className="text-emerald-600">COPYM</span> FROM YOUR <span className="text-emerald-600">FAVOURITE</span> APP STORE
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-[#15a36e]">DOWNLOAD COPYM</span> <span className="text-white">FROM YOUR FAVOURITE APP STORE</span>
               </h2>
+              <div className="w-24 sm:w-32 h-0.5 bg-white mx-2"></div>
               <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed px-4 lg:px-0" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                 Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
               </p>

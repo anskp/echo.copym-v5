@@ -53,12 +53,13 @@ const TokenizeAssetsSection = () => {
     <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16" style={{ maxWidth: '100%' }}>
         {/* Header Section */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+        <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-[#15a36e]">TOKENIZE</span>
             <span className="text-black"> REAL ASSETS</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-black leading-relaxed max-w-6xl px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access.
           </p>
         </div>

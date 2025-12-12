@@ -9,13 +9,13 @@ export default function AIInvestingSection() {
     <section className="w-full bg-background-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible">
       <div className="w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
         {/* Heading - Always at Top */}
-        <div className="text-center mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 tracking-base uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            <span className="text-[#15a36e]"> CORA-AI</span>
-            <span className="text-black"> THAT INVESTS WITH YOU </span>
+        <div className="text-left mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 sm:mb-4 tracking-base uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <span className="text-[#15a36e]">CORA-AI</span>
+            <span className="text-black"> THAT INVESTS WITH YOU</span>
           </h2>
-          
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
           </p>
           
@@ -32,9 +32,9 @@ export default function AIInvestingSection() {
         </div>
 
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
-        <div className="flex flex-col lg:hidden items-center text-center space-y-8 sm:space-y-10 md:space-y-12 overflow-visible">
+        <div className="flex flex-col lg:hidden items-center text-left space-y-8 sm:space-y-10 md:space-y-12 overflow-visible">
             
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl mx-auto" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
             </p>
             

@@ -11,6 +11,7 @@ import CopymAI from './pages/CopymAI/CopymAI';
 import Contact from './pages/Contact/Contact';
 import AboutUs from './pages/aboutus/aboutus';
 import ScrollToTop from "./components/ScrollToTop";
+import CustomCursor from "./components/CustomCursor";
 import { Box } from "@mui/material";
 import { Routes, Route, useLocation } from "react-router-dom";
 
@@ -58,6 +59,7 @@ function App() {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
+      <CustomCursor />
       <ScrollToTop />
       <Header />
       <main className="relative z-20 overflow-x-hidden">

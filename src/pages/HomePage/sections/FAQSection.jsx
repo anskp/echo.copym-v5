@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import copym3dVideo from '../../../components/Videos/copym3d.mp4';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
@@ -102,16 +103,17 @@ export default function FAQSection() {
     <section className="relative py-0 -mt-[350px] sm:-mt-[120px] md:-mt-[140px] lg:-mt-[160px] sm:py-10 md:py-14 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
           <h2 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            <span className="text-black">FREQUENTLY ASKED </span>
-            <span className="text-[#15a36e]">QUESTIONS</span>
+            <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
+            <span className="text-black">QUESTIONS</span>
           </h2>
+          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
           <p 
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-4 sm:mb-6 px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-black max-w-3xl mb-4 sm:mb-6 px-4"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
@@ -144,18 +146,24 @@ export default function FAQSection() {
             ))}
           </div>
 
-          {/* Right Side - Image and Support Info */}
+          {/* Right Side - Video and Support Info */}
           <div className="flex flex-col order-1 lg:order-2">
-            {/* Image */}
+            {/* Video */}
             <div className="mb-0 flex justify-center lg:justify-end">
-              <img 
-                src="/assets/Images/ai-overvew.png" 
-                alt="FAQ Illustration"
-                className="w-full max-w-md lg:max-w-lg h-auto object-contain"
-                style={{
-                  maxHeight: '400px'
-                }}
-              />
+              <div className="w-full max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-lg">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-auto object-contain"
+                  style={{
+                    maxHeight: '400px'
+                  }}
+                >
+                  <source src={copym3dVideo} type="video/mp4" />
+                </video>
+              </div>
             </div>
             
             {/* Support Card */}

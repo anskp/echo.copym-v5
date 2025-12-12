@@ -6,20 +6,22 @@ const FeatureSection = () => {
     <section className="relative w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
         {/* Main Heading */}
-        <motion.h2
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 w-full uppercase"
-          style={{ fontFamily: 'DM Sans, sans-serif' }}
+          className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12"
         >
-          <span className="text-black">OWN. </span>
-          <span className="text-[#15a36e]">EARN</span>
-          <span className="text-black">. EXPLORE. </span>
-          <span className="text-[#15a36e]">TRADE</span>
-          <span className="text-black">.</span>
-        </motion.h2>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <span className="text-[#15a36e]">OWN. EARN. </span>
+            <span className="text-black">EXPLORE. TRADE.</span>
+          </h2>
+          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <p className="text-sm sm:text-base md:text-lg text-black max-w-3xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            Own fractional shares of high-value assets, earn passive income, explore diverse opportunities, and trade anytime, anywhere.
+          </p>
+        </motion.div>
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-8">

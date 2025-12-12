@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
+  const logos = [
+    { src: "/assets/svg/Fireblocks.svg", alt: "Fireblocks" },
+    { src: "/assets/svg/Sumsub_idtw6qkLj7_1.svg", alt: "Sumsub" },
+    { src: "/assets/blockchains/solana.png", alt: "Solana" },
+    { src: "/assets/blockchains/ethereum-eth-logo.svg", alt: "Ethereum" },
+  ];
 
   return (
     <div className="relative overflow-hidden">
@@ -20,6 +26,38 @@ export default function Hero() {
           <source src="/assets/videos/hero section video.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/40"></div>
+      </div>
+
+      {/* ====== LOGO CAROUSEL BOTTOM ====== */}
+      <style>{`
+        @keyframes logo-marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+      `}</style>
+      <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none pb-2">
+        <div className="w-full">
+          <div className="bg-white/95 backdrop-blur shadow-lg border-t border-gray-200 overflow-hidden pointer-events-auto">
+            <div className="relative w-full overflow-hidden">
+              <div
+                className="flex items-center gap-8 sm:gap-10 py-3 sm:py-4"
+                style={{
+                  width: "200%",
+                  animation: "logo-marquee 18s linear infinite",
+                }}
+              >
+                {[...logos, ...logos].map((logo, idx) => (
+                  <img
+                    key={`${logo.alt}-${idx}`}
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-6 sm:h-7 md:h-8 object-contain flex-shrink-0"
+                  />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* ====== HERO CONTENT - RIGHT BOTTOM ====== */}

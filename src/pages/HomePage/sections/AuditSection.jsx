@@ -13,12 +13,13 @@ export default function AuditSection() {
       <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-0 sm:pb-6 md:pb-8 lg:pb-10">
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                 {/* Section Header */}
-        <div className="text-center mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-6 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-gray-900">SECURE & </span>
-              <span className="text-emerald-600">AUDITED</span>
+        <div className="text-left mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">SECURE & </span>
+              <span className="text-black">AUDITED</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black max-w-3xl leading-relaxed px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
           </p>
         </div>
