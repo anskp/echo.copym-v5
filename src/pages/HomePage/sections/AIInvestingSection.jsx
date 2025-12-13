@@ -66,10 +66,22 @@ export default function AIInvestingSection() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <div className="bg-white bg-opacity-95 rounded-[20px] sm:rounded-[24px] border-2 border-gray-200 p-3 sm:p-4 shadow-lg w-[130px] sm:w-[150px] md:w-[170px]">
-                  <p className="text-[10px] sm:text-xs md:text-sm text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                    Cora AI is a AI technology designed by CopyM to make better investments
-                  </p>
+                <div 
+                  className="rounded-[20px] sm:rounded-[24px] p-[2px] shadow-lg w-[130px] sm:w-[150px] md:w-[170px]"
+                  style={{ 
+                    background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
+                  }}
+                >
+                  <div 
+                    className="rounded-[18px] sm:rounded-[22px] p-3 sm:p-4 h-full w-full"
+                    style={{ 
+                      backgroundColor: 'rgba(225, 225, 225, 0.9)'
+                    }}
+                  >
+                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      Cora AI is a AI technology designed by CopyM to make better investments
+                    </p>
+                  </div>
                 </div>
               </motion.div>
 
@@ -81,10 +93,22 @@ export default function AIInvestingSection() {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
               >
-                <div className="bg-white bg-opacity-95 rounded-[20px] sm:rounded-[24px] border-2 border-gray-200 p-3 sm:p-4 shadow-lg w-[130px] sm:w-[150px] md:w-[170px]">
-                  <p className="text-[10px] sm:text-xs md:text-sm text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                    AI that predicts trends, analyzes data, and guides smarter investments.
-                  </p>
+                <div 
+                  className="rounded-[20px] sm:rounded-[24px] p-[2px] shadow-lg w-[130px] sm:w-[150px] md:w-[170px]"
+                  style={{ 
+                    background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
+                  }}
+                >
+                  <div 
+                    className="rounded-[18px] sm:rounded-[22px] p-3 sm:p-4 h-full w-full"
+                    style={{ 
+                      backgroundColor: 'rgba(225, 225, 225, 0.9)'
+                    }}
+                  >
+                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
+                    </p>
+                  </div>
                 </div>
               </motion.div>
             </div>
@@ -121,10 +145,22 @@ export default function AIInvestingSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, ease: "easeOut" }}
                 >
-                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80 ">
-                    <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                      Cora AI is a AI technology designed by CopyM to make better investments
-                    </p>
+                  <div 
+                    className="rounded-[28px] p-[2px] shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80"
+                    style={{ 
+                      background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
+                    }}
+                  >
+                    <div 
+                      className="rounded-[26px] p-2 sm:p-3 h-full w-full"
+                      style={{ 
+                        backgroundColor: 'rgba(225, 225, 225, 0.9)'
+                      }}
+                    >
+                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                        Cora AI is a AI technology designed by CopyM to make better investments
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
 
@@ -136,10 +172,22 @@ export default function AIInvestingSection() {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
                 >
-                  <div className="bg-background-white bg-opacity-60 rounded-[28px] border-2 border-border-gray p-2 sm:p-3 shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80">
-                    <p className="text-sm sm:text-base text-black font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                      AI that predicts trends, analyzes data, and guides smarter investments.
-                    </p>
+                  <div 
+                    className="rounded-[28px] p-[2px] shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80"
+                    style={{ 
+                      background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
+                    }}
+                  >
+                    <div 
+                      className="rounded-[26px] p-2 sm:p-3 h-full w-full"
+                      style={{ 
+                        backgroundColor: 'rgba(225, 225, 225, 0.9)'
+                      }}
+                    >
+                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                        <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
+                      </p>
+                    </div>
                   </div>
                 </motion.div>
               </div>

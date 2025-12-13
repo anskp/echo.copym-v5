@@ -121,7 +121,7 @@ const ProductStackReview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative lg:absolute lg:left-[700px] lg:top-[340px] flex items-start gap-4"
+              className="relative lg:absolute lg:left-[650px] lg:top-[320px] flex items-start gap-4"
             >
               <div className="hidden lg:block">{steps[2].icon}</div>
               <div className="lg:ml-4">

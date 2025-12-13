@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import maskcard1 from '../../../components/images/Maskcard1.png';
 import maskcard2 from '../../../components/images/Maskcard2.png';
 import maskcard3 from '../../../components/images/Maskcard3.png';
@@ -8,7 +7,6 @@ import maskcard4 from '../../../components/images/Maskcard4.png';
 
 
 const TokenizeAssetsSection = () => {
-  const [hoveredCard, setHoveredCard] = useState(null);
   
   const assets = [
     {
@@ -67,75 +65,22 @@ const TokenizeAssetsSection = () => {
         {/* Assets Grid - Responsive and fits window */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 overflow-visible w-full">
           {assets?.map((asset, index) => {
-            const isHovered = hoveredCard === asset.id;
-            
             return (
-            <motion.div 
+            <div 
               key={asset?.id} 
-              className="relative w-full cursor-pointer" 
+              className="relative w-full" 
               style={{ overflow: 'visible' }}
-              onMouseEnter={() => setHoveredCard(asset.id)}
-              onMouseLeave={() => setHoveredCard(null)}
-              onTouchStart={() => setHoveredCard(asset.id)}
-              onTouchEnd={() => setHoveredCard(null)}
-              initial={{ scale: 1, y: 0 }}
-              whileHover={{ 
-                scale: 1.05, 
-                y: -10,
-                transition: { 
-                  duration: 0.3,
-                  ease: "easeOut"
-                }
-              }}
-              whileTap={{
-                scale: 1.05,
-                y: -10,
-                transition: {
-                  duration: 0.2,
-                  ease: "easeOut"
-                }
-              }}
             >
               {/* Asset Card */}
-              <motion.div 
-                className={`rounded-lg p-4 h-full flex flex-col shadow-sm relative w-full transition-all duration-300`} 
+              <div 
+                className="rounded-lg p-4 h-full flex flex-col shadow-sm relative w-full" 
                 style={{ 
                   overflow: 'visible', 
                   minHeight: '420px',
                   maxHeight: '480px',
-                  background: isHovered ? '#000000' : 'linear-gradient(to bottom, #fbfbfb, #f0f0f0)'
-                }}
-                whileHover={{
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
-                }}
-                whileTap={{
-                  boxShadow: "0 20px 40px rgba(0, 0, 0, 0.15)"
+                  background: 'linear-gradient(to bottom, #fbfbfb, #f0f0f0)'
                 }}
               >
-                {/* Large Overlay Number - positioned in top-left, extending beyond card */}
-                <div 
-                  className="absolute font-semibold pointer-events-none z-0 transition-colors duration-300" 
-                  style={{ 
-                    fontFamily: 'DM Sans, sans-serif', 
-                    fontSize: '90px',
-                    lineHeight: '0.9',
-                    top: '20px',
-                    left: '-10px',
-                    opacity: '0.40',
-                    transform: 'translate(-12px, -12px)',
-                    color: isHovered ? '#15a36e' : '#9ca3af'
-                  }}
-                >
-                  {index + 1}
-                </div>
-
-                {/* ROI Badge - positioned in top-left of card content area */}
-                <div className="absolute top-3 left-7 bg-[#e8f5e9] group-hover:bg-[#e8f5e9] rounded-2xl px-2.5 py-1 z-20">
-                  <span className="text-xs font-normal" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    <span className="text-[#15a36e] font-semibold">76%</span>
-                    <span className="text-black group-hover:text-black"> ROI</span>
-                  </span>
-                </div>
 
                 {/* Asset Image - positioned at right side of card */}
                 <div 
@@ -160,25 +105,35 @@ const TokenizeAssetsSection = () => {
                 {/* Asset Info - consistent left alignment for all cards */}
                 <div className="absolute bottom-0 left-0 right-0 text-left space-y-3 z-10 px-4 pb-4">
                   <h3 
-                    className="text-xl font-bold transition-colors duration-300" 
-                    style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
+                    className="text-xl font-bold" 
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: '#000000' }}
                   >
                     {asset?.title}
                   </h3>
                   
                   <p 
-                    className="text-sm font-normal leading-snug transition-colors duration-300 line-clamp-3" 
-                    style={{ fontFamily: 'DM Sans, sans-serif', color: isHovered ? '#ffffff' : '#000000' }}
+                    className="text-sm font-normal leading-snug line-clamp-3" 
+                    style={{ fontFamily: 'DM Sans, sans-serif', color: '#000000' }}
                   >
                     {asset?.description}
                   </p>
                   
-                  <div className="text-sm font-semibold space-y-0.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    <div className="text-[#15a36e]">{asset?.apy || asset?.apr}</div>
+                  {/* Returns Section */}
+                  <div className="flex flex-col gap-2 mt-4">
+                    <div className="border-2 border-[#15a36e] rounded-lg px-3 py-2 text-center">
+                      <span className="text-sm font-semibold text-[#15a36e]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        76% ROI in returns
+                      </span>
+                    </div>
+                    <div className="border-2 border-[#15a36e] rounded-lg px-3 py-2 text-center">
+                      <span className="text-sm font-semibold text-[#15a36e]" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        80% APR in returns
+                      </span>
+                    </div>
                   </div>
                 </div>
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
             );
           })}
         </div>
