@@ -9,13 +9,12 @@ const steps = [
     title: 'Marketplace',
     description: 'Trade and discover unique digital assets in our secure marketplace.',
     icon: (
-      <div className="w-14 h-14 rounded-full bg-[#15a36e] flex items-center justify-center shadow-lg">
-        <svg viewBox="0 0 48 48" className="w-8 h-8 text-white">
-          <path
-            fill="currentColor"
-            d="M24 6 6 18v12l18 12 18-12V18L24 6Zm0 4.5 12 8v10l-12 8-12-8v-10l12-8Z"
-          />
-        </svg>
+      <div className="w-14 h-14 flex items-center justify-center">
+        <img
+          src="/assets/copym/png/Copym-05-1.png"
+          alt="Marketplace"
+          className="w-full h-full object-contain"
+        />
       </div>
     ),
   },
@@ -82,7 +81,7 @@ const ProductStackReview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="relative lg:absolute lg:left-[80px] lg:top-[120px] flex items-start gap-4"
+              className="relative lg:absolute lg:left-[80px] lg:top-[80px] flex items-start gap-4"
             >
               <div className="hidden lg:block">{steps[0].icon}</div>
               <div className="lg:ml-4">
@@ -102,7 +101,7 @@ const ProductStackReview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               viewport={{ once: true }}
-              className="relative lg:absolute lg:left-[400px] lg:top-[270px] flex items-start gap-4"
+              className="relative lg:absolute lg:left-[400px] lg:top-[200px] flex items-start gap-4"
             >
               <div className="hidden lg:block">{steps[1].icon}</div>
               <div className="lg:ml-4">
@@ -122,7 +121,7 @@ const ProductStackReview = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="relative lg:absolute lg:left-[700px] lg:top-[410px] flex items-start gap-4"
+              className="relative lg:absolute lg:left-[700px] lg:top-[340px] flex items-start gap-4"
             >
               <div className="hidden lg:block">{steps[2].icon}</div>
               <div className="lg:ml-4">

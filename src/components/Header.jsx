@@ -95,16 +95,15 @@ export default function Header() {
   return (
     <>
       {/* Green Header Bar */}
-      <nav className="bg-[#15a36e] w-full shadow-md relative z-50">
+      <nav className="bg-[#15a36e]    w-full lg:h-15  shadow-md relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16 sm:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
-                alt="COPYM"
-                className="h-8 sm:h-10 w-auto object-contain"
-              />
+            className="h-13 sm:h-15 md:h-19 lg:h-23 w-auto object-contain"           />
+    
             </Link>
 
             {/* Desktop Navigation */}

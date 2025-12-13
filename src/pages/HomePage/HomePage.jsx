@@ -1,4 +1,5 @@
 import Hero from "./sections/Hero";
+import LogoCarousel from "./sections/LogoCarousel";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
 import AIInvestingSection from "./sections/AIInvestingSection";
 import HomeCycleSection from "./sections/HomeCycleSection";
@@ -19,6 +20,7 @@ export default function HomePage() {
   return (
      <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden w-full">
       <Hero />
+      <LogoCarousel />
       {/* Lottie Cards Section - Replaced SVG layouts */}
       
       <FeatureSection />

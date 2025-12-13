@@ -4,12 +4,6 @@ import { Link } from 'react-router-dom';
 
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
-  const logos = [
-    { src: "/assets/svg/Fireblocks.svg", alt: "Fireblocks" },
-    { src: "/assets/svg/Sumsub_idtw6qkLj7_1.svg", alt: "Sumsub" },
-    { src: "/assets/blockchains/solana.png", alt: "Solana" },
-    { src: "/assets/blockchains/ethereum-eth-logo.svg", alt: "Ethereum" },
-  ];
 
   return (
     <div className="relative overflow-hidden">
@@ -28,44 +22,12 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/40"></div>
       </div>
 
-      {/* ====== LOGO CAROUSEL BOTTOM ====== */}
-      <style>{`
-        @keyframes logo-marquee {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-      `}</style>
-      <div className="absolute bottom-0 left-0 right-0 z-20 pointer-events-none pb-2">
-        <div className="w-full">
-          <div className="bg-white/95 backdrop-blur shadow-lg border-t border-gray-200 overflow-hidden pointer-events-auto">
-            <div className="relative w-full overflow-hidden">
-              <div
-                className="flex items-center gap-8 sm:gap-10 py-3 sm:py-4"
-                style={{
-                  width: "200%",
-                  animation: "logo-marquee 18s linear infinite",
-                }}
-              >
-                {[...logos, ...logos].map((logo, idx) => (
-                  <img
-                    key={`${logo.alt}-${idx}`}
-                    src={logo.src}
-                    alt={logo.alt}
-                    className="h-6 sm:h-7 md:h-8 object-contain flex-shrink-0"
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* ====== HERO CONTENT - RIGHT BOTTOM ====== */}
-      <div className="relative z-10 w-full min-h-screen flex items-end justify-end px-4 sm:px-6 lg:px-8 xl:px-12 pb-8 sm:pb-12 lg:pb-10 xl:pb-5">
-        <div className="max-w-lg sm:max-w-xl w-full text-right">
+      {/* ====== HERO CONTENT - CENTERED ====== */}
+      <div className="relative z-10 w-full h-[100vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-2xl sm:max-w-3xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-start font-bold leading-tight text-white mb-3 sm:mb-4 uppercase"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight text-white mb-3 sm:mb-4 uppercase"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             UNLOCK EXCLUSIVE{' '}
@@ -77,7 +39,7 @@ export default function Hero() {
 
           {/* ====== DESCRIPTION ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base text-start text-white opacity-90 leading-relaxed mb-4 sm:mb-6"
+            className="text-xs sm:text-sm md:text-base lg:text-lg text-white opacity-90 leading-relaxed mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             Seamless on-chain investment in real estate, <br className="hidden sm:block"/>commodities, carbon credits and luxury <br className="hidden sm:block"/> assets.
@@ -85,7 +47,7 @@ export default function Hero() {
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-start gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               to="/marketplace"
               className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto"
@@ -116,6 +78,24 @@ export default function Hero() {
             </button>
           </div>
         </div>
+      </div>
+
+      {/* ====== Risk Disclosure and Cookies Links - Bottom Right ====== */}
+      <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 right-4 sm:right-6 lg:right-8 xl:right-12 z-20 flex items-center gap-4 sm:gap-6">
+        <Link
+          to="/risk-disclosure"
+          className="text-white/90 hover:text-white text-xs sm:text-sm transition-colors duration-200"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
+        >
+          Risk Disclosure
+        </Link>
+        <Link
+          to="/cookies"
+          className="text-white/90 hover:text-white text-xs sm:text-sm transition-colors duration-200"
+          style={{ fontFamily: 'DM Sans, sans-serif' }}
+        >
+          Cookies
+        </Link>
       </div>
 
       {/* ====== VIDEO MODAL ====== */}
