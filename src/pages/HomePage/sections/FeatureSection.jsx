@@ -38,7 +38,14 @@ const FeatureSection = () => {
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-              <div className="w-full max-w-md aspect-square bg-white rounded-lg flex items-center justify-center" style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}>
+              <div
+                className="w-full max-w-[340px] sm:max-w-[360px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                style={{
+                  boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                  backgroundImage:
+                    'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+                }}
+              >
                 <Lottie
                   animationData={bigInvestmentAnimation}
                   loop={true}
@@ -69,7 +76,14 @@ const FeatureSection = () => {
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-              <div className="w-full max-w-md aspect-square bg-white rounded-lg flex items-center justify-center" style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}>
+              <div
+                className="w-full max-w-[340px] sm:max-w-[360px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                style={{
+                  boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                  backgroundImage:
+                    'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+                }}
+              >
                 <Lottie
                   animationData={tradeAnytimeAnimation}
                   loop={true}
@@ -100,7 +114,14 @@ const FeatureSection = () => {
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
-              <div className="w-full max-w-md aspect-square bg-white rounded-lg flex items-center justify-center" style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}>
+              <div
+                className="w-full max-w-[340px] sm:max-w-[360px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                style={{
+                  boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                  backgroundImage:
+                    'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+                }}
+              >
                 <Lottie
                   animationData={earnWithoutHassleAnimation}
                   loop={true}
@@ -131,7 +152,14 @@ const FeatureSection = () => {
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-              <div className="w-full max-w-md aspect-square bg-white rounded-lg flex items-center justify-center" style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}>
+              <div
+                className="w-full max-w-[340px] sm:max-w-[360px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                style={{
+                  boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                  backgroundImage:
+                    'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+                }}
+              >
                 <Lottie
                   animationData={exploreAnimation}
                   loop={true}

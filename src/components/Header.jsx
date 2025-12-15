@@ -14,7 +14,7 @@ export default function Header() {
     { 
       label: "Product", 
       path: "/product",
-      dropdown: null
+      dropdown: []
     },
     { 
       label: "Solutions", 
@@ -95,15 +95,16 @@ export default function Header() {
   return (
     <>
       {/* Green Header Bar */}
-      <nav className="bg-[#15a36e]    w-full lg:h-15  shadow-md relative z-50">
+      <nav className="bg-[#15a36e] w-full shadow-md relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 sm:h-20">
+          <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 lg:h-18">
             {/* Logo */}
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
-            className="h-13 sm:h-15 md:h-19 lg:h-23 w-auto object-contain"           />
-    
+                alt="CopyM Logo"
+                className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+              />
             </Link>
 
             {/* Desktop Navigation */}
@@ -130,55 +131,82 @@ export default function Header() {
             
             {/* Dropdown Menu */}
             <AnimatePresence>
-                    {hoveredItem === item.path && item.dropdown && (
-                <motion.div
-                        className="absolute top-full left-0 mt-0 w-80 bg-white rounded-lg shadow-xl overflow-hidden"
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {/* Green line connector */}
-                        <div className="h-0.5 bg-[#15a36e]"></div>
-                        
-                        <div className="p-5">
-                          {/* Title */}
-                          <h3 className="text-[#15a36e] font-bold text-base mb-3 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                            {item.label}
+                    {hoveredItem === item.path && item.dropdown && item.dropdown.length > 0 && (
+                  <>
+                    {/* Dark Background with Green Light Effects */}
+                    <motion.div
+                      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      onClick={() => setHoveredItem(null)}
+                    >
+                      {/* Green Light Effects */}
+                      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#15a36e]/20 to-transparent"></div>
+                      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#15a36e]/20 to-transparent"></div>
+                    </motion.div>
+
+                    {/* White Card Dropdown - Slides from Right */}
+                    <motion.div
+                      className="fixed top-14 sm:top-16 md:top-20 lg:top-24 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden z-50"
+                      initial={{ opacity: 0, x: 100 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      exit={{ opacity: 0, x: 100 }}
+                      transition={{ duration: 0.3, ease: "easeOut" }}
+                    >
+                      <div className="p-6 sm:p-8">
+                        {/* Title */}
+                        <div className="mb-6">
+                          <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            {item.path === "/compliance" ? (
+                              <>
+                                <span className="text-[#15a36e]">COMPLIANCE</span>
+                                <span className="text-black"> AND SECURITY</span>
+                              </>
+                            ) : (
+                              <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
+                            )}
                           </h3>
-                          
-                          {/* Gray separator line */}
-                          <div className="h-px bg-gray-200 mb-4"></div>
-                          
-                          {/* Dropdown Items */}
-                          <div className="space-y-4">
-                            {item.dropdown.map((dropdownItem, index) => (
-                      <Link
-                        key={index}
-                        to={item.path}
-                                className="flex items-start gap-3 p-0 hover:opacity-80 transition-opacity duration-200 group"
-                              >
-                                {/* Icon */}
-                                <div className="flex-shrink-0 w-10 h-10 flex items-center justify-center border border-[#15a36e] rounded bg-white">
-                                  <div className="text-black">
-                                    {dropdownItem.icon}
-                                  </div>
+                          {/* Black underline */}
+                          <div className="h-0.5 bg-black"></div>
                         </div>
-                                
-                                {/* Content */}
-                                <div className="flex-1 min-w-0">
-                                  <h4 className="font-bold text-black text-sm mb-1.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                    {dropdownItem.heading}
-                                  </h4>
-                                  <p className="text-xs text-gray-600 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                    {dropdownItem.description}
-                                  </p>
+                        
+                        {/* Dropdown Items */}
+                        <div className="space-y-6">
+                          {item.dropdown.map((dropdownItem, index) => (
+                            <Link
+                              key={index}
+                              to={item.path}
+                              className="flex items-start gap-4 hover:opacity-80 transition-opacity duration-200 group"
+                              onClick={() => setHoveredItem(null)}
+                            >
+                              {/* Icon - Black square with icon */}
+                              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
+                                <div className={
+                                  item.path === "/solutions" || item.path === "/compliance" 
+                                    ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
+                                    : 'text-white'
+                                }>
+                                  {dropdownItem.icon}
+                                </div>
+                              </div>
+                              
+                              {/* Content */}
+                              <div className="flex-1 min-w-0">
+                                <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                  {dropdownItem.heading}
+                                </h4>
+                                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                  {dropdownItem.description}
+                                </p>
+                              </div>
+                            </Link>
+                          ))}
                         </div>
-                      </Link>
-                    ))}
-                          </div>
-                  </div>
-                </motion.div>
+                      </div>
+                    </motion.div>
+                  </>
               )}
             </AnimatePresence>
             </div>

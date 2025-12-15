@@ -103,23 +103,23 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 border border-gray-800 min-h-[200px]"
+            className="lg:col-span-4 lg:row-span-1 bg-black px-6 sm:px-10 py-8 sm:py-10 border border-gray-800 min-h-[260px]"
           >
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 h-full">
+            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 h-full">
               {/* Content on Left */}
-              <div className="flex-1 lg:max-w-[50%]">
+              <div className="flex-1 lg:max-w-[48%]">
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Investors
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-sm sm:text-base mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <p className="text-white/80 text-base sm:text-lg mb-4 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Access curated RWA opportunities worldwide.
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-2 sm:space-y-3 mb-4">
+                <ul className="space-y-2 sm:space-y-3 mb-6 text-base sm:text-lg">
                   <li className="flex items-start">
                     <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
                     <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
@@ -141,7 +141,7 @@ const WhoWeServe = () => {
                 </ul>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center gap-3 border border-white text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <button className="inline-flex items-center gap-3 border border-white text-white font-semibold py-3 px-6 rounded-full bg-black hover:bg-black/80 transition-all duration-300 group" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                   Learn More
                   <span className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center">
                     <svg
@@ -162,11 +162,11 @@ const WhoWeServe = () => {
               </div>
 
               {/* Image on Right */}
-              <div className="w-full lg:w-1/2 h-40 sm:h-48 lg:h-52 flex items-center justify-center lg:justify-end">
+              <div className="w-full lg:w-1/2 h-48 sm:h-56 lg:h-72 flex items-center justify-center lg:justify-end lg:pl-16 lg:ml-auto">
                 <img
                   src={investorsImage}
                   alt="Investors"
-                  className="w-full h-full object-contain"
+                  className="w-full h-full max-w-[560px] object-contain"
                 />
               </div>
             </div>
