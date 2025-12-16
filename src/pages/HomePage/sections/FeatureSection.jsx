@@ -33,14 +33,14 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Vertical Stack of 4 Sections */}
-        <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
+        <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
           {/* Section 1 - Own a piece of big Investment (Graphic Left) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-0.5 sm:gap-1 lg:gap-1"
+            className="flex flex-col lg:flex-row items-center gap-0 lg:gap-0 lg:-ml-2"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -66,7 +66,7 @@ const FeatureSection = () => {
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Own a piece of big Investment
               </h3>
-              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Ever thought real estate, gold, or fine art was only for the rich? Not anymore.<br />
                 Start with small amounts and own a piece of high-value assets you actually<br />
                 care about.
@@ -106,7 +106,7 @@ const FeatureSection = () => {
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Trade anytime, anywhere
               </h3>
-              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Want out? Sell instantly. Want in? Buy in seconds. With your<br />
                 built-in wallet, you can manage and trade smoothly—just like<br />
                 sending money to a friend.
@@ -120,7 +120,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-0.5 sm:gap-1 lg:gap-1"
+            className="flex flex-col lg:flex-row items-center gap-0 lg:gap-0 lg:-ml-2"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -146,7 +146,7 @@ const FeatureSection = () => {
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Earn without a hassle
               </h3>
-              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Sit back and let the experts (and AI) do the heavy lifting. Your money works for<br />
                 you, bringing in steady returns–without the stress of paperwork or<br />
                 management.
@@ -186,8 +186,8 @@ const FeatureSection = () => {
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Explore a world of assets
               </h3>
-              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                From property and gold to private equity and art-our AI picks out<br />
+              <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                From property and gold to private equity and art—our AI picks out<br />
                 smart opportunities so you don't have to dig through endless<br />
                 research.
               </p>

@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
+            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             <span className="block">
@@ -70,7 +70,7 @@ export default function Hero() {
 
           {/* ====== DESCRIPTION ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed mb-4 sm:mb-6 font-thin"
+            className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless<br />

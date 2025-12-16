@@ -6,14 +6,14 @@ import qrcode from '../../../components/SVG/qrcode.svg';
 export default function TrackYourCrypto() {
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-black ">
+    <section className="relative py-4 sm:py-6 md:py-8 lg:py-10 bg-black ">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[50px] sm:rounded-t-[75px] md:rounded-t-[100px]"></div>
       
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 relative z-10 pb-4 mt-[100px] sm:pb-6 md:pb-8">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 relative z-10 pb-2 sm:pb-3 md:pb-4 mt-8 sm:mt-12 md:mt-16">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Watch SVG with Phone Overlay */}
@@ -39,12 +39,14 @@ export default function TrackYourCrypto() {
 
           {/* Title */}
           <div className="space-y-4 sm:space-y-6 text-left">
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-[#15a36e]">DOWNLOAD COPYM</span> <span className="text-white">FROM YOUR FAVOURITE APP STORE</span>
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
             </h2>
-            <div className="w-24 sm:w-32 h-0.5 bg-white mx-2"></div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white leading-relaxed max-w-2xl px-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal leading-relaxed max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Stay connected to your portfolio across all your devices.<br />
+              CopyM is available on iOS, Android, Windows, and Mac, so<br />
+              you can track every move, get insights, and stay ahead –<br />
+              wherever you are.
             </p>
           </div>
           
@@ -103,12 +105,14 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-4 sm:space-y-6 text-left order-1 lg:order-2">
             <div className="space-y-4 sm:space-y-6">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white leading-tight px-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                <span className="text-[#15a36e]">DOWNLOAD COPYM</span> <span className="text-white">FROM YOUR FAVOURITE APP STORE</span>
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
               </h2>
-              <div className="w-24 sm:w-32 h-0.5 bg-white mx-2"></div>
-              <p className="text-base sm:text-lg md:text-xl text-white leading-relaxed px-4 lg:px-0" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                Stay connected to your portfolio across all your devices. Copym is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead — wherever you are.
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white font-normal leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Stay connected to your portfolio across all your devices.<br />
+                CopyM is available on iOS, Android, Windows, and Mac, so<br />
+                you can track every move, get insights, and stay ahead –<br />
+                wherever you are.
               </p>
             </div>
             
