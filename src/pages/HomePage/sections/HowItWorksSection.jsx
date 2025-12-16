@@ -1,21 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+import forAssetsOwnersAnimation from '../../../components/lotties/forassetsowners.json';
+import forInvestorsAnimation from '../../../components/lotties/forinvestors.json';
 
 const HowItWorksSection = () => {
-  const assetOwnerSteps = [
-    { id: 1, text: 'Onboard & verify', color: 'white', textColor: 'black' },
-    { id: 2, text: 'Tokenize & structure', color: 'gray-700', textColor: 'white' },
-    { id: 3, text: 'List on marketplace / launchpool', color: 'green', textColor: 'white' },
-    { id: 4, text: 'Distribute to investors', color: 'gray-700', textColor: 'white' },
-    { id: 5, text: 'Monitor & report', color: 'white', textColor: 'black' },
-  ];
-
-  const investorSteps = [
-    { id: 1, text: "Discover curated RWA's", color: 'white', textColor: 'black' },
-    { id: 2, text: 'Complete KYC once', color: 'gray-700', textColor: 'white' },
-    { id: 3, text: 'Invest & earn', color: 'green', textColor: 'white' },
-  ];
-
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
@@ -53,94 +42,14 @@ const HowItWorksSection = () => {
               For Asset Owners
             </h3>
             
-            {/* Steps Grid */}
-            <div className="space-y-4">
-              {/* Step 1 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  assetOwnerSteps[0].color === 'white' ? 'bg-white' :
-                  assetOwnerSteps[0].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    assetOwnerSteps[0].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {assetOwnerSteps[0].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  assetOwnerSteps[1].color === 'white' ? 'bg-white' :
-                  assetOwnerSteps[1].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    assetOwnerSteps[1].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {assetOwnerSteps[1].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  assetOwnerSteps[2].color === 'white' ? 'bg-white' :
-                  assetOwnerSteps[2].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    assetOwnerSteps[2].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {assetOwnerSteps[2].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  assetOwnerSteps[3].color === 'white' ? 'bg-white' :
-                  assetOwnerSteps[3].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    assetOwnerSteps[3].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {assetOwnerSteps[3].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 5 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  assetOwnerSteps[4].color === 'white' ? 'bg-white' :
-                  assetOwnerSteps[4].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    assetOwnerSteps[4].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {assetOwnerSteps[4].text}
-                  </span>
-                </div>
-              </div>
+            {/* Lottie Animation */}
+            <div className="w-full flex justify-center items-center">
+              <Lottie
+                animationData={forAssetsOwnersAnimation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
             </div>
           </motion.div>
 
@@ -156,58 +65,14 @@ const HowItWorksSection = () => {
               For Investors
             </h3>
             
-            {/* Steps Grid */}
-            <div className="space-y-4">
-              {/* Step 1 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  investorSteps[0].color === 'white' ? 'bg-white' :
-                  investorSteps[0].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    investorSteps[0].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {investorSteps[0].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 2 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  investorSteps[1].color === 'white' ? 'bg-white' :
-                  investorSteps[1].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    investorSteps[1].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {investorSteps[1].text}
-                  </span>
-                </div>
-                <svg className="w-6 h-6 text-[#15a36e] flex-shrink-0 rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex items-center gap-3">
-                <div className={`rounded-lg px-4 py-3 flex-1 ${
-                  investorSteps[2].color === 'white' ? 'bg-white' :
-                  investorSteps[2].color === 'green' ? 'bg-[#15a36e]' :
-                  'bg-gray-700'
-                }`}>
-                  <span className={`text-sm sm:text-base font-semibold ${
-                    investorSteps[2].textColor === 'white' ? 'text-white' : 'text-black'
-                  }`} style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                    {investorSteps[2].text}
-                  </span>
-                </div>
-              </div>
+            {/* Lottie Animation */}
+            <div className="w-full flex justify-center items-center">
+              <Lottie
+                animationData={forInvestorsAnimation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
             </div>
           </motion.div>
         </div>

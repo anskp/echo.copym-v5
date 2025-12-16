@@ -29,36 +29,36 @@ const WhoWeServe = () => {
         </motion.div>
 
         {/* 3-Card Grid Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-6 sm:gap-8 lg:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
           {/* Left Card - Large (tall + wide) - Asset Owners & Institutions */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 lg:row-span-2 bg-black p-6 sm:p-8 lg:p-10 border border-gray-800 min-h-[400px]"
+            className="lg:col-span-3 lg:row-span-2 bg-black p-4 sm:p-6 lg:p-8 border border-gray-800 flex flex-col"
           >
             {/* Large Image - Dominant Visual */}
-            <div className="mb-6 sm:mb-8 h-48 sm:h-64 lg:h-[300px] flex items-center justify-center">
+            <div className="mb-4 sm:mb-5 flex-1 flex items-center justify-center min-h-[150px] sm:min-h-[180px] lg:min-h-[220px]">
               <img
                 src={assetsImage}
                 alt="Asset Owners & Institutions"
-                className="w-full h-full object-contain"
+                className="w-full h-full max-h-[220px] object-contain"
               />
             </div>
 
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Asset Owners & Institutions
             </h3>
 
             {/* Description */}
-            <p className="text-white/80 text-sm sm:text-base mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-white/80 text-sm sm:text-base mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Launch tokenized products with institutional-grade compliance.
             </p>
 
             {/* Bullet Points */}
-            <ul className="space-y-2 sm:space-y-3 mb-6">
+            <ul className="space-y-1.5 sm:space-y-2 mb-4">
               <li className="flex items-start">
                 <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
                 <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -106,23 +106,22 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black px-6 sm:px-10 py-8 sm:py-10 border border-gray-800 min-h-[260px]"
+            className="lg:col-span-4 lg:row-span-1 bg-black px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 border border-gray-800 flex flex-col lg:flex-row items-center gap-4 lg:gap-6 h-full"
           >
-            <div className="flex flex-col lg:flex-row items-center gap-6 lg:gap-10 h-full">
-              {/* Content on Left */}
-              <div className="flex-1 lg:max-w-[48%]">
+            {/* Content on Left */}
+            <div className="flex-1 lg:max-w-[45%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Investors
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-base sm:text-lg mb-4 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-white/80 text-base sm:text-lg mb-3 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Access curated RWA opportunities worldwide.
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-2 sm:space-y-3 mb-6 text-base sm:text-lg">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 text-base sm:text-lg">
                   <li className="flex items-start">
                     <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
                     <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -165,14 +164,13 @@ const WhoWeServe = () => {
               </div>
 
               {/* Image on Right */}
-              <div className="w-full lg:w-1/2 h-48 sm:h-56 lg:h-72 flex items-center justify-center lg:justify-end lg:pl-16 lg:ml-auto">
+              <div className="w-full lg:w-1/2 lg:flex-1 flex items-center justify-center lg:justify-end h-full min-h-[150px] lg:min-h-[180px]">
                 <img
                   src={investorsImage}
                   alt="Investors"
-                  className="w-full h-full max-w-[560px] object-contain"
+                  className="w-full h-full max-h-[180px] object-contain"
                 />
               </div>
-            </div>
           </motion.div>
 
           {/* Bottom-Right Card - Partners */}
@@ -181,32 +179,31 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 border border-gray-800 min-h-[200px]"
+            className="lg:col-span-4 lg:row-span-1 bg-black p-4 sm:p-6 lg:p-8 border border-gray-800 flex flex-col lg:flex-row items-center gap-4 lg:gap-6 h-full"
           >
-            <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6 h-full">
-              {/* Image on Left */}
-              <div className="w-full lg:w-1/2 h-40 sm:h-48 lg:h-52 flex items-center justify-center lg:justify-start">
-                <img
-                  src={partnersImage}
-                  alt="Partners"
-                  className="w-full h-full object-contain"
-                />
-              </div>
+            {/* Image on Left */}
+            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0">
+              <img
+                src={partnersImage}
+                alt="Partners"
+                className="w-full h-full max-h-[160px] object-contain"
+              />
+            </div>
 
-              {/* Content on Right */}
-              <div className="flex-1 lg:max-w-[50%]">
+            {/* Content on Right */}
+            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Partners
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-sm sm:text-base mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-white/80 text-sm sm:text-base mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Connect custodians, oracles and ESG data to real assets on-chain.
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-2 sm:space-y-3 mb-4">
+                <ul className="space-y-1.5 sm:space-y-2 mb-3">
                   <li className="flex items-start">
                     <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
                     <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -246,7 +243,6 @@ const WhoWeServe = () => {
                     </svg>
                   </span>
                 </button>
-              </div>
             </div>
           </motion.div>
         </div>

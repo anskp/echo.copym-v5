@@ -8,7 +8,7 @@ import earnWithoutHassleAnimation from '../../../components/lotties/earnwithouta
 
 const FeatureSection = () => {
   return (
-    <section className="relative w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20 overflow-hidden">
+    <section className="relative w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         {/* Main Heading */}
         <motion.div
@@ -16,7 +16,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+          className="text-left mb-4 sm:mb-6 md:mb-8 lg:mb-10"
         >
           <div className="relative w-fit">
             <h2
@@ -33,7 +33,7 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Vertical Stack of 4 Sections */}
-        <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
+        <div className="space-y-4 sm:space-y-5 md:space-y-6 lg:space-y-8">
           {/* Section 1 - Own a piece of big Investment (Graphic Left) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -45,7 +45,7 @@ const FeatureSection = () => {
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div
-                className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -83,7 +83,7 @@ const FeatureSection = () => {
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div
-                className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -121,7 +121,7 @@ const FeatureSection = () => {
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div
-                className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -159,7 +159,7 @@ const FeatureSection = () => {
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div
-                className="w-full max-w-[240px] sm:max-w-[260px] md:max-w-[280px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
