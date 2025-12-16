@@ -16,7 +16,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-4 sm:mb-6 md:mb-8 lg:mb-10"
+          className="text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
           <div className="relative w-fit">
             <h2
@@ -28,7 +28,7 @@ const FeatureSection = () => {
               <span className="text-black">EXPLORE,</span>
               <span className="text-[#15a36e]">TRADE</span>
             </h2>
-            <div className="absolute bottom-0 left-0 h-px bg-black" style={{ width: 'calc(100% + 12px)' }}></div>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
         </motion.div>
 
@@ -40,12 +40,12 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-1 sm:gap-1.5 lg:gap-2"
+            className="flex flex-col lg:flex-row items-center gap-0.5 sm:gap-1 lg:gap-1"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div
-                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -62,12 +62,14 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Right */}
-            <div className="w-full lg:w-1/2 text-left lg:pl-2">
+            <div className="w-full text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Own a piece of big Investment
               </h3>
-              <p className="text-xs sm:text-sm md:text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about.
+              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Ever thought real estate, gold, or fine art was only for the rich? Not anymore.<br />
+                Start with small amounts and own a piece of high-value assets you actually<br />
+                care about.
               </p>
             </div>
           </motion.div>
@@ -78,12 +80,12 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row-reverse items-center gap-2 sm:gap-3 lg:gap-4"
+            className="flex flex-col lg:flex-row-reverse items-center gap-0.5 sm:gap-1 lg:gap-1"
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div
-                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -100,12 +102,14 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Left */}
-            <div className="w-full lg:w-1/2 text-left">
+            <div className="w-full text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Trade anytime, anywhere
               </h3>
-              <p className="text-xs sm:text-sm md:text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Want out? Sell instantly. Want in? Buy in seconds. With your built-in wallet, you can manage and trade smoothly—just like sending money to a friend.
+              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Want out? Sell instantly. Want in? Buy in seconds. With your<br />
+                built-in wallet, you can manage and trade smoothly—just like<br />
+                sending money to a friend.
               </p>
             </div>
           </motion.div>
@@ -116,12 +120,12 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-1 sm:gap-1.5 lg:gap-2"
+            className="flex flex-col lg:flex-row items-center gap-0.5 sm:gap-1 lg:gap-1"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
               <div
-                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -138,12 +142,14 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Right */}
-            <div className="w-full lg:w-1/2 text-left lg:pl-2">
+            <div className="w-full text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Earn without a hassle
               </h3>
-              <p className="text-xs sm:text-sm md:text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Sit back and let the experts (and AI) do the heavy lifting. Your money works for you, bringing in steady returns—without the stress of paperwork or management.
+              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Sit back and let the experts (and AI) do the heavy lifting. Your money works for<br />
+                you, bringing in steady returns–without the stress of paperwork or<br />
+                management.
               </p>
             </div>
           </motion.div>
@@ -154,12 +160,12 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row-reverse items-center gap-2 sm:gap-3 lg:gap-4"
+            className="flex flex-col lg:flex-row-reverse items-center gap-0.5 sm:gap-1 lg:gap-1"
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <div
-                className="w-full max-w-[180px] sm:max-w-[200px] md:max-w-[220px] aspect-square bg-white rounded-lg flex items-center justify-center"
+                className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
                 style={{
                   boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                   backgroundImage:
@@ -176,12 +182,14 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Left */}
-            <div className="w-full lg:w-1/2 text-left">
+            <div className="w-full text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Explore a world of assets
               </h3>
-              <p className="text-xs sm:text-sm md:text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                From property and gold to private equity and art—our AI picks out smart opportunities so you don't have to dig through endless research.
+              <p className="text-base sm:text-lg md:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                From property and gold to private equity and art-our AI picks out<br />
+                smart opportunities so you don't have to dig through endless<br />
+                research.
               </p>
             </div>
           </motion.div>

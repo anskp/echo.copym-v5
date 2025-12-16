@@ -57,7 +57,7 @@ export default function Hero() {
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
+            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             <span className="block">
@@ -70,15 +70,16 @@ export default function Hero() {
 
           {/* ====== DESCRIPTION ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed mb-4 sm:mb-6"
+            className="text-xs sm:text-sm md:text-base lg:text-lg text-white leading-relaxed mb-4 sm:mb-6 font-thin"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless on-chain investment in real estate, commodities, carbon credits, and luxury assets.
+            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless<br />
+            on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
           {/* ====== FOR ASSET OWNERS ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4"
+            className="text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             <span className="underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR ASSET OWNERS</span> – launch compliant, fictionalized products in weeks, not months.
@@ -86,7 +87,7 @@ export default function Hero() {
 
           {/* ====== FOR INVESTORS ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base text-white mb-5 sm:mb-6"
+            className="text-xs sm:text-sm md:text-base text-white mb-8 sm:mb-10 md:mb-12 font-light"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             <span className="underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR INVESTORS</span> – access curated, yield-bearing RWA's with instant, gas-free settlement.
@@ -96,8 +97,11 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               to="/marketplace"
-              className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
+              className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto sm:min-w-[200px]"
+              style={{ 
+                fontFamily: 'Palanquin, sans-serif',
+                background: 'linear-gradient(to right, #23BD83, #109261)'
+              }}
             >
               START INVESTING
               <svg
@@ -117,7 +121,7 @@ export default function Hero() {
 
             <button
               onClick={() => setVideoOpen(true)}
-              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto"
+              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               WATCH DEMO

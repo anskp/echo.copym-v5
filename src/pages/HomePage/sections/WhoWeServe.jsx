@@ -21,9 +21,9 @@ const WhoWeServe = () => {
               <span className="text-black">WHO WE </span>
               <span className="text-[#15a36e]">SERVE</span>
             </h2>
-            <div className="absolute bottom-0 left-0 h-px bg-black" style={{ width: 'calc(100% + 12px)' }}></div>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p className="text-base sm:text-lg md:text-xl text-black mt-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Built for the next generation of asset markets
           </p>
         </motion.div>

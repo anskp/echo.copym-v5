@@ -21,9 +21,9 @@ const HowItWorksSection = () => {
               <span className="text-black">HOW IT </span>
               <span className="text-[#15a36e]">WORKS</span>
             </h2>
-            <div className="absolute bottom-0 left-0 h-px bg-black" style={{ width: 'calc(100% + 12px)' }}></div>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p className="text-base sm:text-lg md:text-xl text-black" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             How Copym works - for issuers and investors
           </p>
         </motion.div>
@@ -38,9 +38,7 @@ const HowItWorksSection = () => {
             viewport={{ once: true }}
             className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              For Asset Owners
-            </h3>
+           
             
             {/* Lottie Animation */}
             <div className="w-full flex justify-center items-center">
@@ -61,9 +59,7 @@ const HowItWorksSection = () => {
             viewport={{ once: true }}
             className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10"
           >
-            <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              For Investors
-            </h3>
+           
             
             {/* Lottie Animation */}
             <div className="w-full flex justify-center items-center">

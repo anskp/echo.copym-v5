@@ -14,12 +14,14 @@ export default function AuditSection() {
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
                 {/* Section Header */}
         <div className="text-left mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-[#15a36e]">SECURE & </span>
               <span className="text-black">AUDITED</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black max-w-3xl leading-relaxed px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
           </p>
         </div>

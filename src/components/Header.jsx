@@ -102,18 +102,18 @@ export default function Header() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-10 sm:h-12 md:h-14 lg:h-16">
+          <div className="flex items-center justify-between h-8 sm:h-10 md:h-12 lg:h-14">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className="h-7 sm:h-9 md:h-11 lg:h-12 w-auto object-contain"
+                className="h-11 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            <div className="hidden lg:flex items-center gap-12">
               {navItems.map((item) => (
                 <div
                   key={item.path}
@@ -123,15 +123,10 @@ export default function Header() {
                 >
                   <Link
                     to={item.path}
-                    className="text-white font-medium text-sm sm:text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap flex items-center gap-1 py-2"
+                    className="text-white font-medium text-sm sm:text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {item.label}
-                    {item.dropdown && (
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-                    )}
                   </Link>
             
             {/* Dropdown Menu */}
@@ -140,7 +135,7 @@ export default function Header() {
                   <>
                     {/* Dark Background with Green Light Effects */}
                     <motion.div
-                      className="fixed top-16 sm:top-20 md:top-24 lg:top-28 left-0 right-0 bottom-0 bg-black/60 z-40"
+                      className="fixed top-8 sm:top-10 md:top-12 lg:top-14 left-0 right-0 bottom-0 bg-black/60 z-40"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -154,7 +149,7 @@ export default function Header() {
 
                     {/* White Card Dropdown - Slides from Right */}
                     <motion.div
-                      className="fixed top-14 sm:top-16 md:top-20 lg:top-24 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl overflow-hidden z-50"
+                      className="fixed top-8 sm:top-10 md:top-12 lg:top-14 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl overflow-hidden z-50"
                       style={{
                         boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)'
                       }}
@@ -254,7 +249,7 @@ export default function Header() {
           
           {/* Menu Container */}
           <motion.div 
-              className="absolute top-20 left-4 right-4 bg-[#15a36e] rounded-xl border border-white/20 overflow-hidden shadow-xl max-h-[80vh] overflow-y-auto"
+              className="absolute top-16 left-4 right-4 bg-[#15a36e] rounded-xl border border-white/20 overflow-hidden shadow-xl max-h-[80vh] overflow-y-auto"
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}

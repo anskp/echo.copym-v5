@@ -10,12 +10,14 @@ export default function AIInvestingSection() {
       <div className="w-full max-w-[1600px] mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         {/* Heading - Always at Top */}
         <div className="text-left mb-8 sm:mb-12 md:mb-16">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-3 sm:mb-4 tracking-base uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            <span className="text-[#15a36e]">CORA-AI</span>
-            <span className="text-black"> THAT INVESTS WITH YOU</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight tracking-base uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">CORA-AI</span>
+              <span className="text-black"> THAT INVESTS WITH YOU</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide mt-3 sm:mt-4 whitespace-nowrap" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
           </p>
           

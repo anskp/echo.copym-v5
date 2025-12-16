@@ -104,16 +104,18 @@ export default function FAQSection() {
       <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         {/* Section Header */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">
-          <h2 
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
-          >
-            <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
-            <span className="text-black">QUESTIONS</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2 
+              className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
+              <span className="text-black">QUESTIONS</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
           <p 
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-black max-w-3xl mb-4 sm:mb-6 px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!

@@ -213,12 +213,14 @@ export default function TestimonialsSection() {
       {/* heading */}
       <div className="relative mx-auto max-w-7xl px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 mb-8 sm:mb-10 md:mb-12">
         <div className="text-left px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            <span className="text-[#15a36e]">TRUSTED BY INDUSTRY </span>
-            <span className="text-black">LEADERS</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
-          <p className="text-sm sm:text-base md:text-lg text-black max-w-2xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2 className="inline-flex items-baseline gap-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">TRUSTED BY INDUSTRY </span>
+              <span className="text-black">LEADERS</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
           </p>
         </div>

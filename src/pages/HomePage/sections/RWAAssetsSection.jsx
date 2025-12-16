@@ -40,12 +40,14 @@ const TokenizeAssetsSection = () => {
       <div className="w-full mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32" style={{ maxWidth: '100%' }}>
         {/* Header Section */}
         <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            <span className="text-[#15a36e]">TOKENIZE</span>
-            <span className="text-black"> REAL ASSETS</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-black leading-relaxed max-w-6xl px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <div className="relative w-fit mb-3 sm:mb-4 md:mb-5">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">TOKENIZE</span>
+              <span className="text-black"> REAL ASSETS</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access.
           </p>
         </div>
