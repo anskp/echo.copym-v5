@@ -43,7 +43,7 @@ const steps = [
 const ProductStackReview = () => {
   return (
     <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
+      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -52,11 +52,13 @@ const ProductStackReview = () => {
           viewport={{ once: true }}
           className="text-left mb-12 sm:mb-16 md:mb-20"
         >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            <span className="text-[#15a36e]">PRODUCT </span>
-            <span className="text-black">STACK REVIEW</span>
-          </h2>
-          <div className="w-24 sm:w-32 h-0.5 bg-black mb-3 sm:mb-4"></div>
+          <div className="relative w-fit">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <span className="text-[#15a36e]">PRODUCT </span>
+              <span className="text-black">STACK REVIEW</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 h-px bg-black" style={{ width: 'calc(100% + 12px)' }}></div>
+          </div>
           <p className="text-base sm:text-lg md:text-xl text-black max-w-3xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             One platform. Multiple products. Full lifecycle tokenization.
           </p>

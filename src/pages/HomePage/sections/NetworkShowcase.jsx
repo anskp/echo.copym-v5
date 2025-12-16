@@ -1,10 +1,10 @@
 import React from 'react';
-import copym3dVideo from '../../../components/Videos/copym3d.mp4';
+import copymflows from '../../../components/Videos/copymflows.mp4';
 
 export default function NetworkShowcase() {
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         <div className="bg-black rounded-md overflow-hidden shadow-2xl">
           <video
             autoPlay
@@ -14,7 +14,7 @@ export default function NetworkShowcase() {
             className="w-full h-auto object-contain"
             style={{ maxHeight: '520px' }}
           >
-            <source src={copym3dVideo} type="video/mp4" />
+            <source src={copymflows} type="video/mp4" />
           </video>
         </div>
       </div>

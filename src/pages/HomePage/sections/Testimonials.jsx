@@ -211,7 +211,7 @@ export default function TestimonialsSection() {
   return (
     <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
       {/* heading */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mb-8 sm:mb-10 md:mb-12">
+      <div className="relative mx-auto max-w-7xl px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 mb-8 sm:mb-10 md:mb-12">
         <div className="text-left px-4">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 sm:mb-4 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             <span className="text-[#15a36e]">TRUSTED BY INDUSTRY </span>

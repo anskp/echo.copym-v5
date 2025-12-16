@@ -51,7 +51,7 @@ export default function Footer() {
               links: ['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'],
             },
             {
-              title: 'COMPANY',
+              title: 'COMAPNY',
               links: ['About', 'Careers', 'Press', 'Blog', 'Contact'],
             },
             {
@@ -60,7 +60,7 @@ export default function Footer() {
             },
           ].map((column) => (
             <div key={column.title} className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
-              <h3 className="uppercase tracking-[0.18em] text-xs text-white font-semibold underline h-6 flex items-start">
+              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start border-b border-[#15a36e] pb-1">
                 {column.title}
               </h3>
               <ul className="space-y-2 text-sm sm:text-base text-white">
@@ -81,7 +81,7 @@ export default function Footer() {
           {/* Newsletter */}
           <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
             <div>
-              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start">
+              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start border-b border-[#15a36e] pb-1">
                 JOIN OUR NEW LETTER
               </h3>
               <p className="mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base text-white leading-relaxed">
@@ -100,7 +100,7 @@ export default function Footer() {
                 <input
                   type="email"
                   required
-                  placeholder="Enter your E-Mail ID"
+                  placeholder="Enter your E-Mail Address"
                   className="flex-1 h-full focus:outline-none rounded-l-lg placeholder:text-[#c0b5b5]"
                   style={{
                     paddingLeft: '14px',
@@ -136,26 +136,32 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 sm:mt-12 md:mt-16 border-t border-white/10 pt-6 sm:pt-7 md:pt-8 flex flex-col md:flex-row gap-4 md:gap-0 items-center justify-between text-sm text-gray-500">
-          <p>© {new Date().getFullYear()} COPYM. All rights reserved.</p>
-          <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-emerald-400 transition-colors duration-200">
-              Privacy Policy
-            </a>
-            <a href="#" className="hover:text-emerald-400 transition-colors duration-200">
-              Terms of Service
-            </a>
-          </div>
-        </div>
       </div>
 
-      {/* Massive watermark */}
-      <div className="pointer-events-none absolute bottom-[-35%] left-1/2 -translate-x-1/2 opacity-100 select-none">
-        <img
-          src="/assets/copym/png/Header-copym.png"
-          alt="COPYM"
-          className="max-w-7xl h-[600px] object-contain"
+      {/* Large COPYM Text with Green Glow */}
+      <div className="relative z-10 w-full overflow-hidden" style={{ minHeight: '400px', paddingTop: '60px' }}>
+        {/* Green gradient background */}
+        <div 
+          className="absolute bottom-0 left-0 right-0 h-full pointer-events-none"
+          style={{
+            background: 'linear-gradient(to top, rgba(21, 163, 110, 0.2) 0%, transparent 50%)',
+          }}
         />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-center select-none">
+          <h1 
+            className="text-white font-bold uppercase"
+            style={{
+              fontSize: 'clamp(140px, 28vw, 320px)',
+              fontWeight: 700,
+              letterSpacing: '0.05em',
+              lineHeight: '0.9',
+              textShadow: '0 0 30px rgba(21, 163, 110, 0.9), 0 0 60px rgba(21, 163, 110, 0.7), 0 0 90px rgba(21, 163, 110, 0.5), 0 0 120px rgba(21, 163, 110, 0.3)',
+              filter: 'drop-shadow(0 0 15px rgba(21, 163, 110, 0.6))',
+            }}
+          >
+            COPYM
+          </h1>
+        </div>
       </div>
     </footer>
   );

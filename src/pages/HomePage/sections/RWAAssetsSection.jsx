@@ -37,7 +37,7 @@ const TokenizeAssetsSection = () => {
 
   return (
     <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16" style={{ maxWidth: '100%' }}>
+      <div className="w-full mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32" style={{ maxWidth: '100%' }}>
         {/* Header Section */}
         <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>

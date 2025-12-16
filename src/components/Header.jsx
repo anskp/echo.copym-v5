@@ -95,15 +95,20 @@ export default function Header() {
   return (
     <>
       {/* Green Header Bar */}
-      <nav className="bg-[#15a36e] w-full shadow-md relative z-50">
+      <motion.nav 
+        className="bg-[#15a36e] w-full shadow-md relative z-50"
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-12 sm:h-14 md:h-16 lg:h-18">
+          <div className="flex items-center justify-between h-10 sm:h-12 md:h-14 lg:h-16">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+                className="h-7 sm:h-9 md:h-11 lg:h-12 w-auto object-contain"
               />
             </Link>
 
@@ -119,7 +124,7 @@ export default function Header() {
                   <Link
                     to={item.path}
                     className="text-white font-medium text-sm sm:text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap flex items-center gap-1 py-2"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {item.label}
                     {item.dropdown && (
@@ -135,7 +140,7 @@ export default function Header() {
                   <>
                     {/* Dark Background with Green Light Effects */}
                     <motion.div
-                      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40"
+                      className="fixed top-16 sm:top-20 md:top-24 lg:top-28 left-0 right-0 bottom-0 bg-black/60 z-40"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
@@ -149,7 +154,10 @@ export default function Header() {
 
                     {/* White Card Dropdown - Slides from Right */}
                     <motion.div
-                      className="fixed top-14 sm:top-16 md:top-20 lg:top-24 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden z-50"
+                      className="fixed top-14 sm:top-16 md:top-20 lg:top-24 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl overflow-hidden z-50"
+                      style={{
+                        boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)'
+                      }}
                       initial={{ opacity: 0, x: 100 }}
                       animate={{ opacity: 1, x: 0 }}
                       exit={{ opacity: 0, x: 100 }}
@@ -158,7 +166,7 @@ export default function Header() {
                       <div className="p-6 sm:p-8">
                         {/* Title */}
                         <div className="mb-6">
-                          <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                          <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             {item.path === "/compliance" ? (
                               <>
                                 <span className="text-[#15a36e]">COMPLIANCE</span>
@@ -194,10 +202,10 @@ export default function Header() {
                               
                               {/* Content */}
                               <div className="flex-1 min-w-0">
-                                <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                   {dropdownItem.heading}
                                 </h4>
-                                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                   {dropdownItem.description}
                                 </p>
                               </div>
@@ -226,7 +234,7 @@ export default function Header() {
 
         {/* Bottom Shadow/Gradient */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
-      </nav>
+      </motion.nav>
 
       {/* Mobile Dropdown Menu */}
       <AnimatePresence>
@@ -260,7 +268,7 @@ export default function Header() {
                       to={item.path}
                       className="block px-6 py-3 text-white font-medium hover:bg-white/10 transition-colors duration-200"
                       onClick={() => setIsMenuOpen(false)}
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item.label}
                     </Link>
