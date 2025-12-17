@@ -13,7 +13,7 @@ export default function TrackYourCrypto() {
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-16 sm:h-24 md:h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[50px] sm:rounded-t-[75px] md:rounded-t-[100px]"></div>
       
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 relative z-10 pb-2 sm:pb-3 md:pb-4 mt-8 sm:mt-12 md:mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative z-10 pb-8 sm:pb-10 md:pb-12 lg:pb-16 mt-8 sm:mt-12 md:mt-16">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Watch SVG with Phone Overlay */}

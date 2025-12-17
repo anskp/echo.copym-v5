@@ -209,9 +209,9 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
+    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
       {/* heading */}
-      <div className="relative mx-auto max-w-7xl px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32 mb-8 sm:mb-10 md:mb-12">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 mb-8 sm:mb-10 md:mb-12">
         <div className="text-left px-4">
           <div className="relative w-fit mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>

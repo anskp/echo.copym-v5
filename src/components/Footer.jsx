@@ -9,40 +9,21 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-20 lg:pt-24 pb-16">
-        <div className="grid gap-4 sm:gap-6 lg:gap-8 sm:grid-cols-3 lg:grid-cols-5 items-start">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-12 sm:pb-16">
+        <div className="grid gap-8 sm:gap-10 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 items-start">
           {/* Brand */}
-          <div className="flex flex-col -mt-3 space-y-3 sm:space-y-4 md:space-y-6">
+          <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6">
             <div className="h-9 flex items-start">
-            <img
-              loading="lazy"
-                src="assets/copym/png/Copym-02-1.png"
-              alt="COPYM"
-                className="h-10  w-auto sm:h-14 object-contain"
-            />
+              <img
+                loading="lazy"
+                src="/assets/copym/png/Copym-02-1.png"
+                alt="COPYM"
+                className="h-10 w-auto sm:h-12 md:h-14 object-contain"
+              />
             </div>
-            <p className="text-sm sm:text-base text-gray-300 leading-relaxed max-w-sm">
+            <p className="text-sm sm:text-base text-white leading-relaxed max-w-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Investing for outliers. Build wealth with our modern investment platform designed for the next generation.
             </p>
-            <div className="flex items-center space-x-4 text-gray-400">
-              {[
-                { icon: FaTwitter, label: 'Twitter' },
-                { icon: FaLinkedin, label: 'LinkedIn' },
-                { icon: FaInstagram, label: 'Instagram' },
-                { icon: FaGithub, label: 'GitHub' },
-              ].map(({ icon: Icon, label }) => (
-                <a
-                  key={label}
-                  href="#"
-                  aria-label={label}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-emerald-400 transition-colors duration-200"
-                >
-                  <Icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {[
@@ -51,7 +32,7 @@ export default function Footer() {
               links: ['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'],
             },
             {
-              title: 'COMAPNY',
+              title: 'COMPANY',
               links: ['About', 'Careers', 'Press', 'Blog', 'Contact'],
             },
             {
@@ -60,7 +41,7 @@ export default function Footer() {
             },
           ].map((column) => (
             <div key={column.title} className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
-              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start border-b border-[#15a36e] pb-1">
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 {column.title}
               </h3>
               <ul className="space-y-2 text-sm sm:text-base text-white">
@@ -68,7 +49,7 @@ export default function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="hover:text-emerald-400 transition-colors duration-200"
+                      className="hover:text-[#15a36e] transition-colors duration-200" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
                     </a>
@@ -79,56 +60,54 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
+          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5 sm:col-span-2 lg:col-span-1">
             <div>
-              <h3 className="uppercase tracking-[0.18em] text-xs text-[#15a36e] font-semibold h-6 flex items-start border-b border-[#15a36e] pb-1">
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-2 sm:mt-3 md:mt-4 text-sm sm:text-base text-white leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 To know more subscribe to our newsletter
               </p>
             </div>
             <form className="space-y-3">
               <div 
-                className="flex items-center overflow-hidden w-full max-w-[280px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]"
+                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]"
                 style={{
-                  height: '40px',
-                  background: '#fffdfd',
-                  borderRadius: '20px',
+                  height: '44px',
+                  background: '#ffffff',
+                  borderRadius: '22px',
                 }}
               >
                 <input
                   type="email"
                   required
                   placeholder="Enter your E-Mail Address"
-                  className="flex-1 h-full focus:outline-none rounded-l-lg placeholder:text-[#c0b5b5]"
+                  className="flex-1 h-full focus:outline-none rounded-l-[22px] placeholder:text-gray-400"
                   style={{
-                    paddingLeft: '14px',
-                    paddingRight: '8px',
+                    paddingLeft: '16px',
+                    paddingRight: '12px',
                     color: '#000000',
-                    fontSize: '13px',
+                    fontSize: '14px',
                     background: 'transparent',
+                    fontFamily: 'Palanquin, sans-serif',
                   }}
                 />
                 <button
                   type="submit"
-                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-lg whitespace-nowrap"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[22px] whitespace-nowrap px-6"
                   style={{
-                    minWidth: '120px',
-                    paddingLeft: '16px',
-                    paddingRight: '50px',
                     background: '#15a36e',
-                    marginLeft: '-55px',
+                    color: '#ffffff',
+                    fontFamily: 'Palanquin, sans-serif',
                   }}
                 >
                   <span
                     style={{
-                      fontSize: '12px',
-                      fontWeight: 700,
-                      color: '#fffdfd',
+                      fontSize: '14px',
+                      fontWeight: 600,
                     }}
-                >
-                  Subscribe
+                  >
+                    Subscribe
                   </span>
                 </button>
               </div>
