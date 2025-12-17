@@ -16,9 +16,9 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+          className="text-center md:text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"
         >
-          <div className="relative w-fit">
+          <div className="relative w-fit mx-auto md:mx-0">
             <h2
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
@@ -28,7 +28,22 @@ const FeatureSection = () => {
               <span className="text-black">EXPLORE,</span>
               <span className="text-[#15a36e]">TRADE</span>
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+            {/* Mobile underline - centered */}
+            <div 
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-black md:hidden" 
+              style={{ 
+                width: 'calc(100% + 40px)', 
+                height: '0.5px'
+              }}
+            ></div>
+            {/* Desktop underline - left aligned, extended */}
+            <div 
+              className="hidden md:block absolute bottom-0 left-0 bg-black" 
+              style={{ 
+                width: 'calc(100% + 160px)', 
+                height: '0.5px'
+              }}
+            ></div>
           </div>
         </motion.div>
 
@@ -40,7 +55,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-0 lg:gap-0 lg:-ml-2"
+            className="flex flex-col lg:flex-row items-center gap-6 lg:gap-0 lg:-ml-2"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -80,7 +95,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row-reverse items-center gap-0.5 sm:gap-1 lg:gap-1"
+            className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-1"
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
@@ -120,7 +135,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row items-center gap-0 lg:gap-0 lg:-ml-2"
+            className="flex flex-col lg:flex-row items-center gap-6 lg:gap-0 lg:-ml-2"
           >
             {/* Graphic - Left */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
@@ -160,7 +175,7 @@ const FeatureSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="flex flex-col lg:flex-row-reverse items-center gap-0.5 sm:gap-1 lg:gap-1"
+            className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-1"
           >
             {/* Graphic - Right */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">

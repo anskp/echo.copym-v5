@@ -10,46 +10,170 @@ export default function Footer() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-12 sm:pb-16">
-        <div className="grid gap-8 sm:gap-10 lg:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 items-start">
-          {/* Brand */}
-          <div className="flex flex-col space-y-4 sm:space-y-5 md:space-y-6">
-            <div className="h-9 flex items-start">
+        {/* Desktop Layout */}
+        <div className="hidden md:grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+          {/* Left Side - Logo, Description */}
+          <div className="flex flex-col -mt-8 md:-mt-10">
+            <div className="flex items-center mb-1 sm:mb-1.5">
               <img
                 loading="lazy"
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="COPYM"
-                className="h-10 w-auto sm:h-12 md:h-14 object-contain"
+                className="h-12 w-auto sm:h-16 md:h-20 object-contain"
               />
             </div>
-            <p className="text-sm sm:text-base text-white leading-relaxed max-w-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Investing for outliers. Build wealth with our modern investment platform designed for the next generation.
+            <p className="text-white text-sm sm:text-base leading-relaxed mb-3 sm:mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Investing for outliers. Build wealth with<br />
+              our modern investment platform designed<br />
+              for the next generation.
             </p>
           </div>
 
-          {[
-            {
-              title: 'PRODUCT',
-              links: ['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'],
-            },
-            {
-              title: 'COMPANY',
-              links: ['About', 'Careers', 'Press', 'Blog', 'Contact'],
-            },
-            {
-              title: 'SUPPORT',
-              links: ['Help Centre', 'Security', 'Press', 'Terms', 'API'],
-            },
-          ].map((column) => (
-            <div key={column.title} className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
+          {/* Product Links */}
+          <div className="flex flex-col ml-20 md:ml-40 pt-14 md:pt-10">
+            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              PRODUCT
+            </h3>
+            <ul className="space-y-1 sm:space-y-1.5">
+              {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div className="flex flex-col ml-12 md:ml-24 pt-14 md:pt-10">
+            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              COMPANY
+            </h3>
+            <ul className="space-y-1 sm:space-y-1.5">
+              {['About', 'Careers', 'Press', 'Blog', 'Contact'].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Support Links */}
+          <div className="flex flex-col ml-4 md:ml-8 pt-14 md:pt-10">
+            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              SUPPORT
+            </h3>
+            <ul className="space-y-1 sm:space-y-1.5">
+              {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
+                <li key={item}>
+                  <a
+                    href="#"
+                    className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Newsletter Section - Right side */}
+          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
+            <div>
               <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                {column.title}
+                JOIN OUR NEW LETTER
               </h3>
-              <ul className="space-y-2 text-sm sm:text-base text-white">
-                {column.links.map((item) => (
+              <p className="mt-3 sm:mt-4 text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                To know more subscribe to our newsletter
+              </p>
+            </div>
+            <form className="space-y-3">
+              <div 
+                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px]"
+                style={{
+                  height: '44px',
+                  background: '#ffffff',
+                  borderRadius: '22px',
+                }}
+              >
+                <input
+                  type="email"
+                  required
+                  placeholder="Enter your E-Mail Address"
+                  className="flex-1 h-full focus:outline-none rounded-l-[22px] placeholder:text-gray-400"
+                  style={{
+                    paddingLeft: '16px',
+                    paddingRight: '12px',
+                    color: '#000000',
+                    fontSize: '14px',
+                    background: 'transparent',
+                    fontFamily: 'Palanquin, sans-serif',
+                  }}
+                />
+                <button
+                  type="submit"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[22px] whitespace-nowrap px-6"
+                  style={{
+                    background: '#15a36e',
+                    color: '#ffffff',
+                    fontFamily: 'Palanquin, sans-serif',
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: '14px',
+                      fontWeight: 600,
+                    }}
+                  >
+                    Subscribe
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Mobile Layout */}
+        <div className="md:hidden space-y-6">
+          {/* Logo and Tagline */}
+          <div className="flex flex-col">
+            <div className="flex items-center mb-1 sm:mb-1.5">
+              <img
+                loading="lazy"
+                src="/assets/copym/png/Copym-02-1.png"
+                alt="COPYM"
+                className="h-16 w-auto object-contain"
+              />
+            </div>
+            <p className="text-white text-sm sm:text-base leading-relaxed mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Investing for outliers. Build wealth with<br />
+              our modern investment platform designed<br />
+              for the next generation.
+            </p>
+          </div>
+
+          {/* Navigation Links - 3 columns on mobile */}
+          <div className="grid grid-cols-3 gap-4 sm:gap-8">
+            {/* Product Links */}
+            <div>
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                PRODUCT
+              </h3>
+              <ul className="space-y-1 sm:space-y-1.5">
+                {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
                   <li key={item}>
                     <a
                       href="#"
-                      className="hover:text-[#15a36e] transition-colors duration-200" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                      className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
                     </a>
@@ -57,10 +181,50 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          ))}
 
-          {/* Newsletter */}
-          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5 sm:col-span-2 lg:col-span-1">
+            {/* Company Links */}
+            <div>
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                COMPANY
+              </h3>
+              <ul className="space-y-1 sm:space-y-1.5">
+                {['About', 'Careers', 'Press', 'Blog', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Support Links */}
+            <div>
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                SUPPORT
+              </h3>
+              <ul className="space-y-1 sm:space-y-1.5">
+                {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
+                  <li key={item}>
+                    <a
+                      href="#"
+                      className="text-white hover:text-[#15a36e] text-sm sm:text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Newsletter Section - Mobile only */}
+        <div className="md:hidden mt-10 sm:mt-12">
+          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
             <div>
               <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 JOIN OUR NEW LETTER

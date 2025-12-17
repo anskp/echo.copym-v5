@@ -28,18 +28,16 @@ const HowItWorksSection = () => {
           </p>
         </motion.div>
 
-        {/* Two Workflows Side by Side */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
-          {/* Asset Owners Workflow */}
+        {/* Container for stacked Lotties - same position */}
+        <div className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
+          {/* Asset Owners Workflow - First (base layer) */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10"
+            className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10 w-full"
           >
-           
-            
             {/* Lottie Animation */}
             <div className="w-full flex justify-center items-center">
               <Lottie
@@ -51,16 +49,14 @@ const HowItWorksSection = () => {
             </div>
           </motion.div>
 
-          {/* Investors Workflow */}
+          {/* Investors Workflow - Stacked on top, slides in from right on scroll */}
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="bg-black rounded-2xl p-6 sm:p-8 lg:p-10"
+            initial={{ opacity: 0, x: '100%' }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 1.2, ease: 'easeOut' }}
+            viewport={{ once: true, margin: '-100px' }}
+            className="absolute top-0 left-0 w-full bg-black rounded-2xl p-6 sm:p-8 lg:p-10"
           >
-           
-            
             {/* Lottie Animation */}
             <div className="w-full flex justify-center items-center">
               <Lottie
