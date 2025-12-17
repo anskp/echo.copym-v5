@@ -17,7 +17,7 @@ export default function TrackYourCrypto() {
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-4 sm:space-y-6 md:space-y-8">
           {/* Watch SVG with Phone Overlay */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto flex justify-center items-center -mt-4 sm:-mt-6 md:-mt-8">
+          <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg h-auto flex justify-center items-center mt-4 sm:mt-6 md:mt-8">
             {/* Watch SVG - Static Background */}
             <div className="relative w-full">
               <img 
@@ -31,7 +31,7 @@ export default function TrackYourCrypto() {
                  <img 
                    src="/assets/Images/mobile-ads.png" 
                    alt="Copym App Interface" 
-                   className="w-24 sm:w-32 md:w-36 h-auto drop-shadow-2xl relative z-10"
+                   className="w-32 sm:w-40 md:w-48 h-auto drop-shadow-2xl relative z-10"
                  />
               </div>
             </div>
@@ -82,9 +82,9 @@ export default function TrackYourCrypto() {
         {/* Desktop Layout (lg+) - Original Horizontal Layout */}
         <div className="hidden lg:grid grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Side - Watch SVG with Overlaid Mobile */}
-          <div className="flex justify-center items-center relative order-2 lg:order-1 -mt-8 sm:-mt-12 md:-mt-16 lg:-mt-20 xl:-mt-24">
+          <div className="flex justify-center items-center relative order-2 lg:order-1 mt-8 sm:mt-12 md:mt-16 lg:mt-20 xl:mt-24">
             {/* Watch SVG - Static Background */}
-            <div className="relative w-full m-auto max-w-sm sm:max-w-md lg:max-w-lg">
+            <div className="relative w-full m-auto max-w-md sm:max-w-lg lg:max-w-xl">
               <img 
                 src={WatchSVG} 
                 alt="Watch illustration" 
@@ -96,7 +96,7 @@ export default function TrackYourCrypto() {
                  <img 
                    src="/assets/Images/mobile-ads.png" 
                    alt="Copym App Interface" 
-                   className="w-32 sm:w-40 md:w-44 lg:w-48 xl:w-56 h-auto drop-shadow-2xl relative z-10"
+                   className="w-40 sm:w-48 md:w-52 lg:w-64 xl:w-72 h-auto drop-shadow-2xl relative z-10"
                  />
               </div>
             </div>

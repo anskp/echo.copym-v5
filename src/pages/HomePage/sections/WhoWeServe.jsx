@@ -36,55 +36,55 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="lg:col-span-3 lg:row-span-2 bg-black p-4 sm:p-6 lg:p-8 border border-gray-800 flex flex-col"
+            className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col -mx-2 sm:-mx-3 lg:-mx-4"
           >
             {/* Large Image - Dominant Visual */}
-            <div className="mb-4 sm:mb-5 flex-1 flex items-center justify-center min-h-[150px] sm:min-h-[180px] lg:min-h-[220px]">
+            <div className="mb-4 sm:mb-5 lg:mb-6 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px] -mt-2 sm:-mt-3 lg:-mt-4">
               <img
                 src={assetsImage}
                 alt="Asset Owners & Institutions"
-                className="w-full h-full max-h-[220px] object-contain"
+                className="w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
               />
             </div>
 
             {/* Title */}
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Asset Owners & Institutions
             </h3>
 
             {/* Description */}
-            <p className="text-white/80 text-sm sm:text-base mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Launch tokenized products with institutional-grade compliance.
             </p>
 
             {/* Bullet Points */}
-            <ul className="space-y-1.5 sm:space-y-2 mb-4">
+            <ul className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4">
               <li className="flex items-start">
-                <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Real estate, private credit, funds, commodities
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   White-label portals for your investors
                 </span>
               </li>
               <li className="flex items-start">
-                <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Ongoing reporting and secondary liquidity options
                 </span>
               </li>
             </ul>
 
             {/* Learn More Button */}
-            <button className="inline-flex items-center gap-3 border border-white text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Learn More
-              <span className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center">
+              <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
                 <svg
-                  className="w-3.5 h-3.5 group-hover:translate-x-[2px] transition-transform"
+                  className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -106,48 +106,48 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 border border-gray-800 flex flex-col lg:flex-row items-center gap-4 lg:gap-6 h-full"
+            className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-3 sm:py-4 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-3 h-full overflow-hidden lg:-mr-4"
           >
             {/* Content on Left */}
-            <div className="flex-1 lg:max-w-[45%] flex flex-col justify-center">
+            <div className="flex-1 lg:max-w-[40%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-1.5 lg:mb-1.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Investors
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-base sm:text-lg mb-3 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Access curated RWA opportunities worldwide.
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-1.5 sm:space-y-2 mb-4 text-base sm:text-lg">
+                <ul className="space-y-1 sm:space-y-1 mb-2.5 lg:mb-2.5">
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Fractional tickets
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Zero-gas trades & instant settlement
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Portfolio dashboards and automated income reinvestment
                     </span>
                   </li>
                 </ul>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center gap-3 border border-white text-white font-semibold py-3 px-6 rounded-full bg-black hover:bg-black/80 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/80 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Learn More
-                  <span className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center">
+                  <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
                     <svg
-                      className="w-3.5 h-3.5 group-hover:translate-x-[2px] transition-transform"
+                      className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -164,11 +164,11 @@ const WhoWeServe = () => {
               </div>
 
               {/* Image on Right */}
-              <div className="w-full lg:w-1/2 lg:flex-1 flex items-center justify-center lg:justify-end h-full min-h-[150px] lg:min-h-[180px]">
+              <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-center lg:justify-end h-full min-h-[120px] lg:min-h-[140px] lg:pr-0 lg:mr-0 overflow-hidden">
                 <img
                   src={investorsImage}
                   alt="Investors"
-                  className="w-full h-full max-h-[180px] object-contain"
+                  className="w-full h-full max-h-[140px] lg:max-h-[200px] object-contain transform scale-110 lg:scale-135 lg:translate-x-4"
                 />
               </div>
           </motion.div>
@@ -179,7 +179,7 @@ const WhoWeServe = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black p-4 sm:p-6 lg:p-8 border border-gray-800 flex flex-col lg:flex-row items-center gap-4 lg:gap-6 h-full"
+            className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden lg:-mr-4"
           >
             {/* Image on Left */}
             <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0">
@@ -193,43 +193,43 @@ const WhoWeServe = () => {
             {/* Content on Right */}
             <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Partners
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-sm sm:text-base mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Connect custodians, oracles and ESG data to real assets on-chain.
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-1.5 sm:space-y-2 mb-3">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4">
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Custody integrations
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Compliance & data providers
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="text-[#15a36e] mr-3 mt-1 text-lg">•</span>
-                    <span className="text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                    <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Node operators and ecosystem partners
                     </span>
                   </li>
                 </ul>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center gap-3 border border-white text-white font-semibold py-2.5 sm:py-3 px-5 sm:px-6 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Learn More
-                  <span className="w-7 h-7 rounded-full bg-white text-black flex items-center justify-center">
+                  <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
                     <svg
-                      className="w-3.5 h-3.5 group-hover:translate-x-[2px] transition-transform"
+                      className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
