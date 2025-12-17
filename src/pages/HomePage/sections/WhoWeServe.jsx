@@ -168,7 +168,7 @@ const WhoWeServe = () => {
                 <img
                   src={investorsImage}
                   alt="Investors"
-                  className="w-full h-full max-h-[140px] lg:max-h-[200px] object-contain transform scale-110 lg:scale-135 lg:translate-x-4"
+                  className="w-full h-full max-h-[140px] lg:max-h-[240px] object-contain transform scale-110 lg:scale-150 lg:translate-x-16"
                 />
               </div>
           </motion.div>
@@ -182,11 +182,11 @@ const WhoWeServe = () => {
             className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden lg:-mr-4"
           >
             {/* Image on Left */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0">
+            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 overflow-hidden">
               <img
                 src={partnersImage}
                 alt="Partners"
-                className="w-full h-full max-h-[160px] object-contain"
+                className="w-full h-full max-h-[200px] lg:max-h-[240px] object-contain transform scale-110 lg:scale-135 lg:translate-y-4 lg:-translate-x-3"
               />
             </div>
 

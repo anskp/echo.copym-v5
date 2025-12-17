@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import copym3dVideo from '../../../components/Videos/copym3d.mp4';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
@@ -10,6 +9,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         background: "rgba(228,253,243,0.6)",
         boxShadow: "0px 4px 4px 0 rgba(159,159,159,0.25)",
         borderRadius: "8px",
+        border: "1px solid rgba(21,163,110,0.3)",
         minHeight: isOpen ? '160px' : '60px',
         overflow: 'hidden'
       }}
@@ -134,43 +134,17 @@ export default function FAQSection() {
           </Link>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-start">
-          {/* Left Side - FAQ List */}
-          <div className="space-y-4 order-2 lg:order-1">
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openFAQ === index}
-                onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-              />
-            ))}
-          </div>
-
-          {/* Right Side - Video and Support Info */}
-          <div className="flex flex-col order-1 lg:order-2">
-            {/* Video */}
-            <div className="mb-0 flex justify-center lg:justify-end">
-              <div className="w-full max-w-md lg:max-w-lg rounded-lg overflow-hidden shadow-lg">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-auto object-contain"
-                  style={{
-                    maxHeight: '400px'
-                  }}
-                >
-                  <source src={copym3dVideo} type="video/mp4" />
-                </video>
-              </div>
-            </div>
-            
-            {/* Support Card */}
-            
-          </div>
+        {/* FAQ List */}
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openFAQ === index}
+              onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+            />
+          ))}
         </div>
       </div>
     </section>

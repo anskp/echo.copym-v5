@@ -1,6 +1,5 @@
 import React from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
-import rotatingCircles from '../../../components/lotties/Rotatingcircles.json';
+import logoAndIcons from '../../../components/images/logoandicons.png';
 
 export default function AuditSection() {
   return (
@@ -11,45 +10,39 @@ export default function AuditSection() {
       </div>
       
       <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-0 sm:pb-6 md:pb-8 lg:pb-10">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
-                {/* Section Header */}
-        <div className="text-left mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-          <div className="relative w-fit mb-3 sm:mb-4">
-            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-[#15a36e]">SECURE & </span>
-              <span className="text-black">AUDITED</span>
-            </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          {/* Section Header */}
+          <div className="text-left mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
+            <div className="relative w-fit mb-3 sm:mb-4">
+              <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-[#15a36e]">SECURE & </span>
+                <span className="text-black">AUDITED</span>
+              </h2>
+              <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+            </div>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
+            </p>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
-          </p>
         </div>
 
-          {/* Lottie Animation */}
-          <div className="flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 w-full overflow-visible px-4">
-            <div className="w-full h-auto flex items-center justify-center overflow-visible" style={{ 
-              transform: 'scale(4.0) sm:scale(3.6) md:scale(3.4) lg:scale(3.2) xl:scale(3.0) translateY(-8%) sm:translateY(-10%) md:translateY(-12%) lg:translateY(-12%)',
-              transformOrigin: 'center center'
-            }}>
-              <Player
-                autoplay
-                loop
-                src={rotatingCircles}
-                style={{ 
-                  width: '100%', 
-                  height: 'auto',
-                  maxWidth: '100%',
-                  minHeight: '550px',
-                  objectFit: 'contain'
-                }}
-                className="w-full h-auto min-h-[500px] sm:min-h-[700px] md:min-h-[800px]"
-              />
-            </div>
-          </div>
+        {/* Logo and Icons Image - Full Width */}
+        <div className="w-full flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 lg:-mt-10">
+          <img
+            src={logoAndIcons}
+            alt="Secure & Audited - Blockchain Networks"
+            className="w-full h-auto object-contain"
+            style={{ 
+              maxHeight: '600px',
+              objectFit: 'contain',
+              width: '100vw'
+            }}
+          />
+        </div>
 
-        {/* Legend */}
-        <div className="flex justify-center items-center space-x-8 mt-0 sm:mt-12">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+          {/* Legend */}
+          <div className="flex justify-center items-center space-x-8 mt-0 sm:mt-12">
           </div>
         </div>
       </div>

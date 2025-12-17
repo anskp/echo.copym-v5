@@ -12,6 +12,7 @@ import FeatureSection from "./sections/FeatureSection";
 import WhoWeServe from "./sections/WhoWeServe";
 import ProductStackReview from "./sections/ProductStackReview";
 import TestimonialsSection from "./sections/Testimonials";
+import GreenarySection from "./sections/GreenarySection";
 
 
 
@@ -26,14 +27,15 @@ export default function HomePage() {
       <FeatureSection />
       <WhoWeServe />
       <ProductStackReview />
-      <TrackYourCrypto />
       <HowItWorksSection />
       <AIInvestingSection />
       <NetworkShowcase />
       <RWAAssetsSection />
+      <TrackYourCrypto />
       <AuditSection />
       <FAQSection />
-    <TestimonialsSection />
+      <TestimonialsSection />
+      <GreenarySection />
       {/* <SupportedAssets /> */}
       
     </div>
