@@ -14,9 +14,9 @@ export const GreenarySection = () => {
           />
           
           {/* Overlay Content */}
-          <div className="absolute inset-0 flex flex-col items-center justify-end sm:justify-center px-4 sm:px-6 md:px-8 pb-6 sm:pb-0">
+          <div className="absolute inset-0 flex flex-col items-center justify-end sm:justify-center px-4 sm:px-6 md:px-8 pb-10 sm:pb-10">
             {/* CTA Button - Responsive positioning */}
-            <div className="flex items-center justify-center w-full max-w-full sm:mt-32 md:mt-48 lg:mt-64 xl:mt-80">
+            <div className="flex items-center justify-center w-full max-w-full sm:mt-72 md:mt-[340px] lg:mt-[430px] xl:mt-[490px]">
               <button 
                 onClick={() => {
                   // Button is clickable but doesn't open form modal

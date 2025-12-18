@@ -31,13 +31,7 @@ const WhoWeServe = () => {
         {/* 3-Card Grid Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-8">
           {/* Left Card - Large (tall + wide) - Asset Owners & Institutions */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col -mx-2 sm:-mx-3 lg:-mx-4"
-          >
+          <div className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col -mx-2 sm:-mx-3 lg:-mx-4">
             {/* Large Image - Dominant Visual */}
             <div className="mb-4 sm:mb-5 lg:mb-6 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px] -mt-2 sm:-mt-3 lg:-mt-4">
               <img
@@ -48,17 +42,37 @@ const WhoWeServe = () => {
             </div>
 
             {/* Title */}
-            <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <motion.h3 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" 
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
+            >
               Asset Owners & Institutions
-            </h3>
+            </motion.h3>
 
             {/* Description */}
-            <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-nowrap" 
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
+            >
               Launch tokenized products with institutional-grade compliance.
-            </p>
+            </motion.p>
 
             {/* Bullet Points */}
-            <ul className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4">
+            <motion.ul 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4"
+            >
               <li className="flex items-start">
                 <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
                 <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -77,14 +91,14 @@ const WhoWeServe = () => {
                   Ongoing reporting and secondary liquidity options
                 </span>
               </li>
-            </ul>
+            </motion.ul>
 
             {/* Learn More Button */}
-            <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-1.5 sm:py-2 px-3 sm:px-4 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Learn More
-              <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
+              <span className="w-5 h-5 rounded-full bg-white text-black flex items-center justify-center">
                 <svg
-                  className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
+                  className="w-2.5 h-2.5 group-hover:translate-x-[2px] transition-transform"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -98,30 +112,44 @@ const WhoWeServe = () => {
                 </svg>
               </span>
             </button>
-          </motion.div>
+          </div>
 
           {/* Top-Right Card - Investors */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-3 sm:py-4 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-3 h-full overflow-hidden lg:-mr-4"
-          >
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-3 sm:py-4 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-3 h-full overflow-hidden lg:-mr-4">
             {/* Content on Left */}
             <div className="flex-1 lg:max-w-[40%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-1.5 lg:mb-1.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <motion.h3 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-1.5 lg:mb-1.5 whitespace-nowrap" 
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
                   Investors
-                </h3>
+                </motion.h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2" 
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
                   Access curated RWA opportunities worldwide.
-                </p>
+                </motion.p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-1 sm:space-y-1 mb-2.5 lg:mb-2.5">
+                <motion.ul 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-1 sm:space-y-1 mb-4 lg:mb-4"
+                >
                   <li className="flex items-start">
                     <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
                     <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -140,14 +168,14 @@ const WhoWeServe = () => {
                       Portfolio dashboards and automated income reinvestment
                     </span>
                   </li>
-                </ul>
+                </motion.ul>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/80 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-1.5 sm:py-2 px-3 sm:px-4 rounded-full bg-black hover:bg-black/80 transition-all duration-300 group w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Learn More
-                  <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
+                  <span className="w-5 h-5 rounded-full bg-white text-black flex items-center justify-center">
                     <svg
-                      className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
+                      className="w-2.5 h-2.5 group-hover:translate-x-[2px] transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -171,16 +199,10 @@ const WhoWeServe = () => {
                   className="w-full h-full max-h-[140px] lg:max-h-[240px] object-contain transform scale-110 lg:scale-150 lg:translate-x-16"
                 />
               </div>
-          </motion.div>
+          </div>
 
           {/* Bottom-Right Card - Partners */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden lg:-mr-4"
-          >
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden lg:-mr-4">
             {/* Image on Left */}
             <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 overflow-hidden">
               <img
@@ -193,17 +215,37 @@ const WhoWeServe = () => {
             {/* Content on Right */}
             <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center">
                 {/* Title */}
-                <h3 className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <motion.h3 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap" 
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
                   Partners
-                </h3>
+                </motion.h3>
 
                 {/* Description */}
-                <p className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5" 
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
                   Connect custodians, oracles and ESG data to real assets on-chain.
-                </p>
+                </motion.p>
 
                 {/* Bullet Points */}
-                <ul className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4">
+                <motion.ul 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  viewport={{ once: true }}
+                  className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4"
+                >
                   <li className="flex items-start">
                     <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
                     <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -222,14 +264,14 @@ const WhoWeServe = () => {
                       Node operators and ecosystem partners
                     </span>
                   </li>
-                </ul>
+                </motion.ul>
 
                 {/* Learn More Button */}
-                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-2 sm:py-2 px-4 sm:px-5 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <button className="inline-flex items-center gap-2 border border-white text-white font-semibold py-1.5 sm:py-2 px-3 sm:px-4 rounded-full bg-black hover:bg-black/90 transition-all duration-300 group w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Learn More
-                  <span className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
+                  <span className="w-5 h-5 rounded-full bg-white text-black flex items-center justify-center">
                     <svg
-                      className="w-3 h-3 group-hover:translate-x-[2px] transition-transform"
+                      className="w-2.5 h-2.5 group-hover:translate-x-[2px] transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -244,7 +286,7 @@ const WhoWeServe = () => {
                   </span>
                 </button>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

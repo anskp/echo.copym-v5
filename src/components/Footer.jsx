@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Product Links */}
-          <div className="flex flex-col ml-20 md:ml-40 pt-14 md:pt-10">
+          <div className="flex flex-col ml-20 md:ml-40 -mt-8 md:-mt-10">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               PRODUCT
             </h3>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Company Links */}
-          <div className="flex flex-col ml-12 md:ml-24 pt-14 md:pt-10">
+          <div className="flex flex-col ml-12 md:ml-24 -mt-8 md:-mt-10">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               COMPANY
             </h3>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Support Links */}
-          <div className="flex flex-col ml-4 md:ml-8 pt-14 md:pt-10">
+          <div className="flex flex-col ml-4 md:ml-8 -mt-8 md:-mt-10">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-2 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               SUPPORT
             </h3>
@@ -87,7 +87,7 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section - Right side */}
-          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5">
+          <div className="flex flex-col space-y-3 sm:space-y-4 md:space-y-5 -mt-8 md:-mt-10">
             <div>
               <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 JOIN OUR NEW LETTER

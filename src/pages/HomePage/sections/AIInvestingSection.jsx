@@ -80,8 +80,9 @@ export default function AIInvestingSection() {
                       backgroundColor: 'rgba(225, 225, 225, 0.9)'
                     }}
                   >
-                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                      Cora AI is a AI technology designed by CopyM to make better investments
+                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left">
+                      <span className="text-[#15a36e] font-semibold">Cora AI</span>
+                      <span className="text-black"> is an AI technology designed by CopyM to make better investments</span>
                     </p>
                   </div>
                 </div>
@@ -160,7 +161,7 @@ export default function AIInvestingSection() {
                       }}
                     >
                       <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
-                        Cora AI is a AI technology designed by CopyM to make better investments
+                        <span className="text-[#15a36e]">Cora AI</span> <span className="text-black">is a AI technology designed by CopyM to make better investments</span>
                       </p>
                     </div>
                   </div>

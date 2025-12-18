@@ -120,18 +120,15 @@ export default function FAQSection() {
           >
             These frequently asked questions might have the answer, but if not, our support team is just a message away!
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-6 sm:px-8 md:px-10 py-3 sm:py-4 text-white font-semibold transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
-            style={{
-              borderRadius: "55px",
-              background: "linear-gradient(179.93deg, rgba(35,189,131,0.8) 0.13%, rgba(16,146,97,0.8) 76.14%)",
-              fontFamily: 'DM Sans, sans-serif',
-              minWidth: '200px'
-            }}
-          >
-            Contact Our Team
-          </Link>
+          <div className="flex justify-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              Contact Our Team
+            </Link>
+          </div>
         </div>
 
         {/* FAQ List */}
