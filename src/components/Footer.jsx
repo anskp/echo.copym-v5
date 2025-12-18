@@ -14,7 +14,7 @@ export default function Footer() {
         <div className="hidden md:grid md:grid-cols-5 gap-8 md:gap-12 items-start">
           {/* Left Side - Logo, Description */}
           <div className="flex flex-col -mt-8 md:-mt-10">
-            <div className="flex items-center mb-1 sm:mb-1.5">
+            <div className="flex items-center mb-0 sm:mb-0.5">
               <img
                 loading="lazy"
                 src="/assets/copym/png/Copym-02-1.png"
@@ -146,7 +146,7 @@ export default function Footer() {
         <div className="md:hidden space-y-6">
           {/* Logo and Tagline */}
           <div className="flex flex-col">
-            <div className="flex items-center mb-1 sm:mb-1.5">
+            <div className="flex items-center mb-0 sm:mb-0.5">
               <img
                 loading="lazy"
                 src="/assets/copym/png/Copym-02-1.png"

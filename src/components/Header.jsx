@@ -9,6 +9,7 @@ import { HiCube, HiShieldCheck } from 'react-icons/hi';
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
 
   const navItems = [
     { 
@@ -92,9 +93,24 @@ export default function Header() {
     }
   ];
 
+  // Chevron icon for mobile dropdown open/close indicator
+  function DropdownChevron({ open }) {
+    return (
+      <svg
+        className={`transition-transform ml-2 w-3 h-3 inline-block ${open ? "rotate-180" : ""}`}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2.5}
+        viewBox="0 0 24 24"
+      >
+        <path d="M19 9l-7 7-7-7"/>
+      </svg>
+    );
+  }
+
   return (
     <>
-      {/* Green Header Bar */}
+      {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
       <motion.nav 
         className="bg-[#15a36e] w-full shadow-md relative z-50"
         initial={{ y: -100, opacity: 0 }}
@@ -102,18 +118,20 @@ export default function Header() {
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-8 sm:h-10 md:h-12 lg:h-14">
+          {/* --- FLEX HEADER CONTAINER --- */}
+          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className="h-11 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+                style={{ maxWidth: '170px' }}
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-12">
+            <div className="hidden lg:flex items-center gap-8 xl:gap-12">
               {navItems.map((item) => (
                 <div
                   key={item.path}
@@ -123,106 +141,99 @@ export default function Header() {
                 >
                   <Link
                     to={item.path}
-                    className="text-white font-medium text-sm sm:text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
+                    className="text-white font-medium text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {item.label}
                   </Link>
-            
-            {/* Dropdown Menu */}
-            <AnimatePresence>
+                  {/* DESKTOP Dropdown */}
+                  <AnimatePresence>
                     {hoveredItem === item.path && item.dropdown && item.dropdown.length > 0 && (
-                  <>
-                    {/* Dark Background with Green Light Effects */}
-                    <motion.div
-                      className="fixed top-8 sm:top-10 md:top-12 lg:top-14 left-0 right-0 bottom-0 bg-black/60 z-40"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
-                      transition={{ duration: 0.3 }}
-                      onClick={() => setHoveredItem(null)}
-                    >
-                      {/* Green Light Effects */}
-                      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#15a36e]/20 to-transparent"></div>
-                      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#15a36e]/20 to-transparent"></div>
-                    </motion.div>
-
-                    {/* White Card Dropdown - Slides from Right */}
-                    <motion.div
-                      className="fixed top-8 sm:top-10 md:top-12 lg:top-14 right-4 sm:right-6 md:right-8 w-full max-w-md bg-white rounded-2xl overflow-hidden z-50"
-                      style={{
-                        boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)'
-                      }}
-                      initial={{ opacity: 0, x: 100 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      exit={{ opacity: 0, x: 100 }}
-                      transition={{ duration: 0.3, ease: "easeOut" }}
-                    >
-                      <div className="p-6 sm:p-8">
-                        {/* Title */}
-                        <div className="mb-6">
-                          <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            {item.path === "/compliance" ? (
-                              <>
-                                <span className="text-[#15a36e]">COMPLIANCE</span>
-                                <span className="text-black"> AND SECURITY</span>
-                              </>
-                            ) : (
-                              <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
-                            )}
-                          </h3>
-                          {/* Black underline */}
-                          <div className="h-0.5 bg-black"></div>
-                        </div>
-                        
-                        {/* Dropdown Items */}
-                        <div className="space-y-6">
-                          {item.dropdown.map((dropdownItem, index) => (
-                            <Link
-                              key={index}
-                              to={item.path}
-                              className="flex items-start gap-4 hover:opacity-80 transition-opacity duration-200 group"
-                              onClick={() => setHoveredItem(null)}
-                            >
-                              {/* Icon - Black square with icon */}
-                              <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
-                                <div className={
-                                  item.path === "/solutions" || item.path === "/compliance" 
-                                    ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
-                                    : 'text-white'
-                                }>
-                                  {dropdownItem.icon}
-                                </div>
-                              </div>
-                              
-                              {/* Content */}
-                              <div className="flex-1 min-w-0">
-                                <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                  {dropdownItem.heading}
-                                </h4>
-                                <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                  {dropdownItem.description}
-                                </p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </motion.div>
-                  </>
-              )}
-            </AnimatePresence>
+                      <>
+                        {/* Dark Overlay with Green Light at Top/Bottom */}
+                        <motion.div
+                          className="fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-40"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                          onClick={() => setHoveredItem(null)}
+                        >
+                          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#15a36e]/20 to-transparent"></div>
+                          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#15a36e]/20 to-transparent"></div>
+                        </motion.div>
+                        {/* Desktop Dropdown Card */}
+                        <motion.div
+                          className="fixed mt-2 lg:mt-0 top-20 sm:top-24 lg:top-24 right-3 sm:right-8 lg:right-10 w-[96vw] sm:w-[420px] md:w-[480px] lg:w-[400px] xl:w-[500px] max-w-full bg-white rounded-2xl overflow-hidden z-50"
+                          style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}
+                          initial={{ opacity: 0, x: 100 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          exit={{ opacity: 0, x: 100 }}
+                          transition={{ duration: 0.3, ease: "easeOut" }}
+                        >
+                          <div className="p-6 sm:p-8">
+                            {/* Title */}
+                            <div className="mb-6">
+                              <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                {item.path === "/compliance" ? (
+                                  <>
+                                    <span className="text-[#15a36e]">COMPLIANCE</span>
+                                    <span className="text-black"> AND SECURITY</span>
+                                  </>
+                                ) : (
+                                  <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
+                                )}
+                              </h3>
+                              <div className="h-0.5 bg-black"></div>
+                            </div>
+                            {/* Dropdown Items */}
+                            <div className="space-y-6">
+                              {item.dropdown.map((dropdownItem, index) => (
+                                <Link
+                                  key={index}
+                                  to={item.path}
+                                  className="flex items-start gap-4 hover:opacity-80 transition-opacity duration-200 group"
+                                  onClick={() => setHoveredItem(null)}
+                                >
+                                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
+                                    <div className={
+                                      item.path === "/solutions" || item.path === "/compliance" 
+                                        ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
+                                        : 'text-white'
+                                    }>
+                                      {dropdownItem.icon}
+                                    </div>
+                                  </div>
+                                  <div className="flex-1 min-w-0">
+                                    <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                      {dropdownItem.heading}
+                                    </h4>
+                                    <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                      {dropdownItem.description}
+                                    </p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      </>
+                    )}
+                  </AnimatePresence>
+                </div>
+              ))}
             </div>
-          ))}
-          </div>
 
             {/* Mobile Toggle */}
             <button
               className="lg:hidden text-white hover:text-white/80 transition-colors duration-200 p-2"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                if (isMenuOpen) setMobileDropdownOpen(null);
+              }}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
+              {isMenuOpen ? <IoClose className="h-7 w-7" /> : <GiHamburgerMenu className="h-7 w-7" />}
             </button>
           </div>
         </div>
@@ -231,62 +242,138 @@ export default function Header() {
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </motion.nav>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile/Tablet Slide-in Menu */}
       <AnimatePresence>
-      {isMenuOpen && (
-        <motion.div 
-            className="fixed inset-0 z-50 lg:hidden"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          {/* Backdrop */}
-          <div 
-              className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          
-          {/* Menu Container */}
+        {isMenuOpen && (
           <motion.div 
-              className="absolute top-16 left-4 right-4 bg-[#15a36e] rounded-xl border border-white/20 overflow-hidden shadow-xl max-h-[80vh] overflow-y-auto"
-            initial={{ opacity: 0, y: -20, scale: 0.95 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: -20, scale: 0.95 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="fixed inset-0 z-[60] lg:hidden"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
           >
-              {/* Mobile Navigation Items */}
-              <div className="py-4">
-                {navItems.map((item, index) => (
-                  <div key={item.path}>
-                    <Link
-                      to={item.path}
-                      className="block px-6 py-3 text-white font-medium hover:bg-white/10 transition-colors duration-200"
-                      onClick={() => setIsMenuOpen(false)}
-                      style={{ fontFamily: 'Palanquin, sans-serif' }}
-                    >
-                      {item.label}
-                    </Link>
-                    {item.dropdown && (
-                      <div className="px-6 pb-3 space-y-2">
-                        {item.dropdown.map((dropdownItem, idx) => (
-                            <Link
-                            key={idx}
-                          to={item.path}
-                            className="block pl-8 py-2 text-white/90 text-sm hover:text-white hover:bg-white/5 rounded transition-colors"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                            {dropdownItem.heading}
-                            </Link>
-                          ))}
-                        </div>
-                    )}
-                  </div>
-                ))}
+            {/* Overlay */}
+            <div 
+              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(null); }}
+            />
+            {/* Slide-out Panel */}
+            <motion.div
+              className="absolute top-0 left-0 w-[93vw] xs:w-[88vw] sm:w-[375px] md:w-[440px] max-w-md h-full bg-[#15a36e] rounded-r-2xl shadow-2xl overflow-y-auto border-r-2 border-white/10"
+              initial={{ x: -400, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              exit={{ x: -400, opacity: 0 }}
+              transition={{ duration: 0.29, ease: "easeOut" }}
+              style={{
+                maxWidth: 440,
+              }}
+            >
+              {/* Mobile Panel Header */}
+              <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
+                <Link
+                  to="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="flex items-center flex-shrink-0"
+                >
+                  <img
+                    src="/assets/copym/png/Copym-02-1.png"
+                    alt="CopyM Logo"
+                    className="h-8 w-auto object-contain"
+                    style={{ maxWidth: 100 }}
+                  />
+                </Link>
+                <button
+                  className="text-white p-2"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <IoClose className="h-7 w-7" />
+                </button>
               </div>
+              {/* Mobile Navigation Items - Accordion */}
+              <div className="py-2">
+                {navItems.map((item, idx) => {
+                  const isDropdown = item.dropdown && item.dropdown.length > 0;
+                  const open = isDropdown && mobileDropdownOpen === item.path;
+                  return (
+                    <div key={item.path} className="border-b border-white/10 last:border-b-0">
+                      <div
+                        className={`flex items-center px-6 py-3 text-white font-medium transition-colors duration-200 cursor-pointer select-none ${open ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                        onClick={() => {
+                          if (isDropdown) {
+                            setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
+                          } else {
+                            setIsMenuOpen(false);
+                            setMobileDropdownOpen(null);
+                          }
+                        }}
+                        style={{ fontFamily: 'Palanquin, sans-serif' }}
+                        tabIndex={0}
+                        onKeyDown={e => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            if (isDropdown) {
+                              setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
+                            } else {
+                              setIsMenuOpen(false);
+                              setMobileDropdownOpen(null);
+                            }
+                          }
+                        }}
+                      >
+                        <Link
+                          to={item.path}
+                          className="block flex-1 min-w-0 text-white text-base"
+                          style={{ fontFamily: 'Palanquin, sans-serif' }}
+                          onClick={e => {
+                            if (isDropdown) {
+                              e.preventDefault();
+                            } else {
+                              setIsMenuOpen(false);
+                              setMobileDropdownOpen(null);
+                            }
+                          }}
+                        >
+                          {item.label}
+                        </Link>
+                        {isDropdown && <DropdownChevron open={open} />}
+                      </div>
+                      {/* Accordion content */}
+                      <AnimatePresence initial={false}>
+                        {open && (
+                          <motion.div
+                            className="bg-[#14a16d] px-6 pt-2 pb-3 space-y-2"
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 'auto', opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.22 }}
+                          >
+                            {item.dropdown.map((dropdownItem, idy) => (
+                              <Link
+                                key={idy}
+                                to={item.path}
+                                className="flex items-start gap-3 py-2 pl-1.5 rounded hover:bg-white/10"
+                                style={{ color: "#fff", fontSize: "15px" }}
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                <span className="inline-flex items-center justify-center w-10 h-10 rounded bg-black mr-2">
+                                  <span className="text-white">{dropdownItem.icon}</span>
+                                </span>
+                                <div className="flex flex-col">
+                                  <span className="font-bold leading-none text-sm">{dropdownItem.heading}</span>
+                                  <span className="text-xs text-white/90 mt-1">{dropdownItem.description}</span>
+                                </div>
+                              </Link>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
+              </div>
+            </motion.div>
           </motion.div>
-        </motion.div>
-      )}
+        )}
       </AnimatePresence>
     </>
   );
