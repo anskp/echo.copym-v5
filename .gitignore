@@ -24,3 +24,7 @@ dist.zip
 *.sln
 *.sw?
 .env
+
+# Large video files ignored to fix git push >100MB limit
+src/pages/CopymAI/assets/hero/Cora-Aivdo.mp4
+public/assets/videos/Blue-green.mp4
