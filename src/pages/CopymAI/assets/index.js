@@ -4,7 +4,7 @@ import brainwaveSymbol from "./brainwave-symbol.svg";
 import brainwaveWhiteSymbol from "./brainwave-symbol-white.svg";
 import copymWhiteIcon from "./Copym-06-2.png";
 import copymColoredIcon from "./Copym-05-1.png";
-import play from "./play.svg";
+
 import pause from "./pause.svg";
 import gradient from "./gradient.png";
 import smallSphere from "./4-small.png";
@@ -54,9 +54,7 @@ import protopie from "./collaboration/protopie.png";
 import raindrop from "./collaboration/raindrop.png";
 import slack from "./collaboration/slack.png";
 
-import service1 from "./services/service-1.png";
-import service2 from "./services/service-2.png";
-import service3 from "./services/service-3.jpg";
+
 
 import lines from "./pricing/lines.svg";
 import stars from "./pricing/stars.svg";
@@ -95,7 +93,7 @@ export {
     brainwaveWhiteSymbol,
     copymWhiteIcon,
     copymColoredIcon,
-    play,
+
     pause,
     gradient,
     smallSphere,
@@ -135,10 +133,7 @@ export {
     protopie,
     raindrop,
     slack,
-    service1,
-    service2,
-    service3,
-    lines,
+
     stars,
     RevolutionCora,
 
