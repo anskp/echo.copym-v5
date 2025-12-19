@@ -3,20 +3,20 @@ import { motion } from 'framer-motion';
 import { useGSAP } from '../../hooks/useGSAPAnimations';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { 
-  GiRocket, 
-  GiPresent, 
-  GiPerson, 
-  GiTicket, 
-  GiShield, 
-  GiWallet, 
-  GiGlobe, 
-  GiDiamonds, 
-  GiLockedChest, 
-  GiCrown, 
-  
+import {
+  GiRocket,
+  GiPresent,
+  GiPerson,
+  GiTicket,
+  GiShield,
+  GiWallet,
+  GiGlobe,
+  GiDiamonds,
+  GiLockedChest,
+  GiCrown,
+
   GiCoins,
- 
+
 } from 'react-icons/gi';
 
 import CredentialCard from '../../components/CredentialCard';
@@ -70,8 +70,8 @@ export default function AccessPage() {
     { icon: GiDiamonds, title: "Institutional Rails", description: "Custody, settlement, and data rooms integrated", color: "from-orange-500 to-red-500" }
   ];
 
-  
-  
+
+
 
   // Advanced GSAP Animations
   useGSAP(pageRef, () => {
@@ -234,24 +234,12 @@ export default function AccessPage() {
     <div ref={pageRef} className="min-h-screen bg-white">
       {/* Hero Section with TokenizationHub Style */}
       <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden">
-        {/* Video Background */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/assets/videos/Access-page.mp4" type="video/mp4" />
-          </video>
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
-
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10 z-[1]">
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
+        {/* Background Video REPLACED */}
+        <div className="absolute inset-0 z-0 bg-black">
+          {/* Gradients/Overlay - kept for aesthetic */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-emerald-900/20"></div>
+          <div className="absolute inset-0 bg-[url('/assets/grid.svg')] opacity-20"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
         </div>
 
         {/* Hero Content */}
@@ -271,118 +259,118 @@ export default function AccessPage() {
               the next wave of Web3 innovation with your exclusive access pass.
             </p>
 
-                         {/* Mint Token Button - Exact START INVESTING style */}
-             <button
+            {/* Mint Token Button - Exact START INVESTING style */}
+            <button
               className="bg-emerald-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md mx-auto mt-4 sm:mt-6"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
-             >
-               MINT YOUR TOKEN NOW
-               <svg
-                 className="w-4 h-4"
-                 fill="none"
-                 stroke="currentColor"
-                 viewBox="0 0 24 24"
-               >
-                 <path
-                   strokeLinecap="round"
-                   strokeLinejoin="round"
-                   strokeWidth={2.5}
-                   d="M9 5l7 7-7 7"
-                 />
-               </svg>
-             </button>
+            >
+              MINT YOUR TOKEN NOW
+              <svg
+                className="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </button>
           </div>
         </div>
-             </section>
+      </section>
 
 
       {/* Pass Unlocks Section */}
       <PassUnlocksSection />
 
-                {/* Unlock Features - Reimagined with Platform Features Style */}
-        <section className="relative">
-          {/* Main Content with Curved Background */}
-          <div className="relative z-10 bg-black pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
-           {/* Content Container */}
-           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-             {/* Heading and Subheading - At the Top */}
-             <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-4">
-               <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                 <span className="text-white">YOUR </span>
-                 <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
-               </h3>
-               <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white/80 leading-relaxed max-w-5xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                 Your digital identity that unlocks exclusive access to the COPYM ecosystem.
-               </p>
-             </div>
+      {/* Unlock Features - Reimagined with Platform Features Style */}
+      <section className="relative">
+        {/* Main Content with Curved Background */}
+        <div className="relative z-10 bg-black pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
+          {/* Content Container */}
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Heading and Subheading - At the Top */}
+            <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 px-4">
+              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-white">YOUR </span>
+                <span className="text-[#15a36e]">ACCESS CREDENTIAL</span>
+              </h3>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-white/80 leading-relaxed max-w-5xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                Your digital identity that unlocks exclusive access to the COPYM ecosystem.
+              </p>
+            </div>
 
-             {/* Credential Card Section */}
-              <div className="text-center relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] flex flex-col items-center justify-center outline-none border-none px-4" style={{ outline: 'none', border: 'none' }}>
-                {/* Green Ellipse Background */}
-                <div 
-                  className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
-                >
-                  <img 
-                    src={EllipseGreen} 
-                    alt="Green ellipse background"
-                    className="w-full h-full object-contain"
-                  />
-                </div>
-
-                {/* Card - Centered on Ellipse */}
-                <div className="relative z-10 flex justify-center items-center w-full">
-                  <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[350px]">
-                    <CredentialCard
-                      user={{
-                        name: "Alex Morgan",
-                        employeeNumber: "C-2028",
-                        passNumber: "56",
-                        points: "1,250",
-                        qrImage: "/assets/svg/copym_qr.svg",
-                      }}
-                      variant="bottleGreen"
-                      stacked
-                      backVariant="darkBlue"
-                      logoSrc="/assets/copym/png/Copym-05-1.png"
-                      logoSize={24}
-                    />
-                  </div>
-                </div>
-              </div>
-           </div>
-         </div>
-               </section>
-
-
-              {/* Platform Features - TokenizationHub Style Cards */}
-       <section className="relative bg-white">
-         {/* Main Content */}
-         <div className="relative z-10 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
-           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-             {/* Section Title */}
-             <div className="text-center mb-6 sm:mb-8 lg:mb-10 px-4">
-               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                 <span className="text-black">PLATFORM </span>
-                 <span className="text-[#15a36e]">FEATURES</span>
-               </h2>
-               <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-5xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                 Enterprise-grade features designed for institutional-grade tokenization and compliance.
-               </p>
-             </div>
-
-                           {/* Grouped Images */}
-            <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8 px-4">
-                <img 
-                  src={GroupedImages} 
-                  alt="Platform Features"
-                className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl h-auto object-contain"
+            {/* Credential Card Section */}
+            <div className="text-center relative min-h-[250px] sm:min-h-[300px] md:min-h-[350px] lg:min-h-[400px] flex flex-col items-center justify-center outline-none border-none px-4" style={{ outline: 'none', border: 'none' }}>
+              {/* Green Ellipse Background */}
+              <div
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] pointer-events-none z-0"
+              >
+                <img
+                  src={EllipseGreen}
+                  alt="Green ellipse background"
+                  className="w-full h-full object-contain"
                 />
               </div>
-           </div>
-         </div>
-               </section>
 
-       {/* Supported Networks */}
+              {/* Card - Centered on Ellipse */}
+              <div className="relative z-10 flex justify-center items-center w-full">
+                <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] lg:max-w-[350px]">
+                  <CredentialCard
+                    user={{
+                      name: "Alex Morgan",
+                      employeeNumber: "C-2028",
+                      passNumber: "56",
+                      points: "1,250",
+                      qrImage: "/assets/svg/copym_qr.svg",
+                    }}
+                    variant="bottleGreen"
+                    stacked
+                    backVariant="darkBlue"
+                    logoSrc="/assets/copym/png/Copym-05-1.png"
+                    logoSize={24}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      {/* Platform Features - TokenizationHub Style Cards */}
+      <section className="relative bg-white">
+        {/* Main Content */}
+        <div className="relative z-10 pt-12 sm:pt-16 lg:pt-20 pb-12 sm:pb-16 lg:pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            {/* Section Title */}
+            <div className="text-center mb-6 sm:mb-8 lg:mb-10 px-4">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                <span className="text-black">PLATFORM </span>
+                <span className="text-[#15a36e]">FEATURES</span>
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-5xl mx-auto px-2 mb-4 sm:mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                Enterprise-grade features designed for institutional-grade tokenization and compliance.
+              </p>
+            </div>
+
+            {/* Grouped Images */}
+            <div className="flex justify-center items-center mt-4 sm:mt-6 lg:mt-8 px-4">
+              <img
+                src={GroupedImages}
+                alt="Platform Features"
+                className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl h-auto object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Supported Networks */}
       <div ref={networksRef} className="bg-[#E9F6F1] py-12 sm:py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 sm:mb-10">

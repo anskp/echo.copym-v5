@@ -6,16 +6,8 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen w-full overflow-hidden">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover z-0"
-      >
-        <source src="/assets/videos/Marketplacehero.mp4" type="video/mp4" />
-      </video>
+      {/* Video Background REPLACED */}
+      <div className="absolute inset-0 w-full h-full z-0 bg-black"></div>
 
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 bg-black/30 z-[1]"></div>

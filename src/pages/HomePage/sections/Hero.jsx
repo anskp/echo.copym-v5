@@ -3,6 +3,8 @@ import { GiCrossedSwords } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
+// Removed invalid mp4 import that caused Vite error.
+
 export default function Hero() {
   const [isVideoOpen, setVideoOpen] = useState(false);
   const modalRef = useRef(null);
@@ -42,10 +44,8 @@ export default function Hero() {
           loop
           muted
           playsInline
-          preload="metadata"
           className="w-full h-full object-cover"
           style={{ minHeight: '100vh' }}
-          aria-label="Background video showing investment opportunities"
         >
           <source src="/assets/videos/hero section video.mp4" type="video/mp4" />
         </video>
@@ -98,7 +98,7 @@ export default function Hero() {
             <Link
               to="/marketplace"
               className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto sm:min-w-[200px]"
-              style={{ 
+              style={{
                 fontFamily: 'Palanquin, sans-serif',
                 background: 'linear-gradient(to right, #23BD83, #109261)'
               }}

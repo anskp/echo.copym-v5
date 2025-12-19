@@ -4,7 +4,9 @@ import Typewriter from "typewriter-effect";
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import twocurve from "../assets/hero/twocurve.png";
-import coraVideo from "../assets/hero/Cora-Aivdo.mp4";
+// import coraVideo from "../assets/hero/Cora-Aivdo.mp4";
+const coraVideo = ""; // Placeholder until video is restored
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,9 +41,9 @@ const Hero = () => {
               </video>
               {/* Retina image centered over video */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <img 
-                  src="/assets/Images/icons/Retina.png" 
-                  alt="Retina" 
+                <img
+                  src="/assets/Images/icons/Retina.png"
+                  alt="Retina"
                   className="w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 xl:w-80 xl:h-80 object-contain"
                 />
               </div>
@@ -78,7 +80,7 @@ const Hero = () => {
         </div>
       </div>
 
-      
+
     </Section>
   );
 };

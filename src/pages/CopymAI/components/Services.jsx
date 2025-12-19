@@ -17,18 +17,10 @@ const Services = () => {
           text="Revolutionizing Real-World Asset Investment with AI and Blockchain Technology"
         />
 
-        {/* Video Section */}
+        {/* Video Section REMOVED */}
         <div className="flex justify-center items-center my-8 sm:my-12 lg:my-16">
-          <div className="w-full max-w-5xl">
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-full h-auto rounded-lg"
-            >
-              <source src="/assets/videos/Cora-aivideo.mp4" type="video/mp4" />
-            </video>
+          <div className="w-full max-w-5xl h-64 bg-gray-900 rounded-lg flex items-center justify-center">
+            <span className="text-gray-500">Video Content Removed</span>
           </div>
         </div>
       </div>

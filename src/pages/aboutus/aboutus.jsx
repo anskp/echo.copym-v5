@@ -1,22 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 // Removed LavaLamp background
-import { 
-  GiShield,
-  GiLockedChest,
-  GiPowerLightning,
-  GiPerson,
-  GiHouse,
-  GiRocket,
-  GiGlobe,
-  GiHalfHeart,
-  GiTargetArrows,
-  GiRoundStar,
-  GiChart,
-  GiTimeBomb,
-  GiTreasureMap,
-  GiBinoculars,
-  GiHourglass
+import {
+    GiShield,
+    GiLockedChest,
+    GiPowerLightning,
+    GiPerson,
+    GiHouse,
+    GiRocket,
+    GiGlobe,
+    GiHalfHeart,
+    GiTargetArrows,
+    GiRoundStar,
+    GiChart,
+    GiTimeBomb,
+    GiTreasureMap,
+    GiBinoculars,
+    GiHourglass
 } from "react-icons/gi";
 import TestimonialsSection from "../HomePage/sections/Testimonials";
 
@@ -26,24 +26,15 @@ const AboutUs = () => {
         <div className="min-h-screen bg-white">
             {/* Section 1: Hero Section */}
             <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden">
-                {/* Background Video */}
-                <div className="absolute inset-0 z-0">
-                    <video
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="w-full h-full object-cover"
-                    >
-                        <source src="/assets/videos/Blue-green.mp4" type="video/mp4" />
-                    </video>
+                {/* Background Video REPLACED */}
+                <div className="absolute inset-0 z-0 bg-black">
                     {/* Light overlay to maintain readability and light aesthetic */}
                     <div className="absolute inset-0 "></div>
                 </div>
 
                 {/* Subtle Geometric Pattern Background */}
                 <div className="absolute inset-0 z-[1] opacity-[0.05]">
-                    <div 
+                    <div
                         className="w-full h-full"
                         style={{
                             backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,0.1) 35px, rgba(0,0,0,0.1) 70px)`,
@@ -54,7 +45,7 @@ const AboutUs = () => {
                 <div className="relative z-10 w-full h-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-[56px] flex items-center justify-center">
                     <div className="flex flex-col items-center justify-center w-full">
                         <div className="flex flex-col items-center justify-center w-full max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px] mx-auto">
-                            
+
                             {/* Main Heading */}
                             <h1 className="text-center mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                 <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-white">
@@ -64,13 +55,13 @@ const AboutUs = () => {
                                     REAL-WORLD ASSETS
                                 </span>
                             </h1>
-                            
+
                             {/* Description */}
                             <div className="flex flex-col items-center justify-center w-full">
                                 <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-white w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     Transforming asset ownership through blockchain innovation and institutional-grade tokenization
                                 </p>
-                                
+
                                 {/* Hero Image Stack */}
                                 <div className="relative w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[600px] h-[150px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[320px] mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
                                     <img
@@ -79,7 +70,7 @@ const AboutUs = () => {
                                         className="absolute inset-0 w-full h-full object-contain"
                                     />
                                 </div>
-                                
+
                                 {/* CTA Button */}
                                 <button
                                     className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
@@ -100,15 +91,15 @@ const AboutUs = () => {
             <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden flex items-center">
                 {/* Main Content */}
                 <div className="relative z-10 bg-black w-full h-full overflow-hidden flex items-center">
-                    
-                    
+
+
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                 <span className="text-white">COMPANY </span>
                                 <span className="text-[#15a36e]">OVERVIEW</span>
                             </h2>
-                            
+
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -133,7 +124,7 @@ const AboutUs = () => {
                                         COPYm is a leading <span className="font-semibold text-white">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
                                     </p>
                                 </div>
-                                
+
                                 <div className="space-y-4">
                                     <h3 className="text-xl sm:text-2xl font-bold text-white mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                         Why We Exist:
@@ -174,8 +165,8 @@ const AboutUs = () => {
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
                                 <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                OUR MISSION
-                            </h3>
+                                    OUR MISSION
+                                </h3>
                             </div>
                         </div>
 
@@ -198,8 +189,8 @@ const AboutUs = () => {
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
                                 <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                OUR VISION
-                            </h3>
+                                    OUR VISION
+                                </h3>
                             </div>
                         </div>
                     </div>
@@ -214,7 +205,7 @@ const AboutUs = () => {
                             <span className="text-black">CORE </span>
                             <span className="text-[#15a36e]">VALUES</span>
                         </h2>
-                        
+
                     </div>
 
                     {/* Vertical Stack of Value Cards */}
@@ -245,7 +236,7 @@ const AboutUs = () => {
                             const svgWidth = index === 0 ? 50 : 48;
                             const svgHeightTop = 18;
                             const svgHeightBottom = 18;
-                            
+
                             return (
                                 <motion.div
                                     key={index}
@@ -253,7 +244,7 @@ const AboutUs = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.6, delay: index * 0.1 }}
                                     viewport={{ once: true }}
-                                    style={{ 
+                                    style={{
                                         position: 'relative',
                                         marginBottom: '16px',
                                         background: '#e6f2ed',
@@ -263,35 +254,35 @@ const AboutUs = () => {
                                     }}
                                 >
                                     {/* Green Header Bar with Heading */}
-                                    <div style={{ 
-                                        height: headerHeight, 
+                                    <div style={{
+                                        height: headerHeight,
                                         background: 'rgba(179,255,227,0.4)',
                                         position: 'relative',
                                         display: 'flex',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                     }}>
-                                        <h3 style={{ 
+                                        <h3 style={{
                                             fontFamily: 'DM Sans, sans-serif',
-                                            fontSize: 'clamp(14px, 2vw, 18px)', 
-                                            fontWeight: 600, 
-                                            textAlign: 'center', 
-                                            color: '#000', 
+                                            fontSize: 'clamp(14px, 2vw, 18px)',
+                                            fontWeight: 600,
+                                            textAlign: 'center',
+                                            color: '#000',
                                             margin: '0'
                                         }}>{value.title}</h3>
                                     </div>
 
                                     {/* Grey Content Area */}
-                                    <div style={{ 
-                                        padding: '15px 20px', 
+                                    <div style={{
+                                        padding: '15px 20px',
                                         background: '#f0f5f3',
                                         position: 'relative'
                                     }}>
-                                        <p style={{ 
+                                        <p style={{
                                             fontFamily: 'DM Sans, sans-serif',
-                                            fontSize: 'clamp(12px, 1.5vw, 14px)', 
-                                            textAlign: 'left', 
-                                            color: '#000', 
+                                            fontSize: 'clamp(12px, 1.5vw, 14px)',
+                                            textAlign: 'left',
+                                            color: '#000',
                                             lineHeight: '1.4',
                                             margin: '0 0 20px 0'
                                         }}>
@@ -299,13 +290,13 @@ const AboutUs = () => {
                                         </p>
 
                                         {/* Status Badge */}
-                                        <div style={{ 
+                                        <div style={{
                                             position: 'absolute',
                                             bottom: '5px',
                                             right: '10px',
-                                            background: '#fff', 
-                                            padding: '3px 9px', 
-                                            borderRadius: '20px', 
+                                            background: '#fff',
+                                            padding: '3px 9px',
+                                            borderRadius: '20px',
                                             fontSize: 'clamp(10px, 1.4vw, 13px)',
                                             color: '#15a36e',
                                             whiteSpace: 'nowrap'
@@ -366,16 +357,16 @@ const AboutUs = () => {
                     {/* Timeline Container */}
                     <div className="relative pl-8 sm:pl-12 md:pl-16 pr-4 sm:pr-8 md:pr-12">
                         {/* Glowing Vertical Timeline Line */}
-                        <div 
+                        <div
                             className="absolute left-0 sm:left-2 md:left-4 top-0 bottom-0 hidden sm:flex items-center justify-center"
                             style={{
                                 width: 'auto',
                                 height: '100%'
                             }}
                         >
-                            <img 
-                                src="/assets/Images/carousel/Linenarrow.png" 
-                                alt="Timeline Line" 
+                            <img
+                                src="/assets/Images/carousel/Linenarrow.png"
+                                alt="Timeline Line"
                                 className="h-full w-auto object-contain"
                                 style={{
                                     maxHeight: '100%'
@@ -395,17 +386,17 @@ const AboutUs = () => {
                             >
                                 {/* Icon */}
                                 <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img 
-                                        src="/assets/Images/icons/Cube.png" 
-                                        alt="Foundation" 
+                                    <img
+                                        src="/assets/Images/icons/Cube.png"
+                                        alt="Foundation"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
 
                                 {/* Heading - Fixed width for uniform alignment */}
-                                <h3 
+                                <h3
                                     className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
                                     }}
@@ -414,9 +405,9 @@ const AboutUs = () => {
                                 </h3>
 
                                 {/* Subheading */}
-                                <p 
+                                <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
@@ -436,17 +427,17 @@ const AboutUs = () => {
                             >
                                 {/* Icon */}
                                 <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img 
-                                        src="/assets/Images/icons/Rocket.png" 
-                                        alt="Platform Launch" 
+                                    <img
+                                        src="/assets/Images/icons/Rocket.png"
+                                        alt="Platform Launch"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
 
                                 {/* Heading - Fixed width for uniform alignment */}
-                                <h3 
+                                <h3
                                     className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
                                     }}
@@ -455,9 +446,9 @@ const AboutUs = () => {
                                 </h3>
 
                                 {/* Subheading */}
-                                <p 
+                                <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
@@ -477,17 +468,17 @@ const AboutUs = () => {
                             >
                                 {/* Icon */}
                                 <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img 
-                                        src="/assets/Images/icons/StylizedGlobe.png" 
-                                        alt="Global Expansion" 
+                                    <img
+                                        src="/assets/Images/icons/StylizedGlobe.png"
+                                        alt="Global Expansion"
                                         className="w-full h-full object-contain"
                                     />
                                 </div>
 
                                 {/* Heading - Fixed width for uniform alignment */}
-                                <h3 
+                                <h3
                                     className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#15a36e'
                                     }}
@@ -496,9 +487,9 @@ const AboutUs = () => {
                                 </h3>
 
                                 {/* Subheading */}
-                                <p 
+                                <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{ 
+                                    style={{
                                         fontFamily: 'DM Sans, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
@@ -524,7 +515,7 @@ const AboutUs = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 lg:gap-8">
                         {/* Kuldeep - CEO */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Kuldeep.png" 
@@ -540,8 +531,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Rameez - COO */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Rameez - COO */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Rameez.png" 
@@ -557,8 +548,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Azwaan - HR */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Azwaan - HR */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Azwaan.png" 
@@ -574,8 +565,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Raayif Aarif - CTO */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Raayif Aarif - CTO */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Raayif-aarif.png" 
@@ -591,8 +582,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Ansab */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Ansab */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Ansab.png" 
@@ -608,8 +599,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Abhishek */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Abhishek */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Abhishek.png" 
@@ -625,8 +616,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Hanan Arif */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Hanan Arif */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Hanan.png" 
@@ -642,8 +633,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Anas KP */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Anas KP */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Anas K.P.png" 
@@ -659,8 +650,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Nada Abdulla */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Nada Abdulla */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-green-600 to-blue-500 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Nada.png" 
@@ -676,8 +667,8 @@ const AboutUs = () => {
                             </div>
                         </div> */}
 
-                        {/* Nuha Fathima */}
-                        {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+            {/* Nuha Fathima */}
+            {/* <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                             <div className="w-24 h-24 bg-gradient-to-br from-blue-500 to-green-600 rounded-full mx-auto mb-6 overflow-hidden border-4 border-white shadow-lg">
                                 <img 
                                     src="/assets/Images/team/Nuha.png" 
@@ -692,11 +683,11 @@ const AboutUs = () => {
                                 </div>
                             </div>
                         </div> */}
-                    {/* </div>
+            {/* </div>
                 </div>
             </section> */}
 
-            
+
 
             {/* Section 8: Testimonials */}
             <TestimonialsSection />
