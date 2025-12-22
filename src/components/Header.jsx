@@ -12,13 +12,26 @@ export default function Header() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
 
   const navItems = [
-    { 
-      label: "Product", 
+    {
+      label: "Product",
       path: "/product",
-      dropdown: []
+      dropdown: [
+        {
+          icon: <HiCube className="w-5 h-5" />,
+          heading: "Tokenization",
+          description: "Learn how CopyM tokenizes real-world assets into digital securities.",
+          path: "/tokenization"
+        },
+        {
+          icon: <FaUsers className="w-5 h-5" />,
+          heading: "Marketplace",
+          description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
+          path: "/marketplace"
+        }
+      ]
     },
-    { 
-      label: "Solutions", 
+    {
+      label: "Solutions",
       path: "/solutions",
       dropdown: [
         {
@@ -38,8 +51,8 @@ export default function Header() {
         }
       ]
     },
-    { 
-      label: "Compliance & Security", 
+    {
+      label: "Compliance & Security",
       path: "/compliance",
       dropdown: [
         {
@@ -54,8 +67,8 @@ export default function Header() {
         }
       ]
     },
-    { 
-      label: "Technology", 
+    {
+      label: "Technology",
       path: "/technology",
       dropdown: [
         {
@@ -75,8 +88,8 @@ export default function Header() {
         }
       ]
     },
-    { 
-      label: "Blog", 
+    {
+      label: "Blog",
       path: "/blog",
       dropdown: [
         {
@@ -103,7 +116,7 @@ export default function Header() {
         strokeWidth={2.5}
         viewBox="0 0 24 24"
       >
-        <path d="M19 9l-7 7-7-7"/>
+        <path d="M19 9l-7 7-7-7" />
       </svg>
     );
   }
@@ -111,7 +124,7 @@ export default function Header() {
   return (
     <>
       {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
-      <motion.nav 
+      <motion.nav
         className="bg-[#15a36e] w-full shadow-md relative z-50"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -191,13 +204,13 @@ export default function Header() {
                               {item.dropdown.map((dropdownItem, index) => (
                                 <Link
                                   key={index}
-                                  to={item.path}
+                                  to={dropdownItem.path || item.path}
                                   className="flex items-start gap-4 hover:opacity-80 transition-opacity duration-200 group"
                                   onClick={() => setHoveredItem(null)}
                                 >
                                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
                                     <div className={
-                                      item.path === "/solutions" || item.path === "/compliance" 
+                                      item.path === "/solutions" || item.path === "/compliance"
                                         ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
                                         : 'text-white'
                                     }>
@@ -245,7 +258,7 @@ export default function Header() {
       {/* Mobile/Tablet Slide-in Menu */}
       <AnimatePresence>
         {isMenuOpen && (
-          <motion.div 
+          <motion.div
             className="fixed inset-0 z-[60] lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -253,7 +266,7 @@ export default function Header() {
             transition={{ duration: 0.3 }}
           >
             {/* Overlay */}
-            <div 
+            <div
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(null); }}
             />
@@ -350,7 +363,7 @@ export default function Header() {
                             {item.dropdown.map((dropdownItem, idy) => (
                               <Link
                                 key={idy}
-                                to={item.path}
+                                to={dropdownItem.path || item.path}
                                 className="flex items-start gap-3 py-2 pl-1.5 rounded hover:bg-white/10"
                                 style={{ color: "#fff", fontSize: "15px" }}
                                 onClick={() => setIsMenuOpen(false)}

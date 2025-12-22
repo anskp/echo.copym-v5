@@ -11,7 +11,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
         {/* Desktop Layout */}
-        <div className=" md:grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+        <div className="hidden md:grid md:grid-cols-5 gap-8 md:gap-12 items-start">
           {/* Left Side - Logo, Description */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1 sm:mb-1.5">
@@ -97,7 +97,7 @@ export default function Footer() {
               </p>
             </div>
             <form className="space-y-2">
-              <div 
+              <div
                 className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[240px] md:max-w-[280px] lg:max-w-[300px]"
                 style={{
                   height: '36px',
@@ -229,12 +229,12 @@ export default function Footer() {
               <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                To know more subscribe<br />to our newsletter
+              <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                To know more subscribe to our newsletter
               </p>
             </div>
             <form className="space-y-2">
-              <div 
+              <div
                 className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[240px] md:max-w-[280px] lg:max-w-[300px]"
                 style={{
                   height: '36px',
@@ -282,16 +282,8 @@ export default function Footer() {
       </div>
 
       {/* Large COPYM Background Image */}
-      <div 
-        className="relative z-10  w-full overflow-hidden" 
-        style={{ 
-          minHeight: '400px',
-          backgroundColor: '#000000',
-          backgroundImage: 'url(/assets/Images/team/footercopym.png)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
-          backgroundRepeat: 'no-repeat',
-        }}
+      <div
+        className="relative z-10 w-full overflow-hidden bg-black bg-[url('/assets/Images/team/footercopym.png')] bg-no-repeat bg-bottom bg-contain sm:bg-cover h-[120px] sm:h-[300px] md:h-[400px]"
       >
       </div>
     </footer>

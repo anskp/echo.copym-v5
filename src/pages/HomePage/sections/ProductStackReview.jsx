@@ -39,7 +39,7 @@ const ProductStackReview = () => {
       : 0;
 
   return (
-    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-white pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         {/* Header Section */}
         <motion.div
