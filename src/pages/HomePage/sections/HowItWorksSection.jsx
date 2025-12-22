@@ -16,7 +16,7 @@ const HowItWorksSection = () => {
   const opacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 0, 1]);
   return (
     <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

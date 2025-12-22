@@ -3,7 +3,7 @@ import React from 'react';
 export const GreenarySection = () => {
   return (
     <section className="relative w-full bg-white py-4 sm:py-8 md:py-12 lg:py-16 xl:py-20 overflow-x-hidden overflow-y-visible">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Increased edge radius: */}
         <div className="relative flex items-center justify-center rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[2rem] lg:rounded-[2.5rem] xl:rounded-[3.5rem] overflow-hidden">
           {/* Background Image */}

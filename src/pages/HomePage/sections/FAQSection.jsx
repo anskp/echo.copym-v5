@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
-    <div 
+    <div
       className="mb-4 transition-all duration-300"
       style={{
         background: "rgba(228,253,243,0.6)",
@@ -21,7 +21,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
           minHeight: '50px'
         }}
       >
-        <h3 
+        <h3
           className="pr-4 flex-1"
           style={{
             fontSize: 'clamp(16px, 2vw, 20px)',
@@ -57,10 +57,10 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         </div>
       </button>
       {isOpen && (
-        <div 
+        <div
           className="overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-5 pb-4"
         >
-          <p 
+          <p
             style={{
               fontSize: 'clamp(14px, 1.8vw, 18px)',
               color: '#000',
@@ -101,11 +101,11 @@ export default function FAQSection() {
 
   return (
     <section className="relative py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">
           <div className="relative w-fit mb-3 sm:mb-4">
-            <h2 
+            <h2
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
@@ -114,7 +114,7 @@ export default function FAQSection() {
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p 
+          <p
             className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >

@@ -40,7 +40,7 @@ const ProductStackReview = () => {
 
   return (
     <section className="relative w-full bg-white pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}

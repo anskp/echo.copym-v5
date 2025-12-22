@@ -9,7 +9,7 @@ import earnWithoutHassleAnimation from '../../../components/lotties/earnwithouta
 const FeatureSection = () => {
   return (
     <section className="relative w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-8 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Main Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -29,18 +29,18 @@ const FeatureSection = () => {
               <span className="text-[#15a36e]">TRADE</span>
             </h2>
             {/* Mobile underline - centered */}
-            <div 
-              className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-black md:hidden" 
-              style={{ 
-                width: 'calc(100% + 40px)', 
+            <div
+              className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-black md:hidden"
+              style={{
+                width: 'calc(100% + 40px)',
                 height: '0.5px'
               }}
             ></div>
             {/* Desktop underline - left aligned, extended */}
-            <div 
-              className="hidden md:block absolute bottom-0 left-0 bg-black" 
-              style={{ 
-                width: 'calc(100% + 160px)', 
+            <div
+              className="hidden md:block absolute bottom-0 left-0 bg-black"
+              style={{
+                width: 'calc(100% + 160px)',
                 height: '0.5px'
               }}
             ></div>
@@ -48,7 +48,7 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Vertical Stack of 4 Sections */}
-        <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
+        <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
           {/* Section 1 - Own a piece of big Investment (Graphic Left) */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}

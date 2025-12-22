@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video REPLACED */}
-      <div className="absolute inset-0 z-0 bg-black">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url(/assets/Images/tokenization.png)' }}
+      >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/40"></div>
       </div>

@@ -13,7 +13,7 @@ export default function TrackYourCrypto() {
       {/* Shorten the fade overlay at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-8 sm:h-12 md:h-16 bg-gradient-to-t from-white/10 to-transparent rounded-t-[28px] sm:rounded-t-[40px] md:rounded-t-[60px]"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 relative z-10 pb-4 sm:pb-6 md:pb-8 lg:pb-8 mt-2 sm:mt-4 md:mt-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10 pb-4 sm:pb-6 md:pb-8 lg:pb-8 mt-2 sm:mt-4 md:mt-6">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-center text-center space-y-3 sm:space-y-4 md:space-y-5">
           {/* Watch SVG with Phone Overlay */}
