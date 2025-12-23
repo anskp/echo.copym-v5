@@ -9,31 +9,49 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         background: "rgba(228,253,243,0.6)",
         boxShadow: "0px 4px 4px 0 rgba(159,159,159,0.25)",
         borderRadius: "8px",
+        border: "1px solid rgba(21,163,110,0.3)",
         minHeight: isOpen ? '160px' : '60px',
         overflow: 'hidden'
       }}
     >
       <button
         onClick={onToggle}
-        className="w-full text-left flex justify-between items-center transition-colors duration-200"
+        className="w-full text-left flex justify-between items-center transition-colors duration-200 p-3 sm:p-4"
         style={{
-          padding: isOpen ? '16px 20px' : '16px 20px',
-          minHeight: '60px'
+          minHeight: '50px'
         }}
       >
         <h3
-          className="pr-4 flex-1 font-semibold text-black text-lg md:text-xl text-left"
-          style={{ fontFamily: 'Palanquin, sans-serif' }}
+          className="pr-4 flex-1"
+          style={{
+            fontSize: 'clamp(16px, 2vw, 20px)',
+            fontWeight: 600,
+            color: '#000',
+            textAlign: 'left',
+            fontFamily: 'DM Sans, sans-serif'
+          }}
         >
           {question}
         </h3>
         <div className="flex-shrink-0 transition-transform duration-300">
           {isOpen ? (
-            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="16"
+              height="14"
+              viewBox="0 0 23 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path d="M11.2578 0L22.5161 19.5H-0.000517845L11.2578 0Z" fill="black" />
             </svg>
           ) : (
-            <svg width="20" height="23" viewBox="0 0 20 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              width="14"
+              height="16"
+              viewBox="0 0 20 23"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path d="M19.5 11.2578L0 -0.000518799V22.5161L19.5 11.2578Z" fill="black" />
             </svg>
           )}
@@ -41,14 +59,17 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
       </button>
       {isOpen && (
         <div
-          className="overflow-hidden transition-all duration-300 ease-in-out"
-          style={{
-            padding: '0 20px 16px 20px'
-          }}
+          className="overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-5 pb-4"
         >
           <p
-            className="text-black text-lg md:text-xl text-left leading-relaxed mt-2"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            style={{
+              fontSize: 'clamp(14px, 1.8vw, 18px)',
+              color: '#000',
+              textAlign: 'left',
+              lineHeight: '1.6',
+              marginTop: '8px',
+              fontFamily: 'DM Sans, sans-serif'
+            }}
           >
             {answer}
           </p>
@@ -63,80 +84,66 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What does the end‑to‑end tokenization flow look like?",
-      answer: "Intake and due‑diligence → audited contract deployment → mint with transfer rules → investor onboarding → listing and lifecycle management. Most pilots complete in days."
+      question: "What is Copym and how does it work?",
+      answer: "Copym is a real-world asset tokenization platform that allows you to invest in fractional ownership of high-value assets like real estate, commodities, carbon credits, and luxury items. Our marketplace connects investors with exclusive investment opportunities."
     },
     {
-      question: "Which assets are best suited for tokenization?",
-      answer: "Income‑producing real estate, commodities, carbon credits, private equity, and revenue streams. If ownership and cash flows are verifiable, we can structure it."
+      question: "What types of assets can I invest in on Copym?",
+      answer: "Our marketplace offers diverse real-world assets including commercial and residential real estate, precious metals, renewable energy projects, carbon credits, fine art, and luxury collectibles - all available for fractional ownership starting from small amounts."
     },
     {
-      question: "Which chains and standards can I choose from?",
-      answer: "Ethereum, Polygon, Solana, Avalanche, BSC and L2s with ERC‑20/721/1155/1400 and SPL. We recommend based on cost, liquidity, and compliance needs."
+      question: "How secure is my investment on Copym?",
+      answer: "Your investments are protected with institutional-grade security, blockchain transparency, and regulatory compliance. All assets are legally tokenized and backed by real-world value, with your ownership recorded on secure blockchain technology."
     },
     {
-      question: "How do compliance and investor eligibility work?",
-      answer: "KYC/AML and jurisdiction checks are embedded. Allow/deny lists and accreditation are enforced at the token level so only eligible wallets can hold or trade."
+      question: "What are the benefits of investing through Copym?",
+      answer: "Enjoy passive income from rental yields and asset appreciation, diversify your portfolio with institutional-grade investments, access previously unavailable opportunities, and trade your fractional ownership anytime through our integrated marketplace."
     }
   ];
 
   return (
-    <section className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="relative py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-
         {/* Section Header */}
-        <div className="text-left mb-12 sm:mb-16">
-          <div className="relative w-fit mb-4">
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+          <div className="relative w-fit mb-3 sm:mb-4">
             <h2
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
+              className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              <span className="text-black">FREQUENTLY ASKED </span>
-              <span className="text-[#15a36e]">QUESTIONS</span>
+              <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
+              <span className="text-black">QUESTIONS</span>
             </h2>
-            <div
-              className="absolute bottom-0 left-0 bg-black"
-              style={{
-                width: 'calc(100% + 200px)',
-                height: '0.5px'
-              }}
-            ></div>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mt-6">
-            <p
-              className="text-sm sm:text-base md:text-lg text-black font-normal leading-relaxed max-w-3xl"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
-            >
-              These frequently asked questions might have the answer, but if not, our support team is just a message away!
-            </p>
-
+          <p
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            These frequently asked questions might have the answer, but if not, our support team is just a message away!
+          </p>
+          <div className="flex justify-center">
             <Link
               to="/contact"
-              className="bg-emerald-500 text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-emerald-600 transition-all duration-300 inline-flex items-center justify-center gap-2 shadow-md w-fit flex-shrink-0"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
+              className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
               Contact Our Team
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
             </Link>
           </div>
         </div>
 
-        {/* FAQ List - Full Width */}
-        <div className="max-w-4xl">
-          <div className="space-y-4">
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openFAQ === index}
-                onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-              />
-            ))}
-          </div>
+        {/* FAQ List */}
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openFAQ === index}
+              onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+            />
+          ))}
         </div>
       </div>
     </section>

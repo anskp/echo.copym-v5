@@ -1,5 +1,4 @@
 import React from 'react';
-import copymflows from '../../../components/Videos/copymflows.mp4';
 
 export default function NetworkShowcase() {
   return (
@@ -14,7 +13,7 @@ export default function NetworkShowcase() {
             className="w-full h-auto object-contain"
             style={{ maxHeight: '520px' }}
           >
-            <source src={copymflows} type="video/mp4" />
+            <source src="/assets/videos/copymflows.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
