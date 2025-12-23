@@ -16,7 +16,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center md:text-left mb-8 sm:mb-10 md:mb-12 lg:mb-16"
+          className="text-center md:text-left mb-6 sm:mb-8 md:mb-10"
         >
           <div className="relative w-fit mx-auto md:mx-0">
             <h2

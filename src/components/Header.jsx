@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
@@ -10,6 +10,19 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredItem, setHoveredItem] = useState(null);
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     {
@@ -125,20 +138,24 @@ export default function Header() {
     <>
       {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
       <motion.nav
-        className="bg-[#15a36e] w-full shadow-md relative z-50"
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled
+            ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-16'
+            : 'bg-[#15a36e] shadow-md h-14 sm:h-16 md:h-18 lg:h-20'
+          }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           {/* --- FLEX HEADER CONTAINER --- */}
-          <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20">
+          <div className="flex items-center justify-between h-full">
             {/* Logo */}
             <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto object-contain"
+                className={`transition-all duration-300 w-auto object-contain ${isScrolled ? 'h-8 sm:h-10 md:h-12' : 'h-10 sm:h-12 md:h-14 lg:h-16'
+                  }`}
                 style={{ maxWidth: '170px' }}
               />
             </Link>

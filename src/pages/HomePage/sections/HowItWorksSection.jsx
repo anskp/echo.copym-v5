@@ -23,7 +23,7 @@ const HowItWorksSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-8 sm:mb-12 md:mb-16"
+          className="text-left mb-6 sm:mb-8 md:mb-10"
         >
           <div className="relative w-fit">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>

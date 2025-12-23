@@ -6,7 +6,7 @@ import partnersImage from '../../../components/images/partners.png';
 
 const WhoWeServe = () => {
   return (
-    <section className="relative w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header Section */}
         <motion.div
@@ -14,7 +14,7 @@ const WhoWeServe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-12 sm:mb-16 md:mb-20"
+          className="text-left mb-6 sm:mb-8 md:mb-10"
         >
           <div className="relative w-fit">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>

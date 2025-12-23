@@ -24,7 +24,7 @@ import { animate } from 'animejs';
 function App() {
   const location = useLocation();
   const appRef = useRef(null);
-  
+
   // Check if we're on the copym-ai page
   const isCopymAIPage = location.pathname === "/copym-ai";
   // Check if we're on the marketplace page (has its own header)
@@ -53,7 +53,7 @@ function App() {
 
   return (
     <Box
-      ref={appRef} 
+      ref={appRef}
       className={`min-h-screen relative text-text-primary overflow-x-hidden`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
@@ -62,7 +62,7 @@ function App() {
       <CustomCursor />
       <ScrollToTop />
       <Header />
-      <main className="relative z-20 overflow-x-hidden">
+      <main className="relative z-20 overflow-x-hidden pt-14 sm:pt-16 md:pt-18 lg:pt-20">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />
@@ -75,7 +75,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/access" element={<AccessPage />} />
         </Routes>
-        </main>
+      </main>
       <Footer />
     </Box>
   );

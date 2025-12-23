@@ -9,7 +9,7 @@ export default function AIInvestingSection() {
     <section className="w-full bg-background-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-x-hidden overflow-y-visible">
       <div className="w-full max-w-[1600px] mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Heading - Always at Top */}
-        <div className="text-left mb-8 sm:mb-12 md:mb-16">
+        <div className="text-left mb-6 sm:mb-8 md:mb-10">
           <div className="relative w-fit mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight tracking-base uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-[#15a36e]">CORA-AI</span>
@@ -17,7 +17,7 @@ export default function AIInvestingSection() {
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide mt-3 sm:mt-4 whitespace-nowrap" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-6 sm:mb-8 tracking-wide mt-3 sm:mt-4 whitespace-nowrap" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
           </p>
 

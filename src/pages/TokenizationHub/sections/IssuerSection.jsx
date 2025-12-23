@@ -12,7 +12,7 @@ export default function IssuerSection() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
         {/* Section Header - Original */}
-        <div className="mb-8 sm:mb-12 md:mb-16 text-center">
+        <div className="mb-6 sm:mb-8 md:mb-10 text-center">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'palanquin, sans-serif' }}>
             <span className="text-[#15a36e]">TOKENIZE</span> REAL ASSETS
           </h2>

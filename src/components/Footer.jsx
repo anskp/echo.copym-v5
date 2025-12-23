@@ -11,7 +11,7 @@ export default function Footer() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-5 gap-8 md:gap-12 items-start">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-y-10 gap-x-8 lg:gap-x-12 items-start">
           {/* Left Side - Logo, Description */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1 sm:mb-1.5">
@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           {/* Product Links */}
-          <div className="flex flex-col ml-10 md:ml-20 mt-5">
+          <div className="flex flex-col lg:ml-0 mt-5">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block pr-4 sm:pr-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               PRODUCT
             </h3>
@@ -49,7 +49,7 @@ export default function Footer() {
           </div>
 
           {/* Company Links */}
-          <div className="flex flex-col ml-6 md:ml-12 mt-5">
+          <div className="flex flex-col lg:ml-0 mt-5">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               COMPANY
             </h3>
@@ -68,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Support Links */}
-          <div className="flex flex-col ml-4 md:ml-8 mt-5">
+          <div className="flex flex-col lg:ml-0 mt-5">
             <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               SUPPORT
             </h3>
@@ -87,18 +87,18 @@ export default function Footer() {
           </div>
 
           {/* Newsletter Section - Right side */}
-          <div className="flex flex-col space-y-2 sm:space-y-2.5 md:space-y-3 mt-5">
+          <div className="flex flex-col space-y-2 sm:space-y-2.5 md:space-y-3 mt-5 md:col-span-2 lg:col-span-1">
             <div>
               <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 JOIN OUR NEW LETTER
               </h3>
-              <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                To know more subscribe<br />to our newsletter
+              <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                To know more subscribe to our newsletter
               </p>
             </div>
             <form className="space-y-2">
               <div
-                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[240px] md:max-w-[280px] lg:max-w-[300px]"
+                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[300px] md:max-w-[320px] lg:max-w-[360px]"
                 style={{
                   height: '36px',
                   background: '#ffffff',
@@ -121,7 +121,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[18px] whitespace-nowrap px-4"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[18px] whitespace-nowrap px-4 min-w-[100px]"
                   style={{
                     background: '#15a36e',
                     color: '#ffffff',
@@ -235,7 +235,7 @@ export default function Footer() {
             </div>
             <form className="space-y-2">
               <div
-                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[240px] md:max-w-[280px] lg:max-w-[300px]"
+                className="flex items-center overflow-hidden w-full max-w-full sm:max-w-[300px] md:max-w-[320px] lg:max-w-[360px]"
                 style={{
                   height: '36px',
                   background: '#ffffff',
@@ -258,7 +258,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[18px] whitespace-nowrap px-4"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[18px] whitespace-nowrap px-4 min-w-[100px]"
                   style={{
                     background: '#15a36e',
                     color: '#ffffff',

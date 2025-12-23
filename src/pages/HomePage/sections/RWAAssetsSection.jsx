@@ -39,7 +39,7 @@ const TokenizeAssetsSection = () => {
     <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
       <div className="w-full mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16" style={{ maxWidth: '100%' }}>
         {/* Header Section */}
-        <div className="text-left mb-6 sm:mb-8 md:mb-10 lg:mb-12">
+        <div className="text-left mb-6 sm:mb-8 md:mb-10">
           <div className="relative w-fit mb-3 sm:mb-4 md:mb-5">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
               <span className="text-[#15a36e]">TOKENIZE</span>
