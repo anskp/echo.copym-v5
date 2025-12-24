@@ -9,9 +9,9 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
         {/* Desktop Layout */}
-        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-5 gap-y-10 gap-x-8 lg:gap-x-12 items-start">
+        <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr_1.8fr] gap-y-10 gap-x-8 lg:gap-x-12 items-start">
           {/* Left Side - Logo, Description */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1 sm:mb-1.5">
@@ -31,9 +31,12 @@ export default function Footer() {
 
           {/* Product Links */}
           <div className="flex flex-col lg:ml-0 mt-5">
-            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block pr-4 sm:pr-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              PRODUCT
-            </h3>
+            <div className="relative w-fit mb-1.5 sm:mb-1.5">
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                PRODUCT
+              </h3>
+              <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+            </div>
             <ul className="space-y-0.5 sm:space-y-2">
               {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
                 <li key={item}>
@@ -50,9 +53,12 @@ export default function Footer() {
 
           {/* Company Links */}
           <div className="flex flex-col lg:ml-0 mt-5">
-            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              COMPANY
-            </h3>
+            <div className="relative w-fit mb-1.5 sm:mb-1.5">
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                COMPANY
+              </h3>
+              <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+            </div>
             <ul className="space-y-0.5 sm:space-y-2">
               {['About', 'Careers', 'Press', 'Blog', 'Contact'].map((item) => (
                 <li key={item}>
@@ -69,9 +75,12 @@ export default function Footer() {
 
           {/* Support Links */}
           <div className="flex flex-col lg:ml-0 mt-5">
-            <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5 inline-block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              SUPPORT
-            </h3>
+            <div className="relative w-fit mb-1.5 sm:mb-1.5">
+              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                SUPPORT
+              </h3>
+              <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+            </div>
             <ul className="space-y-0.5 sm:space-y-2">
               {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
                 <li key={item}>
@@ -89,9 +98,12 @@ export default function Footer() {
           {/* Newsletter Section - Right side */}
           <div className="flex flex-col space-y-2 sm:space-y-2.5 md:space-y-3 mt-5 md:col-span-2 lg:col-span-1">
             <div>
-              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                JOIN OUR NEW LETTER
-              </h3>
+              <div className="relative w-fit mb-1.5 sm:mb-1.5">
+                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  JOIN OUR NEWS LETTER
+                </h3>
+                <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+              </div>
               <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 To know more subscribe to our newsletter
               </p>
@@ -165,9 +177,12 @@ export default function Footer() {
           <div className="grid grid-cols-3 gap-4 sm:gap-8">
             {/* Product Links */}
             <div>
-              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                PRODUCT
-              </h3>
+              <div className="relative w-fit mb-1.5 sm:mb-1.5">
+                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  PRODUCT
+                </h3>
+                <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+              </div>
               <ul className="space-y-0.5 sm:space-y-1">
                 {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
                   <li key={item}>
@@ -184,9 +199,12 @@ export default function Footer() {
 
             {/* Company Links */}
             <div>
-              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                COMPANY
-              </h3>
+              <div className="relative w-fit mb-1.5 sm:mb-1.5">
+                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  COMPANY
+                </h3>
+                <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+              </div>
               <ul className="space-y-0.5 sm:space-y-1">
                 {['About', 'Careers', 'Press', 'Blog', 'Contact'].map((item) => (
                   <li key={item}>
@@ -203,9 +221,12 @@ export default function Footer() {
 
             {/* Support Links */}
             <div>
-              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e] mb-1.5 sm:mb-1.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                SUPPORT
-              </h3>
+              <div className="relative w-fit mb-1.5 sm:mb-1.5">
+                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  SUPPORT
+                </h3>
+                <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+              </div>
               <ul className="space-y-0.5 sm:space-y-1">
                 {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
                   <li key={item}>
@@ -226,9 +247,12 @@ export default function Footer() {
         <div className="md:hidden mt-6 sm:mt-8">
           <div className="flex flex-col space-y-2 sm:space-y-2.5">
             <div>
-              <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1 border-b border-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                JOIN OUR NEW LETTER
-              </h3>
+              <div className="relative w-fit mb-1.5 sm:mb-1.5">
+                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  JOIN OUR NEWS LETTER
+                </h3>
+                <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
+              </div>
               <p className="mt-2 sm:mt-2.5 text-sm sm:text-base text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 To know more subscribe to our newsletter
               </p>
@@ -283,7 +307,7 @@ export default function Footer() {
 
       {/* Large COPYM Background Image */}
       <div
-        className="relative z-10 w-full overflow-hidden bg-black bg-[url('/assets/Images/team/footercopym.png')] bg-no-repeat bg-bottom bg-contain sm:bg-cover h-[120px] sm:h-[300px] md:h-[400px]"
+        className="relative z-10 w-full overflow-hidden bg-black bg-[url('/assets/Images/team/footercopym.png')] bg-no-repeat bg-bottom bg-cover sm:bg-contain h-[180px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]"
       >
       </div>
     </footer>
