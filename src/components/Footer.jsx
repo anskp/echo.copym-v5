@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black" />
       </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-8 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-3 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr_1.8fr] gap-y-10 gap-x-8 lg:gap-x-12 items-start">
           {/* Left Side - Logo, Description */}
@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
 
         {/* Mobile Layout */}
-        <div className="md:hidden space-y-4 mt-8">
+        <div className="md:hidden space-y-4 mt-2">
           {/* Logo and Tagline */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1 sm:mb-1.5">

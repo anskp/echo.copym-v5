@@ -139,8 +139,8 @@ export default function Header() {
       {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
       <motion.nav
         className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled
-            ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-16'
-            : 'bg-[#15a36e] shadow-md h-14 sm:h-16 md:h-18 lg:h-20'
+          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-16'
+          : 'bg-[#15a36e] shadow-md h-14 sm:h-16 md:h-18 lg:h-20'
           }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -287,12 +287,12 @@ export default function Header() {
               className="absolute inset-0 bg-black/60 backdrop-blur-sm"
               onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(null); }}
             />
-            {/* Slide-out Panel */}
+            {/* Slide-out Panel - Now from Right */}
             <motion.div
-              className="absolute top-0 left-0 w-[93vw] xs:w-[88vw] sm:w-[375px] md:w-[440px] max-w-md h-full bg-[#15a36e] rounded-r-2xl shadow-2xl overflow-y-auto border-r-2 border-white/10"
-              initial={{ x: -400, opacity: 0 }}
+              className="absolute top-0 right-0 w-[93vw] xs:w-[88vw] sm:w-[375px] md:w-[440px] max-w-md h-full bg-[#15a36e] rounded-l-2xl shadow-2xl overflow-y-auto border-l-2 border-white/10"
+              initial={{ x: 400, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
-              exit={{ x: -400, opacity: 0 }}
+              exit={{ x: 400, opacity: 0 }}
               transition={{ duration: 0.29, ease: "easeOut" }}
               style={{
                 maxWidth: 440,
