@@ -42,21 +42,21 @@ const testimonials = [
 /** Helper component rendering a single testimonial card */
 function TestimonialCard({ testimonial }) {
   return (
-    <motion.div 
+    <motion.div
       className="relative flex-shrink-0 overflow-hidden w-[240px] h-[260px] sm:w-[260px] sm:h-[280px] md:w-[280px] md:h-[300px]"
       whileHover={{ scale: 1.02, y: -2 }}
       transition={{ duration: 0.2 }}
     >
       {/* Background Rectangle */}
-      <div 
+      <div
         className="absolute inset-0 bg-white rounded-[28px]"
         style={{
           border: '1px solid #ECECEC'
         }}
       ></div>
-      
+
       {/* Radial Gradient Ellipse - Positioned at right bottom corner within card */}
-      <div 
+      <div
         className="absolute overflow-hidden"
         style={{
           bottom: '0',
@@ -67,9 +67,9 @@ function TestimonialCard({ testimonial }) {
           borderRadius: '0 0 28px 0'
         }}
       ></div>
-      
+
       {/* Header Section - Profile Picture and Name/Title/Company */}
-      <div 
+      <div
         className="absolute flex items-start gap-3"
         style={{
           top: '20px',
@@ -79,7 +79,7 @@ function TestimonialCard({ testimonial }) {
         }}
       >
         {/* Profile Image */}
-        <div 
+        <div
           className="flex-shrink-0 rounded-full overflow-hidden w-12 h-12 sm:w-14 sm:h-14"
           style={{
             width: '56px',
@@ -97,11 +97,11 @@ function TestimonialCard({ testimonial }) {
             }}
           />
         </div>
-        
+
         {/* Name, Title, Company - Left Aligned */}
         <div className="flex-1 flex flex-col items-start">
           {/* Name */}
-          <h4 
+          <h4
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontWeight: 700,
@@ -115,9 +115,9 @@ function TestimonialCard({ testimonial }) {
           >
             {testimonial.name}
           </h4>
-          
+
           {/* Title */}
-          <p 
+          <p
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: 'clamp(12px, 1.5vw, 14px)',
@@ -130,9 +130,9 @@ function TestimonialCard({ testimonial }) {
           >
             {testimonial.title}
           </p>
-          
+
           {/* Company */}
-          <p 
+          <p
             style={{
               fontFamily: 'DM Sans, sans-serif',
               fontSize: 'clamp(12px, 1.5vw, 14px)',
@@ -146,9 +146,9 @@ function TestimonialCard({ testimonial }) {
           </p>
         </div>
       </div>
-      
+
       {/* Quote Text - Below Header */}
-      <div 
+      <div
         className="absolute"
         style={{
           top: '100px',
@@ -158,7 +158,7 @@ function TestimonialCard({ testimonial }) {
           paddingRight: '8px'
         }}
       >
-        <p 
+        <p
           style={{
             fontFamily: 'DM Sans, sans-serif',
             fontSize: 'clamp(13px, 1.6vw, 16px)',
@@ -186,7 +186,7 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
     ...items,
     ...items,
   ];
-  
+
   return (
     <div className="overflow-hidden py-4">
       <motion.div
@@ -225,7 +225,7 @@ export default function TestimonialsSection() {
           </p>
         </div>
       </div>
-      
+
       {/* Infinite Scrolling Testimonials */}
       <InfiniteScrollingRow items={testimonials} duration={50} />
     </section>

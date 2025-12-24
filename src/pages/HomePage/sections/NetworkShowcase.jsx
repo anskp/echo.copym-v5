@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function NetworkShowcase() {
   return (
-    <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="w-full py-10 sm:py-16 md:py-20 lg:py-20">
       <div className="max-w-6xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-        <div className="bg-black rounded-md overflow-hidden shadow-2xl">
+        <div className="bg-black rounded-md overflow-hidden shadow-xl">
           <video
             autoPlay
             loop

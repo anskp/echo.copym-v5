@@ -77,13 +77,13 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Right */}
-            <div className="w-full text-left">
+            <div className="w-full text-center lg:text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Own a piece of big Investment
               </h3>
               <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Ever thought real estate, gold, or fine art was only for the rich? Not anymore.<br />
-                Start with small amounts and own a piece of high-value assets you actually<br />
+                Ever thought real estate, gold, or fine art was only for the rich? Not anymore.
+                Start with small amounts and own a piece of high-value assets you actually
                 care about.
               </p>
             </div>
@@ -117,13 +117,13 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Left */}
-            <div className="w-full text-left">
+            <div className="w-full text-center lg:text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Trade anytime, anywhere
               </h3>
               <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Want out? Sell instantly. Want in? Buy in seconds. With your<br />
-                built-in wallet, you can manage and trade smoothly—just like<br />
+                Want out? Sell instantly. Want in? Buy in seconds. With your
+                built-in wallet, you can manage and trade smoothly—just like
                 sending money to a friend.
               </p>
             </div>
@@ -157,13 +157,13 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Right */}
-            <div className="w-full text-left">
+            <div className="w-full text-center lg:text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Earn without a hassle
               </h3>
               <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Sit back and let the experts (and AI) do the heavy lifting. Your money works for<br />
-                you, bringing in steady returns–without the stress of paperwork or<br />
+                Sit back and let the experts (and AI) do the heavy lifting. Your money works for
+                you, bringing in steady returns–without the stress of paperwork or
                 management.
               </p>
             </div>
@@ -197,13 +197,13 @@ const FeatureSection = () => {
             </div>
 
             {/* Content - Left */}
-            <div className="w-full text-left">
+            <div className="w-full text-center lg:text-left">
               <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Explore a world of assets
               </h3>
               <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                From property and gold to private equity and art—our AI picks out<br />
-                smart opportunities so you don't have to dig through endless<br />
+                From property and gold to private equity and art—our AI picks out
+                smart opportunities so you don't have to dig through endless
                 research.
               </p>
             </div>

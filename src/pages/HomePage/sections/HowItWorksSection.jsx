@@ -38,7 +38,7 @@ const HowItWorksSection = () => {
         </motion.div>
 
         {/* Container for stacked Lotties - same position */}
-        <div ref={containerRef} className="relative min-h-[400px] sm:min-h-[500px] md:min-h-[600px]">
+        <div ref={containerRef} className="relative min-h-[160px] sm:min-h-[500px] md:min-h-[600px]">
           {/* Asset Owners Workflow - First (base layer) */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -81,7 +81,7 @@ const HowItWorksSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex justify-center mt-8 sm:mt-10 md:mt-12"
+          className="flex justify-center mt-5 sm:mt-10 md:mt-12"
         >
           <button className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             See workflow details

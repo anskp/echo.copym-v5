@@ -17,12 +17,12 @@ export default function AIInvestingSection() {
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-6 sm:mb-8 tracking-wide mt-3 sm:mt-4 whitespace-nowrap" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-6 sm:mb-8 tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
             From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
           </p>
 
           {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+          <div className="flex flex-col sm:flex-row items-center justify-start gap-4 sm:gap-6">
             <Link
               to="/CopymAI"
               className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
@@ -35,24 +35,8 @@ export default function AIInvestingSection() {
 
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
         <div className="flex flex-col lg:hidden items-center text-left space-y-8 sm:space-y-10 md:space-y-12 overflow-visible">
-
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed mb-8 sm:mb-12 tracking-wide max-w-4xl" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
-          </p>
-
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Link
-              to="/CopymAI"
-              className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              Explore Cora-AI
-            </Link>
-          </div>
-
           {/* Mobile Image with Text Containers */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-12 sm:mt-16 md:mt-20 lg:mt-[100px] items-center overflow-visible">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
             <div className="relative z-20">
               <img
                 src="/assets/Images/Ai-fon-view.png"
@@ -80,7 +64,7 @@ export default function AIInvestingSection() {
                       backgroundColor: 'rgba(225, 225, 225, 0.9)'
                     }}
                   >
-                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left">
+                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       <span className="text-[#15a36e] font-semibold">Cora AI</span>
                       <span className="text-black"> is an AI technology designed by CopyM to make better investments</span>
                     </p>
@@ -108,7 +92,7 @@ export default function AIInvestingSection() {
                       backgroundColor: 'rgba(225, 225, 225, 0.9)'
                     }}
                   >
-                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
                     </p>
                   </div>
@@ -160,7 +144,7 @@ export default function AIInvestingSection() {
                         backgroundColor: 'rgba(225, 225, 225, 0.9)'
                       }}
                     >
-                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         <span className="text-[#15a36e]">Cora AI</span> <span className="text-black">is a AI technology designed by CopyM to make better investments</span>
                       </p>
                     </div>
@@ -187,7 +171,7 @@ export default function AIInvestingSection() {
                         backgroundColor: 'rgba(225, 225, 225, 0.9)'
                       }}
                     >
-                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin' }}>
+                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
                       </p>
                     </div>

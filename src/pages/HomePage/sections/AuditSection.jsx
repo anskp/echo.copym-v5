@@ -8,7 +8,7 @@ export default function AuditSection() {
       <div className="absolute inset-0 opacity-10 overflow-visible">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
-      
+
       <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-0 sm:pb-6 md:pb-8 lg:pb-10">
         <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
           {/* Section Header */}
@@ -21,18 +21,18 @@ export default function AuditSection() {
               <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
             </div>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
+              Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
             </p>
           </div>
         </div>
 
         {/* Logo and Icons Image - Full Width */}
-        <div className="w-full flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 overflow-hidden -mt-4 sm:-mt-6 md:-mt-8 lg:-mt-10">
+        <div className="w-full flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 overflow-hidden mt-6 sm:mt-8 md:mt-10">
           <img
             src={logoAndIcons}
             alt="Secure & Audited - Blockchain Networks"
             className="w-full h-auto object-contain"
-            style={{ 
+            style={{
               maxHeight: '600px',
               objectFit: 'contain',
               width: '100vw'

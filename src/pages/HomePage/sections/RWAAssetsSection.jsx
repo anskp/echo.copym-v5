@@ -62,13 +62,13 @@ const TokenizeAssetsSection = () => {
               >
                 {/* Asset Card */}
                 <div
-                  className="rounded-lg p-4 sm:p-5 flex flex-col h-full min-h-[450px] sm:min-h-[480px]"
+                  className="rounded-lg p-3 sm:p-5 flex flex-col h-full min-h-[380px] sm:min-h-[480px]"
                   style={{
                     background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
                   }}
                 >
                   {/* Asset Image - Top, Centered - Fixed Height */}
-                  <div className="flex items-center justify-center mb-4 sm:mb-5 h-[180px] sm:h-[200px] md:h-[220px]">
+                  <div className="flex items-center justify-center mb-3 sm:mb-5 h-[120px] sm:h-[200px] md:h-[220px]">
                     <img
                       src={asset?.image}
                       alt={asset?.title}
@@ -80,7 +80,7 @@ const TokenizeAssetsSection = () => {
                   <div className="flex flex-col flex-grow text-left space-y-3">
                     {/* Title - Fixed Height */}
                     <h3
-                      className="text-lg sm:text-xl font-bold text-black min-h-[28px] sm:min-h-[32px]"
+                      className="text-base sm:text-xl font-bold text-black min-h-[24px] sm:min-h-[32px]"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
                       {asset?.title}
@@ -88,7 +88,7 @@ const TokenizeAssetsSection = () => {
 
                     {/* Description - Fixed Height */}
                     <p
-                      className="text-sm sm:text-base text-black leading-relaxed flex-grow min-h-[60px] sm:min-h-[72px]"
+                      className="text-[12px] sm:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[72px]"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
                       {asset?.description}
@@ -107,7 +107,7 @@ const TokenizeAssetsSection = () => {
                           backgroundColor: 'rgba(84, 178, 143, 1)'
                         }}
                       >
-                        <div className="text-sm sm:text-base font-semibold text-center space-y-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        <div className="text-[12px] sm:text-base font-semibold text-center space-y-0.5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                           <div>
                             <span className="text-black">76%</span> <span className="text-white">ROI in returns</span>
                           </div>

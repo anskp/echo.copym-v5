@@ -193,11 +193,11 @@ const WhoWeServe = () => {
             </div>
 
             {/* Image on Right */}
-            <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-center lg:justify-end h-full min-h-[120px] lg:min-h-[140px] relative">
+            <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-end h-full min-h-[120px] lg:min-h-[140px] relative">
               <img
                 src={investorsImage}
                 alt="Investors"
-                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-110 lg:scale-125"
+                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
                 style={{
                   right: 0,
                   top: 0,
@@ -207,13 +207,17 @@ const WhoWeServe = () => {
           </div>
 
           {/* Bottom-Right Card - Partners */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
             {/* Image on Left */}
-            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 ">
+            <div className="w-full lg:w-1/2 flex items-center justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 ">
               <img
                 src={partnersImage}
                 alt="Partners"
-                className="w-full h-full max-h-[200px] lg:max-h-[240px] object-contain transform scale-110 lg:scale-135 translate-y-3 lg:translate-y-8 lg:-translate-x-3"
+                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
+                style={{
+                  right: 0,
+                  top: 0,
+                }}
               />
             </div>
 
