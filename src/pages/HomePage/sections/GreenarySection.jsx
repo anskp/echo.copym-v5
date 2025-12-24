@@ -10,7 +10,7 @@ export const GreenarySection = () => {
           <img
             src="/assets/Images/ctasection.png"
             alt="CTA Section"
-            className="w-full h-auto object-contain transform scale-125 sm:scale-135 md:scale-140 lg:scale-150 -translate-y-8 sm:-translate-y-12 md:-translate-y-16 lg:-translate-y-20 xl:-translate-y-24"
+            className="w-full h-auto object-contain transform scale-125 sm:scale-135 md:scale-140 lg:scale-100 -translate-y-8 sm:-translate-y-12 md:-translate-y-16 lg:translate-y-0"
           />
 
           {/* Overlay Content */}

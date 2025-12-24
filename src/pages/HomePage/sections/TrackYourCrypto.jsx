@@ -51,23 +51,21 @@ export default function TrackYourCrypto() {
           {/* Download Grid - Buttons Left, Scanner Right */}
           <div className="flex flex-row items-center justify-start gap-4 sm:gap-6 w-full pt-1 text-left">
             {/* App Store Buttons - Left Grid */}
-            <div className="flex flex-col gap-2 flex-1 max-w-[160px] sm:max-w-none">
-              <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-2 px-3 py-2 rounded-xl border border-gray-300 text-[10px] sm:text-xs transition-all duration-300 w-full sm:w-36 h-9 sm:h-10">
-                <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-4 h-4 brightness-0 invert" />
-                <div className="text-left">
-                  <div className="text-[8px] text-white opacity-80 leading-tight">Download on the</div>
-                  <div className="font-bold text-white leading-tight">App Store</div>
-                </div>
-              </button>
-              <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-2 px-3 py-2 rounded-xl border border-gray-300 text-[10px] sm:text-xs transition-all duration-300 w-full sm:w-36 h-9 sm:h-10">
-                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                </svg>
-                <div className="text-left">
-                  <div className="text-[8px] text-white opacity-80 leading-tight">GET IT ON</div>
-                  <div className="font-bold text-white leading-tight">Google Play</div>
-                </div>
-              </button>
+            <div className="flex flex-col gap-2 flex-1 max-w-[140px] sm:max-w-none">
+              <a href="#" className="transform transition-transform hover:scale-105">
+                <img
+                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1314619200&h=791e2b6d762e153f582f3c7e7f6d4d5e"
+                  alt="Download on the App Store"
+                  className="w-full h-auto max-w-[135px] sm:max-w-[160px]"
+                />
+              </a>
+              <a href="#" className="transform transition-transform hover:scale-105">
+                <img
+                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                  alt="Get it on Google Play"
+                  className="w-full h-auto max-w-[190px] sm:max-w-[220px] -ml-2"
+                />
+              </a>
             </div>
 
             {/* QR Code - Right Grid */}
@@ -118,35 +116,33 @@ export default function TrackYourCrypto() {
             </div>
 
             {/* Action Buttons */}
-            <div className="space-y-2">
-              {/* Download Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
-                {/* Download Buttons */}
-                <div className="flex flex-col sm:flex-col gap-2 w-full sm:w-auto">
-                  <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-2 px-5 py-2.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 w-full sm:w-44 h-11 border border-gray-300 text-sm">
-                    <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-5 h-5 brightness-0 invert" />
-                    <div className="text-left">
-                      <div className="text-xs text-white font-medium leading-snug">Download on the</div>
-                      <div className="font-bold text-white text-sm leading-snug">App Store</div>
-                    </div>
-                  </button>
-                  <button className="bg-black hover:bg-gray-800 text-white flex items-center justify-center space-x-2 px-5 py-2.5 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 w-full sm:w-44 h-11 border border-gray-300 text-sm">
-                    <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z" />
-                    </svg>
-                    <div className="text-left">
-                      <div className="text-xs text-white font-medium leading-snug">GET IT ON</div>
-                      <div className="font-bold text-white text-sm leading-snug">Google Play</div>
-                    </div>
-                  </button>
+            <div className="space-y-4">
+              {/* Download Buttons Area */}
+              <div className="flex flex-row items-center justify-start gap-6">
+                {/* Download Buttons Stack */}
+                <div className="flex flex-col gap-3">
+                  <a href="#" className="transform transition-transform hover:scale-105">
+                    <img
+                      src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1314619200&h=791e2b6d762e153f582f3c7e7f6d4d5e"
+                      alt="Download on the App Store"
+                      className="w-[180px] h-auto"
+                    />
+                  </a>
+                  <a href="#" className="transform transition-transform hover:scale-105">
+                    <img
+                      src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                      alt="Get it on Google Play"
+                      className="w-[240px] h-auto -ml-4"
+                    />
+                  </a>
                 </div>
 
                 {/* QR Code */}
-                <div className="flex-shrink-0 p-5 rounded-lg shadow-md">
+                <div className="flex-shrink-0">
                   <img
                     src={qrcode}
                     alt="QR Code"
-                    className="w-36 h-36 sm:w-[180px] sm:h-[180px] text-black"
+                    className="w-32 h-32 xl:w-40 xl:h-40"
                   />
                 </div>
               </div>

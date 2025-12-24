@@ -62,13 +62,13 @@ const TokenizeAssetsSection = () => {
               >
                 {/* Asset Card */}
                 <div
-                  className="rounded-lg p-3 sm:p-5 flex flex-col h-full min-h-[380px] sm:min-h-[480px]"
+                  className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[380px] sm:min-h-[450px] lg:min-h-[480px]"
                   style={{
                     background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
                   }}
                 >
                   {/* Asset Image - Top, Centered - Fixed Height */}
-                  <div className="flex items-center justify-center mb-3 sm:mb-5 h-[120px] sm:h-[200px] md:h-[220px]">
+                  <div className="flex items-center justify-center mb-3 sm:mb-4 lg:mb-5 h-[120px] sm:h-[180px] md:h-[200px] lg:h-[220px]">
                     <img
                       src={asset?.image}
                       alt={asset?.title}
@@ -80,7 +80,7 @@ const TokenizeAssetsSection = () => {
                   <div className="flex flex-col flex-grow text-left space-y-3">
                     {/* Title - Fixed Height */}
                     <h3
-                      className="text-base sm:text-xl font-bold text-black min-h-[24px] sm:min-h-[32px]"
+                      className="text-base sm:text-lg lg:text-xl font-bold text-black min-h-[24px] sm:min-h-[28px] lg:min-h-[32px]"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
                       {asset?.title}
@@ -88,7 +88,7 @@ const TokenizeAssetsSection = () => {
 
                     {/* Description - Fixed Height */}
                     <p
-                      className="text-[12px] sm:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[72px]"
+                      className="text-[12px] sm:text-sm lg:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[60px] lg:min-h-[72px]"
                       style={{ fontFamily: 'DM Sans, sans-serif' }}
                     >
                       {asset?.description}
