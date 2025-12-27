@@ -308,8 +308,8 @@ export default function Header() {
                   <img
                     src="/assets/copym/png/Copym-02-1.png"
                     alt="CopyM Logo"
-                    className="h-8 w-auto object-contain"
-                    style={{ maxWidth: 100 }}
+                    className="h-10 w-auto object-contain"
+                    style={{ maxWidth: 140 }}
                   />
                 </Link>
                 <button
