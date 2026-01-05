@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const SectionHeader = ({ 
-  title, 
-  subtitle, 
-  highlightWords = [], 
-  underline = true, 
+const SectionHeader = ({
+  title,
+  subtitle,
+  highlightWords = [],
+  underline = true,
   alignment = 'left',
   className = ''
 }) => {
@@ -16,7 +16,8 @@ const SectionHeader = ({
 
     const words = title.split(/(\s+)/);
     return words.map((word, index) => {
-      const cleanWord = word.trim().toUpperCase();
+      // Strip punctuation for matching (e.g., "EARN," becomes "EARN")
+      const cleanWord = word.trim().replace(/[.,!?;:]/g, "").toUpperCase();
       if (highlightWords.includes(cleanWord)) {
         return (
           <span key={index} className="text-[#15a36e]">
@@ -41,15 +42,15 @@ const SectionHeader = ({
       `}
     >
       <div className={`relative w-fit ${alignment === 'center' ? 'mx-auto' : ''}`}>
-        <h2 
-          className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
+        <h2
+          className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1 text-black"
           style={{ fontFamily: 'Palanquin, sans-serif' }}
         >
           {getTitleWithHighlights(title)}
         </h2>
         {underline && (
           <div
-            className={`absolute bottom-0 ${alignment === 'center' ? 'left-1/2 -translate-x-1/2 md:left-0 md:translate-x-0' : 'left-0'} bg-black`}
+            className={`absolute bottom-0 ${alignment === 'center' ? 'left-1/2 -translate-x-1/2' : 'left-0'} bg-black`}
             style={{
               width: alignment === 'center' ? 'calc(100% + 40px)' : 'calc(100% + 160px)',
               height: '0.5px'

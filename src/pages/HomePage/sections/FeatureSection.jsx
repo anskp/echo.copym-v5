@@ -15,7 +15,7 @@ const FeatureSection = () => {
       <SectionHeader
         title="OWN, EARN, EXPLORE, TRADE"
         highlightWords={['EARN', 'TRADE']}
-        alignment="center"
+        alignment="left"
       />
 
       {/* Vertical Stack of 4 Sections */}

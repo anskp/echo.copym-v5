@@ -1,121 +1,57 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import SectionContainer from '../../../components/Layout/SectionContainer';
-import SectionHeader from '../../../components/Layout/SectionHeader';
 import assetsImage from '../../../components/images/assets.png';
 import investorsImage from '../../../components/images/investors.png';
 import partnersImage from '../../../components/images/partners.png';
 
 const WhoWeServe = () => {
   return (
-    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white">
-      {/* Header Section */}
-      <SectionHeader
-        title="WHO WE SERVE"
-        highlightWords={['SERVE']}
-        subtitle="Built for the next generation of asset markets"
-        alignment="left"
-      />
-
-      {/* 3-Card Grid Layout */}
-      {/* Keep all horizontal gaps (left/right gutter, between 2-right cards, and main column gap) equal */}
-      <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-4 sm:gap-6 lg:gap-x-6 lg:gap-y-6">
-        {/* Left Card - Large (tall + wide) - Asset Owners & Institutions */}
-        <div className="lg:col-span-3 lg:row-span-2 bg-black px-4 sm:px-6 lg:px-6 py-6 sm:py-8 lg:py-8 border border-gray-800 flex flex-col">
-          {/* Large Image - Dominant Visual */}
-          <div className="mb-6 sm:mb-8 lg:mb-10 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px]">
-            <img
-              src={assetsImage}
-              alt="Asset Owners & Institutions"
-              className="w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
-            />
+    <section className="relative w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-left mb-6 sm:mb-8 md:mb-10"
+        >
+          <div className="relative w-fit">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-black">WHO WE </span>
+              <span className="text-[#15a36e]">SERVE</span>
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            Built for the next generation of asset markets
+          </p>
+        </motion.div>
 
-          {/* Title */}
-          <motion.h3
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-3 lg:mb-4 whitespace-nowrap"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
-          >
-            Asset Owners & Institutions
-          </motion.h3>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            viewport={{ once: true }}
-            className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-4 lg:mb-5 whitespace-nowrap"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
-          >
-            Launch tokenized products with institutional-grade compliance.
-          </motion.p>
-
-          {/* Bullet Points */}
-          <motion.ul
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="space-y-2 sm:space-y-2.5 mb-6 lg:mb-6"
-          >
-            <li className="flex items-start">
-              <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-              <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Real estate, private credit, funds, commodities
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-              <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                White-label portals for your investors
-              </span>
-            </li>
-            <li className="flex items-start">
-              <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-              <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Ongoing reporting and secondary liquidity options
-              </span>
-            </li>
-          </motion.ul>
-
-          {/* Learn More Button */}
-          <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
-              Learn More
-            </span>
-            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
-              <svg
-                className="w-4 h-4 sm:w-5 sm:h-5 text-black"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                strokeWidth="2.5"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-              </svg>
+        {/* 3-Card Grid Layout */}
+        {/* Keep all horizontal gaps (left/right gutter, between 2-right cards, and main column gap) equal */}
+        <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-3 sm:gap-4 lg:gap-x-4 lg:gap-y-4">
+          {/* Left Card - Large (tall + wide) - Asset Owners & Institutions */}
+          <div className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col">
+            {/* Large Image - Dominant Visual */}
+            <div className="mb-4 sm:mb-5 lg:mb-6 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px] -mt-2 sm:-mt-3 lg:-mt-4">
+              <img
+                src={assetsImage}
+                alt="Asset Owners & Institutions"
+                className="w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
+              />
             </div>
-          </button>
-        </div>
 
-        {/* Top-Right Card - Investors */}
-        <div className="lg:col-span-4 lg:row-span-1 bg-black px-4 sm:px-6 lg:px-6 py-5 sm:py-6 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-6 h-full overflow-hidden">
-          {/* Content on Left */}
-          <div className="flex-1 lg:max-w-[40%] flex flex-col justify-center">
             {/* Title */}
             <motion.h3
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2.5 lg:mb-3 whitespace-nowrap"
+              className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
-              Investors
+              Asset Owners & Institutions
             </motion.h3>
 
             {/* Description */}
@@ -124,10 +60,10 @@ const WhoWeServe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-4"
+              className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-nowrap"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
-              Access curated RWA opportunities worldwide.
+              Launch tokenized products with institutional-grade compliance.
             </motion.p>
 
             {/* Bullet Points */}
@@ -136,24 +72,24 @@ const WhoWeServe = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
               viewport={{ once: true }}
-              className="space-y-1.5 sm:space-y-2 mb-6 lg:mb-6"
+              className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4"
             >
               <li className="flex items-start">
                 <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
                 <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Fractional tickets
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                <span className="text-xs sm:text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Zero-gas trades & instant settlement
+                  Real estate, private credit, funds, commodities
                 </span>
               </li>
               <li className="flex items-start">
                 <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
                 <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Portfolio dashboards and automated income reinvestment
+                  White-label portals for your investors
+                </span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  Ongoing reporting and secondary liquidity options
                 </span>
               </li>
             </motion.ul>
@@ -177,110 +113,186 @@ const WhoWeServe = () => {
             </button>
           </div>
 
-          {/* Image on Right */}
-          <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-end h-full min-h-[120px] lg:min-h-[140px] relative">
-            <img
-              src={investorsImage}
-              alt="Investors"
-              className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
-              style={{
-                right: 0,
-                top: 0,
-              }}
-            />
+          {/* Top-Right Card - Investors */}
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-3 sm:py-4 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 h-full overflow-hidden">
+            {/* Content on Left */}
+            <div className="flex-1 lg:max-w-[40%] flex flex-col justify-center">
+              {/* Title */}
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-1.5 lg:mb-1.5 whitespace-nowrap"
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
+              >
+                Investors
+              </motion.h3>
+
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2"
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
+              >
+                Access curated RWA opportunities worldwide.
+              </motion.p>
+
+              {/* Bullet Points */}
+              <motion.ul
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-1 sm:space-y-1 mb-4 lg:mb-4"
+              >
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Fractional tickets
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Zero-gas trades & instant settlement
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Portfolio dashboards and automated income reinvestment
+                  </span>
+                </li>
+              </motion.ul>
+
+              {/* Learn More Button */}
+              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
+                  Learn More
+                </span>
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2.5"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </button>
+            </div>
+
+            {/* Image on Right */}
+            <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-end h-full min-h-[120px] lg:min-h-[140px] relative">
+              <img
+                src={investorsImage}
+                alt="Investors"
+                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
+                style={{
+                  right: 0,
+                  top: 0,
+                }}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Bottom-Right Card - Partners */}
-        <div className="lg:col-span-4 lg:row-span-1 bg-black px-4 sm:px-6 lg:px-6 py-6 sm:py-8 lg:py-8 border border-gray-800 flex flex-col-reverse lg:flex-row items-center gap-4 lg:gap-6 h-full overflow-hidden">
-          {/* Image on Left */}
-          <div className="w-full lg:w-1/2 flex items-center justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 ">
-            <img
-              src={partnersImage}
-              alt="Partners"
-              className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
-              style={{
-                right: 0,
-                top: 0,
-              }}
-            />
-          </div>
+          {/* Bottom-Right Card - Partners */}
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
+            {/* Image on Left */}
+            <div className="w-full lg:w-1/2 flex items-center justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 ">
+              <img
+                src={partnersImage}
+                alt="Partners"
+                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
+                style={{
+                  right: 0,
+                  top: 0,
+                }}
+              />
+            </div>
 
-          {/* Content on Right */}
-          <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center">
-            {/* Title */}
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-3 lg:mb-4 whitespace-nowrap"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
-            >
-              Partners
-            </motion.h3>
+            {/* Content on Right */}
+            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center">
+              {/* Title */}
+              <motion.h3
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap"
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
+              >
+                Partners
+              </motion.h3>
 
-            {/* Description */}
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-              className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-4 lg:mb-5"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
-            >
-              Connect custodians, oracles and ESG data to real assets on-chain.
-            </motion.p>
+              {/* Description */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5"
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
+              >
+                Connect custodians, oracles and ESG data to real assets on-chain.
+              </motion.p>
 
-            {/* Bullet Points */}
-            <motion.ul
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-2 sm:space-y-2.5 mb-6 lg:mb-6"
-            >
-              <li className="flex items-start">
-                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Custody integrations
+              {/* Bullet Points */}
+              <motion.ul
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-1.5 sm:space-y-2 mb-4 lg:mb-4"
+              >
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Custody integrations
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Compliance & data providers
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
+                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Node operators and ecosystem partners
+                  </span>
+                </li>
+              </motion.ul>
+
+              {/* Learn More Button */}
+              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
+                  Learn More
                 </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Compliance & data providers
-                </span>
-              </li>
-              <li className="flex items-start">
-                <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Node operators and ecosystem partners
-                </span>
-              </li>
-            </motion.ul>
-
-            {/* Learn More Button */}
-            <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
-                Learn More
-              </span>
-              <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 text-black"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2.5"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
-            </button>
+                <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-black"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2.5"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-    </SectionContainer>
+    </section>
   );
 };
 

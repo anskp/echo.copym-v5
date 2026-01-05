@@ -3,8 +3,8 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaNewspaper, FaFileAlt as FaReport } from 'react-icons/fa';
-import { HiCube, HiShieldCheck } from 'react-icons/hi';
+import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport } from 'react-icons/fa';
+import { HiCube } from 'react-icons/hi';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -103,8 +103,7 @@ export default function Header() {
           path: "/privacy-ai"
         }
       ]
-    },
-
+    }
   ];
 
   // Chevron icon for mobile dropdown open/close indicator
@@ -193,14 +192,7 @@ export default function Header() {
                             {/* Title */}
                             <div className="mb-6">
                               <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                {item.path === "/compliance" ? (
-                                  <>
-                                    <span className="text-[#15a36e]">COMPLIANCE</span>
-                                    <span className="text-black"> AND SECURITY</span>
-                                  </>
-                                ) : (
-                                  <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
-                                )}
+                                <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
                               </h3>
                               <div className="h-0.5 bg-black"></div>
                             </div>
@@ -215,7 +207,7 @@ export default function Header() {
                                 >
                                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
                                     <div className={
-                                      item.path === "/solutions" || item.path === "/compliance"
+                                      item.path === "/solutions"
                                         ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
                                         : 'text-white'
                                     }>

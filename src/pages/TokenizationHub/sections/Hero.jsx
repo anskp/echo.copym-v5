@@ -1,40 +1,37 @@
-import React from 'react';
+import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import tokenizationHero from '../../../components/images/tokenizationhero.png';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen flex items-center justify-start overflow-hidden">
+    <section className="relative overflow-hidden h-screen w-full">
       {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${tokenizationHero})` }}
-      >
-        {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 z-0">
+        <img
+          src={tokenizationHero}
+          alt="Tokenization Hero background"
+          className="w-full h-full object-cover"
+        />
+        {/* Dark Overlay for text readability */}
+        <div className="absolute inset-0 bg-black/25"></div>
       </div>
 
-      {/* Hero Content - Left Aligned */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 w-full py-8 sm:py-12 lg:py-16">
-
-        <div className="max-w-xl">
-          <div className="mb-3 sm:mb-4 lg:mb-5 text-left">
-            <h1 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white uppercase" style={{ fontFamily: 'Palanquin, sans-serif', letterSpacing: '0.025em' }}>
-              <span className="block mb-1 sm:mb-2">EXPLORE THE POSSIBILITIES OF</span>
-              <span className="text-[#15a36e] block">CROSSCHAIN INTELLIGENCE</span>
-            </h1>
-          </div>
-
-          {/* Description - Left Aligned */}
-          <p className="text-[10px] sm:text-[11px] md:text-xs lg:text-sm text-left font-normal text-white/90 leading-relaxed mb-5 sm:mb-6 lg:mb-8 max-w-md" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            <span className="block mb-2 sm:mb-3">Our AI Agent has shown 23% better accuracy in predicting asset appreciation vs top market tools.</span>
-            <span className="block">Experience the future of finance with CORA, the unified RWA tokenization AI platform.</span>
+      <div className="relative z-10 w-full h-full flex items-center justify-start px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="max-w-xl lg:max-w-2xl w-full text-left"
+        >
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <span className="text-white block mb-1">EXPLORE THE </span>
+            <span className="text-[#10b981] block">POSSIBILITIES</span>
+            <span className="text-white block mt-1">OF CROSSCHAIN INTELLIGENCE</span>
+          </h1>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            Our AI Agent has shown 23% better accuracy in predicting asset appreciation vs top market tools. Experience the future of finance with CORA.
           </p>
-
-          {/* CTA Buttons - Left Aligned */}
-
-
-        </div>
+        </motion.div>
       </div>
     </section>
   );
