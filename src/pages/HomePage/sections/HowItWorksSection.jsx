@@ -51,30 +51,6 @@ const HowItWorksSection = () => {
               How Copym works - for issuers and investors
             </p>
           </motion.div>
-
-          {/* Navigation Toggle */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="flex items-center gap-1 bg-[#f5f5f5] p-1 rounded-full w-fit self-start md:self-end border border-gray-200"
-          >
-            <button
-              onClick={() => scrollToSection('assets')}
-              className="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 bg-white text-black shadow-sm border border-gray-100 hover:scale-[1.02]"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              For Asset Owners
-            </button>
-            <button
-              onClick={() => scrollToSection('investors')}
-              className="px-5 py-2 rounded-full text-xs sm:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-black hover:bg-white/50"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              For Investors
-            </button>
-          </motion.div>
         </div>
 
         {/* Container for stacked Lotties - same position */}
@@ -90,7 +66,7 @@ const HowItWorksSection = () => {
             className="bg-black rounded-3xl p-6 sm:p-10 lg:p-14 w-full flex flex-col justify-center items-center shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-right from-transparent via-[#15a36e]/30 to-transparent"></div>
-            <h3 className="text-white/50 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>Asset Owners Workflow</h3>
+
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto">
               <Lottie
                 animationData={forAssetsOwnersAnimation}
@@ -111,7 +87,6 @@ const HowItWorksSection = () => {
             className="bg-black rounded-3xl p-6 sm:p-10 lg:p-14 w-full flex flex-col justify-center items-center shadow-2xl relative overflow-hidden"
           >
             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-right from-transparent via-[#15a36e]/30 to-transparent"></div>
-            <h3 className="text-white/50 text-xs sm:text-sm font-bold uppercase tracking-[0.2em] mb-6 sm:mb-8" style={{ fontFamily: 'DM Sans, sans-serif' }}>Investors Workflow</h3>
             <div className="w-full max-w-[90%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[75%] mx-auto">
               <Lottie
                 animationData={forInvestorsAnimation}

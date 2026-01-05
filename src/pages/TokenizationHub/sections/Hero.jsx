@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import tokenizationHero from '../../../components/images/tokenizationhero.png';
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Background Image */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url(/assets/Images/tokenization.png)' }}
+        style={{ backgroundImage: `url(${tokenizationHero})` }}
       >
         {/* Dark overlay for better text readability */}
         <div className="absolute inset-0 bg-black/50"></div>

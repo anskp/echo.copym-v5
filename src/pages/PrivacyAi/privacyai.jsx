@@ -2,47 +2,61 @@ import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import { FileKey, Lock, Cpu, Activity, ShieldCheck, Eye, Server, UserCheck, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import privacyaiHero from '../../components/images/privacyaihero.png';
 
 const PrivacyAi = () => {
     return (
         <Box className="min-h-screen bg-black text-white selection:bg-green-500 selection:text-white pt-20">
             {/* Hero Section */}
-            <Container maxWidth="xl" className="relative pb-24 pt-10">
-                <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={6}>
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <Typography variant="h6" className="text-sm md:text-base text-green-500 font-mono mb-4 tracking-wider uppercase">
-                                PRIVACY AI
-                            </Typography>
-                            <Typography variant="h2" className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                                Privacy AI is CopyM's intelligent privacy layer.
-                            </Typography>
-                            <Typography className="text-gray-400 text-base sm:text-lg leading-relaxed max-w-lg">
-                                It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
-                            </Typography>
-                        </motion.div>
+            <div className="relative w-full overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={privacyaiHero}
+                        alt="Privacy AI Hero"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+
+                <Container maxWidth="xl" className="relative z-10 pb-24 pt-10">
+                    <Grid container spacing={4} alignItems="center">
+                        <Grid item xs={12} md={6}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="text-left"
+                            >
+                                <Typography variant="h6" className="text-sm md:text-base text-[#10b981] font-bold mb-4 tracking-wider uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    PRIVACY AI
+                                </Typography>
+                                <Typography variant="h2" className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Privacy AI is CopyM's intelligent privacy layer.
+                                </Typography>
+                                <Typography className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
+                                </Typography>
+                            </motion.div>
+                        </Grid>
+                        <Grid item xs={12} md={6} className="relative">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                className="relative z-10 flex justify-center"
+                            >
+                                {/* 3D Shield Representation */}
+                                <div className="relative w-80 h-80 md:w-96 md:h-96 flex items-center justify-center">
+                                    <div className="absolute inset-0 bg-green-500/20 rounded-full blur-[80px]"></div>
+                                    <ShieldCheck size={300} className="text-green-500 relative z-10 drop-shadow-[0_0_50px_rgba(34,197,94,0.5)]" strokeWidth={1} />
+                                    <Lock size={100} className="absolute text-white z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg" />
+                                </div>
+                            </motion.div>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6} className="relative">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 0.2 }}
-                            className="relative z-10 flex justify-center"
-                        >
-                            {/* 3D Shield Representation */}
-                            <div className="relative w-80 h-80 md:w-96 md:h-96 flex items-center justify-center">
-                                <div className="absolute inset-0 bg-green-500/20 rounded-full blur-[80px]"></div>
-                                <ShieldCheck size={300} className="text-green-500 relative z-10 drop-shadow-[0_0_50px_rgba(34,197,94,0.5)]" strokeWidth={1} />
-                                <Lock size={100} className="absolute text-white z-20 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 drop-shadow-lg" />
-                            </div>
-                        </motion.div>
-                    </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </div>
 
 
             {/* How Privacy AI works */}

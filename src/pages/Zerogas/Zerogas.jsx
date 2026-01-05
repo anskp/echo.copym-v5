@@ -2,50 +2,58 @@ import React from 'react';
 import { Box, Container, Typography, Grid } from '@mui/material';
 import { Fuel, ArrowRightLeft, Zap, Layers, CheckCircle, Globe, DollarSign, Users, ShieldCheck } from 'lucide-react';
 import { motion } from 'framer-motion';
+import zerogasHero from '../../components/images/zerogashero.png';
 
 const ZeroGas = () => {
     return (
         <Box className="min-h-screen bg-black text-white selection:bg-green-500 selection:text-white pt-20">
             {/* Hero Section */}
-            <Container maxWidth="xl" className="relative pb-24 pt-10">
-                <Grid container spacing={4} alignItems="center">
-                    <Grid item xs={12} md={6}>
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <Typography variant="h6" className="text-green-500 font-mono mb-4 tracking-wider uppercase">
-                                Zero Gas EXPERIENCE
-                            </Typography>
-                            <Typography variant="h1" className="text-5xl md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400 mb-6">
-                                Zero Gas by design
-                            </Typography>
-                        </motion.div>
+            <div className="relative w-full overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={zerogasHero}
+                        alt="Zero Gas Hero"
+                        className="w-full h-full object-cover opacity-60"
+                    />
+                    <div className="absolute inset-0 bg-black/60"></div>
+                </div>
+
+                <Container maxWidth="xl" className="relative z-10 pb-24 pt-10">
+                    <Grid container spacing={4} alignItems="center">
+                        <Grid item xs={12} md={6}>
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}
+                                className="text-left"
+                            >
+                                <Typography variant="h6" className="text-sm md:text-base text-[#10b981] font-bold mb-4 tracking-wider uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Zero Gas EXPERIENCE
+                                </Typography>
+                                <Typography variant="h1" className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Zero Gas by design
+                                </Typography>
+                                <Typography className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    CopyM delivers zero-gas tokenization by abstracting blockchain fees through meta-transactions and sponsored execution.
+                                </Typography>
+                            </motion.div>
+                        </Grid>
+                        <Grid item xs={12} md={6} className="relative">
+                            <motion.div
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                transition={{ duration: 1, delay: 0.2 }}
+                                className="relative z-10 flex justify-center"
+                            >
+
+
+                            </motion.div>
+
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} md={6} className="relative">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ duration: 1, delay: 0.2 }}
-                            className="relative z-10 flex justify-center"
-                        >
-                            {/* 3D Chip Representation */}
-                            <div className="relative w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-green-900/30 to-black border border-green-500/50 rounded-3xl flex items-center justify-center transform rotate-12 shadow-[0_0_100px_rgba(34,197,94,0.3)] backdrop-blur-sm">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-20 rounded-3xl"></div>
-                                <div className="text-center z-20">
-                                    <div className="text-green-400 font-bold text-4xl mb-2 tracking-tighter">ZERO GAS</div>
-                                    <div className="text-green-400/80 font-bold text-2xl tracking-widest">FEES</div>
-                                </div>
-                                <div className="absolute -bottom-4 -right-4 w-12 h-12 bg-green-500 rounded-full blur-xl animate-pulse"></div>
-                                <div className="absolute -top-4 -left-4 w-12 h-12 bg-green-500 rounded-full blur-xl animate-pulse"></div>
-                            </div>
-                        </motion.div>
-                        {/* Background Glow */}
-                        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[100px] z-0"></div>
-                    </Grid>
-                </Grid>
-            </Container>
+                </Container>
+            </div>
 
 
             {/* Intro Section */}

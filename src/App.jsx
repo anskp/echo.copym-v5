@@ -17,7 +17,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Launchkit from './pages/Launchkit/Launchkit';
 import AccessPage from './pages/AccessPage/AccessPage';
-import ZeroGas from './pages/ZeroGas/ZeroGas';
+import ZeroGas from './pages/Zerogas/Zerogas';
 import PrivacyAi from './pages/PrivacyAi/PrivacyAi';
 import { animate } from 'animejs';
 
