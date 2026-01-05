@@ -17,6 +17,8 @@ import { Routes, Route, useLocation } from "react-router-dom";
 
 import Launchkit from './pages/Launchkit/Launchkit';
 import AccessPage from './pages/AccessPage/AccessPage';
+import ZeroGas from './pages/ZeroGas/ZeroGas';
+import PrivacyAi from './pages/PrivacyAi/PrivacyAi';
 import { animate } from 'animejs';
 
 
@@ -74,6 +76,8 @@ function App() {
           <Route path="/copym-ai" element={<CopymAI />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/access" element={<AccessPage />} />
+          <Route path="/zerogas" element={<ZeroGas />} />
+          <Route path="/privacy-ai" element={<PrivacyAi />} />
         </Routes>
       </main>
       <Footer />

@@ -56,9 +56,21 @@ export default function TokenDistribution() {
         </div>
 
         {/* Features Content */}
-        <div className="flex flex-col lg:flex-row justify-end mt-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between mt-16 sm:mt-20 gap-12 lg:gap-20">
+
+          {/* Left Column - Image */}
+          <div className="w-full lg:w-1/2 relative">
+            <div className="relative w-full aspect-square max-w-lg mx-auto lg:max-w-none">
+              <img
+                src="/assets/Images/icons/distribution.png"
+                alt="Token Distribution Network"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+
           {/* Right Column - Features List */}
-          <div className="w-full lg:w-1/2 space-y-10 sm:space-y-12">
+          <div className="w-full lg:w-1/2 space-y-12 sm:space-y-14">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -66,10 +78,10 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-4 sm:gap-6"
+                className="flex items-start gap-3"
               >
-                {/* Circle Icon Placeholder */}
-                <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/90 flex-shrink-0 mt-1"></div>
+                {/* Bullet Point */}
+                <div className="text-white text-lg font-bold mt-0.5">•</div>
 
                 <div className="flex-1">
                   <h3

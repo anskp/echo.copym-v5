@@ -31,12 +31,7 @@ export default function AuditSection() {
           <img
             src={logoAndIcons}
             alt="Secure & Audited - Blockchain Networks"
-            className="w-full h-auto object-contain"
-            style={{
-              maxHeight: '600px',
-              objectFit: 'contain',
-              width: '100vw'
-            }}
+            className="w-full h-auto"
           />
         </div>
 

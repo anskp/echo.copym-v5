@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black" />
       </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-3 sm:pt-10 md:pt-12 lg:pt-14 pb-0">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-3 sm:pt-10 md:pt-12 lg:pt-14 pb-12 sm:pb-24">
         {/* Desktop Layout */}
         <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr_1.8fr] gap-y-10 gap-x-8 lg:gap-x-12 items-start">
           {/* Left Side - Logo, Description */}
@@ -305,11 +305,19 @@ export default function Footer() {
 
       </div>
 
-      {/* Large COPYM Background Image */}
-      <div
-        className="relative z-10 w-full overflow-hidden bg-black bg-[url('/assets/Images/team/footercopym.png')] bg-no-repeat bg-bottom bg-cover sm:bg-contain h-[180px] sm:h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px]"
-      >
+
+      {/* Right Side Ellipse Gradient - Absolute positioned */}
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <div className="absolute -right-[10%] -bottom-[20%] w-[80%] h-[180%] opacity-90">
+          <img
+            src="/assets/Images/icons/Ellipse.png"
+            alt=""
+            className="w-full h-full object-contain scale-150"
+            style={{ transformOrigin: 'bottom right' }}
+          />
+        </div>
       </div>
-    </footer>
+
+    </footer >
   );
 }

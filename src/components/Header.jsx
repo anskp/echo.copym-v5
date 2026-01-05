@@ -12,14 +12,31 @@ export default function Header() {
   const [mobileDropdownOpen, setMobileDropdownOpen] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const [isVisible, setIsVisible] = useState(true);
+
   useEffect(() => {
+    let lastScrollY = window.scrollY;
+
     const handleScroll = () => {
-      if (window.scrollY > 20) {
+      const currentScrollY = window.scrollY;
+
+      // Background logic
+      if (currentScrollY > 20) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
+
+      // Show/Hide logic
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -48,35 +65,19 @@ export default function Header() {
       path: "/solutions",
       dropdown: [
         {
-          icon: <FaUsers className="w-5 h-5" />,
+          icon: <img src="/assets/Images/icons/assets.png" alt="Asset Owners" className="w-full h-full object-contain" />,
           heading: "Asset Owners",
           description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
         },
         {
-          icon: <FaDollarSign className="w-5 h-5" />,
+          icon: <img src="/assets/Images/icons/investors.png" alt="Investors" className="w-full h-full object-contain" />,
           heading: "Investors",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
         },
         {
-          icon: <FaHandshake className="w-5 h-5" />,
+          icon: <img src="/assets/Images/icons/partners.png" alt="Partners" className="w-full h-full object-contain" />,
           heading: "Partners",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
-        }
-      ]
-    },
-    {
-      label: "Compliance & Security",
-      path: "/compliance",
-      dropdown: [
-        {
-          icon: <FaFileAlt className="w-5 h-5" />,
-          heading: "Legal pages",
-          description: "Identify and obtain the relevant legal pages acquired by the company in relation to tokenization"
-        },
-        {
-          icon: <FaKey className="w-5 h-5" />,
-          heading: "Licenses",
-          description: "Find and document the licenses CopyM has secured to operate tokenization services for asset owners"
         }
       ]
     },
@@ -85,38 +86,25 @@ export default function Header() {
       path: "/technology",
       dropdown: [
         {
-          icon: <HiCube className="w-5 h-5" />,
+          icon: <HiCube className="w-10 h-10" />,
           heading: "Architecture",
           description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
         },
         {
-          icon: <HiShieldCheck className="w-5 h-5" />,
+          icon: <img src="/assets/Images/icons/zerogas.png" alt="Zero Gas" className="w-full h-full object-contain" />,
           heading: "Zero Gas",
-          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
+          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
+          path: "/zerogas"
         },
         {
-          icon: <HiCube className="w-5 h-5" />,
+          icon: <HiCube className="w-10 h-10" />,
           heading: "Privacy AI",
-          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
+          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
+          path: "/privacy-ai"
         }
       ]
     },
-    {
-      label: "Blog",
-      path: "/blog",
-      dropdown: [
-        {
-          icon: <FaNewspaper className="w-5 h-5" />,
-          heading: "Articles",
-          description: "Identify and obtain the relevant legal pages acquired by the company in relation to tokenization"
-        },
-        {
-          icon: <FaReport className="w-5 h-5" />,
-          heading: "Report",
-          description: "Find and document the licenses CopyM has secured to operate tokenization services for asset owners"
-        }
-      ]
-    }
+
   ];
 
   // Chevron icon for mobile dropdown open/close indicator
@@ -143,8 +131,8 @@ export default function Header() {
           : 'bg-[#15a36e] shadow-md h-14 sm:h-16 md:h-18 lg:h-20'
           }`}
         initial={{ y: -100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        animate={{ y: isVisible ? 0 : "-100%", opacity: 1 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
           {/* --- FLEX HEADER CONTAINER --- */}
@@ -222,7 +210,7 @@ export default function Header() {
                                 <Link
                                   key={index}
                                   to={dropdownItem.path || item.path}
-                                  className="flex items-start gap-4 hover:opacity-80 transition-opacity duration-200 group"
+                                  className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-200 group"
                                   onClick={() => setHoveredItem(null)}
                                 >
                                   <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
@@ -234,11 +222,11 @@ export default function Header() {
                                       {dropdownItem.icon}
                                     </div>
                                   </div>
-                                  <div className="flex-1 min-w-0">
-                                    <h4 className="font-bold text-black text-base mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                  <div className="flex-1 min-w-0 flex flex-col justify-center min-h-[48px]">
+                                    <h4 className="font-bold text-black text-base leading-tight mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                       {dropdownItem.heading}
                                     </h4>
-                                    <p className="text-sm text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <p className="text-sm text-black leading-snug" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                       {dropdownItem.description}
                                     </p>
                                   </div>
