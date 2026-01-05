@@ -8,16 +8,16 @@ export default function MarketplaceIntro() {
                 <div className="max-w-3xl">
                     <div className="relative w-fit mb-6">
                         <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            <span className="text-black">What includes the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">?</span>
+                            <span className="text-black">What is the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">?</span>
                         </h2>
                         <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
                     </div>
                     <div className="space-y-6 text-lg text-gray-800 leading-relaxed font-medium">
                         <p>
-                            The CopyM marketplace is a secure, blockchain-powered venue where real-world and digital assets are brought on-chain using smart contracts.
+                            The CopyM Marketplace is a secure, blockchain-powered venue where real-world and digital assets are brought on-chain, discovered and traded.
                         </p>
                         <p>
-                            It connects asset owners, investors, and institutions in a more transparent ecosystem enabling seamless ownership, trading, and investment.
+                            It connects asset owners, investors and infrastructure partners in one transparent ecosystem, enabling seamless ownership, trading and settlement.
                         </p>
                     </div>
                 </div>

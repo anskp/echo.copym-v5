@@ -6,38 +6,23 @@ export default function HowItWorks() {
         {
             num: "01.",
             title: "Asset Onboarding",
-            desc: "Verified real-world or digital assets are onboarded with clear documentation, then tokenized and listed with immutable on-chain records and transparent metadata.",
-            icon: "📝"
+            desc: "Native on markets/brokers with AI-driven insights, predictive alarms, and real-time intelligence that give you the edge in crypto trading",
+            icon: "/assets/Images/icons/t1.png",
+            variant: "default"
         },
         {
             num: "02.",
             title: "Fractional Ownership",
-            desc: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
-            icon: "🍰"
+            desc: "Assets are divided into programmable tokens, allowing participants to invest in fractions.",
+            icon: "/assets/Images/icons/t2.png",
+            variant: "featured"
         },
         {
             num: "03.",
             title: "Buy, Sell & Trade",
-            desc: "Participants can acquire, trade or exit positions through an open marketplace driven by real-time supply and demand.",
-            icon: "💹"
-        },
-        {
-            num: "04.",
-            title: "Smart Contract Settlement",
-            desc: "Ownership transfers, revenue distribution and settlements are executed automatically via smart contracts – reducing intermediaries, delays and errors.",
-            icon: "🤝"
-        },
-        {
-            num: "05.",
-            title: "Self-Custodial Security",
-            desc: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
-            icon: "🔒"
-        },
-        {
-            num: "06.",
-            title: "Compliance-First Architecture",
-            desc: "KYC, asset verification and regulatory safeguards are embedded by design, so every transaction is built on trust and future-ready compliance.",
-            icon: "⚖️"
+            desc: "Participants can acquire, trade or exit positions through an open marketplace.",
+            icon: "/assets/Images/icons/t3.png",
+            variant: "default"
         }
     ];
 
@@ -51,29 +36,59 @@ export default function HowItWorks() {
                         </h2>
                         <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
                     </div>
+                    <p className="text-lg text-gray-800 leading-relaxed font-medium max-w-3xl">
+                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+                    </p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {steps.map((step, index) => (
-                        <div key={index} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 flex flex-col relative overflow-hidden group hover:shadow-md transition-all duration-300">
-                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#10b981] to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <div
+                            key={index}
+                            className={`rounded-2xl p-8 shadow-sm border flex flex-col justify-between relative overflow-hidden transition-all duration-300 h-[320px]
+                            ${step.variant === 'featured' ? 'bg-white border-none text-black' : 'bg-white border-gray-100'}`}
+                        >
+                            {/* Background for Featured Card */}
+                            {step.variant === 'featured' && (
+                                <div className="absolute inset-0 z-0">
+                                    <img
+                                        src="/assets/Images/icons/Group1.png"
+                                        alt=""
+                                        className="w-full h-full object-cover opacity-20"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white/90"></div>
+                                </div>
+                            )}
 
-                            <div className="text-4xl text-[#10b981] font-bold mb-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                {step.num}
-                            </div>
-
-                            {/* Decorative hexagon/circle background placeholder */}
-                            <div className="absolute right-[-20px] top-[10px] opacity-10 pointer-events-none">
-                                <div className="w-32 h-32 bg-[#10b981] rounded-full blur-3xl"></div>
-                            </div>
-
-                            <div className="mt-4">
-                                <h3 className="text-xl font-bold text-black mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-                                    {step.title}
-                                </h3>
-                                <p className="text-sm text-gray-600 leading-relaxed font-medium">
-                                    {step.desc}
-                                </p>
+                            <div className="relative z-10 flex flex-col h-full justify-between">
+                                {step.variant === 'default' ? (
+                                    <>
+                                        <div className="text-5xl text-[#10b981] font-bold" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                            {step.num}
+                                        </div>
+                                        <div>
+                                            <div className="w-12 h-12 bg-black rounded-lg flex items-center justify-center mb-4">
+                                                <img src={step.icon} alt={step.title} className="w-6 h-6 object-contain invert" />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-black" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                                {step.title}
+                                            </h3>
+                                        </div>
+                                    </>
+                                ) : (
+                                    /* Featured Card Layout */
+                                    <>
+                                        <div className="flex-1 flex flex-col justify-center">
+                                            <h3 className="text-2xl font-bold text-black mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                                {step.title}
+                                            </h3>
+                                            <p className="text-sm text-gray-700 font-medium leading-relaxed">
+                                                {step.desc}
+                                            </p>
+                                        </div>
+                                        <div className="w-full h-1/2 relative bg-contain bg-no-repeat bg-center" style={{ backgroundImage: `url(/assets/Images/icons/Group2.png)` }}></div>
+                                    </>
+                                )}
                             </div>
                         </div>
                     ))}
@@ -81,5 +96,4 @@ export default function HowItWorks() {
             </div>
         </section>
     );
-
 }

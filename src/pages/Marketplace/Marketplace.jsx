@@ -3,6 +3,7 @@ import MarketplaceIntro from "./sections/MarketplaceIntro";
 import HowItWorks from "./sections/HowItWorks";
 import WhyItMatters from "./sections/WhyItMatters";
 import TradableAssets from "./sections/TradableAssets";
+import WhyInvestWithUs from "./sections/WhyInvestWithUs";
 
 export default function Marketplace() {
   return (
@@ -12,6 +13,7 @@ export default function Marketplace() {
       <HowItWorks />
       <WhyItMatters />
       <TradableAssets />
+      <WhyInvestWithUs />
     </div>
   );
 }
