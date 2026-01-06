@@ -1,32 +1,44 @@
 // src/pages/TokenizationHub/sections/TokenizationProcess.jsx
 
 import React from 'react';
+import ticon1 from '../../../components/icons/Tokenization/ticon1.png';
+import ticon2 from '../../../components/icons/Tokenization/ticon2.png';
+import ticon3 from '../../../components/icons/Tokenization/ticon3.png';
+import ticon4 from '../../../components/icons/Tokenization/ticon4.png';
+import ticon5 from '../../../components/icons/Tokenization/ticon5.png';
+import ticon6 from '../../../components/icons/Tokenization/ticon6.png';
 
 export default function TokenizationProcess() {
   const whyTokenizeFeatures = [
     {
       title: "Programmable terms",
       description: "Program the transfer-restrictions and investment terms that are required between different asset and investor (KYC) classifications.",
+      icon: ticon1
     },
     {
       title: "Increased accessibility",
       description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
+      icon: ticon2
     },
     {
       title: "Global reach",
       description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
+      icon: ticon3
     },
     {
-      title: "Global reach",
-      description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
+      title: "Fractional Ownership",
+      description: "Enable investors to own a portion of high-value assets, improving liquidity and diversifying investment portfolios.",
+      icon: ticon4
     },
     {
       title: "Faster settlement times",
       description: "Tokenization speeds up trade settlements, enabling investors to receive their funds faster after selling their shares in the fund.",
+      icon: ticon5
     },
     {
       title: "Greater transparency",
       description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
+      icon: ticon6
     }
   ];
 
@@ -67,7 +79,13 @@ export default function TokenizationProcess() {
           {whyTokenizeFeatures.map((feature, index) => (
             <div key={index} className="flex flex-col items-start">
               {/* Icon Circle */}
-              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0"></div>
+              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-3">
+                <img
+                  src={feature.icon}
+                  alt={feature.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
               {/* Title */}
               <h3

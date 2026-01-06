@@ -11,12 +11,15 @@ export default function IssuerSection() {
     <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
-        {/* Section Header - Original */}
-        <div className="mb-6 sm:mb-8 md:mb-10 text-center">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'palanquin, sans-serif' }}>
-            <span className="text-[#15a36e]">TOKENIZE</span> REAL ASSETS
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto" style={{ fontFamily: 'palanquin, sans-serif' }}>
+        {/* Section Header */}
+        <div className="mb-8 sm:mb-12">
+          <div className="relative w-fit mb-4">
+            <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-[#15a36e]">TOKENIZE</span> REAL ASSETS
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
+          </div>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Digitizing real assets on blockchain
           </p>
         </div>
@@ -27,25 +30,25 @@ export default function IssuerSection() {
           {/* Left Card - Full Height (3 columns, 2 rows) */}
           <div className="lg:col-span-3 lg:row-span-2 bg-black p-6 sm:p-8 flex flex-col justify-between">
             {/* Image at top */}
-            <div className="flex justify-center mb-6 sm:mb-8 flex-1 items-center">
+            <div className="flex justify-center mb-4 sm:mb-6 flex-1 items-center overflow-hidden">
               <img
                 src="/assets/Images/3cubes.png"
                 alt="Tokenization"
-                className="w-full max-w-[280px] h-auto object-contain"
+                className="w-full max-w-[380px] h-auto object-contain transform scale-110"
               />
             </div>
 
             {/* Text at bottom */}
-            <div className="text-left">
+            <div className="text-center">
               <h3
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3 sm:mb-4"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 We can Tokenize any assets
               </h3>
               <p
                 className="text-white/80 text-sm sm:text-base leading-relaxed"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Transform any real-world asset into digital tokens with our secure blockchain platform
               </p>
@@ -58,7 +61,7 @@ export default function IssuerSection() {
             <div className="flex-1 text-left">
               <h3
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 One simple token management interface
               </h3>
@@ -101,13 +104,13 @@ export default function IssuerSection() {
             <div className="flex-1 text-left">
               <h3
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 We can Tokenize any assets
               </h3>
               <p
                 className="text-white/80 text-sm sm:text-base leading-relaxed mb-4"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Transform any real-world asset into digital tokens with our secure blockchain platform
               </p>
@@ -115,8 +118,8 @@ export default function IssuerSection() {
               {/* Investor groups */}
               <div className="space-y-2">
                 {investorGroups.map((group) => (
-                  <div key={group.name} className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
+                  <div key={group.name} className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-2 w-28 sm:w-32 flex-shrink-0">
                       <div
                         className="w-3 h-3 rounded-full"
                         style={{ backgroundColor: group.color }}
