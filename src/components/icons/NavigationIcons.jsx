@@ -113,17 +113,6 @@ export const AccessPassIcon = ({ className = "" }) => (
   </svg>
 );
 
-export const CopymAIIcon = ({ className = "" }) => (
-  <svg viewBox="0 0 80 80" className={className}>
-    <rect x="15" y="20" width="50" height="40" rx="8" fill="currentColor" className="text-icon-gray" />
-    <circle cx="30" cy="30" r="4" fill="currentColor" className="text-icon-white" />
-    <circle cx="40" cy="30" r="4" fill="currentColor" className="text-icon-white" />
-    <circle cx="50" cy="30" r="4" fill="currentColor" className="text-icon-white" />
-    <rect x="25" y="40" width="30" height="3" rx="1.5" fill="currentColor" className="text-icon-white" />
-    <rect x="25" y="47" width="25" height="3" rx="1.5" fill="currentColor" className="text-icon-white" />
-    <rect x="25" y="54" width="35" height="3" rx="1.5" fill="currentColor" className="text-icon-white" />
-  </svg>
-);
 
 export const AboutUsIcon = ({ className = "" }) => (
   <svg viewBox="0 0 80 80" className={className}>

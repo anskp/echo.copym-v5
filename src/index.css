@@ -13,7 +13,7 @@
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: light;
-  
+
   /* shadcn/ui CSS variables */
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;
@@ -70,7 +70,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -279,7 +280,7 @@ main {
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 1001 !important;
-  
+
   border-radius: 50px;
   padding: 8px;
   display: flex;
@@ -381,28 +382,7 @@ main {
 }
 
 /* Page-specific background styles */
-.copym-ai-page {
-  /* Changed to solid light blue background */
-  background-color: black; /* Tailwind's blue-100 to match HomePage */
-  min-height: 100vh;
-}
 
-.copym-ai-page .section {
-  background:black;
-}
-
-.copym-ai-page .hero-section {
-  background: transparent;
-}
-
-/* Ensure proper background for CopymAI components */
-.copym-ai-page .container {
-  background: transparent;
-}
-
-.copym-ai-page .grid {
-  background: transparent;
-}
 
 .dropdown-icon {
   width: 16px;
@@ -510,72 +490,67 @@ main {
 }
 
 /* Icon backgrounds */
-.icon-tokenization { 
+.icon-tokenization {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
 }
-.icon-marketplace { 
+
+.icon-marketplace {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
 }
-.icon-accesspass { 
+
+.icon-accesspass {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
 }
-.icon-copymi { 
+
+.icon-about {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
 }
-.icon-about { 
+
+.icon-roadmap {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
 }
-.icon-roadmap { 
+
+.icon-contact {
   background: rgba(37, 99, 235, 0.1);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
-    0 4px 16px rgba(37, 99, 235, 0.1),
-    inset 0 1px 0 rgba(37, 99, 235, 0.2),
-    inset 0 -1px 0 rgba(37, 99, 235, 0.1);
-}
-.icon-contact { 
-  background: rgba(37, 99, 235, 0.1);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(37, 99, 235, 0.2);
-  box-shadow: 
+  box-shadow:
     0 4px 16px rgba(37, 99, 235, 0.1),
     inset 0 1px 0 rgba(37, 99, 235, 0.2),
     inset 0 -1px 0 rgba(37, 99, 235, 0.1);
@@ -586,18 +561,18 @@ main {
   .nav-pills {
     display: none;
   }
-  
+
   /* Only apply these styles to desktop dropdowns, not mobile */
   .nav-pills .dropdown {
     min-width: 90vw;
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
   .nav-pills .nav-item:hover .dropdown {
     transform: translateX(-50%) translateY(0);
   }
-  
+
   .dropdown-grid {
     grid-template-columns: 1fr;
   }
@@ -605,9 +580,12 @@ main {
 
 /* Hologram Animations */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(0px);
   }
+
   50% {
     transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(-10px);
   }
@@ -618,6 +596,7 @@ main {
     opacity: 0.8;
     filter: brightness(1) blur(0px);
   }
+
   100% {
     opacity: 1;
     filter: brightness(1.2) blur(1px);
@@ -626,9 +605,12 @@ main {
 
 /* Reverse float animation for the left hologram */
 @keyframes float-reverse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(0px);
   }
+
   50% {
     transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(-10px);
   }
@@ -636,36 +618,48 @@ main {
 
 /* Floating animations for phone mockups */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(0px);
   }
+
   50% {
     transform: translateY(-50%) translateZ(50px) rotateY(-15deg) translateY(-20px);
   }
 }
 
 @keyframes float-reverse {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(0px);
   }
+
   50% {
     transform: translateY(-50%) translateZ(50px) rotateY(15deg) translateY(20px);
   }
 }
 
 @keyframes phone-float-left {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(50px) translateX(20px);
   }
+
   50% {
     transform: rotateX(8deg) rotateY(12deg) rotateZ(-8deg) translateY(30px) translateX(20px);
   }
 }
 
 @keyframes phone-float-right {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-50px) translateX(-20px);
   }
+
   50% {
     transform: rotateX(-8deg) rotateY(-12deg) rotateZ(8deg) translateY(-30px) translateX(-20px);
   }
@@ -685,10 +679,11 @@ main {
   object-fit: contain;
   display: inline-block;
 }
+
 .icon-globe {
-  color:#ffffff;
-  background: rgba(255,255,255, 0.2);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   padding: 8px;
-  filter:drop-shadow(2px 2px 4px rgba(0,0,0,0.4));
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.4));
 }

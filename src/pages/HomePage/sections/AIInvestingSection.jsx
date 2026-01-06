@@ -21,16 +21,6 @@ export default function AIInvestingSection() {
             From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
           </p>
 
-          {/* CTA Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
-            <Link
-              to="/CopymAI"
-              className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              Explore Cora-AI
-            </Link>
-          </div>
         </div>
 
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}

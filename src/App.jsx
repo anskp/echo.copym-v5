@@ -7,7 +7,6 @@ import TokenizationHub from './pages/TokenizationHub/TokenizationHub';
 import Marketplace from './pages/Marketplace/Marketplace';
 import HomePage from './pages/HomePage/HomePage';
 
-import CopymAI from './pages/CopymAI/CopymAI';
 import Contact from './pages/Contact/Contact';
 import AboutUs from './pages/aboutus/aboutus';
 import ScrollToTop from "./components/ScrollToTop";
@@ -27,8 +26,6 @@ function App() {
   const location = useLocation();
   const appRef = useRef(null);
 
-  // Check if we're on the copym-ai page
-  const isCopymAIPage = location.pathname === "/copym-ai";
   // Check if we're on the marketplace page (has its own header)
   const isMarketplacePage = location.pathname === "/marketplace";
 
@@ -73,7 +70,6 @@ function App() {
           <Route path="/tokenization" element={<TokenizationHub />} />
           <Route path="/launchkit" element={<Launchkit />} />
 
-          <Route path="/copym-ai" element={<CopymAI />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/access" element={<AccessPage />} />
           <Route path="/zerogas" element={<ZeroGas />} />
