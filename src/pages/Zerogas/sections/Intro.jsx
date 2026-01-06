@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import zerogassfee from '../../../../public/assets/Images/zerogassfee.png';
+
+const zerogassfee = '/assets/Images/zerogassfee.png';
 
 const Intro = () => {
     return (

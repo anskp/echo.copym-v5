@@ -32,7 +32,7 @@ export default function HowToTokenize() {
   }, [steps.length]);
 
   return (
-    <section className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="relative bg-white pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Title */}
         <div className="mb-8 sm:mb-12">

@@ -8,7 +8,7 @@ const investorGroups = [
 
 export default function IssuerSection() {
   return (
-    <section className="bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
         {/* Section Header */}
@@ -68,13 +68,31 @@ export default function IssuerSection() {
 
               {/* Payment fields */}
               <div className="space-y-3">
-                <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3 flex justify-between items-center">
-                  <span className="text-white/70 text-sm">Payment Amount</span>
-                  <span className="text-[#15a36e] font-semibold text-sm">123 USDC</span>
+                <div
+                  className="p-3 flex justify-between items-center relative"
+                  style={{
+                    backgroundColor: 'rgba(50, 50, 50, 0.8)',
+                    border: '1px solid transparent',
+                    backgroundImage: 'linear-gradient(to right, #615b5bff, #615b5bff), linear-gradient(to right, #FFFFFF, #FFFFFF, #FFFFFF)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box'
+                  }}
+                >
+                  <span className="text-white text-base font-medium">Payment Amount</span>
+                  <span className="text-[#15a36e] font-bold text-base">123 USDC</span>
                 </div>
-                <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-3 flex justify-between items-center">
-                  <span className="text-white/70 text-sm">Transfers</span>
-                  <span className="text-[#15a36e] font-semibold text-sm">123 USDC</span>
+                <div
+                  className="p-3 flex justify-between items-center relative"
+                  style={{
+                    backgroundColor: 'rgba(50, 50, 50, 0.8)',
+                    border: '1px solid transparent',
+                    backgroundImage: 'linear-gradient(to right, #615b5bff, #615b5bff), linear-gradient(to right, #FFFFFF, #FFFFFF, #FFFFFF)',
+                    backgroundOrigin: 'border-box',
+                    backgroundClip: 'padding-box, border-box'
+                  }}
+                >
+                  <span className="text-white text-base font-medium">Transfers</span>
+                  <span className="text-[#15a36e] font-bold text-base">123 USDC</span>
                 </div>
               </div>
             </div>

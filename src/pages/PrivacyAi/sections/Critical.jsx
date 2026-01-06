@@ -1,9 +1,10 @@
 import React from 'react';
 import { Container, Typography } from '@mui/material';
-import p1 from '../../../../public/assets/Images/icons/privacyai1.png';
-import p2 from '../../../../public/assets/Images/icons/privacyai2.png';
-import p3 from '../../../../public/assets/Images/icons/privacyai3.png';
-import p4 from '../../../../public/assets/Images/icons/privacyai4.png';
+
+const p1 = '/assets/Images/icons/privacyai1.png';
+const p2 = '/assets/Images/icons/privacyai2.png';
+const p3 = '/assets/Images/icons/privacyai3.png';
+const p4 = '/assets/Images/icons/privacyai4.png';
 
 const Critical = () => {
     return (

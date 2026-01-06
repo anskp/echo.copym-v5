@@ -30,16 +30,13 @@ export default function InvestorManagement() {
 
   return (
     <section className="relative py-8 sm:py-12 md:py-16 lg:py-20">
-      {/* Top Section Divider */}
-      <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-px bg-gradient-to-r from-transparent via-gray-400 to-transparent opacity-60"></div>
-      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-black to-transparent opacity-30"></div>
-      
+
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white/10 to-transparent rounded-t-[100px]"></div>
-      
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
@@ -58,17 +55,17 @@ export default function InvestorManagement() {
           <div className="flex flex-col items-center lg:items-start -mt-8 sm:-mt-12 lg:-mt-[124px]">
             {/* 3D Graphic Image */}
             <div className="mb-4 sm:mb-6 w-full max-w-[280px] sm:max-w-md lg:max-w-lg">
-              <img 
-                src={cyclonebitcoinImage} 
-                alt="Digital Asset Ecosystem" 
+              <img
+                src={cyclonebitcoinImage}
+                alt="Digital Asset Ecosystem"
                 className="w-full h-auto object-contain"
               />
             </div>
-            
+
             {/* Two Buttons */}
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 -mt-8 sm:-mt-12 lg:-mt-[100px] items-center w-full max-w-lg px-4">
               {/* MANAGE INVESTORS Button */}
-              <button 
+              <button
                 className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
@@ -85,11 +82,11 @@ export default function InvestorManagement() {
                     strokeWidth={2.5}
                     d="M9 5l7 7-7 7"
                   />
-                  </svg>
+                </svg>
               </button>
-              
+
               {/* LEARN MORE Button */}
-              <button 
+              <button
                 className="border-2 border-emerald-500 text-emerald-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-500 hover:text-white transition-all duration-300"
                 style={{ fontFamily: 'DM Sans, sans-serif' }}
               >
@@ -107,7 +104,7 @@ export default function InvestorManagement() {
               const svgWidth = index === 0 ? 50 : 48;
               const svgHeightTop = 18;
               const svgHeightBottom = 18;
-              
+
               return (
                 <motion.div
                   key={index}
@@ -115,7 +112,7 @@ export default function InvestorManagement() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  style={{ 
+                  style={{
                     position: 'relative',
                     marginBottom: '16px',
                     background: '#e6f2ed',
@@ -125,33 +122,33 @@ export default function InvestorManagement() {
                   }}
                 >
                   {/* Green Header Bar with Heading */}
-                  <div style={{ 
-                    height: headerHeight, 
+                  <div style={{
+                    height: headerHeight,
                     background: 'rgba(179,255,227,0.4)',
                     position: 'relative',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    
+
                   }}>
-                    <h3 className="dm-sans" style={{ 
-                      fontSize: 'clamp(14px, 2vw, 18px)', 
-                      fontWeight: 600, 
-                      textAlign: 'center', 
-                      color: '#000', 
+                    <h3 className="dm-sans" style={{
+                      fontSize: 'clamp(14px, 2vw, 18px)',
+                      fontWeight: 600,
+                      textAlign: 'center',
+                      color: '#000',
                       margin: '0'
                     }}>{feature.title}</h3>
                   </div>
 
                   {/* Grey Content Area */}
-                  <div style={{ 
-                    padding: '15px 20px', 
+                  <div style={{
+                    padding: '15px 20px',
                     background: '#f0f5f3',
                     position: 'relative'
                   }}>
-                    <p className="dm-sans text-center lg:text-left" style={{ 
-                      fontSize: 'clamp(12px, 1.5vw, 14px)', 
-                      color: '#000', 
+                    <p className="dm-sans text-center lg:text-left" style={{
+                      fontSize: 'clamp(12px, 1.5vw, 14px)',
+                      color: '#000',
                       lineHeight: '1.4',
                       margin: '0 0 20px 0'
                     }}>
@@ -159,17 +156,17 @@ export default function InvestorManagement() {
                     </p>
 
                     {/* Status Badge */}
-                    <div style={{ 
+                    <div style={{
                       position: 'absolute',
                       bottom: '5px',
                       right: '41px',
-                      background: '#fff', 
-                      padding: '3px 9px', 
-                      borderRadius: '20px', 
-                      
+                      background: '#fff',
+                      padding: '3px 9px',
+                      borderRadius: '20px',
+
                       fontSize: 'clamp(10px, 1.4vw, 13px)',
                       color: '#15a36e',
-                      
+
                       whiteSpace: 'nowrap'
                     }}>
                       {feature.stats}
