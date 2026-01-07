@@ -46,7 +46,7 @@ export default function HowToTokenize() {
 
         {/* Main Content Card */}
         <div
-          className="bg-white rounded-xl border border-gray-100 overflow-hidden"
+          className="bg-white rounded-lg border border-gray-100 overflow-hidden"
           style={{ boxShadow: '0px 4px 48.9px 0px #BDE3D5' }}
         >
           <div className="flex flex-col lg:flex-row items-stretch">

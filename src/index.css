@@ -9,9 +9,9 @@
 @import 'tailwindcss/utilities';
 
 :root {
-  --font-sora: "Sora", sans-serif;
+  --font-sora: "Sora", palanquin;
   --font-code: "Source Code Pro", monospace;
-  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-grotesk: "Space Grotesk", palanquin;
   color-scheme: light;
 
   /* shadcn/ui CSS variables */

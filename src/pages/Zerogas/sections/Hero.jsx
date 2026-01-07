@@ -10,7 +10,7 @@ const Hero = () => {
                 <img
                     src={bitcoinHero}
                     alt="Zero Gas Hero"
-                    className="h-full w-auto object-cover object-right"
+                    className="w-full h-full object-cover object-right"
                 />
             </div>
 

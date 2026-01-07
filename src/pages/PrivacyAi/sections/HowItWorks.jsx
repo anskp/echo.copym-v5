@@ -1,83 +1,100 @@
+// src/pages/PrivacyAi/sections/HowItWorks.jsx
+
 import React from 'react';
-import { Container, Typography, Grid } from '@mui/material';
 import { FileKey, Lock, Cpu, Activity, ShieldCheck } from 'lucide-react';
 
-const HowItWorks = () => {
-    return (
-        <Container maxWidth="lg" className="py-20">
-            <div className="mb-16">
-                <div className="relative w-fit mb-6">
-                    <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-white">How </span>
-                        <span className="text-[#10b981]">Privacy AI</span>
-                        <span className="text-white"> works ?</span>
-                    </h2>
-                    <div className="absolute bottom-0 left-0 bg-white/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
-                </div>
-                <div className="max-w-3xl">
-                    <Typography className="text-gray-300 text-base sm:text-lg leading-relaxed mb-4">
-                        At CopyM, privacy is <span className="text-white font-semibold">not a feature - it's a design philosophy.</span>
-                    </Typography>
-                    <Typography className="text-gray-400 text-sm sm:text-base leading-relaxed">
-                        We abstract blockchain complexity so users can interact with tokenized assets without ever touching gas fees, while still benefiting from full on-chain security and transparency.
-                    </Typography>
-                </div>
-            </div>
+export default function HowItWorks() {
+  const privacyAiFeatures = [
+    {
+      title: "Intelligent Data Segmentation",
+      description: "Data is classified as public, confidential or restricted. Only cryptographic proofs and essential metadata are written on-chain.",
+      icon: FileKey
+    },
+    {
+      title: "Privacy-Preserving Verification",
+      description: "Eligibility, ownership and compliance are verified without exposing sensitive personal or business information.",
+      icon: Lock
+    },
+    {
+      title: "AI-Driven Access Control",
+      description: "Access rights adapt dynamically based on role, jurisdiction, asset type and transaction context.",
+      icon: Cpu
+    },
+    {
+      title: "Continuous Risk Monitoring",
+      description: "AI monitors patterns across transactions to detect anomalies, prevent leakage and reinforce fraud prevention.",
+      icon: Activity
+    },
+    {
+      title: "Off-Chain Intelligence, On-Chain Trust",
+      description: "Sensitive data is processed securely off-chain, while hashes and proofs on-chain guarantee integrity and auditability.",
+      icon: ShieldCheck
+    }
+  ];
 
-            <Grid container spacing={6}>
-                {/* Item 1 */}
-                <Grid item xs={12} md={4}>
-                    <div className="flex flex-col items-start gap-4 group">
-                        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-green-500 transition-colors">
-                            <FileKey className="text-white group-hover:text-green-500 transition-colors" size={28} />
-                        </div>
-                        <Typography variant="h6" className="text-base sm:text-lg text-green-500 font-bold">Intelligent Data Segmentation</Typography>
-                        <Typography className="text-gray-400 text-xs sm:text-sm leading-relaxed">Sensitive data is walled off in private, confidential or restricted. Only cryptographic proofs and essential metadata are written on-chain.</Typography>
-                    </div>
-                </Grid>
-                {/* Item 2 */}
-                <Grid item xs={12} md={4}>
-                    <div className="flex flex-col items-start gap-4 group">
-                        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-green-500 transition-colors">
-                            <Lock className="text-white group-hover:text-green-500 transition-colors" size={28} />
-                        </div>
-                        <Typography variant="h6" className="text-base sm:text-lg text-green-500 font-bold">Privacy-Preserving Verification</Typography>
-                        <Typography className="text-gray-400 text-xs sm:text-sm leading-relaxed">Verify ownership and compliance are verified without exposing sensitive personal or business information.</Typography>
-                    </div>
-                </Grid>
-                {/* Item 3 */}
-                <Grid item xs={12} md={4}>
-                    <div className="flex flex-col items-start gap-4 group">
-                        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-green-500 transition-colors">
-                            <Cpu className="text-white group-hover:text-green-500 transition-colors" size={28} />
-                        </div>
-                        <Typography variant="h6" className="text-base sm:text-lg text-green-500 font-bold">AI-Driven Access Control</Typography>
-                        <Typography className="text-gray-400 text-xs sm:text-sm leading-relaxed">Access rights adapt dynamically based on rule, jurisdiction, asset type and transaction context.</Typography>
-                    </div>
-                </Grid>
-                {/* Item 4 */}
-                <Grid item xs={12} md={4}>
-                    <div className="flex flex-col items-start gap-4 group">
-                        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-green-500 transition-colors">
-                            <Activity className="text-white group-hover:text-green-500 transition-colors" size={28} />
-                        </div>
-                        <Typography variant="h6" className="text-base sm:text-lg text-green-500 font-bold">Continuous Risk Monitoring</Typography>
-                        <Typography className="text-gray-400 text-xs sm:text-sm leading-relaxed">AI monitors behaviors across transactions to detect anomalies, prevent leakage and reinforce layer protection.</Typography>
-                    </div>
-                </Grid>
-                {/* Item 5 */}
-                <Grid item xs={12} md={4}>
-                    <div className="flex flex-col items-start gap-4 group">
-                        <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center border border-gray-800 group-hover:border-green-500 transition-colors">
-                            <ShieldCheck className="text-white group-hover:text-green-500 transition-colors" size={28} />
-                        </div>
-                        <Typography variant="h6" className="text-base sm:text-lg text-green-500 font-bold">Off-Chain Intelligence, On-Chain Trust</Typography>
-                        <Typography className="text-gray-400 text-xs sm:text-sm leading-relaxed">Sensitive data is processed securely off-chain, while settlement proofs are chain-agnostic integrity and auditability.</Typography>
-                    </div>
-                </Grid>
-            </Grid>
-        </Container>
-    );
-};
+  return (
+    <section className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        {/* Section Header */}
+        <div className="text-left mb-8 sm:mb-12 md:mb-16">
+          <div className="relative w-fit mb-4">
+            <h2
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              <span className="text-black">How </span>
+              <span className="text-[#15a36e]">Privacy AI</span>
+              <span className="text-black"> works ?</span>
+            </h2>
+            {/* Underline */}
+            <div
+              className="absolute bottom-0 left-0 bg-black"
+              style={{
+                width: 'calc(100% + 120px)',
+                height: '0.5px'
+              }}
+            ></div>
+          </div>
 
-export default HowItWorks;
+          <p
+            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            At CopyM , zero gas is not a feature – it's a design philosophy. We abstract blockchain complexity so users can interact with tokenized assets without ever touching gas fees, while still benefiting from full on-chain security and transparency.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
+          {privacyAiFeatures.map((feature, index) => {
+            const IconComponent = feature.icon;
+            return (
+              <div key={index} className="flex flex-col items-start">
+                {/* Icon Circle */}
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-3">
+                  <IconComponent className="text-white" size={28} />
+                </div>
+
+                {/* Title */}
+                <h3
+                  className="text-[#15a36e] font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3"
+                  style={{ fontFamily: 'DM Sans, sans-serif' }}
+                >
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p
+                  className="text-black text-sm sm:text-base leading-relaxed"
+                  style={{ fontFamily: 'DM Sans, sans-serif' }}
+                >
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}

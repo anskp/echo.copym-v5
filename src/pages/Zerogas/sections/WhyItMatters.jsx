@@ -4,15 +4,15 @@ import { Globe, DollarSign, Users, ShieldCheck } from 'lucide-react';
 
 const WhyItMatters = () => {
     return (
-        <Container maxWidth="lg" className="py-24">
+        <Container maxWidth="lg" className="py-24 bg-white text-black">
             <div className="mb-16">
                 <div className="relative w-fit">
                     <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-white">Why </span>
+                        <span className="text-black">Why </span>
                         <span className="text-[#10b981]">Zero Gas</span>
-                        <span className="text-white"> matters ?</span>
+                        <span className="text-black"> matters ?</span>
                     </h2>
-                    <div className="absolute bottom-0 left-0 bg-white/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
+                    <div className="absolute bottom-0 left-0 bg-black/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
                 </div>
             </div>
 
@@ -23,7 +23,7 @@ const WhyItMatters = () => {
                             <Globe className="text-black" size={24} />
                         </div>
                         <Typography variant="h5" className="text-lg md:text-xl text-green-500 font-bold uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>Mass adoption</Typography>
-                        <Typography className="text-gray-400 text-sm md:text-base" style={{ fontFamily: 'Palanquin, sans-serif' }}>Eliminates the single biggest friction point for new users - acquiring and managing gas tokens.</Typography>
+                        <Typography className="text-gray-600 text-sm md:text-base" style={{ fontFamily: 'Palanquin, sans-serif' }}>Eliminates the single biggest friction point for new users - acquiring and managing gas tokens.</Typography>
                     </div>
                 </Grid>
 
@@ -33,7 +33,7 @@ const WhyItMatters = () => {
                             <DollarSign className="text-black" size={24} />
                         </div>
                         <Typography variant="h5" className="text-lg md:text-xl text-green-500 font-bold uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>Predictable costs</Typography>
-                        <Typography className="text-gray-400 text-sm md:text-base" style={{ fontFamily: 'Palanquin, sans-serif' }}>Enterprises and institutions can onboard without volatile gas fees impacting their operational budgets.</Typography>
+                        <Typography className="text-gray-600 text-sm md:text-base" style={{ fontFamily: 'Palanquin, sans-serif' }}>Enterprises and institutions can onboard without volatile gas fees impacting their operational budgets.</Typography>
                     </div>
                 </Grid>
 

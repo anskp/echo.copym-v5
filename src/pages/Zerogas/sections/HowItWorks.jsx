@@ -4,15 +4,15 @@ import { Fuel, ArrowRightLeft, Zap, Layers, CheckCircle } from 'lucide-react';
 
 const HowItWorks = () => {
     return (
-        <Container maxWidth="lg" className="py-24">
+        <Container maxWidth="lg" className="py-24 bg-white text-black">
             <div className="mb-20">
                 <div className="relative w-fit">
                     <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-white">How </span>
+                        <span className="text-black">How </span>
                         <span className="text-[#10b981]">Zero Gas</span>
-                        <span className="text-white"> works ?</span>
+                        <span className="text-black"> works ?</span>
                     </h2>
-                    <div className="absolute bottom-0 left-0 bg-white/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
+                    <div className="absolute bottom-0 left-0 bg-black/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>GAS ABSTRACTION</Typography>
-                        <Typography className="text-gray-400 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.</Typography>
+                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.</Typography>
                     </div>
                 </div>
 
@@ -41,7 +41,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>META-TRANSACTIONS</Typography>
-                        <Typography className="text-gray-400 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.</Typography>
+                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.</Typography>
                     </div>
                 </div>
 
@@ -55,7 +55,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>SPONSORED TRANSACTIONS</Typography>
-                        <Typography className="text-gray-400 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.</Typography>
+                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.</Typography>
                     </div>
                 </div>
 
@@ -69,7 +69,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>OPTIMIZED INFRASTRUCTURE</Typography>
-                        <Typography className="text-gray-400 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.</Typography>
+                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.</Typography>
                     </div>
                 </div>
 
@@ -83,7 +83,7 @@ const HowItWorks = () => {
                     </div>
                     <div className="w-full md:w-1/2">
                         <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>ENTERPRISE-GRADE UX</Typography>
-                        <Typography className="text-gray-400 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.</Typography>
+                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.</Typography>
                     </div>
                 </div>
             </div>
