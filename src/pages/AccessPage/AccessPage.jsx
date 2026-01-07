@@ -238,7 +238,7 @@ export default function AccessPage() {
         <div className="absolute inset-0 z-0 bg-black">
           {/* Gradients/Overlay - kept for aesthetic */}
           <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-emerald-900/20"></div>
-          <div className="absolute inset-0 bg-[url('/assets/grid.svg')] opacity-20"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
           <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black"></div>
         </div>
 
