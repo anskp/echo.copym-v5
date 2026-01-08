@@ -13,7 +13,7 @@ export default function HeroNew() {
           className="w-full h-full object-cover"
           style={{ minHeight: '100vh' }}
         />
-        <div className="absolute inset-0 bg-black/40"></div>
+      
       </div>
 
       {/* Hero Content - Left aligned */}
@@ -25,10 +25,10 @@ export default function HeroNew() {
           className="max-w-xl lg:max-w-2xl w-full text-left"
         >
           <h1
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-20 uppercase tracking-tight"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            <span className="text-white block mb-1">PRIVACY AI</span>
+            <span className="text-white block">PRIVACY AI</span>
                         <span className="text-[#10b981] block">INTELLIGENT</span>
                         <span className="text-white block mt-1">PRIVACY LAYER</span>
           </h1>

@@ -6,6 +6,7 @@ const LogoCarousel = () => {
     { src: "/assets/svg/Sumsub_idtw6qkLj7_1.svg", alt: "Sumsub" },
     { src: "/assets/blockchains/solana.png", alt: "Solana" },
     { src: "/assets/blockchains/ethereum-eth-logo.svg", alt: "Ethereum" },
+    { src: "/assets/blockchains/masdar.png", alt: "Masdar" },
   ];
 
   // Duplicate logos multiple times for seamless loop
@@ -25,7 +26,7 @@ const LogoCarousel = () => {
             <div
               className="flex items-center py-3 sm:py-4"
               style={{
-                width: "400%",
+                width: "450%",
                 animation: "logo-marquee 20s linear infinite",
               }}
             >
@@ -34,7 +35,7 @@ const LogoCarousel = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-6 sm:h-7 md:h-8 object-contain"
+                    className={logo.alt === "Ethereum" ? "h-8 sm:h-10 md:h-12 object-contain" : "h-6 sm:h-7 md:h-8 object-contain"}
                   />
                 </div>
               ))}
@@ -42,7 +43,7 @@ const LogoCarousel = () => {
           </div>
         </div>
         {/* Green Separator Line */}
-        <div className="w-full h-1 bg-[#15a36e]"></div>
+        <div className="w-full h-2 bg-[#15a36e]"></div>
       </div>
     </section>
   );

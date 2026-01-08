@@ -7,12 +7,12 @@ import WhyItMatters from './sections/WhyItMatters';
 
 const ZeroGas = () => {
     return (
-        <Box className="min-h-screen bg-white text-white selection:bg-green-500 selection:text-white pt-20">
+        <div className="min-h-screen bg-white">
             <Hero />
             <Intro />
             <HowItWorks />
             <WhyItMatters />
-        </Box>
+        </div>
     );
 };
 

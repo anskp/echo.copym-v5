@@ -1,29 +1,24 @@
-import React, { useEffect, useRef, lazy, Suspense } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Header from './components/Header';
 import Hero from './pages/HomePage/sections/Hero';
 
 import Footer from './components/Footer';
+import TokenizationHub from './pages/TokenizationHub/TokenizationHub';
+import Marketplace from './pages/Marketplace/Marketplace';
+import HomePage from './pages/HomePage/HomePage';
+
+import Contact from './pages/Contact/Contact';
+import AboutUs from './pages/aboutus/aboutus';
+import ScrollToTop from "./components/ScrollToTop";
+import CustomCursor from "./components/CustomCursor";
 import { Box } from "@mui/material";
 import { Routes, Route, useLocation } from "react-router-dom";
+
+import Launchkit from './pages/Launchkit/Launchkit';
+import AccessPage from './pages/AccessPage/AccessPage';
+import ZeroGas from './pages/Zerogas/Zerogas';
+import PrivacyAi from './pages/PrivacyAi';
 import { animate } from 'animejs';
-
-// Lazy load pages for code splitting
-const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
-const AboutUs = lazy(() => import('./pages/aboutus/aboutus'));
-const Marketplace = lazy(() => import('./pages/Marketplace/Marketplace'));
-const TokenizationHub = lazy(() => import('./pages/TokenizationHub/TokenizationHub'));
-const Contact = lazy(() => import('./pages/Contact/Contact'));
-const Launchkit = lazy(() => import('./pages/Launchkit/Launchkit'));
-const AccessPage = lazy(() => import('./pages/AccessPage/AccessPage'));
-const ZeroGas = lazy(() => import('./pages/Zerogas/Zerogas'));
-const PrivacyAi = lazy(() => import('./pages/PrivacyAi'));
-
-// Simple loading component
-const PageLoader = () => (
-  <div className="flex items-center justify-center min-h-screen">
-    <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-green-500"></div>
-  </div>
-);
 
 
 
@@ -67,21 +62,19 @@ function App() {
       <ScrollToTop />
       <Header />
       <main className="relative z-20 overflow-x-hidden pt-14 sm:pt-16 md:pt-18 lg:pt-20">
-        <Suspense fallback={<PageLoader />}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutUs />} />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutUs />} />
 
-            <Route path="/marketplace" element={<Marketplace />} />
-            <Route path="/tokenization" element={<TokenizationHub />} />
-            <Route path="/launchkit" element={<Launchkit />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/tokenization" element={<TokenizationHub />} />
+          <Route path="/launchkit" element={<Launchkit />} />
 
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/access" element={<AccessPage />} />
-            <Route path="/zerogas" element={<ZeroGas />} />
-            <Route path="/privacy-ai" element={<PrivacyAi />} />
-          </Routes>
-        </Suspense>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/access" element={<AccessPage />} />
+          <Route path="/zerogas" element={<ZeroGas />} />
+          <Route path="/privacy-ai" element={<PrivacyAi />} />
+        </Routes>
       </main>
       <Footer />
     </Box>

@@ -1,14 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import bitcoinHero from '../../../components/images/bitcoin_hero.png';
+import zerogashero from '../../../components/images/zerogashero.png';
 
 const Hero = () => {
     return (
-        <section className="relative overflow-hidden h-screen w-full bg-black">
+        <section className="relative overflow-hidden h-screen w-full">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0 flex justify-center">
+            <div className="absolute inset-0 z-0 flex justify-end">
                 <img
-                    src={bitcoinHero}
+                    src={zerogashero}
                     alt="Zero Gas Hero"
                     className="w-full h-full object-cover object-right"
                 />

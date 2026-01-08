@@ -6,12 +6,12 @@ import Critical from './sections/Critical';
 
 const PrivacyAi = () => {
     return (
-        <Box className="bg-white text-white selection:bg-green-500 selection:text-white">
+        <div className="min-h-screen bg-white">
 
             <HeroNew/>
             <HowItWorks/>
             <Critical/>
-        </Box>
+        </div>
     );
 };
 
