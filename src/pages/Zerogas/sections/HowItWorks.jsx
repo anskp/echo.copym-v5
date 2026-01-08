@@ -1,94 +1,217 @@
 import React from 'react';
-import { Container, Typography } from '@mui/material';
-import { Fuel, ArrowRightLeft, Zap, Layers, CheckCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+import Lottie from 'lottie-react';
+import SectionContainer from '../../../components/Layout/SectionContainer';
+import SectionHeader from '../../../components/Layout/SectionHeader';
+import z1Animation from '../../../components/lotties/Z1.json';
+import z2Animation from '../../../components/lotties/Z2.json';
+import z3Animation from '../../../components/lotties/Z3.json';
+import z4Animation from '../../../components/lotties/Z4.json';
 
 const HowItWorks = () => {
-    return (
-        <Container maxWidth="lg" className="py-24 bg-white text-black">
-            <div className="mb-20">
-                <div className="relative w-fit">
-                    <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-black">How </span>
-                        <span className="text-[#10b981]">Zero Gas</span>
-                        <span className="text-black"> works ?</span>
-                    </h2>
-                    <div className="absolute bottom-0 left-0 bg-black/20" style={{ width: 'calc(100% + 40px)', height: '1px' }}></div>
-                </div>
+  return (
+    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white">
+      {/* Main Heading */}
+      <SectionHeader
+        title="How Zero Gas works ?"
+        highlightWords={['Zero Gas']}
+        alignment="left"
+      />
+
+      {/* Vertical Stack of 5 Sections */}
+      <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
+        {/* Section 1 - GAS ABSTRACTION (Graphic Left) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+        >
+          {/* Graphic - Left */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <div
+              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                backgroundImage:
+                  'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+              }}
+            >
+              <Lottie
+                animationData={z1Animation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
             </div>
+          </div>
 
-            <div className="space-y-24">
-                {/* Item 1 */}
-                <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-64 h-64 bg-gray-900/50 rounded-3xl border border-gray-800 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <Fuel size={64} className="text-green-500" />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>GAS ABSTRACTION</Typography>
-                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.</Typography>
-                    </div>
-                </div>
+          {/* Content - Right */}
+          <div className="w-full text-center lg:text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              GAS ABSTRACTION
+            </h3>
+            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.
+            </p>
+          </div>
+        </motion.div>
 
-                {/* Item 2 */}
-                <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-64 h-64 bg-gray-900/50 rounded-3xl border border-gray-800 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <ArrowRightLeft size={64} className="text-green-500" />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>META-TRANSACTIONS</Typography>
-                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.</Typography>
-                    </div>
-                </div>
-
-                {/* Item 3 */}
-                <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-64 h-64 bg-gray-900/50 rounded-3xl border border-gray-800 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <Zap size={64} className="text-green-500" />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>SPONSORED TRANSACTIONS</Typography>
-                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.</Typography>
-                    </div>
-                </div>
-
-                {/* Item 4 */}
-                <div className="flex flex-col md:flex-row-reverse items-center gap-12">
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-64 h-64 bg-gray-900/50 rounded-3xl border border-gray-800 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <Layers size={64} className="text-green-500" />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>OPTIMIZED INFRASTRUCTURE</Typography>
-                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.</Typography>
-                    </div>
-                </div>
-
-                {/* Item 5 */}
-                <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-64 h-64 bg-gray-900/50 rounded-3xl border border-gray-800 flex items-center justify-center relative overflow-hidden group hover:border-green-500/50 transition-colors duration-500">
-                            <div className="absolute inset-0 bg-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            <CheckCircle size={64} className="text-green-500" />
-                        </div>
-                    </div>
-                    <div className="w-full md:w-1/2">
-                        <Typography variant="h4" className="text-xl md:text-2xl font-bold text-green-500 mb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>ENTERPRISE-GRADE UX</Typography>
-                        <Typography className="text-gray-600 text-base md:text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.</Typography>
-                    </div>
-                </div>
+        {/* Section 2 - META-TRANSACTIONS (Graphic Right) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+        >
+          {/* Graphic - Right */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div
+              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                backgroundImage:
+                  'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+              }}
+            >
+              <Lottie
+                animationData={z2Animation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
             </div>
-        </Container>
-    );
+          </div>
+
+          {/* Content - Left */}
+          <div className="w-full text-center lg:text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              META-TRANSACTIONS
+            </h3>
+            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Section 3 - SPONSORED TRANSACTIONS (Graphic Left) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+        >
+          {/* Graphic - Left */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <div
+              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                backgroundImage:
+                  'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+              }}
+            >
+              <Lottie
+                animationData={z3Animation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Content - Right */}
+          <div className="w-full text-center lg:text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              SPONSORED TRANSACTIONS
+            </h3>
+            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Section 4 - OPTIMIZED INFRASTRUCTURE (Graphic Right) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+        >
+          {/* Graphic - Right */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div
+              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                backgroundImage:
+                  'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+              }}
+            >
+              <Lottie
+                animationData={z4Animation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Content - Left */}
+          <div className="w-full text-center lg:text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              OPTIMIZED INFRASTRUCTURE
+            </h3>
+            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Section 5 - ENTERPRISE-GRADE UX (Graphic Left) */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+        >
+          {/* Graphic - Left */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+            <div
+              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              style={{
+                boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
+                backgroundImage:
+                  'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
+              }}
+            >
+              <Lottie
+                animationData={z1Animation}
+                loop={true}
+                autoplay={true}
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          {/* Content - Right */}
+          <div className="w-full text-center lg:text-left">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              ENTERPRISE-GRADE UX
+            </h3>
+            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.
+            </p>
+          </div>
+        </motion.div>
+      </div>
+    </SectionContainer>
+  );
 };
 
 export default HowItWorks;

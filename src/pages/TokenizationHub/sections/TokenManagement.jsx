@@ -90,13 +90,13 @@ export default function TokenManagement() {
                             {/* Content Area - Fluid Height & Spacing */}
                             <div className="relative z-10 w-full p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 group-hover:h-1/2 group-hover:justify-start group-hover:pt-4 md:group-hover:pt-6">
                                 {/* Icon (Fades out and collapses on hover) */}
-                                <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-5 sm:mb-6 overflow-hidden flex shrink-0">
+                                <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-4 sm:mb-5 overflow-hidden flex shrink-0">
                                     <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-50 rounded-xl sm:rounded-2xl flex items-center justify-center">
                                         <img src={feature.icon} alt={feature.title} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
                                     </div>
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-2 sm:mb-3 leading-tight transition-all duration-300" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-1 sm:mb-2 leading-tight transition-all duration-300" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     {feature.title}
                                 </h3>
 
@@ -109,7 +109,7 @@ export default function TokenManagement() {
                                     )}
 
                                     {feature.badge && (
-                                        <div className="flex justify-center mt-1 pb-1">
+                                        <div className="flex justify-center mt-0.5 pb-0.5">
                                             <span className="inline-block bg-[#15a36e] text-white text-[10px] sm:text-[12px] font-semibold py-1.5 px-4 sm:px-6 rounded-full shadow-md whitespace-nowrap active:scale-95 transition-transform">
                                                 {feature.badge}
                                             </span>

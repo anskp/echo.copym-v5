@@ -7,7 +7,7 @@ import WhyItMatters from './sections/WhyItMatters';
 
 const ZeroGas = () => {
     return (
-        <Box className="min-h-screen bg-black text-white selection:bg-green-500 selection:text-white pt-20">
+        <Box className="min-h-screen bg-white text-white selection:bg-green-500 selection:text-white pt-20">
             <Hero />
             <Intro />
             <HowItWorks />

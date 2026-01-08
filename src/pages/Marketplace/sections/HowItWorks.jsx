@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import cardshades from '../../../components/images/cardshades.png';
 
@@ -8,59 +8,66 @@ export default function HowItWorks() {
             title: "Asset Onboarding",
             description: "Verified real-world or digital assets are onboarded with clear documentation, then tokenized and listed with immutable on-chain records and transparent metadata.",
             icon: "/assets/Images/icons/t1.png",
-            badge: "Documentation",
             number: "01."
         },
         {
             title: "Fractional Ownership",
             description: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
             icon: "/assets/Images/icons/t2.png",
-            badge: "Accessibility",
+           
             number: "02."
         },
         {
             title: "Buy, Sell & Trade",
             description: "Participants can acquire, trade or exit positions through an open marketplace driven by real-time supply and demand.",
             icon: "/assets/Images/icons/t3.png",
-            badge: "Liquidity",
+            
             number: "03."
         },
         {
             title: "Smart Contract Settlement",
             description: "Ownership transfers, revenue distribution and settlements are executed automatically via smart contracts – reducing intermediaries, delays and errors.",
             icon: "/assets/Images/icons/t1.png", // Using t1 icon for now, you can change if needed
-            badge: "Automation",
+            
             number: "04."
         },
         {
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: "/assets/Images/icons/t2.png", // Using t2 icon for now, you can change if needed
-            badge: "Control",
+            
             number: "05."
         },
         {
             title: "Compliance-First Architecture",
             description: "KYC, asset verification and regulatory safeguards are embedded by design, so every transaction is built on trust and future-ready compliance.",
             icon: "/assets/Images/icons/t3.png", // Using t3 icon for now, you can change if needed
-            badge: "Trust",
+            
             number: "06."
         }
     ];
 
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [isHovered, setIsHovered] = useState(false);
+    const [constraint, setConstraint] = useState(0);
+    const containerRef = useRef(null);
+    const cardWidth = 320;
+    const gap = 32;
+    const cardTotalWidth = cardWidth + gap;
 
-    // Auto-scroll functionality
-    useEffect(() => {
-        if (isHovered) return; // Pause when hovered
+    // Calculate constraint based on number of cards
+    React.useEffect(() => {
+        const calculateConstraint = () => {
+            if (containerRef.current) {
+                const containerWidth = containerRef.current.offsetWidth;
+                const totalCardsWidth = steps.length * cardTotalWidth;
+                const maxDrag = Math.max(0, totalCardsWidth - containerWidth);
+                setConstraint(-maxDrag);
+            }
+        };
 
-        const interval = setInterval(() => {
-            setCurrentIndex(prevIndex => (prevIndex + 1) % steps.length);
-        }, 3000); // Change every 3 seconds
-
-        return () => clearInterval(interval);
-    }, [isHovered, steps.length]);
+        calculateConstraint();
+        window.addEventListener('resize', calculateConstraint);
+        return () => window.removeEventListener('resize', calculateConstraint);
+    }, [steps.length, cardTotalWidth]);
 
     return (
         <section className="w-full bg-[#f8f9fa] py-20 pb-20">
@@ -77,13 +84,23 @@ export default function HowItWorks() {
                     </p>
                 </div>
 
-                {/* Horizontal scrolling container */}
+                {/* Horizontal drag/swipe container */}
                 <div
-                    className="relative overflow-hidden py-4"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
+                    ref={containerRef}
+                    className="relative overflow-hidden py-4 cursor-grab active:cursor-grabbing"
                 >
-                    <div className="flex space-x-8 pb-8" style={{ transform: `translateX(-${currentIndex * (320 + 32)}px)`, transition: isHovered ? 'none' : 'transform 0.5s ease-in-out' }}>
+                    <motion.div
+                        className="flex pb-8"
+                        style={{ gap: `${gap}px` }}
+                        drag="x"
+                        dragConstraints={{ left: constraint, right: 0 }}
+                        dragElastic={0.2}
+                        dragMomentum={true}
+                        whileDrag={{ cursor: 'grabbing' }}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ duration: 0.5 }}
+                    >
                         {steps.map((step, index) => (
                             <motion.div
                                 key={index}
@@ -94,6 +111,7 @@ export default function HowItWorks() {
                                 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                                 className="flex-shrink-0 w-80 group relative rounded-xl border-[6px] border-[#EEEEEE] bg-white overflow-hidden flex flex-col justify-end min-h-[420px] transition-all duration-300 shadow-sm hover:shadow-xl"
+                                drag={false}
                             >
                                 {/* Card Number (Top Left Default) */}
                                 <div className="absolute top-5 left-5 z-20 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
@@ -144,21 +162,7 @@ export default function HowItWorks() {
                                 </div>
                             </motion.div>
                         ))}
-                    </div>
-
-                    {/* Navigation indicators */}
-                    <div className="flex justify-center mt-8 space-x-2">
-                        {steps.map((_, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setCurrentIndex(index)}
-                                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                                    index === currentIndex ? 'bg-[#10b981] w-6' : 'bg-gray-300'
-                                }`}
-                                aria-label={`Go to step ${index + 1}`}
-                            />
-                        ))}
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

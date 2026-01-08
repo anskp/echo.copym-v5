@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Lottie from 'lottie-react';
 
+
 export default function WhyItMatters() {
     const [animationData, setAnimationData] = useState(null);
 
@@ -13,8 +14,16 @@ export default function WhyItMatters() {
     }, []);
 
     return (
-        <section className="w-full bg-[#e6fcf5] py-20 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section
+            className="w-full py-20 overflow-hidden relative"
+            style={{
+                backgroundImage: "url('/assets/Images/Lightgreenbg.png')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+            }}
+        >
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
                 <div className="mb-16">
                     <div className="relative w-fit mb-4">
                         <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>

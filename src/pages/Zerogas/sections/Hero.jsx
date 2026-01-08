@@ -6,7 +6,7 @@ const Hero = () => {
     return (
         <section className="relative overflow-hidden h-screen w-full bg-black">
             {/* Background Image */}
-            <div className="absolute inset-0 z-0 flex justify-end">
+            <div className="absolute inset-0 z-0 flex justify-center">
                 <img
                     src={bitcoinHero}
                     alt="Zero Gas Hero"
