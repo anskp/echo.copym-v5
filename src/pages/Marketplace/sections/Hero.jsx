@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import heroBg from '../../../components/images/Marketplacehero.png';
+import heroBg from '../../../components/images/marketplacehero.png';
 
 export default function Hero() {
   return (
