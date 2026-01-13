@@ -109,8 +109,8 @@ export default function FAQSection() {
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
-              <span className="text-black">QUESTIONS</span>
+              <span className="text-[#15a36e]">FAQ's </span>
+
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
@@ -118,7 +118,7 @@ export default function FAQSection() {
             className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            These frequently asked questions might have the answer, but if not, our support team is just a message away!
+            These FAQ's questions might have the answer, but if not, our support team is just a message away!
           </p>
           <div className="flex justify-center">
             <Link

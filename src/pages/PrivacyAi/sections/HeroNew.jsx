@@ -13,7 +13,7 @@ export default function HeroNew() {
           className="w-full h-full object-cover"
           style={{ minHeight: '100vh' }}
         />
-      
+
       </div>
 
       {/* Hero Content - Left aligned */}
@@ -26,15 +26,14 @@ export default function HeroNew() {
         >
           <h1
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mt-20 uppercase tracking-tight"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+
           >
-            <span className="text-white block">PRIVACY AI</span>
-                        <span className="text-[#10b981] block">INTELLIGENT</span>
-                        <span className="text-white block mt-1">PRIVACY LAYER</span>
+
+            <span className="text-[#10b981] block">PRIVACY AI</span>
           </h1>
           <p
             className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+
           >
             It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
           </p>

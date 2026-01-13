@@ -61,7 +61,7 @@ function App() {
       <CustomCursor />
       <ScrollToTop />
       <Header />
-      <main className="relative z-20 overflow-x-hidden pt-14 sm:pt-16 md:pt-18 lg:pt-20">
+      <main className="relative z-20 overflow-x-hidden pt-14 sm:pt-11 md:pt-12">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />

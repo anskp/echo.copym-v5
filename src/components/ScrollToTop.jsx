@@ -19,7 +19,7 @@ export default function ScrollToTop() {
   useEffect(() => {
     const lastPath = sessionStorage.getItem('lastPath');
     const savedPosition = sessionStorage.getItem('scrollPosition');
-    
+
     // Only restore scroll if we're on the same path and have a saved position
     if (lastPath === pathname && savedPosition) {
       // Use setTimeout to ensure the DOM is fully loaded

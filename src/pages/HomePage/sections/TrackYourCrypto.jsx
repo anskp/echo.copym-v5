@@ -1,11 +1,12 @@
-import React from 'react';
+import ColourfulIcon from '../../../components/SVG/Colourfulicon.svg';
 import { QrCodeIcon } from '@heroicons/react/24/outline';
 import WatchSVG from '../../../components/SVG/watch.svg';
 import qrcode from '../../../components/SVG/qrcode.svg';
+import { FaApple } from 'react-icons/fa';
 
 export default function TrackYourCrypto() {
   return (
-    <section className="relative py-2 sm:py-3 md:py-4 lg:py-5 bg-black">
+    <section className="relative py-0 bg-black">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
@@ -13,11 +14,11 @@ export default function TrackYourCrypto() {
       {/* Shorten the fade overlay at the bottom */}
       <div className="absolute bottom-0 left-0 right-0 h-8 sm:h-12 md:h-16 bg-gradient-to-t from-white/10 to-transparent rounded-t-[28px] sm:rounded-t-[40px] md:rounded-t-[60px]"></div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10 pb-4 sm:pb-6 md:pb-8 lg:pb-8 mt-2 sm:mt-4 md:mt-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10 pb-0 mt-0">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-start text-left space-y-3 sm:space-y-4 md:space-y-5">
           {/* Watch SVG with Phone Overlay - Moved to top for mobile flow */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex justify-center items-start pt-2 sm:pt-4">
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex justify-center items-start pt-0">
             {/* Watch SVG - Static Background */}
             <div className="relative w-72 sm:w-80 md:w-96">
               <img
@@ -51,20 +52,20 @@ export default function TrackYourCrypto() {
           {/* Download Grid - Buttons Left, Scanner Right */}
           <div className="flex flex-row items-center justify-start gap-4 sm:gap-6 w-full pt-1 text-left">
             {/* App Store Buttons - Left Grid */}
-            <div className="flex flex-col gap-2 flex-1 max-w-[140px] sm:max-w-none">
-              <a href="#" className="transform transition-transform hover:scale-105">
-                <img
-                  src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1314619200&h=791e2b6d762e153f582f3c7e7f6d4d5e"
-                  alt="Download on the App Store"
-                  className="w-full h-auto max-w-[135px] sm:max-w-[160px]"
-                />
+            <div className="flex flex-col gap-2 flex-1 max-w-[170px] sm:max-w-none">
+              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-full sm:w-[170px] h-[54px] group">
+                <FaApple className="text-white text-[28px] group-hover:text-white/90" />
+                <div className="flex flex-col items-start justify-center">
+                  <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                  <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>App Store</span>
+                </div>
               </a>
-              <a href="#" className="transform transition-transform hover:scale-105">
-                <img
-                  src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                  alt="Get it on Google Play"
-                  className="w-full h-auto max-w-[190px] sm:max-w-[220px] -ml-2"
-                />
+              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-full sm:w-[170px] h-[54px] group">
+                <img src={ColourfulIcon} alt="Google Play" className="w-[26px] h-[26px]" />
+                <div className="flex flex-col items-start justify-center">
+                  <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                  <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>Google Play</span>
+                </div>
               </a>
             </div>
 
@@ -80,9 +81,9 @@ export default function TrackYourCrypto() {
         </div>
 
         {/* Desktop Layout (lg+) - More compact Horizontal Layout */}
-        <div className="hidden lg:grid grid-cols-2 gap-6 lg:gap-8 items-center">
+        <div className="hidden lg:grid grid-cols-2 gap-4 lg:gap-4 items-center">
           {/* Left Side - Watch SVG with Overlaid Mobile */}
-          <div className="flex justify-center items-center relative order-2 lg:order-1 mt-4 sm:mt-6 md:mt-8 lg:mt-10 xl:mt-12">
+          <div className="flex justify-center lg:justify-end items-center relative order-2 lg:order-1 mt-0 lg:pr-8">
             {/* Watch SVG - Static Background */}
             <div className="relative w-full m-auto max-w-sm sm:max-w-md lg:max-w-lg">
               <img
@@ -121,19 +122,19 @@ export default function TrackYourCrypto() {
               <div className="flex flex-row items-center justify-start gap-6">
                 {/* Download Buttons Stack */}
                 <div className="flex flex-col gap-3">
-                  <a href="#" className="transform transition-transform hover:scale-105">
-                    <img
-                      src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=1314619200&h=791e2b6d762e153f582f3c7e7f6d4d5e"
-                      alt="Download on the App Store"
-                      className="w-[180px] h-auto"
-                    />
+                  <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-[170px] h-[54px] group">
+                    <FaApple className="text-white text-[28px] group-hover:text-white/90" />
+                    <div className="flex flex-col items-start justify-center">
+                      <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                      <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>App Store</span>
+                    </div>
                   </a>
-                  <a href="#" className="transform transition-transform hover:scale-105">
-                    <img
-                      src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                      alt="Get it on Google Play"
-                      className="w-[240px] h-auto -ml-4"
-                    />
+                  <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-[170px] h-[54px] group">
+                    <img src={ColourfulIcon} alt="Google Play" className="w-[26px] h-[26px]" />
+                    <div className="flex flex-col items-start justify-center">
+                      <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                      <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>Google Play</span>
+                    </div>
                   </a>
                 </div>
 

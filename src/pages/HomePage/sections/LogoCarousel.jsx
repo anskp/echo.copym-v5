@@ -10,7 +10,7 @@ const LogoCarousel = () => {
   ];
 
   // Duplicate logos multiple times for seamless loop
-  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos];
+  const duplicatedLogos = [...logos, ...logos, ...logos, ...logos, ...logos, ...logos, ...logos];
 
   return (
     <section className="w-full bg-white border-t border-gray-200 overflow-hidden -mt-px">
@@ -24,18 +24,18 @@ const LogoCarousel = () => {
         <div className="bg-white shadow-sm overflow-hidden">
           <div className="relative w-full overflow-hidden">
             <div
-              className="flex items-center py-3 sm:py-4"
+              className="flex items-center py-1"
               style={{
                 width: "450%",
                 animation: "logo-marquee 20s linear infinite",
               }}
             >
               {duplicatedLogos.map((logo, idx) => (
-                <div key={`${logo.alt}-${idx}`} className="flex-shrink-0 px-8 sm:px-10">
+                <div key={`${logo.alt}-${idx}`} className="flex-shrink-0 px-6 sm:px-8 md:px-10 lg:px-12 flex items-center justify-center">
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className={logo.alt === "Ethereum" ? "h-8 sm:h-10 md:h-12 object-contain" : "h-6 sm:h-7 md:h-8 object-contain"}
+                    className="h-7 sm:h-9 md:h-11 lg:h-12 w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-[160px]"
                   />
                 </div>
               ))}

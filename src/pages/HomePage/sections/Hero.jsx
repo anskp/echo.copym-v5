@@ -58,7 +58,7 @@ export default function Hero() {
           {/* ====== HEADLINE ====== */}
           <h1
             className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+
           >
             <span className="block">
               UNLOCK EXCLUSIVE <span className="text-[#15a36e]">ASSETS,</span>
@@ -71,7 +71,7 @@ export default function Hero() {
           {/* ====== DESCRIPTION ====== */}
           <p
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+
           >
             Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless<br />
             on-chain investment in real estate, commodities, carbon credits, and luxury assets.
@@ -79,50 +79,52 @@ export default function Hero() {
 
           {/* ====== FOR ASSET OWNERS ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-center text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
+
           >
-            <span className="underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR ASSET OWNERS</span> – launch compliant, fictionalized products in weeks, not months.
+            <span className="font-bold border-b-2 border-[#15a36e] pb-0.5">FOR ASSET OWNERS</span> – launch compliant, fictionalized products in weeks, not months.
           </p>
 
           {/* ====== FOR INVESTORS ====== */}
           <p
-            className="text-xs sm:text-sm md:text-base text-white mb-8 sm:mb-10 md:mb-12 font-light"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
+            className="text-center text-xs sm:text-sm md:text-base text-white mb-8 sm:mb-10 md:mb-12 font-light"
+
           >
-            <span className="underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR INVESTORS</span> – access curated, yield-bearing RWA's with instant, gas-free settlement.
+            <span className="font-bold underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR INVESTORS</span> – access curated, yield-bearing RWA's with instant, gas-free settlement.
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
             <Link
               to="/marketplace"
-              className="text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto sm:min-w-[200px]"
+              className="text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto sm:min-w-[200px]"
               style={{
                 fontFamily: 'Palanquin, sans-serif',
                 background: 'linear-gradient(to right, #23BD83, #109261)'
               }}
             >
               START INVESTING
-              <svg
-                className="w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2.5}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
+              <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center ml-1">
+                <svg
+                  className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#109261]"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2.5}
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </div>
             </Link>
 
             <button
               onClick={() => setVideoOpen(true)}
-              className="border-2 border-white text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]"
-              style={{ fontFamily: 'Palanquin, sans-serif' }}
+              className="border-2 border-white text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]"
+
             >
               WATCH DEMO
             </button>
@@ -135,14 +137,14 @@ export default function Hero() {
         <Link
           to="/risk-disclosure"
           className="text-white/90 hover:text-white text-xs sm:text-sm md:text-base transition-colors duration-200"
-          style={{ fontFamily: 'Palanquin, sans-serif' }}
+
         >
           Risk Disclosure
         </Link>
         <Link
           to="/cookies"
           className="text-white/90 hover:text-white text-xs sm:text-sm md:text-base transition-colors duration-200"
-          style={{ fontFamily: 'Palanquin, sans-serif' }}
+
         >
           Cookies
         </Link>

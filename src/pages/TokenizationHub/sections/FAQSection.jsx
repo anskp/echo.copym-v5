@@ -111,8 +111,7 @@ export default function FAQSection() {
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
               style={{ fontFamily: 'DM Sans, sans-serif' }}
             >
-              <span className="text-[#15a36e]">FREQUENTLY ASKED </span>
-              <span className="text-black">QUESTIONS</span>
+              <span className="text-[#15a36e]">FAQ's </span>
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
@@ -120,17 +119,9 @@ export default function FAQSection() {
             className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
-            These frequently asked questions might have the answer, but if not, our support team is just a message away!
+            These FAQ's questions might have the answer, but if not, our support team is just a message away!
           </p>
-          <div className="flex justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
-            >
-              Contact Our Team
-            </Link>
-          </div>
+
         </div>
 
         {/* FAQ List */}
@@ -144,6 +135,15 @@ export default function FAQSection() {
               onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
             />
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Link
+            to="/contact"
+            className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
+            style={{ fontFamily: 'DM Sans, sans-serif' }}
+          >
+            Contact Our Team
+          </Link>
         </div>
       </div>
     </section>

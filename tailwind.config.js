@@ -10,11 +10,11 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["var(--font-sora)", ...fontFamily.sans],
-                code: "var(--font-code)",
-                grotesk: "var(--font-grotesk)",
-                brand: ['"Genos"', 'sans-serif'],
-                sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                sans: ["var(--font-palanquin)", 'sans-serif'],
+                code: ["var(--font-palanquin)", 'sans-serif'],
+                grotesk: ["var(--font-palanquin)", 'sans-serif'],
+                palanquin: ["var(--font-palanquin)", 'sans-serif'],
+                brand: ["var(--font-palanquin)", 'sans-serif'],
             },
             colors: {
                 color: {
@@ -166,7 +166,7 @@ export default {
         },
     },
     plugins: [
-        plugin(function({ addBase, addComponents, addUtilities }) {
+        plugin(function ({ addBase, addComponents, addUtilities }) {
             addBase({});
             addComponents({
                 ".container": {

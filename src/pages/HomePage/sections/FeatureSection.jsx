@@ -26,10 +26,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -66,10 +66,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -106,10 +106,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -146,10 +146,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{

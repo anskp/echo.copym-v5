@@ -95,7 +95,7 @@ export default function AIInvestingSection() {
         {/* Desktop Layout (lg+) - Horizontal Layout with Grid */}
         <div className="hidden lg:flex flex-col items-center">
           {/* AI Visualization with Grid */}
-          <div className="relative w-full max-w-[1500px] mt-[-90px] mx-auto">
+          <div className="relative w-full max-w-[1500px] mt-2 mx-auto">
             <div className="absolute inset-0 flex items-center justify-center z-0">
               <img
                 src={ellipse}

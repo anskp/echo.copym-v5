@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport } from 'react-icons/fa';
+import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
 
 export default function Header() {
@@ -103,6 +103,24 @@ export default function Header() {
           path: "/privacy-ai"
         }
       ]
+    },
+    {
+      label: "Company",
+      path: "/company",
+      dropdown: [
+        {
+          icon: <FaInfoCircle className="w-5 h-5" />,
+          heading: "About Us",
+          description: "Learn about our mission, vision, and the team driving CopyM forward.",
+          path: "/about"
+        },
+        {
+          icon: <FaEnvelope className="w-5 h-5" />,
+          heading: "Contact",
+          description: "Get in touch with us for support, partnerships, or general inquiries.",
+          path: "/contact"
+        }
+      ]
     }
   ];
 
@@ -126,14 +144,14 @@ export default function Header() {
       {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
       <motion.nav
         className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-16'
-          : 'bg-[#15a36e] shadow-md h-14 sm:h-16 md:h-18 lg:h-20'
+          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-12'
+          : 'bg-[#15a36e] shadow-md h-16 sm:h-13 md:h-14'
           }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: isVisible ? 0 : "-100%", opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 h-full">
           {/* --- FLEX HEADER CONTAINER --- */}
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
@@ -141,9 +159,9 @@ export default function Header() {
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className={`transition-all duration-300 w-auto object-contain ${isScrolled ? 'h-8 sm:h-10 md:h-12' : 'h-10 sm:h-12 md:h-14 lg:h-16'
+                className={`transition-all duration-300 w-auto object-contain ${isScrolled ? 'h-9 sm:h-10' : 'h-10 sm:h-11 md:h-12'
                   }`}
-                style={{ maxWidth: '170px' }}
+                style={{ maxWidth: '280px' }}
               />
             </Link>
 
@@ -158,7 +176,7 @@ export default function Header() {
                 >
                   <Link
                     to={item.path}
-                    className="text-white font-medium text-base hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
+                    className="text-white font-medium text-base lg:text-lg hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {item.label}
@@ -236,14 +254,14 @@ export default function Header() {
 
             {/* Mobile Toggle */}
             <button
-              className="lg:hidden text-white hover:text-white/80 transition-colors duration-200 p-2"
+              className="lg:hidden text-white hover:text-white/80 transition-colors duration-200 p-1"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
                 if (isMenuOpen) setMobileDropdownOpen(null);
               }}
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <IoClose className="h-7 w-7" /> : <GiHamburgerMenu className="h-7 w-7" />}
+              {isMenuOpen ? <IoClose className="h-6 w-6" /> : <GiHamburgerMenu className="h-6 w-6" />}
             </button>
           </div>
         </div>

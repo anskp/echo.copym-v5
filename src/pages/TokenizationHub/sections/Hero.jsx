@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden h-screen w-full">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 flex justify-end">
         <img
           src={tokenizationHero}
           alt="Tokenization Hero background"
@@ -22,12 +22,12 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-xl lg:max-w-2xl w-full text-left"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight">
             <span className="text-white block mb-1">TOKENIZATION </span>
             <span className="text-[#10b981] block">HUB</span>
             <span className="text-white block mt-1">EMPOWERING ASSET OWNERSHIP</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed">
             Learn how CopyM tokenizes real-world assets into digital securities, providing liquidity and global access to institutional-grade investments.
           </p>
         </motion.div>

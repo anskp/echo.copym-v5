@@ -47,7 +47,7 @@ const AboutUs = () => {
                         <div className="flex flex-col items-center justify-center w-full max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px] mx-auto">
 
                             {/* Main Heading */}
-                            <h1 className="text-center mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <h1 className="text-center mb-3 sm:mb-4 md:mb-5" >
                                 <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-white">
                                     EXPLORE TOKENIZED{' '}
                                 </span>
@@ -58,7 +58,7 @@ const AboutUs = () => {
 
                             {/* Description */}
                             <div className="flex flex-col items-center justify-center w-full">
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-white w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-white w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" >
                                     Transforming asset ownership through blockchain innovation and institutional-grade tokenization
                                 </p>
 
@@ -74,7 +74,7 @@ const AboutUs = () => {
                                 {/* CTA Button */}
                                 <button
                                     className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
-                                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+
                                 >
                                     EXPLORE OUR ASSETS
                                     <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,7 +95,7 @@ const AboutUs = () => {
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
                         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
                                 <span className="text-white">COMPANY </span>
                                 <span className="text-[#15a36e]">OVERVIEW</span>
                             </h2>
@@ -120,19 +120,19 @@ const AboutUs = () => {
                             {/* Right Side - Text Content */}
                             <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2 text-center lg:text-left">
                                 <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         COPYm is a leading <span className="font-semibold text-white">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
                                     </p>
                                 </div>
 
                                 <div className="space-y-4">
-                                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4" >
                                         Why We Exist:
                                     </h3>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         The traditional asset market is <span className="font-semibold text-white">fragmented, slow, and geographically restricted</span>. COPYm is here to change that.
                                     </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
                                     </p>
                                 </div>
@@ -151,20 +151,20 @@ const AboutUs = () => {
                             {/* Black Content Area */}
                             <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
                                 <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
                                     </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
                                     </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         Our mission extends beyond technology — we strive to foster financial inclusion and create a more equitable economic landscape where wealth generation is not limited by geographical boundaries.
                                     </p>
                                 </div>
                             </div>
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
-                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" >
                                     OUR MISSION
                                 </h3>
                             </div>
@@ -175,20 +175,20 @@ const AboutUs = () => {
                             {/* Black Content Area */}
                             <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
                                 <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
                                     </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         Our vision is to create a world where investment opportunities are not limited by geography, wealth, or traditional barriers.
                                     </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
                                         Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy.
                                     </p>
                                 </div>
                             </div>
                             {/* Colored Footer with Title */}
                             <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
-                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" >
                                     OUR VISION
                                 </h3>
                             </div>
@@ -201,7 +201,7 @@ const AboutUs = () => {
             <section className="py-12 sm:py-16 lg:py-20 bg-white">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
                             <span className="text-black">CORE </span>
                             <span className="text-[#15a36e]">VALUES</span>
                         </h2>
@@ -348,7 +348,7 @@ const AboutUs = () => {
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header */}
                     <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
                             <span className="text-white">COMPANY </span>
                             <span className="text-[#15a36e]">TIMELINE</span>
                         </h2>

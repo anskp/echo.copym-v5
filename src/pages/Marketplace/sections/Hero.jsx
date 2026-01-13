@@ -21,12 +21,12 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-xl lg:max-w-2xl w-full text-left"
         >
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight">
             <span className="text-white block mb-1">MARKETPLACE </span>
             <span className="text-[#10b981] block">ECOSYSTEM</span>
             <span className="text-white block mt-1">TRANSPARENT & LIQUID</span>
           </h1>
-          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed">
             Our AI-driven marketplace connects asset owners, investors and infrastructure partners in one transparent ecosystem.
           </p>
         </motion.div>

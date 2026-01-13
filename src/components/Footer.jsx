@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="absolute inset-0 bg-black" />
       </div>
 
-      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-10 sm:pt-12 md:pt-16 pb-12 sm:pb-24">
+      <div className="relative z-10 max-w-[1600px] mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 pt-10 sm:pt-12 md:pt-16 pb-6 sm:pb-8">
         {/* Desktop Layout (Large Screens) */}
         <div className="hidden lg:grid grid-cols-[1.4fr_0.8fr_0.8fr_0.8fr_1.8fr] gap-x-12 items-start">
           {/* Left Side - Logo, Description */}
@@ -17,7 +17,7 @@ export default function Footer() {
             <div className="flex items-center mb-0">
               <img
                 loading="lazy"
-                src="/assets/copym/png/Copym-02-1.png"
+                src="/assets/copym/png/Copym-01-1.png"
                 alt="COPYM"
                 className="h-20 w-auto object-contain"
               />
@@ -27,6 +27,13 @@ export default function Footer() {
               our modern investment platform designed<br />
               for the next generation.
             </p>
+            {/* Social Media Icons */}
+            <div className="flex gap-5 mt-2 ml-1">
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaTwitter size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaLinkedin size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaInstagram size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaGithub size={20} /></a>
+            </div>
           </div>
 
           {/* Product Links */}
@@ -155,22 +162,29 @@ export default function Footer() {
         </div>
 
         {/* Mobile & Tablet Layout (<Large Screens) */}
-        <div className="lg:hidden space-y-8 mt-4">
+        <div className="lg:hidden space-y-1">
           {/* Logo and Tagline */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1">
               <img
                 loading="lazy"
-                src="/assets/copym/png/Copym-02-1.png"
+                src="/assets/copym/png/Copym-01-1.png"
                 alt="COPYM"
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-12 sm:h-20 w-auto object-contain"
               />
             </div>
             <p className="text-white text-sm sm:text-base leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Investing for outliers. Build wealth with<br />
-              our modern investment platform designed<br />
+              Investing for outliers. Build wealth with
+              our modern investment platform designed
               for the next generation.
             </p>
+            {/* Social Media Icons */}
+            <div className="flex gap-5 mb-6 ml-1">
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaTwitter size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaLinkedin size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaInstagram size={20} /></a>
+              <a href="#" className="text-white hover:text-[#15a36e] transition-colors"><FaGithub size={20} /></a>
+            </div>
           </div>
 
           {/* Navigation Links - 3 columns */}
@@ -243,6 +257,7 @@ export default function Footer() {
           </div>
         </div>
 
+
         {/* Newsletter Section - Mobile & Tablet only */}
         <div className="lg:hidden mt-8">
           <div className="flex flex-col space-y-3">
@@ -253,7 +268,7 @@ export default function Footer() {
                 </h3>
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
               </div>
-              <p className="mt-2 text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="mt-2 text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 To know more subscribe to our newsletter
               </p>
             </div>
@@ -282,7 +297,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[20px] whitespace-nowrap px-6"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[20px] whitespace-nowrap px-4 sm:px-6"
                   style={{
                     background: '#15a36e',
                     color: '#ffffff',
@@ -290,10 +305,7 @@ export default function Footer() {
                   }}
                 >
                   <span
-                    style={{
-                      fontSize: '14px',
-                      fontWeight: 600,
-                    }}
+                    className="text-xs sm:text-sm font-semibold"
                   >
                     Subscribe
                   </span>
@@ -301,6 +313,13 @@ export default function Footer() {
               </div>
             </form>
           </div>
+        </div>
+
+        {/* Copyright Section */}
+        <div className="mt-12 sm:mt-16 pt-8 border-t border-white/10 flex flex-col items-center justify-center">
+          <p className="text-gray-400 text-sm sm:text-base text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            &copy; 2026 COPYM. All rights reserved.
+          </p>
         </div>
 
       </div>

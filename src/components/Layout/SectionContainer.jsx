@@ -1,14 +1,14 @@
 import React from 'react';
 
-const SectionContainer = ({ 
-  children, 
-  className = '', 
-  padding = 'py-16', 
+const SectionContainer = ({
+  children,
+  className = '',
+  padding = 'py-10',
   bgColor = 'bg-white',
   id = null
 }) => {
   return (
-    <section 
+    <section
       id={id}
       className={`
         w-full 
@@ -17,7 +17,7 @@ const SectionContainer = ({
         overflow-x-hidden
       `}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-20">
         {children}
       </div>
     </section>

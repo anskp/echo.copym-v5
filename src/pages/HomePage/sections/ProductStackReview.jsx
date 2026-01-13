@@ -17,7 +17,7 @@ const ProductStackReview = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-white pt-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
+    <section className="relative w-full bg-white pt-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header Section */}
         <motion.div
@@ -39,7 +39,7 @@ const ProductStackReview = () => {
           </p>
         </motion.div>
         {/* Lottie Animation */}
-        <div className="w-full flex justify-start items-center overflow-visible">
+        <div className="w-full flex justify-center items-center overflow-visible">
           <div
             className="w-full"
             style={{
