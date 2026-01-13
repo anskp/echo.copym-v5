@@ -5,6 +5,7 @@ const SectionContainer = ({
   className = '',
   padding = 'py-10',
   bgColor = 'bg-white',
+  maxWidth = 'max-w-7xl',
   id = null
 }) => {
   return (
@@ -17,7 +18,7 @@ const SectionContainer = ({
         overflow-x-hidden
       `}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-20">
+      <div className={`${maxWidth} mx-auto px-4 sm:px-6 md:px-8 lg:px-20`}>
         {children}
       </div>
     </section>

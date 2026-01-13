@@ -10,7 +10,7 @@ import earnWithoutHassleAnimation from '../../../components/lotties/earnwithouta
 
 const FeatureSection = () => {
   return (
-    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white">
+    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
       {/* Main Heading */}
       <SectionHeader
         title="OWN, EARN, EXPLORE, TRADE"
@@ -26,10 +26,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-auto flex justify-center lg:justify-start">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -48,11 +48,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Own a piece of big Investment
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Ever thought real estate, gold, or fine art was only for the rich? Not anymore.
               Start with small amounts and own a piece of high-value assets you actually
               care about.
@@ -66,10 +66,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -88,11 +88,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Content - Left */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Trade anytime, anywhere
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Want out? Sell instantly. Want in? Buy in seconds. With your
               built-in wallet, you can manage and trade smoothly—just like
               sending money to a friend.
@@ -106,10 +106,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-auto flex justify-center lg:justify-start">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -128,11 +128,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Earn without a hassle
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Sit back and let the experts (and AI) do the heavy lifting. Your money works for
               you, bringing in steady returns–without the stress of paperwork or
               management.
@@ -146,10 +146,10 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-auto flex justify-center lg:justify-end">
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -168,11 +168,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Content - Left */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Explore a world of assets
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               From property and gold to private equity and art—our AI picks out
               smart opportunities so you don't have to dig through endless
               research.

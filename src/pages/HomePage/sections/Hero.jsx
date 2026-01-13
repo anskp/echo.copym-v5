@@ -73,7 +73,7 @@ export default function Hero() {
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
 
           >
-            Secure, AI-enhanced marketplace powered by Crossmint and Fireblocks. Seamless<br />
+            Secure, AI-enhanced marketplace.Seamless<br />
             on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
