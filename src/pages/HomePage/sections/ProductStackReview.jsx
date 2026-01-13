@@ -44,7 +44,7 @@ const ProductStackReview = () => {
             className="w-full"
             style={{
               transformOrigin: 'left center',
-              marginTop: isDesktop ? '-180px' : '-80px',
+              marginTop: isDesktop ? '-80px' : '-20px',
               marginLeft: isDesktop ? '-120px' : '0px',
               transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)'
             }}

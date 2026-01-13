@@ -77,7 +77,6 @@ export default function Hero() {
             on-chain investment in real estate, commodities, carbon credits, and luxury assets.
           </p>
 
-          {/* ====== FOR ASSET OWNERS ====== */}
           <p
             className="text-center text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
 
@@ -103,7 +102,7 @@ export default function Hero() {
                 background: 'linear-gradient(to right, #23BD83, #109261)'
               }}
             >
-              START INVESTING
+              GET STARTED
               <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center ml-1">
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#109261]"

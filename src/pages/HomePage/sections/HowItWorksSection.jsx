@@ -1,86 +1,118 @@
-import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef, useLayoutEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lottie from 'lottie-react';
 import assetOwnersAnimation from '../../../components/lotties/forassetsowners.json';
 import investorsAnimation from '../../../components/lotties/forinvestors.json';
+import SectionContainer from '../../../components/Layout/SectionContainer';
+import SectionHeader from '../../../components/Layout/SectionHeader';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const HowItWorksSection = () => {
+  const containerRef = useRef(null);
+  const panel2Ref = useRef(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const timeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: containerRef.current,
+          pin: true,
+          scrub: 1, // Smooth scrubbing
+          start: "top top",
+          end: "+=200%" // Length of the scroll distance (2x height of screen roughly)
+        }
+      });
+
+      // Logic:
+      // 0-50% scroll: Panel 1 static (no animation happening, effectively waiting).
+      // 50-100% scroll: Panel 2 slides in.
+
+      // To achieve this with a timeline attached to the whole scroll distance:
+      // We can insert an empty tween for the first half, then the slide for the second half.
+
+      timeline
+        .to({}, { duration: 1 }) // Wait for first 50% (relative units)
+        .to(panel2Ref.current, { xPercent: -100, duration: 1, ease: "none" }); // Slide in for second 50%
+
+      // Note: We need Panel 2 to start off-screen to the right (xPercent: 0 if we use negative slide, or 100 if we use 0)
+      // Actually, standard CSS setup:
+      // Panel 1: z-index 1, relative/absolute
+      // Panel 2: z-index 2, absolute, left: 100% (off screen right)
+      // Then animate Panel 2 to left: 0%?
+
+      // Let's stick to GSAP transforms.
+      // Set Panel 2 initially to xPercent: 100?
+
+      // Wait, simplistic approach:
+      // Timeline duration 2.
+      // 0-1: Nothing.
+      // 1-2: Panel 2 moves from xPercent: 100 to 0.
+
+    }, containerRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-14 gap-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-left"
-          >
-            <div className="relative w-fit">
-              <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                <span className="text-black leading-tight">HOW IT </span>
-                <span className="text-[#15a36e] leading-tight font-bold">WORKS</span>
-              </h2>
-              <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.8px' }}></div>
-            </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-medium leading-relaxed tracking-wide mt-3 sm:mt-5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              How Copym works - for issuers and investors
-            </p>
-          </motion.div>
+    <section ref={containerRef} className="w-full h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden relative bg-white">
+      {/* Top Header - Fixed/Static within pinned section */}
+      <div className="absolute top-0 left-0 w-full z-30 pt-10 sm:pt-14 md:pt-20 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pointer-events-none">
+        <div className="max-w-5xl mx-auto">
+          <SectionHeader
+            title="HOW IT WORKS"
+            highlightWords={['WORKS']}
+            alignment="left"
+            className="!mb-3 sm:!mb-4"
+          />
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-medium leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            How Copym works - for issuers and investors
+          </p>
         </div>
-
-        {/* Vertical Stack of Workflow Boards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-4"
-          >
-            <div className="w-full">
-              <Lottie
-                animationData={assetOwnersAnimation}
-                loop={true}
-                autoplay={true}
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true, margin: "-100px" }}
-            className="flex flex-col gap-4"
-          >
-            <div className="w-full">
-              <Lottie
-                animationData={investorsAnimation}
-                loop={true}
-                autoplay={true}
-                className="w-full h-auto"
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="flex justify-center mt-12 sm:mt-16 md:mt-20"
-        >
-          <button className="inline-flex items-center justify-center px-[38px] py-[12px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-[#15a36e] bg-[#15a36e] text-white rounded-full shadow-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            Whitepaper
-          </button>
-        </motion.div>
       </div>
-    </section >
+
+      {/* Panel 1: Asset Owners */}
+      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-24 sm:pt-32">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
+          {/* Animation */}
+          <div className="w-full max-w-5xl mx-auto pointer-events-auto">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#15a36e] mb-4 text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              For Asset Owners
+            </h3>
+            <Lottie
+              animationData={assetOwnersAnimation}
+              loop={true}
+              autoplay={true}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Panel 2: Investors */}
+      {/* Starting off-screen right via CSS transform or simple positioning. Let's use Tailwind left-full or just GSAP set. */}
+      {/* Using `left-full` puts it 100% to the right. Then we animate xPercent: -100 to bring it back to 0 (center). */}
+      <div
+        ref={panel2Ref}
+        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-24 sm:pt-32"
+      >
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
+          {/* Animation */}
+          <div className="w-full max-w-5xl mx-auto pointer-events-auto">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#15a36e] mb-4 text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              For Investors
+            </h3>
+            <Lottie
+              animationData={investorsAnimation}
+              loop={true}
+              autoplay={true}
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
