@@ -8,42 +8,7 @@ import Contact3Image from '../../components/images/Conatct3.png';
 const Contact = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section - Full Video Background */}
-      <section className="relative w-full min-h-[520px] sm:min-h-[600px] lg:h-[90vh] xl:h-screen overflow-hidden flex items-center">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-cover"
-          >
-            <source src="/assets/videos/About-us1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          {/* Dark overlay for better text readability */}
-          <div className="absolute inset-0 bg-black/40"></div>
-        </div>
 
-        {/* Hero Content */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-16 sm:py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-left max-w-3xl"
-          >
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4 uppercase tracking-tight">
-              <span className="text-white block mb-1">LET'S </span>
-              <span className="text-[#15a36e] block">CONNECT</span>
-            </h1>
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-2xl leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Connect with our team for investor onboarding, asset tokenization, legal compliance, or technical integration.
-            </p>
-          </motion.div>
-        </div>
-      </section>
 
       {/* Typeform Section */}
       <section id="typeform-section" className="relative py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
