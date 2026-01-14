@@ -6,7 +6,7 @@ import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white py-6 sm:py-8 md:py-10 lg:py-12 overflow-x-hidden overflow-y-visible">
+    <section className="w-full bg-background-white pt-2 sm:pt-3 md:pt-4 lg:pt-6 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-x-hidden overflow-y-visible">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Heading - Always at Top */}
         <div className="text-left mb-6 sm:mb-8 md:mb-10">

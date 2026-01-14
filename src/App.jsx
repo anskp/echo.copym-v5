@@ -70,7 +70,7 @@ function App() {
           <Route path="/tokenization" element={<TokenizationHub />} />
           <Route path="/launchkit" element={<Launchkit />} />
 
-          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/contact" element={<Contact />} /> */}
 
           <Route path="/zerogas" element={<ZeroGas />} />
           <Route path="/privacy-ai" element={<PrivacyAi />} />
