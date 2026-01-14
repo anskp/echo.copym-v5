@@ -14,32 +14,51 @@ const HowItWorksSection = () => {
   const panel2Ref = useRef(null);
 
   useLayoutEffect(() => {
+    // Ensure refs are available
+    if (!containerRef.current || !panel2Ref.current) return;
+
     let ctx = gsap.context(() => {
+      // Kill any existing ScrollTriggers on this element
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.trigger === containerRef.current) {
+          trigger.kill();
+        }
+      });
+
       const timeline = gsap.timeline({
         scrollTrigger: {
           trigger: containerRef.current,
           pin: true,
-          scrub: 1, // Smooth scrubbing
-          anticipatePin: 1, // Reduce jitter
+          scrub: 1,
+          anticipatePin: 1,
           start: "top top",
-          end: "+=150%" // Length of the scroll distance (increased to 1.5x height to slow down)
+          end: "+=150%",
+          invalidateOnRefresh: true,
+          // markers: true, // Uncomment for debugging
         }
       });
 
-      // Logic:
-      // 0-50% scroll: Panel 1 static (no animation happening, effectively waiting).
-      // 50-100% scroll: Panel 2 slides in.
-
-      // To achieve this with a timeline attached to the whole scroll distance:
-      // We can insert an empty tween for the first half, then the slide for the second half.
-
+      // Wait for first 50%, then slide in panel 2 for second 50%
       timeline
-        .to({}, { duration: 1 }) // Wait for first 50% (relative units)
-        .to(panel2Ref.current, { xPercent: -100, duration: 1, ease: "none" }); // Slide in for second 50%
+        .to({}, { duration: 1 })
+        .to(panel2Ref.current, { xPercent: -100, duration: 1, ease: "none" });
 
     }, containerRef);
 
-    return () => ctx.revert();
+    // Refresh ScrollTrigger after a short delay to ensure proper calculation
+    const refreshTimeout = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100);
+
+    return () => {
+      clearTimeout(refreshTimeout);
+      ctx.revert();
+      ScrollTrigger.getAll().forEach(trigger => {
+        if (trigger.vars.trigger === containerRef.current) {
+          trigger.kill();
+        }
+      });
+    };
   }, []);
 
   return (

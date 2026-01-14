@@ -16,24 +16,28 @@ const TokenizeAssetsSection = () => {
       title: "Gold and Metals",
       description: "Invest in precious metals and commodities. Diversify your portfolio with gold, silver, and other valuable metals through secure digital tokens.",
       image: maskcard1,
+      roi: "82%"
     },
     {
       id: 2,
       title: "Fine Art",
       description: "Own fractional shares of masterpieces and contemporary art. Access exclusive art collections and benefit from the appreciation of cultural assets.",
       image: maskcard2,
+      roi: "68%"
     },
     {
       id: 3,
       title: "Carbon Credits",
       description: "Support environmental initiatives while earning returns. Invest in verified carbon credit projects and contribute to a sustainable future.",
       image: maskcard3,
+      roi: "91%"
     },
     {
       id: 4,
       title: "Real Estate",
       description: "Access premium real estate investments globally. From luxury properties to commercial buildings, own fractional shares of high-value assets.",
       image: maskcard4,
+      roi: "76%"
     }
   ];
 
@@ -67,7 +71,7 @@ const TokenizeAssetsSection = () => {
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
                     </svg>
-                    <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>76%</span>
+                    <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>{asset?.roi}</span>
 
                   </div>
 
