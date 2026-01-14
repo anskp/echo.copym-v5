@@ -31,7 +31,7 @@ const FeatureSection = () => {
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -71,7 +71,7 @@ const FeatureSection = () => {
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -111,7 +111,7 @@ const FeatureSection = () => {
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -151,7 +151,7 @@ const FeatureSection = () => {
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:

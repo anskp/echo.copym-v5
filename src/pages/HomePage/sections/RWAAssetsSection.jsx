@@ -68,17 +68,10 @@ const TokenizeAssetsSection = () => {
                       <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
                     </svg>
                     <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>76%</span>
-                    <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>ROI</span>
+
                   </div>
 
-                  {/* APR Badge */}
-                  <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#fee2e2] border border-[#fecaca]/50 shadow-sm">
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M6 10L1.5 2.5H10.5L6 10Z" fill="#ef4444" />
-                    </svg>
-                    <span className="text-xs sm:text-sm font-bold text-[#ef4444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>20%</span>
-                    <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>APR</span>
-                  </div>
+
                 </div>
 
                 {/* Asset Image - Top, Centered - Fixed Height */}

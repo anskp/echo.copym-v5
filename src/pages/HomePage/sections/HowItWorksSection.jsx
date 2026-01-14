@@ -43,7 +43,7 @@ const HowItWorksSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden relative bg-white">
+    <section ref={containerRef} className="w-full h-[500px] sm:h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden relative bg-white">
       {/* Top Header - Fixed/Static within pinned section */}
       <div className="relative w-full z-30 pt-0 pointer-events-none">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
@@ -65,7 +65,7 @@ const HowItWorksSection = () => {
 
 
       {/* Panel 1: Asset Owners */}
-      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-4 sm:pt-6">
+      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
           {/* Animation */}
@@ -77,7 +77,7 @@ const HowItWorksSection = () => {
               animationData={assetOwnersAnimation}
               loop={true}
               autoplay={true}
-              className="w-full h-auto"
+              className="w-[85%] sm:w-full h-auto"
             />
           </div>
         </div>
@@ -88,7 +88,7 @@ const HowItWorksSection = () => {
       {/* Using `left-full` puts it 100% to the right. Then we animate xPercent: -100 to bring it back to 0 (center). */}
       <div
         ref={panel2Ref}
-        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-4 sm:pt-6"
+        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
@@ -100,7 +100,7 @@ const HowItWorksSection = () => {
               animationData={investorsAnimation}
               loop={true}
               autoplay={true}
-              className="w-full h-auto"
+              className="w-[85%] sm:w-full h-auto"
             />
           </div>
         </div>

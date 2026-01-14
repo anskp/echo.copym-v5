@@ -116,19 +116,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="flex flex-col items-center text-center rounded-2xl bg-black px-6 py-8 sm:px-8 sm:py-10 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)] hover:shadow-[0_30px_80px_rgba(15,23,42,0.3)] transition-shadow duration-300"
             >
-              <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
-                <img
-                  src={Contact1Image}
-                  alt="Phone"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <h3 className="text-base sm:text-lg font-bold uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                PHONE NUMBER
-              </h3>
-              <p className="text-sm sm:text-base opacity-90" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                +91 1234567890
-              </p>
+
             </motion.div>
 
             {/* Email Card */}
