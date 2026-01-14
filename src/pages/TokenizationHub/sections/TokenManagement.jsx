@@ -86,8 +86,8 @@ export default function TokenManagement() {
                             <div className="relative z-10 w-full p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 group-hover:h-[60%] group-hover:justify-start group-hover:pt-10 md:group-hover:pt-14">
                                 {/* Icon (Fades out and collapses on hover) */}
                                 <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-4 sm:mb-5 overflow-hidden flex shrink-0">
-                                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-50 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                                        <img src={feature.icon} alt={feature.title} className="w-7 h-7 sm:w-8 sm:h-8 object-contain" />
+                                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-xl sm:rounded-2xl flex items-center justify-center">
+                                        <img src={feature.icon} alt={feature.title} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                                     </div>
                                 </div>
 

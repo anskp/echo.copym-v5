@@ -1,29 +1,32 @@
 // src/pages/Zerogas/sections/WhyItMatters.jsx
 
 import React from 'react';
-import { Globe, DollarSign, Users, ShieldCheck } from 'lucide-react';
+import tiicon1 from '../../../components/icons/Tokenization/tiicon1.png';
+import tiicon2 from '../../../components/icons/Tokenization/tiicon2.png';
+import tiicon3 from '../../../components/icons/Tokenization/tiicon3.png';
+import tiicon4 from '../../../components/icons/Tokenization/tiicon4.png';
 
 export default function WhyItMatters() {
   const whyZeroGasFeatures = [
     {
       title: "Mass adoption",
       description: "Eliminates the single biggest friction point for new users - acquiring and managing gas tokens.",
-      icon: Globe
+      icon: tiicon4
     },
     {
       title: "Predictable costs",
       description: "Enterprises and institutions can onboard without volatile gas fees impacting their operational budgets.",
-      icon: DollarSign
+      icon: tiicon2
     },
     {
       title: "Higher participation and liquidity",
       description: "When users don't worry about gas, they operate more freely and frequently. This increases overall platform engagement.",
-      icon: Users
+      icon: tiicon1
     },
     {
       title: "Ideal for real-world and regulated assets",
       description: "With zero gas, you can enforce strict access controls and compliance rules without penalizing authorized users.",
-      icon: ShieldCheck
+      icon: tiicon3
     }
   ];
 
@@ -66,8 +69,11 @@ export default function WhyItMatters() {
             return (
               <div key={index} className="flex flex-col items-start">
                 {/* Icon Circle */}
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-3">
-                  <IconComponent className="text-white" size={28} />
+                <div
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-0 overflow-hidden"
+                  style={{ boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.08)' }}
+                >
+                  <img src={feature.icon} alt={feature.title} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                 </div>
 
                 {/* Title */}

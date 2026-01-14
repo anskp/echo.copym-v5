@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
+import tiicon4 from '../components/icons/Tokenization/tiicon4.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,7 +54,7 @@ export default function Header() {
           path: "/tokenization"
         },
         {
-          icon: <FaUsers className="w-5 h-5" />,
+          icon: <img src={tiicon4} alt="Marketplace" className="w-5 h-5 object-contain" />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"

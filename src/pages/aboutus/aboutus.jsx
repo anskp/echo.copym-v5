@@ -21,7 +21,7 @@ import {
     GiBinoculars,
     GiHourglass
 } from "react-icons/gi";
-import TestimonialsSection from "../HomePage/sections/Testimonials";
+
 
 
 const AboutUs = () => {
@@ -728,8 +728,7 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* Section 8: Testimonials */}
-            <TestimonialsSection />
+
         </div>
     );
 };
