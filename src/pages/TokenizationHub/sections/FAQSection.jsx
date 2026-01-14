@@ -73,25 +73,25 @@ export default function FAQSection() {
 
   const faqs = [
     {
-      question: "What is Copym and how does it work?",
-      answer: "Copym is a real-world asset tokenization platform that allows you to invest in fractional ownership of high-value assets like real estate, commodities, carbon credits, and luxury items. Our marketplace connects investors with exclusive investment opportunities."
+      question: "How does the tokenization process work on CopyM?",
+      answer: "CopyM's tokenization process involves four key steps: Asset Onboarding (legal structuring and documentation), Smart Contract Deployment (creating secure blockchain tokens), Compliance Verification (KYC/AML and regulatory checks), and Token Distribution (issuing fractional ownership to investors). The entire process is streamlined and typically takes 2-4 weeks."
     },
     {
-      question: "What types of assets can I invest in on Copym?",
-      answer: "Our marketplace offers diverse real-world assets including commercial and residential real estate, precious metals, renewable energy projects, carbon credits, fine art, and luxury collectibles - all available for fractional ownership starting from small amounts."
+      question: "What types of assets can be tokenized on the platform?",
+      answer: "CopyM supports tokenization of diverse real-world assets including real estate properties, debt instruments, commodities (gold, silver, oil), art and collectibles, infrastructure projects, and carbon credits. Each asset class is legally structured and compliant with relevant regulations."
     },
     {
-      question: "How secure is my investment on Copym?",
-      answer: "Your investments are protected with institutional-grade security, blockchain transparency, and regulatory compliance. All assets are legally tokenized and backed by real-world value, with your ownership recorded on secure blockchain technology."
+      question: "How does CopyM ensure regulatory compliance for tokenized assets?",
+      answer: "We work with legal partners to ensure all tokenized assets comply with securities regulations, implement robust KYC/AML procedures for all participants, maintain proper custody arrangements through regulated partners, and provide transparent on-chain documentation. All offerings are structured to meet local and international compliance requirements."
     },
     {
-      question: "What are the benefits of investing through Copym?",
-      answer: "Enjoy passive income from rental yields and asset appreciation, diversify your portfolio with institutional-grade investments, access previously unavailable opportunities, and trade your fractional ownership anytime through our integrated marketplace."
+      question: "What token management features does CopyM provide?",
+      answer: "CopyM offers comprehensive token management including real-time portfolio tracking, automated dividend and yield distribution, secondary market trading capabilities, transparent ownership records on blockchain, and detailed reporting for tax and compliance purposes. Asset owners can monitor and manage their tokenized assets through an intuitive dashboard."
     }
   ];
 
   return (
-    <section className="relative py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
+    <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-0 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">

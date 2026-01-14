@@ -89,7 +89,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
+    <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-0 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">

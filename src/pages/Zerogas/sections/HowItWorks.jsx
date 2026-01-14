@@ -10,7 +10,7 @@ import z4Animation from '../../../components/lotties/Z4.json';
 
 const HowItWorks = () => {
   return (
-    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white">
+    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
       {/* Main Heading */}
       <SectionHeader
         title="How Zero Gas works ?"
@@ -26,10 +26,10 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -48,11 +48,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               GAS ABSTRACTION
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.
             </p>
           </div>
@@ -64,10 +64,10 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -86,11 +86,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Left */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               META-TRANSACTIONS
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.
             </p>
           </div>
@@ -102,10 +102,10 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -124,11 +124,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               SPONSORED TRANSACTIONS
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.
             </p>
           </div>
@@ -140,10 +140,10 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row-reverse items-center gap-6 lg:gap-8"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Right */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -162,11 +162,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Left */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               OPTIMIZED INFRASTRUCTURE
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.
             </p>
           </div>
@@ -178,10 +178,10 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="flex flex-col lg:flex-row items-center gap-6 lg:gap-8"
+          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
         >
           {/* Graphic - Left */}
-          <div className="w-full lg:w-1/2 flex justify-center lg:justify-start">
+          <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
               className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
@@ -200,11 +200,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full text-center lg:text-left">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               ENTERPRISE-GRADE UX
             </h3>
-            <p className="text-base sm:text-lg md:text-lg text-black leading-normal" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.
             </p>
           </div>

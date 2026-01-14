@@ -219,8 +219,16 @@ export default function Typeform() {
   };
 
   return (
-    <div className="min-h-[300px] text-white flex items-center justify-center px-1 sm:px-4">
-      <div className="relative w-full max-w-5xl group transition-all duration-500 overflow-hidden">
+    <div className="min-h-[300px] text-white flex items-center justify-center px-1 sm:px-4 relative">
+      {/* Logo Background Pattern */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: 'url(/assets/copym/png/Copym-05-1.png)',
+        backgroundRepeat: 'repeat',
+        backgroundSize: '150px',
+        backgroundPosition: 'center'
+      }}></div>
+
+      <div className="relative w-full max-w-5xl group transition-all duration-500 overflow-hidden z-10">
         {/* Removed Silk Background */}
 
 
@@ -504,8 +512,8 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                           key={opt}
                           onClick={() => onChangeFunction(opt)}
                           className={`px-8 py-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${active
-                              ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg"
-                              : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white text-black"
+                            ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg"
+                            : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white text-black"
                             }`}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}

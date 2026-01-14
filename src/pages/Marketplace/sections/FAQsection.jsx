@@ -89,18 +89,22 @@ export default function FAQsection() {
   ];
 
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-0 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16">
-          <h2
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 sm:mb-6 uppercase dm-sans px-4"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
-          >
-            <span className="text-black">FAQ's </span>
-          </h2>
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2
+              className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
+              style={{ fontFamily: 'DM Sans, sans-serif' }}
+            >
+              <span className="text-[#15a36e]">FAQ's </span>
+
+            </h2>
+            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+          </div>
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-4 sm:mb-6 md:mb-8 px-4"
+            className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
             style={{ fontFamily: 'DM Sans, sans-serif' }}
           >
             These FAQ's questions might have the answer, but if not, our support team is just a message away!
@@ -108,39 +112,21 @@ export default function FAQsection() {
 
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 md:gap-12 lg:gap-16 items-start">
-          {/* Left Side - FAQ List */}
-          <div className="order-2 lg:order-1">
-            {faqs.map((faq, index) => (
-              <FAQItem
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                isOpen={openFAQ === index}
-                onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
-              />
-            ))}
-          </div>
-
-          {/* Right Side - Image and Support Info */}
-          <div className="flex flex-col order-1 lg:order-2">
-            {/* Image */}
-            <div className="mb-6 sm:mb-8 md:mb-12 flex justify-center lg:justify-end">
-              <img
-                src="/assets/Images/ai-overvew.png"
-                alt="FAQ Illustration"
-                className="w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-lg h-auto object-contain"
-                style={{
-                  maxHeight: '300px'
-                }}
-              />
-            </div>
-
-            {/* Support Card */}
-
-          </div>
+        {/* FAQ List */}
+        <div>
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openFAQ === index}
+              onToggle={() => setOpenFAQ(openFAQ === index ? -1 : index)}
+            />
+          ))}
         </div>
-        <div className="flex justify-center mt-8 sm:mt-10 md:mt-12">
+
+        {/* Contact Button */}
+        <div className="flex justify-center mt-8">
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"

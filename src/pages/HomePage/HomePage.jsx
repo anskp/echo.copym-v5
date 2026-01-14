@@ -7,6 +7,7 @@ import RWAAssetsSection from "./sections/RWAAssetsSection";
 import NetworkShowcase from "./sections/NetworkShowcase";
 import AuditSection from "./sections/AuditSection";
 import FAQSection from "./sections/FAQSection";
+import CTASection from "./sections/CTASection";
 import SupportedAssets from "./sections/SupportedAssets";
 import FeatureSection from "./sections/FeatureSection";
 import WhoWeServe from "./sections/WhoWeServe";
@@ -19,11 +20,11 @@ import GreenarySection from "./sections/GreenarySection";
 export default function HomePage() {
 
   return (
-     <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden w-full">
+    <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden w-full">
       <Hero />
       <LogoCarousel />
       {/* Lottie Cards Section - Replaced SVG layouts */}
-      
+
       <FeatureSection />
       <WhoWeServe />
       <ProductStackReview />
@@ -35,9 +36,10 @@ export default function HomePage() {
       <AuditSection />
       <FAQSection />
       <TestimonialsSection />
-      <GreenarySection />
+      {/* <GreenarySection /> */}
+      <CTASection />
       {/* <SupportedAssets /> */}
-      
+
     </div>
   );
 }

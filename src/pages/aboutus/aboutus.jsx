@@ -94,12 +94,14 @@ const AboutUs = () => {
 
 
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-                        <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
-                                <span className="text-white">COMPANY </span>
-                                <span className="text-[#15a36e]">OVERVIEW</span>
-                            </h2>
-
+                        <div className="text-left mb-8 sm:mb-12 lg:mb-16">
+                            <div className="relative w-fit mb-3 sm:mb-4">
+                                <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <span className="text-white">COMPANY </span>
+                                    <span className="text-[#15a36e]">OVERVIEW</span>
+                                </h2>
+                                <div className="absolute bottom-0 left-0 bg-white" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
@@ -198,147 +200,115 @@ const AboutUs = () => {
             </section>
 
             {/* Section 4: Core Values */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
-                            <span className="text-black">CORE </span>
-                            <span className="text-[#15a36e]">VALUES</span>
-                        </h2>
+            {/* Section 4: Core Values */}
+            <section className="py-20 lg:py-32 bg-white overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
+                        {/* Left Column: Heading & Description */}
+                        <div className="w-full lg:w-5/12 pt-10 lg:pt-20 relative">
+                            <motion.div
+                                initial={{ opacity: 0, x: -30 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                                viewport={{ once: true }}
+                            >
+                                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our<br />
+                                    Core Values
+                                </h2>
+                                <p className="text-lg text-gray-600 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
+                                </p>
 
-                    </div>
+                                {/* Decorative Arrow SVG */}
+                                <div className="hidden lg:block absolute bottom-0 right-0 transform translate-y-full translate-x-1/4">
+                                    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <motion.path
+                                            d="M20 20 C 50 100, 150 100, 180 80"
+                                            stroke="black"
+                                            strokeWidth="2"
+                                            fill="none"
+                                            initial={{ pathLength: 0 }}
+                                            whileInView={{ pathLength: 1 }}
+                                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                                        />
+                                        <motion.path
+                                            d="M180 80 L 170 75 M 180 80 L 175 90"
+                                            stroke="black"
+                                            strokeWidth="2"
+                                            fill="none"
+                                            initial={{ opacity: 0 }}
+                                            whileInView={{ opacity: 1 }}
+                                            transition={{ delay: 1.4, duration: 0.2 }}
+                                        />
+                                    </svg>
+                                </div>
+                            </motion.div>
+                        </div>
 
-                    {/* Vertical Stack of Value Cards */}
-                    <div className="flex flex-col gap-4">
-                        {[
-                            {
-                                title: "Integrity",
-                                description: "We operate with complete transparency and ethical practices in all our dealings.",
-                                badge: "100% Ethical"
-                            },
-                            {
-                                title: "Security",
-                                description: "Enterprise-grade security measures protect every transaction and asset on our platform.",
-                                badge: "Secure"
-                            },
-                            {
-                                title: "Innovation",
-                                description: "We continuously push the boundaries of what's possible in asset tokenization.",
-                                badge: "Cutting-Edge"
-                            },
-                            {
-                                title: "Inclusivity",
-                                description: "We make premium investments accessible to everyone, regardless of background.",
-                                badge: "Open Access"
-                            }
-                        ].map((value, index) => {
-                            const headerHeight = '48px';
-                            const svgWidth = index === 0 ? 50 : 48;
-                            const svgHeightTop = 18;
-                            const svgHeightBottom = 18;
+                        {/* Right Column: Images & Cards */}
+                        <div className="w-full lg:w-7/12 relative">
+                            {/* Background Image Container */}
+                            <div className="absolute top-0 right-0 w-[85%] h-[90%] bg-gray-100 rounded-[40px] overflow-hidden -z-10 transform rotate-1">
+                                <img
+                                    src="/assets/Images/image-2.png"
+                                    alt="Core Values Background"
+                                    className="w-full h-full object-cover opacity-80"
+                                />
+                            </div>
 
-                            return (
-                                <motion.div
-                                    key={index}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                                    viewport={{ once: true }}
-                                    style={{
-                                        position: 'relative',
-                                        marginBottom: '16px',
-                                        background: '#e6f2ed',
-                                        borderRadius: '0px',
-                                        overflow: 'hidden',
-                                        width: '100%'
-                                    }}
-                                >
-                                    {/* Green Header Bar with Heading */}
-                                    <div style={{
-                                        height: headerHeight,
-                                        background: 'rgba(179,255,227,0.4)',
-                                        position: 'relative',
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                        justifyContent: 'center',
-                                    }}>
-                                        <h3 style={{
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            fontSize: 'clamp(14px, 2vw, 18px)',
-                                            fontWeight: 600,
-                                            textAlign: 'center',
-                                            color: '#000',
-                                            margin: '0'
-                                        }}>{value.title}</h3>
-                                    </div>
-
-                                    {/* Grey Content Area */}
-                                    <div style={{
-                                        padding: '15px 20px',
-                                        background: '#f0f5f3',
-                                        position: 'relative'
-                                    }}>
-                                        <p style={{
-                                            fontFamily: 'DM Sans, sans-serif',
-                                            fontSize: 'clamp(12px, 1.5vw, 14px)',
-                                            textAlign: 'left',
-                                            color: '#000',
-                                            lineHeight: '1.4',
-                                            margin: '0 0 20px 0'
-                                        }}>
-                                            {value.description}
-                                        </p>
-
-                                        {/* Status Badge */}
-                                        <div style={{
-                                            position: 'absolute',
-                                            bottom: '5px',
-                                            right: '10px',
-                                            background: '#fff',
-                                            padding: '3px 9px',
-                                            borderRadius: '20px',
-                                            fontSize: 'clamp(10px, 1.4vw, 13px)',
-                                            color: '#15a36e',
-                                            whiteSpace: 'nowrap'
-                                        }}>
-                                            {value.badge}
+                            {/* Cards Stack */}
+                            <div className="flex flex-col gap-6 pt-12 pr-4 sm:pr-12 md:pr-24 lg:pr-32">
+                                {[
+                                    {
+                                        title: "Integrity",
+                                        description: "We operate with complete transparency and ethical practices in all our dealings.",
+                                        number: "01"
+                                    },
+                                    {
+                                        title: "Security",
+                                        description: "Enterprise-grade security measures protect every transaction and asset on our platform.",
+                                        number: "02"
+                                    },
+                                    {
+                                        title: "Innovation",
+                                        description: "We continuously push the boundaries of what's possible in asset tokenization.",
+                                        number: "03"
+                                    },
+                                    {
+                                        title: "Inclusivity",
+                                        description: "We make premium investments accessible to everyone, regardless of background.",
+                                        number: "04"
+                                    }
+                                ].map((value, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: 50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.15 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50 max-w-md ml-auto"
+                                        style={{
+                                            marginRight: `${index % 2 === 0 ? '20px' : '0px'}` // Stagger effect
+                                        }}
+                                    >
+                                        <div className="flex flex-col gap-4">
+                                            <div className="flex items-baseline justify-between">
+                                                <span className="text-4xl font-bold text-gray-200" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    {value.number}
+                                                </span>
+                                                <h3 className="text-xl font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    {value.title}
+                                                </h3>
+                                            </div>
+                                            <p className="text-gray-600 leading-relaxed text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                {value.description}
+                                            </p>
                                         </div>
-                                    </div>
-
-                                    {/* Straight Corner Lines - Top Right */}
-                                    <svg width={svgWidth} height={svgHeightTop} viewBox={`0 0 ${svgWidth} ${svgHeightTop}`} fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                                        style={{ position: 'absolute', top: '0', right: '0', zIndex: 1 }}>
-                                        <line x1="0" y1="2" x2={index === 0 ? "48" : "46"} y2="2" stroke="#7DD1B2" strokeWidth="3" />
-                                        <line x1={index === 0 ? "48" : "46"} y1="2" x2={index === 0 ? "48" : "46"} y2="18" stroke="#7DD1B2" strokeWidth="3" />
-                                    </svg>
-
-                                    {/* Straight Corner Lines - Top Left */}
-                                    <svg width={32} height={svgHeightTop} viewBox={`0 0 32 ${svgHeightTop}`} fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                                        style={{ position: 'absolute', top: '0', left: '0', zIndex: 1 }}>
-                                        <line x1="32" y1="2" x2="2" y2="2" stroke="#7DD1B2" strokeWidth="3" />
-                                        <line x1="2" y1="2" x2="2" y2="18" stroke="#7DD1B2" strokeWidth="3" />
-                                    </svg>
-
-                                    {/* Straight Corner Lines - Bottom Right */}
-                                    <svg width={svgWidth} height={svgHeightBottom} viewBox={`0 0 ${svgWidth} ${svgHeightBottom}`} fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                                        style={{ position: 'absolute', bottom: '0', right: '0', zIndex: 1 }}>
-                                        <line x1="0" y1="16" x2={index === 0 ? "48" : "46"} y2="16" stroke="#7DD1B2" strokeWidth="3" />
-                                        <line x1={index === 0 ? "48" : "46"} y1="16" x2={index === 0 ? "48" : "46"} y2="0" stroke="#7DD1B2" strokeWidth="3" />
-                                    </svg>
-
-                                    {/* Straight Corner Lines - Bottom Left */}
-                                    <svg width={32} height={svgHeightBottom} viewBox={`0 0 32 ${svgHeightBottom}`} fill="none"
-                                        xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"
-                                        style={{ position: 'absolute', bottom: '0', left: '0', zIndex: 1 }}>
-                                        <line x1="32" y1="16" x2="2" y2="16" stroke="#7DD1B2" strokeWidth="3" />
-                                        <line x1="2" y1="16" x2="2" y2="0" stroke="#7DD1B2" strokeWidth="3" />
-                                    </svg>
-                                </motion.div>
-                            );
-                        })}
+                                    </motion.div>
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -347,11 +317,15 @@ const AboutUs = () => {
             <section className="relative bg-black py-16 sm:py-20 lg:py-24">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header */}
-                    <div className="text-center mb-12 sm:mb-16 lg:mb-20">
-                        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" >
-                            <span className="text-white">COMPANY </span>
-                            <span className="text-[#15a36e]">TIMELINE</span>
-                        </h2>
+                    {/* Section Header */}
+                    <div className="text-left mb-12 sm:mb-16 lg:mb-20">
+                        <div className="relative w-fit mb-3 sm:mb-4">
+                            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <span className="text-white">COMPANY </span>
+                                <span className="text-[#15a36e]">TIMELINE</span>
+                            </h2>
+                            <div className="absolute bottom-0 left-0 bg-white" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+                        </div>
                     </div>
 
                     {/* Timeline Container */}
@@ -397,7 +371,7 @@ const AboutUs = () => {
                                 <h3
                                     className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
                                     style={{
-                                        fontFamily: 'DM Sans, sans-serif',
+                                        fontFamily: 'Palanquin, sans-serif',
                                         color: '#15a36e'
                                     }}
                                 >
@@ -408,7 +382,7 @@ const AboutUs = () => {
                                 <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
                                     style={{
-                                        fontFamily: 'DM Sans, sans-serif',
+                                        fontFamily: 'Palanquin, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
                                     }}
@@ -438,7 +412,7 @@ const AboutUs = () => {
                                 <h3
                                     className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
                                     style={{
-                                        fontFamily: 'DM Sans, sans-serif',
+                                        fontFamily: 'Palanquin, sans-serif',
                                         color: '#15a36e'
                                     }}
                                 >
@@ -449,7 +423,7 @@ const AboutUs = () => {
                                 <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
                                     style={{
-                                        fontFamily: 'DM Sans, sans-serif',
+                                        fontFamily: 'Palanquin, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
                                     }}
@@ -490,7 +464,7 @@ const AboutUs = () => {
                                 <p
                                     className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
                                     style={{
-                                        fontFamily: 'DM Sans, sans-serif',
+                                        fontFamily: 'Palanquin, sans-serif',
                                         color: '#ffffff',
                                         lineHeight: '1.6'
                                     }}

@@ -63,7 +63,7 @@ const Contact = () => {
             </div>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               Fill out the form below and our team will get back to you within 24 hours.
             </p>
@@ -197,7 +197,7 @@ const Contact = () => {
             </div>
             <p
               className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               Visit our office or get in touch with our team.
             </p>
