@@ -26,13 +26,15 @@ export default function AIInvestingSection() {
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
         <div className="flex flex-col lg:hidden items-center text-left space-y-8 sm:space-y-10 md:space-y-12 overflow-visible">
           {/* Mobile Image with Text Containers */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
+          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
             <div className="relative z-20">
-              <img
-                src="/assets/Images/Ai-fon-view.png"
-                alt="AI Investment Interface"
-                className="w-full h-auto max-w-full"
-              />
+              <div className="relative overflow-hidden max-h-[300px] sm:max-h-[350px] md:max-h-[400px]">
+                <img
+                  src="/assets/Images/Ai-fon-view.png"
+                  alt="AI Investment Interface"
+                  className="w-full h-auto max-w-full object-contain"
+                />
+              </div>
 
               {/* Left Text Container - Mobile: positioned to the left */}
               <motion.div
@@ -108,15 +110,18 @@ export default function AIInvestingSection() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[400px] lg:min-h-[500px]">
               {/* Center - Mobile Image */}
               <div className="relative flex justify-center items-center z-20">
-                <img
-                  src="/assets/Images/Ai-fon-view.png"
-                  alt="AI Investment Interface"
-                  className="w-64 h-80 mt-20 sm:w-96 sm:h-[384px] lg:w-[450px] lg:h-[540px] xl:w-[500px] xl:h-[600px]"
-                />
+                {/* Image Wrapper for Bottom Cropping */}
+                <div className="relative overflow-hidden max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] xl:max-h-[650px] flex items-start justify-center  -translate-y-12 translate-x-28">
+                  <img
+                    src="/assets/Images/Ai-fon-view.png"
+                    alt="AI Investment Interface"
+                    className="w-64 h-auto sm:w-[360px] lg:w-[500px] xl:w-[600px] -mt-10 object-contain z-15"
+                  />
+                </div>
 
                 {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}
                 <motion.div
-                  className="absolute left-[-200px] top-[130px] hidden lg:block"
+                  className="absolute left-[-160px] top-[130px] hidden lg:block"
                   initial={{ opacity: 0, scale: 0.8, x: -30 }}
                   whileInView={{ opacity: 1, scale: 1, x: 0 }}
                   viewport={{ once: true, margin: "-100px" }}

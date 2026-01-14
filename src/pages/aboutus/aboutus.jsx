@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 // Removed LavaLamp background
 import {
     GiShield,
@@ -22,177 +22,138 @@ import TestimonialsSection from "../HomePage/sections/Testimonials";
 
 
 const AboutUs = () => {
+    const [activeTab, setActiveTab] = useState(0);
+
     return (
         <div className="min-h-screen bg-white">
-            {/* Section 1: Hero Section */}
-            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden">
-                {/* Background Video REPLACED */}
-                <div className="absolute inset-0 z-0 bg-black">
-                    {/* Light overlay to maintain readability and light aesthetic */}
-                    <div className="absolute inset-0 "></div>
-                </div>
-
-                {/* Subtle Geometric Pattern Background */}
-                <div className="absolute inset-0 z-[1] opacity-[0.05]">
-                    <div
-                        className="w-full h-full"
-                        style={{
-                            backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(0,0,0,0.1) 35px, rgba(0,0,0,0.1) 70px)`,
-                        }}
-                    ></div>
-                </div>
-
-                <div className="relative z-10 w-full h-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-[56px] flex items-center justify-center">
-                    <div className="flex flex-col items-center justify-center w-full">
-                        <div className="flex flex-col items-center justify-center w-full max-w-[1200px] lg:max-w-[1400px] xl:max-w-[1600px] mx-auto">
-
-                            {/* Main Heading */}
-                            <h1 className="text-center mb-3 sm:mb-4 md:mb-5" >
-                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-white">
-                                    EXPLORE TOKENIZED{' '}
-                                </span>
-                                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-[#15a36e]">
-                                    REAL-WORLD ASSETS
-                                </span>
-                            </h1>
-
-                            {/* Description */}
-                            <div className="flex flex-col items-center justify-center w-full">
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal leading-relaxed text-center text-white w-full mb-6 sm:mb-8 max-w-6xl mx-auto px-2" >
-                                    Transforming asset ownership through blockchain innovation and institutional-grade tokenization
-                                </p>
-
-                                {/* Hero Image Stack */}
-                                <div className="relative w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[550px] xl:max-w-[600px] h-[150px] sm:h-[180px] md:h-[220px] lg:h-[280px] xl:h-[320px] mx-auto mb-8 sm:mb-10 md:mb-12 lg:mb-[40px] xl:mb-[50px]">
-                                    <img
-                                        src="/assets/copym/png/Copym-3d.png"
-                                        alt="Real World Asset Tokenization"
-                                        className="absolute inset-0 w-full h-full object-contain"
-                                    />
-                                </div>
-
-                                {/* CTA Button */}
-                                <button
-                                    className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
-
-                                >
-                                    EXPLORE OUR ASSETS
-                                    <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 2: Company Overview */}
-            <section className="relative w-full h-screen min-h-[600px] sm:min-h-[700px] lg:h-screen xl:h-screen overflow-hidden flex items-center">
-                {/* Main Content */}
-                <div className="relative z-10 bg-black w-full h-full overflow-hidden flex items-center">
 
 
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-                        <div className="text-left mb-8 sm:mb-12 lg:mb-16">
-                            <div className="relative w-fit mb-3 sm:mb-4">
-                                <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    <span className="text-white">COMPANY </span>
-                                    <span className="text-[#15a36e]">OVERVIEW</span>
-                                </h2>
-                                <div className="absolute bottom-0 left-0 bg-white" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
-                            </div>
-                        </div>
-
-                        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
-                            {/* Left Side - Circular Image */}
-                            <div className="flex justify-center lg:justify-start order-2 lg:order-1">
-                                <div className="relative w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]">
-                                    <div className="absolute inset-0 rounded-full overflow-hidden shadow-2xl border-4 border-[#15a36e]/30">
-                                        <img
-                                            src="/assets/Images/Contact-us.png"
-                                            alt="Company Overview"
-                                            className="w-full h-full object-cover"
-                                        />
-                                    </div>
-                                    <div className="absolute inset-0 rounded-full border-2 border-[#15a36e] opacity-50"></div>
-                                </div>
-                            </div>
-
-                            {/* Right Side - Text Content */}
-                            <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-1 lg:order-2 text-center lg:text-left">
-                                <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        COPYm is a leading <span className="font-semibold text-white">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
-                                    </p>
-                                </div>
-
-                                <div className="space-y-4">
-                                    <h3 className="text-xl sm:text-2xl font-bold text-white mb-4" >
-                                        Why We Exist:
-                                    </h3>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        The traditional asset market is <span className="font-semibold text-white">fragmented, slow, and geographically restricted</span>. COPYm is here to change that.
-                                    </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        By merging blockchain technology with real-world compliance, we create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Section 3: Mission & Vision */}
-            <section className="py-12 sm:py-16 lg:py-20 bg-white">
+            {/* Unified Company Overview Section */}
+            <section className="py-10 lg:py-16 bg-white overflow-hidden" id="company-overview">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-10">
-                        {/* Mission - Left Side */}
-                        <div className="flex flex-col overflow-hidden ">
-                            {/* Black Content Area */}
-                            <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
-                                <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
-                                    </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
-                                    </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        Our mission extends beyond technology — we strive to foster financial inclusion and create a more equitable economic landscape where wealth generation is not limited by geographical boundaries.
-                                    </p>
-                                </div>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 lg:mb-16">
+                        {/* LEFT TOP: Dynamic Content Area */}
+                        <div className="relative pt-10">
+                            <AnimatePresence mode="wait">
+                                <motion.div
+                                    key={activeTab}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -20 }}
+                                    transition={{ duration: 0.5 }}
+                                >
+                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        {activeTab === 0 ? "Transforming Asset Ownership" :
+                                            activeTab === 1 ? "Democratizing Investment" :
+                                                "Borderless Future"}
+                                    </h2>
+                                    <div className="text-lg text-gray-600 leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        {activeTab === 0 && (
+                                            <>
+                                                <p>
+                                                    COPYm is a leading <span className="font-semibold text-black">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
+                                                </p>
+                                                <p>
+                                                    The traditional asset market is fragmented, slow, and geographically restricted. We merge blockchain technology with real-world compliance to create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
+                                                </p>
+                                            </>
+                                        )}
+                                        {activeTab === 1 && (
+                                            <>
+                                                <p>
+                                                    To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
+                                                </p>
+                                                <p>
+                                                    We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
+                                                </p>
+                                            </>
+                                        )}
+                                        {activeTab === 2 && (
+                                            <>
+                                                <p>
+                                                    We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
+                                                </p>
+                                                <p>
+                                                    Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers.
+                                                </p>
+                                            </>
+                                        )}
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+
+
+                        </div>
+
+                        {/* RIGHT TOP: Accordion / Interactive List */}
+                        <div className="flex flex-col gap-6 pt-10">
+                            {[
+                                { id: 0, title: "About Us", label: "01" },
+                                { id: 1, title: "Our Mission", label: "02" },
+                                { id: 2, title: "Our Vision", label: "03" }
+                            ].map((item) => (
+                                <motion.button
+                                    key={item.id}
+                                    onClick={() => setActiveTab(item.id)}
+                                    className={`w-full text-left p-6 sm:p-8 rounded-[20px] transition-all duration-300 border bg-white flex items-center justify-between group ${activeTab === item.id
+                                        ? 'border-gray-200 shadow-lg scale-[1.02]'
+                                        : 'border-transparent hover:bg-gray-50'
+                                        }`}
+                                    whileHover={{ scale: 1.01 }}
+                                    whileTap={{ scale: 0.99 }}
+                                >
+                                    <div className="flex items-center gap-6 sm:gap-8">
+                                        <span className="text-4xl font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            {item.label}
+                                        </span>
+                                        <span className={`text-xl sm:text-2xl font-medium ${activeTab === item.id ? 'text-black' : 'text-gray-500 group-hover:text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            {item.title}
+                                        </span>
+                                    </div>
+
+                                    {/* Arrow Icon */}
+                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${activeTab === item.id ? 'bg-[#15a36e] text-white' : 'bg-gray-100 text-gray-400 group-hover:bg-gray-200'}`}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                            className={`transform transition-transform duration-300 ${activeTab === item.id ? '-rotate-45' : 'rotate-0'}`}
+                                        >
+                                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </div>
+                                </motion.button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* BOTTOM: Image Area - Dual Grid */}
+                    <div className="relative mt-12 w-full">
+                        <div className="flex flex-col md:flex-row gap-6 h-[500px] sm:h-[600px] lg:h-[600px] w-full items-stretch">
+                            {/* Left Image - Narrower */}
+                            <div className="md:w-5/12 h-full rounded-l-[40px] rounded-r-none overflow-hidden">
+                                <img
+                                    src="/assets/Images/business-team.jpg"
+                                    alt="Office Building"
+                                    className="w-full h-full object-cover object-left scale-110"
+                                />
                             </div>
-                            {/* Colored Footer with Title */}
-                            <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
-                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" >
-                                    OUR MISSION
-                                </h3>
+
+                            {/* Right Image - Wider */}
+                            <div className="md:w-8/12 h-full rounded-r-[40px] rounded-l-none overflow-hidden bg-black">
+                                <img
+                                    src="/assets/Images/business-team.jpg"
+                                    alt="Team Collaboration"
+                                    className="w-full h-full object-cover object-[125%_center] scale-110"
+                                />
                             </div>
                         </div>
 
-                        {/* Vision - Right Side */}
-                        <div className="flex flex-col overflow-hidden ">
-                            {/* Black Content Area */}
-                            <div className="bg-black rounded-t-2xl p-5 sm:p-6 lg:p-8 flex-1">
-                                <div className="space-y-4">
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
-                                    </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        Our vision is to create a world where investment opportunities are not limited by geography, wealth, or traditional barriers.
-                                    </p>
-                                    <p className="text-white leading-relaxed text-base sm:text-lg" >
-                                        Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy.
-                                    </p>
-                                </div>
-                            </div>
-                            {/* Colored Footer with Title */}
-                            <div className="bg-[#EAFAF4] p-4 sm:p-5 lg:p-7">
-                                <h3 className="text-xl sm:text-2xl font-bold text-black uppercase text-center" >
-                                    OUR VISION
-                                </h3>
+                        {/* Company Logo Badge - Absolute Center Top */}
+                        <div className="absolute top-1/2 left-[38%] transform -translate-x-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center p-4">
+                            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-transparent flex items-center justify-center relative z-20">
+                                <img
+                                    src="/assets/copym/png/Copym-05-1.png"
+                                    alt="Copym Logo"
+                                    className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
+                                />
                             </div>
                         </div>
                     </div>
@@ -200,8 +161,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 4: Core Values */}
-            {/* Section 4: Core Values */}
-            <section className="py-20 lg:py-32 bg-white overflow-hidden">
+            <section className="py-10 lg:py-16 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                         {/* Left Column: Heading & Description */}
@@ -221,7 +181,7 @@ const AboutUs = () => {
                                 </p>
 
                                 {/* Decorative Arrow SVG */}
-                                <div className="hidden lg:block absolute bottom-0 right-0 transform translate-y-full translate-x-1/4">
+                                <div className="hidden lg:block absolute bottom-72 right-0 transform translate-x-1/4">
                                     <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <motion.path
                                             d="M20 20 C 50 100, 150 100, 180 80"
@@ -229,8 +189,8 @@ const AboutUs = () => {
                                             strokeWidth="2"
                                             fill="none"
                                             initial={{ pathLength: 0 }}
-                                            whileInView={{ pathLength: 1 }}
-                                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                                            animate={{ pathLength: 1 }}
+                                            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
                                         />
                                         <motion.path
                                             d="M180 80 L 170 75 M 180 80 L 175 90"
@@ -238,8 +198,8 @@ const AboutUs = () => {
                                             strokeWidth="2"
                                             fill="none"
                                             initial={{ opacity: 0 }}
-                                            whileInView={{ opacity: 1 }}
-                                            transition={{ delay: 1.4, duration: 0.2 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", delay: 1.5 }}
                                         />
                                     </svg>
                                 </div>
@@ -294,7 +254,7 @@ const AboutUs = () => {
                                     >
                                         <div className="flex flex-col gap-4">
                                             <div className="flex items-baseline justify-between">
-                                                <span className="text-4xl font-bold text-gray-200" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                <span className="text-4xl font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                     {value.number}
                                                 </span>
                                                 <h3 className="text-xl font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -314,7 +274,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 5: Company Timeline */}
-            <section className="relative bg-black py-16 sm:py-20 lg:py-24">
+            <section className="relative bg-black py-10 sm:py-12 lg:py-16">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header */}
                     {/* Section Header */}

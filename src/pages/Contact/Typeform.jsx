@@ -312,9 +312,7 @@ export default function Typeform() {
                     >
                       <span className="text-black text-sm">←</span>
                     </motion.button>
-                    <div className="h-12 w-12 rounded-2xl bg-[#15a36e]/20 grid place-items-center border border-[#15a36e]/30 shadow-sm flex-shrink-0">
-                      <step.icon className="w-6 h-6 text-[#15a36e]" />
-                    </div>
+
                     <div className="flex-1 min-w-[220px]">
                       <h2 className="text-2xl sm:text-3xl font-black text-black leading-tight uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>{step.label}</h2>
                       {step.helper && (
