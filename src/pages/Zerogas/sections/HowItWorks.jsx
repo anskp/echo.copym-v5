@@ -190,11 +190,10 @@ const HowItWorks = () => {
                   'radial-gradient(circle at 50% 50%, rgba(240,240,240,0.9), rgba(250,250,250,1))',
               }}
             >
-              <Lottie
-                animationData={z1Animation}
-                loop={true}
-                autoplay={true}
-                className="w-full h-full"
+              <img
+                src="/assets/Images/icons/gas-can.png"
+                alt="Enterprise Grade UX"
+                className="w-4/5 h-4/5 object-contain"
               />
             </div>
           </div>

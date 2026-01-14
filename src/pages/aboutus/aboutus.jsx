@@ -217,20 +217,22 @@ const AboutUs = () => {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.6, delay: 0.3 }}
                                         viewport={{ once: true }}
-                                        className="bg-white p-6 rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 border-2 border-[#15a36e]"
+                                        className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
                                     >
-                                        <div className="flex flex-col items-center text-center gap-3">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img
-                                                    src={Contact2Image}
-                                                    alt="Email"
-                                                    className="w-full h-full object-contain"
-                                                />
+                                        <div className="flex flex-col gap-2">
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                                    <img
+                                                        src={Contact2Image}
+                                                        alt="Email"
+                                                        className="w-full h-full object-contain"
+                                                    />
+                                                </div>
+                                                <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    E-MAIL ID
+                                                </h3>
                                             </div>
-                                            <h3 className="text-base font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                E-MAIL ID
-                                            </h3>
-                                            <p className="text-sm text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-xs text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 support@copym.xyz
                                             </p>
                                         </div>
@@ -242,20 +244,22 @@ const AboutUs = () => {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.6, delay: 0.4 }}
                                         viewport={{ once: true }}
-                                        className="bg-white p-6 rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 border-2 border-[#15a36e]"
+                                        className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
                                     >
-                                        <div className="flex flex-col items-center text-center gap-3">
-                                            <div className="w-12 h-12 flex items-center justify-center">
-                                                <img
-                                                    src={Contact3Image}
-                                                    alt="Address"
-                                                    className="w-full h-full object-contain"
-                                                />
+                                        <div className="flex flex-col gap-2">
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                                    <img
+                                                        src={Contact3Image}
+                                                        alt="Address"
+                                                        className="w-full h-full object-contain"
+                                                    />
+                                                </div>
+                                                <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    ADDRESS
+                                                </h3>
                                             </div>
-                                            <h3 className="text-base font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                ADDRESS
-                                            </h3>
-                                            <p className="text-sm text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-xs text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
                                             </p>
                                         </div>
@@ -659,9 +663,6 @@ const AboutUs = () => {
 
 
 
-            {/* Section 8: Testimonials */}
-            <TestimonialsSection />
-
             {/* Section 9: Contact Form */}
             <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -699,105 +700,36 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* Section 10: Contact Info & Map */}
-            <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+            {/* Section 10: Map Only */}
+            <section className="relative py-8 sm:py-10 md:py-12 lg:py-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Section Header */}
-                    <div className="text-left mb-8 sm:mb-10 lg:mb-12">
-                        <div className="relative w-fit mb-4">
-                            <h2
-                                className="inline-flex items-baseline gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase pb-2"
-                                style={{ fontFamily: 'Palanquin, sans-serif' }}
-                            >
-                                <span className="text-[#15a36e]">REACH </span>
-                                <span className="text-black">OUT</span>
-                            </h2>
-                            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 180px)', height: '1px' }}></div>
+                    {/* Map - Full Width */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-[400px] sm:h-[500px] lg:h-[600px]"
+                    >
+                        <div className="relative z-10 w-full h-full">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14529.56708688439!2d54.6152862!3d24.4326555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e458af42657e9%3A0x67586558872e4244!2sMasdar%20City%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1715674845000"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="Copym Office Location - Masdar City, Abu Dhabi"
+                                className="w-full h-full"
+                            ></iframe>
                         </div>
-                        <p
-                            className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-normal leading-relaxed tracking-wide mt-4 sm:mt-6"
-                            style={{ fontFamily: 'Palanquin, sans-serif' }}
-                        >
-                            Connect with us through any of these channels. We're here to help.
-                        </p>
-                    </div>
-
-                    {/* Two Column Layout: Cards Left, Map Right */}
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
-                        {/* Left Column: Email and Address Cards */}
-                        <div className="flex flex-col gap-8">
-                            {/* Email Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.1 }}
-                                viewport={{ once: true }}
-                                className="flex flex-col items-center text-center rounded-2xl bg-black px-8 py-10 sm:px-10 sm:py-12 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)] hover:shadow-[0_30px_80px_rgba(15,23,42,0.3)] transition-shadow duration-300"
-                            >
-                                <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mb-6 flex items-center justify-center">
-                                    <img
-                                        src={Contact2Image}
-                                        alt="Email"
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    E-MAIL ID
-                                </h3>
-                                <p className="text-base sm:text-lg opacity-90 break-words" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    support@copym.xyz
-                                </p>
-                            </motion.div>
-
-                            {/* Address Card */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                viewport={{ once: true }}
-                                className="flex flex-col items-center text-center rounded-2xl bg-black px-8 py-10 sm:px-10 sm:py-12 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)] hover:shadow-[0_30px_80px_rgba(15,23,42,0.3)] transition-shadow duration-300"
-                            >
-                                <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mb-6 flex items-center justify-center">
-                                    <img
-                                        src={Contact3Image}
-                                        alt="Address"
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-                                <h3 className="text-lg sm:text-xl md:text-2xl font-bold uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    ADDRESS
-                                </h3>
-                                <p className="text-base sm:text-lg opacity-90" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
-                                </p>
-                            </motion.div>
-                        </div>
-
-                        {/* Right Column: Map */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6, delay: 0.3 }}
-                            viewport={{ once: true }}
-                            className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-full min-h-[500px] lg:min-h-[600px]"
-                        >
-                            <div className="relative z-10 w-full h-full">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14529.56708688439!2d54.6152862!3d24.4326555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e458af42657e9%3A0x67586558872e4244!2sMasdar%20City%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1715674845000"
-                                    width="100%"
-                                    height="100%"
-                                    style={{ border: 0 }}
-                                    allowFullScreen
-                                    loading="lazy"
-                                    referrerPolicy="no-referrer-when-downgrade"
-                                    title="Copym Office Location - Masdar City, Abu Dhabi"
-                                    className="w-full h-full"
-                                ></iframe>
-                            </div>
-                        </motion.div>
-                    </div>
+                    </motion.div>
                 </div>
             </section>
+
+            {/* Section 8: Testimonials */}
+            <TestimonialsSection />
         </div>
     );
 };
