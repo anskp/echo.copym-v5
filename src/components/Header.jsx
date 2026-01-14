@@ -6,6 +6,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
 import tiicon4 from '../components/icons/Tokenization/tiicon4.png';
+import aboutush from '../components/images/aboutush.png';
+import tokencoinh from '../components/images/tokencoinh.png';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -48,7 +50,7 @@ export default function Header() {
       path: "/product",
       dropdown: [
         {
-          icon: <HiCube className="w-5 h-5" />,
+          icon: <img src={tokencoinh} alt="Tokenization" className="w-5 h-5 object-contain" />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
@@ -110,7 +112,7 @@ export default function Header() {
       path: "/company",
       dropdown: [
         {
-          icon: <FaInfoCircle className="w-5 h-5" />,
+          icon: <img src={aboutush} alt="About Us" className="w-5 h-5 object-contain" />,
           heading: "About Us",
           description: "Learn about our mission, vision, and the team driving CopyM forward.",
           path: "/about"
@@ -207,7 +209,7 @@ export default function Header() {
                               <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                 <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
                               </h3>
-                              <div className="h-0.5 bg-black"></div>
+                              <div className="h-0.5 bg-[#15a36e]"></div>
                             </div>
                             {/* Dropdown Items */}
                             <div className="space-y-6">
@@ -218,11 +220,11 @@ export default function Header() {
                                   className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-200 group"
                                   onClick={() => setHoveredItem(null)}
                                 >
-                                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-black">
+                                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50 border border-gray-100 shadow-sm">
                                     <div className={
                                       item.path === "/solutions"
-                                        ? (index === 0 ? 'text-white' : 'text-[#15a36e]')
-                                        : 'text-white'
+                                        ? (index === 0 ? 'text-black' : 'text-[#15a36e]')
+                                        : 'text-[#15a36e]'
                                     }>
                                       {dropdownItem.icon}
                                     </div>
@@ -378,7 +380,7 @@ export default function Header() {
                                 style={{ color: "#fff", fontSize: "15px" }}
                                 onClick={() => setIsMenuOpen(false)}
                               >
-                                <span className="inline-flex items-center justify-center w-10 h-10 rounded bg-black mr-2">
+                                <span className="inline-flex items-center justify-center w-10 h-10 rounded bg-white/10 mr-2 border border-white/5">
                                   <span className="text-white">{dropdownItem.icon}</span>
                                 </span>
                                 <div className="flex flex-col">

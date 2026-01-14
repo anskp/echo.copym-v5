@@ -1,34 +1,38 @@
 // src/pages/PrivacyAi/sections/HowItWorks.jsx
 
 import React from 'react';
-import { FileKey, Lock, Cpu, Activity, ShieldCheck } from 'lucide-react';
+import tiicon2 from '../../../components/icons/Tokenization/tiicon2.png';
+import tiicon3 from '../../../components/icons/Tokenization/tiicon3.png';
+const smallp1 = "/assets/Images/smallp1.png";
+const smallp2 = "/assets/Images/smallp2.png";
+const smallp3 = "/assets/Images/smallp3.png";
 
 export default function HowItWorks() {
   const privacyAiFeatures = [
     {
       title: "Intelligent Data Segmentation",
       description: "Data is classified as public, confidential or restricted. Only cryptographic proofs and essential metadata are written on-chain.",
-      icon: FileKey
+      icon: smallp1
     },
     {
       title: "Privacy-Preserving Verification",
       description: "Eligibility, ownership and compliance are verified without exposing sensitive personal or business information.",
-      icon: Lock
+      icon: smallp2
     },
     {
       title: "AI-Driven Access Control",
       description: "Access rights adapt dynamically based on role, jurisdiction, asset type and transaction context.",
-      icon: Cpu
+      icon: smallp3
     },
     {
       title: "Continuous Risk Monitoring",
       description: "AI monitors patterns across transactions to detect anomalies, prevent leakage and reinforce fraud prevention.",
-      icon: Activity
+      icon: tiicon2
     },
     {
       title: "Off-Chain Intelligence, On-Chain Trust",
       description: "Sensitive data is processed securely off-chain, while hashes and proofs on-chain guarantee integrity and auditability.",
-      icon: ShieldCheck
+      icon: tiicon3
     }
   ];
 
@@ -71,8 +75,11 @@ export default function HowItWorks() {
             return (
               <div key={index} className="flex flex-col items-start">
                 {/* Icon Circle */}
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-3">
-                  <IconComponent className="text-white" size={28} />
+                <div
+                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-0 overflow-hidden"
+                  style={{ boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.08)' }}
+                >
+                  <img src={feature.icon} alt={feature.title} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
                 </div>
 
                 {/* Title */}

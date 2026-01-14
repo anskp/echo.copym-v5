@@ -1,48 +1,49 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import cardshades from '../../../components/images/cardshades.png';
+import tiicon1 from '../../../components/icons/Tokenization/tiicon1.png';
+import tiicon2 from '../../../components/icons/Tokenization/tiicon2.png';
+import tiicon3 from '../../../components/icons/Tokenization/tiicon3.png';
+import tiicon4 from '../../../components/icons/Tokenization/tiicon4.png';
+import ticon4 from '../../../components/icons/Tokenization/ticon4.png';
+const smallp2 = "/assets/Images/smallp2.png";
 
 export default function HowItWorks() {
     const steps = [
         {
             title: "Asset Onboarding",
             description: "Verified real-world or digital assets are onboarded with clear documentation, then tokenized and listed with immutable on-chain records and transparent metadata.",
-            icon: "/assets/Images/icons/t1.png",
-            number: "01."
+            icon: tiicon2,
+
         },
         {
             title: "Fractional Ownership",
             description: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
-            icon: "/assets/Images/icons/t2.png",
+            icon: tiicon1,
 
-            number: "02."
         },
         {
             title: "Buy, Sell & Trade",
             description: "Participants can acquire, trade or exit positions through an open marketplace driven by real-time supply and demand.",
-            icon: "/assets/Images/icons/t3.png",
+            icon: tiicon4,
 
-            number: "03."
         },
         {
             title: "Smart Contract Settlement",
             description: "Ownership transfers, revenue distribution and settlements are executed automatically via smart contracts – reducing intermediaries, delays and errors.",
-            icon: "/assets/Images/icons/t1.png", // Using t1 icon for now, you can change if needed
+            icon: ticon4,
 
-            number: "04."
         },
         {
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
-            icon: "/assets/Images/icons/t2.png", // Using t2 icon for now, you can change if needed
-
+            icon: smallp2,
             number: "05."
         },
         {
             title: "Compliance-First Architecture",
             description: "KYC, asset verification and regulatory safeguards are embedded by design, so every transaction is built on trust and future-ready compliance.",
-            icon: "/assets/Images/icons/t3.png", // Using t3 icon for now, you can change if needed
-
+            icon: tiicon3,
             number: "06."
         }
     ];
@@ -129,7 +130,7 @@ export default function HowItWorks() {
                                 <div className="relative z-10 w-full p-6 flex flex-col justify-end transition-all duration-500 group-hover:h-1/2 group-hover:justify-start group-hover:pt-4">
                                     {/* Icon (Fades out and collapses on hover) */}
                                     <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-5 overflow-hidden flex shrink-0">
-                                        <div className="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center">
+                                        <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-md">
                                             <img src={step.icon} alt={step.title} className="w-10 h-10 object-contain" />
                                         </div>
                                     </div>
