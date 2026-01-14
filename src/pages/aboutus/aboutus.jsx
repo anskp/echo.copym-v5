@@ -130,10 +130,10 @@ const AboutUs = () => {
                     </div>
 
                     {/* BOTTOM: Image Area - Dual Grid */}
-                    <div className="relative mt-12 w-full">
-                        <div className="flex flex-col md:flex-row gap-6 h-[500px] sm:h-[600px] lg:h-[600px] w-full items-stretch">
+                    <div className="relative mt-8 sm:mt-12 w-full">
+                        <div className="flex flex-col md:flex-row gap-6 h-[600px] md:h-[500px] lg:h-[600px] w-full items-stretch">
                             {/* Left Image - Narrower */}
-                            <div className="md:w-5/12 h-full rounded-l-[40px] rounded-r-none overflow-hidden">
+                            <div className="w-full md:w-5/12 h-full rounded-[30px] md:rounded-l-[40px] md:rounded-r-none overflow-hidden">
                                 <img
                                     src="/assets/Images/business-team.jpg"
                                     alt="Office Building"
@@ -142,7 +142,7 @@ const AboutUs = () => {
                             </div>
 
                             {/* Right Image - Wider */}
-                            <div className="md:w-8/12 h-full rounded-r-[40px] rounded-l-none overflow-hidden bg-black">
+                            <div className="w-full md:w-8/12 h-full rounded-[30px] md:rounded-r-[40px] md:rounded-l-none overflow-hidden bg-black">
                                 <img
                                     src="/assets/Images/business-team.jpg"
                                     alt="Team Collaboration"
@@ -210,7 +210,7 @@ const AboutUs = () => {
                                 </div>
 
                                 {/* Email and Address Cards - Side by Side */}
-                                <div className="grid grid-cols-2 gap-4 mt-8">
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                                     {/* Email Card */}
                                     <motion.div
                                         initial={{ opacity: 0, x: -30 }}
@@ -335,143 +335,97 @@ const AboutUs = () => {
             </section>
 
             {/* Section 5: Company Timeline */}
-            <section className="relative bg-black py-10 sm:py-12 lg:py-16">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    {/* Section Header */}
-                    <div className="text-left mb-12 sm:mb-16 lg:mb-20">
-                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            Company <span className="text-[#15a36e]">Timeline</span>
-                        </h2>
-                    </div>
-
-                    {/* Timeline Container */}
-                    <div className="relative pl-8 sm:pl-12 md:pl-16 pr-4 sm:pr-8 md:pr-12">
-
-
-                        {/* Timeline Items */}
-                        <div className="space-y-12 sm:space-y-16 lg:space-y-20">
-                            {/* Timeline Item 1 - 2023 Foundation */}
+            <section className="relative bg-black py-16 lg:py-24 overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-start">
+                        {/* Right Column: Heading & Description */}
+                        <div className="w-full lg:w-5/12 lg:pt-10">
                             <motion.div
-                                initial={{ opacity: 0, x: -20 }}
+                                initial={{ opacity: 0, x: 30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6 }}
+                                transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
-                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
                             >
-                                {/* Icon */}
-                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img
-                                        src="/assets/Images/icons/Cube.png"
-                                        alt="Foundation"
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
-
-                                {/* Heading - Fixed width for uniform alignment */}
-                                <h3
-                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{
-                                        fontFamily: 'Palanquin, sans-serif',
-                                        color: '#15a36e'
-                                    }}
-                                >
-                                    2023 - Foundation
-                                </h3>
-
-                                {/* Subheading */}
-                                <p
-                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{
-                                        fontFamily: 'Palanquin, sans-serif',
-                                        color: '#ffffff',
-                                        lineHeight: '1.6'
-                                    }}
-                                >
-                                    COPYm was founded with a vision to democratize access to premium investment opportunities.
+                                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Company<br />
+                                    <span className="text-[#15a36e]">Timeline</span>
+                                </h2>
+                                <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our journey of innovation and growth, building the future of decentralized finance and global asset ownership.
                                 </p>
-                            </motion.div>
 
-                            {/* Timeline Item 2 - 2024 Platform Launch */}
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.2 }}
-                                viewport={{ once: true }}
-                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
-                            >
-                                {/* Icon */}
-                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img
-                                        src="/assets/Images/icons/Rocket.png"
-                                        alt="Platform Launch"
-                                        className="w-full h-full object-contain"
-                                    />
+                                {/* Decorative Arrow SVG - Mirror of Core Values */}
+                                <div className="hidden lg:block absolute top-[60%] left-0 transform -translate-x-full">
+                                    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform scale-x-[-1]">
+                                        <motion.path
+                                            d="M20 20 C 50 100, 150 100, 180 80"
+                                            stroke="#15a36e"
+                                            strokeWidth="2"
+                                            fill="none"
+                                            initial={{ pathLength: 0 }}
+                                            animate={{ pathLength: 1 }}
+                                            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
+                                        />
+                                        <motion.path
+                                            d="M180 80 L 170 75 M 180 80 L 175 90"
+                                            stroke="#15a36e"
+                                            strokeWidth="2"
+                                            fill="none"
+                                            initial={{ opacity: 0 }}
+                                            animate={{ opacity: 1 }}
+                                            transition={{ duration: 0.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", delay: 1.5 }}
+                                        />
+                                    </svg>
                                 </div>
-
-                                {/* Heading - Fixed width for uniform alignment */}
-                                <h3
-                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{
-                                        fontFamily: 'Palanquin, sans-serif',
-                                        color: '#15a36e'
-                                    }}
-                                >
-                                    2024 - Platform Launch
-                                </h3>
-
-                                {/* Subheading */}
-                                <p
-                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{
-                                        fontFamily: 'Palanquin, sans-serif',
-                                        color: '#ffffff',
-                                        lineHeight: '1.6'
-                                    }}
-                                >
-                                    Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.
-                                </p>
                             </motion.div>
+                        </div>
 
-                            {/* Timeline Item 3 - 2025 Global Expansion */}
-                            <motion.div
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.6, delay: 0.4 }}
-                                viewport={{ once: true }}
-                                className="relative flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:gap-8"
-                            >
-                                {/* Icon */}
-                                <div className="flex-shrink-0 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 relative z-10">
-                                    <img
-                                        src="/assets/Images/icons/StylizedGlobe.png"
-                                        alt="Global Expansion"
-                                        className="w-full h-full object-contain"
-                                    />
-                                </div>
+                        {/* Left Column: Timeline Items */}
+                        <div className="w-full lg:w-7/12 relative">
+                            {/* Background decoration or subtle image could go here */}
 
-                                {/* Heading - Fixed width for uniform alignment */}
-                                <h3
-                                    className="flex-shrink-0 text-base sm:text-lg md:text-xl lg:text-2xl font-bold w-full sm:w-48 md:w-56 lg:w-64"
-                                    style={{
-                                        fontFamily: 'DM Sans, sans-serif',
-                                        color: '#15a36e'
-                                    }}
-                                >
-                                    2025 - Global Expansion
-                                </h3>
-
-                                {/* Subheading */}
-                                <p
-                                    className="flex-1 text-sm sm:text-base md:text-lg leading-relaxed"
-                                    style={{
-                                        fontFamily: 'Palanquin, sans-serif',
-                                        color: '#ffffff',
-                                        lineHeight: '1.6'
-                                    }}
-                                >
-                                    Expanding our reach globally, making premium investments accessible worldwide.
-                                </p>
-                            </motion.div>
+                            <div className="flex flex-col gap-8">
+                                {[
+                                    {
+                                        year: "2023 - Foundation",
+                                        description: "COPYm was founded with a vision to democratize access to premium investment opportunities.",
+                                        icon: "/assets/Images/icons/Cube.png"
+                                    },
+                                    {
+                                        year: "2024 - Platform Launch",
+                                        description: "Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.",
+                                        icon: "/assets/Images/icons/Rocket.png"
+                                    },
+                                    {
+                                        year: "2025 - Global Expansion",
+                                        description: "Expanding our reach globally, making premium investments accessible worldwide.",
+                                        icon: "/assets/Images/icons/StylizedGlobe.png"
+                                    }
+                                ].map((item, index) => (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0, x: -50 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.5, delay: index * 0.15 }}
+                                        viewport={{ once: true }}
+                                        className="py-6 group max-w-lg"
+                                    >
+                                        <div className="flex items-center gap-6 sm:gap-8">
+                                            <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-2xl flex items-center justify-center p-4 group-hover:scale-110 transition-transform duration-300">
+                                                <img src={item.icon} alt={item.year} className="w-full h-full object-contain" />
+                                            </div>
+                                            <div className="flex-1">
+                                                <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    {item.year}
+                                                </h3>
+                                                <p className="text-gray-300 text-sm sm:text-base leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    {item.description}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -676,7 +630,7 @@ const AboutUs = () => {
                                 <span className="text-black">GET IN </span>
                                 <span className="text-[#15a36e]">TOUCH</span>
                             </h2>
-                            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 180px)', height: '1px' }}></div>
+                            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+180px)]" style={{ height: '1px' }}></div>
                         </div>
                         <p
                             className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-normal leading-relaxed tracking-wide mt-4 sm:mt-6"
