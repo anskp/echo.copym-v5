@@ -74,15 +74,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
             {/* Phone Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="flex flex-col items-center text-center rounded-2xl bg-black px-6 py-8 sm:px-8 sm:py-10 text-white shadow-[0_20px_60px_rgba(15,23,42,0.2)] hover:shadow-[0_30px_80px_rgba(15,23,42,0.3)] transition-shadow duration-300"
-            >
 
-            </motion.div>
 
             {/* Email Card */}
             <motion.div

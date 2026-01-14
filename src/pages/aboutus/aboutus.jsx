@@ -290,23 +290,7 @@ const AboutUs = () => {
 
                     {/* Timeline Container */}
                     <div className="relative pl-8 sm:pl-12 md:pl-16 pr-4 sm:pr-8 md:pr-12">
-                        {/* Glowing Vertical Timeline Line */}
-                        <div
-                            className="absolute left-0 sm:left-2 md:left-4 top-0 bottom-0 hidden sm:flex items-center justify-center"
-                            style={{
-                                width: 'auto',
-                                height: '100%'
-                            }}
-                        >
-                            <img
-                                src="/assets/Images/carousel/Linenarrow.png"
-                                alt="Timeline Line"
-                                className="h-full w-auto object-contain"
-                                style={{
-                                    maxHeight: '100%'
-                                }}
-                            />
-                        </div>
+
 
                         {/* Timeline Items */}
                         <div className="space-y-12 sm:space-y-16 lg:space-y-20">

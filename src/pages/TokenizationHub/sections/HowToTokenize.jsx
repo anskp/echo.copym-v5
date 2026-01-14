@@ -114,31 +114,12 @@ export default function HowToTokenize() {
                 viewport={{ once: true }}
                 className="relative w-full max-w-lg"
               >
-                {/* Laptop Frame */}
                 <div className="relative z-10">
                   <img
-                    src="/assets/Images/devices/device-laptop-black.png"
-                    alt="Laptop Frame"
-                    className="w-full h-auto"
+                    src="/assets/Images/dashboard_screen.png"
+                    alt="Dashboard Screenshot"
+                    className="w-full h-auto object-contain rounded-lg shadow-lg"
                   />
-
-                  {/* Screen Content - Positioned absolutely inside the frame */}
-                  <div
-                    className="absolute z-0 overflow-hidden"
-                    style={{
-                      top: '11%',
-                      left: '13.3%',
-                      width: '73.4%',
-                      height: '77%',
-                      backgroundColor: '#000' // Dark background for loading/gap
-                    }}
-                  >
-                    <img
-                      src="/assets/Images/dashboard_screen.png"
-                      alt="Dashboard Screenshot"
-                      className="w-full h-full object-fill"
-                    />
-                  </div>
                 </div>
               </motion.div>
             </div>
