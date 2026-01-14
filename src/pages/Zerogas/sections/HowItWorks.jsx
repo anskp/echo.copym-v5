@@ -7,6 +7,7 @@ import z1Animation from '../../../components/lotties/Z1.json';
 import z2Animation from '../../../components/lotties/Z2.json';
 import z3Animation from '../../../components/lotties/Z3.json';
 import z4Animation from '../../../components/lotties/Z4.json';
+import zerogas06 from '../../../components/images/zerogas06.png';
 
 const HowItWorks = () => {
   return (
@@ -191,9 +192,9 @@ const HowItWorks = () => {
               }}
             >
               <img
-                src="/assets/Images/icons/gas-can.png"
+                src={zerogas06}
                 alt="Enterprise Grade UX"
-                className="w-4/5 h-4/5 object-contain"
+                className="w-full h-full object-cover p-0"
               />
             </div>
           </div>
