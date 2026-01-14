@@ -4,7 +4,7 @@ import privacyaiHero from '../../../components/images/privacyaihero.png';
 
 export default function HeroNew() {
   return (
-    <section className="relative overflow-hidden h-screen w-full">
+    <section className="relative overflow-hidden min-h-[500px] h-[70vh] sm:h-screen w-full">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 flex justify-end">
         <img

@@ -46,9 +46,8 @@ export default function WhyItMatters() {
             </h2>
             {/* Underline */}
             <div
-              className="absolute bottom-0 left-0 bg-black"
+              className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+120px)]"
               style={{
-                width: 'calc(100% + 120px)',
                 height: '0.5px'
               }}
             ></div>

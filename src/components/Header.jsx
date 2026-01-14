@@ -52,13 +52,13 @@ export default function Header() {
       path: "/product",
       dropdown: [
         {
-          icon: <img src={tokencoinh} alt="Tokenization" className="w-10      h-10 object-contain" />,
+          icon: <img src={tokencoinh} alt="Tokenization" className="w-10 h-10 object-contain" />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
         },
         {
-          icon: <img src={tiicon4} alt="Marketplace" className="w-10    h-10 object-contain" />,
+          icon: <img src={tiicon4} alt="Marketplace" className="w-10 h-10 object-contain" />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"

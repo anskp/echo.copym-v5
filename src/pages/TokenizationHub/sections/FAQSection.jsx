@@ -91,7 +91,7 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-0 bg-white">
+    <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-12 sm:pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">
@@ -102,7 +102,7 @@ export default function FAQSection() {
             >
               <span className="text-[#15a36e]">FAQ's </span>
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+160px)]" style={{ height: '0.5px' }}></div>
           </div>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"

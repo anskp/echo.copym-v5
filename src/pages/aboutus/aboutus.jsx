@@ -47,11 +47,11 @@ const AboutUs = () => {
                                 >
                                     <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         {activeTab === 0 ? (
-                                            <>Transforming <span className="text-[#15a36e]">Asset</span> Ownership</>
+                                            <>Transforming <br /> <span className="text-[#15a36e]">Asset</span> Ownership</>
                                         ) : activeTab === 1 ? (
-                                            <>Democratizing <span className="text-[#15a36e]">Investment</span></>
+                                            <>Democratizing <br /> <span className="text-[#15a36e]">Investment</span></>
                                         ) : (
-                                            <>Borderless <span className="text-[#15a36e]">Future</span></>
+                                            <>Borderless <br /> <span className="text-[#15a36e]">Future</span></>
                                         )}
                                     </h2>
                                     <div className="text-lg text-gray-600 leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -177,10 +177,13 @@ const AboutUs = () => {
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
                             >
-                                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Our<br />
-                                    Core Values
-                                </h2>
+                                <div className="relative w-fit mb-8 sm:mb-10 lg:mb-12">
+                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-black pb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        Our<br />
+                                        <span className="text-[#15a36e]">Core</span> Values
+                                    </h2>
+                                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+120px)]" style={{ height: '1.5px' }}></div>
+                                </div>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
                                 </p>
@@ -346,10 +349,13 @@ const AboutUs = () => {
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
                             >
-                                <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-white uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Company<br />
-                                    <span className="text-[#15a36e]">Timeline</span>
-                                </h2>
+                                <div className="relative w-fit mb-8 sm:mb-10 lg:mb-12">
+                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        Company<br />
+                                        <span className="text-[#15a36e]">Timeline</span>
+                                    </h2>
+                                    <div className="absolute bottom-0 left-0 bg-white w-full sm:w-[calc(100%+120px)]" style={{ height: '1.5px' }}></div>
+                                </div>
                                 <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     Our journey of innovation and growth, building the future of decentralized finance and global asset ownership.
                                 </p>
@@ -624,13 +630,15 @@ const AboutUs = () => {
                     <div className="text-left mb-8 sm:mb-10 lg:mb-12">
                         <div className="relative w-fit mb-4">
                             <h2
-                                className="inline-flex items-baseline gap-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase pb-2"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase pb-4 leading-tight"
                                 style={{ fontFamily: 'Palanquin, sans-serif' }}
                             >
-                                <span className="text-black">GET IN </span>
+                                <span className="text-black">GET</span>
+                                <br />
+                                <span className="text-black">IN </span>
                                 <span className="text-[#15a36e]">TOUCH</span>
                             </h2>
-                            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+180px)]" style={{ height: '1px' }}></div>
+                            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+180px)]" style={{ height: '1.5px' }}></div>
                         </div>
                         <p
                             className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-normal leading-relaxed tracking-wide mt-4 sm:mt-6"

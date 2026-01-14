@@ -11,7 +11,7 @@ import zerogas06 from '../../../components/images/zerogas06.png';
 
 const HowItWorks = () => {
   return (
-    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
+    <SectionContainer padding="py-12 sm:py-16 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
       {/* Main Heading */}
       <SectionHeader
         title="How Zero Gas works ?"
