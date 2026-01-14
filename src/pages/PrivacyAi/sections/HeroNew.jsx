@@ -35,7 +35,7 @@ export default function HeroNew() {
             className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed"
 
           >
-            It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
+            It protects sensiPrivacy AI is CopyM’s intelligent privacy layer.It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.tive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
           </p>
         </motion.div>
       </div>

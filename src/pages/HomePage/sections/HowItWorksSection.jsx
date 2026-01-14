@@ -20,6 +20,7 @@ const HowItWorksSection = () => {
           trigger: containerRef.current,
           pin: true,
           scrub: 1, // Smooth scrubbing
+          anticipatePin: 1, // Reduce jitter
           start: "top top",
           end: "+=200%" // Length of the scroll distance (2x height of screen roughly)
         }
@@ -36,29 +37,15 @@ const HowItWorksSection = () => {
         .to({}, { duration: 1 }) // Wait for first 50% (relative units)
         .to(panel2Ref.current, { xPercent: -100, duration: 1, ease: "none" }); // Slide in for second 50%
 
-      // Note: We need Panel 2 to start off-screen to the right (xPercent: 0 if we use negative slide, or 100 if we use 0)
-      // Actually, standard CSS setup:
-      // Panel 1: z-index 1, relative/absolute
-      // Panel 2: z-index 2, absolute, left: 100% (off screen right)
-      // Then animate Panel 2 to left: 0%?
-
-      // Let's stick to GSAP transforms.
-      // Set Panel 2 initially to xPercent: 100?
-
-      // Wait, simplistic approach:
-      // Timeline duration 2.
-      // 0-1: Nothing.
-      // 1-2: Panel 2 moves from xPercent: 100 to 0.
-
     }, containerRef);
 
     return () => ctx.revert();
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden relative bg-white">
+    <section ref={containerRef} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden relative bg-white">
       {/* Top Header - Fixed/Static within pinned section */}
-      <div className="absolute top-0 left-0 w-full z-30 pt-10 sm:pt-14 md:pt-20 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full z-30 pt-4 sm:pt-8 md:pt-12 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pointer-events-none">
         <div className="max-w-5xl mx-auto">
           <SectionHeader
             title="HOW IT WORKS"
@@ -73,11 +60,11 @@ const HowItWorksSection = () => {
       </div>
 
       {/* Panel 1: Asset Owners */}
-      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-24 sm:pt-32">
+      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-16 sm:pt-20">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
-          <div className="w-full max-w-5xl mx-auto pointer-events-auto">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#15a36e] mb-4 text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full max-w-4xl mx-auto my-auto pointer-events-auto">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-12 mt-6 sm:mt-8 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Asset Owners
             </h3>
             <Lottie
@@ -95,12 +82,12 @@ const HowItWorksSection = () => {
       {/* Using `left-full` puts it 100% to the right. Then we animate xPercent: -100 to bring it back to 0 (center). */}
       <div
         ref={panel2Ref}
-        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-24 sm:pt-32"
+        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-16 sm:pt-20"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
-          <div className="w-full max-w-5xl mx-auto pointer-events-auto">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#15a36e] mb-4 text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full max-w-4xl mx-auto pointer-events-auto">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-12 mt-6 sm:mt-8 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Investors
             </h3>
             <Lottie

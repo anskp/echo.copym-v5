@@ -4,6 +4,8 @@ import mobileTokenization from '../../../components/images/mobiletokenization.pn
 
 export default function HowToTokenize() {
   const [activeStep, setActiveStep] = useState(0);
+  const stepRefs = React.useRef([]);
+  const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0 });
 
   const steps = [
     {
@@ -23,6 +25,24 @@ export default function HowToTokenize() {
       description: 'Roles and permissions would-be set. t: Ensure KYC/AML checks, especially in India, and maintain audit trails. The users would Users would be provided with interfaces to view holdings, transaction history, and token status.'
     }
   ];
+
+  useEffect(() => {
+    const updateIndicator = () => {
+      const activeEl = stepRefs.current[activeStep];
+      if (activeEl) {
+        setIndicatorStyle({
+          top: activeEl.offsetTop,
+          height: activeEl.offsetHeight
+        });
+      }
+    };
+
+    updateIndicator();
+
+    // Recalculate on resize
+    window.addEventListener('resize', updateIndicator);
+    return () => window.removeEventListener('resize', updateIndicator);
+  }, [activeStep]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -56,8 +76,8 @@ export default function HowToTokenize() {
               <motion.div
                 className="absolute left-0 w-[6px] bg-[#15a36e] z-20"
                 animate={{
-                  top: `${(activeStep * 100) / steps.length}%`,
-                  height: `${100 / steps.length}%`
+                  top: indicatorStyle.top,
+                  height: indicatorStyle.height
                 }}
                 transition={{ type: 'spring', stiffness: 300, damping: 30 }}
               />
@@ -65,6 +85,7 @@ export default function HowToTokenize() {
               {steps.map((step, index) => (
                 <div
                   key={index}
+                  ref={el => stepRefs.current[index] = el}
                   onClick={() => setActiveStep(index)}
                   className={`p-4 sm:p-6 md:p-8 border-l-[6px] border-transparent cursor-pointer transition-all duration-300 relative group
                     ${index !== steps.length - 1 ? 'border-b border-gray-100' : ''}
@@ -84,20 +105,41 @@ export default function HowToTokenize() {
               ))}
             </div>
 
-            {/* Right Column: Phone Mockup */}
+            {/* Right Column: Laptop Mockup */}
             <div className="flex-1 bg-white flex items-center justify-center p-6 sm:p-10 md:p-12">
               <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-                className="relative w-full max-w-[220px] sm:max-w-[280px]"
+                className="relative w-full max-w-lg"
               >
-                <img
-                  src={mobileTokenization}
-                  alt="CopyM Mobile App"
-                  className="w-full h-auto drop-shadow-2xl"
-                />
+                {/* Laptop Frame */}
+                <div className="relative z-10">
+                  <img
+                    src="/assets/Images/devices/device-laptop-black.png"
+                    alt="Laptop Frame"
+                    className="w-full h-auto"
+                  />
+
+                  {/* Screen Content - Positioned absolutely inside the frame */}
+                  <div
+                    className="absolute z-0 overflow-hidden"
+                    style={{
+                      top: '11%',
+                      left: '13.3%',
+                      width: '73.4%',
+                      height: '77%',
+                      backgroundColor: '#000' // Dark background for loading/gap
+                    }}
+                  >
+                    <img
+                      src="/assets/Images/dashboard_screen.png"
+                      alt="Dashboard Screenshot"
+                      className="w-full h-full object-fill"
+                    />
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>

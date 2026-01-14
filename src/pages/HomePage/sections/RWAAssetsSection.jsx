@@ -62,25 +62,34 @@ const TokenizeAssetsSection = () => {
               >
                 {/* Asset Card */}
                 <div
-                  className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[380px] sm:min-h-[450px] lg:min-h-[480px] relative"
+                  className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[550px] relative"
                   style={{
                     background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
                   }}
                 >
                   {/* Floating ROI/APR Badge - Top Right */}
-                  <div className="absolute top-4 right-4 z-10 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg shadow-sm border border-gray-100">
-                    <div className="text-[10px] sm:text-xs font-medium text-right space-y-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                      <div>
-                        <span className="text-[#15a36e] font-bold">76%</span> <span className="text-gray-600">ROI</span>
-                      </div>
-                      <div>
-                        <span className="text-[#15a36e] font-bold">80%</span> <span className="text-gray-600">APR</span>
-                      </div>
+                  <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
+                    {/* ROI Badge */}
+                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#dcfce7] border border-[#bbf7d0]/50 shadow-sm">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
+                      </svg>
+                      <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>76%</span>
+                      <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>ROI</span>
+                    </div>
+
+                    {/* APR Badge */}
+                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#fee2e2] border border-[#fecaca]/50 shadow-sm">
+                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 10L1.5 2.5H10.5L6 10Z" fill="#ef4444" />
+                      </svg>
+                      <span className="text-xs sm:text-sm font-bold text-[#ef4444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>20%</span>
+                      <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>APR</span>
                     </div>
                   </div>
 
                   {/* Asset Image - Top, Centered - Fixed Height */}
-                  <div className="flex items-center justify-center mb-3 sm:mb-4 lg:mb-5 h-[120px] sm:h-[180px] md:h-[200px] lg:h-[220px]">
+                  <div className="flex items-center justify-center mt-8 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
                     <img
                       src={asset?.image}
                       alt={asset?.title}
@@ -107,53 +116,15 @@ const TokenizeAssetsSection = () => {
                     </p>
 
                     {/* Know More Section - Conditional Styling */}
-                    <div className="mt-auto">
+                    <div className="mt-5 flex justify-center">
                       <Link to="/marketplace" className="block">
-                        {index < 2 ? (
-                          /* Style 1: Black Pill Button (First 2 Cards) */
-                          <div className="bg-black rounded-full px-1 py-1 flex items-center justify-between group transition-all duration-300 hover:scale-[1.02] border border-white/10">
-                            <span className="text-white font-bold text-sm sm:text-base ml-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                              Know More
-                            </span>
-                            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center text-black transition-transform group-hover:rotate-45 duration-300">
-                              <svg
-                                className="w-4 h-4 sm:w-5 sm:h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                              >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                              </svg>
-                            </div>
-                          </div>
-                        ) : (
-                          /* Style 2: Green Box Button (Remaining Cards) */
-                          <div
-                            className="rounded-lg p-[1px]"
-                            style={{
-                              background: 'linear-gradient(to right, rgba(0, 0, 0, 1), rgba(190, 190, 190, 1), rgba(0, 0, 0, 1))'
-                            }}
-                          >
-                            <div
-                              className="rounded-lg px-3 sm:px-4 py-3 sm:py-4 h-full w-full flex items-center justify-center group transition-all duration-300 hover:opacity-90"
-                              style={{
-                                backgroundColor: 'rgba(84, 178, 143, 1)'
-                              }}
-                            >
-                              <div className="text-[12px] sm:text-base font-bold text-white uppercase tracking-wider flex items-center gap-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                Know More
-                                <svg
-                                  className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
-                                  fill="none"
-                                  stroke="currentColor"
-                                  viewBox="0 0 24 24"
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                              </div>
-                            </div>
-                          </div>
-                        )}
+                        <div
+                          className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1.5 sm:py-2 px-4 sm:px-5 rounded-lg transition-colors duration-300 pointer-events-auto"
+                        >
+                          <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            Know more
+                          </span>
+                        </div>
                       </Link>
                     </div>
                   </div>

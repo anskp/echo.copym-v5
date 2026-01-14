@@ -17,8 +17,8 @@ export default function TrackYourCrypto() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10 pb-0 mt-0">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
         <div className="flex flex-col lg:hidden items-start text-left space-y-3 sm:space-y-4 md:space-y-5">
-          {/* Watch SVG with Phone Overlay - Moved to top for mobile flow */}
-          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex justify-center items-start pt-0">
+          {/* Watch SVG Background with Phone Video Overlay */}
+          <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex justify-center items-center mx-auto pt-0">
             {/* Watch SVG - Static Background */}
             <div className="relative w-72 sm:w-80 md:w-96">
               <img
@@ -26,13 +26,27 @@ export default function TrackYourCrypto() {
                 alt="Watch illustration"
                 className="w-full h-auto"
               />
-              {/* Mobile-ads Overlay - Positioned on top of Watch SVG */}
+              {/* Video Phone Overlay - Positioned on top of Watch SVG */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src="/assets/Images/mobile-ads.png"
-                  alt="Copym App Interface"
-                  className="w-32 sm:w-40 md:w-44 h-auto drop-shadow-2xl relative z-10"
-                />
+                <div className="relative w-40 sm:w-48 md:w-56 z-10 drop-shadow-2xl">
+                  <div className="relative w-full aspect-[9/18]">
+                    {/* Video Layer - Centered & Masked (z-0) */}
+                    <video
+                      src="/assets/videos/only-logo.mp4"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[88%] object-contain bg-black rounded-[2rem] z-0"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                    {/* Device Frame Layer - On Top (z-10) */}
+                    <img
+                      src="/assets/Images/devices/trackyourcrypto.png"
+                      alt="App Mockup Frame"
+                      className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -92,13 +106,27 @@ export default function TrackYourCrypto() {
                 className="w-full h-auto"
               />
 
-              {/* Mobile-ads Overlay - Positioned on top of Watch SVG */}
+              {/* Video Phone Overlay - Positioned on top of Watch SVG */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <img
-                  src="/assets/Images/mobile-ads.png"
-                  alt="Copym App Interface"
-                  className="w-28 sm:w-32 md:w-36 lg:w-44 xl:w-52 h-auto drop-shadow-2xl relative z-10"
-                />
+                <div className="relative w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 z-10 drop-shadow-2xl">
+                  <div className="relative w-full aspect-[9/18]">
+                    {/* Video Layer - Centered & Masked (z-0) */}
+                    <video
+                      src="/assets/videos/only-logo.mp4"
+                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[88%] object-contain bg-black rounded-[2rem] z-0"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
+                    />
+                    {/* Device Frame Layer - On Top (z-10) */}
+                    <img
+                      src="/assets/Images/devices/trackyourcrypto.png"
+                      alt="App Mockup Frame"
+                      className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
           </div>

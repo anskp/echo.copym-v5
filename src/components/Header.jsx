@@ -60,36 +60,36 @@ export default function Header() {
         }
       ]
     },
-    {
-      label: "Solutions",
-      path: "/solutions",
-      dropdown: [
-        {
-          icon: <img src="/assets/Images/icons/assets.png" alt="Asset Owners" className="w-full h-full object-contain" />,
-          heading: "Asset Owners",
-          description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
-        },
-        {
-          icon: <img src="/assets/Images/icons/investors.png" alt="Investors" className="w-full h-full object-contain" />,
-          heading: "Investors",
-          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
-        },
-        {
-          icon: <img src="/assets/Images/icons/partners.png" alt="Partners" className="w-full h-full object-contain" />,
-          heading: "Partners",
-          description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
-        }
-      ]
-    },
+    // {
+    //   label: "Solutions",
+    //   path: "/solutions",
+    //   dropdown: [
+    //     {
+    //       icon: <img src="/assets/Images/icons/assets.png" alt="Asset Owners" className="w-full h-full object-contain" />,
+    //       heading: "Asset Owners",
+    //       description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
+    //     },
+    //     {
+    //       icon: <img src="/assets/Images/icons/investors.png" alt="Investors" className="w-full h-full object-contain" />,
+    //       heading: "Investors",
+    //       description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
+    //     },
+    //     {
+    //       icon: <img src="/assets/Images/icons/partners.png" alt="Partners" className="w-full h-full object-contain" />,
+    //       heading: "Partners",
+    //       description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
+    //     }
+    //   ]
+    // },
     {
       label: "Technology",
       path: "/technology",
       dropdown: [
-        {
-          icon: <HiCube className="w-10 h-10" />,
-          heading: "Architecture",
-          description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
-        },
+        // {
+        //   icon: <HiCube className="w-10 h-10" />,
+        //   heading: "Architecture",
+        //   description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
+        // },
         {
           icon: <img src="/assets/Images/icons/zerogas.png" alt="Zero Gas" className="w-full h-full object-contain" />,
           heading: "Zero Gas",

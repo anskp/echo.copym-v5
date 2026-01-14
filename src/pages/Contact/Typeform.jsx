@@ -1,11 +1,11 @@
 import React, { useMemo, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  GiCheckMark, 
-  GiPerson, 
-  GiHouse, 
-  GiGlobe, 
-  GiShield 
+import {
+  GiCheckMark,
+  GiPerson,
+  GiHouse,
+  GiGlobe,
+  GiShield
 } from "react-icons/gi";
 
 /**
@@ -25,7 +25,7 @@ const THEME = {
   inputFocus: "focus:border-emerald-500 focus:bg-white focus:shadow-lg",
   accent: {
     deep: "#059669",
-    mid: "#10b981", 
+    mid: "#10b981",
     light: "#34d399",
     ultraLight: "#ecfdf5",
   },
@@ -186,10 +186,10 @@ export default function Typeform() {
             } else if (step.id === "companyStatus") {
               value = form.companyStatus[f.key];
             }
-            
+
             if (!value) {
-            setError(`${f.label} is required.`);
-            return false;
+              setError(`${f.label} is required.`);
+              return false;
             }
           }
         }
@@ -222,9 +222,9 @@ export default function Typeform() {
     <div className="min-h-[300px] text-white flex items-center justify-center px-1 sm:px-4">
       <div className="relative w-full max-w-5xl group transition-all duration-500 overflow-hidden">
         {/* Removed Silk Background */}
-        
-        
-        
+
+
+
         {/* Main Content */}
         <div className="min-h-[200px] pt-4 sm:pt-6 relative z-10 px-1 sm:px-4">
           <AnimatePresence mode="wait">
@@ -240,11 +240,11 @@ export default function Typeform() {
               >
                 {/* Text Content - Left Aligned */}
                 <div className="max-w-3xl mx-auto text-center sm:text-left mb-7 px-2">
-                  <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                  <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
                   </p>
-                  
-                  <p className="text-lg sm:text-xl md:text-2xl text-white leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+
+                  <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Join the future of Real World Asset tokenization with Copym.
                   </p>
                 </div>
@@ -254,7 +254,7 @@ export default function Typeform() {
                   <motion.button
                     onClick={() => setShowForm(true)}
                     className="w-full sm:w-auto px-8 sm:px-14 py-3 rounded-full bg-gradient-to-b from-[#15a36e] to-[#12a062] text-white font-bold text-base sm:text-xl shadow-2xl hover:from-[#12a062] hover:to-[#15a36e] transition-all duration-300 uppercase"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
@@ -274,19 +274,19 @@ export default function Typeform() {
                 {/* Progress Indicator */}
                 <div className="mb-8">
                   <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-4">
-                    <span className="text-sm font-medium text-white/70 text-center sm:text-left" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                    <span className="text-sm font-medium text-black/70 text-center sm:text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Question {stepIndex + 1} of {steps.length}
                     </span>
                     <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto">
-                      <div className="h-2 w-full sm:w-36 bg-white/10 rounded-full overflow-hidden">
-                        <motion.div 
+                      <div className="h-2 w-full sm:w-36 bg-black/10 rounded-full overflow-hidden">
+                        <motion.div
                           className="h-full bg-[#15a36e] rounded-full"
                           initial={{ width: 0 }}
                           animate={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
                           transition={{ duration: 0.5 }}
                         />
                       </div>
-                      <span className="text-xs font-medium text-white" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                      <span className="text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         {Math.round(((stepIndex + 1) / steps.length) * 100)}%
                       </span>
                     </div>
@@ -302,15 +302,15 @@ export default function Typeform() {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <span className="text-white text-sm">←</span>
+                      <span className="text-black text-sm">←</span>
                     </motion.button>
                     <div className="h-12 w-12 rounded-2xl bg-[#15a36e]/20 grid place-items-center border border-[#15a36e]/30 shadow-sm flex-shrink-0">
                       <step.icon className="w-6 h-6 text-[#15a36e]" />
                     </div>
                     <div className="flex-1 min-w-[220px]">
-                      <h2 className="text-2xl sm:text-3xl font-black text-white leading-tight uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>{step.label}</h2>
+                      <h2 className="text-2xl sm:text-3xl font-black text-black leading-tight uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>{step.label}</h2>
                       {step.helper && (
-                        <p className="text-base text-white/70 mt-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>{step.helper}</p>
+                        <p className="text-base text-black/70 mt-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>{step.helper}</p>
                       )}
                     </div>
                   </div>
@@ -330,7 +330,7 @@ export default function Typeform() {
                 </div>
 
                 {error && (
-                  <motion.div 
+                  <motion.div
                     className="mb-6 p-4 bg-red-100 border border-red-300 rounded-2xl flex items-center gap-3 text-left"
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -338,7 +338,7 @@ export default function Typeform() {
                     <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                       <span className="text-white text-sm">⚠</span>
                     </div>
-                    <span className="text-red-700 font-medium" style={{ fontFamily: 'DM Sans, sans-serif' }}>{error}</span>
+                    <span className="text-red-700 font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>{error}</span>
                   </motion.div>
                 )}
 
@@ -348,10 +348,9 @@ export default function Typeform() {
                     <motion.button
                       onClick={handleNext}
                       disabled={!form[step.id]}
-                      className={`w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#15a36e] text-white font-bold text-lg shadow-xl hover:bg-[#12a062] transition-all duration-200 ${
-                        !form[step.id] ? 'opacity-50 cursor-not-allowed hover:scale-100' : ''
-                      }`}
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      className={`w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#15a36e] text-white font-bold text-lg shadow-xl hover:bg-[#12a062] transition-all duration-200 ${!form[step.id] ? 'opacity-50 cursor-not-allowed hover:scale-100' : ''
+                        }`}
+                      style={{ fontFamily: 'Palanquin, sans-serif' }}
                       whileHover={form[step.id] ? { scale: 1.05 } : {}}
                       whileTap={form[step.id] ? { scale: 0.95 } : {}}
                     >
@@ -363,7 +362,7 @@ export default function Typeform() {
                     <motion.button
                       onClick={handleNext}
                       className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-[#15a36e] text-white font-bold text-lg shadow-xl hover:bg-[#12a062] transition-all duration-200"
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
+                      style={{ fontFamily: 'Palanquin, sans-serif' }}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -377,7 +376,7 @@ export default function Typeform() {
             )}
           </AnimatePresence>
         </div>
-        
+
       </div>
     </div>
   );
@@ -429,8 +428,8 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
 
       {/* Enhanced segmented buttons */}
       {step.type === "segmented" && (
-        <motion.div 
-          className="flex flex-col gap-4 mt-6"
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, staggerChildren: 0.1 }}
@@ -441,11 +440,10 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
               <motion.button
                 key={opt}
                 onClick={() => onChange(step.id, opt)}
-                className={`w-full text-left px-6 sm:px-10 lg:px-12 py-4 rounded-2xl border-2 transition-all duration-200 text-base sm:text-lg font-medium ${
-                  active
-                    ? "border-[#0d4d2e] bg-[#0d4d2e] text-[#15a36e] shadow-lg transform scale-[1.02]"
-                    : "border-white/20 bg-white hover:bg-[#0d4d2e] hover:border-[#0d4d2e] hover:text-[#15a36e] hover:shadow-md hover:scale-[1.01] text-black"
-                }`}
+                className={`w-full text-left px-6 sm:px-10 lg:px-12 py-4 rounded-2xl border-2 transition-all duration-200 text-base sm:text-lg font-medium ${active
+                  ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg transform scale-[1.02]"
+                  : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white hover:shadow-md hover:scale-[1.01] text-black"
+                  }`}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -455,8 +453,8 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                 <div className="flex items-center justify-between">
                   <span>{opt}</span>
                   {active && (
-                    <div className="w-6 h-6 bg-[#15a36e] rounded-full flex items-center justify-center">
-                      <span className="text-white text-sm">✓</span>
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-[#15a36e] text-sm">✓</span>
                     </div>
                   )}
                 </div>
@@ -468,7 +466,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
 
       {/* Enhanced grouped fields */}
       {step.type === "group" && (
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -478,7 +476,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
             // Get the appropriate value and onChange function based on step type
             let fieldValue = "";
             let onChangeFunction = null;
-            
+
             if (step.id === "contactInfo") {
               fieldValue = value?.[f.key] || "";
               onChangeFunction = (e) => onContactInfoChange(f.key, e.target.value);
@@ -497,7 +495,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
             if (f.type === "segmented") {
               return (
                 <motion.div key={f.key} className="sm:col-span-2">
-                  <label className="block text-white/80 text-sm font-medium mb-3" style={{ fontFamily: 'DM Sans, sans-serif' }}>{f.label}</label>
+                  <label className="block text-black/80 text-sm font-medium mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>{f.label}</label>
                   <div className="flex flex-wrap gap-3">
                     {f.options.map((opt) => {
                       const active = fieldValue === opt;
@@ -505,11 +503,10 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                         <motion.button
                           key={opt}
                           onClick={() => onChangeFunction(opt)}
-                          className={`flex-1 min-w-[120px] px-4 py-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${
-                            active
-                              ? "border-[#0d4d2e] bg-[#0d4d2e] text-[#15a36e] shadow-lg"
-                              : "border-white/20 bg-white hover:bg-[#0d4d2e] hover:border-[#0d4d2e] hover:text-[#15a36e] text-black"
-                          }`}
+                          className={`px-8 py-3 rounded-xl border-2 transition-all duration-200 text-sm font-medium ${active
+                              ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg"
+                              : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white text-black"
+                            }`}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.1 }}
@@ -525,17 +522,17 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
 
             // Handle regular input fields
             return (
-            <motion.input
-              key={f.key}
+              <motion.input
+                key={f.key}
                 type={f.key === "email" ? "email" : "text"}
                 value={fieldValue}
                 onChange={onChangeFunction}
-              placeholder={f.label}
+                placeholder={f.label}
                 className="w-full px-6 py-4 rounded-2xl bg-white border-2 border-white/20 placeholder-black/50 text-black outline-none focus:border-[#15a36e] focus:bg-white transition-all duration-200 text-base sm:text-lg"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-            />
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+              />
             );
           })}
         </motion.div>
@@ -553,7 +550,7 @@ function ThankYou() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="text-center max-w-4xl mx-auto"
     >
-      <motion.div 
+      <motion.div
         className="mx-auto w-24 h-24 rounded-3xl bg-[#15a36e] grid place-items-center shadow-2xl mb-8"
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
@@ -561,23 +558,23 @@ function ThankYou() {
       >
         <GiCheckMark className="w-12 h-12 text-white" />
       </motion.div>
-      
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4 }}
       >
-        <h2 className="text-3xl sm:text-4xl font-black mb-4 text-white uppercase" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        <h2 className="text-3xl sm:text-4xl font-black mb-4 text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           Application Submitted! 🎉
         </h2>
-        <p className="text-lg sm:text-xl text-white/80 mb-6 leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+        <p className="text-lg sm:text-xl text-black/80 mb-6 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           Thank you for your interest in tokenizing with{" "}
           <span className="text-[#15a36e] font-bold">Copym</span>
         </p>
-        
+
         <div className="bg-white rounded-2xl p-6 border border-white/20">
-          <h3 className="font-semibold text-black mb-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>What happens next?</h3>
-          <div className="text-left space-y-2 text-black/80" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h3 className="font-semibold text-black mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>What happens next?</h3>
+          <div className="text-left space-y-2 text-black/80" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 bg-[#15a36e] rounded-full"></div>
               <span>Our team will review your application within 24 hours</span>
@@ -592,8 +589,8 @@ function ThankYou() {
             </div>
           </div>
         </div>
-        
-        <p className="text-sm text-white/60 mt-6" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+
+        <p className="text-sm text-black/60 mt-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           Questions? Contact us at{" "}
           <a href="mailto:hello@copym.xyz" className="text-[#15a36e] hover:underline font-medium">
             hello@copym.xyz

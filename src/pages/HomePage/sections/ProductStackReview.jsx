@@ -17,7 +17,7 @@ const ProductStackReview = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-white pt-0 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden ">
+    <section className="relative w-full bg-white pt-0 pb-0 overflow-hidden ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header Section */}
         <motion.div
@@ -44,8 +44,8 @@ const ProductStackReview = () => {
             className="w-full"
             style={{
               transformOrigin: 'left center',
-              marginTop: isDesktop ? '-80px' : '-20px',
-              marginLeft: isDesktop ? '-120px' : '0px',
+              marginTop: isDesktop ? '-20px' : '0px',
+              marginLeft: isDesktop ? '-30px' : '0px',
               transition: 'all 0.35s cubic-bezier(0.4,0,0.2,1)'
             }}
           >

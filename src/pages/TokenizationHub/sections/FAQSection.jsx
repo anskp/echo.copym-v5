@@ -4,22 +4,14 @@ import { Link } from 'react-router-dom';
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (
     <div
-      className="mb-4 transition-all duration-300"
+      className="transition-all duration-300 border-b border-black/10"
       style={{
-        background: "rgba(228,253,243,0.6)",
-        boxShadow: "0px 4px 4px 0 rgba(159,159,159,0.25)",
-        borderRadius: "8px",
-        border: "1px solid rgba(21,163,110,0.3)",
-        minHeight: isOpen ? '160px' : '60px',
         overflow: 'hidden'
       }}
     >
       <button
         onClick={onToggle}
-        className="w-full text-left flex justify-between items-center transition-colors duration-200 p-3 sm:p-4"
-        style={{
-          minHeight: '50px'
-        }}
+        className="w-full text-left flex justify-between items-start py-4 sm:py-5 group"
       >
         <h3
           className="pr-4 flex-1"
@@ -33,48 +25,45 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
         >
           {question}
         </h3>
-        <div className="flex-shrink-0 transition-transform duration-300">
+        <div className="flex-shrink-0 pt-1 transition-transform duration-300">
           {isOpen ? (
             <svg
-              width="16"
-              height="14"
-              viewBox="0 0 23 20"
+              width="12"
+              height="10"
+              viewBox="0 0 12 10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M11.2578 0L22.5161 19.5H-0.000517845L11.2578 0Z" fill="black" />
+              <path d="M6 10L12 0H0L6 10Z" fill="black" />
             </svg>
           ) : (
             <svg
-              width="14"
-              height="16"
-              viewBox="0 0 20 23"
+              width="10"
+              height="12"
+              viewBox="0 0 10 12"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <path d="M19.5 11.2578L0 -0.000518799V22.5161L19.5 11.2578Z" fill="black" />
+              <path d="M10 6L0 0V12L10 6Z" fill="black" />
             </svg>
           )}
         </div>
       </button>
-      {isOpen && (
-        <div
-          className="overflow-hidden transition-all duration-300 ease-in-out px-4 sm:px-5 pb-4"
+      <div
+        className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100 pb-5' : 'max-h-0 opacity-0'}`}
+      >
+        <p
+          style={{
+            fontSize: 'clamp(14px, 1.8vw, 18px)',
+            color: '#000',
+            textAlign: 'left',
+            lineHeight: '1.6',
+            fontFamily: 'DM Sans, sans-serif'
+          }}
         >
-          <p
-            style={{
-              fontSize: 'clamp(14px, 1.8vw, 18px)',
-              color: '#000',
-              textAlign: 'left',
-              lineHeight: '1.6',
-              marginTop: '8px',
-              fontFamily: 'DM Sans, sans-serif'
-            }}
-          >
-            {answer}
-          </p>
-        </div>
-      )}
+          {answer}
+        </p>
+      </div>
     </div>
   );
 };
@@ -125,7 +114,7 @@ export default function FAQSection() {
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-4">
+        <div>
           {faqs.map((faq, index) => (
             <FAQItem
               key={index}
@@ -136,7 +125,7 @@ export default function FAQSection() {
             />
           ))}
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-8">
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"

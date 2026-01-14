@@ -88,7 +88,7 @@ export default function TokenManagement() {
                             </div>
 
                             {/* Content Area - Fluid Height & Spacing */}
-                            <div className="relative z-10 w-full p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 group-hover:h-1/2 group-hover:justify-start group-hover:pt-4 md:group-hover:pt-6">
+                            <div className="relative z-10 w-full p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 group-hover:h-[60%] group-hover:justify-start group-hover:pt-10 md:group-hover:pt-14">
                                 {/* Icon (Fades out and collapses on hover) */}
                                 <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-4 sm:mb-5 overflow-hidden flex shrink-0">
                                     <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gray-50 rounded-xl sm:rounded-2xl flex items-center justify-center">
@@ -109,7 +109,7 @@ export default function TokenManagement() {
                                     )}
 
                                     {feature.badge && (
-                                        <div className="flex justify-center mt-0.5 pb-0.5">
+                                        <div className="flex justify-center mt-4 pb-0.5">
                                             <span className="inline-block bg-[#15a36e] text-white text-[10px] sm:text-[12px] font-semibold py-1.5 px-4 sm:px-6 rounded-full shadow-md whitespace-nowrap active:scale-95 transition-transform">
                                                 {feature.badge}
                                             </span>
