@@ -208,6 +208,59 @@ const AboutUs = () => {
                                         />
                                     </svg>
                                 </div>
+
+                                {/* Email and Address Cards - Side by Side */}
+                                <div className="grid grid-cols-2 gap-4 mt-8">
+                                    {/* Email Card */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -30 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.3 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white p-6 rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 border-2 border-[#15a36e]"
+                                    >
+                                        <div className="flex flex-col items-center text-center gap-3">
+                                            <div className="w-12 h-12 flex items-center justify-center">
+                                                <img
+                                                    src={Contact2Image}
+                                                    alt="Email"
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                            <h3 className="text-base font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                E-MAIL ID
+                                            </h3>
+                                            <p className="text-sm text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                support@copym.xyz
+                                            </p>
+                                        </div>
+                                    </motion.div>
+
+                                    {/* Address Card */}
+                                    <motion.div
+                                        initial={{ opacity: 0, x: -30 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.4 }}
+                                        viewport={{ once: true }}
+                                        className="bg-white p-6 rounded-[20px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 border-2 border-[#15a36e]"
+                                    >
+                                        <div className="flex flex-col items-center text-center gap-3">
+                                            <div className="w-12 h-12 flex items-center justify-center">
+                                                <img
+                                                    src={Contact3Image}
+                                                    alt="Address"
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                            <h3 className="text-base font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                ADDRESS
+                                            </h3>
+                                            <p className="text-sm text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
+                                            </p>
+                                        </div>
+                                    </motion.div>
+                                </div>
                             </motion.div>
                         </div>
 
@@ -281,15 +334,10 @@ const AboutUs = () => {
             <section className="relative bg-black py-10 sm:py-12 lg:py-16">
                 <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     {/* Section Header */}
-                    {/* Section Header */}
                     <div className="text-left mb-12 sm:mb-16 lg:mb-20">
-                        <div className="relative w-fit mb-3 sm:mb-4">
-                            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                <span className="text-white">COMPANY </span>
-                                <span className="text-[#15a36e]">TIMELINE</span>
-                            </h2>
-                            <div className="absolute bottom-0 left-0 bg-white" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
-                        </div>
+                        <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            Company <span className="text-[#15a36e]">Timeline</span>
+                        </h2>
                     </div>
 
                     {/* Timeline Container */}

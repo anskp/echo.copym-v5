@@ -124,8 +124,6 @@ export default function FAQsection() {
             />
           ))}
         </div>
-
-        {/* Contact Button */}
         <div className="flex justify-center mt-8">
           <Link
             to="/contact"

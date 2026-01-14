@@ -244,10 +244,26 @@ export default function Typeform() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.6 }}
-                className="w-full"
+                className="w-full relative group"
               >
+                {/* Hexagonal Pattern Background - Shows on Hover */}
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none rounded-lg"
+                  style={{
+                    background: `
+                      radial-gradient(circle at 25% 25%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 25%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 50% 50%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 25% 75%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
+                      radial-gradient(circle at 75% 75%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
+                      linear-gradient(135deg, rgba(21, 163, 110, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%)
+                    `,
+                    backgroundSize: '100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100% 100%'
+                  }}
+                ></div>
+
                 {/* Text Content - Left Aligned */}
-                <div className="max-w-3xl mx-auto text-center sm:text-left mb-7 px-2">
+                <div className="max-w-3xl mx-auto text-center sm:text-left mb-7 px-2 relative z-10">
                   <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
                   </p>
