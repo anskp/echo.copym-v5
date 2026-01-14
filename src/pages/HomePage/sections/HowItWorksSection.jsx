@@ -22,7 +22,7 @@ const HowItWorksSection = () => {
           scrub: 1, // Smooth scrubbing
           anticipatePin: 1, // Reduce jitter
           start: "top top",
-          end: "+=200%" // Length of the scroll distance (2x height of screen roughly)
+          end: "+=50%" // Length of the scroll distance (reduced to 0.5x height)
         }
       });
 
@@ -43,28 +43,34 @@ const HowItWorksSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-screen overflow-hidden relative bg-white">
+    <section ref={containerRef} className="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden relative bg-white">
       {/* Top Header - Fixed/Static within pinned section */}
-      <div className="absolute top-0 left-0 w-full z-30 pt-4 sm:pt-8 md:pt-12 px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 pointer-events-none">
-        <div className="max-w-5xl mx-auto">
-          <SectionHeader
-            title="HOW IT WORKS"
-            highlightWords={['WORKS']}
-            alignment="left"
-            className="!mb-3 sm:!mb-4"
-          />
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-medium leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            How Copym works - for issuers and investors
-          </p>
+      <div className="relative w-full z-30 pt-0 pointer-events-none">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          {/* Header Section - Exact copy of ProductStackReview structure */}
+          <div className="text-left mb-6 sm:mb-8 md:mb-10">
+            <div className="relative w-fit mb-3 sm:mb-4">
+              <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-[#15a36e]">HOW IT </span>
+                <span className="text-black">WORKS</span>
+              </h2>
+              <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
+            </div>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              How Copym works - for issuers and investors
+            </p>
+          </div>
         </div>
       </div>
 
+
       {/* Panel 1: Asset Owners */}
-      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-16 sm:pt-20">
+      <div className="panel absolute inset-0 w-full h-full flex items-center justify-center bg-white z-10 pt-4 sm:pt-6">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
+          {/* Animation */}
           <div className="w-full max-w-4xl mx-auto my-auto pointer-events-auto">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-12 mt-6 sm:mt-8 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-4 mt-0 sm:mt-1 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Asset Owners
             </h3>
             <Lottie
@@ -82,12 +88,12 @@ const HowItWorksSection = () => {
       {/* Using `left-full` puts it 100% to the right. Then we animate xPercent: -100 to bring it back to 0 (center). */}
       <div
         ref={panel2Ref}
-        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-16 sm:pt-20"
+        className="panel absolute top-0 left-full w-full h-full flex items-center justify-center bg-white z-20 pt-4 sm:pt-6"
       >
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
           <div className="w-full max-w-4xl mx-auto pointer-events-auto">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-12 mt-6 sm:mt-8 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-4 mt-0 sm:mt-1 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Investors
             </h3>
             <Lottie

@@ -73,8 +73,8 @@ export default function Hero() {
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
 
           >
-            Secure, AI-enhanced marketplace.Seamless<br />
-            on-chain investment in real estate, commodities, carbon credits, and luxury assets.
+            Secure, AI-enhanced marketplace. Seamless on-chain investment in real estate, commodities, <br />
+            carbon credits, and luxury assets.
           </p>
 
           <p

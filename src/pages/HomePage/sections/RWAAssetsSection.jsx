@@ -4,6 +4,8 @@ import maskcard1 from '../../../components/images/Maskcard1.png';
 import maskcard2 from '../../../components/images/Maskcard2.png';
 import maskcard3 from '../../../components/images/Maskcard3.png';
 import maskcard4 from '../../../components/images/Maskcard4.png';
+import SectionContainer from '../../../components/Layout/SectionContainer';
+import SectionHeader from '../../../components/Layout/SectionHeader';
 
 
 const TokenizeAssetsSection = () => {
@@ -36,105 +38,95 @@ const TokenizeAssetsSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-8 sm:py-12 md:py-16 lg:py-20">
-      <div className="w-full mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16" style={{ maxWidth: '100%' }}>
-        {/* Header Section */}
-        <div className="text-left mb-6 sm:mb-8 md:mb-10">
-          <div className="relative w-fit mb-3 sm:mb-4 md:mb-5">
-            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold leading-tight uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-              <span className="text-[#15a36e]">TOKENIZE</span>
-              <span className="text-black"> REAL ASSETS</span>
-            </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
-          </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access.
-          </p>
-        </div>
+    <SectionContainer padding="py-8 sm:py-12 md:py-16 lg:py-20">
+      <SectionHeader
+        title="TOKENIZE REAL ASSETS"
+        subtitle="Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access."
+        highlightWords={["TOKENIZE"]}
+      />
 
-        {/* Assets Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full">
-          {assets?.map((asset, index) => {
-            return (
+      {/* Assets Grid */}
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full">
+        {assets?.map((asset, index) => {
+          return (
+            <div
+              key={asset?.id}
+              className="relative w-full h-full"
+            >
+              {/* Asset Card */}
               <div
-                key={asset?.id}
-                className="relative w-full h-full"
+                className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[550px] relative"
+                style={{
+                  background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
+                }}
               >
-                {/* Asset Card */}
-                <div
-                  className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[550px] relative"
-                  style={{
-                    background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
-                  }}
-                >
-                  {/* Floating ROI/APR Badge - Top Right */}
-                  <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
-                    {/* ROI Badge */}
-                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#dcfce7] border border-[#bbf7d0]/50 shadow-sm">
-                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
-                      </svg>
-                      <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>76%</span>
-                      <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>ROI</span>
-                    </div>
-
-                    {/* APR Badge */}
-                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#fee2e2] border border-[#fecaca]/50 shadow-sm">
-                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M6 10L1.5 2.5H10.5L6 10Z" fill="#ef4444" />
-                      </svg>
-                      <span className="text-xs sm:text-sm font-bold text-[#ef4444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>20%</span>
-                      <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>APR</span>
-                    </div>
+                {/* Floating ROI/APR Badge - Top Right */}
+                <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
+                  {/* ROI Badge */}
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#dcfce7] border border-[#bbf7d0]/50 shadow-sm">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
+                    </svg>
+                    <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>76%</span>
+                    <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>ROI</span>
                   </div>
 
-                  {/* Asset Image - Top, Centered - Fixed Height */}
-                  <div className="flex items-center justify-center mt-8 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
-                    <img
-                      src={asset?.image}
-                      alt={asset?.title}
-                      className="w-full h-full object-contain"
-                    />
+                  {/* APR Badge */}
+                  <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#fee2e2] border border-[#fecaca]/50 shadow-sm">
+                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 10L1.5 2.5H10.5L6 10Z" fill="#ef4444" />
+                    </svg>
+                    <span className="text-xs sm:text-sm font-bold text-[#ef4444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>20%</span>
+                    <span className="text-[10px] sm:text-xs font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>APR</span>
                   </div>
+                </div>
 
-                  {/* Asset Info - Below Image */}
-                  <div className="flex flex-col flex-grow text-left space-y-3">
-                    {/* Title - Fixed Height */}
-                    <h3
-                      className="text-base sm:text-lg lg:text-xl font-bold text-black min-h-[24px] sm:min-h-[28px] lg:min-h-[32px]"
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
-                    >
-                      {asset?.title}
-                    </h3>
+                {/* Asset Image - Top, Centered - Fixed Height */}
+                <div className="flex items-center justify-center mt-8 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
+                  <img
+                    src={asset?.image}
+                    alt={asset?.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
-                    {/* Description - Fixed Height */}
-                    <p
-                      className="text-[12px] sm:text-sm lg:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[60px] lg:min-h-[72px]"
-                      style={{ fontFamily: 'DM Sans, sans-serif' }}
-                    >
-                      {asset?.description}
-                    </p>
+                {/* Asset Info - Below Image */}
+                <div className="flex flex-col flex-grow text-left space-y-3">
+                  {/* Title - Fixed Height */}
+                  <h3
+                    className="text-base sm:text-lg lg:text-xl font-bold text-black min-h-[24px] sm:min-h-[28px] lg:min-h-[32px]"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    {asset?.title}
+                  </h3>
 
-                    {/* Know More Section - Conditional Styling */}
-                    <div className="mt-5 flex justify-center">
-                      <Link to="/marketplace" className="block">
-                        <div
-                          className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1.5 sm:py-2 px-4 sm:px-5 rounded-lg transition-colors duration-300 pointer-events-auto"
-                        >
-                          <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            Know more
-                          </span>
-                        </div>
-                      </Link>
-                    </div>
+                  {/* Description - Fixed Height */}
+                  <p
+                    className="text-[12px] sm:text-sm lg:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[60px] lg:min-h-[72px]"
+                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                  >
+                    {asset?.description}
+                  </p>
+
+                  {/* Know More Section - Conditional Styling */}
+                  <div className="mt-5 flex justify-center">
+                    <Link to="/marketplace" className="block">
+                      <div
+                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1.5 sm:py-2 px-4 sm:px-5 rounded-lg transition-colors duration-300 pointer-events-auto"
+                      >
+                        <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                          Know more
+                        </span>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
-    </section>
+    </SectionContainer>
   );
 };
 

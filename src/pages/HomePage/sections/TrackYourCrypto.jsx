@@ -30,20 +30,11 @@ export default function TrackYourCrypto() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-40 sm:w-48 md:w-56 z-10 drop-shadow-2xl">
                   <div className="relative w-full aspect-[9/18]">
-                    {/* Video Layer - Centered & Masked (z-0) */}
-                    <video
-                      src="/assets/videos/only-logo.mp4"
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[88%] object-contain bg-black rounded-[2rem] z-0"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
-                    {/* Device Frame Layer - On Top (z-10) */}
+                    {/* Single Mockup Image */}
                     <img
-                      src="/assets/Images/devices/trackyourcrypto.png"
-                      alt="App Mockup Frame"
-                      className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                      src="/assets/Images/mockup.png"
+                      alt="App Mockup"
+                      className="w-[85%] h-[85%] object-contain mx-auto"
                     />
                   </div>
                 </div>
@@ -110,20 +101,11 @@ export default function TrackYourCrypto() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72 z-10 drop-shadow-2xl">
                   <div className="relative w-full aspect-[9/18]">
-                    {/* Video Layer - Centered & Masked (z-0) */}
-                    <video
-                      src="/assets/videos/only-logo.mp4"
-                      className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[92%] h-[88%] object-contain bg-black rounded-[2rem] z-0"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    />
-                    {/* Device Frame Layer - On Top (z-10) */}
+                    {/* Single Mockup Image */}
                     <img
-                      src="/assets/Images/devices/trackyourcrypto.png"
-                      alt="App Mockup Frame"
-                      className="absolute inset-0 w-full h-full object-contain pointer-events-none z-10"
+                      src="/assets/Images/mockup.png"
+                      alt="App Mockup"
+                      className="w-[85%] h-[85%] object-contain mx-auto"
                     />
                   </div>
                 </div>

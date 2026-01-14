@@ -10,17 +10,17 @@ export default function AuditSection() {
       </div>
 
       <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-0 sm:pb-6 md:pb-8 lg:pb-10">
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           {/* Section Header */}
-          <div className="text-left mb-4 sm:mb-12 md:mb-16 lg:mb-20 px-4">
+          <div className="text-left mb-6 sm:mb-8 md:mb-10">
             <div className="relative w-fit mb-3 sm:mb-4">
-              <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-gray-900 uppercase pb-1" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+              <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e]">SECURE & </span>
                 <span className="text-black">AUDITED</span>
               </h2>
               <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
             </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Our smart contracts have been audited by the world's most trusted security firms and integrated with leading blockchain networks, ensuring maximum protection and seamless interoperability.
             </p>
           </div>

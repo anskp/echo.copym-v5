@@ -211,8 +211,8 @@ export default function TestimonialsSection() {
   return (
     <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
       {/* heading */}
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 2xl:px-32 mb-8 sm:mb-10 md:mb-12">
-        <div className="text-left px-4">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div className="text-left mb-6 sm:mb-8 md:mb-10">
           <div className="relative w-fit mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">TRUSTED BY INDUSTRY </span>
@@ -220,7 +220,7 @@ export default function TestimonialsSection() {
             </h2>
             <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
           </p>
         </div>

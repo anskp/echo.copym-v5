@@ -15,7 +15,7 @@ import { Box } from "@mui/material";
 import { Routes, Route, useLocation } from "react-router-dom";
 
 import Launchkit from './pages/Launchkit/Launchkit';
-import AccessPage from './pages/AccessPage/AccessPage';
+
 import ZeroGas from './pages/Zerogas/Zerogas';
 import PrivacyAi from './pages/PrivacyAi';
 import { animate } from 'animejs';
@@ -71,7 +71,7 @@ function App() {
           <Route path="/launchkit" element={<Launchkit />} />
 
           <Route path="/contact" element={<Contact />} />
-          <Route path="/access" element={<AccessPage />} />
+
           <Route path="/zerogas" element={<ZeroGas />} />
           <Route path="/privacy-ai" element={<PrivacyAi />} />
         </Routes>
