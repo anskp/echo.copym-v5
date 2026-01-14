@@ -113,12 +113,6 @@ export default function Header() {
           heading: "About Us",
           description: "Learn about our mission, vision, and the team driving CopyM forward.",
           path: "/about"
-        },
-        {
-          icon: <FaEnvelope className="w-5 h-5" />,
-          heading: "Contact",
-          description: "Get in touch with us for support, partnerships, or general inquiries.",
-          path: "/contact"
         }
       ]
     }

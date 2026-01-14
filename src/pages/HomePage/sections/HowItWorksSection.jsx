@@ -32,16 +32,16 @@ const HowItWorksSection = () => {
           scrub: 1,
           anticipatePin: 1,
           start: "top top",
-          end: "+=150%",
+          end: "+=100%",
           invalidateOnRefresh: true,
           // markers: true, // Uncomment for debugging
         }
       });
 
-      // Wait for first 50%, then slide in panel 2 for second 50%
+      // Transition Panel 2: Slower slide-in (80% of scroll duration)
       timeline
-        .to({}, { duration: 1 })
-        .to(panel2Ref.current, { xPercent: -100, duration: 1, ease: "none" });
+        .to({}, { duration: 0.4 })
+        .to(panel2Ref.current, { xPercent: -100, duration: 1.6, ease: "none" });
 
     }, containerRef);
 
@@ -62,7 +62,7 @@ const HowItWorksSection = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full h-[500px] sm:h-[550px] md:h-[650px] lg:h-[750px] overflow-hidden relative bg-white">
+    <section ref={containerRef} className="w-full h-[320px] sm:h-[370px] md:h-[470px] lg:h-[570px] overflow-hidden relative bg-white">
       {/* Top Header - Fixed/Static within pinned section */}
       <div className="relative w-full z-30 pt-0 pointer-events-none">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
@@ -88,8 +88,8 @@ const HowItWorksSection = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
           {/* Animation */}
-          <div className="w-full max-w-4xl mx-auto my-auto pointer-events-auto">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-4 mt-0 sm:mt-1 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full max-w-4xl mx-auto pointer-events-auto">
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] mb-2 sm:mb-4 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Asset Owners
             </h3>
             <Lottie
@@ -112,7 +112,7 @@ const HowItWorksSection = () => {
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 w-full h-full flex flex-col justify-center">
           {/* Animation */}
           <div className="w-full max-w-4xl mx-auto pointer-events-auto">
-            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] -mb-4 mt-0 sm:mt-1 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-base sm:text-lg md:text-xl font-bold text-[#15a36e] mb-2 sm:mb-4 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               For Investors
             </h3>
             <Lottie

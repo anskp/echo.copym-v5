@@ -1,9 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Typeform from './Typeform';
-import Contact1Image from '../../components/images/Contact1.png';
-import Contact2Image from '../../components/images/Contact2.png';
-import Contact3Image from '../../components/images/Conatct3.png';
+// Removed old contact image imports to use public assets directly
+
 
 const Contact = () => {
   return (
@@ -86,7 +85,7 @@ const Contact = () => {
               >
                 <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
                   <img
-                    src={Contact2Image}
+                    src="/assets/Images/email.png"
                     alt="Email"
                     className="w-full h-full object-contain"
                   />
@@ -109,7 +108,7 @@ const Contact = () => {
               >
                 <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 mb-4 flex items-center justify-center">
                   <img
-                    src={Contact3Image}
+                    src="/assets/Images/address.png"
                     alt="Address"
                     className="w-full h-full object-contain"
                   />

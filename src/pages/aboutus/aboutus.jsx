@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typeform from "../Contact/Typeform";
-import Contact2Image from "../../components/images/Contact2.png";
-import Contact3Image from "../../components/images/Conatct3.png";
+// Removed old contact image imports to use public assets directly
+
 // Removed LavaLamp background
 import {
     GiShield,
@@ -223,7 +223,7 @@ const AboutUs = () => {
                                             <div className="flex items-center gap-2">
                                                 <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
                                                     <img
-                                                        src={Contact2Image}
+                                                        src="/assets/Images/email.png"
                                                         alt="Email"
                                                         className="w-full h-full object-contain"
                                                     />
@@ -250,7 +250,7 @@ const AboutUs = () => {
                                             <div className="flex items-center gap-2">
                                                 <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
                                                     <img
-                                                        src={Contact3Image}
+                                                        src="/assets/Images/address.png"
                                                         alt="Address"
                                                         className="w-full h-full object-contain"
                                                     />
