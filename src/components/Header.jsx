@@ -52,13 +52,13 @@ export default function Header() {
       path: "/product",
       dropdown: [
         {
-          icon: <img src={tokencoinh} alt="Tokenization" className="w-8 h-8 object-contain" />,
+          icon: <img src={tokencoinh} alt="Tokenization" className="w-10      h-10 object-contain" />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
         },
         {
-          icon: <img src={tiicon4} alt="Marketplace" className="w-8 h-8 object-contain" />,
+          icon: <img src={tiicon4} alt="Marketplace" className="w-10    h-10 object-contain" />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
@@ -96,13 +96,13 @@ export default function Header() {
         //   description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
         // },
         {
-          icon: <img src={zerogash} alt="Zero Gas" className="w-8 h-8 object-contain" />,
+          icon: <img src={zerogash} alt="Zero Gas" className="w-10 h-10 object-contain" />,
           heading: "Zero Gas",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/zerogas"
         },
         {
-          icon: <img src={parivaryaih} alt="Privacy AI" className="w-8 h-8 object-contain" />,
+          icon: <img src={parivaryaih} alt="Privacy AI" className="w-10 h-10 object-contain" />,
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/privacy-ai"
@@ -114,7 +114,7 @@ export default function Header() {
       path: "/company",
       dropdown: [
         {
-          icon: <img src={aboutush} alt="About Us" className="w-8 h-8 object-contain" />,
+          icon: <img src={aboutush} alt="About Us" className="w-10 h-10 object-contain" />,
           heading: "About Us",
           description: "Learn about our mission, vision, and the team driving CopyM forward.",
           path: "/about"

@@ -29,7 +29,7 @@ export default function TradableAssets() {
                     <h2 className="inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         <span className="text-black">What you can trade on</span> <span className="text-[#10b981]">CopyM</span> <span className="text-black">?</span>
                     </h2>
-                    <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 40px)', height: '2px' }}></div>
+                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+40px)]" style={{ height: '2px' }}></div>
                 </div>
 
                 {/* List of Assets */}
@@ -41,7 +41,7 @@ export default function TradableAssets() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-black text-white rounded-sm overflow-hidden flex items-center h-20 sm:h-24 md:h-32 lg:h-40 group"
+                            className="bg-black text-white rounded-sm overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
                         >
                             {/* Image Container */}
                             <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-center bg-black">

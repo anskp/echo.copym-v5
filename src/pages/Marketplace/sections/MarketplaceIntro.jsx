@@ -10,7 +10,7 @@ export default function MarketplaceIntro() {
                         <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             <span className="text-black">What is the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">?</span>
                         </h2>
-                        <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
+                        <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+100px)]" style={{ height: '1px' }}></div>
                     </div>
                     <div className="space-y-6 text-lg text-gray-800 leading-relaxed font-medium">
                         <p>
