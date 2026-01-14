@@ -130,7 +130,7 @@ export default function HowItWorks() {
                                     {/* Icon (Fades out and collapses on hover) */}
                                     <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-5 overflow-hidden flex shrink-0">
                                         <div className="w-14 h-14 bg-gray-50 rounded-xl flex items-center justify-center">
-                                            <img src={step.icon} alt={step.title} className="w-7 h-7 object-contain" />
+                                            <img src={step.icon} alt={step.title} className="w-10 h-10 object-contain" />
                                         </div>
                                     </div>
 

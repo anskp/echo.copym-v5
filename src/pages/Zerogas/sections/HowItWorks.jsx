@@ -26,12 +26,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -64,12 +64,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -102,12 +102,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -140,12 +140,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -178,12 +178,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
             <div
-              className="w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:

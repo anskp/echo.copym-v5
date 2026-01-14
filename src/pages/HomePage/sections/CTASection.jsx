@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import ctavdo from '../../../components/Videos/ctavdos.mp4';
 export default function CTASection() {
     return (
-        <section className="relative w-full py-8 sm:py-10 md:py-14 lg:py-20 bg-white">
+        <section className="relative w-full pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-8 sm:pb-10 md:pb-14 lg:pb-20 bg-white">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
                 <div className="relative w-full h-[40vh] sm:h-[45vh] lg:h-[50vh] overflow-hidden">
                     {/* Background Video */}

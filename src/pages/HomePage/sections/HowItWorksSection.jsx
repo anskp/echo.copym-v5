@@ -96,7 +96,7 @@ const HowItWorksSection = () => {
               animationData={assetOwnersAnimation}
               loop={true}
               autoplay={true}
-              className="w-[85%] sm:w-full h-auto"
+              className="w-full h-auto"
             />
           </div>
         </div>
@@ -119,7 +119,7 @@ const HowItWorksSection = () => {
               animationData={investorsAnimation}
               loop={true}
               autoplay={true}
-              className="w-[85%] sm:w-full h-auto"
+              className="w-full h-auto"
             />
           </div>
         </div>
