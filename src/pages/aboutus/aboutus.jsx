@@ -189,7 +189,7 @@ const AboutUs = () => {
                                 </p>
 
                                 {/* Decorative Arrow SVG */}
-                                <div className="hidden lg:block absolute bottom-72 right-0 transform translate-x-1/4">
+                                <div className="hidden lg:block absolute bottom-40 right-0 transform translate-x-1/4">
                                     <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <motion.path
                                             d="M20 20 C 50 100, 150 100, 180 80"
