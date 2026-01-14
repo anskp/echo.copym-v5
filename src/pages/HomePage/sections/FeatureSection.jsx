@@ -26,7 +26,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
@@ -66,7 +66,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">
@@ -106,7 +106,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center md:justify-start">
@@ -146,7 +146,7 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-6 md:gap-14 lg:gap-20"
+          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center md:justify-end">

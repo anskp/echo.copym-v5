@@ -43,9 +43,13 @@ const AboutUs = () => {
                                     transition={{ duration: 0.5 }}
                                 >
                                     <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {activeTab === 0 ? "Transforming Asset Ownership" :
-                                            activeTab === 1 ? "Democratizing Investment" :
-                                                "Borderless Future"}
+                                        {activeTab === 0 ? (
+                                            <>Transforming <span className="text-[#15a36e]">Asset</span> Ownership</>
+                                        ) : activeTab === 1 ? (
+                                            <>Democratizing <span className="text-[#15a36e]">Investment</span></>
+                                        ) : (
+                                            <>Borderless <span className="text-[#15a36e]">Future</span></>
+                                        )}
                                     </h2>
                                     <div className="text-lg text-gray-600 leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         {activeTab === 0 && (
@@ -88,9 +92,9 @@ const AboutUs = () => {
                         {/* RIGHT TOP: Accordion / Interactive List */}
                         <div className="flex flex-col gap-6 pt-10">
                             {[
-                                { id: 0, title: "About Us", label: "01" },
-                                { id: 1, title: "Our Mission", label: "02" },
-                                { id: 2, title: "Our Vision", label: "03" }
+                                { id: 0, title: "About Us" },
+                                { id: 1, title: "Our Mission" },
+                                { id: 2, title: "Our Vision" }
                             ].map((item) => (
                                 <motion.button
                                     key={item.id}
@@ -103,9 +107,7 @@ const AboutUs = () => {
                                     whileTap={{ scale: 0.99 }}
                                 >
                                     <div className="flex items-center gap-6 sm:gap-8">
-                                        <span className="text-4xl font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                            {item.label}
-                                        </span>
+
                                         <span className={`text-xl sm:text-2xl font-medium ${activeTab === item.id ? 'text-black' : 'text-gray-500 group-hover:text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {item.title}
                                         </span>

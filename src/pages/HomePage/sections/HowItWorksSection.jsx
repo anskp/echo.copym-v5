@@ -22,7 +22,7 @@ const HowItWorksSection = () => {
           scrub: 1, // Smooth scrubbing
           anticipatePin: 1, // Reduce jitter
           start: "top top",
-          end: "+=50%" // Length of the scroll distance (reduced to 0.5x height)
+          end: "+=150%" // Length of the scroll distance (increased to 1.5x height to slow down)
         }
       });
 

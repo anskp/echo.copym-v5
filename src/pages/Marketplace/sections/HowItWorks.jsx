@@ -14,35 +14,35 @@ export default function HowItWorks() {
             title: "Fractional Ownership",
             description: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
             icon: "/assets/Images/icons/t2.png",
-           
+
             number: "02."
         },
         {
             title: "Buy, Sell & Trade",
             description: "Participants can acquire, trade or exit positions through an open marketplace driven by real-time supply and demand.",
             icon: "/assets/Images/icons/t3.png",
-            
+
             number: "03."
         },
         {
             title: "Smart Contract Settlement",
             description: "Ownership transfers, revenue distribution and settlements are executed automatically via smart contracts – reducing intermediaries, delays and errors.",
             icon: "/assets/Images/icons/t1.png", // Using t1 icon for now, you can change if needed
-            
+
             number: "04."
         },
         {
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: "/assets/Images/icons/t2.png", // Using t2 icon for now, you can change if needed
-            
+
             number: "05."
         },
         {
             title: "Compliance-First Architecture",
             description: "KYC, asset verification and regulatory safeguards are embedded by design, so every transaction is built on trust and future-ready compliance.",
             icon: "/assets/Images/icons/t3.png", // Using t3 icon for now, you can change if needed
-            
+
             number: "06."
         }
     ];
@@ -113,12 +113,7 @@ export default function HowItWorks() {
                                 className="flex-shrink-0 w-80 group relative rounded-xl border-[6px] border-[#EEEEEE] bg-white overflow-hidden flex flex-col justify-end min-h-[420px] transition-all duration-300 shadow-sm hover:shadow-xl"
                                 drag={false}
                             >
-                                {/* Card Number (Top Left Default) */}
-                                <div className="absolute top-5 left-5 z-20 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                                    <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#10b981] block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {step.number}
-                                    </span>
-                                </div>
+
 
                                 {/* Top Part: Hover Image with Responsive Gradient */}
                                 <div className="absolute top-0 left-0 w-full h-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden z-0">

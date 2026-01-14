@@ -30,7 +30,7 @@ export default function HomePage() {
       <ProductStackReview />
       <HowItWorksSection />
       <AIInvestingSection />
-      <NetworkShowcase />
+
       <RWAAssetsSection />
       <TrackYourCrypto />
       <AuditSection />

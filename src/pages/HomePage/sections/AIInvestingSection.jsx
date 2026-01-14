@@ -30,7 +30,7 @@ export default function AIInvestingSection() {
             <div className="relative z-20">
               <div className="relative overflow-hidden max-h-[300px] sm:max-h-[350px] md:max-h-[400px]">
                 <img
-                  src="/assets/Images/Ai-fon-view.png"
+                  src="/assets/Images/devices/ai-fon-view.png"
                   alt="AI Investment Interface"
                   className="w-full h-auto max-w-full object-contain"
                 />
@@ -113,7 +113,7 @@ export default function AIInvestingSection() {
                 {/* Image Wrapper for Bottom Cropping */}
                 <div className="relative overflow-hidden max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] xl:max-h-[650px] flex items-start justify-center  -translate-y-12 translate-x-28">
                   <img
-                    src="/assets/Images/Ai-fon-view.png"
+                    src="/assets/Images/devices/ai-fon-view.png"
                     alt="AI Investment Interface"
                     className="w-64 h-auto sm:w-[360px] lg:w-[500px] xl:w-[600px] -mt-10 object-contain z-15"
                   />

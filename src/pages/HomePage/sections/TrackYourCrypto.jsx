@@ -34,7 +34,7 @@ export default function TrackYourCrypto() {
                     <img
                       src="/assets/Images/mockup.png"
                       alt="App Mockup"
-                      className="w-[85%] h-[85%] object-contain mx-auto"
+                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-20"
                     />
                   </div>
                 </div>
@@ -105,7 +105,7 @@ export default function TrackYourCrypto() {
                     <img
                       src="/assets/Images/mockup.png"
                       alt="App Mockup"
-                      className="w-[85%] h-[85%] object-contain mx-auto"
+                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-20"
                     />
                   </div>
                 </div>

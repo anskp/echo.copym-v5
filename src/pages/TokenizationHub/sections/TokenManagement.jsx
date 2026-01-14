@@ -70,12 +70,7 @@ export default function TokenManagement() {
                             viewport={{ once: true }}
                             className="group relative rounded-xl border-[6px] sm:border-8 border-[#EEEEEE] bg-white overflow-hidden flex flex-col justify-end min-h-[420px] xs:min-h-[460px] sm:min-h-[480px] md:min-h-[500px] lg:min-h-[530px] transition-all duration-300 shadow-sm hover:shadow-xl"
                         >
-                            {/* Card Number (Top Left Default) */}
-                            <div className="absolute top-5 sm:top-8 left-5 sm:left-8 z-20 transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                                <span className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#15a36e] block" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    {feature.number}
-                                </span>
-                            </div>
+
 
                             {/* Top Part: Hover Image with Responsive Gradient */}
                             <div className="absolute top-0 left-0 w-full h-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden z-0">
