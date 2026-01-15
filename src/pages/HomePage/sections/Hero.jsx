@@ -119,13 +119,6 @@ export default function Hero() {
               </div>
             </Link>
 
-            <button
-              onClick={() => setVideoOpen(true)}
-              className="border-2 border-white text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base hover:bg-white hover:text-gray-900 transition-all duration-300 w-full sm:w-auto sm:min-w-[200px]"
-
-            >
-              WATCH DEMO
-            </button>
           </div>
         </div>
       </div>

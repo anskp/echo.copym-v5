@@ -3,6 +3,7 @@ import { GiBrain } from 'react-icons/gi';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import ellipse from '../../../components/SVG/Ellipse.svg';
+import aiVdo from '../../../components/Videos/ai-vdo.mp4';
 
 export default function AIInvestingSection() {
   return (
@@ -28,10 +29,13 @@ export default function AIInvestingSection() {
           <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
             <div className="relative z-20">
               <div className="relative overflow-hidden max-h-[300px] sm:max-h-[350px] md:max-h-[400px]">
-                <img
-                  src="/assets/Images/devices/ai-fon-view.png"
+                <video
+                  src={aiVdo}
                   alt="AI Investment Interface"
-                  className="w-full h-auto max-w-full object-contain"
+                  className="w-full h-auto max-h-[300px] sm:max-h-[350px] md:max-h-[400px] max-w-full object-contain"
+                  autoPlay
+                  muted
+                  loop
                 />
               </div>
 
@@ -111,10 +115,12 @@ export default function AIInvestingSection() {
               <div className="relative flex justify-center items-center z-20">
                 {/* Image Wrapper for Bottom Cropping */}
                 <div className="relative overflow-hidden max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] xl:max-h-[650px] flex items-start justify-center  -translate-y-12 translate-x-28">
-                  <img
-                    src="/assets/Images/devices/ai-fon-view.png"
-                    alt="AI Investment Interface"
-                    className="w-64 h-auto sm:w-[360px] lg:w-[500px] xl:w-[600px] -mt-10 object-contain z-15"
+                  <video
+                    src={aiVdo}
+                    className="w-64 h-[400px] sm:w-[360px] lg:w-[300px] xl:w-[600px] -mt-10 object-contain z-15"
+                    autoPlay
+                    muted
+                    loop
                   />
                 </div>
 
