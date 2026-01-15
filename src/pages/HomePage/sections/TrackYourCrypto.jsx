@@ -16,8 +16,18 @@ export default function TrackYourCrypto() {
 
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10 pb-0 mt-0">
         {/* Mobile/Tablet Layout (sm, md) - Vertical Stack like the image */}
-        <div className="flex flex-col lg:hidden items-start text-left space-y-3 sm:space-y-4 md:space-y-5">
-          {/* Watch SVG Background with Phone Video Overlay */}
+        <div className="flex flex-col lg:hidden items-start text-left space-y-6 sm:space-y-8 md:space-y-10">
+          {/* Title - Moved to Top */}
+          <div className="space-y-2 sm:space-y-3 text-left w-full mt-10">
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-[32px] font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your <br /> favorite App store</span>
+            </h2>
+            <p className="text-sm text-white font-normal leading-relaxed max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Stay connected to your portfolio across all your devices. CopyM is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead on your investments – wherever you are.
+            </p>
+          </div>
+
+          {/* Watch SVG Background with Phone Video Overlay - Moved to Middle */}
           <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md flex justify-center items-center mx-auto pt-0">
             {/* Watch SVG - Static Background */}
             <div className="relative w-72 sm:w-80 md:w-96">
@@ -34,7 +44,7 @@ export default function TrackYourCrypto() {
                     <img
                       src="/assets/Images/mockup.png"
                       alt="App Mockup"
-                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-20"
+                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-14"
                     />
                   </div>
                 </div>
@@ -42,44 +52,35 @@ export default function TrackYourCrypto() {
             </div>
           </div>
 
-          {/* Title */}
-          <div className="space-y-2 sm:space-y-3 text-left w-full">
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-[32px] font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
-            </h2>
-            <p className="text-xs sm:text-xs md:text-sm lg:text-base text-white font-normal leading-snug max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Stay connected to your portfolio across all your devices.<br />
-              CopyM is available on iOS, Android, Windows, and Mac, so
-              you can track every move, get insights, and stay ahead – wherever you are.
-            </p>
-          </div>
-
-          {/* Download Grid - Buttons Left, Scanner Right */}
-          <div className="flex flex-row items-center justify-start gap-4 sm:gap-6 w-full pt-1 text-left">
-            {/* App Store Buttons - Left Grid */}
-            <div className="flex flex-col gap-2 flex-1 max-w-[170px] sm:max-w-none">
-              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-full sm:w-[170px] h-[54px] group">
-                <FaApple className="text-white text-[28px] group-hover:text-white/90" />
+          {/* Download Section - Buttons Row then QR Code */}
+          <div className="flex flex-col items-center w-full pt-4 space-y-6">
+            {/* Buttons Row */}
+            <div className="flex flex-row justify-center gap-3 w-full">
+              {/* Google Play */}
+              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-2 py-1 gap-2 hover:scale-105 transition-transform w-[160px] h-[50px] group">
+                <img src={ColourfulIcon} alt="Google Play" className="w-[24px] h-[24px]" />
                 <div className="flex flex-col items-start justify-center">
-                  <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
-                  <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>App Store</span>
+                  <span className="text-[9px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                  <span className="text-[16px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>Google Play</span>
                 </div>
               </a>
-              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-3 py-1 gap-3 hover:scale-105 transition-transform w-full sm:w-[170px] h-[54px] group">
-                <img src={ColourfulIcon} alt="Google Play" className="w-[26px] h-[26px]" />
+
+              {/* App Store */}
+              <a href="#" className="flex items-center bg-black border border-white/30 rounded-lg px-2 py-1 gap-2 hover:scale-105 transition-transform w-[160px] h-[50px] group">
+                <FaApple className="text-white text-[26px] group-hover:text-white/90" />
                 <div className="flex flex-col items-start justify-center">
-                  <span className="text-[10px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
-                  <span className="text-[19px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>Google Play</span>
+                  <span className="text-[9px] text-white/80 leading-none mb-0.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>Get it on</span>
+                  <span className="text-[16px] text-white font-bold leading-none" style={{ fontFamily: 'Palanquin, sans-serif' }}>App Store</span>
                 </div>
               </a>
             </div>
 
-            {/* QR Code - Right Grid */}
-            <div className="flex-shrink-0">
+            {/* QR Code - Centered Below */}
+            <div className="flex justify-center">
               <img
                 src={qrcode}
                 alt="QR Code"
-                className="w-28 h-28 sm:w-36 sm:h-36"
+                className="w-28 h-28"
               />
             </div>
           </div>
