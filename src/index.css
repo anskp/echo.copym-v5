@@ -76,11 +76,6 @@ body {
   background-color: white;
 }
 
-/* Hide default cursor when custom cursor is active */
-.custom-cursor-active,
-.custom-cursor-active * {
-  cursor: none !important;
-}
 
 main {
   margin: 0;

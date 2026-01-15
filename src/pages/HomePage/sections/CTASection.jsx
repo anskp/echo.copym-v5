@@ -31,7 +31,7 @@ export default function CTASection() {
                             viewport={{ once: true }}
                             className="text-center"
                         >
-                            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                 Turning assets into opportunities
                             </h2>
                             <Link

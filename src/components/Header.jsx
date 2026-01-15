@@ -142,9 +142,9 @@ export default function Header() {
     <>
       {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg h-14 sm:h-12'
-          : 'bg-[#15a36e] shadow-md h-16 sm:h-13 md:h-14'
+        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 h-16 ${isScrolled
+          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg'
+          : 'bg-[#15a36e] shadow-md'
           }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: isVisible ? 0 : "-100%", opacity: 1 }}
@@ -154,13 +154,12 @@ export default function Header() {
           {/* --- FLEX HEADER CONTAINER --- */}
           <div className="flex items-center justify-between h-full">
             {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0">
+            <Link to="/" className="flex items-center flex-shrink-0 h-full">
               <img
                 src="/assets/copym/png/Copym-02-1.png"
                 alt="CopyM Logo"
-                className={`transition-all duration-300 w-auto object-contain ${isScrolled ? 'h-9 sm:h-10' : 'h-10 sm:h-11 md:h-12'
-                  }`}
-                style={{ maxWidth: '280px' }}
+                className="transition-all duration-300 w-auto h-10 sm:h-11 md:h-12 object-contain"
+                style={{ maxWidth: 'min(280px, 60vw)' }}
               />
             </Link>
 
@@ -198,7 +197,7 @@ export default function Header() {
                         </motion.div>
                         {/* Desktop Dropdown Card */}
                         <motion.div
-                          className="fixed mt-2 lg:mt-0 top-20 sm:top-24 lg:top-24 right-3 sm:right-8 lg:right-10 w-[96vw] sm:w-[420px] md:w-[480px] lg:w-[400px] xl:w-[500px] max-w-full bg-white rounded-2xl overflow-hidden z-50"
+                          className="fixed mt-1 lg:mt-0 top-16 right-3 sm:right-8 lg:right-10 w-[96vw] sm:w-[420px] md:w-[480px] lg:w-[400px] xl:w-[500px] max-w-full bg-white rounded-2xl overflow-hidden z-50"
                           style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}
                           initial={{ opacity: 0, x: 100 }}
                           animate={{ opacity: 1, x: 0 }}

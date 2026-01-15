@@ -25,14 +25,13 @@ const ProductStackReview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-left mb-6 sm:mb-8 md:mb-10"
+          className="text-center  mb-6 sm:mb-8 md:mb-10"
         >
-          <div className="relative w-fit" ref={headingRef}>
-            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="relative w-fit mx-auto" ref={headingRef}>
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">PRODUCT </span>
               <span className="text-black">STACK REVIEW</span>
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 160px)', height: '0.5px' }}></div>
           </div>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             One platform. Multiple products. Full lifecycle tokenization.

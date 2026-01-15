@@ -10,12 +10,12 @@ import earnWithoutHassleAnimation from '../../../components/lotties/earnwithouta
 
 const FeatureSection = () => {
   return (
-    <SectionContainer padding="py-16 sm:py-20 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
+    <SectionContainer padding="py-26 sm:py-20 md:py-24 lg:py-26 text-center" bgColor="bg-white" maxWidth="max-w-10xl">
       {/* Main Heading */}
       <SectionHeader
-        title="OWN, EARN, EXPLORE, TRADE"
+        title="OWN. EARN. EXPLORE. TRADE"
         highlightWords={['EARN', 'TRADE']}
-        alignment="left"
+        alignment="center"
       />
 
       {/* Vertical Stack of 4 Sections */}
@@ -26,12 +26,12 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Left */}
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -48,11 +48,11 @@ const FeatureSection = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Own a piece of big Investment
+          <div className="w-full md:w-auto lg:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Own a piece of assets
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl  md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Ever thought real estate, gold, or fine art was only for the rich? Not anymore.
               Start with small amounts and own a piece of high-value assets you actually
               care about.
@@ -66,12 +66,12 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Right */}
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -89,10 +89,10 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Trade anytime, anywhere
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Want out? Sell instantly. Want in? Buy in seconds. With your
               built-in wallet, you can manage and trade smoothly—just like
               sending money to a friend.
@@ -106,12 +106,12 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Left */}
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -129,10 +129,10 @@ const FeatureSection = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Earn without a hassle
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Sit back and let the experts (and AI) do the heavy lifting. Your money works for
               you, bringing in steady returns–without the stress of paperwork or
               management.
@@ -146,12 +146,12 @@ const FeatureSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Right */}
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -169,10 +169,10 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Explore a world of assets
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               From property and gold to private equity and art—our AI picks out
               smart opportunities so you don't have to dig through endless
               research.

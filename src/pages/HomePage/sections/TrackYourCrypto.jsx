@@ -44,7 +44,7 @@ export default function TrackYourCrypto() {
 
           {/* Title */}
           <div className="space-y-2 sm:space-y-3 text-left w-full">
-            <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
             </h2>
             <p className="text-xs sm:text-xs md:text-sm lg:text-base text-white font-normal leading-snug max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -116,7 +116,7 @@ export default function TrackYourCrypto() {
           {/* Right Side - Marketing Content */}
           <div className="space-y-3 sm:space-y-4 text-left order-1 lg:order-2">
             <div className="space-y-2 sm:space-y-3">
-              <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-white leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
               </h2>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base text-white font-normal leading-snug" style={{ fontFamily: 'Palanquin, sans-serif' }}>

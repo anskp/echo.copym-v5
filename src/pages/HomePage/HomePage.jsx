@@ -2,7 +2,7 @@ import Hero from "./sections/Hero";
 import LogoCarousel from "./sections/LogoCarousel";
 import TrackYourCrypto from "./sections/TrackYourCrypto";
 import AIInvestingSection from "./sections/AIInvestingSection";
-import HowItWorksSection from "./sections/HowItWorksSection";
+// import HowItWorksSection from "./sections/HowItWorksSection";
 import RWAAssetsSection from "./sections/RWAAssetsSection";
 import NetworkShowcase from "./sections/NetworkShowcase";
 import AuditSection from "./sections/AuditSection";
@@ -28,7 +28,7 @@ export default function HomePage() {
       <FeatureSection />
       <WhoWeServe />
       <ProductStackReview />
-      <HowItWorksSection />
+      {/* <HowItWorksSection /> */}
       <AIInvestingSection />
 
       <RWAAssetsSection />

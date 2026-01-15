@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { GiCrossedSwords } from 'react-icons/gi';
+import { IoClose } from 'react-icons/io5';
 import { Link } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -57,8 +57,7 @@ export default function Hero() {
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
-
+            className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
           >
             <span className="block">
               UNLOCK EXCLUSIVE <span className="text-[#15a36e]">ASSETS,</span>
@@ -178,7 +177,7 @@ export default function Hero() {
                 className="absolute -top-10 right-0 text-white hover:text-gray-300 focus:outline-none focus:ring-2 focus:ring-white rounded p-1 transition-all"
                 aria-label="Close video modal"
               >
-                <GiCrossedSwords size={32} />
+                <IoClose size={32} />
               </button>
               <h2 id="video-modal-title" className="sr-only">How It Works Video</h2>
               <video

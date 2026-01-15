@@ -43,7 +43,7 @@ const LogoCarousel = () => {
           </div>
         </div>
         {/* Green Separator Line */}
-        <div className="w-full h-2 bg-[#15a36e]"></div>
+        <div className="w-full h-0.5 bg-[#15a36e]"></div>
       </div>
     </section>
   );
