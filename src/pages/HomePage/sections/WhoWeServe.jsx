@@ -50,7 +50,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap"
+                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Asset Owners & Institutions
@@ -126,7 +126,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-1.5 lg:mb-1.5 whitespace-nowrap"
+                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-1.5 lg:mb-1.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Investors
@@ -228,7 +228,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-base sm:text-lg md:text-xl lg:text-xl font-bold text-white mb-2 lg:mb-2.5 whitespace-nowrap"
+                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Partners

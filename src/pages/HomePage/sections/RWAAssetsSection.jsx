@@ -14,28 +14,28 @@ const TokenizeAssetsSection = () => {
     {
       id: 1,
       title: "Gold and Metals",
-      description: "Invest in precious metals and commodities. Diversify your portfolio with gold, silver, and other valuable metals through secure digital tokens.",
+      description: "Stabilize your portfolio with tokenized gold, silver, and trusted real-world metals.",
       image: maskcard1,
       roi: "82%"
     },
     {
       id: 2,
       title: "Fine Art",
-      description: "Own fractional shares of masterpieces and contemporary art. Access exclusive art collections and benefit from the appreciation of cultural assets.",
+      description: "Own fractional stakes in iconic and contemporary art—exclusive collections with long-term appreciation potential.",
       image: maskcard2,
       roi: "68%"
     },
     {
       id: 3,
       title: "Carbon Credits",
-      description: "Support environmental initiatives while earning returns. Invest in verified carbon credit projects and contribute to a sustainable future.",
+      description: "Earn real returns by owning verified carbon assets—invest with purpose and measurable impact.",
       image: maskcard3,
       roi: "91%"
     },
     {
       id: 4,
       title: "Real Estate",
-      description: "Access premium real estate investments globally. From luxury properties to commercial buildings, own fractional shares of high-value assets.",
+      description: "Own a fractional stake in premium global real estate—high-value properties built to grow long-term wealth.",
       image: maskcard4,
       roi: "76%"
     }
@@ -59,7 +59,7 @@ const TokenizeAssetsSection = () => {
             >
               {/* Asset Card */}
               <div
-                className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[420px] sm:min-h-[500px] lg:min-h-[550px] relative"
+                className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] relative"
                 style={{
                   background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
                 }}
@@ -91,7 +91,7 @@ const TokenizeAssetsSection = () => {
                 <div className="flex flex-col flex-grow text-left space-y-3">
                   {/* Title - Fixed Height */}
                   <h3
-                    className="text-base sm:text-lg lg:text-xl font-bold text-black min-h-[24px] sm:min-h-[28px] lg:min-h-[32px]"
+                    className="text-xl sm:text-2xl lg:text-3xl font-bold text-black min-h-[48px] sm:min-h-[64px] lg:min-h-[72px] flex items-center"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {asset?.title}
@@ -99,7 +99,7 @@ const TokenizeAssetsSection = () => {
 
                   {/* Description - Fixed Height */}
                   <p
-                    className="text-[12px] sm:text-sm lg:text-base text-black leading-relaxed flex-grow min-h-[50px] sm:min-h-[60px] lg:min-h-[72px]"
+                    className="text-sm sm:text-base lg:text-lg text-black leading-relaxed flex-grow"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {asset?.description}

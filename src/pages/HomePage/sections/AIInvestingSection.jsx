@@ -7,11 +7,11 @@ import aiVdo from '../../../components/Videos/ai-vdo.mp4';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white pt-2 sm:pt-3 md:pt-4 lg:pt-6 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-x-hidden overflow-y-visible">
+    <section className="w-full bg-background-white pt-2 sm:pt-3 md:pt-4 lg:pt-6 pb-6 sm:pb-8 md:pb-10 lg:pb-40 overflow-x-hidden overflow-y-visible">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Heading - Always at Top */}
         <div className="text-center mb-6 sm:mb-8 md:mb-10">
-          <div className="relative w-fit mb-3 sm:mb-4">
+          <div className="relative w-fit mx-auto mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">CORA-AI</span>
               <span className="text-black"> THAT INVESTS WITH YOU</span>
@@ -28,14 +28,11 @@ export default function AIInvestingSection() {
           {/* Mobile Image with Text Containers */}
           <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
             <div className="relative z-20">
-              <div className="relative overflow-hidden max-h-[300px] sm:max-h-[350px] md:max-h-[400px]">
-                <video
-                  src={aiVdo}
+              <div className="relative overflow-hidden flex justify-center items-center translate-y-4 sm:translate-y-6">
+                <img
+                  src="/assets/Images/cora-ai.png"
                   alt="AI Investment Interface"
-                  className="w-full h-auto max-h-[300px] sm:max-h-[350px] md:max-h-[400px] max-w-full object-contain"
-                  autoPlay
-                  muted
-                  loop
+                  className="w-full h-auto max-w-[220px] sm:max-w-[260px] md:max-w-[300px] object-contain"
                 />
               </div>
 
@@ -101,7 +98,7 @@ export default function AIInvestingSection() {
         <div className="hidden lg:flex flex-col items-center">
           {/* AI Visualization with Grid */}
           <div className="relative w-full max-w-[1500px] mt-2 mx-auto">
-            <div className="absolute inset-0 flex items-center justify-center z-0">
+            <div className="absolute inset-0 flex items-center justify-center z-0 translate-y-24">
               <img
                 src={ellipse}
                 alt="Background Circle"
@@ -114,13 +111,11 @@ export default function AIInvestingSection() {
               {/* Center - Mobile Image */}
               <div className="relative flex justify-center items-center z-20">
                 {/* Image Wrapper for Bottom Cropping */}
-                <div className="relative overflow-hidden max-h-[350px] sm:max-h-[450px] lg:max-h-[550px] xl:max-h-[650px] flex items-start justify-center  -translate-y-12 translate-x-28">
-                  <video
-                    src={aiVdo}
-                    className="w-64 h-[400px] sm:w-[360px] lg:w-[300px] xl:w-[600px] -mt-10 object-contain z-15"
-                    autoPlay
-                    muted
-                    loop
+                <div className="relative overflow-hidden flex items-center justify-center translate-y-12 lg:translate-y-16">
+                  <img
+                    src="/assets/Images/cora-ai.png"
+                    alt="AI Investment Interface"
+                    className="w-[240px] sm:w-[280px] lg:w-[350px] xl:w-[450px] object-contain z-15"
                   />
                 </div>
 

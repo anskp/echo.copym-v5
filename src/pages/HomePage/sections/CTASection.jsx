@@ -1,51 +1,49 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { FiArrowUpRight } from 'react-icons/fi';
 import ctavdo from '../../../components/Videos/ctavdos.mp4';
+
 export default function CTASection() {
     return (
-        <section className="relative w-full pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-8 sm:pb-10 md:pb-14 lg:pb-20 bg-white">
-            <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-                <div className="relative w-full h-[40vh] sm:h-[45vh] lg:h-[50vh] overflow-hidden">
-                    {/* Background Video */}
-                    <div className="absolute inset-0 w-full h-full">
-                        <video
-                            autoPlay
-                            loop
-                            muted
-                            playsInline
-                            className="w-full h-full object-cover"
-                        >
-                            <source src={ctavdo} type="video/mp4" />
+        <section className="relative w-full h-[40vh] sm:h-[45vh] lg:h-[80vh] overflow-hidden bg-black">
+            {/* Background Video */}
+            <div className="absolute inset-0 w-full h-full">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-cover"
+                >
+                    <source src={ctavdo} type="video/mp4" />
+                </video>
+                {/* Dark Overlay for better text legibility */}
+                <div className="absolute inset-0 bg-black/40 z-[5]" />
+            </div>
 
-                        </video>
-
-                    </div>
-
-                    {/* Content */}
-                    <div className="relative z-10 w-full h-full flex items-center justify-center px-6 sm:px-8">
-                        <motion.div
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8 }}
-                            viewport={{ once: true }}
-                            className="text-center"
-                        >
-                            <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold text-black mb-3 sm:mb-4 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                Turning assets into opportunities
-                            </h2>
-                            <Link
-                                to="/contact"
-                                className="inline-block bg-black px-6 py-3 sm:px-8 sm:py-4 hover:bg-gray-900 transition-all duration-300 transform hover:scale-105 rounded"
-                            >
-                                <p className="text-sm sm:text-base md:text-lg lg:text-xl text-[#15a36e] font-bold uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Invest in the revolution
-                                </p>
-                            </Link>
-
-                        </motion.div>
-                    </div>
-                </div>
+            {/* Content */}
+            <div className="relative z-10 w-full h-full flex items-center justify-center px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-center"
+                >
+                    <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-bold text-white mb-8 sm:mb-12 md:mb-16 leading-tight max-w-5xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Turning assets into opportunities
+                    </h2>
+                    <Link
+                        to="/contact"
+                        className="inline-flex items-center gap-2 bg-white px-6 py-2.5 sm:px-10 sm:py-4 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
+                    >
+                        <span className="text-base sm:text-lg md:text-lg lg:text-xl text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            Invest in the revolution
+                        </span>
+                        <FiArrowUpRight className="text-xl sm:text-2xl text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                    </Link>
+                </motion.div>
             </div>
         </section>
     );
