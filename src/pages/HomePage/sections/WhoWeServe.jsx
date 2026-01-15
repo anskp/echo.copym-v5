@@ -23,7 +23,7 @@ const WhoWeServe = () => {
             </h2>
 
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Built for the next generation of asset markets
           </p>
         </motion.div>

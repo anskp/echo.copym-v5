@@ -103,7 +103,7 @@ const TokenizeAssetsSection = () => {
 
                   {/* Description - Fixed Height */}
                   <p
-                    className="text-[12px] sm:text-sm lg:text-base text-black leading-snug flex-grow"
+                    className="text-sm text-black leading-snug flex-grow"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {asset?.description}

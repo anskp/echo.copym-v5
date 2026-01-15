@@ -15,7 +15,7 @@ export default function AIInvestingSection() {
               <span className="text-black"> THAT INVESTS WITH YOU</span>
             </h2>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             From real-time insights to smarter decisions, let AI guide your journey <br className="hidden md:block" /> to growing wealth effortlessly.
           </p>
         </div>
@@ -37,6 +37,7 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
+              className="translate-y-6 sm:translate-y-8 md:translate-y-10 lg:translate-y-12"
             >
               <img
                 src="/assets/Images/cora-ai.png"
@@ -76,7 +77,7 @@ export default function AIInvestingSection() {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[38px] font-bold text-black leading-[1.15] lg:leading-[1.1]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[48px] font-bold text-black leading-[1.15] lg:leading-[1.1]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Invest Smarter. Chat with <br className="hidden md:block" /> Cora AI !
             </h2>
           </motion.div>

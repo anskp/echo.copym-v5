@@ -96,15 +96,15 @@ export default function FAQSection() {
           <div className="relative w-fit mb-3 sm:mb-4">
             <h2
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold pb-1"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               <span className="text-[#15a36e] uppercase">FAQ'</span><span className="text-black">s</span>
             </h2>
 
           </div>
           <p
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             These FAQ's questions might have the answer, but if not, our support team is just a message away!
           </p>

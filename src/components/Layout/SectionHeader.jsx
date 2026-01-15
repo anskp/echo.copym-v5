@@ -50,7 +50,7 @@ const SectionHeader = ({
         </h2>
       </div>
       {subtitle && (
-        <p className="text-sm sm:text-base md:text-lg lg:text-xl text-center text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+        <p className="text-sm text-center text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           {subtitle}
         </p>
       )}

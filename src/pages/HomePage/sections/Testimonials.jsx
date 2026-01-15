@@ -7,7 +7,7 @@ const testimonials = [
     name: "David Kim",
     title: "Head of Digital Assets",
     company: "Golman Sachs",
-    image: "/assets/Images/team/Face4.png",
+    image: "/assets/Images/team/Face3.png",
   },
   {
     quote: "AI-driven portfolio optimization increased our returns by 31% while reducing risk exposure significantly.",
@@ -151,7 +151,7 @@ function TestimonialCard({ testimonial }) {
       <div
         className="absolute"
         style={{
-          top: '100px',
+          top: '115px',
           left: '20px',
           right: '20px',
           bottom: '20px',
@@ -159,10 +159,9 @@ function TestimonialCard({ testimonial }) {
         }}
       >
         <p
+          className="text-sm text-black"
           style={{
             fontFamily: 'DM Sans, sans-serif',
-            fontSize: 'clamp(13px, 1.6vw, 16px)',
-            lineHeight: '22px',
             color: '#000',
             margin: 0,
             padding: 0
@@ -219,7 +218,7 @@ export default function TestimonialsSection() {
               <span className="text-black">LEADERS</span>
             </h2>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             See what top financial professionals are saying about our AI-powered RWA tokenization platform
           </p>
         </div>

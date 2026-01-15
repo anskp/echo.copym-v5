@@ -52,7 +52,7 @@ const FeatureSection = () => {
             <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Own a piece of assets
             </h3>
-            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl  md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl  md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Ever thought real estate, gold, or fine art was only for the rich? Not anymore.
               Start with small amounts and own a piece of high-value assets you actually
               care about.
@@ -92,7 +92,7 @@ const FeatureSection = () => {
             <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Trade anytime, anywhere
             </h3>
-            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Want out? Sell instantly. Want in? Buy in seconds. With your
               built-in wallet, you can manage and trade smoothly—just like
               sending money to a friend.
@@ -132,7 +132,7 @@ const FeatureSection = () => {
             <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Earn without a hassle
             </h3>
-            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Sit back and let the experts (and AI) do the heavy lifting. Your money works for
               you, bringing in steady returns–without the stress of paperwork or
               management.
@@ -172,7 +172,7 @@ const FeatureSection = () => {
             <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Explore a world of assets
             </h3>
-            <p className="text-lg sm:text-xl md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               From property and gold to private equity and art—our AI picks out
               smart opportunities so you don't have to dig through endless
               research.
