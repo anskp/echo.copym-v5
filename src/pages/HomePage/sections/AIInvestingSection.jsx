@@ -1,180 +1,86 @@
 import React from 'react';
-import { GiBrain } from 'react-icons/gi';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { HiSparkles } from 'react-icons/hi';
 import ellipse from '../../../components/SVG/Ellipse.svg';
-import aiVdo from '../../../components/Videos/ai-vdo.mp4';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white pt-2 sm:pt-3 md:pt-4 lg:pt-6 pb-6 sm:pb-8 md:pb-10 lg:pb-40 overflow-x-hidden overflow-y-visible">
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-        {/* Heading - Always at Top */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-10">
+    <section className="w-full bg-background-white pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10">
+        {/* Section Header */}
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="relative w-fit mx-auto mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">CORA-AI</span>
               <span className="text-black"> THAT INVESTS WITH YOU</span>
             </h2>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            From real-time insights to smarter decisions, let AI guide your journey to growing wealth effortlessly.
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            From real-time insights to smarter decisions, let AI guide your journey <br className="hidden md:block" /> to growing wealth effortlessly.
           </p>
-
         </div>
 
-        {/* Mobile/Tablet Layout (sm, md) - Vertical Stack */}
-        <div className="flex flex-col lg:hidden items-center text-left space-y-8 sm:space-y-10 md:space-y-12 overflow-visible">
-          {/* Mobile Image with Text Containers */}
-          <div className="relative w-full max-w-[340px] sm:max-w-[400px] md:max-w-md h-auto m-auto mt-6 sm:mt-8 md:mt-10 lg:mt-[100px] items-center overflow-visible">
-            <div className="relative z-20">
-              <div className="relative overflow-hidden flex justify-center items-center translate-y-4 sm:translate-y-6">
-                <img
-                  src="/assets/Images/cora-ai.png"
-                  alt="AI Investment Interface"
-                  className="w-full h-auto max-w-[220px] sm:max-w-[260px] md:max-w-[300px] object-contain"
-                />
-              </div>
+        <div className="flex flex-col items-center text-center space-y-8 sm:space-y-10 md:space-y-12">
 
-              {/* Left Text Container - Mobile: positioned to the left */}
-              <motion.div
-                className="absolute left-0 sm:-left-4 md:-left-8 top-16 sm:top-20 md:top-24 lg:hidden z-30"
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, ease: "easeOut" }}
-              >
-                <div
-                  className="rounded-[20px] sm:rounded-[24px] p-[2px] shadow-lg w-[130px] sm:w-[150px] md:w-[170px]"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
-                  }}
-                >
-                  <div
-                    className="rounded-[18px] sm:rounded-[22px] p-3 sm:p-4 h-full w-full"
-                    style={{
-                      backgroundColor: 'rgba(225, 225, 225, 0.9)'
-                    }}
-                  >
-                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                      <span className="text-[#15a36e] font-semibold">Cora AI</span>
-                      <span className="text-black"> is an AI technology designed by CopyM to make better investments</span>
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Right Text Container - Mobile: positioned to the right */}
-              <motion.div
-                className="absolute right-0 sm:-right-4 md:-right-8 bottom-12 sm:bottom-16 md:bottom-20 lg:hidden z-30"
-                initial={{ opacity: 0, scale: 0.8, y: 20 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-              >
-                <div
-                  className="rounded-[20px] sm:rounded-[24px] p-[2px] shadow-lg w-[130px] sm:w-[150px] md:w-[170px]"
-                  style={{
-                    background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
-                  }}
-                >
-                  <div
-                    className="rounded-[18px] sm:rounded-[22px] p-3 sm:p-4 h-full w-full"
-                    style={{
-                      backgroundColor: 'rgba(225, 225, 225, 0.9)'
-                    }}
-                  >
-                    <p className="text-[10px] sm:text-xs md:text-sm font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                      <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Layout (lg+) - Horizontal Layout with Grid */}
-        <div className="hidden lg:flex flex-col items-center">
-          {/* AI Visualization with Grid */}
-          <div className="relative w-full max-w-[1500px] mt-2 mx-auto">
-            <div className="absolute inset-0 flex items-center justify-center z-0 translate-y-24">
+          {/* Item 1: The Blue Sphere */}
+          <div className="relative w-full flex justify-center items-center mt-4 sm:mt-6 md:mt-8">
+            {/* Background Ellipse for depth */}
+            <div className="absolute inset-0 flex items-center justify-center -z-10 translate-y-20 sm:translate-y-24 md:translate-y-32 lg:translate-y-40">
               <img
                 src={ellipse}
-                alt="Background Circle"
-                className="w-[400px] h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px]"
+                alt=""
+                className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[450px] md:h-[450px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px] opacity-60"
               />
             </div>
-
-            {/* Content Grid */}
-            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-center min-h-[400px] lg:min-h-[500px]">
-              {/* Center - Mobile Image */}
-              <div className="relative flex justify-center items-center z-20">
-                {/* Image Wrapper for Bottom Cropping */}
-                <div className="relative overflow-hidden flex items-center justify-center translate-y-12 lg:translate-y-16">
-                  <img
-                    src="/assets/Images/cora-ai.png"
-                    alt="AI Investment Interface"
-                    className="w-[240px] sm:w-[280px] lg:w-[350px] xl:w-[450px] object-contain z-15"
-                  />
-                </div>
-
-                {/* Left Text Container - positioned to left of phone, aligned with "Your Portfolio" title */}
-                <motion.div
-                  className="absolute left-[-160px] top-[130px] hidden lg:block"
-                  initial={{ opacity: 0, scale: 0.8, x: -30 }}
-                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                  <div
-                    className="rounded-[28px] p-[2px] shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
-                    }}
-                  >
-                    <div
-                      className="rounded-[26px] p-2 sm:p-3 h-full w-full"
-                      style={{
-                        backgroundColor: 'rgba(225, 225, 225, 0.9)'
-                      }}
-                    >
-                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-[#15a36e]">Cora AI</span> <span className="text-black">is a AI technology designed by CopyM to make better investments</span>
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* Right Text Container - positioned to bottom right of phone, aligned with "Upcoming Payouts" section */}
-                <motion.div
-                  className="absolute right-[-180px] bottom-[100px] hidden lg:block"
-                  initial={{ opacity: 0, scale: 0.8, x: 30 }}
-                  whileInView={{ opacity: 1, scale: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-                >
-                  <div
-                    className="rounded-[28px] p-[2px] shadow-[0px_4px_4px_#888888ff] lg:mb-0 lg:w-80"
-                    style={{
-                      background: 'linear-gradient(to right, rgba(239, 239, 239, 1), rgba(188, 196, 193, 1))'
-                    }}
-                  >
-                    <div
-                      className="rounded-[26px] p-2 sm:p-3 h-full w-full"
-                      style={{
-                        backgroundColor: 'rgba(225, 225, 225, 0.9)'
-                      }}
-                    >
-                      <p className="text-sm sm:text-base font-medium leading-relaxed text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-[#15a36e]">AI</span> <span className="text-black">that predicts trends, analyzes data, and guides</span> <span className="text-[#15a36e]">smarter investments</span>
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8, y: 20 }}
+              whileInView={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true }}
+            >
+              <img
+                src="/assets/Images/cora-ai.png"
+                alt="Cora AI"
+                className="w-[100px] sm:w-[140px] md:w-[180px] lg:w-[220px] h-auto object-contain"
+              />
+            </motion.div>
           </div>
+
+          {/* Item 2: Cora AI Assistant Badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            viewport={{ once: true }}
+            className="p-[1px] rounded-full"
+            style={{
+              background: 'linear-gradient(to right, #83D47E, #7DD1B2)'
+            }}
+          >
+            <div className="flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white shadow-sm">
+              <div className="relative">
+                <HiSparkles className="text-[#15a36e] text-xl sm:text-2xl" />
+                <HiSparkles className="text-[#15a36e] text-sm absolute -top-1 -right-1 opacity-70" />
+              </div>
+              <span className="text-black font-semibold text-sm sm:text-base md:text-lg tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Cora AI Assistant
+              </span>
+            </div>
+          </motion.div>
+
+          {/* Item 3: Bold Heading */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="max-w-4xl"
+          >
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[38px] font-bold text-black leading-[1.15] lg:leading-[1.1]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Invest Smarter. Chat with <br className="hidden md:block" /> Cora AI !
+            </h2>
+          </motion.div>
+
         </div>
       </div>
     </section>

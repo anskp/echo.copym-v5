@@ -17,7 +17,7 @@ const ProductStackReview = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-white pt-0 pb-0 overflow-hidden ">
+    <section className="relative w-full bg-white pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-0 overflow-hidden ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Header Section */}
         <motion.div

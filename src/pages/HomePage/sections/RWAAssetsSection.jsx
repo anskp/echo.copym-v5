@@ -42,10 +42,14 @@ const TokenizeAssetsSection = () => {
   ];
 
   return (
-    <SectionContainer padding="py-8 sm:py-12 md:py-16 lg:py-20">
+    <SectionContainer padding="pt-4 sm:pt-6 md:pt-8 lg:pt-10 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
       <SectionHeader
         title="TOKENIZE REAL ASSETS"
-        subtitle="Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets into digital tokens for global investment access."
+        subtitle={
+          <span className="max-w-3xl mx-auto block">
+            Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets <br className="hidden md:block" /> into digital tokens for global investment access.
+          </span>
+        }
         highlightWords={["TOKENIZE"]}
       />
 
@@ -88,10 +92,10 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* Asset Info - Below Image */}
-                <div className="flex flex-col flex-grow text-left space-y-3">
+                <div className="flex flex-col flex-grow text-left space-y-1.5">
                   {/* Title - Fixed Height */}
                   <h3
-                    className="text-xl sm:text-2xl lg:text-3xl font-bold text-black min-h-[48px] sm:min-h-[64px] lg:min-h-[72px] flex items-center"
+                    className="text-xl sm:text-2xl lg:text-[23px] font-bold text-black min-h-[32px] sm:min-h-[40px] lg:min-h-[48px] flex items-center"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {asset?.title}
@@ -99,14 +103,14 @@ const TokenizeAssetsSection = () => {
 
                   {/* Description - Fixed Height */}
                   <p
-                    className="text-sm sm:text-base lg:text-lg text-black leading-relaxed flex-grow"
+                    className="text-[12px] sm:text-sm lg:text-base text-black leading-snug flex-grow"
                     style={{ fontFamily: 'DM Sans, sans-serif' }}
                   >
                     {asset?.description}
                   </p>
 
                   {/* Know More Section - Conditional Styling */}
-                  <div className="mt-5 flex justify-center">
+                  <div className="mt-8 flex justify-center">
                     <Link to="/marketplace" className="block">
                       <div
                         className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1.5 sm:py-2 px-4 sm:px-5 rounded-lg transition-colors duration-300 pointer-events-auto"

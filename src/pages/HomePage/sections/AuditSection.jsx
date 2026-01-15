@@ -19,8 +19,9 @@ export default function AuditSection() {
                 <span className="text-black">AUDITED</span>
               </h2>
             </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Independently audited smart contracts, trusted by top security firms and integrated across major blockchains.            </p>
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-2xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Independently audited smart contracts, trusted by top security firms <br className="hidden md:block" /> and integrated across major blockchains.
+            </p>
           </div>
         </div>
 
