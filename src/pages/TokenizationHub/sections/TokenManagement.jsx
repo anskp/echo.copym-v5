@@ -17,21 +17,21 @@ export default function TokenManagement() {
         },
         {
             title: 'Portfolio Analytics',
-            description: 'Advanced analytics and reporting tools for investment performance tracking.',
+            description: 'Advanced analytics and reporting tools for tracking your investment performance.',
             icon: tiicon2,
             badge: 'Real Time',
             number: '02.'
         },
         {
             title: 'Compliance Management',
-            description: 'Automated compliance monitoring and regulatory reporting for all investors.',
+            description: 'Automated compliance monitoring and regulatory reporting for all your investors.',
             icon: tiicon3,
             badge: '100% Compliant',
             number: '03.'
         },
         {
             title: 'Communication Hub',
-            description: 'Integrated communication tools for investor updates and announcements.',
+            description: 'Integrated communication tools for managing investor updates and announcements.',
             icon: tiicon4,
             badge: '24/7 Support',
             number: '04.'
@@ -53,62 +53,77 @@ export default function TokenManagement() {
                     </p>
                 </div>
 
-                {/* Features Grid - Improved Responsive Breakpoints */}
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 max-w-full">
+                {/* Features Grid - Matching RWA Assets Design */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full">
                     {managementFeatures.map((feature, index) => (
                         <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            whileHover={{
-                                scale: 1.02,
-                                rotateY: index % 2 === 0 ? 3 : -3,
-                                transition: { duration: 0.3 }
-                            }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="group relative rounded-xl border-[6px] sm:border-8 border-[#EEEEEE] bg-white overflow-hidden flex flex-col justify-end min-h-[420px] xs:min-h-[460px] sm:min-h-[480px] md:min-h-[500px] lg:min-h-[530px] transition-all duration-300 shadow-sm hover:shadow-xl"
+                            className="relative w-full h-full"
                         >
-
-
-                            {/* Top Part: Hover Image with Responsive Gradient */}
-                            <div className="absolute top-0 left-0 w-full h-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden z-0">
-                                <img
-                                    src={cardshades}
-                                    alt=""
-                                    className="w-full h-full object-cover"
-                                />
-                                <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-white via-white/40 to-transparent"></div>
-                            </div>
-
-                            {/* Content Area - Fluid Height & Spacing */}
-                            <div className="relative z-10 w-full p-6 sm:p-8 flex flex-col justify-end transition-all duration-500 group-hover:h-[60%] group-hover:justify-start group-hover:pt-10 md:group-hover:pt-14">
-                                {/* Icon (Fades out and collapses on hover) */}
-                                <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-4 sm:mb-5 overflow-hidden flex shrink-0">
-                                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-50 rounded-xl sm:rounded-2xl flex items-center justify-center">
-                                        <img src={feature.icon} alt={feature.title} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+                            <div
+                                className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] relative transition-transform duration-300 hover:scale-[1.02]"
+                                style={{
+                                    background: 'linear-gradient(to bottom, rgba(251, 251, 251, 1), rgba(240, 240, 240, 1))'
+                                }}
+                            >
+                                {/* Status Badge - Top Right */}
+                                <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
+                                    <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#dcfce7] border border-[#bbf7d0]/50 shadow-sm">
+                                        <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 2L10.5 9.5H1.5L6 2Z" fill="#15a36e" />
+                                        </svg>
+                                        <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>{feature.badge}</span>
                                     </div>
                                 </div>
 
-                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-1 sm:mb-2 leading-tight transition-all duration-300" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    {feature.title}
-                                </h3>
+                                {/* Icon - Centered */}
+                                <div className="flex items-center justify-center mt-8 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
+                                    <img
+                                        src={feature.icon}
+                                        alt={feature.title}
+                                        className="w-full h-full object-contain"
+                                    />
+                                </div>
 
-                                {/* Revealable Content (Hover only) */}
-                                <div className="max-h-0 opacity-0 group-hover:max-h-[350px] group-hover:opacity-100 transition-all duration-300 ease-out overflow-hidden text-left flex flex-col pointer-events-none group-hover:pointer-events-auto">
-                                    {feature.description && (
-                                        <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed font-medium mb-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                            {feature.description}
-                                        </p>
-                                    )}
+                                {/* Info Section */}
+                                <div className="flex flex-col flex-grow text-left space-y-1.5">
+                                    <h3
+                                        className="text-xl sm:text-2xl lg:text-[23px] font-bold text-black min-h-[32px] sm:min-h-[40px] lg:min-h-[48px] flex items-center"
+                                        style={{ fontFamily: 'Palanquin, sans-serif' }}
+                                    >
+                                        {feature.title}
+                                    </h3>
 
-                                    {feature.badge && (
-                                        <div className="flex justify-center mt-4 pb-0.5">
-                                            <span className="inline-block bg-[#15a36e] text-white text-[10px] sm:text-[12px] font-semibold py-1.5 px-4 sm:px-6 rounded-full shadow-md whitespace-nowrap active:scale-95 transition-transform">
-                                                {feature.badge}
+                                    <p
+                                        className="text-sm text-gray-600 leading-snug flex-grow"
+                                        style={{ fontFamily: 'Palanquin, sans-serif' }}
+                                    >
+                                        {feature.description}
+                                    </p>
+
+                                    {/* Know More Button - Green Design */}
+                                    <div className="mt-12 sm:mt-8 flex justify-center">
+                                        <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-[#15a36e] border border-white/20 hover:bg-[#128a5d] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
+                                            <span className="pl-4 pr-2 text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Know more
                                             </span>
-                                        </div>
-                                    )}
+                                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                                                <svg
+                                                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black"
+                                                    fill="none"
+                                                    stroke="currentColor"
+                                                    viewBox="0 0 24 24"
+                                                    strokeWidth="3"
+                                                >
+                                                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                                                </svg>
+                                            </div>
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>

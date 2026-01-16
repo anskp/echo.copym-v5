@@ -109,15 +109,22 @@ const TokenizeAssetsSection = () => {
                     {asset?.description}
                   </p>
 
-                  {/* Know More Section - Conditional Styling */}
+                  {/* Learn More Button - Stylish Design */}
                   <div className="mt-12 sm:mt-8 flex justify-center">
-                    <Link to="/marketplace" className="block">
-                      <div
-                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-0.5 sm:py-1.5 px-2 sm:px-4 rounded-lg transition-colors duration-300 pointer-events-auto"
-                      >
-                        <span className="text-xs sm:text-sm font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                          Know more
-                        </span>
+                    <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-[#15a36e] border border-white/20 hover:bg-[#128a5d] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
+                      <span className="pl-4 pr-2 text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Know more
+                      </span>
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                        <svg
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          strokeWidth="3"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                        </svg>
                       </div>
                     </Link>
                   </div>

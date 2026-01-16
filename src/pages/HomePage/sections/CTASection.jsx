@@ -36,12 +36,12 @@ export default function CTASection() {
                     </h2>
                     <Link
                         to="/contact"
-                        className="inline-flex items-center gap-2 bg-white px-5 py-2 sm:px-10 sm:py-4 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
+                        className="inline-flex items-center gap-2 bg-white px-5 py-1.5 sm:px-8 sm:py-2.5 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
                     >
-                        <span className="text-base sm:text-lg md:text-lg lg:text-xl text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        <span className="text-sm sm:text-base md:text-base lg:text-lg text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             Invest in the revolution
                         </span>
-                        <FiArrowUpRight className="text-xl sm:text-2xl text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
+                        <FiArrowUpRight className="text-lg sm:text-xl text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </Link>
                 </motion.div>
             </div>

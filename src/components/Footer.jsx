@@ -320,7 +320,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm sm:text-base text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             &copy; 2026 COPYM. All rights reserved.
           </p>
-          <p className="text-gray-500 text-[10px] sm:text-xs text-left max-w-5xl leading-relaxed opacity-70" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-gray-400 text-[10px] sm:text-xs text-left max-w-5xl leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Copym is not a registered broker-dealer, funding portal, underwriter, investment bank, investment adviser, or investment manager. Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. Copym does not participate in the negotiation or execution of secondary market transactions for the purchase or sale of securities. Copym does not, at any time, have possession or control of investor funds or securities in connection with such transactions. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
           </p>
         </div>
