@@ -8,7 +8,7 @@ export default function PlatformFeatures() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 lg:mb-20 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             <span className="text-black">PLATFORM </span>
             <span className="text-[#15a36e]">FEATURES</span>
           </h2>
@@ -22,8 +22,8 @@ export default function PlatformFeatures() {
           viewport={{ once: true }}
           className="flex justify-center items-center px-4"
         >
-          <img 
-            src={GroupedImages} 
+          <img
+            src={GroupedImages}
             alt="Platform Features"
             className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto object-contain"
           />

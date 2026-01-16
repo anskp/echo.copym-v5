@@ -43,13 +43,12 @@ export default function TokenManagement() {
             <div className="max-w-7xl mx-auto px-5 sm:px-8 md:px-10 lg:px-12 xl:px-16">
                 {/* Section Header */}
                 <div className="mb-10 sm:mb-14 px-1 sm:px-0">
-                    <div className="relative w-fit mb-4 sm:mb-6">
+                    <div className="relative text-center mx-auto w-fit mb-4 sm:mb-6">
                         <h2 className="inline-flex items-center gap-2 text-xl xs:text-2xl sm:text-3xl lg:text-4xl font-bold uppercase leading-tight pb-2 sm:pb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             <span className="text-[#15a36e]">TOKEN</span> <span className="text-black">MANAGEMENT</span>
                         </h2>
-                        <div className="absolute bottom-0 left-0 bg-black/20 w-full sm:w-[calc(100%+150px)]" style={{ height: '1px' }}></div>
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
                     </p>
                 </div>

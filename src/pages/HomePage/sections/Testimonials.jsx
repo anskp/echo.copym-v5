@@ -103,7 +103,7 @@ function TestimonialCard({ testimonial }) {
           {/* Name */}
           <h4
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'Palanquin, sans-serif',
               fontWeight: 700,
               fontSize: 'clamp(16px, 2vw, 18px)',
               lineHeight: '24px',
@@ -119,7 +119,7 @@ function TestimonialCard({ testimonial }) {
           {/* Title */}
           <p
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'Palanquin, sans-serif',
               fontSize: 'clamp(12px, 1.5vw, 14px)',
               lineHeight: '20px',
               color: '#000',
@@ -134,7 +134,7 @@ function TestimonialCard({ testimonial }) {
           {/* Company */}
           <p
             style={{
-              fontFamily: 'DM Sans, sans-serif',
+              fontFamily: 'Palanquin, sans-serif',
               fontSize: 'clamp(12px, 1.5vw, 14px)',
               lineHeight: '20px',
               color: '#15A36E',
@@ -161,7 +161,7 @@ function TestimonialCard({ testimonial }) {
         <p
           className="text-sm text-black"
           style={{
-            fontFamily: 'DM Sans, sans-serif',
+            fontFamily: 'Palanquin, sans-serif',
             color: '#000',
             margin: 0,
             padding: 0

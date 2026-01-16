@@ -71,17 +71,17 @@ export default function HowItWorks() {
     }, [steps.length, cardTotalWidth]);
 
     return (
-        <section className="w-full bg-[#f8f9fa] py-20 pb-20">
+        <section className="w-full bg-[#f8f9fa] py-12 sm:py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-12">
-                    <div className="relative w-fit mb-4">
+                <div className="mb-12 text-center">
+                    <div className="relative w-fit mb-4 mx-auto">
                         <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             <span className="text-black">How the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">Works</span>
                         </h2>
-                        <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
                     </div>
-                    <p className="text-lg text-gray-800 leading-relaxed font-medium max-w-3xl">
-                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+                    <p className="text-lg text-gray-800 leading-relaxed font-medium max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" />
+                        that give you the edge in crypto trading
                     </p>
                 </div>
 

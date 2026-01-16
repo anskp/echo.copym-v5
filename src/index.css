@@ -84,10 +84,10 @@ main {
 
 @layer base {
   body {
-    @apply font-sans bg-blue-100 text-gray-900 text-base;
+    @apply font-palanquin bg-blue-100 text-gray-900 text-base;
     font-family: var(--font-palanquin);
     min-height: 100vh;
-    background-color: #DBEAFE !important;
+    background-color: white
   }
 }
 

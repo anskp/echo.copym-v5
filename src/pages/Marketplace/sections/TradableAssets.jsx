@@ -22,14 +22,19 @@ export default function TradableAssets() {
     ];
 
     return (
-        <section className="w-full bg-white py-12 sm:py-16 md:py-20 pb-20 sm:pb-32 overflow-hidden">
+        <section className="w-full bg-white py-10 sm:py-12 pb-0 sm:pb-0 overflow-hidden">
             <div className="max-w-3xl sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="relative w-fit mb-10 sm:mb-12 md:mb-16">
-                    <h2 className="inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-black">What you can trade on</span> <span className="text-[#10b981]">CopyM</span> <span className="text-black">?</span>
-                    </h2>
-                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+40px)]" style={{ height: '2px' }}></div>
+                <div className="text-center mb-10 sm:mb-12 md:mb-16">
+                    <div className="relative w-fit mb-4 mx-auto">
+                        <h2 className="inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <span className="text-black">What you can trade on</span> <span className="text-[#10b981]">CopyM</span> <span className="text-black">?</span>
+                        </h2>
+                    </div>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" />
+                        that give you the edge in crypto trading
+                    </p>
                 </div>
 
                 {/* List of Assets */}

@@ -12,14 +12,13 @@ export default function IssuerSection() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
         {/* Section Header */}
-        <div className="mb-8 sm:mb-12">
-          <div className="relative w-fit mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="relative w-fit mx-auto mb-4">
             <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-black leading-tight uppercase pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">TOKENIZE</span> REAL ASSETS
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Digitizing real assets on blockchain
           </p>
         </div>
@@ -57,8 +56,17 @@ export default function IssuerSection() {
 
           {/* Top Right Card (4 columns, 1 row) */}
           <div className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
-            {/* Text on left */}
-            <div className="flex-1 text-left">
+            {/* Image on top (mobile) / right (desktop) */}
+            <div className="flex justify-center lg:justify-end items-center lg:order-2">
+              <img
+                src="/assets/Images/coin.png"
+                alt="Token Management"
+                className="w-32 sm:w-40 md:w-48 h-auto object-contain"
+              />
+            </div>
+
+            {/* Text below (mobile) / left (desktop) */}
+            <div className="flex-1 text-center lg:text-left lg:order-1">
               <h3
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl mb-4 sm:mb-6"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
@@ -96,21 +104,12 @@ export default function IssuerSection() {
                 </div>
               </div>
             </div>
-
-            {/* Image on right */}
-            <div className="flex justify-end items-center">
-              <img
-                src="/assets/Images/coin.png"
-                alt="Token Management"
-                className="w-32 sm:w-40 md:w-48 h-auto object-contain"
-              />
-            </div>
           </div>
 
           {/* Bottom Right Card (4 columns, 1 row) */}
           <div className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
             {/* Image on left */}
-            <div className="flex justify-start items-center flex-shrink-0">
+            <div className="flex justify-center lg:justify-start items-center flex-shrink-0">
               <img
                 src="/assets/Images/globe.png"
                 alt="Global Distribution"
@@ -119,7 +118,7 @@ export default function IssuerSection() {
             </div>
 
             {/* Text on right */}
-            <div className="flex-1 text-left">
+            <div className="flex-1 text-center lg:text-left">
               <h3
                 className="text-white font-bold text-lg sm:text-xl md:text-2xl mb-3"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
@@ -134,7 +133,7 @@ export default function IssuerSection() {
               </p>
 
               {/* Investor groups */}
-              <div className="space-y-2">
+              <div className="space-y-2 flex flex-col items-center lg:items-start">
                 {investorGroups.map((group) => (
                   <div key={group.name} className="flex items-center space-x-4">
                     <div className="flex items-center space-x-2 w-28 sm:w-32 flex-shrink-0">

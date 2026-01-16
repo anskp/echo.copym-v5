@@ -28,7 +28,7 @@ export default function TokenizationProcess() {
     {
       title: "Fractional Ownership",
       description: "Enable investors to own a portion of high-value assets, improving liquidity and diversifying investment portfolios.",
-      icon: ticon4
+      icon: ticon6
     },
     {
       title: "Faster settlement times",
@@ -38,7 +38,7 @@ export default function TokenizationProcess() {
     {
       title: "Greater transparency",
       description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
-      icon: ticon6
+      icon: ticon4
     }
   ];
 
@@ -46,31 +46,23 @@ export default function TokenizationProcess() {
     <section className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="text-left mb-8 sm:mb-12 md:mb-16">
-          <div className="relative w-fit mb-4">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="relative w-fit mx-auto mb-4">
             <h2
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               <span className="text-black">WHY </span>
               <span className="text-[#15a36e]">TOKENIZE</span>
               <span className="text-black"> ?</span>
             </h2>
-            {/* Underline */}
-            <div
-              className="absolute bottom-0 left-0 bg-black"
-              style={{
-                width: 'calc(100% + 120px)',
-                height: '0.5px'
-              }}
-            ></div>
           </div>
 
           <p
-            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl mx-auto"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+            Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br />that give you the edge in crypto trading
           </p>
         </div>
 
@@ -90,7 +82,7 @@ export default function TokenizationProcess() {
               {/* Title */}
               <h3
                 className="text-[#15a36e] font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 {feature.title}
               </h3>
@@ -98,7 +90,7 @@ export default function TokenizationProcess() {
               {/* Description */}
               <p
                 className="text-black text-sm sm:text-base leading-relaxed"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 {feature.description}
               </p>

@@ -104,7 +104,7 @@ const TokenizeAssetsSection = () => {
                   {/* Description - Fixed Height */}
                   <p
                     className="text-sm text-black leading-snug flex-grow"
-                    style={{ fontFamily: 'DM Sans, sans-serif' }}
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {asset?.description}
                   </p>
@@ -113,7 +113,7 @@ const TokenizeAssetsSection = () => {
                   <div className="mt-12 sm:mt-8 flex justify-center">
                     <Link to="/marketplace" className="block">
                       <div
-                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1 sm:py-1.5 px-3 sm:px-4 rounded-lg transition-colors duration-300 pointer-events-auto"
+                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-0.5 sm:py-1.5 px-2 sm:px-4 rounded-lg transition-colors duration-300 pointer-events-auto"
                       >
                         <span className="text-xs sm:text-sm font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                           Know more

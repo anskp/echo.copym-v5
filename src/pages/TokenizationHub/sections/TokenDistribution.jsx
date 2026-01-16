@@ -28,8 +28,8 @@ export default function TokenDistribution() {
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
         {/* Header Section */}
-        <div className="mb-12 sm:mb-16 md:mb-20">
-          <div className="relative w-fit mb-4">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <div className="relative w-fit mx-auto mb-4">
             <h2
               className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
@@ -37,18 +37,11 @@ export default function TokenDistribution() {
               <span className="text-white">TOKEN </span>
               <span className="text-[#15a36e]">DISTRIBUTION</span>
             </h2>
-            {/* Underline matching reference */}
-            <div
-              className="absolute bottom-0 left-0 bg-white/30"
-              style={{
-                width: 'calc(100% + 200px)',
-                height: '0.5px'
-              }}
-            ></div>
+
           </div>
 
           <p
-            className="text-sm sm:text-base md:text-lg text-white font-normal leading-relaxed mt-6 max-w-4xl"
+            className="text-sm sm:text-base md:text-lg text-white font-normal leading-relaxed mt-6 max-w-4xl mx-auto"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.

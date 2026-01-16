@@ -15,7 +15,7 @@ export default function WhyItMatters() {
 
     return (
         <section
-            className="w-full py-20 overflow-hidden relative"
+            className="w-full pt-12 sm:pt-16 pb-0 overflow-hidden relative"
             style={{
                 backgroundImage: "url('/assets/Images/Lightgreenbg.png')",
                 backgroundSize: 'cover',
@@ -23,24 +23,34 @@ export default function WhyItMatters() {
                 backgroundRepeat: 'no-repeat'
             }}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
-                <div className="mb-16">
-                    <div className="relative w-fit mb-4">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Header at the top */}
+                <div className="mb-12 text-center">
+                    <div className="relative w-fit mb-4 mx-auto">
                         <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             <span className="text-black">Why the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">matters ?</span>
                         </h2>
-                        <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
                     </div>
-                    <p className="text-lg text-gray-700 font-medium max-w-3xl leading-relaxed">
-                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+                    <p className="text-lg text-gray-700 font-medium max-w-4xl mx-auto leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" />
+                        that give you the edge in crypto trading
                     </p>
                 </div>
 
-                {/* Lottie Animation Container */}
-                <div className="relative w-full max-w-full mx-auto h-[350px] sm:h-[450px] md:h-[550px] lg:h-[650px] flex items-center justify-center mt-8 sm:mt-0">
+                {/* Lottie Animation Container below the text */}
+                <div className="relative w-full max-w-full mx-auto h-[250px] sm:h-[350px] md:h-[450px] lg:h-[550px] flex items-center justify-center mt-4">
                     {animationData && (
-                        <div className="w-full h-full flex items-center justify-center transform scale-150 sm:scale-125 md:scale-110 lg:scale-100">
-                            <Lottie animationData={animationData} loop={true} className="w-full h-full" />
+                        <div className="w-full h-full flex items-center justify-center">
+                            <Lottie
+                                animationData={animationData}
+                                loop={true}
+                                autoplay={true}
+                                className="w-full h-full max-w-full"
+                                style={{
+                                    width: '100%',
+                                    height: '100%'
+                                }}
+                            />
                         </div>
                     )}
                 </div>

@@ -10,13 +10,13 @@ export default function AIInvestingSection() {
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="relative w-fit mx-auto mb-3 sm:mb-4">
-            <h2 className="inline-flex items-baseline gap-1 text-2xl md:text-3xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">CORA-AI</span>
               <span className="text-black"> THAT INVESTS WITH YOU</span>
             </h2>
           </div>
-          <p className="text-base text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            From real-time insights to smarter decisions, let AI guide your journey <br /> to growing wealth effortlessly.
+          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            From real-time insights to smarter decisions, <br className="sm:hidden" />let AI guide your journey <br className="hidden sm:block" />to growing wealth effortlessly.
           </p>
         </div>
 

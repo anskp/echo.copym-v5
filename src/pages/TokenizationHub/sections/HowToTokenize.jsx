@@ -55,12 +55,11 @@ export default function HowToTokenize() {
     <section className="relative bg-white pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Title */}
-        <div className="mb-8 sm:mb-12">
-          <div className="relative w-fit mb-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <div className="relative w-fit mx-auto mb-4">
             <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-black">HOW TO</span> <span className="text-[#15a36e]">TOKENIZE</span> <span className="text-black">ASSETS</span>
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black" style={{ width: 'calc(100% + 100px)', height: '1px' }}></div>
           </div>
         </div>
 

@@ -36,7 +36,7 @@ export default function CTASection() {
                     </h2>
                     <Link
                         to="/contact"
-                        className="inline-flex items-center gap-2 bg-white px-6 py-2.5 sm:px-10 sm:py-4 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
+                        className="inline-flex items-center gap-2 bg-white px-5 py-2 sm:px-10 sm:py-4 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
                     >
                         <span className="text-base sm:text-lg md:text-lg lg:text-xl text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             Invest in the revolution

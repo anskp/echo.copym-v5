@@ -11,6 +11,7 @@ import TokenDistribution from "./sections/TokenDistribution.jsx";
 import TokenManagement from "./sections/TokenManagement.jsx";
 import FAQSection from "./sections/FAQSection.jsx";
 import FinalCTA from "./sections/FinalCTA.jsx";
+import TestimonialsSection from '../HomePage/sections/Testimonials.jsx';
 
 export default function TokenizationHub() {
   // State management remains in the parent component
@@ -40,6 +41,7 @@ export default function TokenizationHub() {
 
 
       <FAQSection />
+      <TestimonialsSection />
       <FinalCTA />
 
       {/* The Modal remains in the parent component */}

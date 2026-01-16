@@ -59,7 +59,7 @@ function App() {
       </div>
       <ScrollToTop />
       <Header />
-      <main className="relative z-20 overflow-x-hidden pt-16">
+      <main className="relative z-20 overflow-x-hidden pt-0 sm:pt-16">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutUs />} />

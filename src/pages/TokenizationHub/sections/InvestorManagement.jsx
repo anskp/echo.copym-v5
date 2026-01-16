@@ -40,11 +40,11 @@ export default function InvestorManagement() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16 px-4">
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase mb-3 sm:mb-4 md:mb-5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             <span className="text-black">INVESTOR </span>
             <span className="text-[#15a36e]">MANAGEMENT</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
           </p>
         </div>
@@ -67,7 +67,7 @@ export default function InvestorManagement() {
               {/* MANAGE INVESTORS Button */}
               <button
                 className="bg-emerald-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-600 transition-all duration-300 flex items-center justify-center gap-2 shadow-md"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 MANAGE INVESTORS
                 <svg
@@ -88,7 +88,7 @@ export default function InvestorManagement() {
               {/* LEARN MORE Button */}
               <button
                 className="border-2 border-emerald-500 text-emerald-500 px-4 sm:px-6 py-2 sm:py-3 rounded-full font-bold text-xs sm:text-sm hover:bg-emerald-500 hover:text-white transition-all duration-300"
-                style={{ fontFamily: 'DM Sans, sans-serif' }}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 LEARN MORE
               </button>

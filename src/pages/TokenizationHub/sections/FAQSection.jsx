@@ -20,7 +20,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
             fontWeight: 600,
             color: '#000',
             textAlign: 'left',
-            fontFamily: 'DM Sans, sans-serif'
+            fontFamily: 'Palanquin, sans-serif'
           }}
         >
           {question}
@@ -58,7 +58,7 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
             color: '#000',
             textAlign: 'left',
             lineHeight: '1.6',
-            fontFamily: 'DM Sans, sans-serif'
+            fontFamily: 'Palanquin, sans-serif'
           }}
         >
           {answer}
@@ -98,15 +98,14 @@ export default function FAQSection() {
           <div className="relative w-fit mb-3 sm:mb-4">
             <h2
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-2xl font-bold uppercase pb-1"
-              style={{ fontFamily: 'DM Sans, sans-serif' }}
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               <span className="text-[#15a36e]">FAQ's </span>
             </h2>
-            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+160px)]" style={{ height: '0.5px' }}></div>
           </div>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             These FAQ's questions might have the answer, but if not, our support team is just a message away!
           </p>
@@ -129,7 +128,7 @@ export default function FAQSection() {
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Contact Our Team
           </Link>

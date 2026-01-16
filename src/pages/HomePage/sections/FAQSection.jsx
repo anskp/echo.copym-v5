@@ -19,7 +19,8 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
             fontSize: 'clamp(16px, 2vw, 20px)',
             fontWeight: 600,
             color: '#000',
-            textAlign: 'left'
+            textAlign: 'left',
+            fontFamily: 'Palanquin, sans-serif'
           }}
         >
           {question}
@@ -56,7 +57,8 @@ const FAQItem = ({ question, answer, isOpen, onToggle }) => {
             fontSize: 'clamp(14px, 1.8vw, 18px)',
             color: '#000',
             textAlign: 'left',
-            lineHeight: '1.6'
+            lineHeight: '1.6',
+            fontFamily: 'Palanquin, sans-serif'
           }}
         >
           {answer}
@@ -127,7 +129,7 @@ export default function FAQSection() {
           <Link
             to="/contact"
             className="inline-flex items-center justify-center px-[34px] py-[10px] font-bold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base border-2 border-emerald-500 bg-[#1ab87d] text-white rounded-full"
-            style={{ fontFamily: 'DM Sans, sans-serif' }}
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Contact Our Team
           </Link>
