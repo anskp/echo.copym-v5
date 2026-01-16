@@ -40,7 +40,7 @@ const ProductStackReview = () => {
         {/* Lottie Animation */}
         <div className="w-full flex justify-center items-center overflow-visible">
           <div
-            className="w-[90%] sm:w-[85%]"
+            className="w-[125%] sm:w-[85%]"
             style={{
               transformOrigin: 'left center',
               marginTop: isDesktop ? '-20px' : '0px',

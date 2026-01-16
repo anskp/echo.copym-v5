@@ -110,12 +110,12 @@ const TokenizeAssetsSection = () => {
                   </p>
 
                   {/* Know More Section - Conditional Styling */}
-                  <div className="mt-8 flex justify-center">
+                  <div className="mt-12 sm:mt-8 flex justify-center">
                     <Link to="/marketplace" className="block">
                       <div
-                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1.5 sm:py-2 px-4 sm:px-5 rounded-lg transition-colors duration-300 pointer-events-auto"
+                        className="w-fit bg-[#15a36e] hover:bg-[#128a5d] text-white text-center py-1 sm:py-1.5 px-3 sm:px-4 rounded-lg transition-colors duration-300 pointer-events-auto"
                       >
-                        <span className="text-sm sm:text-base font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        <span className="text-xs sm:text-sm font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                           Know more
                         </span>
                       </div>

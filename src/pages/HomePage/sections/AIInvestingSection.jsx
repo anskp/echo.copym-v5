@@ -5,7 +5,7 @@ import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white pt-24 sm:pt-32 md:pt-40 lg:pt-48 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
+    <section className="w-full bg-background-white pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -29,7 +29,7 @@ export default function AIInvestingSection() {
               <img
                 src={ellipse}
                 alt=""
-                className="w-[300px] h-[300px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px] opacity-60"
+                className="w-[450px] h-[450px] sm:w-[400px] sm:h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] xl:w-[700px] xl:h-[700px] opacity-60"
               />
             </div>
             <motion.div

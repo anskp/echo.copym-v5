@@ -10,7 +10,7 @@ import earnWithoutHassleAnimation from '../../../components/lotties/earnwithouta
 
 const FeatureSection = () => {
   return (
-    <SectionContainer padding="py-26 sm:py-20 md:py-24 lg:py-26 text-center" bgColor="bg-white" maxWidth="max-w-10xl">
+    <SectionContainer padding="pt-12 pb-26 sm:py-20 md:py-24 lg:py-26 text-center" bgColor="bg-white" maxWidth="max-w-10xl">
       {/* Main Heading */}
       <SectionHeader
         title="OWN. EARN. EXPLORE. TRADE"

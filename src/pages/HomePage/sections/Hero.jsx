@@ -72,7 +72,7 @@ export default function Hero() {
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
 
           >
-            Secure, AI-enhanced marketplace. Seamless on-chain investment in real estate, commodities, <br />
+            Secure, AI-enhanced marketplace. Seamless on-chain investment in real estate, commodities, <br className="hidden md:block" />
             carbon credits, and luxury assets.
           </p>
 
@@ -92,10 +92,10 @@ export default function Hero() {
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
-          <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4">
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4">
             <Link
               to="/marketplace"
-              className="text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-full sm:w-auto sm:min-w-[200px]"
+              className="text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-auto sm:min-w-[200px]"
               style={{
                 fontFamily: 'Palanquin, sans-serif',
                 background: 'linear-gradient(to right, #23BD83, #109261)'

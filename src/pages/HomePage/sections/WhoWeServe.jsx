@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import assetsImage from '../../../components/images/assets.png';
 import investorsImage from '../../../components/images/investors.png';
 import partnersImage from '../../../components/images/partners.png';
+import investorsMobileImage from '../../../components/images/investersmobile.png';
+import partnersMobileImage from '../../../components/images/partnersmobile.png';
 
 const WhoWeServe = () => {
   return (
@@ -117,9 +119,25 @@ const WhoWeServe = () => {
           </div>
 
           {/* Top-Right Card - Investors */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-3 sm:py-4 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 h-full overflow-hidden">
-            {/* Content on Left */}
-            <div className="flex-1 lg:max-w-[60%] flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 h-full overflow-hidden">
+            {/* Image on Top (Mobile) / Right (Desktop) */}
+            <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-center lg:justify-end lg:order-2 min-h-[180px] sm:min-h-[220px] lg:min-h-[140px] -mt-2 sm:-mt-3 lg:mt-0">
+              {/* Mobile Image */}
+              <img
+                src={investorsMobileImage}
+                alt="Investors"
+                className="lg:hidden w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
+              />
+              {/* Desktop Image */}
+              <img
+                src={investorsImage}
+                alt="Investors"
+                className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125"
+              />
+            </div>
+
+            {/* Content Below (Mobile) / Left (Desktop) */}
+            <div className="flex-1 lg:max-w-[60%] lg:order-1 flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
@@ -190,33 +208,23 @@ const WhoWeServe = () => {
                 </div>
               </button>
             </div>
-
-            {/* Image on Right */}
-            <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-end h-full min-h-[120px] lg:min-h-[140px] relative">
-              <img
-                src={investorsImage}
-                alt="Investors"
-                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-0"
-                style={{
-                  right: 0,
-                  top: 0,
-                }}
-              />
-            </div>
           </div>
 
           {/* Bottom-Right Card - Partners */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col-reverse lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
-            {/* Image on Left */}
-            <div className="w-full lg:w-1/2 flex items-center justify-start min-h-[140px] lg:min-h-[160px] flex-shrink-0 ">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
+            {/* Image on Top (Mobile) / Left (Desktop) */}
+            <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[180px] sm:min-h-[220px] lg:min-h-[160px] flex-shrink-0 -mt-2 sm:-mt-3 lg:mt-0">
+              {/* Mobile Image */}
+              <img
+                src={partnersMobileImage}
+                alt="Partners"
+                className="lg:hidden w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
+              />
+              {/* Desktop Image */}
               <img
                 src={partnersImage}
                 alt="Partners"
-                className="w-auto h-auto max-h-[140px] lg:max-h-[240px] object-contain transform scale-[1.7] lg:scale-125 -translate-x-3 lg:translate-x-2"
-                style={{
-                  right: 0,
-                  top: 0,
-                }}
+                className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125 translate-x-2"
               />
             </div>
 
