@@ -6,7 +6,7 @@ const LogoCarousel = () => {
     { src: "/assets/svg/Sumsub_idtw6qkLj7_1.svg", alt: "Sumsub" },
     { src: "/assets/blockchains/solana.png", alt: "Solana" },
     { src: "/assets/blockchains/ethereum-eth-logo.svg", alt: "Ethereum" },
-    { src: "/assets/blockchains/masdar.png", alt: "Masdar" },
+    { src: "/assets/svg/masdarr.svg", alt: "Masdar" },
   ];
 
   // Duplicate logos multiple times for seamless loop
