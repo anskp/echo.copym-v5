@@ -109,15 +109,15 @@ const TokenizeAssetsSection = () => {
                     {asset?.description}
                   </p>
 
-                  {/* Learn More Button - Stylish Design */}
+                  {/* Know More Button - Transparent Outlined Design */}
                   <div className="mt-12 sm:mt-8 flex justify-center">
-                    <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-[#15a36e] border border-white/20 hover:bg-[#128a5d] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
-                      <span className="pl-4 pr-2 text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-transparent border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
+                      <span className="pl-4 pr-2 text-black group-hover:text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         Know more
                       </span>
-                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-transform duration-300 group-hover:translate-x-0.5">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#15a36e] group-hover:bg-white flex items-center justify-center transition-all duration-300 group-hover:translate-x-0.5">
                         <svg
-                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-black"
+                          className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-white group-hover:text-[#15a36e]"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

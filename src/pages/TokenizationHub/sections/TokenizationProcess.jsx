@@ -70,12 +70,12 @@ export default function TokenizationProcess() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 md:gap-12 lg:gap-16">
           {whyTokenizeFeatures.map((feature, index) => (
             <div key={index} className="flex flex-col items-start">
-              {/* Icon Circle */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-black mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-3">
+              {/* Icon Container */}
+              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-transparent mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-full h-full object-contain"
+                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
                 />
               </div>
 

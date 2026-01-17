@@ -33,7 +33,7 @@ const Intro = () => {
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-white font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
-                        At CopyM, zero gas is <span className="font-semibold">not a feature - it's a design philosophy.</span>
+                        At CopyM, zero gas is <span className="font-semibold">not a feature - <br className="hidden sm:block" /> it's a design philosophy.</span>
                     </p>
 
                     {/* Additional description */}
@@ -41,7 +41,7 @@ const Intro = () => {
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-normal leading-relaxed tracking-wide"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
-                        We abstract blockchain complexity so users can interact with tokenized assets without ever touching gas fees, while still benefiting from full on-chain security and transparency.
+                        We abstract blockchain complexity so users can interact with tokenized assets without ever <br className="hidden sm:block" /> touching gas fees, <br className="hidden sm:block" /> while still benefiting from full on-chain security and transparency.
                     </p>
                 </div>
 

@@ -24,7 +24,7 @@ export default function TokenDistribution() {
   ];
 
   return (
-    <section className="bg-black py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="bg-black pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-0 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
 
         {/* Header Section */}
@@ -44,26 +44,26 @@ export default function TokenDistribution() {
             className="text-sm sm:text-base md:text-lg text-white font-normal leading-relaxed mt-6 max-w-4xl mx-auto"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            Reach global investors with automated compliance, seamless onboarding, and intelligent liquidity management.
+            Reach global investors with automated compliance, seamless onboarding, <br className="hidden sm:block" /> and intelligent liquidity management.
           </p>
         </div>
 
         {/* Features Content */}
-        <div className="flex flex-col lg:flex-row items-center justify-between mt-16 sm:mt-20 gap-12 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-16 sm:mt-20 gap-12 lg:gap-20">
 
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2 relative">
-            <div className="relative w-full aspect-square max-w-lg mx-auto lg:max-w-none">
+            <div className="relative w-full aspect-square max-w-2xl mx-auto lg:max-w-none">
               <img
                 src="/assets/Images/icons/distribution.png"
                 alt="Token Distribution Network"
-                className="w-full h-full object-contain"
+                className="w-full h-full object-contain scale-110 sm:scale-125 transform-gpu"
               />
             </div>
           </div>
 
           {/* Right Column - Features List */}
-          <div className="w-full lg:w-1/2 space-y-12 sm:space-y-14">
+          <div className="w-full lg:w-1/2">
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -71,14 +71,11 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-start gap-3"
+                className="flex flex-col py-5 sm:py-6 relative"
               >
-                {/* Bullet Point */}
-                <div className="text-white text-lg font-bold mt-0.5">•</div>
-
                 <div className="flex-1">
                   <h3
-                    className="text-white font-bold text-lg sm:text-xl mb-2"
+                    className="text-white font-bold text-lg sm:text-xl mb-1.5"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {feature.title}
@@ -90,6 +87,14 @@ export default function TokenDistribution() {
                     {feature.description}
                   </p>
                 </div>
+                {index !== features.length - 1 && (
+                  <div
+                    className="absolute bottom-0 left-0 w-full h-[1px]"
+                    style={{
+                      background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #15A36E 50%, rgba(255, 255, 255, 0) 100%)'
+                    }}
+                  />
+                )}
               </motion.div>
             ))}
           </div>

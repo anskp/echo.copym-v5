@@ -182,35 +182,12 @@ const AboutUs = () => {
                                         Our<br />
                                         <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
-                                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+120px)]" style={{ height: '1.5px' }}></div>
                                 </div>
                                 <p className="text-lg text-gray-600 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
                                 </p>
 
-                                {/* Decorative Arrow SVG */}
-                                <div className="hidden lg:block absolute bottom-40 right-0 transform translate-x-1/4">
-                                    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <motion.path
-                                            d="M20 20 C 50 100, 150 100, 180 80"
-                                            stroke="black"
-                                            strokeWidth="2"
-                                            fill="none"
-                                            initial={{ pathLength: 0 }}
-                                            animate={{ pathLength: 1 }}
-                                            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
-                                        />
-                                        <motion.path
-                                            d="M180 80 L 170 75 M 180 80 L 175 90"
-                                            stroke="black"
-                                            strokeWidth="2"
-                                            fill="none"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ duration: 0.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", delay: 1.5 }}
-                                        />
-                                    </svg>
-                                </div>
+
 
                                 {/* Email and Address Cards - Side by Side */}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
@@ -354,35 +331,12 @@ const AboutUs = () => {
                                         Company<br />
                                         <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
-                                    <div className="absolute bottom-0 left-0 bg-white w-full sm:w-[calc(100%+120px)]" style={{ height: '1.5px' }}></div>
                                 </div>
                                 <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     Our journey of innovation and growth, building the future of decentralized finance and global asset ownership.
                                 </p>
 
-                                {/* Decorative Arrow SVG - Mirror of Core Values */}
-                                <div className="hidden lg:block absolute top-[60%] left-0 transform -translate-x-full">
-                                    <svg width="200" height="120" viewBox="0 0 200 120" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform scale-x-[-1]">
-                                        <motion.path
-                                            d="M20 20 C 50 100, 150 100, 180 80"
-                                            stroke="#15a36e"
-                                            strokeWidth="2"
-                                            fill="none"
-                                            initial={{ pathLength: 0 }}
-                                            animate={{ pathLength: 1 }}
-                                            transition={{ duration: 2, ease: "easeInOut", repeat: Infinity, repeatType: "reverse" }}
-                                        />
-                                        <motion.path
-                                            d="M180 80 L 170 75 M 180 80 L 175 90"
-                                            stroke="#15a36e"
-                                            strokeWidth="2"
-                                            fill="none"
-                                            initial={{ opacity: 0 }}
-                                            animate={{ opacity: 1 }}
-                                            transition={{ duration: 0.5, ease: "easeInOut", repeat: Infinity, repeatType: "reverse", delay: 1.5 }}
-                                        />
-                                    </svg>
-                                </div>
+
                             </motion.div>
                         </div>
 
@@ -638,7 +592,6 @@ const AboutUs = () => {
                                 <span className="text-black">IN </span>
                                 <span className="text-[#15a36e]">TOUCH</span>
                             </h2>
-                            <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+180px)]" style={{ height: '1.5px' }}></div>
                         </div>
                         <p
                             className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-normal leading-relaxed tracking-wide mt-4 sm:mt-6"

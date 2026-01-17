@@ -111,7 +111,7 @@ export default function HowItWorks() {
                                     x: 0,
                                 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex-shrink-0 w-80 group relative rounded-xl border-[6px] border-[#EEEEEE] bg-white overflow-hidden flex flex-col justify-end min-h-[420px] transition-all duration-300 shadow-sm hover:shadow-xl"
+                                className="flex-shrink-0 w-80 group relative rounded-xl bg-white overflow-hidden flex flex-col justify-end min-h-[420px] transition-all duration-300 shadow-sm hover:shadow-xl"
                                 drag={false}
                             >
 
@@ -130,8 +130,8 @@ export default function HowItWorks() {
                                 <div className="relative z-10 w-full p-6 flex flex-col justify-end transition-all duration-500 group-hover:h-1/2 group-hover:justify-start group-hover:pt-4">
                                     {/* Icon (Fades out and collapses on hover) */}
                                     <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-5 overflow-hidden flex shrink-0">
-                                        <div className="w-16 h-16 bg-white rounded-xl flex items-center justify-center shadow-md">
-                                            <img src={step.icon} alt={step.title} className="w-10 h-10 object-contain" />
+                                        <div className="w-16 h-16 flex items-center justify-center">
+                                            <img src={step.icon} alt={step.title} className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
                                         </div>
                                     </div>
 

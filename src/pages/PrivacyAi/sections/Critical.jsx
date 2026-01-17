@@ -31,8 +31,15 @@ export default function Critical() {
                         <span className="text-[#10b981]">Privacy AI</span>
                         <span className="text-black"> is critical ?</span>
                     </h2>
-                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+40px)]" style={{ height: '2px' }}></div>
+                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+40px)]" style={{ height: '0.5px' }}></div>
                 </div>
+
+                <p
+                    className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl mb-12"
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
+                    Master the markets with AI-driven insights, <br className="hidden sm:block" /> predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading
+                </p>
 
                 {/* List of Items */}
                 <div className="flex flex-col gap-4 sm:gap-6">

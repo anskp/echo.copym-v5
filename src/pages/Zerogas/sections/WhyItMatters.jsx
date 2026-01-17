@@ -44,7 +44,6 @@ export default function WhyItMatters() {
               <span className="text-[#15a36e]">Zero Gas</span>
               <span className="text-black"> matters ?</span>
             </h2>
-            {/* Underline */}
             <div
               className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+120px)]"
               style={{
@@ -57,7 +56,7 @@ export default function WhyItMatters() {
             className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            Master the markets with AI-driven insights, predictive alerts, and real-time intelligence that give you the edge in crypto trading
+            Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading
           </p>
         </div>
 
@@ -68,11 +67,8 @@ export default function WhyItMatters() {
             return (
               <div key={index} className="flex flex-col items-start">
                 {/* Icon Circle */}
-                <div
-                  className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center p-0 overflow-hidden"
-                  style={{ boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.08)' }}
-                >
-                  <img src={feature.icon} alt={feature.title} className="w-10 h-10 sm:w-12 sm:h-12 object-contain" />
+                <div className="w-16 h-16 sm:w-20 sm:h-20 mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center overflow-hidden">
+                  <img src={feature.icon} alt={feature.title} className="w-12 h-12 sm:w-16 sm:h-16 object-contain" />
                 </div>
 
                 {/* Title */}

@@ -49,7 +49,7 @@ export default function Header() {
   const navItems = [
     {
       label: "Product",
-      path: "/product",
+      path: "#",
       dropdown: [
         {
           icon: <img src={tokencoinh} alt="Tokenization" className="w-10 h-10 object-contain" />,
@@ -65,36 +65,10 @@ export default function Header() {
         }
       ]
     },
-    // {
-    //   label: "Solutions",
-    //   path: "/solutions",
-    //   dropdown: [
-    //     {
-    //       icon: <img src="/assets/Images/icons/assets.png" alt="Asset Owners" className="w-full h-full object-contain" />,
-    //       heading: "Asset Owners",
-    //       description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
-    //     },
-    //     {
-    //       icon: <img src="/assets/Images/icons/investors.png" alt="Investors" className="w-full h-full object-contain" />,
-    //       heading: "Investors",
-    //       description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
-    //     },
-    //     {
-    //       icon: <img src="/assets/Images/icons/partners.png" alt="Partners" className="w-full h-full object-contain" />,
-    //       heading: "Partners",
-    //       description: "Explore how CopyM can help Investors leverage tokenization to generate revenue"
-    //     }
-    //   ]
-    // },
     {
       label: "Technology",
-      path: "/technology",
+      path: "#",
       dropdown: [
-        // {
-        //   icon: <HiCube className="w-10 h-10" />,
-        //   heading: "Architecture",
-        //   description: "Explore how CopyM can help asset owners leverage tokenization to generate revenue"
-        // },
         {
           icon: <img src={zerogash} alt="Zero Gas" className="w-10 h-10 object-contain" />,
           heading: "Zero Gas",
@@ -111,7 +85,7 @@ export default function Header() {
     },
     {
       label: "Company",
-      path: "/company",
+      path: "#",
       dropdown: [
         {
           icon: <img src={aboutush} alt="About Us" className="w-10 h-10 object-contain" />,
@@ -164,24 +138,25 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8 xl:gap-12">
+            <div className="hidden lg:flex items-center gap-8 xl:gap-12 h-full">
               {navItems.map((item) => (
                 <div
-                  key={item.path}
-                  className="relative"
-                  onMouseEnter={() => item.dropdown && setHoveredItem(item.path)}
+                  key={item.label}
+                  className="relative h-full flex items-center"
+                  onMouseEnter={() => item.dropdown && setHoveredItem(item.label)}
                   onMouseLeave={() => setHoveredItem(null)}
                 >
                   <Link
                     to={item.path}
-                    className="text-white font-medium text-base lg:text-lg hover:text-white/80 transition-colors duration-200 whitespace-nowrap py-2"
+                    className="text-white font-medium text-base lg:text-lg hover:text-white/80 transition-colors duration-200 whitespace-nowrap px-2 flex items-center h-full"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    onClick={(e) => item.path === "#" && e.preventDefault()}
                   >
                     {item.label}
                   </Link>
                   {/* DESKTOP Dropdown */}
                   <AnimatePresence>
-                    {hoveredItem === item.path && item.dropdown && item.dropdown.length > 0 && (
+                    {hoveredItem === item.label && item.dropdown && item.dropdown.length > 0 && (
                       <>
                         {/* Dark Overlay with Green Light at Top/Bottom */}
                         <motion.div
