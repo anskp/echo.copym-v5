@@ -34,26 +34,20 @@ export default function WhyItMatters() {
     <section className="relative bg-white py-12 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="text-left mb-8 sm:mb-12 md:mb-16">
-          <div className="relative w-fit mb-4">
+        <div className="flex flex-col items-center text-center mb-8 sm:mb-12 md:mb-16">
+          <div className="relative w-fit mb-4 mx-auto">
             <h2
-              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase"
+              className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight uppercase text-center"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               <span className="text-black">Why </span>
               <span className="text-[#15a36e]">Zero Gas</span>
               <span className="text-black"> matters ?</span>
             </h2>
-            <div
-              className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+120px)]"
-              style={{
-                height: '0.5px'
-              }}
-            ></div>
           </div>
 
           <p
-            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl"
+            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl text-center mx-auto"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading

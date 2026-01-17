@@ -36,21 +36,21 @@ const SectionHeader = ({
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className={`
-        ${alignment === 'center' ? 'text-center' : 'text-center'} 
+        ${alignment === 'center' ? 'text-center' : 'text-left'} 
         mb-8 sm:mb-10 md:mb-12
         ${className}
       `}
     >
       <div className={`relative w-fit ${alignment === 'center' ? 'mx-auto' : ''}`}>
         <h2
-          className="inline-flex items-baseline text-center gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1 text-black"
+          className={`inline-flex items-baseline ${alignment === 'center' ? 'text-center' : 'text-left'} gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1 text-black`}
           style={{ fontFamily: 'Palanquin, sans-serif' }}
         >
           {getTitleWithHighlights(title)}
         </h2>
       </div>
       {subtitle && (
-        <p className="text-sm text-center text-black font-normal leading-relaxed tracking-wide mt-1 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+        <p className={`text-sm ${alignment === 'center' ? 'text-center' : 'text-left'} text-black font-normal leading-relaxed tracking-wide mt-1 sm:mt-4`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
           {subtitle}
         </p>
       )}

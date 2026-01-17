@@ -16,7 +16,7 @@ const HowItWorks = () => {
       <SectionHeader
         title="How Zero Gas works ?"
         highlightWords={['Zero Gas']}
-        alignment="left"
+        alignment="center"
       />
 
       {/* Vertical Stack of 5 Sections */}

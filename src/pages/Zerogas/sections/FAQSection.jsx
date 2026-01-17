@@ -107,7 +107,6 @@ export default function FAQSection() {
                     >
                         These FAQ's questions might have the answer, but if not, our support team is just a message away!
                     </p>
-
                 </div>
 
                 {/* FAQ List */}

@@ -25,21 +25,22 @@ export default function Critical() {
         <section className="w-full bg-white py-12 sm:py-16 md:py-20 pb-20 sm:pb-32 overflow-hidden">
             <div className="max-w-3xl sm:max-w-4xl md:max-w-5xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
-                <div className="relative w-fit mb-10 sm:mb-12 md:mb-16">
-                    <h2 className="inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        <span className="text-black">Why </span>
-                        <span className="text-[#10b981]">Privacy AI</span>
-                        <span className="text-black"> is critical ?</span>
-                    </h2>
-                    <div className="absolute bottom-0 left-0 bg-black w-full sm:w-[calc(100%+40px)]" style={{ height: '0.5px' }}></div>
-                </div>
+                <div className="flex flex-col items-center text-center relative w-full mb-10 sm:mb-12 md:mb-16">
+                    <div className="relative w-fit mx-auto">
+                        <h2 className="inline-flex items-center gap-2 text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold uppercase leading-tight pb-2 text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <span className="text-black">Why </span>
+                            <span className="text-[#10b981]">Privacy AI</span>
+                            <span className="text-black"> is critical ?</span>
+                        </h2>
+                    </div>
 
-                <p
-                    className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl mb-12"
-                    style={{ fontFamily: 'Palanquin, sans-serif' }}
-                >
-                    Master the markets with AI-driven insights, <br className="hidden sm:block" /> predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading
-                </p>
+                    <p
+                        className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl mb-12 text-center mx-auto"
+                        style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    >
+                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading
+                    </p>
+                </div>
 
                 {/* List of Items */}
                 <div className="flex flex-col gap-4 sm:gap-6">
