@@ -11,7 +11,7 @@ import zerogas06 from '../../../components/images/zerogas06.png';
 
 const HowItWorks = () => {
   return (
-    <SectionContainer padding="py-12 sm:py-16 md:py-24" bgColor="bg-white" maxWidth="max-w-5xl">
+    <SectionContainer padding="pt-12 pb-26 sm:py-20 md:py-24 lg:py-26 text-center" bgColor="bg-white" maxWidth="max-w-10xl">
       {/* Main Heading */}
       <SectionHeader
         title="How Zero Gas works ?"
@@ -27,12 +27,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Left */}
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -49,11 +49,11 @@ const HowItWorks = () => {
           </div>
 
           {/* Content - Right */}
-          <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="w-full md:w-auto lg:w-auto text-center md:text-left">
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               GAS ABSTRACTION
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.
             </p>
           </div>
@@ -65,12 +65,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Right */}
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -88,10 +88,10 @@ const HowItWorks = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               META-TRANSACTIONS
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.
             </p>
           </div>
@@ -103,12 +103,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Left */}
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -126,10 +126,10 @@ const HowItWorks = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               SPONSORED TRANSACTIONS
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.
             </p>
           </div>
@@ -141,12 +141,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row-reverse md:justify-end items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Right */}
-          <div className="w-full md:w-auto flex justify-center md:justify-end">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -164,10 +164,10 @@ const HowItWorks = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               OPTIMIZED INFRASTRUCTURE
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.
             </p>
           </div>
@@ -179,12 +179,12 @@ const HowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           viewport={{ once: true }}
-          className="flex flex-col md:flex-row items-center gap-8 md:gap-20 lg:gap-32"
+          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
         >
           {/* Graphic - Left */}
-          <div className="w-full md:w-auto flex justify-center md:justify-start">
+          <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[220px] sm:w-[260px] md:w-[300px] h-[220px] sm:h-[260px] md:h-[300px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[350px] sm:w-[260px] md:w-[450px] h-[220px] sm:h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -201,10 +201,10 @@ const HowItWorks = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               ENTERPRISE-GRADE UX
             </h3>
-            <p className="text-lg sm:text-xl md:text-xl text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.
             </p>
           </div>
