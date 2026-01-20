@@ -9,10 +9,9 @@ export default function Marketplace() {
   return (
     <div className="min-h-screen bg-white">
       <Hero />
-      <MarketplaceIntro />
-      <HowItWorks />
-      <WhyItMatters />
       <TradableAssets />
+      <WhyItMatters />
+      <HowItWorks />
       <FAQsection />
     </div>
   );

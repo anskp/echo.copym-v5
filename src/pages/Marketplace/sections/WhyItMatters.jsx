@@ -50,6 +50,24 @@ const categories = [
         badges: [
             { label: 'Fine Art Collection', icon: <Palette className="w-4 h-4" />, top: '20%', left: '-8%' },
             { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-10%' },
+        ],
+        assets: [
+            {
+                name: "Renaissance Collection",
+                location: "Florence, Italy",
+                roi: "9.2%",
+                tokensAvailable: "1,500/2,000",
+                price: "$2,400,000",
+                image: artsImg
+            },
+            {
+                name: "Modern Abstract Series",
+                location: "London, UK",
+                roi: "12.5%",
+                tokensAvailable: "500/1,500",
+                price: "$1,850,000",
+                image: artsImg
+            }
         ]
     },
     {
@@ -83,7 +101,7 @@ const categories = [
                 roi: '2.15%',
                 tokensAvailable: '215,000/250,000',
                 price: '$12,500,000',
-                image: '/assets/Images/gold-reserve.png'
+                image: commoditiesImg
             },
             {
                 name: 'Oil & Gas Fund',
@@ -91,7 +109,7 @@ const categories = [
                 roi: '5.80%',
                 tokensAvailable: '425,000/500,000',
                 price: '$5,670,000',
-                image: '/assets/Images/solar-farm-project-2.png'
+                image: downloadImg
             }
         ]
     },
@@ -163,6 +181,24 @@ const categories = [
         badges: [
             { label: 'Sports Franchise', icon: <Trophy className="w-4 h-4" />, top: '25%', left: '-5%' },
             { label: 'Verified Asset', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-8%' },
+        ],
+        assets: [
+            {
+                name: "Elite Football Club",
+                location: "Madrid, Spain",
+                roi: "8.4%",
+                tokensAvailable: "250,000/500,000",
+                price: "$150M",
+                image: sportsImg
+            },
+            {
+                name: "Sports Performance Center",
+                location: "Munich, Germany",
+                roi: "10.2%",
+                tokensAvailable: "75,000/100,000",
+                price: "$45M",
+                image: sportsImg
+            }
         ]
     },
     {
@@ -188,6 +224,24 @@ const categories = [
         badges: [
             { label: 'Verified Carbon Credit', icon: <Leaf className="w-4 h-4" />, top: '20%', left: '-8%' },
             { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, bottom: '25%', right: '-10%' },
+        ],
+        assets: [
+            {
+                name: "Amazon Rainforest Project",
+                location: "Brazil",
+                roi: "4.5%",
+                tokensAvailable: "85k/100k",
+                price: "$1.2M",
+                image: carbonCreditsImg
+            },
+            {
+                name: "Offshore Wind Farm",
+                location: "North Sea",
+                roi: "6.8%",
+                tokensAvailable: "120k/200k",
+                price: "$4.5M",
+                image: downloadImg
+            }
         ]
     }
 ];

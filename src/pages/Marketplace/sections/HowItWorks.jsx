@@ -1,6 +1,8 @@
-import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
-import cardshades from '../../../components/images/cardshades.png';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Plus, Minus } from 'lucide-react';
+
+// Using existing image imports - would ideally use specific product images but staying within project assets
 import tiicon1 from '../../../components/icons/Tokenization/tiicon1.png';
 import tiicon2 from '../../../components/icons/Tokenization/tiicon2.png';
 import tiicon3 from '../../../components/icons/Tokenization/tiicon3.png';
@@ -9,156 +11,137 @@ import ticon4 from '../../../components/icons/Tokenization/ticon4.png';
 const smallp2 = "/assets/Images/smallp2.png";
 
 export default function HowItWorks() {
+    const [showAll, setShowAll] = useState(false);
+
     const steps = [
         {
+            id: "onboard",
             title: "Asset Onboarding",
-            description: "Verified real-world or digital assets are onboarded with clear documentation, then tokenized and listed with immutable on-chain records and transparent metadata.",
+            description: "Verified real-world or digital assets are onboarded with clear documentation, tokenized and listed with on-chain records.",
             icon: tiicon2,
-
+            watermark: "HOW   THE "
         },
         {
+            id: "fraction",
             title: "Fractional Ownership",
             description: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
             icon: tiicon1,
-
+            watermark: "COPYM"
         },
         {
+            id: "market",
             title: "Buy, Sell & Trade",
             description: "Participants can acquire, trade or exit positions through an open marketplace driven by real-time supply and demand.",
             icon: tiicon4,
-
+            watermark: "MARKETPLACE"
         },
         {
-            title: "Smart Contract Settlement",
-            description: "Ownership transfers, revenue distribution and settlements are executed automatically via smart contracts – reducing intermediaries, delays and errors.",
+            id: "settle",
+            title: "Smart Settlement",
+            description: "Ownership transfers and revenue distribution are executed automatically via smart contracts – reducing intermediaries.",
             icon: ticon4,
-
+            watermark: "WORKS"
         },
         {
+            id: "secure",
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: smallp2,
-            number: "05."
+            watermark: "SECURE"
         },
         {
-            title: "Compliance-First Architecture",
-            description: "KYC, asset verification and regulatory safeguards are embedded by design, so every transaction is built on trust and future-ready compliance.",
+            id: "trust",
+            title: "Compliance-First",
+            description: "KYC, asset verification and regulatory safeguards are embedded by design, ensuring every transaction is built on trust.",
             icon: tiicon3,
-            number: "06."
+            watermark: "TRUST"
         }
     ];
 
-    const [constraint, setConstraint] = useState(0);
-    const containerRef = useRef(null);
-    const cardWidth = 320;
-    const gap = 32;
-    const cardTotalWidth = cardWidth + gap;
-
-    // Calculate constraint based on number of cards
-    React.useEffect(() => {
-        const calculateConstraint = () => {
-            if (containerRef.current) {
-                const containerWidth = containerRef.current.offsetWidth;
-                const totalCardsWidth = steps.length * cardTotalWidth;
-                const maxDrag = Math.max(0, totalCardsWidth - containerWidth);
-                setConstraint(-maxDrag);
-            }
-        };
-
-        calculateConstraint();
-        window.addEventListener('resize', calculateConstraint);
-        return () => window.removeEventListener('resize', calculateConstraint);
-    }, [steps.length, cardTotalWidth]);
+    // Determine which cards to show
+    const visibleSteps = showAll ? steps : steps.slice(0, 4);
 
     return (
-        <section className="w-full bg-[#f8f9fa] py-12 sm:py-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-12 text-center">
-                    <div className="relative w-fit mb-4 mx-auto">
-                        <h2 className="inline-flex items-center gap-2 text-xl sm:text-2xl md:text-3xl font-bold uppercase leading-tight pb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            <span className="text-black">How the</span> <span className="text-[#10b981]">CopyM Marketplace</span> <span className="text-black">Works</span>
-                        </h2>
-                    </div>
-                    <p className="text-lg text-gray-800 leading-relaxed font-medium max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" />
-                        that give you the edge in crypto trading
-                    </p>
-                </div>
+        <section className="w-full bg-white py-20 overflow-hidden relative">
+            {/* Main Background Header - Watermark Style */}
+            <div className="absolute top-0 left-0 w-full pointer-events-none select-none overflow-hidden h-[600px] flex flex-col items-center justify-start z-0 opacity-[0.03] pt-10">
+                <h2 className="text-[100px] md:text-[180px] lg:text-[240px] font-black uppercase tracking-tighter leading-[0.8] text-center max-w-full px-4">
+                    HOW THE COPYM<br />MARKETPLACE WORKS
+                </h2>
+            </div>
 
-                {/* Horizontal drag/swipe container */}
-                <div
-                    ref={containerRef}
-                    className="relative overflow-hidden py-4 cursor-grab active:cursor-grabbing"
-                >
-                    <motion.div
-                        className="flex pb-8"
-                        style={{ gap: `${gap}px` }}
-                        drag="x"
-                        dragConstraints={{ left: constraint, right: 0 }}
-                        dragElastic={0.2}
-                        dragMomentum={true}
-                        whileDrag={{ cursor: 'grabbing' }}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        {steps.map((step, index) => (
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+                {/* Staggered Grid Container */}
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24 lg:gap-x-24">
+                    <AnimatePresence mode="popLayout">
+                        {visibleSteps.map((step, index) => (
                             <motion.div
-                                key={index}
-                                initial={{ opacity: 0, x: 100 }}
-                                animate={{
-                                    opacity: 1,
-                                    x: 0,
+                                key={step.id}
+                                layout
+                                initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                                animate={{ opacity: 1, scale: 1, y: 0 }}
+                                exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                                transition={{
+                                    duration: 0.5,
+                                    delay: showAll && index >= 4 ? (index - 4) * 0.1 : 0
                                 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="flex-shrink-0 w-80 group relative rounded-xl bg-white overflow-hidden flex flex-col justify-end min-h-[420px] transition-all duration-300 shadow-sm hover:shadow-xl"
-                                drag={false}
+                                className={`relative flex flex-col group ${index % 2 !== 0 ? 'md:mt-32' : ''}`}
                             >
-
-
-                                {/* Top Part: Hover Image with Responsive Gradient */}
-                                <div className="absolute top-0 left-0 w-full h-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 overflow-hidden z-0">
-                                    <img
-                                        src={cardshades}
-                                        alt=""
-                                        className="w-full h-full object-cover"
-                                    />
-                                    <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-white via-white/40 to-transparent"></div>
+                                {/* Watermark Background Text */}
+                                <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-screen pointer-events-none select-none h-40 flex items-center justify-center z-0">
+                                    <span className="text-[70px] sm:text-[100px] lg:text-[120px] font-black text-black uppercase tracking-tighter whitespace-nowrap opacity-[0.05]">
+                                        {step.watermark}
+                                    </span>
                                 </div>
 
-                                {/* Content Area - Fluid Height & Spacing */}
-                                <div className="relative z-10 w-full p-6 flex flex-col justify-end transition-all duration-500 group-hover:h-1/2 group-hover:justify-start group-hover:pt-4">
-                                    {/* Icon (Fades out and collapses on hover) */}
-                                    <div className="transition-all duration-300 group-hover:opacity-0 group-hover:h-0 group-hover:mb-0 mb-5 overflow-hidden flex shrink-0">
-                                        <div className="w-16 h-16 flex items-center justify-center">
-                                            <img src={step.icon} alt={step.title} className="w-12 h-12 sm:w-14 sm:h-14 object-contain" />
+                                {/* Card Wrapper */}
+                                <div className="relative z-10 w-full sm:max-w-[400px] mx-auto">
+                                    {/* Card Body */}
+
+                                    {/* Inner Image/Icon Container */}
+                                    <div className="relative aspect-[4/5] bg-[#e9ecef]/60 rounded-[2.5rem] overflow-hidden mb-6 flex items-center justify-center p-12 transition-transform duration-500">
+                                        <div className="w-full h-full flex items-center justify-center bg-gray-50/50 rounded-[1.5rem] relative">
+                                            <img
+                                                src={step.icon}
+                                                alt={step.title}
+                                                className="w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-2xl transition-all duration-500"
+                                            />
+
+                                            {/* Plus Icon Overlay */}
+                                            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-[#10b981] text-white border-2 border-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300">
+                                                <Plus className="w-5 h-5 sm:w-6 sm:h-6" />
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-black mb-2 leading-tight transition-all duration-300" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {step.title}
-                                    </h3>
-
-                                    {/* Revealable Content (Hover only) */}
-                                    <div className="max-h-0 opacity-0 group-hover:max-h-[350px] group-hover:opacity-100 transition-all duration-300 ease-out overflow-hidden text-left flex flex-col pointer-events-none group-hover:pointer-events-auto">
-                                        {step.description && (
-                                            <p className="text-xs sm:text-sm md:text-base text-gray-500 leading-relaxed font-medium mb-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                {step.description}
-                                            </p>
-                                        )}
-
-                                        {step.badge && (
-                                            <div className="flex justify-center mt-1 pb-1">
-                                                <span className="inline-block bg-[#10b981] text-white text-[10px] sm:text-[12px] font-semibold py-1.5 px-4 rounded-full shadow-md whitespace-nowrap active:scale-95 transition-transform">
-                                                    {step.badge}
-                                                </span>
-                                            </div>
-                                        )}
+                                    {/* Title & Description */}
+                                    <div className="px-2">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            {step.title}
+                                        </h3>
+                                        <p className="text-sm sm:text-base text-gray-500 leading-relaxed font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            {step.description}
+                                        </p>
                                     </div>
+
                                 </div>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </AnimatePresence>
+                </div>
+
+                {/* Footer Link - Toggles the cards */}
+                <div className="mt-20 md:mt-24 text-left px-4 relative z-20">
+                    <button
+                        onClick={() => setShowAll(!showAll)}
+                        className="text-gray-900 font-bold flex items-center gap-2 hover:gap-4 transition-all duration-300 group underline underline-offset-8 decoration-2 decoration-[#10b981]"
+                    >
+                        {showAll ? "Show Less Process" : "View Marketplace Process"}
+                        <div className={`w-8 h-8 rounded-full bg-[#10b981] flex items-center justify-center text-white transition-transform duration-500 ${showAll ? 'rotate-180' : ''}`}>
+                            {showAll ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
+                        </div>
+                    </button>
                 </div>
             </div>
         </section>
