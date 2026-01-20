@@ -17,12 +17,21 @@ import {
     TrendingUp
 } from 'lucide-react';
 
+// Import images
+import artsImg from '../../../components/images/marketplacesimg/arts.jpg';
+import commoditiesImg from '../../../components/images/marketplacesimg/commodities.jpeg';
+import realEstateImg from '../../../components/images/marketplacesimg/realestatee.png';
+import sportsImg from '../../../components/images/marketplacesimg/sports.jpg';
+import carbonCreditsImg from '../../../components/images/marketplacesimg/carbon credits.jpeg';
+import luxuryBuildingImg from '../../../components/images/marketplacesimg/luxurybuilding.jpeg';
+import downloadImg from '../../../components/images/marketplacesimg/download (15).jpeg';
+
 const categories = [
     {
         id: 'art',
         name: 'Art',
         icon: <Palette className="w-4 h-4" />,
-        image: "/src/components/images/marketplacesimg/arts.jpg",
+        image: artsImg,
         title: "Tokenized Fine Art",
         description: "Own fractions of masterpiece artworks from renowned artists. Democratizing access to the exclusive world of fine art investments.",
         benefits: ["Fractional Ownership", "Blue-Chip Art Access", "Secure Provenance"],
@@ -47,7 +56,7 @@ const categories = [
         id: 'commodities',
         name: 'Commodities',
         icon: <Package className="w-4 h-4" />,
-        image: "/src/components/images/marketplacesimg/commodities.jpeg",
+        image: commoditiesImg,
         title: "Tokenized Commodities",
         description: "Direct exposure to global commodities markets through tokenized assets. From precious metals to energy resources, diversify your portfolio.",
         benefits: ["Inflation Hedge", "Global Markets", "Direct Exposure"],
@@ -90,7 +99,7 @@ const categories = [
         id: 'real-estate',
         name: 'Real Estate',
         icon: <Building2 className="w-4 h-4" />,
-        image: "/src/components/images/marketplacesimg/realestatee.png",
+        image: realEstateImg,
         title: "Tokenized Premium Real Estate",
         description: "Access institutional-grade property investments with fractional ownership. Earn rental yields and capital appreciation without the traditional barriers to entry.",
         benefits: ["Fractional Ownership", "Monthly Rental Yields", "High Liquid Market"],
@@ -119,7 +128,7 @@ const categories = [
                 roi: '6.8%',
                 tokensAvailable: '1200/1500',
                 price: '$350,000',
-                image: '/src/components/images/marketplacesimg/luxurybuilding.jpeg'
+                image: luxuryBuildingImg
             },
             {
                 name: 'Premium Office Building',
@@ -127,7 +136,7 @@ const categories = [
                 roi: '8.5%',
                 tokensAvailable: '750/1000',
                 price: '$500,000',
-                image: '/src/components/images/marketplacesimg/realestatee.png'
+                image: realEstateImg
             }
         ]
     },
@@ -135,7 +144,7 @@ const categories = [
         id: 'sports',
         name: 'Sports',
         icon: <Trophy className="w-4 h-4" />,
-        image: "/src/components/images/marketplacesimg/sports.jpg",
+        image: sportsImg,
         title: "Sports Asset Tokenization",
         description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and ownership.",
         benefits: ["Fan Ownership", "Revenue Sharing", "Global Access"],
@@ -160,7 +169,7 @@ const categories = [
         id: 'carbon-credits',
         name: 'Carbon Credits',
         icon: <Leaf className="w-4 h-4" />,
-        image: "/src/components/images/marketplacesimg/carbon credits.jpeg",
+        image: carbonCreditsImg,
         title: "Carbon Credit",
         description: "Transparent digital carbon assets backed by real-world climate action.Designed for accountability, traceability, and global environmental progress.",
         benefits: ["ESG Compliant", "Verified Offsets", "Sustainable Returns"],

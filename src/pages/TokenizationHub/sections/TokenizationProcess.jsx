@@ -71,11 +71,11 @@ export default function TokenizationProcess() {
           {whyTokenizeFeatures.map((feature, index) => (
             <div key={index} className="flex flex-col items-start">
               {/* Icon Container */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 bg-transparent mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center">
+              <div className="w-16 h-16 sm:w-20 sm:h-20 bg-transparent mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center">
                 <img
                   src={feature.icon}
                   alt={feature.title}
-                  className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                  className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
                 />
               </div>
 
