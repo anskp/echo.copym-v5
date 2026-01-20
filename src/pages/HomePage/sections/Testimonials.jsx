@@ -1,196 +1,126 @@
 import React from 'react';
 import { motion } from "framer-motion";
+import { Landmark } from "lucide-react";
 
-const testimonials = [
+const insights = [
   {
-    quote: "Revolutionary approach to real-world asset tokenization. The compliance automation saved us months of work.",
-    name: "David Kim",
-    title: "Head of Digital Assets",
-    company: "Golman Sachs",
-    image: "/assets/Images/team/Face3.png",
+    quote: "Tokenization is a key enabler for the future of digital capital markets, improving efficiency, transparency, and access.",
+    name: "Sergio Ermotti",
+    title: "CEO of UBS",
+    company: "UBS",
   },
   {
-    quote: "AI-driven portfolio optimization increased our returns by 31% while reducing risk exposure significantly.",
-    name: "James Mitchell",
-    title: "Chief Fund Manager",
-    company: "Black Rock",
-    image: "/assets/Images/team/Face2.png",
+    quote: "Tokenization has the potential to redefine how assets are issued, traded, and managed globally.",
+    name: "Noel Quinn",
+    title: "CEO of HSBC",
+    company: "HSBC",
   },
   {
-    quote: "Cora AI has transformed our daily market analysis. The intelligent insights and predictive alerts have increased our trading accuracy by 23% while saving us hours of research time.",
-    name: "Sarah Jhonson",
-    title: "Chief Investment Officer",
-    company: "Global Asset Management",
-    image: "/assets/Images/team/Face1.png",
+    quote: "Digital assets and tokenization are becoming integral to the evolution of financial market infrastructure.",
+    name: "Robin Vince",
+    title: "CEO of BNY Mellon",
+    company: "BNY Mellon",
   },
   {
-    quote: "Cora AI's smart price alerts and portfolio insights are game-changing. The AI-powered recommendations help us make data-driven decisions across multiple blockchain networks seamlessly.",
-    name: "Michael Chen",
-    title: "Blockchain Director",
-    company: "TechVentures Capital",
-    image: "/assets/Images/team/Face2.png",
+    quote: "Tokenization and blockchain technology are reshaping how value is represented and exchanged in the digital economy.",
+    name: "Alfred Kelly",
+    title: "Former CEO of Visa",
+    company: "Visa",
   },
   {
-    quote: "Cora AI's real-time market intelligence and crypto analytics give us a significant competitive advantage. The daily market recaps and trend predictions are incredibly accurate.",
-    name: "Dr. Emily Rodriguez",
-    title: "Head of DeFi Strategy",
-    company: "CryptoBridge Fund",
-    image: "/assets/Images/team/Face3.png",
+    quote: "The future of commerce will be powered by tokenized assets, real-time settlement, and programmable money.",
+    name: "Michael Miebach",
+    title: "CEO of Mastercard",
+    company: "Mastercard",
+  },
+  {
+    quote: "Tokenization will play a central role in how financial products are structured and distributed in the future.",
+    name: "Abigail Johnson",
+    title: "CEO of Fidelity Investments",
+    company: "Fidelity",
+  },
+  {
+    quote: "Blockchain-based tokenization represents a structural shift in the financial system rather than a passing trend.",
+    name: "James Gorman",
+    title: "Former CEO of Morgan Stanley",
+    company: "Morgan Stanley",
+  },
+  {
+    quote: "Tokenization will enable new efficiencies across custody, settlement, and asset servicing.",
+    name: "Christian Sewing",
+    title: "CEO of Deutsche Bank",
+    company: "Deutsche Bank",
+  },
+  {
+    quote: "Blockchain and tokenization are transforming how capital markets operate at a fundamental level.",
+    name: "Ana Botín",
+    title: "Executive Chair of Santander",
+    company: "Santander",
+  },
+  {
+    quote: "Tokenization will unlock previously illiquid assets and bring new participants into the financial ecosystem.",
+    name: "Bill Winters",
+    title: "CEO of Standard Chartered",
+    company: "Standard Chartered",
+  },
+  {
+    quote: "Asset tokenization could reach a market size of trillions of dollars by fundamentally reshaping ownership and liquidity.",
+    name: "Strategic Analysis",
+    title: "Boston Consulting Group Report",
+    company: "BCG",
+  },
+  {
+    quote: "Tokenization has the potential to redefine financial services by enabling faster settlement, fractional ownership, and assets.",
+    name: "Expert Insights",
+    title: "McKinsey & Company Research",
+    company: "McKinsey",
+  },
+  {
+    quote: "Distributed ledger technology and tokenized assets may significantly alter the future landscape of financial markets.",
+    name: "Official View",
+    title: "European Central Bank Oversight",
+    company: "ECB",
   },
 ];
 
-/** Helper component rendering a single testimonial card */
-function TestimonialCard({ testimonial }) {
+function InsightCard({ insight }) {
   return (
     <motion.div
-      className="relative flex-shrink-0 overflow-hidden w-[240px] h-[260px] sm:w-[260px] sm:h-[280px] md:w-[280px] md:h-[300px]"
-      whileHover={{ scale: 1.02, y: -2 }}
-      transition={{ duration: 0.2 }}
+      className="flex-shrink-0 flex flex-col gap-4 p-4 w-[350px] sm:w-[450px] md:w-[550px]"
     >
-      {/* Background Rectangle */}
-      <div
-        className="absolute inset-0 bg-white rounded-[28px]"
-        style={{
-          border: '1px solid #ECECEC'
-        }}
-      ></div>
+      {/* Brand Header - Pure Typography */}
+      <h3 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+        {insight.company}
+      </h3>
 
-      {/* Radial Gradient Ellipse - Positioned at right bottom corner within card */}
-      <div
-        className="absolute overflow-hidden"
-        style={{
-          bottom: '0',
-          right: '0',
-          width: '160px',
-          height: '160px',
-          background: 'radial-gradient(circle at 100% 100%, #E5FFF5 0%, #FFFFFF 100%)',
-          borderRadius: '0 0 28px 0'
-        }}
-      ></div>
+      {/* Quote */}
+      <p className="text-xl md:text-2xl text-[#111] leading-tight font-medium italic" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+        "{insight.quote}"
+      </p>
 
-      {/* Header Section - Profile Picture and Name/Title/Company */}
-      <div
-        className="absolute flex items-start gap-3"
-        style={{
-          top: '20px',
-          left: '20px',
-          right: '20px',
-          zIndex: 5
-        }}
-      >
-        {/* Profile Image */}
-        <div
-          className="flex-shrink-0 rounded-full overflow-hidden w-12 h-12 sm:w-14 sm:h-14"
-          style={{
-            width: '56px',
-            height: '56px'
-          }}
-        >
-          <img
-            src={testimonial.image}
-            alt={testimonial.name}
-            className="w-full h-full object-cover rounded-full"
-            style={{
-              objectFit: 'cover',
-              objectPosition: 'center',
-              borderRadius: '50%'
-            }}
-          />
-        </div>
-
-        {/* Name, Title, Company - Left Aligned */}
-        <div className="flex-1 flex flex-col items-start">
-          {/* Name */}
-          <h4
-            style={{
-              fontFamily: 'Palanquin, sans-serif',
-              fontWeight: 700,
-              fontSize: 'clamp(16px, 2vw, 18px)',
-              lineHeight: '24px',
-              color: '#000',
-              margin: 0,
-              padding: 0,
-              marginBottom: '2px'
-            }}
-          >
-            {testimonial.name}
-          </h4>
-
-          {/* Title */}
-          <p
-            style={{
-              fontFamily: 'Palanquin, sans-serif',
-              fontSize: 'clamp(12px, 1.5vw, 14px)',
-              lineHeight: '20px',
-              color: '#000',
-              margin: 0,
-              padding: 0,
-              marginBottom: '2px'
-            }}
-          >
-            {testimonial.title}
-          </p>
-
-          {/* Company */}
-          <p
-            style={{
-              fontFamily: 'Palanquin, sans-serif',
-              fontSize: 'clamp(12px, 1.5vw, 14px)',
-              lineHeight: '20px',
-              color: '#15A36E',
-              margin: 0,
-              padding: 0
-            }}
-          >
-            {testimonial.company}
-          </p>
-        </div>
-      </div>
-
-      {/* Quote Text - Below Header */}
-      <div
-        className="absolute"
-        style={{
-          top: '115px',
-          left: '20px',
-          right: '20px',
-          bottom: '20px',
-          paddingRight: '8px'
-        }}
-      >
-        <p
-          className="text-sm text-black"
-          style={{
-            fontFamily: 'Palanquin, sans-serif',
-            color: '#000',
-            margin: 0,
-            padding: 0
-          }}
-        >
-          {testimonial.quote}
+      {/* Author Info */}
+      <div className="pt-2">
+        <p className="text-base font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          {insight.name}
+        </p>
+        <p className="text-sm text-[#444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          {insight.title}
         </p>
       </div>
     </motion.div>
   );
 }
 
-/** Infinite scrolling row component for train-like movement */
-function InfiniteScrollingRow({ items, duration = 50 }) {
-  // Duplicate items 6× to ensure seamless infinite scroll like a train
-  const duplicatedItems = [
-    ...items,
-    ...items,
-    ...items,
-    ...items,
-    ...items,
-    ...items,
-  ];
+/** Infinite scrolling row component */
+function InfiniteScrollingRow({ items, duration = 60 }) {
+  // Triple the items for seamless scroll
+  const duplicatedItems = [...items, ...items, ...items];
 
   return (
-    <div className="overflow-hidden py-4">
+    <div className="overflow-hidden py-8">
       <motion.div
-        className="flex gap-6 sm:gap-8 md:gap-10"
-        animate={{ x: ["0%", "-100%"] }}
+        className="flex gap-16 md:gap-24 px-6"
+        animate={{ x: ["0%", "-33.33%"] }}
         transition={{
           repeat: Infinity,
           repeatType: "loop",
@@ -198,8 +128,8 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
           duration: duration,
         }}
       >
-        {duplicatedItems.map((testimonial, index) => (
-          <TestimonialCard key={index} testimonial={testimonial} />
+        {duplicatedItems.map((insight, index) => (
+          <InsightCard key={index} insight={insight} />
         ))}
       </motion.div>
     </div>
@@ -208,24 +138,21 @@ function InfiniteScrollingRow({ items, duration = 50 }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
-      {/* heading */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-        <div className="text-left mb-6 sm:mb-8 md:mb-10">
-          <div className="relative w-fit mb-3 sm:mb-4">
-            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e]">TRUSTED BY INDUSTRY </span>
-              <span className="text-black">LEADERS</span>
-            </h2>
-          </div>
-          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            See what top financial professionals are saying about our AI-powered RWA tokenization platform
-          </p>
-        </div>
+    <section className="relative py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-12">
+        {/* Main Title */}
+        <h2 className="text-4xl md:text-5xl font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          INSIGHTS
+        </h2>
       </div>
 
-      {/* Infinite Scrolling Testimonials */}
-      <InfiniteScrollingRow items={testimonials} duration={50} />
+      <div className="relative">
+        {/* Gradient edge fades */}
+        <div className="absolute left-0 top-0 bottom-0 w-40 bg-gradient-to-r from-white to-transparent z-10 hidden md:block"></div>
+        <div className="absolute right-0 top-0 bottom-0 w-40 bg-gradient-to-l from-white to-transparent z-10 hidden md:block"></div>
+
+        <InfiniteScrollingRow items={insights} duration={30} />
+      </div>
     </section>
   );
 }
