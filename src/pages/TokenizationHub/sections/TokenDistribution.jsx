@@ -49,7 +49,7 @@ export default function TokenDistribution() {
         </div>
 
         {/* Features Content */}
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-16 sm:mt-20 gap-12 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-10 sm:mt-12 md:mt-16 gap-12 lg:gap-20">
 
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2 relative">
@@ -71,7 +71,7 @@ export default function TokenDistribution() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col py-5 sm:py-6 relative"
+                className="flex flex-col pt-2 pb-6 relative"
               >
                 <div className="flex-1">
                   <h3
