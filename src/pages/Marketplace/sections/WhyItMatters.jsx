@@ -22,7 +22,7 @@ const categories = [
         id: 'art',
         name: 'Art',
         icon: <Palette className="w-4 h-4" />,
-        image: "/assets/Images/tokenization.png",
+        image: "/src/components/images/marketplacesimg/arts.jpg",
         title: "Tokenized Fine Art",
         description: "Own fractions of masterpiece artworks from renowned artists. Democratizing access to the exclusive world of fine art investments.",
         benefits: ["Fractional Ownership", "Blue-Chip Art Access", "Secure Provenance"],
@@ -37,6 +37,7 @@ const categories = [
             { label: 'Contract Address', value: '0xART...89F21', change: null }
         ],
         growth: '+18.5%',
+        topics: ['Paintings', 'Sculptures', 'Digital Art'],
         badges: [
             { label: 'Fine Art Collection', icon: <Palette className="w-4 h-4" />, top: '20%', left: '-8%' },
             { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-10%' },
@@ -46,7 +47,7 @@ const categories = [
         id: 'commodities',
         name: 'Commodities',
         icon: <Package className="w-4 h-4" />,
-        image: "/assets/Images/gold-reserve.png",
+        image: "/src/components/images/marketplacesimg/commodities.jpeg",
         title: "Tokenized Commodities",
         description: "Direct exposure to global commodities markets through tokenized assets. From precious metals to energy resources, diversify your portfolio.",
         benefits: ["Inflation Hedge", "Global Markets", "Direct Exposure"],
@@ -61,6 +62,7 @@ const categories = [
             { label: 'Contract Address', value: '0xCOM...45D12', change: null }
         ],
         growth: '+12.3%',
+        topics: ['Gold', 'Silver', 'Oil & Gas'],
         badges: [
             { label: 'Commodity Token', icon: <Package className="w-4 h-4" />, top: '15%', left: '-5%' },
             { label: 'Global Exchange', icon: <MapPin className="w-4 h-4" />, bottom: '35%', right: '-8%' },
@@ -88,7 +90,7 @@ const categories = [
         id: 'real-estate',
         name: 'Real Estate',
         icon: <Building2 className="w-4 h-4" />,
-        image: "/assets/Images/realestate.jpeg",
+        image: "/src/components/images/marketplacesimg/realestatee.png",
         title: "Tokenized Premium Real Estate",
         description: "Access institutional-grade property investments with fractional ownership. Earn rental yields and capital appreciation without the traditional barriers to entry.",
         benefits: ["Fractional Ownership", "Monthly Rental Yields", "High Liquid Market"],
@@ -103,6 +105,7 @@ const categories = [
             { label: 'Contract Address', value: '0x000...43124', change: null }
         ],
         growth: '+24.5%',
+        topics: ['Apartment', 'House', 'Villa'],
         badges: [
             { label: 'Commercial Real Estate', icon: <Building2 className="w-4 h-4" />, top: '15%', left: '-10%' },
             { label: 'New York, USA', icon: <MapPin className="w-4 h-4" />, top: '45%', right: '-15%' },
@@ -116,7 +119,7 @@ const categories = [
                 roi: '6.8%',
                 tokensAvailable: '1200/1500',
                 price: '$350,000',
-                image: '/assets/Images/apartment-complex.png'
+                image: '/src/components/images/marketplacesimg/luxurybuilding.jpeg'
             },
             {
                 name: 'Premium Office Building',
@@ -124,7 +127,7 @@ const categories = [
                 roi: '8.5%',
                 tokensAvailable: '750/1000',
                 price: '$500,000',
-                image: '/assets/Images/realestate.jpeg'
+                image: '/src/components/images/marketplacesimg/realestatee.png'
             }
         ]
     },
@@ -132,7 +135,7 @@ const categories = [
         id: 'sports',
         name: 'Sports',
         icon: <Trophy className="w-4 h-4" />,
-        image: "/assets/Images/image-2.png",
+        image: "/src/components/images/marketplacesimg/sports.jpg",
         title: "Sports Asset Tokenization",
         description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and ownership.",
         benefits: ["Fan Ownership", "Revenue Sharing", "Global Access"],
@@ -147,6 +150,7 @@ const categories = [
             { label: 'Contract Address', value: '0xSPT...78A34', change: null }
         ],
         growth: '+31.2%',
+        topics: ['Teams', 'Athletes', 'Stadiums'],
         badges: [
             { label: 'Sports Franchise', icon: <Trophy className="w-4 h-4" />, top: '25%', left: '-5%' },
             { label: 'Verified Asset', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-8%' },
@@ -156,9 +160,9 @@ const categories = [
         id: 'carbon-credits',
         name: 'Carbon Credits',
         icon: <Leaf className="w-4 h-4" />,
-        image: "/assets/Images/apartment-complex.png",
-        title: "Carbon Credit Tokenization",
-        description: "Participate in the green economy through tokenized carbon credits. Support sustainability while accessing a growing environmental asset class.",
+        image: "/src/components/images/marketplacesimg/carbon credits.jpeg",
+        title: "Carbon Credit",
+        description: "Transparent digital carbon assets backed by real-world climate action.Designed for accountability, traceability, and global environmental progress.",
         benefits: ["ESG Compliant", "Verified Offsets", "Sustainable Returns"],
         stats: [
             { label: 'Total Asset Value', value: '$2,340,000', change: '+4.5%' },
@@ -171,6 +175,7 @@ const categories = [
             { label: 'Contract Address', value: '0xCRB...12E56', change: null }
         ],
         growth: '+15.8%',
+        topics: ['Forest', 'Solar', 'Wind'],
         badges: [
             { label: 'Verified Carbon Credit', icon: <Leaf className="w-4 h-4" />, top: '20%', left: '-8%' },
             { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, bottom: '25%', right: '-10%' },
@@ -248,7 +253,10 @@ export default function WhyItMatters() {
                                     <img
                                         src={activeTab.image}
                                         alt={activeTab.name}
-                                        className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'} hover:scale-110`}
+                                        className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'}`}
+                                        style={{
+                                            objectPosition: ['carbon-credits', 'sports'].includes(activeTab.id) ? '20% center' : 'center center'
+                                        }}
                                     />
 
                                     {/* Overlay Heart Button */}
@@ -260,14 +268,28 @@ export default function WhyItMatters() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                                 </div>
 
-                                {/* Graph Badge - Right Bottom */}
+                                {/* Bottom Bar - Topics & Growth */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.5 }}
-                                    className="absolute bottom-4 right-4 px-2 py-2"
+                                    className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
                                 >
-                                    <div className="flex items-center gap-0.5">
+                                    {/* Topic Tags */}
+                                    <div className="flex items-center gap-2">
+                                        {activeTab.topics && activeTab.topics.map((topic, idx) => (
+                                            <span
+                                                key={idx}
+                                                className="px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-700 border border-white/60 shadow-sm"
+                                                style={{ fontFamily: 'Palanquin, sans-serif' }}
+                                            >
+                                                {topic}
+                                            </span>
+                                        ))}
+                                    </div>
+
+                                    {/* Growth Indicator */}
+                                    <div className="flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/60 shadow-sm">
                                         <TrendingUp className="w-3 h-3 text-[#10b981]" />
                                         <span className="text-sm font-bold text-[#10b981]">{activeTab.growth || '+24.5%'}</span>
                                     </div>
@@ -414,13 +436,13 @@ export default function WhyItMatters() {
                                                     <div className="flex items-center justify-between pt-3 border-t border-gray-100">
                                                         <div>
                                                             <p className="text-[10px] text-gray-400 uppercase">Price</p>
-                                                            <p className="font-bold text-gray-900">{asset.price}</p>
+                                                            <p className="text-sm font-bold text-gray-900">{asset.price}</p>
                                                         </div>
                                                         <div className="flex gap-2">
-                                                            <button className="px-3 py-1.5 bg-[#10b981] text-white text-xs font-bold rounded-lg hover:bg-[#059669] transition-colors">
+                                                            <button className="px-2 py-1 bg-[#10b981] text-white text-[10px] font-bold rounded-lg hover:bg-[#059669] transition-colors">
                                                                 Invest
                                                             </button>
-                                                            <button className="px-3 py-1.5 bg-gray-100 text-gray-600 text-xs font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                                                            <button className="px-2 py-1 bg-gray-100 text-gray-600 text-[10px] font-medium rounded-lg hover:bg-gray-200 transition-colors">
                                                                 Know More
                                                             </button>
                                                         </div>

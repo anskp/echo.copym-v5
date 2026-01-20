@@ -101,12 +101,7 @@ export default function FAQSection() {
                             <span className="text-[#15a36e] uppercase">FAQ'</span><span className="text-black">s</span>
                         </h2>
                     </div>
-                    <p
-                        className="text-sm sm:text-base md:text-lg lg:text-xl text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 mb-4 sm:mb-6"
-                        style={{ fontFamily: 'DM Sans, sans-serif' }}
-                    >
-                        These FAQ's questions might have the answer, but if not, our support team is just a message away!
-                    </p>
+
                 </div>
 
                 {/* FAQ List */}
