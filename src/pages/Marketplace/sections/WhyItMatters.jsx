@@ -235,12 +235,12 @@ const categories = [
                 image: carbonCreditsImg
             },
             {
-                name: "Offshore Wind Farm",
-                location: "North Sea",
-                roi: "6.8%",
+                name: "Solar Energy Farm",
+                location: "California, USA",
+                roi: "7.2%",
                 tokensAvailable: "120k/200k",
                 price: "$4.5M",
-                image: downloadImg
+                image: "/assets/Images/SOLAR-FARM.jpg"
             }
         ]
     }
