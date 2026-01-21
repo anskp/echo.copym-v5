@@ -117,7 +117,8 @@ export default function HowToTokenize() {
                   <img
                     src="/assets/Images/dashboard_screen.png"
                     alt="Dashboard Screenshot"
-                    className="w-full h-auto object-contain rounded-lg shadow-lg"
+                    className="w-full h-auto object-contain rounded-lg"
+                    style={{ filter: 'drop-shadow(0 20px 40px rgba(21, 163, 110, 0.4))' }}
                   />
                 </div>
               </motion.div>

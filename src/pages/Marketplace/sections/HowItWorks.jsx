@@ -73,7 +73,7 @@ export default function HowItWorks() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
                 {/* Staggered Grid Container */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-24 lg:gap-x-24">
+                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 lg:gap-x-16">
                     <AnimatePresence mode="popLayout">
                         {visibleSteps.map((step, index) => (
                             <motion.div
@@ -86,7 +86,7 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: showAll && index >= 4 ? (index - 4) * 0.1 : 0
                                 }}
-                                className={`relative flex flex-col group ${index % 2 !== 0 ? 'md:mt-32' : ''}`}
+                                className={`relative flex flex-col group ${index % 2 === 0 ? 'md:items-start' : 'md:items-end md:mt-48'}`}
                             >
                                 {/* Watermark Background Text */}
                                 <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-screen pointer-events-none select-none h-40 flex items-center justify-center z-0">
@@ -95,23 +95,32 @@ export default function HowItWorks() {
                                     </span>
                                 </div>
 
-                                {/* Card Wrapper */}
-                                <div className="relative z-10 w-full sm:max-w-[400px] mx-auto">
+                                {/* Card Wrapper - Custom size pattern: Big(0), Small(1), Small(2), Big(3), Big(4), Small(5) */}
+                                <div className={`relative z-10 w-full mx-auto ${[0, 3, 4].includes(index) ? 'sm:max-w-[280px]' : 'sm:max-w-[220px]'}`}>
                                     {/* Card Body */}
 
-                                    {/* Inner Image/Icon Container */}
-                                    <div className="relative aspect-[4/5] bg-[#e9ecef]/60 rounded-[2.5rem] overflow-hidden mb-6 flex items-center justify-center p-12 transition-transform duration-500">
-                                        <div className="w-full h-full flex items-center justify-center bg-gray-50/50 rounded-[1.5rem] relative">
+                                    {/* Outer Container with gap - light gray/mint background */}
+                                    <div className="relative aspect-[4/5] bg-[#e8f0ed]/70 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center">
+                                        {/* Inner teal-tinted box - narrower width */}
+                                        <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-[#d0e8e0]/60 to-[#c5e0d5]/40 rounded-[1rem] relative overflow-visible">
+                                            {/* Plus Icon Overlay - positioned at top-right edge of inner box */}
+                                            <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 z-20">
+                                                {/* Outer ring */}
+                                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white flex items-center justify-center p-1">
+                                                    {/* Inner ring with white surface */}
+                                                    <div className="w-full h-full rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 flex items-center justify-center shadow-lg shadow-gray-200/50 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                                                        style={{ boxShadow: '0 4px 20px rgba(21, 163, 110, 0.15), 0 2px 8px rgba(0,0,0,0.08)' }}>
+                                                        <Plus className="w-7 h-7 sm:w-8 sm:h-8 text-[#15A36E]" strokeWidth={2} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            {/* Darker green sphere behind icon */}
+                                            <div className="absolute w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-[#a8d4c0]/70"></div>
                                             <img
                                                 src={step.icon}
                                                 alt={step.title}
-                                                className="w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-2xl transition-all duration-500"
+                                                className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3, 4].includes(index) ? 'w-28 h-28 sm:w-40 sm:h-40' : 'w-20 h-20 sm:w-28 sm:h-28'}`}
                                             />
-
-                                            {/* Plus Icon Overlay */}
-                                            <div className="absolute top-4 right-4 sm:top-6 sm:right-6 w-10 h-10 sm:w-12 sm:h-12 bg-[#10b981] text-white border-2 border-white rounded-full flex items-center justify-center shadow-lg transition-all duration-300">
-                                                <Plus className="w-5 h-5 sm:w-6 sm:h-6" />
-                                            </div>
                                         </div>
                                     </div>
 
