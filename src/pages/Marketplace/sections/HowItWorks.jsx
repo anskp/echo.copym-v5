@@ -62,13 +62,8 @@ export default function HowItWorks() {
     const visibleSteps = showAll ? steps : steps.slice(0, 4);
 
     return (
-        <section className="w-full bg-white py-20 overflow-hidden relative">
-            {/* Main Background Header - Watermark Style */}
-            <div className="absolute top-0 left-0 w-full pointer-events-none select-none overflow-hidden h-[600px] flex flex-col items-center justify-start z-0 opacity-[0.03] pt-10">
-                <h2 className="text-[100px] md:text-[180px] lg:text-[240px] font-black uppercase tracking-tighter leading-[0.8] text-center max-w-full px-4">
-                    HOW THE COPYM<br />MARKETPLACE WORKS
-                </h2>
-            </div>
+        <section className="w-full bg-white py-12 md:py-20 overflow-hidden relative">
+            {/* Main Background Header Removed */}
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
@@ -86,17 +81,22 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: showAll && index >= 4 ? (index - 4) * 0.1 : 0
                                 }}
-                                className={`relative flex flex-col group ${index % 2 === 0 ? 'md:items-start' : 'md:items-end md:mt-48'}`}
+                                className={`relative flex flex-col group items-center ${index % 2 === 0 ? 'md:items-start' : 'md:items-end md:mt-48'}`}
                             >
                                 {/* Watermark Background Text */}
-                                <div className="absolute -top-20 left-1/2 -translate-x-1/2 w-screen pointer-events-none select-none h-40 flex items-center justify-center z-0">
-                                    <span className="text-[70px] sm:text-[100px] lg:text-[120px] font-black text-black uppercase tracking-tighter whitespace-nowrap opacity-[0.05]">
+                                <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-screen pointer-events-none select-none h-40 flex items-center justify-center z-0">
+                                    <span
+                                        className="text-[50px] sm:text-[100px] lg:text-[120px] font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center"
+                                        style={{
+                                            backgroundImage: 'conic-gradient(from 0deg at 50% 50%, rgba(26, 87, 64, 0.77) 1%, #000000 14%, rgba(43, 108, 84, 0.81) 36%, rgba(69, 140, 113, 0.87) 56%, #50997E 64%, rgba(0, 0, 0, 0.85) 77%, #7DD1B2 100%)'
+                                        }}
+                                    >
                                         {step.watermark}
                                     </span>
                                 </div>
 
                                 {/* Card Wrapper - Custom size pattern: Big(0), Small(1), Small(2), Big(3), Big(4), Small(5) */}
-                                <div className={`relative z-10 w-full mx-auto ${[0, 3, 4].includes(index) ? 'sm:max-w-[280px]' : 'sm:max-w-[220px]'}`}>
+                                <div className={`relative z-10 w-full mx-auto max-w-[260px] ${[0, 3, 4].includes(index) ? 'sm:max-w-[280px]' : 'sm:max-w-[220px]'}`}>
                                     {/* Card Body */}
 
                                     {/* Outer Container with gap - light gray/mint background */}
@@ -153,6 +153,6 @@ export default function HowItWorks() {
                     </button>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

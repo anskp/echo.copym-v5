@@ -58,7 +58,7 @@ const categories = [
                 roi: "9.2%",
                 tokensAvailable: "1,500/2,000",
                 price: "$2,400,000",
-                image: artsImg
+                image: "/assets/Images/art2.jpg"
             },
             {
                 name: "Modern Abstract Series",
@@ -66,7 +66,7 @@ const categories = [
                 roi: "12.5%",
                 tokensAvailable: "500/1,500",
                 price: "$1,850,000",
-                image: artsImg
+                image: "/assets/Images/art3.jpg"
             }
         ]
     },
@@ -184,20 +184,20 @@ const categories = [
         ],
         assets: [
             {
-                name: "Elite Football Club",
+                name: "Elite Sports Team",
                 location: "Madrid, Spain",
                 roi: "8.4%",
                 tokensAvailable: "250,000/500,000",
                 price: "$150M",
-                image: sportsImg
+                image: "/assets/Images/teams.jpg"
             },
             {
-                name: "Sports Performance Center",
+                name: "Major Sports Stadium",
                 location: "Munich, Germany",
                 roi: "10.2%",
                 tokensAvailable: "75,000/100,000",
                 price: "$45M",
-                image: sportsImg
+                image: "/assets/Images/stadium.jpg"
             }
         ]
     },
@@ -423,7 +423,7 @@ export default function WhyItMatters() {
                                                     initial={{ opacity: 0, y: 10 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.1 * i, duration: 0.3 }}
-                                                    className="bg-white/60 backdrop-blur-md rounded-lg p-2 border border-white/40 shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300"
+                                                    className="bg-white/50 backdrop-blur-md rounded-lg p-2 border border-white/40 shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300"
                                                 >
                                                     <p className="text-[8px] text-gray-400 font-medium uppercase tracking-wider mb-0.5">{stat.label}</p>
                                                     <div className="flex items-center gap-1">
