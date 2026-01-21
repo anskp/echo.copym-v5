@@ -49,7 +49,7 @@ export default function TokenDistribution() {
         </div>
 
         {/* Features Content */}
-        <div className="flex flex-col-reverse lg:flex-row items-center justify-between mt-10 sm:mt-12 md:mt-16 gap-12 lg:gap-20">
+        <div className="flex flex-col-reverse lg:flex-row items-center lg:items-start justify-between mt-6 sm:mt-8 md:mt-10 gap-12 lg:gap-20">
 
           {/* Left Column - Image */}
           <div className="w-full lg:w-1/2 relative">

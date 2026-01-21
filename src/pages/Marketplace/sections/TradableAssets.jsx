@@ -5,19 +5,23 @@ export default function TradableAssets() {
     const assets = [
         {
             image: "/assets/Images/icons/tradee1.png",
-            title: "Real-World Assets"
+            title: "REAL-WORLD ASSETS",
+            description: "Access tangible value through tokenized exposure to property and infrastructure."
         },
         {
             image: "/assets/Images/icons/tradee2.png",
-            title: "Revenue & Profit-Sharing Tokens"
+            title: "REVENUE & PROFIT-SHARING TOKENS",
+            description: "Earn passive income streams backed by verified business performance."
         },
         {
             image: "/assets/Images/icons/tradee3.png",
-            title: "Brand, IP and Digital Assets"
+            title: "BRAND, IP AND DIGITAL ASSETS",
+            description: "Own a stake in brands,intellectual property and digital media ventures."
         },
         {
             image: "/assets/Images/icons/tradee4.png",
-            title: "Custom Tokenized Opportunities designed with issuers and partners"
+            title: "CUSTOM TOKENIZED OPPORTUNITIES",
+            description: "Exclusive tokenized structures developed with strategic partners."
         }
     ];
 
@@ -61,10 +65,13 @@ export default function TradableAssets() {
                             </div>
 
                             {/* Text Container */}
-                            <div className="flex-1 px-4 sm:px-6 md:px-8 flex items-center">
-                                <h3 className="text-xs sm:text-sm md:text-lg lg:text-xl font-normal tracking-wide" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <div className="flex-1 px-4 sm:px-6 md:px-8 flex flex-col justify-center">
+                                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-wider mb-1 text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     {asset.title}
                                 </h3>
+                                <p className="text-xs sm:text-sm text-gray-400 font-medium tracking-wide leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    {asset.description}
+                                </p>
                             </div>
                         </motion.div>
                     ))}

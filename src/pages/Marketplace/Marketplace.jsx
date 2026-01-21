@@ -4,6 +4,7 @@ import HowItWorks from "./sections/HowItWorks";
 import WhyItMatters from "./sections/WhyItMatters";
 import TradableAssets from "./sections/TradableAssets";
 import FAQsection from "./sections/FAQsection";
+import Disclaimer from "./sections/Disclaimer";
 
 export default function Marketplace() {
   return (
@@ -13,6 +14,7 @@ export default function Marketplace() {
       <WhyItMatters />
       <HowItWorks />
       <FAQsection />
+      <Disclaimer />
     </div>
   );
 }

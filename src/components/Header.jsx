@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
-import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope } from 'react-icons/fa';
+import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
 import tiicon4 from '../components/icons/Tokenization/tiicon4.png';
 import aboutush from '../components/images/aboutush.png';
@@ -52,13 +52,13 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={tokencoinh} alt="Tokenization" className="w-10 h-10 object-contain" />,
+          icon: <img src={tokencoinh} alt="Tokenization" className="w-20 h-20 object-contain" />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
         },
         {
-          icon: <img src={tiicon4} alt="Marketplace" className="w-10 h-10 object-contain" />,
+          icon: <img src={tiicon4} alt="Marketplace" className="w-20 h-20 object-contain" />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
@@ -70,13 +70,13 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={zerogash} alt="Zero Gas" className="w-10 h-10 object-contain" />,
+          icon: <img src={zerogash} alt="Zero Gas" className="w-20 h-20 object-contain" />,
           heading: "Zero Gas",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/zerogas"
         },
         {
-          icon: <img src={parivaryaih} alt="Privacy AI" className="w-10 h-10 object-contain" />,
+          icon: <img src={parivaryaih} alt="Privacy AI" className="w-20 h-20 object-contain" />,
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/privacy-ai"
@@ -88,7 +88,7 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={aboutush} alt="About Us" className="w-10 h-10 object-contain" />,
+          icon: <img src={aboutush} alt="About Us" className="w-20 h-20 object-contain" />,
           heading: "About Us",
           description: "Learn about our mission, vision, and the team driving CopyM forward.",
           path: "/about"
@@ -114,120 +114,140 @@ export default function Header() {
 
   return (
     <>
-      {/* Green Header Bar (DESKTOP: style remains AS BEFORE, but responsive tweaks for mobile) */}
+      {/* Search/Floating Pill Header */}
       <motion.nav
-        className={`fixed top-0 left-0 right-0 w-full z-50 transition-all duration-300 h-16 ${isScrolled
-          ? 'bg-[#15a36e]/95 backdrop-blur-md shadow-lg'
-          : 'bg-[#15a36e] shadow-md'
-          }`}
+        className="fixed top-4 left-0 right-0 z-[100] flex justify-center px-4 pointer-events-none"
         initial={{ y: -100, opacity: 0 }}
-        animate={{ y: isVisible ? 0 : "-100%", opacity: 1 }}
+        animate={{ y: isVisible ? 0 : -100, opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 h-full">
-          {/* --- FLEX HEADER CONTAINER --- */}
-          <div className="flex items-center justify-between h-full">
-            {/* Logo */}
-            <Link to="/" className="flex items-center flex-shrink-0 h-full">
-              <img
-                src="/assets/copym/png/Copym-02-1.png"
-                alt="CopyM Logo"
-                className="transition-all duration-300 w-auto h-10 sm:h-11 md:h-12 object-contain"
-                style={{ maxWidth: 'min(280px, 60vw)' }}
-              />
+        {/* Actual Pill Container - Inner pointer events auto to allow clicking */}
+        <div className={`
+          pointer-events-auto
+          relative w-full max-w-5xl rounded-full 
+          px-4 py-1 sm:px-6 sm:py-1.5 
+          border border-white/10
+          flex items-center justify-between
+          transition-all duration-300 backdrop-blur-md
+          ${isScrolled
+            ? 'bg-[#0e0e0e]/90 shadow-lg shadow-black/20'
+            : 'bg-[#0e0e0e]/80 shadow-md'
+          }
+        `}>
+
+          {/* Logo */}
+          <Link to="/" className="flex items-center flex-shrink-0">
+            <img
+              src="/assets/copym/png/Copym-01-1.png"
+              alt="CopyM Logo"
+              className="w-auto h-10 sm:h-12 object-contain"
+              style={{ maxWidth: 160 }}
+            />
+          </Link>
+
+          {/* Desktop Navigation */}
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+            {navItems.map((item) => (
+              <div
+                key={item.label}
+                className="relative group"
+                onMouseEnter={() => item.dropdown && setHoveredItem(item.label)}
+                onMouseLeave={() => setHoveredItem(null)}
+              >
+                <Link
+                  to={item.path}
+                  className="text-gray-300 font-medium text-sm lg:text-base hover:text-white transition-colors duration-200 whitespace-nowrap py-2 flex items-center gap-1.5"
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                  onClick={(e) => item.path === "#" && e.preventDefault()}
+                >
+                  {item.label}
+                  {item.dropdown && (
+                    <FaChevronDown
+                      className={`w-2.5 h-2.5 transition-transform duration-200 ${hoveredItem === item.label ? 'rotate-180' : ''} opacity-70`}
+                    />
+                  )}
+                </Link>
+
+                {/* DESKTOP Dropdown */}
+                <AnimatePresence>
+                  {hoveredItem === item.label && item.dropdown && item.dropdown.length > 0 && (
+                    <>
+                      {/* Invisible Bridge to prevent closing when moving mouse */}
+                      <div className="absolute top-full left-0 w-full h-8 bg-transparent"></div>
+
+                      {/* Desktop Dropdown Card */}
+                      <motion.div
+                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
+                        style={{
+                          width: 'max-content',
+                          maxWidth: '90vw',
+                          left: '50%',
+                          translateX: '-50%'
+                        }}
+                        initial={{ opacity: 0, y: 10, translateX: '-50%' }}
+                        animate={{ opacity: 1, y: 0, translateX: '-50%' }}
+                        exit={{ opacity: 0, y: 10, translateX: '-50%' }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        {/* Green Glow/Shades - Intensified */}
+                        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#15a36e]/30 blur-[80px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-[#15a36e]/20 blur-[80px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
+
+                        <div className="relative w-[320px] sm:w-[400px] lg:w-[480px] bg-transparent p-6 rounded-2xl z-10">
+                          {/* Title */}
+                          <div className="mb-4 pb-2 border-b border-white/10">
+                            <h3 className="text-lg font-bold text-[#15a36e] uppercase tracking-wider" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                              {item.label}
+                            </h3>
+                          </div>
+
+                          {/* Items */}
+                          <div className="space-y-4">
+                            {item.dropdown.map((dropdownItem, index) => (
+                              <Link
+                                key={index}
+                                to={dropdownItem.path || item.path}
+                                className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                onClick={() => setHoveredItem(null)}
+                              >
+                                <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                                  {dropdownItem.icon}
+                                </div>
+                                <div>
+                                  <h4 className="font-bold text-white text-sm mb-0.5 group-hover/item:text-[#15a36e] transition-colors">
+                                    {dropdownItem.heading}
+                                  </h4>
+                                  <p className="text-xs text-gray-400 leading-snug">
+                                    {dropdownItem.description}
+                                  </p>
+                                </div>
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      </motion.div>
+                    </>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
+          </div>
+
+          {/* Right Side: CTA + Mobile Menu */}
+          <div className="flex items-center gap-4">
+            {/* Desktop CTA */}
+            <Link
+              to="/download"
+              className="hidden lg:flex items-center gap-2 bg-[#15a36e] hover:bg-[#128a5c] text-white px-5 py-2 rounded-full font-bold text-sm transition-all shadow-lg hover:shadow-emerald-500/20 active:scale-95"
+              style={{ fontFamily: 'Palanquin, sans-serif' }}
+            >
+              <FaDownload className="w-3 h-3" />
+              <span>DOWNLOAD</span>
             </Link>
 
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8 xl:gap-12 h-full">
-              {navItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="relative h-full flex items-center"
-                  onMouseEnter={() => item.dropdown && setHoveredItem(item.label)}
-                  onMouseLeave={() => setHoveredItem(null)}
-                >
-                  <Link
-                    to={item.path}
-                    className="text-white font-medium text-base lg:text-lg hover:text-white/80 transition-colors duration-200 whitespace-nowrap px-2 flex items-center h-full"
-                    style={{ fontFamily: 'Palanquin, sans-serif' }}
-                    onClick={(e) => item.path === "#" && e.preventDefault()}
-                  >
-                    {item.label}
-                  </Link>
-                  {/* DESKTOP Dropdown */}
-                  <AnimatePresence>
-                    {hoveredItem === item.label && item.dropdown && item.dropdown.length > 0 && (
-                      <>
-                        {/* Dark Overlay with Green Light at Top/Bottom */}
-                        <motion.div
-                          className="fixed top-0 left-0 right-0 bottom-0 bg-black/60 z-40"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          exit={{ opacity: 0 }}
-                          transition={{ duration: 0.3 }}
-                          onClick={() => setHoveredItem(null)}
-                        >
-                          <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#15a36e]/20 to-transparent"></div>
-                          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#15a36e]/20 to-transparent"></div>
-                        </motion.div>
-                        {/* Desktop Dropdown Card */}
-                        <motion.div
-                          className="fixed mt-1 lg:mt-0 top-16 right-3 sm:right-8 lg:right-10 w-[96vw] sm:w-[420px] md:w-[480px] lg:w-[400px] xl:w-[500px] max-w-full bg-white rounded-2xl overflow-hidden z-50"
-                          style={{ boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)' }}
-                          initial={{ opacity: 0, x: 100 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: 100 }}
-                          transition={{ duration: 0.3, ease: "easeOut" }}
-                        >
-                          <div className="p-6 sm:p-8">
-                            {/* Title */}
-                            <div className="mb-6">
-                              <h3 className="text-xl sm:text-2xl font-bold mb-2 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                <span className="text-[#15a36e]">{item.label.toUpperCase()}</span>
-                              </h3>
-                              <div className="h-0.5 bg-[#15a36e]"></div>
-                            </div>
-                            {/* Dropdown Items */}
-                            <div className="space-y-6">
-                              {item.dropdown.map((dropdownItem, index) => (
-                                <Link
-                                  key={index}
-                                  to={dropdownItem.path || item.path}
-                                  className="flex items-center gap-4 hover:opacity-80 transition-opacity duration-200 group"
-                                  onClick={() => setHoveredItem(null)}
-                                >
-                                  <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-lg bg-gray-50 border border-gray-100 shadow-sm">
-                                    <div className={
-                                      item.path === "/solutions"
-                                        ? (index === 0 ? 'text-black' : 'text-[#15a36e]')
-                                        : 'text-[#15a36e]'
-                                    }>
-                                      {dropdownItem.icon}
-                                    </div>
-                                  </div>
-                                  <div className="flex-1 min-w-0 flex flex-col justify-center min-h-[48px]">
-                                    <h4 className="font-bold text-black text-base leading-tight mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                      {dropdownItem.heading}
-                                    </h4>
-                                    <p className="text-sm text-black leading-snug" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                      {dropdownItem.description}
-                                    </p>
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        </motion.div>
-                      </>
-                    )}
-                  </AnimatePresence>
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile Toggle */}
+            {/* Mobile Menu Toggle */}
             <button
-              className="lg:hidden text-white hover:text-white/80 transition-colors duration-200 p-1"
+              className="lg:hidden text-gray-300 hover:text-white transition-colors p-1"
               onClick={() => {
                 setIsMenuOpen(!isMenuOpen);
                 if (isMenuOpen) setMobileDropdownOpen(null);
@@ -238,16 +258,13 @@ export default function Header() {
             </button>
           </div>
         </div>
-
-        {/* Bottom Shadow/Gradient */}
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
       </motion.nav>
 
       {/* Mobile/Tablet Slide-in Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-[60] lg:hidden"
+            className="fixed inset-0 z-[110] lg:hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -255,116 +272,95 @@ export default function Header() {
           >
             {/* Overlay */}
             <div
-              className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+              className="absolute inset-0 bg-black/80 backdrop-blur-sm"
               onClick={() => { setIsMenuOpen(false); setMobileDropdownOpen(null); }}
             />
-            {/* Slide-out Panel - Now from Right */}
+            {/* Slide-out Panel */}
             <motion.div
-              className="absolute top-0 right-0 w-[93vw] xs:w-[88vw] sm:w-[375px] md:w-[440px] max-w-md h-full bg-[#15a36e] rounded-l-2xl shadow-2xl overflow-y-auto border-l-2 border-white/10"
-              initial={{ x: 400, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              exit={{ x: 400, opacity: 0 }}
-              transition={{ duration: 0.29, ease: "easeOut" }}
-              style={{
-                maxWidth: 440,
-              }}
+              className="absolute top-0 right-0 w-[85vw] sm:w-[360px] h-full bg-[#0e0e0e] border-l border-white/10 shadow-2xl overflow-y-auto"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
             >
               {/* Mobile Panel Header */}
-              <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
+              <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
                 <Link
                   to="/"
                   onClick={() => setIsMenuOpen(false)}
-                  className="flex items-center flex-shrink-0"
+                  className="flex items-center"
                 >
                   <img
                     src="/assets/copym/png/Copym-02-1.png"
-                    alt="CopyM Logo"
-                    className="h-10 w-auto object-contain"
-                    style={{ maxWidth: 140 }}
+                    alt="CopyM"
+                    className="h-8 w-auto"
                   />
                 </Link>
                 <button
-                  className="text-white p-2"
+                  className="text-gray-400 hover:text-white transition-colors"
                   onClick={() => setIsMenuOpen(false)}
-                  aria-label="Close menu"
                 >
-                  <IoClose className="h-7 w-7" />
+                  <IoClose className="h-6 w-6" />
                 </button>
               </div>
-              {/* Mobile Navigation Items - Accordion */}
-              <div className="py-2">
+
+              {/* Mobile CTA */}
+              <div className="p-6 pb-2">
+                <Link
+                  to="/download"
+                  className="flex w-full items-center justify-center gap-2 bg-[#15a36e] text-white px-5 py-3 rounded-full font-bold text-sm active:scale-95 transition-transform"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <FaDownload className="w-4 h-4" />
+                  <span>DOWNLOAD APP</span>
+                </Link>
+              </div>
+
+              {/* Mobile Navigation Items */}
+              <div className="px-2">
                 {navItems.map((item, idx) => {
                   const isDropdown = item.dropdown && item.dropdown.length > 0;
                   const open = isDropdown && mobileDropdownOpen === item.path;
                   return (
-                    <div key={item.path} className="border-b border-white/10 last:border-b-0">
+                    <div key={item.path} className="border-b border-white/5 last:border-b-0">
                       <div
-                        className={`flex items-center px-6 py-3 text-white font-medium transition-colors duration-200 cursor-pointer select-none ${open ? 'bg-white/10' : 'hover:bg-white/10'}`}
+                        className={`flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer ${open ? 'text-white' : ''}`}
                         onClick={() => {
                           if (isDropdown) {
                             setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
                           } else {
                             setIsMenuOpen(false);
-                            setMobileDropdownOpen(null);
-                          }
-                        }}
-                        style={{ fontFamily: 'Palanquin, sans-serif' }}
-                        tabIndex={0}
-                        onKeyDown={e => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            if (isDropdown) {
-                              setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
-                            } else {
-                              setIsMenuOpen(false);
-                              setMobileDropdownOpen(null);
-                            }
                           }
                         }}
                       >
-                        <Link
-                          to={item.path}
-                          className="block flex-1 min-w-0 text-white text-base"
-                          style={{ fontFamily: 'Palanquin, sans-serif' }}
-                          onClick={e => {
-                            if (isDropdown) {
-                              e.preventDefault();
-                            } else {
-                              setIsMenuOpen(false);
-                              setMobileDropdownOpen(null);
-                            }
-                          }}
-                        >
-                          {item.label}
-                        </Link>
+                        <span className="flex-1 text-base">{item.label}</span>
                         {isDropdown && <DropdownChevron open={open} />}
                       </div>
-                      {/* Accordion content */}
+
+                      {/* Dropdown Content */}
                       <AnimatePresence initial={false}>
                         {open && (
                           <motion.div
-                            className="bg-[#14a16d] px-6 pt-2 pb-3 space-y-2"
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.22 }}
+                            className="overflow-hidden bg-white/5 mx-2 rounded-xl mb-2"
                           >
-                            {item.dropdown.map((dropdownItem, idy) => (
-                              <Link
-                                key={idy}
-                                to={dropdownItem.path || item.path}
-                                className="flex items-start gap-3 py-2 pl-1.5 rounded hover:bg-white/10"
-                                style={{ color: "#fff", fontSize: "15px" }}
-                                onClick={() => setIsMenuOpen(false)}
-                              >
-                                <span className="inline-flex items-center justify-center w-10 h-10 rounded bg-white/10 mr-2 border border-white/5">
-                                  <span className="text-white">{dropdownItem.icon}</span>
-                                </span>
-                                <div className="flex flex-col">
-                                  <span className="font-bold leading-none text-sm">{dropdownItem.heading}</span>
-                                  <span className="text-xs text-white/90 mt-1">{dropdownItem.description}</span>
-                                </div>
-                              </Link>
-                            ))}
+                            <div className="p-2 space-y-1">
+                              {item.dropdown.map((sub, i) => (
+                                <Link
+                                  key={i}
+                                  to={sub.path}
+                                  className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-colors"
+                                  onClick={() => setIsMenuOpen(false)}
+                                >
+                                  <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-white text-xs">
+                                    {sub.icon}
+                                  </div>
+                                  <span className="text-sm font-medium">{sub.heading}</span>
+                                </Link>
+                              ))}
+                            </div>
                           </motion.div>
                         )}
                       </AnimatePresence>

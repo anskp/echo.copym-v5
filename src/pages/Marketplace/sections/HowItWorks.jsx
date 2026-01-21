@@ -19,21 +19,21 @@ export default function HowItWorks() {
             title: "Fractional Ownership",
             description: "Each asset is divided into programmable tokens, allowing participants to invest in fractions instead of purchasing the entire asset.",
             icon: tiicon1,
-            watermark: "HOW   THE "
+            watermark: "HOW"
         },
         {
             id: "trade-settle",
             title: "Buy, Trade & Settlement",
             description: "Participants can acquire, trade or exit positions through an open marketplace. Ownership transfers and revenue distribution are executed automatically via smart contracts.",
             icon: tiicon4,
-            watermark: "COPYM"
+            watermark: "THE"
         },
         {
             id: "secure",
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: smallp2,
-            watermark: "MARKETPLACE"
+            watermark: "COPYM"
         },
         {
             id: "trust",
@@ -75,7 +75,7 @@ export default function HowItWorks() {
                                     <span
                                         className="text-[50px] sm:text-[100px] lg:text-[120px] font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center"
                                         style={{
-                                            backgroundImage: 'conic-gradient(from 180deg at 50% 50%, #000000 0%, #064e3b 35%, #a7f3d0 50%, #064e3b 65%, #000000 100%)'
+                                            backgroundImage: 'conic-gradient(from 180deg at 50% 50%, #18181b 0%, #059669 40%, #a7f3d0 50%, #059669 60%, #18181b 100%)'
                                         }}
                                     >
                                         {step.watermark}
@@ -92,18 +92,14 @@ export default function HowItWorks() {
                                         {/* Inner box - Subtle glass gradient */}
                                         <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
                                             {/* Plus Icon Overlay - positioned at top-right edge of inner box */}
+                                            {/* Logo Only - positioned at top-right edge */}
                                             <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 z-20">
-                                                {/* Outer ring */}
-                                                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white flex items-center justify-center p-1">
-                                                    {/* Inner ring with white surface */}
-                                                    <div className="w-full h-full rounded-full bg-white/90 backdrop-blur-sm border border-gray-100 flex items-center justify-center shadow-lg shadow-gray-200/50 transition-all duration-300 hover:scale-105 hover:shadow-xl"
-                                                        style={{ boxShadow: '0 4px 20px rgba(21, 163, 110, 0.15), 0 2px 8px rgba(0,0,0,0.08)' }}>
-                                                        <img
-                                                            src="/assets/copym/png/Copym-05.png"
-                                                            alt="Add"
-                                                            className="w-full h-full object-cover rounded-full"
-                                                        />
-                                                    </div>
+                                                <div className="w-20 h-20 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-110 drop-shadow-xl">
+                                                    <img
+                                                        src="/assets/copym/png/Copym-05.png"
+                                                        alt="Add"
+                                                        className="w-full h-full object-contain"
+                                                    />
                                                 </div>
                                             </div>
                                             {/* Emerald glow behind icon */}

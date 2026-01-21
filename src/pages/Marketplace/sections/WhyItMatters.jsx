@@ -251,11 +251,11 @@ export default function WhyItMatters() {
 
     return (
         <section
-            className="w-full pt-16 pb-20 overflow-hidden relative bg-white"
+            className="w-full py-10 overflow-hidden relative bg-white"
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header at the top */}
-                <div className="mb-12 text-center">
+                <div className="mb-6 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -279,7 +279,7 @@ export default function WhyItMatters() {
                 </div>
 
                 {/* Category Tags Bar */}
-                <div className="flex flex-wrap justify-center gap-4 mb-16 px-2">
+                <div className="flex flex-wrap justify-center gap-4 mb-8 px-2">
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
@@ -299,7 +299,7 @@ export default function WhyItMatters() {
                 </div>
 
                 {/* Main Content: Two Columns */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
 
                     {/* Left Column: Visual Card */}
                     <div className="relative flex justify-center items-center">
@@ -310,9 +310,9 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                 transition={{ duration: 0.5 }}
-                                className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-4 pb-24"
+                                className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-4 pb-20"
                             >
-                                <div className="w-full aspect-[4/5] rounded-[2rem] overflow-hidden relative">
+                                <div className="w-full aspect-[4/4.5] rounded-[2rem] overflow-hidden relative">
                                     <img
                                         src={activeTab.image}
                                         alt={activeTab.name}
@@ -398,7 +398,7 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: -20 }}
                                 transition={{ duration: 0.5 }}
-                                className="space-y-8"
+                                className="space-y-5"
                             >
                                 <div className="space-y-4">
                                     <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#10b981]/10 text-[#10b981] rounded-lg text-xs font-bold uppercase tracking-wider">

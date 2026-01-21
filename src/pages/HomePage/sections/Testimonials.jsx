@@ -141,9 +141,13 @@ export default function TestimonialsSection() {
     <section className="relative py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-12">
         {/* Main Title */}
-        <h2 className="text-4xl md:text-5xl font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-          INSIGHTS
-        </h2>
+        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+          <div className="relative w-fit mb-3 sm:mb-4">
+            <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-[#15a36e] uppercase">INSIGHT'</span><span className="text-black">s</span>
+            </h2>
+          </div>
+        </div>
       </div>
 
       <div className="relative">
