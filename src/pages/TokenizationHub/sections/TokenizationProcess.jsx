@@ -13,32 +13,32 @@ export default function TokenizationProcess() {
   const whyTokenizeFeatures = [
     {
       title: "Programmable terms",
-      description: "Program the transfer-restrictions and investment terms that are required between different asset and investor (KYC) classifications.",
+      description: "Program compliance rules and investment terms required for diverse asset and investor classifications via digital contracts.",
       icon: ticon1
     },
     {
       title: "Increased accessibility",
-      description: "Tokenization broadens investment opportunities, including retail investors previously excluded from traditional investment structures.",
+      description: "Tokenization opens investment opportunities, allowing retail investors to access markets restricted to traditional financial structure models.",
       icon: ticon2
     },
     {
       title: "Global reach",
-      description: "Tokenization enables investors from around the world to invest in the fund, providing greater access to international capital.",
+      description: "Tokenization enables global investors to fund projects providing significantly greater access to international capital markets globally.",
       icon: ticon3
     },
     {
       title: "Fractional Ownership",
-      description: "Enable investors to own a portion of high-value assets, improving liquidity and diversifying investment portfolios.",
+      description: "Enable investors to own portions of high-value assets improving market liquidity and diversifying their investment portfolios.",
       icon: ticon6
     },
     {
       title: "Faster settlement times",
-      description: "Tokenization speeds up trade settlements, enabling investors to receive their funds faster after selling their shares in the fund.",
+      description: "Tokenization accelerates trade settlements allowing investors to receive funds immediately upon selling their fund share holdings.",
       icon: ticon5
     },
     {
       title: "Greater transparency",
-      description: "Investors can track their token ownership and access real-time information on fund performance and holdings.",
+      description: "Investors can track token ownership and access real-time information regarding fund performance and asset holdings securely.",
       icon: ticon4
     }
   ];

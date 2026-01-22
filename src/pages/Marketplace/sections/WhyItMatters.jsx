@@ -19,13 +19,13 @@ import {
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 
 // Import images
-import artsImg from '../../../components/images/marketplacesimg/arts.jpg';
-import commoditiesImg from '../../../components/images/marketplacesimg/commodities.jpeg';
-import realEstateImg from '../../../components/images/marketplacesimg/realestatee.png';
-import sportsImg from '../../../components/images/marketplacesimg/sports.jpg';
-import carbonCreditsImg from '../../../components/images/marketplacesimg/carbon credits.jpeg';
-import luxuryBuildingImg from '../../../components/images/marketplacesimg/luxurybuilding.jpeg';
-import downloadImg from '../../../components/images/marketplacesimg/download (15).jpeg';
+import artsImg from '../../../components/images/marketplacesimg/arts.avif';
+import commoditiesImg from '../../../components/images/marketplacesimg/commodities.avif';
+import realEstateImg from '../../../components/images/marketplacesimg/realestatee.avif';
+import sportsImg from '../../../components/images/marketplacesimg/sports.avif';
+import carbonCreditsImg from '../../../components/images/marketplacesimg/carbon credits.avif';
+import luxuryBuildingImg from '../../../components/images/marketplacesimg/luxurybuilding.avif';
+import downloadImg from '../../../components/images/marketplacesimg/download (15).avif';
 
 const categories = [
     {
@@ -557,13 +557,16 @@ export default function WhyItMatters() {
                 </div>
 
                 {/* Terms & Conditions - Centered at Bottom */}
-                <div className="text-center mt-4 mb-2 px-4">
-                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Terms & Conditions
-                    </h4>
-                    <p className="text-[11px] text-gray-400 leading-relaxed max-w-6xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. <br className="hidden md:block" /> Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
-                    </p>
+                <div className="text-center mt-8 mb-4 px-4">
+                    <div className="text-[#98a2b3] text-[9px] sm:text-[10px] leading-relaxed max-w-6xl mx-auto font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        <p className="mb-0.5">
+                            <span className="text-[#aebecd] font-bold uppercase tracking-[0.1em] mr-2">TERMS & CONDITIONS :</span>
+                            Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person.
+                        </p>
+                        <p>
+                            Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section >

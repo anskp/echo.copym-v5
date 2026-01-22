@@ -12,17 +12,17 @@ export default function TradableAssets() {
         {
             image: "/assets/Images/icons/tradee2.png",
             title: "REVENUE & PROFIT-SHARING TOKENS",
-            description: "Earn passive income streams backed by verified business performance."
+            description: "Earn passive income streams backed by verified global business performance."
         },
         {
             image: "/assets/Images/icons/tradee3.png",
             title: "BRAND, IP AND DIGITAL ASSETS",
-            description: "Own a stake in brands,intellectual property and digital media ventures."
+            description: "Own stakes in brands, intellectual property and digital media ventures."
         },
         {
             image: "/assets/Images/icons/tradee4.png",
             title: "CUSTOM TOKENIZED OPPORTUNITIES",
-            description: "Exclusive tokenized structures developed with strategic partners."
+            description: "Gain access to exclusive tokenized structures developed with strategic partners."
         }
     ];
 
