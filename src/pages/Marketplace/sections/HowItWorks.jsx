@@ -26,14 +26,14 @@ export default function HowItWorks() {
             title: "Buy, Trade & Settlement\u00A0",
             description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
             icon: tiicon4,
-            watermark: "THE"
+            watermark: ""
         },
         {
             id: "secure",
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: smallp2,
-            watermark: "COPYM"
+            watermark: ""
         },
         {
             id: "trust",
@@ -59,6 +59,17 @@ export default function HowItWorks() {
 
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
+                    {/* Shared Background Watermark "MARKETPLACE" for cards 2 & 3 area */}
+                    <div className="absolute top-[480px] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0 hidden lg:block overflow-visible">
+                        <span
+                            className="font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center lg:text-[140px] leading-none"
+                            style={{
+                                backgroundImage: 'radial-gradient(ellipse at center, #1C9065 0%, #088557 60%, rgba(0,0,0,0) 100%)'
+                            }}
+                        >
+                            MARKETPLACE
+                        </span>
+                    </div>
                     <AnimatePresence mode="popLayout">
                         {visibleSteps.map((step, index) => (
                             <motion.div
@@ -72,25 +83,32 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: index * 0.1
                                 }}
-                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-0' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[500px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[700px]'))}`}
+                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-[-40px]' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[600px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[800px]'))}`}
                             >
-                                {/* Card Wrapper - Always allow full width for text on large screens */}
-                                <div className="relative z-10 w-full mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full">
+                                {/* Card Wrapper - Side-by-side for cards 2 & 3 on large screens */}
+                                <div className={`relative z-10 w-full mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
+                                    ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' :
+                                        index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' : ''}`}>
 
                                     {/* Visual Group - Constrains width of image/watermark for small cards */}
-                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px] mx-auto lg:mx-0' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full mx-auto'}`}>
+                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px] mx-auto lg:mx-0' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full mx-auto'} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''}`}>
 
-                                        {/* Watermark Background Text - Centered to the Visual Group */}
-                                        <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-full pointer-events-none select-none h-40 flex items-center justify-center z-0">
-                                            <span
-                                                className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center ${[1, 2].includes(index) ? 'text-[40px] sm:text-[70px] lg:text-[85px]' : 'text-[50px] sm:text-[100px] lg:text-[120px]'}`}
-                                                style={{
-                                                    backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
-                                                }}
+                                        {/* Watermark Background Text - Only for cards 1 & 4 */}
+                                        {[0, 3].includes(index) && (
+                                            <div className={`absolute pointer-events-none select-none z-0 
+                                                ${index === 0 ? 'left-0 bottom-0' :
+                                                    'right-0 bottom-0'}`}
                                             >
-                                                {step.watermark}
-                                            </span>
-                                        </div>
+                                                <span
+                                                    className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[80px] sm:text-[120px] lg:text-[140px] leading-none`}
+                                                    style={{
+                                                        backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
+                                                    }}
+                                                >
+                                                    {step.watermark}
+                                                </span>
+                                            </div>
+                                        )}
 
                                         {/* Card Body */}
 
@@ -118,7 +136,7 @@ export default function HowItWorks() {
                                                 <img
                                                     src={step.icon}
                                                     alt={step.title}
-                                                    className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'} ${index === 3 ? 'translate-x-4' : ''}`}
+                                                    className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${index === 0 ? 'w-36 h-36 -translate-y-6' : (index === 3 ? 'w-44 h-44' : 'w-32 h-32')} ${index === 3 ? 'translate-x-4' : ''}`}
                                                 />
                                             </div>
                                         </div>
