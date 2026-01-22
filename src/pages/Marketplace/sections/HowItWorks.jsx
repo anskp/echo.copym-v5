@@ -74,20 +74,20 @@ export default function HowItWorks() {
                                 }}
                                 className={`relative flex flex-col group items-center ${index % 2 === 0 ? 'md:items-start' : 'md:items-end md:mt-48'}`}
                             >
-                                {/* Watermark Background Text */}
-                                <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-screen pointer-events-none select-none h-40 flex items-center justify-center z-0">
-                                    <span
-                                        className="text-[50px] sm:text-[100px] lg:text-[120px] font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center"
-                                        style={{
-                                            backgroundImage: 'conic-gradient(from 180deg at 50% 50%, #18181b 0%, #059669 40%, #a7f3d0 50%, #059669 60%, #18181b 100%)'
-                                        }}
-                                    >
-                                        {step.watermark}
-                                    </span>
-                                </div>
-
                                 {/* Card Wrapper - Custom size pattern: Big(0), Small(1), Small(2), Big(3), Big(4), Small(5) */}
                                 <div className={`relative z-10 w-full mx-auto max-w-[320px] ${[0, 3, 4].includes(index) ? 'sm:max-w-[380px]' : 'sm:max-w-[320px]'}`}>
+                                    {/* Watermark Background Text - Centered to the Box */}
+                                    <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-full pointer-events-none select-none h-40 flex items-center justify-center z-0">
+                                        <span
+                                            className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center ${[1, 2].includes(index) ? 'text-[40px] sm:text-[70px] lg:text-[85px]' : 'text-[50px] sm:text-[100px] lg:text-[120px]'}`}
+                                            style={{
+                                                backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
+                                            }}
+                                        >
+                                            {step.watermark}
+                                        </span>
+                                    </div>
+
                                     {/* Card Body */}
 
                                     {/* Outer Container with gap - light gray/mint background */}
@@ -106,19 +106,17 @@ export default function HowItWorks() {
                                                     />
                                                 </div>
                                             </div>
-                                            {/* Custom Radial Gradient Shadow - Spreading Emerald */}
+                                            {/* Custom Radial Gradient Shadow - Increased Spreading Emerald */}
                                             <div
-                                                className={`absolute rounded-full blur-2xl opacity-60 ${[0, 3].includes(index) ? 'w-48 h-48' : 'w-36 h-36'}`}
+                                                className={`absolute rounded-full blur-3xl opacity-50 ${[0, 3].includes(index) ? 'w-64 h-64' : 'w-52 h-52'}`}
                                                 style={{
-                                                    background: 'radial-gradient(circle, #1C9065 0%, #088557 40%, rgba(0,0,0,0) 70%)'
+                                                    background: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 80%)'
                                                 }}
                                             ></div>
-                                            {/* Subtle Border Circle */}
-                                            <div className={`absolute rounded-full border border-emerald-500/20 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'}`}></div>
                                             <img
                                                 src={step.icon}
                                                 alt={step.title}
-                                                className="relative z-10 w-32 h-32 object-contain drop-shadow-2xl transition-all duration-500"
+                                                className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'} ${index === 3 ? 'translate-x-4' : ''}`}
                                             />
                                         </div>
                                     </div>
