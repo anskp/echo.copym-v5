@@ -70,8 +70,8 @@ export default function PassUnlocksSection() {
               {/* Icon */}
               <div className="flex justify-center mb-4 sm:mb-6">
                 <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center">
-                  <img 
-                    src={benefit.icon} 
+                  <Image
+                    src={benefit.icon}
                     alt={benefit.title}
                     className="w-full h-full object-contain"
                   />

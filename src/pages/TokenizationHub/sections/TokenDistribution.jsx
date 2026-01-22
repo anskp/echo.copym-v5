@@ -56,7 +56,7 @@ export default function TokenDistribution() {
           <div className="w-full lg:w-1/2 relative">
             <div className="relative w-full aspect-square max-w-2xl mx-auto lg:max-w-none">
               <Image
-                src="/assets/Images/icons/distributionnew.png"
+                src="/assets/Images/icons/distributionew.png"
                 alt="Token Distribution Network"
                 className="w-full h-full object-contain scale-110 sm:scale-125 transform-gpu"
               />
