@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Landmark } from "lucide-react";
 import Image from '../../../components/Image';
 import hsbcLogo from '../../../components/icons/Tokenization/logo-hsbc-red.avif';
-import bnyLogo from '../../../components/icons/Tokenization/bnymellon.png';
+import bnyLogo from '../../../components/icons/Tokenization/bnymellon.avif';
 
 const insights = [
   {
@@ -31,6 +31,7 @@ const insights = [
     name: "Alfred Kelly",
     title: "Former CEO of Visa",
     company: "Visa",
+    logo: "/assets/Images/mastercard.avif",
   },
   {
     quote: "The future of commerce will be powered by tokenized assets, real-time settlement, and programmable money.",
@@ -50,12 +51,7 @@ const insights = [
     title: "Former CEO of Morgan Stanley",
     logo: "/assets/Images/Morgan_Stanley_(3).avif",
   },
-  {
-    quote: "Tokenization will enable new efficiencies across custody, settlement, and asset servicing.",
-    name: "Christian Sewing",
-    title: "CEO of Deutsche Bank",
-    company: "Deutsche Bank",
-  },
+
   {
     quote: "Blockchain and tokenization are transforming how capital markets operate at a fundamental level.",
     name: "Ana Botín",
@@ -69,35 +65,36 @@ const insights = [
 function InsightCard({ insight }) {
   return (
     <motion.div
-      className="flex-shrink-0 flex flex-col gap-4 p-4 w-[350px] sm:w-[450px] md:w-[550px]"
+      className="flex-shrink-0 flex flex-col gap-3 p-4 w-[300px] sm:w-[350px] md:w-[400px]"
     >
-      {/* Brand Header - Pure Typography + Logo */}
-      <div className="flex items-center gap-3 md:gap-4">
-        <h3 className="text-3xl md:text-5xl font-black text-black uppercase tracking-tighter" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-          {insight.company}
-        </h3>
-        {insight.logo && (
-          <div className="flex-shrink-0 w-[120px] h-[40px] md:w-[160px] md:h-[50px] flex items-center justify-start">
+      {/* Brand Header - Priority to Logo */}
+      <div className="flex items-center justify-start h-10 mb-2">
+        {insight.logo ? (
+          <div className="w-[140px] h-full flex items-center justify-start">
             <Image
               src={insight.logo}
               alt={`${insight.company} logo`}
               className="w-full h-full object-contain object-left"
             />
           </div>
+        ) : (
+          <h3 className="text-2xl font-black text-black uppercase tracking-tighter" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            {insight.company}
+          </h3>
         )}
       </div>
 
-      {/* Quote */}
-      <p className="text-xl md:text-2xl text-[#111] leading-tight font-medium italic" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+      {/* Quote - Smaller, refined typography */}
+      <p className="text-base sm:text-lg text-[#222] leading-relaxed font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
         "{insight.quote}"
       </p>
 
-      {/* Author Info */}
-      <div className="pt-2">
-        <p className="text-base font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+      {/* Author Info - Smaller, compact */}
+      <div className="pt-2 mt-auto">
+        <p className="text-sm font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           {insight.name}
         </p>
-        <p className="text-sm text-[#444]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+        <p className="text-xs text-gray-500 font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           {insight.title}
         </p>
       </div>
@@ -132,7 +129,7 @@ function InfiniteScrollingRow({ items, duration = 60 }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section className="relative pt-8 pb-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-12">
         {/* Main Title */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">

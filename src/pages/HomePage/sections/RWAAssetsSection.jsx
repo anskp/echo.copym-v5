@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import maskcard1 from '../../../components/images/Maskcard1.png';
-import maskcard2 from '../../../components/images/Maskcard2.png';
-import maskcard3 from '../../../components/images/Maskcard3.png';
-import maskcard4 from '../../../components/images/Maskcard4.png';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
+import maskcard1 from '../../../components/images/Maskcard1.avif';
+import maskcard2 from '../../../components/images/Maskcard2.avif';
+import maskcard3 from '../../../components/images/Maskcard3.avif';
+import maskcard4 from '../../../components/images/Maskcard4.avif';
 import SectionContainer from '../../../components/Layout/SectionContainer';
 import SectionHeader from '../../../components/Layout/SectionHeader';
 
@@ -84,7 +85,7 @@ const TokenizeAssetsSection = () => {
 
                 {/* Asset Image - Top, Centered - Fixed Height */}
                 <div className="flex items-center justify-center mt-8 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
-                  <img
+                  <Image
                     src={asset?.image}
                     alt={asset?.title}
                     className="w-full h-full object-contain"

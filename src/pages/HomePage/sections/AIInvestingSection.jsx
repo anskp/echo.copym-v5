@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { HiSparkles } from 'react-icons/hi';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import ellipse from '../../../components/SVG/Ellipse.svg';
 
 export default function AIInvestingSection() {
@@ -41,7 +42,7 @@ export default function AIInvestingSection() {
               viewport={{ once: true }}
               className="absolute left-[1%] sm:left-[3%] lg:left-[8%] xl:left-[14%] top-[-10px] lg:top-0 z-20 w-[160px] sm:w-[210px] lg:w-[300px]"
             >
-              <div className="bg-white/40 backdrop-blur-xl border border-white/60 rounded-xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
                 <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-black font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> <br /> to make better investments
                 </p>
@@ -56,7 +57,7 @@ export default function AIInvestingSection() {
               viewport={{ once: true }}
               className="relative z-10 translate-y-8 md:translate-y-10 lg:translate-y-12"
             >
-              <img
+              <Image
                 src="/assets/Images/cora-ai.png"
                 alt="Cora AI"
                 className="w-[140px] sm:w-[160px] md:w-[180px] lg:w-[220px] h-auto object-contain"
@@ -71,7 +72,7 @@ export default function AIInvestingSection() {
               viewport={{ once: true }}
               className="absolute right-[-2%] sm:right-[0%] lg:right-[5%] xl:right-[10%] bottom-[-40px] lg:bottom-[-20px] z-20 w-[160px] sm:w-[210px] lg:w-[300px]"
             >
-              <div className="bg-white/40 backdrop-blur-xl border border-white/60 rounded-xl py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
+              <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
                 <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-black font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, <br /> and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
                 </p>
