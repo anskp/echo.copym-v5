@@ -419,6 +419,23 @@ export default function WhyItMatters() {
                                         <p className="text-sm font-bold text-gray-800 tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>{badge.label}</p>
                                     </motion.div>
                                 ))}
+
+                                {/* Split Button at Bottom Left - Same design as category pills */}
+                                <div className="mt-4 flex justify-start">
+                                    <button className="group flex items-center gap-1 transition-transform duration-300 hover:scale-[1.02]">
+                                        {/* Icon Circle - Straight Right Edge */}
+                                        <div className={`w-8 h-8 rounded-l-full rounded-r-none flex items-center justify-center transition-all duration-300 border-r-0 shadow-2xl
+                                            bg-white text-gray-400 group-hover:text-gray-600`}>
+                                            {React.cloneElement(activeTab.icon, { className: "w-4 h-4" })}
+                                        </div>
+
+                                        {/* Text Pill - Straight Left Edge */}
+                                        <div className={`px-4 py-1.5 rounded-r-full rounded-l-none text-sm font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-8
+                                            bg-white text-gray-600`}>
+                                            {activeTab.name}
+                                        </div>
+                                    </button>
+                                </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>

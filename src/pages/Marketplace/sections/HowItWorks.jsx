@@ -23,7 +23,7 @@ export default function HowItWorks() {
         },
         {
             id: "trade-settle",
-            title: "Buy, Trade & Settlement",
+            title: "Buy, Trade & Settlement\u00A0",
             description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
             icon: tiicon4,
             watermark: "THE"
@@ -48,12 +48,12 @@ export default function HowItWorks() {
     const visibleSteps = steps;
 
     return (
-        <section className="w-full bg-black py-12 md:py-20 overflow-hidden relative">
+        <section className="w-full bg-black py-12 md:py-20 lg:pt-32 lg:pb-40 overflow-hidden relative">
             {/* Main Background Header Removed */}
 
 
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
                 {/* Header */}
 
 
@@ -72,60 +72,60 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: index * 0.1
                                 }}
-                                className={`relative flex flex-col group items-center ${index % 2 === 0 ? 'md:items-start lg:mt-0' : 'md:items-end md:mt-48 lg:items-center lg:mt-32'}`}
+                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-0' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[500px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[700px]'))}`}
                             >
-                                {/* Card Wrapper - Adjusted for 4 columns: Big(0), Small(1), Small(2), Big(3) */}
-                                <div className={`relative z-10 w-full mx-auto ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px]' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full'}`}>
-                                    {/* Watermark Background Text - Centered to the Box */}
-                                    <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-full pointer-events-none select-none h-40 flex items-center justify-center z-0">
-                                        <span
-                                            className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center ${[1, 2].includes(index) ? 'text-[40px] sm:text-[70px] lg:text-[85px]' : 'text-[50px] sm:text-[100px] lg:text-[120px]'}`}
-                                            style={{
-                                                backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
-                                            }}
-                                        >
-                                            {step.watermark}
-                                        </span>
-                                    </div>
+                                {/* Card Wrapper - Always allow full width for text on large screens */}
+                                <div className="relative z-10 w-full mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full">
 
-                                    {/* Card Body */}
+                                    {/* Visual Group - Constrains width of image/watermark for small cards */}
+                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px] mx-auto lg:mx-0' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full mx-auto'}`}>
 
-                                    {/* Outer Container with gap - light gray/mint background */}
-                                    {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
-                                    {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
-                                    <div className={`relative aspect-[4/5] bg-zinc-900/10 backdrop-blur-sm border border-white/10 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center mx-auto w-full`}>
-                                        {/* Inner box - Subtle glass gradient */}
-                                        <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
-                                            {/* Plus Icon Overlay - positioned at top-right edge of inner box */}
-                                            {/* Logo Only - positioned at top-right edge */}
-                                            {/* Plus Icon Overlay - positioned at top-right edge for 1 & 4, bottom-left for 2 & 3 */}
-                                            {/* Logo Only - positioned conditionally */}
-                                            <div className={`absolute z-20 ${[1, 2].includes(index) ? '-bottom-4 -left-4 sm:-bottom-5 sm:-left-5' : '-top-4 -right-4 sm:-top-5 sm:-right-5'}`}>
-                                                <div className="w-20 h-20 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-110 drop-shadow-xl">
-                                                    <img
-                                                        src="/assets/copym/png/Copym-05.png"
-                                                        alt="Add"
-                                                        className="w-full h-full object-contain"
-                                                    />
-                                                </div>
-                                            </div>
-                                            {/* Custom Radial Gradient Shadow - Increased Spreading Emerald */}
-                                            <div
-                                                className={`absolute rounded-full blur-3xl opacity-50 ${[0, 3].includes(index) ? 'w-64 h-64' : 'w-52 h-52'}`}
+                                        {/* Watermark Background Text - Centered to the Visual Group */}
+                                        <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-full pointer-events-none select-none h-40 flex items-center justify-center z-0">
+                                            <span
+                                                className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center ${[1, 2].includes(index) ? 'text-[40px] sm:text-[70px] lg:text-[85px]' : 'text-[50px] sm:text-[100px] lg:text-[120px]'}`}
                                                 style={{
-                                                    background: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 80%)'
+                                                    backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
                                                 }}
-                                            ></div>
-                                            <img
-                                                src={step.icon}
-                                                alt={step.title}
-                                                className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'} ${index === 3 ? 'translate-x-4' : ''}`}
-                                            />
+                                            >
+                                                {step.watermark}
+                                            </span>
+                                        </div>
+
+                                        {/* Card Body */}
+
+                                        {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
+                                        <div className={`relative aspect-[4/5] bg-zinc-900/10 backdrop-blur-sm border border-white/10 rounded-[1.5rem] p-5 transition-transform duration-500 flex items-center justify-center w-full`}>
+                                            {/* Inner box - Subtle glass gradient */}
+                                            <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
+                                                {/* Logo Only - positioned conditionally */}
+                                                <div className={`absolute z-20 ${[1, 2].includes(index) ? '-bottom-4 -left-4 sm:-bottom-5 sm:-left-5' : '-top-4 -right-4 sm:-top-5 sm:-right-5'}`}>
+                                                    <div className="w-20 h-20 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-110 drop-shadow-xl">
+                                                        <img
+                                                            src="/assets/copym/png/Copym-05.png"
+                                                            alt="Add"
+                                                            className="w-full h-full object-contain"
+                                                        />
+                                                    </div>
+                                                </div>
+                                                {/* Custom Radial Gradient Shadow - Increased Spreading Emerald */}
+                                                <div
+                                                    className={`absolute rounded-full blur-3xl opacity-50 ${[0, 3].includes(index) ? 'w-64 h-64' : 'w-52 h-52'}`}
+                                                    style={{
+                                                        background: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 80%)'
+                                                    }}
+                                                ></div>
+                                                <img
+                                                    src={step.icon}
+                                                    alt={step.title}
+                                                    className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'} ${index === 3 ? 'translate-x-4' : ''}`}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
 
                                     {/* Title & Description */}
-                                    <div className="pl-12 pr-6 w-fit max-w-full text-left">
+                                    <div className="pl-0 pr-6 w-fit max-w-full text-left flex flex-col">
                                         <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.title}
                                         </h3>
