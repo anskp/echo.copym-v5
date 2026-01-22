@@ -310,15 +310,7 @@ export default function WhyItMatters() {
                     ))}
                 </div>
 
-                {/* Terms & Conditions - Centered */}
-                <div className="text-center mb-8 px-4">
-                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Terms & Conditions
-                    </h4>
-                    <p className="text-[11px] text-gray-400 leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
-                    </p>
-                </div>
+
 
                 {/* Main Content: Two Columns */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -557,30 +549,21 @@ export default function WhyItMatters() {
                                             <ChevronRight className="w-4 h-4 text-white" />
                                         </div>
                                     </button>
-
-                                    {/* Terms & Conditions Disclaimer */}
-                                    <div className="mt-12 max-w-4xl mx-auto px-4">
-                                        <h4
-                                            className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 text-center"
-                                            style={{ fontFamily: 'Palanquin, sans-serif' }}
-                                        >
-                                            Terms & Conditions
-                                        </h4>
-                                        <p
-                                            className="text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium text-center"
-                                            style={{ fontFamily: 'Palanquin, sans-serif' }}
-                                        >
-                                            Copym does not provide brokerage services, investment banking services, underwriting services,
-                                            investment recommendations, or investment advice to any person. Copym operates as a technology
-                                            platform focused on distributed ledger technology to improve efficiency, accessibility, and
-                                            transparency in financial technologies.
-                                        </p>
-                                    </div>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>
 
+                </div>
+
+                {/* Terms & Conditions - Centered at Bottom */}
+                <div className="text-center mt-4 mb-2 px-4">
+                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Terms & Conditions
+                    </h4>
+                    <p className="text-[11px] text-gray-400 leading-relaxed max-w-6xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. <br className="hidden md:block" /> Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
+                    </p>
                 </div>
             </div>
         </section >

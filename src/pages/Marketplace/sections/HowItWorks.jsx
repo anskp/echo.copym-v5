@@ -24,7 +24,7 @@ export default function HowItWorks() {
         {
             id: "trade-settle",
             title: "Buy, Trade & Settlement",
-            description: "Participants can acquire, trade or exit positions through an open marketplace. Ownership transfers and revenue distribution are executed automatically via smart contracts.",
+            description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
             icon: tiicon4,
             watermark: "THE"
         },
@@ -51,7 +51,11 @@ export default function HowItWorks() {
         <section className="w-full bg-black py-12 md:py-20 overflow-hidden relative">
             {/* Main Background Header Removed */}
 
+
+
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* Header */}
+
 
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 lg:gap-x-16">
@@ -83,12 +87,12 @@ export default function HowItWorks() {
                                 </div>
 
                                 {/* Card Wrapper - Custom size pattern: Big(0), Small(1), Small(2), Big(3), Big(4), Small(5) */}
-                                <div className={`relative z-10 w-full mx-auto max-w-[260px] ${[0, 3, 4].includes(index) ? 'sm:max-w-[280px]' : 'sm:max-w-[220px]'}`}>
+                                <div className={`relative z-10 w-full mx-auto max-w-[320px] ${[0, 3, 4].includes(index) ? 'sm:max-w-[380px]' : 'sm:max-w-[320px]'}`}>
                                     {/* Card Body */}
 
                                     {/* Outer Container with gap - light gray/mint background */}
-                                    {/* Outer Container with gap - Dark Glass Theme */}
-                                    <div className="relative aspect-[4/5] bg-zinc-900/80 backdrop-blur-xl border border-white/10 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center">
+                                    {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
+                                    <div className={`relative aspect-[4/5] bg-zinc-900/10 backdrop-blur-sm border border-white/10 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center mx-auto ${[0, 3, 4].includes(index) ? 'max-w-[260px] sm:max-w-[280px]' : 'max-w-[220px] sm:max-w-[220px]'}`}>
                                         {/* Inner box - Subtle glass gradient */}
                                         <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
                                             {/* Plus Icon Overlay - positioned at top-right edge of inner box */}
@@ -102,19 +106,26 @@ export default function HowItWorks() {
                                                     />
                                                 </div>
                                             </div>
-                                            {/* Emerald glow behind icon */}
-                                            <div className="absolute w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-emerald-500/20 blur-2xl"></div>
+                                            {/* Custom Radial Gradient Shadow - Spreading Emerald */}
+                                            <div
+                                                className={`absolute rounded-full blur-2xl opacity-60 ${[0, 3].includes(index) ? 'w-48 h-48' : 'w-36 h-36'}`}
+                                                style={{
+                                                    background: 'radial-gradient(circle, #1C9065 0%, #088557 40%, rgba(0,0,0,0) 70%)'
+                                                }}
+                                            ></div>
+                                            {/* Subtle Border Circle */}
+                                            <div className={`absolute rounded-full border border-emerald-500/20 ${[0, 3].includes(index) ? 'w-44 h-44' : 'w-32 h-32'}`}></div>
                                             <img
                                                 src={step.icon}
                                                 alt={step.title}
-                                                className={`relative z-10 object-contain drop-shadow-2xl transition-all duration-500 ${[0, 3, 4].includes(index) ? 'w-28 h-28 sm:w-40 sm:h-40' : 'w-20 h-20 sm:w-28 sm:h-28'}`}
+                                                className="relative z-10 w-32 h-32 object-contain drop-shadow-2xl transition-all duration-500"
                                             />
                                         </div>
                                     </div>
 
                                     {/* Title & Description */}
-                                    <div className="px-2">
-                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <div className="pl-12 pr-6 w-fit max-w-full text-left">
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.title}
                                         </h3>
                                         <p className="text-sm sm:text-base text-gray-400 leading-relaxed font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -127,8 +138,6 @@ export default function HowItWorks() {
                         ))}
                     </AnimatePresence>
                 </div>
-
-
             </div>
         </section >
     );

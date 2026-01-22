@@ -54,14 +54,14 @@ export default function TradableAssets() {
                             className="bg-black text-white rounded-sm overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
                         >
                             {/* Image Container */}
-                            <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-center bg-black">
+                            <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-start bg-black">
                                 <Image
                                     src={asset.image}
                                     alt={asset.title}
-                                    className={`w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-115
-                                        ${index === 1 ? 'scale-100 translate-y-2 -translate-x-6' :
-                                            index === 3 ? 'scale-110 -translate-x-4' :
-                                                'scale-110'}`}
+                                    className={`w-full h-full object-contain object-left-bottom transition-transform duration-500
+                                        ${index === 0 ? 'scale-100 translate-y-4 -translate-x-2' :
+                                            index === 1 ? 'scale-100 translate-y-8 -translate-x-1.5' :
+                                                'scale-100'}`}
                                 />
                             </div>
 
