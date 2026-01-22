@@ -6,11 +6,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
 import Image from './Image'; // Import our new AVIF-compatible Image component
-import tiicon4 from '../components/icons/Tokenization/tiicon4.png';
-import aboutush from '../components/images/aboutush.png';
-import tokencoinh from '../components/images/tokencoinh.png';
-import zerogash from '../components/images/zerogash.png';
-import parivaryaih from '../components/images/parivaryaih.png';
+import tiicon4 from '../components/icons/Tokenization/tiicon4.avif';
+import aboutush from '../components/images/aboutush.avif';
+import tokencoinh from '../components/images/tokencoinh.avif';
+import zerogash from '../components/images/zerogash.avif';
+import parivaryaih from '../components/images/parivaryaih.avif';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

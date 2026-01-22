@@ -3,7 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import Image from '../../../../components/Image'; // Import our AVIF-compatible Image component
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import bitcoinflyImage from '../../../components/images/bitcoinfly.png';
 
 // 3D Phone Component

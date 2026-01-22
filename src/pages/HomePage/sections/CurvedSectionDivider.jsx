@@ -1,6 +1,6 @@
 import React from 'react';
 import { GiArrowDunk } from 'react-icons/gi';
-import Image from '../../../../components/Image'; // Import our AVIF-compatible Image component
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 
 // Image-based 3D-style icons from public assets
 const PuzzleIcon = () => (
