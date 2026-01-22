@@ -1,11 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
-import assetsImage from '../../../components/images/assets.png';
-import investorsImage from '../../../components/images/investors.png';
-import partnersImage from '../../../components/images/partners.png';
-import investorsMobileImage from '../../../components/images/investersmobile.png';
-import partnersMobileImage from '../../../components/images/partnersmobile.png';
+import assetsImage from '../../../components/images/assets.avif';
+import investorsImage from '../../../components/images/investors.avif';
+import partnersImage from '../../../components/images/partners.avif';
+import investorsMobileImage from '../../../components/images/investersmobile.avif';
+import partnersMobileImage from '../../../components/images/partnersmobile.avif';
 
 const WhoWeServe = () => {
   return (
