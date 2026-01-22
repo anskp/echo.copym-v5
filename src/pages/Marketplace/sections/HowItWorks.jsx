@@ -48,7 +48,7 @@ export default function HowItWorks() {
     const visibleSteps = steps;
 
     return (
-        <section className="w-full bg-black py-12 md:py-20 lg:pt-32 lg:pb-40 overflow-hidden relative">
+        <section className="w-full bg-black py-12 md:py-20 lg:pt-32 lg:pb-12 overflow-hidden relative">
             {/* Main Background Header Removed */}
 
 
@@ -118,7 +118,7 @@ export default function HowItWorks() {
                                             <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
                                                 {/* Logo Only - positioned conditionally */}
                                                 <div className={`absolute z-20 ${[1, 2].includes(index) ? '-bottom-4 -left-4 sm:-bottom-5 sm:-left-5' : '-top-4 -right-4 sm:-top-5 sm:-right-5'}`}>
-                                                    <div className="w-20 h-20 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-110 drop-shadow-xl">
+                                                    <div className={`${[1, 2].includes(index) ? 'w-12 h-12 sm:w-16 sm:h-16' : 'w-20 h-20 sm:w-24 sm:h-24'} transition-all duration-300 hover:scale-110 drop-shadow-xl`}>
                                                         <img
                                                             src="/assets/copym/png/Copym-05.png"
                                                             alt="Add"

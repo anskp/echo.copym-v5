@@ -15,7 +15,7 @@ export default function HeroNew() {
       </div>
 
       {/* Hero Content - Left aligned */}
-      <div className="relative z-10 w-full h-full flex items-center justify-start px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+      <div className="relative z-10 w-full h-full flex items-start justify-start pt-32 sm:pt-40 md:pt-48 lg:pt-60 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

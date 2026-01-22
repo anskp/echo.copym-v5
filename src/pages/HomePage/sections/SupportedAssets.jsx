@@ -58,7 +58,7 @@ export default function AssetTypesSection() {
         <h2 className="brand-section-title leading-tight">
           <span className="text-[#255f99]">Invest Across a World of </span>{' '}
           <span className="text-[#15a36e]">Real Assets,</span>
-           <span className="text-[#255f99]">Curated for You</span>{' '}
+          <span className="text-[#255f99]">Curated for You</span>{' '}
         </h2>
         <p className="mt-4 text-lg text-black max-w-2xl mx-auto">
           Access institutional-grade opportunities in real estate, gold, private equity, commodities, and fine art—all through a single, intuitive platform.

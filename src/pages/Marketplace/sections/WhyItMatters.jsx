@@ -49,8 +49,7 @@ const categories = [
         growth: '+18.5%',
         topics: ['Paintings', 'Sculptures', 'Digital Art'],
         badges: [
-            { label: 'Fine Art Collection', icon: <Palette className="w-4 h-4" />, top: '20%', left: '-8%' },
-            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-10%' },
+            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '20%', left: '5%' },
         ],
         assets: [
             {
@@ -581,7 +580,7 @@ export default function WhyItMatters() {
                 <div className="text-center mt-8 mb-4 px-4">
                     <div className="text-[#98a2b3] text-[9px] sm:text-[10px] leading-relaxed max-w-6xl mx-auto font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         <p className="mb-0.5">
-                            <span className="text-[#aebecd] font-bold uppercase tracking-[0.1em] mr-2">TERMS & CONDITIONS :</span>
+                            <span className="text-[#aebecd] font-bold uppercase tracking-[0.1em] mr-2">T&C :</span>
                             Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person.
                         </p>
                         <p>

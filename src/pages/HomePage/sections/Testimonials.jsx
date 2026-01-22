@@ -108,7 +108,7 @@ function InfiniteScrollingRow({ items, duration = 60 }) {
   const duplicatedItems = [...items, ...items, ...items];
 
   return (
-    <div className="overflow-hidden py-8">
+    <div className="overflow-hidden py-4">
       <motion.div
         className="flex gap-8 md:gap-12 px-6"
         animate={{ x: ["0%", "-33.33%"] }}
@@ -129,7 +129,7 @@ function InfiniteScrollingRow({ items, duration = 60 }) {
 
 export default function TestimonialsSection() {
   return (
-    <section className="relative pt-8 pb-20 bg-white overflow-hidden">
+    <section className="relative pt-8 pb-0 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-12">
         {/* Main Title */}
         <div className="text-left mb-6 sm:mb-8 lg:mb-10">
