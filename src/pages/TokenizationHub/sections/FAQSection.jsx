@@ -94,8 +94,8 @@ export default function FAQSection() {
     <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-12 sm:pb-16 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
         {/* Section Header */}
-        <div className="text-left mb-6 sm:mb-8 lg:mb-10">
-          <div className="relative w-fit mb-3 sm:mb-4">
+        <div className="text-left mb-2 sm:mb-4 lg:mb-6">
+          <div className="relative w-fit mb-2">
             <h2
               className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold pb-1"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
@@ -103,8 +103,6 @@ export default function FAQSection() {
               <span className="text-[#15a36e] uppercase">FAQ'</span><span className="text-black">s</span>
             </h2>
           </div>
-
-
         </div>
 
         {/* FAQ List */}

@@ -178,7 +178,7 @@ export default function Header() {
 
                       {/* Desktop Dropdown Card */}
                       <motion.div
-                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e]/90 backdrop-blur-xl rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
+                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
                         style={{
                           width: 'max-content',
                           maxWidth: '90vw',

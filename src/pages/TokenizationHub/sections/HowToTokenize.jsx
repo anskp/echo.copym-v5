@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import mobileTokenization from '../../../components/images/mobiletokenization.png';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
+
 
 export default function HowToTokenize() {
   const [activeStep, setActiveStep] = useState(0);
@@ -114,7 +115,7 @@ export default function HowToTokenize() {
                 className="relative w-full max-w-lg"
               >
                 <div className="relative z-10">
-                  <img
+                  <Image
                     src="/assets/Images/dashboard_screen.png"
                     alt="Dashboard Screenshot"
                     className="w-full h-auto object-contain rounded-lg"

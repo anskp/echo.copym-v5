@@ -1,12 +1,13 @@
 // src/pages/TokenizationHub/sections/TokenizationProcess.jsx
 
 import React from 'react';
-import ticon1 from '../../../components/icons/Tokenization/ticon1.png';
-import ticon2 from '../../../components/icons/Tokenization/ticon2.png';
-import ticon3 from '../../../components/icons/Tokenization/ticon3.png';
-import ticon4 from '../../../components/icons/Tokenization/ticon4.png';
-import ticon5 from '../../../components/icons/Tokenization/ticon5.png';
-import ticon6 from '../../../components/icons/Tokenization/ticon6.png';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
+import ticon1 from '../../../components/icons/Tokenization/ticon1.avif';
+import ticon2 from '../../../components/icons/Tokenization/ticon2.avif';
+import ticon3 from '../../../components/icons/Tokenization/ticon3.avif';
+import ticon4 from '../../../components/icons/Tokenization/ticon4.avif';
+import ticon5 from '../../../components/icons/Tokenization/ticon5.avif';
+import ticon6 from '../../../components/icons/Tokenization/ticon6.avif';
 
 export default function TokenizationProcess() {
   const whyTokenizeFeatures = [
@@ -72,7 +73,7 @@ export default function TokenizationProcess() {
             <div key={index} className="flex flex-col items-start">
               {/* Icon Container */}
               <div className="w-16 h-16 sm:w-20 sm:h-20 bg-transparent mb-4 sm:mb-6 flex-shrink-0 flex items-center justify-center">
-                <img
+                <Image
                   src={feature.icon}
                   alt={feature.title}
                   className="w-14 h-14 sm:w-16 sm:h-16 object-contain"

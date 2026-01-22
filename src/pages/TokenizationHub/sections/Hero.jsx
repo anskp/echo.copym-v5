@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
-import tokenizationHero from '../../../components/images/tokenizationhero.png';
+import tokenizationHero from '../../../components/images/tokenizationhero.avif';
 
 export default function Hero() {
   return (

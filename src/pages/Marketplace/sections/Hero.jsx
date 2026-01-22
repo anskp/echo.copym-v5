@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
-import heroBg from '../../../components/images/marketplacehero.png';
+import heroBg from '../../../components/images/marketplacehero.avif';
 
 export default function Hero() {
   return (
