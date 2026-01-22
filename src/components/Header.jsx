@@ -115,18 +115,18 @@ export default function Header() {
 
   return (
     <>
-      {/* Search/Floating Pill Header */}
+      {/* Full Width Header - Fixed to top with no gap */}
       <motion.nav
-        className="fixed top-4 left-0 right-0 z-[100] flex justify-center px-4 pointer-events-none"
+        className="fixed top-0 left-0 right-0 z-[100] pointer-events-none"
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: isVisible ? 0 : -100, opacity: 1 }}
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
-        {/* Actual Pill Container - Inner pointer events auto to allow clicking */}
+        {/* Actual Header Container - Inner pointer events auto to allow clicking */}
         <div className={`
           pointer-events-auto
-          relative w-full max-w-5xl rounded-full 
-          px-4 py-1 sm:px-6 sm:py-1.5 
+          relative w-full
+          px-4 py-1 sm:px-6 sm:py-1.5
           border border-white/10
           flex items-center justify-between
           transition-all duration-300 backdrop-blur-md
@@ -178,16 +178,14 @@ export default function Header() {
 
                       {/* Desktop Dropdown Card */}
                       <motion.div
-                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
+                        className="absolute top-full left-0 mt-2 lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
                         style={{
                           width: 'max-content',
-                          maxWidth: '90vw',
-                          left: '50%',
-                          translateX: '-50%'
+                          minWidth: '320px'
                         }}
-                        initial={{ opacity: 0, y: 10, translateX: '-50%' }}
-                        animate={{ opacity: 1, y: 0, translateX: '-50%' }}
-                        exit={{ opacity: 0, y: 10, translateX: '-50%' }}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 10 }}
                         transition={{ duration: 0.2 }}
                       >
                         {/* Green Glow/Shades - Spreaded & Transparent */}

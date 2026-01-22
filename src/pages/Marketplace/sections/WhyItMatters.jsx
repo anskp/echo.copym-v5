@@ -326,23 +326,34 @@ export default function WhyItMatters() {
                                 transition={{ duration: 0.5 }}
                                 className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-3"
                             >
-                                <div className="w-full aspect-[4/4.5] rounded-[2rem] overflow-hidden relative">
-                                    <Image
-                                        src={activeTab.image}
-                                        alt={activeTab.name}
-                                        className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'}`}
-                                        style={{
-                                            objectPosition: ['carbon-credits', 'sports'].includes(activeTab.id) ? '20% center' : 'center center'
-                                        }}
-                                    />
+                                <div className="relative">
+                                    <div className="w-full aspect-[4/4.5] rounded-[2rem] overflow-hidden relative">
+                                        <Image
+                                            src={activeTab.image}
+                                            alt={activeTab.name}
+                                            className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'}`}
+                                            style={{
+                                                objectPosition: ['carbon-credits', 'sports'].includes(activeTab.id) ? '20% center' : 'center center'
+                                            }}
+                                        />
 
-                                    {/* Overlay Heart Button */}
-                                    <button className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
-                                        <Heart className="w-6 h-6 text-gray-400" />
-                                    </button>
+                                        {/* Overlay Heart Button */}
+                                        <button className="absolute top-6 right-6 w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                                            <Heart className="w-6 h-6 text-gray-400" />
+                                        </button>
 
-                                    {/* Decorative Overlay for premium feel */}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                                        {/* Decorative Overlay for premium feel */}
+                                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                                    </div>
+
+                                    {/* Logo Badge - Overlapping - Outside overflow-hidden container */}
+                                    <div className="absolute -bottom-8 left-6 w-16 h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
+                                        <Image
+                                            src="/assets/copym/png/Copym-05.avif"
+                                            alt="Copym"
+                                            className="w-full h-full object-cover scale-[1.3]"
+                                        />
+                                    </div>
                                 </div>
 
                                 {/* Bottom Bar - Title, Price & Growth matches reference */}
@@ -350,18 +361,11 @@ export default function WhyItMatters() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.5 }}
-                                    className="px-2 pt-4 pb-2"
+                                    className="px-2 pt-10 pb-2"
                                 >
                                     <div className="flex flex-col gap-0.5">
                                         {/* Title Row */}
                                         <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
-                                                <Image
-                                                    src="/assets/copym/png/Copym-05.avif"
-                                                    alt="Copym"
-                                                    className="w-full h-full object-cover scale-[1.7]"
-                                                />
-                                            </div>
                                             <h3 className="text-xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {activeTab.cardTitle || activeTab.title}
                                             </h3>
@@ -384,35 +388,7 @@ export default function WhyItMatters() {
                                             </div>
                                         </div>
 
-                                        {/* New Stats Row - Populated with Real Data */}
-                                        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
-                                            {/* Contract Address */}
-                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
-                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Contract Address</p>
-                                                <p className="text-[10px] font-bold text-gray-800 font-mono truncate max-w-[100px]">
-                                                    {activeTab.stats?.find(s => s.label === 'Contract Address')?.value || '0x...'}
-                                                </p>
-                                            </div>
-                                            {/* Total Asset Value */}
-                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
-                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Total Asset Value</p>
-                                                <div className="flex items-center gap-1.5">
-                                                    <p className="text-[10px] font-bold text-gray-800">
-                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.value || '$0'}
-                                                    </p>
-                                                    <span className="text-[8px] font-bold text-[#10b981] bg-[#10b981]/10 px-1 rounded">
-                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.change || ''}
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            {/* APY */}
-                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[70px]">
-                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">APY</p>
-                                                <p className="text-[10px] font-bold text-[#10b981]">
-                                                    {activeTab.stats?.find(s => s.label === 'APY')?.value || '0%'}
-                                                </p>
-                                            </div>
-                                        </div>
+
                                     </div>
                                 </motion.div>
 
@@ -471,7 +447,35 @@ export default function WhyItMatters() {
                                     </p>
                                 </div>
 
-                                {/* Stats Grid Removed as per request (metrics moved to left card) */}
+                                {/* Stats Row - Moved from left card */}
+                                <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide pt-2">
+                                    {/* Contract Address */}
+                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
+                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Contract Address</p>
+                                        <p className="text-[10px] font-bold text-gray-800 font-mono truncate max-w-[100px]">
+                                            {activeTab.stats?.find(s => s.label === 'Contract Address')?.value || '0x...'}
+                                        </p>
+                                    </div>
+                                    {/* Total Asset Value */}
+                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
+                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Total Asset Value</p>
+                                        <div className="flex items-center gap-1.5">
+                                            <p className="text-[10px] font-bold text-gray-800">
+                                                {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.value || '$0'}
+                                            </p>
+                                            <span className="text-[8px] font-bold text-[#10b981] bg-[#10b981]/10 px-1 rounded">
+                                                {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.change || ''}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    {/* APY */}
+                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[70px]">
+                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">APY</p>
+                                        <p className="text-[10px] font-bold text-[#10b981]">
+                                            {activeTab.stats?.find(s => s.label === 'APY')?.value || '0%'}
+                                        </p>
+                                    </div>
+                                </div>
 
                                 {/* Asset Cards - Only show if assets exist */}
                                 {activeTab.assets && activeTab.assets.length > 0 && (

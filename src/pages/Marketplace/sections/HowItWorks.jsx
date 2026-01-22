@@ -58,7 +58,7 @@ export default function HowItWorks() {
 
 
                 {/* Staggered Grid Container */}
-                <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 lg:gap-x-16">
+                <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
                     <AnimatePresence mode="popLayout">
                         {visibleSteps.map((step, index) => (
                             <motion.div
@@ -72,10 +72,10 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: index * 0.1
                                 }}
-                                className={`relative flex flex-col group items-center ${index % 2 === 0 ? 'md:items-start' : 'md:items-end md:mt-48'}`}
+                                className={`relative flex flex-col group items-center ${index % 2 === 0 ? 'md:items-start lg:mt-0' : 'md:items-end md:mt-48 lg:items-center lg:mt-32'}`}
                             >
-                                {/* Card Wrapper - Custom size pattern: Big(0), Small(1), Small(2), Big(3), Big(4), Small(5) */}
-                                <div className={`relative z-10 w-full mx-auto max-w-[320px] ${[0, 3, 4].includes(index) ? 'sm:max-w-[380px]' : 'sm:max-w-[320px]'}`}>
+                                {/* Card Wrapper - Adjusted for 4 columns: Big(0), Small(1), Small(2), Big(3) */}
+                                <div className={`relative z-10 w-full mx-auto ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px]' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full'}`}>
                                     {/* Watermark Background Text - Centered to the Box */}
                                     <div className="absolute -top-16 sm:-top-20 left-1/2 -translate-x-1/2 w-full pointer-events-none select-none h-40 flex items-center justify-center z-0">
                                         <span
@@ -92,12 +92,15 @@ export default function HowItWorks() {
 
                                     {/* Outer Container with gap - light gray/mint background */}
                                     {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
-                                    <div className={`relative aspect-[4/5] bg-zinc-900/10 backdrop-blur-sm border border-white/10 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center mx-auto ${[0, 3, 4].includes(index) ? 'max-w-[260px] sm:max-w-[280px]' : 'max-w-[220px] sm:max-w-[220px]'}`}>
+                                    {/* Outer Container with gap - Dark Glass Theme (Ultra transparent to show watermark) */}
+                                    <div className={`relative aspect-[4/5] bg-zinc-900/10 backdrop-blur-sm border border-white/10 rounded-[1.5rem] p-5 mb-4 transition-transform duration-500 flex items-center justify-center mx-auto w-full`}>
                                         {/* Inner box - Subtle glass gradient */}
                                         <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
                                             {/* Plus Icon Overlay - positioned at top-right edge of inner box */}
                                             {/* Logo Only - positioned at top-right edge */}
-                                            <div className="absolute -top-4 -right-4 sm:-top-5 sm:-right-5 z-20">
+                                            {/* Plus Icon Overlay - positioned at top-right edge for 1 & 4, bottom-left for 2 & 3 */}
+                                            {/* Logo Only - positioned conditionally */}
+                                            <div className={`absolute z-20 ${[1, 2].includes(index) ? '-bottom-4 -left-4 sm:-bottom-5 sm:-left-5' : '-top-4 -right-4 sm:-top-5 sm:-right-5'}`}>
                                                 <div className="w-20 h-20 sm:w-24 sm:h-24 transition-all duration-300 hover:scale-110 drop-shadow-xl">
                                                     <img
                                                         src="/assets/copym/png/Copym-05.png"

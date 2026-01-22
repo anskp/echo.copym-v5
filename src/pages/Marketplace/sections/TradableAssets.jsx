@@ -7,22 +7,22 @@ export default function TradableAssets() {
         {
             image: "/assets/Images/icons/tradee1.png",
             title: "REAL-WORLD ASSETS",
-            description: "Access tangible value through tokenized exposure to property and infrastructure."
+            description: "Tokenized exposure to institutional real-world investment grade assets."
         },
         {
             image: "/assets/Images/icons/tradee2.png",
-            title: "REVENUE & PROFIT-SHARING TOKENS",
-            description: "Earn passive income streams backed by verified global business performance."
+            title: "REVENUE-SHARING ASSETS",
+            description: "Tokenized participation in institutional global business revenue streams."
         },
         {
             image: "/assets/Images/icons/tradee3.png",
-            title: "BRAND, IP AND DIGITAL ASSETS",
-            description: "Own stakes in brands, intellectual property and digital media ventures."
+            title: "BRAND & IP ASSETS",
+            description: "Tokenized ownership within institutional global brands and digital assets."
         },
         {
             image: "/assets/Images/icons/tradee4.png",
-            title: "CUSTOM TOKENIZED OPPORTUNITIES",
-            description: "Gain access to exclusive tokenized structures developed with strategic partners."
+            title: "CUSTOM TOKENIZED ASSETS",
+            description: "Tokenized structures designed with institutional global strategic partners."
         }
     ];
 
@@ -67,10 +67,10 @@ export default function TradableAssets() {
 
                             {/* Text Container */}
                             <div className="flex-1 px-4 sm:px-6 md:px-8 flex flex-col justify-center">
-                                <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-bold tracking-wider mb-1 text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold tracking-wider mb-3 sm:mb-4 text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     {asset.title}
                                 </h3>
-                                <p className="text-xs sm:text-sm text-gray-400 font-medium tracking-wide leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-xs sm:text-sm text-gray-400 font-medium tracking-wide leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     {asset.description}
                                 </p>
                             </div>
