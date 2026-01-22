@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import privacyaiHero from '../../../components/images/privacyaihero.png';
 
 const Hero = () => {
@@ -7,7 +8,7 @@ const Hero = () => {
         <section className="relative overflow-hidden h-screen w-full">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src={privacyaiHero}
                     alt="Privacy AI Hero"
                     className="w-full h-full object-cover"

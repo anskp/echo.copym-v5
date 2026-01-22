@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import assetsImage from '../../../components/images/assets.png';
 import investorsImage from '../../../components/images/investors.png';
 import partnersImage from '../../../components/images/partners.png';
@@ -37,7 +38,7 @@ const WhoWeServe = () => {
           <div className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col">
             {/* Large Image - Dominant Visual */}
             <div className="mb-4 sm:mb-5 lg:mb-6 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px] -mt-2 sm:-mt-3 lg:-mt-4">
-              <img
+              <Image
                 src={assetsImage}
                 alt="Asset Owners & Institutions"
                 className="w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
@@ -123,13 +124,13 @@ const WhoWeServe = () => {
             {/* Image on Top (Mobile) / Right (Desktop) */}
             <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-center lg:justify-end lg:order-2 min-h-[180px] sm:min-h-[220px] lg:min-h-[140px] -mt-2 sm:-mt-3 lg:mt-0">
               {/* Mobile Image */}
-              <img
+              <Image
                 src={investorsMobileImage}
                 alt="Investors"
                 className="lg:hidden w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
               />
               {/* Desktop Image */}
-              <img
+              <Image
                 src={investorsImage}
                 alt="Investors"
                 className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125"
@@ -215,13 +216,13 @@ const WhoWeServe = () => {
             {/* Image on Top (Mobile) / Left (Desktop) */}
             <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[180px] sm:min-h-[220px] lg:min-h-[160px] flex-shrink-0 -mt-2 sm:-mt-3 lg:mt-0">
               {/* Mobile Image */}
-              <img
+              <Image
                 src={partnersMobileImage}
                 alt="Partners"
                 className="lg:hidden w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
               />
               {/* Desktop Image */}
-              <img
+              <Image
                 src={partnersImage}
                 alt="Partners"
                 className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125 translate-x-2"

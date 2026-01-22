@@ -31,7 +31,7 @@ export default function TokenManagement() {
             icon: '/assets/Images/compliance.png',
             badge: '100% Compliant',
             number: '03.',
-            scale: 'scale-75'
+            scale: 'scale-85'
         },
         {
             title: 'Communication Hub',

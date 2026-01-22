@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Image from '../../../../components/Image'; // Import our AVIF-compatible Image component
 
 export default function PassUnlocksSection() {
   const benefits = [

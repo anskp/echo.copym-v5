@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import heroBg from '../../../components/images/marketplacehero.png';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[500px] h-[60vh] sm:h-screen w-full">
+    <section className="relative overflow-hidden min-h-[500px] h-[60vh] sm:h-screen w-full bg-black">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 flex justify-end">
-        <img
+      <div className="absolute inset-0 z-0 [&>picture]:w-full [&>picture]:h-full [&>picture]:block">
+        <Image
           src={heroBg}
           alt="Marketplace Background"
           className="w-full h-full object-cover object-right"

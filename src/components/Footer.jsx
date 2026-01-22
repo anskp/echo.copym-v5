@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import Image from './Image'; // Import our new AVIF-compatible Image component
 
 export default function Footer() {
   return (
@@ -15,7 +16,7 @@ export default function Footer() {
           {/* Left Side - Logo, Description */}
           <div className="flex flex-col">
             <div className="flex items-center mb-0">
-              <img
+              <Image
                 loading="lazy"
                 src="/assets/copym/png/Copym-01-1.png"
                 alt="COPYM"
@@ -166,7 +167,7 @@ export default function Footer() {
           {/* Logo and Tagline */}
           <div className="flex flex-col">
             <div className="flex items-center mb-1">
-              <img
+              <Image
                 loading="lazy"
                 src="/assets/copym/png/Copym-01-1.png"
                 alt="COPYM"
@@ -331,7 +332,7 @@ export default function Footer() {
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         {/* Zoomed in from right bottom */}
         <div className="absolute right-0 bottom-0 w-[120%] sm:w-[90%] md:w-[80%] lg:w-[50%] translate-x-[20%] translate-y-[20%] opacity-80 md:opacity-90 origin-bottom-right transform scale-150">
-          <img
+          <Image
             src="/assets/Images/icons/Ellipse.png"
             alt=""
             className="w-full h-full object-contain"

@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import TokenizationHub from './pages/TokenizationHub/TokenizationHub';
 import Marketplace from './pages/Marketplace/Marketplace';
 import HomePage from './pages/HomePage/HomePage';
+import TestAvif from './pages/TestAvif';
 
 import Contact from './pages/Contact/Contact';
 import AboutUs from './pages/aboutus/aboutus';
@@ -72,6 +73,7 @@ function App() {
 
           <Route path="/zerogas" element={<ZeroGas />} />
           <Route path="/privacy-ai" element={<PrivacyAi />} />
+          <Route path="/test-avif" element={<TestAvif />} />
         </Routes>
       </main>
       <Footer />

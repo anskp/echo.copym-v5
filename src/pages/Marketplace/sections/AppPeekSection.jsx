@@ -3,6 +3,7 @@ import { GiRoundStar } from "react-icons/gi";
 import { QrCodeIcon } from "@heroicons/react/24/outline";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Image from '../../../../components/Image'; // Import our AVIF-compatible Image component
 import bitcoinflyImage from '../../../components/images/bitcoinfly.png';
 
 // 3D Phone Component
@@ -26,8 +27,8 @@ const Phone3D = ({ image, rotation = "", additionalTransform = "", phoneColor = 
         {/* Phone Screen */}
       <div className="w-full h-full rounded-[1.5rem] md:rounded-[2.5rem] p-1">
         <div className="w-full h-full rounded-[1.3rem] md:rounded-[2.3rem] overflow-hidden">
-            <img 
-              src={image} 
+            <Image
+              src={image}
               alt="App Interface"
               className="w-full h-full object-cover rounded-[2.3rem]"
             />
@@ -170,9 +171,9 @@ const FeaturesGrid = () => {
 const StoreDownloadButton = ({ store, rating, downloads, qrCode, logo, bgColor, textColor, position }) => {
   const getStoreIcon = () => {
     if (store === "Google Play") {
-      return <img src="/assets/Images/android.png" alt="Android" className="w-4 h-4" />;
+      return <Image src="/assets/Images/android.png" alt="Android" className="w-4 h-4" />;
     } else if (store === "App Store") {
-      return <img src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-4 h-4" />;
+      return <Image src="/assets/Images/apple-black-logo.png" alt="Apple" className="w-4 h-4" />;
     }
     return <div className="w-4 h-4 bg-gray-800 rounded"></div>;
   };
@@ -277,13 +278,13 @@ export default function AppPeekSection() {
                     pointerEvents: 'none'
                   }}
                 >
-                  <img 
+                  <Image
                     src={bitcoinflyImage}
                     alt="Background"
                     className="w-full h-full object-contain"
                     style={{
                       filter: 'none',
-                      
+
                       mixBlendMode: 'normal'
                     }}
                   />
@@ -292,8 +293,8 @@ export default function AppPeekSection() {
                 {/* Phone Image Only */}
                 <div className="flex justify-center items-center relative z-20">
                   <div className="relative rounded-[2.3rem] p-0.5">
-                    <img 
-                      src="/assets/Images/mobile-ads.png" 
+                    <Image
+                      src="/assets/Images/mobile-ads.png"
                       alt="App Interface"
                       className="w-[150px] h-[320px] sm:w-[180px] sm:h-[380px] md:w-[240px] md:h-[500px] object-cover rounded-[2.3rem] block"
                       style={{

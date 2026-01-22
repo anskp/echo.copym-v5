@@ -1,10 +1,11 @@
 import React from 'react';
 import { GiArrowDunk } from 'react-icons/gi';
+import Image from '../../../../components/Image'; // Import our AVIF-compatible Image component
 
 // Image-based 3D-style icons from public assets
 const PuzzleIcon = () => (
   <div className="text-center">
-    <img
+    <Image
       src="/assets/Images/icons/cs1.png"
       alt="Puzzle icon"
       className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125 "
@@ -14,7 +15,7 @@ const PuzzleIcon = () => (
 
 const House3DIcon = () => (
   <div className="text-center">
-    <img
+    <Image
       src="/assets/Images/icons/cs2.png"
       alt="3D house icon"
       className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125"
@@ -24,7 +25,7 @@ const House3DIcon = () => (
 
 const WorldwideIcon = () => (
   <div className="text-center">
-    <img
+    <Image
       src="/assets/Images/icons/cs3.png"
       alt="Worldwide icon"
       className="w-40 -pt-6 h-21 drop-shadow-lg filter brightness-125 contrast-125"
@@ -34,7 +35,7 @@ const WorldwideIcon = () => (
 
 const GrowthChartIcon = () => (
   <div className="text-center">
-    <img
+    <Image
       src="/assets/Images/icons/cs4.png"
       alt="Growth chart icon"
       className="w-40 -pt-6 h-22 drop-shadow-lg filter brightness-125 contrast-125"

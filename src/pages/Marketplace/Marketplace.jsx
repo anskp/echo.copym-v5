@@ -1,20 +1,19 @@
 import Hero from "./sections/Hero";
-import MarketplaceIntro from "./sections/MarketplaceIntro";
+// import MarketplaceIntro from "./sections/MarketplaceIntro";
 import HowItWorks from "./sections/HowItWorks";
 import WhyItMatters from "./sections/WhyItMatters";
 import TradableAssets from "./sections/TradableAssets";
 import FAQsection from "./sections/FAQsection";
-import Disclaimer from "./sections/Disclaimer";
+// import Disclaimer from './sections/Disclaimer';
 
 export default function Marketplace() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="bg-white">
       <Hero />
       <TradableAssets />
       <WhyItMatters />
       <HowItWorks />
       <FAQsection />
-      <Disclaimer />
     </div>
   );
 }

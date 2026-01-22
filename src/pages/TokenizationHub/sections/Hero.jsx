@@ -1,14 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import tokenizationHero from '../../../components/images/tokenizationhero.png';
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden h-[100vh] sm:h-screen w-full">
+    <section className="relative overflow-hidden h-[100vh] sm:h-screen w-full bg-black">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 flex justify-end">
-        <img
+      <div className="absolute inset-0 z-0 [&>picture]:w-full [&>picture]:h-full [&>picture]:block">
+        <Image
           src={tokenizationHero}
           alt="Tokenization Hero background"
           className="w-full h-full object-cover object-right"

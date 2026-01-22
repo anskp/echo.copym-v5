@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 
 export default function TradableAssets() {
     const assets = [
@@ -54,10 +55,10 @@ export default function TradableAssets() {
                         >
                             {/* Image Container */}
                             <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-center bg-black">
-                                <img
+                                <Image
                                     src={asset.image}
                                     alt={asset.title}
-                                    className={`w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-115 
+                                    className={`w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-115
                                         ${index === 1 ? 'scale-100 translate-y-2 -translate-x-6' :
                                             index === 3 ? 'scale-110 -translate-x-4' :
                                                 'scale-110'}`}

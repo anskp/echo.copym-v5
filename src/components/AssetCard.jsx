@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { GiCompass, GiChart} from "react-icons/gi";
+import { GiCompass, GiChart, GiMapPin } from "react-icons/gi";
+import Image from './Image'; // Import our AVIF-compatible Image component
 
 export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -24,7 +25,7 @@ export const AssetCard = ({ asset, isGridItem = false, onClick }) => {
     >
       {/* Background Image */}
       <div className="absolute inset-0 w-full h-full">
-        <img
+        <Image
           src={asset.image}
           alt={asset.title}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

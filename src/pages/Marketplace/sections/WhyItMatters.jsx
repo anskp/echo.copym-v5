@@ -16,6 +16,7 @@ import {
     Heart,
     TrendingUp
 } from 'lucide-react';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 
 // Import images
 import artsImg from '../../../components/images/marketplacesimg/arts.jpg';
@@ -58,6 +59,7 @@ const categories = [
                 roi: "9.2%",
                 tokensAvailable: "1,500/2,000",
                 price: "$2,400,000",
+                description: "Offers investors tokenized ownership of Renaissance-era masterpieces.",
                 image: "/assets/Images/art2.jpg"
             },
             {
@@ -66,6 +68,7 @@ const categories = [
                 roi: "12.5%",
                 tokensAvailable: "500/1,500",
                 price: "$1,850,000",
+                description: "A curated series of modern abstract art with high appreciation potential.",
                 image: "/assets/Images/art3.jpg"
             }
         ]
@@ -134,10 +137,10 @@ const categories = [
         growth: '+24.5%',
         topics: ['Apartment', 'House', 'Villa'],
         badges: [
-            { label: 'Commercial Real Estate', icon: <Building2 className="w-4 h-4" />, top: '15%', left: '-10%' },
-            { label: 'New York, USA', icon: <MapPin className="w-4 h-4" />, top: '45%', right: '-15%' },
-            { label: '1,000 Total Tokens', icon: <Layers className="w-4 h-4" />, bottom: '25%', left: '-12%' },
-            { label: '750 Available', icon: <CheckCircle2 className="w-4 h-4" />, bottom: '10%', right: '-10%' },
+            { label: 'Commercial Real Estate', icon: <Building2 className="w-4 h-4" />, top: '10%', left: '-10%' },
+            { label: 'New York, USA', icon: <MapPin className="w-4 h-4" />, top: '35%', right: '-15%' },
+            { label: '1,000 Total Tokens', icon: <Layers className="w-4 h-4" />, top: '60%', left: '-12%' },
+            { label: '750 Available', icon: <CheckCircle2 className="w-4 h-4" />, top: '85%', right: '-10%' },
         ],
         assets: [
             {
@@ -206,7 +209,8 @@ const categories = [
         name: 'Carbon Credits',
         icon: <Leaf className="w-4 h-4" />,
         image: carbonCreditsImg,
-        title: "Carbon Credit",
+        title: "Carbon Credits",
+        cardTitle: "Wind Related Assets",
         description: "Transparent digital carbon assets backed by real-world climate action.Designed for accountability, traceability, and global environmental progress.",
         benefits: ["ESG Compliant", "Verified Offsets", "Sustainable Returns"],
         stats: [
@@ -284,25 +288,43 @@ export default function WhyItMatters() {
                         <button
                             key={cat.id}
                             onClick={() => setActiveTab(cat)}
-                            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 shadow-sm border backdrop-blur-md
-                                ${activeTab.id === cat.id
-                                    ? 'bg-[#ecf6ff]/80 text-[#2563eb] border-[#d1e9ff]/50 scale-105 shadow-blue-100/50'
-                                    : 'bg-white/60 text-gray-600 border-white/40 hover:bg-white/80'}`}
+                            className="group flex items-center gap-1 transition-transform duration-300 hover:scale-[1.02]"
                             style={{ fontFamily: 'Palanquin, sans-serif' }}
                         >
-                            <span className={activeTab.id === cat.id ? 'text-[#2563eb]' : 'text-gray-400'}>
-                                {cat.icon}
-                            </span>
-                            {cat.name}
+                            {/* Icon Circle - Straight Right Edge */}
+                            <div className={`w-8 h-8 rounded-l-full rounded-r-none flex items-center justify-center transition-all duration-300 border-r-0 shadow-2xl
+                                ${activeTab.id === cat.id
+                                    ? 'bg-[#10b981] text-white'
+                                    : 'bg-white text-gray-400 group-hover:text-gray-600'}`}>
+                                {React.cloneElement(cat.icon, { className: "w-4 h-4" })}
+                            </div>
+
+                            {/* Text Pill - Straight Left Edge */}
+                            <div className={`px-4 py-1.5 rounded-r-full rounded-l-none text-sm font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-8
+                                ${activeTab.id === cat.id
+                                    ? 'bg-black text-white'
+                                    : 'bg-white text-gray-600'}`}>
+                                {cat.name}
+                            </div>
                         </button>
                     ))}
                 </div>
 
-                {/* Main Content: Two Columns */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                {/* Terms & Conditions - Centered */}
+                <div className="text-center mb-8 px-4">
+                    <h4 className="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Terms & Conditions
+                    </h4>
+                    <p className="text-[11px] text-gray-400 leading-relaxed max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
+                    </p>
+                </div>
 
-                    {/* Left Column: Visual Card */}
-                    <div className="relative flex justify-center items-center">
+                {/* Main Content: Two Columns */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+
+                    {/* Left Column: Visual Card - Aligned Top */}
+                    <div className="relative flex justify-center items-center mt-2">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={activeTab.id}
@@ -310,10 +332,10 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                 transition={{ duration: 0.5 }}
-                                className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-4 pb-20"
+                                className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-3"
                             >
                                 <div className="w-full aspect-[4/4.5] rounded-[2rem] overflow-hidden relative">
-                                    <img
+                                    <Image
                                         src={activeTab.image}
                                         alt={activeTab.name}
                                         className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'}`}
@@ -331,30 +353,74 @@ export default function WhyItMatters() {
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                                 </div>
 
-                                {/* Bottom Bar - Topics & Growth */}
+                                {/* Bottom Bar - Title, Price & Growth matches reference */}
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.5 }}
-                                    className="absolute bottom-4 left-4 right-4 flex items-center justify-between"
+                                    className="px-2 pt-4 pb-2"
                                 >
-                                    {/* Topic Tags */}
-                                    <div className="flex items-center gap-2">
-                                        {activeTab.topics && activeTab.topics.map((topic, idx) => (
-                                            <span
-                                                key={idx}
-                                                className="px-3 py-1.5 bg-white/80 backdrop-blur-sm rounded-full text-xs font-semibold text-gray-700 border border-white/60 shadow-sm"
-                                                style={{ fontFamily: 'Palanquin, sans-serif' }}
-                                            >
-                                                {topic}
-                                            </span>
-                                        ))}
-                                    </div>
+                                    <div className="flex flex-col gap-0.5">
+                                        {/* Title Row */}
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 rounded-full overflow-hidden flex-shrink-0 flex items-center justify-center">
+                                                <Image
+                                                    src="/assets/copym/png/Copym-05.avif"
+                                                    alt="Copym"
+                                                    className="w-full h-full object-cover scale-[1.7]"
+                                                />
+                                            </div>
+                                            <h3 className="text-xl font-bold text-gray-900 leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                {activeTab.cardTitle || activeTab.title}
+                                            </h3>
+                                        </div>
 
-                                    {/* Growth Indicator */}
-                                    <div className="flex items-center gap-0.5 bg-white/80 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/60 shadow-sm">
-                                        <TrendingUp className="w-3 h-3 text-[#10b981]" />
-                                        <span className="text-sm font-bold text-[#10b981]">{activeTab.growth || '+24.5%'}</span>
+                                        {/* Price & Graph Row */}
+                                        <div className="flex items-center justify-between pl-10 mb-4">
+                                            <p className="text-xs text-gray-500 font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                $20 per share
+                                            </p>
+
+                                            {/* Growth Graph */}
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-4 h-4">
+                                                    <svg viewBox="0 0 24 24" fill="none" className="w-full h-full stroke-blue-600 stroke-2">
+                                                        <path d="M3 17l6-6 4 4 8-8" strokeLinecap="round" strokeLinejoin="round" />
+                                                    </svg>
+                                                </div>
+                                                <span className="text-xs font-bold text-gray-900">{activeTab.growth || '+5%'}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* New Stats Row - Populated with Real Data */}
+                                        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                                            {/* Contract Address */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Contract Address</p>
+                                                <p className="text-[10px] font-bold text-gray-800 font-mono truncate max-w-[100px]">
+                                                    {activeTab.stats?.find(s => s.label === 'Contract Address')?.value || '0x...'}
+                                                </p>
+                                            </div>
+                                            {/* Total Asset Value */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Total Asset Value</p>
+                                                <div className="flex items-center gap-1.5">
+                                                    <p className="text-[10px] font-bold text-gray-800">
+                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.value || '$0'}
+                                                    </p>
+                                                    <span className="text-[8px] font-bold text-[#10b981] bg-[#10b981]/10 px-1 rounded">
+                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.change || ''}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {/* APY */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[70px]">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">APY</p>
+                                                <p className="text-[10px] font-bold text-[#10b981]">
+                                                    {activeTab.stats?.find(s => s.label === 'APY')?.value || '0%'}
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </motion.div>
 
@@ -413,44 +479,7 @@ export default function WhyItMatters() {
                                     </p>
                                 </div>
 
-                                {/* Stats Grid - Glassy boxes */}
-                                {activeTab.stats && activeTab.stats.length > 0 ? (
-                                    <div className="space-y-4">
-                                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-                                            {activeTab.stats.map((stat, i) => (
-                                                <motion.div
-                                                    key={i}
-                                                    initial={{ opacity: 0, y: 10 }}
-                                                    animate={{ opacity: 1, y: 0 }}
-                                                    transition={{ delay: 0.1 * i, duration: 0.3 }}
-                                                    className="bg-white/50 backdrop-blur-md rounded-lg p-2 border border-white/40 shadow-sm hover:shadow-md hover:bg-white/80 transition-all duration-300"
-                                                >
-                                                    <p className="text-[8px] text-gray-400 font-medium uppercase tracking-wider mb-0.5">{stat.label}</p>
-                                                    <div className="flex items-center gap-1">
-                                                        <p className="text-[10px] font-bold text-gray-800" style={{ fontFamily: 'Palanquin, sans-serif' }}>{stat.value}</p>
-                                                        {stat.change && (
-                                                            <span className="text-[8px] font-semibold text-[#10b981]">{stat.change}</span>
-                                                        )}
-                                                    </div>
-                                                </motion.div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className="space-y-4">
-                                        <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">Key Advantages</h4>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                            {activeTab.benefits.map((benefit, i) => (
-                                                <div key={i} className="flex items-center gap-3 group">
-                                                    <div className="w-6 h-6 rounded-full bg-[#10b981] flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                                                        <ChevronRight className="w-3.5 h-3.5 text-white" />
-                                                    </div>
-                                                    <span className="text-gray-700 font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>{benefit}</span>
-                                                </div>
-                                            ))}
-                                        </div>
-                                    </div>
-                                )}
+                                {/* Stats Grid Removed as per request (metrics moved to left card) */}
 
                                 {/* Asset Cards - Only show if assets exist */}
                                 {activeTab.assets && activeTab.assets.length > 0 && (
@@ -463,51 +492,56 @@ export default function WhyItMatters() {
                                                     initial={{ opacity: 0, y: 20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.3 + (idx * 0.15), duration: 0.5 }}
-                                                    className="bg-white rounded-2xl p-4 shadow-lg border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+                                                    className="bg-white rounded-[2rem] shadow-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                                                 >
-                                                    {/* Asset Image */}
-                                                    <div className="w-full h-24 rounded-xl overflow-hidden mb-3">
+                                                    {/* Top Image Area - Reduced Height */}
+                                                    <div className="relative h-40 w-full">
                                                         <img
                                                             src={asset.image}
                                                             alt={asset.name}
-                                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                         />
-                                                    </div>
-
-                                                    {/* Asset Info */}
-                                                    <h5 className="font-bold text-gray-900 text-sm mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                        {asset.name}
-                                                    </h5>
-                                                    <div className="flex items-center gap-1 text-gray-500 text-xs mb-2">
-                                                        <MapPin className="w-3 h-3" />
-                                                        <span>{asset.location}</span>
-                                                    </div>
-
-                                                    {/* Stats */}
-                                                    <div className="flex items-center justify-between text-xs mb-3">
-                                                        <div>
-                                                            <p className="text-gray-400">Expected ROI</p>
-                                                            <p className="font-bold text-[#10b981]">{asset.roi}</p>
-                                                        </div>
-                                                        <div className="text-right">
-                                                            <p className="text-gray-400">Tokens</p>
-                                                            <p className="font-bold text-gray-700">{asset.tokensAvailable}</p>
+                                                        {/* Logo Badge - Overlapping - Simplified */}
+                                                        <div className="absolute -bottom-8 left-6 w-16 h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
+                                                            <Image
+                                                                src="/assets/copym/png/Copym-05.avif"
+                                                                alt="Copym"
+                                                                className="w-full h-full object-cover scale-[1.3]"
+                                                            />
                                                         </div>
                                                     </div>
 
-                                                    {/* Price & Actions */}
-                                                    <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                                                        <div>
-                                                            <p className="text-[10px] text-gray-400 uppercase">Price</p>
-                                                            <p className="text-sm font-bold text-gray-900">{asset.price}</p>
+                                                    {/* Content Area - Reduced Padding */}
+                                                    <div className="pt-10 px-6 pb-5">
+                                                        {/* Header Row: Title & Price - Smaller Text */}
+                                                        <div className="flex flex-col mb-2">
+                                                            <div className="flex items-baseline justify-end gap-1.5 self-end mb-1">
+                                                                <p className="font-bold text-gray-900 text-xs leading-tight">{asset.price.replace('$', '')}</p>
+                                                                <div className="flex items-center gap-1">
+                                                                    <span className="text-[10px] text-gray-400 font-medium tracking-wide">TVT</span>
+                                                                    <span className="inline-flex items-center justify-center w-3 h-3 rounded-full border border-gray-300 text-[8px] text-gray-400">i</span>
+                                                                </div>
+                                                            </div>
+                                                            <h5 className="font-bold text-base text-gray-900 leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                                {asset.name}
+                                                            </h5>
                                                         </div>
-                                                        <div className="flex gap-2">
-                                                            <button className="px-2 py-1 bg-[#10b981] text-white text-[10px] font-bold rounded-lg hover:bg-[#059669] transition-colors">
-                                                                Invest
-                                                            </button>
-                                                            <button className="px-2 py-1 bg-gray-100 text-gray-600 text-[10px] font-medium rounded-lg hover:bg-gray-200 transition-colors">
-                                                                Know More
-                                                            </button>
+
+                                                        {/* Description - Reduced Margin & Size */}
+                                                        <p className="text-gray-500 text-[11px] font-medium leading-relaxed mb-4 line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                            {asset.description || "Premium investment opportunity with stable returns and high growth potential."}
+                                                        </p>
+
+                                                        {/* Footer Row: Tags */}
+                                                        <div className="flex flex-wrap gap-2.5">
+                                                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ecf6ff] text-[#2563eb] text-[10px] font-bold transition-colors hover:bg-blue-100">
+                                                                {React.cloneElement(activeTab.icon, { className: "w-3 h-3" })}
+                                                                {activeTab.name}
+                                                            </span>
+                                                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-gray-700 text-[10px] font-bold transition-colors hover:bg-gray-200">
+                                                                <MapPin className="w-3 h-3" />
+                                                                {asset.location.split(',').pop().trim()}
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </motion.div>
@@ -516,13 +550,32 @@ export default function WhyItMatters() {
                                     </div>
                                 )}
 
-                                <div className="pt-8">
+                                <div className="pt-8 flex flex-col items-center">
                                     <button className="flex items-center gap-3 px-8 py-3 bg-transparent border-2 border-[#10b981] text-gray-800 rounded-full font-semibold text-base hover:bg-[#10b981]/5 transition-all duration-300 group">
                                         Explore Marketplace
                                         <div className="w-8 h-8 rounded-full bg-[#10b981] flex items-center justify-center group-hover:scale-110 transition-transform">
                                             <ChevronRight className="w-4 h-4 text-white" />
                                         </div>
                                     </button>
+
+                                    {/* Terms & Conditions Disclaimer */}
+                                    <div className="mt-12 max-w-4xl mx-auto px-4">
+                                        <h4
+                                            className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 text-center"
+                                            style={{ fontFamily: 'Palanquin, sans-serif' }}
+                                        >
+                                            Terms & Conditions
+                                        </h4>
+                                        <p
+                                            className="text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium text-center"
+                                            style={{ fontFamily: 'Palanquin, sans-serif' }}
+                                        >
+                                            Copym does not provide brokerage services, investment banking services, underwriting services,
+                                            investment recommendations, or investment advice to any person. Copym operates as a technology
+                                            platform focused on distributed ledger technology to improve efficiency, accessibility, and
+                                            transparency in financial technologies.
+                                        </p>
+                                    </div>
                                 </div>
                             </motion.div>
                         </AnimatePresence>
@@ -530,6 +583,6 @@ export default function WhyItMatters() {
 
                 </div>
             </div>
-        </section>
+        </section >
     );
 }

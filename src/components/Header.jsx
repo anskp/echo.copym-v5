@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, cloneElement } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa';
 import { HiCube } from 'react-icons/hi';
+import Image from './Image'; // Import our new AVIF-compatible Image component
 import tiicon4 from '../components/icons/Tokenization/tiicon4.png';
 import aboutush from '../components/images/aboutush.png';
 import tokencoinh from '../components/images/tokencoinh.png';
@@ -52,13 +53,13 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={tokencoinh} alt="Tokenization" className="w-20 h-20 object-contain" />,
+          icon: <Image src={tokencoinh} alt="Tokenization" className="w-20 h-20 object-contain" />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
         },
         {
-          icon: <img src={tiicon4} alt="Marketplace" className="w-20 h-20 object-contain" />,
+          icon: <Image src={tiicon4} alt="Marketplace" className="w-20 h-20 object-contain" />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
@@ -70,13 +71,13 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={zerogash} alt="Zero Gas" className="w-20 h-20 object-contain" />,
+          icon: <Image src={zerogash} alt="Zero Gas" className="w-20 h-20 object-contain" />,
           heading: "Zero Gas",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/zerogas"
         },
         {
-          icon: <img src={parivaryaih} alt="Privacy AI" className="w-20 h-20 object-contain" />,
+          icon: <Image src={parivaryaih} alt="Privacy AI" className="w-20 h-20 object-contain" />,
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/privacy-ai"
@@ -88,7 +89,7 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <img src={aboutush} alt="About Us" className="w-20 h-20 object-contain" />,
+          icon: <Image src={aboutush} alt="About Us" className="w-20 h-20 object-contain" />,
           heading: "About Us",
           description: "Learn about our mission, vision, and the team driving CopyM forward.",
           path: "/about"
@@ -137,7 +138,7 @@ export default function Header() {
 
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
-            <img
+            <Image
               src="/assets/copym/png/Copym-01-1.png"
               alt="CopyM Logo"
               className="w-auto h-10 sm:h-12 object-contain"
@@ -177,7 +178,7 @@ export default function Header() {
 
                       {/* Desktop Dropdown Card */}
                       <motion.div
-                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
+                        className="fixed top-24 right-[calc(50%-240px)] sm:right-[calc(50%-200px)] lg:bg-[#0e0e0e]/90 backdrop-blur-xl rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
                         style={{
                           width: 'max-content',
                           maxWidth: '90vw',
@@ -189,9 +190,9 @@ export default function Header() {
                         exit={{ opacity: 0, y: 10, translateX: '-50%' }}
                         transition={{ duration: 0.2 }}
                       >
-                        {/* Green Glow/Shades - Intensified */}
-                        <div className="absolute top-0 right-0 w-[50%] h-[50%] bg-[#15a36e]/30 blur-[80px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
-                        <div className="absolute bottom-0 left-0 w-[50%] h-[50%] bg-[#15a36e]/20 blur-[80px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
+                        {/* Green Glow/Shades - Spreaded & Transparent */}
+                        <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[#15a36e]/40 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
+                        <div className="absolute bottom-0 left-0 w-[60%] h-[60%] bg-[#15a36e]/30 blur-[120px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
 
                         <div className="relative w-[320px] sm:w-[400px] lg:w-[480px] bg-transparent p-6 rounded-2xl z-10">
                           {/* Title */}
@@ -290,7 +291,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className="flex items-center"
                 >
-                  <img
+                  <Image
                     src="/assets/copym/png/Copym-02-1.png"
                     alt="CopyM"
                     className="h-8 w-auto"
@@ -355,7 +356,9 @@ export default function Header() {
                                   onClick={() => setIsMenuOpen(false)}
                                 >
                                   <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-white text-xs">
-                                    {sub.icon}
+                                    {cloneElement(sub.icon, {
+                                      className: "w-4 h-4 object-contain"
+                                    })}
                                   </div>
                                   <span className="text-sm font-medium">{sub.heading}</span>
                                 </Link>

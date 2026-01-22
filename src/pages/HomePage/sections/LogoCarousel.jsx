@@ -7,6 +7,12 @@ const LogoCarousel = () => {
     { src: "/assets/blockchains/solana.png", alt: "Solana" },
     { src: "/assets/blockchains/ethereum-eth-logo.svg", alt: "Ethereum" },
     { src: "/assets/svg/masdarr.svg", alt: "Masdar" },
+    { src: "/assets/blockchains/arbitrum-arb-logo-full.svg", alt: "Arbitrum" },
+    { src: "/assets/blockchains/aws-svgrepo-com.svg", alt: "AWS" },
+    { src: "/assets/blockchains/Base_Logo_0.svg", alt: "Base" },
+    { src: "/assets/blockchains/plume logo.jpg", alt: "Plume" },
+    { src: "/assets/blockchains/Polygon.avif", alt: "Polygon" },
+    { src: "/assets/blockchains/canton-logo-black.svg", alt: "Canton" },
   ];
 
   // Duplicate logos multiple times for seamless loop
@@ -35,7 +41,10 @@ const LogoCarousel = () => {
                   <img
                     src={logo.src}
                     alt={logo.alt}
-                    className="h-7 sm:h-9 md:h-11 lg:h-12 w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-[160px]"
+                    className={`${['Base', 'Plume', 'Canton'].includes(logo.alt)
+                      ? 'h-3 sm:h-5 md:h-6 lg:h-7'
+                      : 'h-7 sm:h-9 md:h-11 lg:h-12'
+                      } w-auto object-contain max-w-[120px] sm:max-w-[140px] md:max-w-[160px]`}
                   />
                 </div>
               ))}

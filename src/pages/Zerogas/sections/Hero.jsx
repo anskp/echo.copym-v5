@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 import zerogashero from '../../../components/images/zerogashero.png';
 
 const Hero = () => {
@@ -7,7 +8,7 @@ const Hero = () => {
         <section className="relative overflow-hidden min-h-[500px] h-[70vh] sm:h-screen w-full">
             {/* Background Image */}
             <div className="absolute inset-0 z-0 flex justify-end">
-                <img
+                <Image
                     src={zerogashero}
                     alt="Zero Gas Hero"
                     className="w-full h-full object-cover object-right"
