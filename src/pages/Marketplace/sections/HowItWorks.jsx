@@ -83,11 +83,11 @@ export default function HowItWorks() {
                                     duration: 0.5,
                                     delay: index * 0.1
                                 }}
-                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-[-40px]' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[600px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[800px]'))}`}
+                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-[-40px]' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[750px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[800px]'))}`}
                             >
                                 {/* Card Wrapper - Side-by-side for cards 2 & 3 on large screens */}
                                 <div className={`relative z-10 w-full mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
-                                    ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' :
+                                    ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[-10%]' :
                                         index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' : ''}`}>
 
                                     {/* Visual Group - Constrains width of image/watermark for small cards */}
