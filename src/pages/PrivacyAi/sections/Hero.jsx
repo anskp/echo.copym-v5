@@ -5,7 +5,7 @@ import privacyaiHero from '../../../components/images/privacyaihero.png';
 
 const Hero = () => {
     return (
-        <section className="relative overflow-hidden h-screen w-full">
+        <section className="relative overflow-hidden min-h-[500px] h-[60vh] sm:h-screen w-full bg-black">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
@@ -16,10 +16,10 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-black/25"></div>
             </div>
 
-            <div className="relative z-10 w-full h-full flex items-center justify-start px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+            <div className="relative z-10 container mx-auto px-4 h-full flex flex-col items-start justify-start pt-32 sm:pt-40 md:pt-48 lg:pt-60">
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
                     className="max-w-xl lg:max-w-2xl w-full text-left"
                 >
@@ -29,7 +29,7 @@ const Hero = () => {
                         <span className="text-white block mt-1">PRIVACY LAYER</span>
                     </h1>
                     <p className="text-base sm:text-lg md:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
+                        Privacy AI is CopyM's intelligent privacy layer. It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.
                     </p>
                 </motion.div>
             </div>

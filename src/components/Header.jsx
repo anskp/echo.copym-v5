@@ -290,9 +290,9 @@ export default function Header() {
                   className="flex items-center"
                 >
                   <Image
-                    src="/assets/copym/png/Copym-02-1.png"
+                    src="/assets/copym/png/Copym-01-1.png"
                     alt="CopyM"
-                    className="h-8 w-auto"
+                    className="h-14 w-auto"
                   />
                 </Link>
                 <button
@@ -353,9 +353,9 @@ export default function Header() {
                                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-colors"
                                   onClick={() => setIsMenuOpen(false)}
                                 >
-                                  <div className="w-8 h-8 rounded bg-white/10 flex items-center justify-center text-white text-xs">
+                                  <div className="w-12 h-12 flex items-center justify-center text-white text-xs">
                                     {cloneElement(sub.icon, {
-                                      className: "w-4 h-4 object-contain"
+                                      className: "w-12 h-12 object-contain"
                                     })}
                                   </div>
                                   <span className="text-sm font-medium">{sub.heading}</span>
