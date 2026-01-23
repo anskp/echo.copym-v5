@@ -59,9 +59,9 @@ export default function TradableAssets() {
                                     src={asset.image}
                                     alt={asset.title}
                                     className={`w-full h-full object-contain object-left-bottom transition-transform duration-500
-                                        ${index === 0 ? 'scale-100 translate-y-4 -translate-x-2' :
-                                            index === 1 ? 'scale-100 translate-y-8 -translate-x-1.5' :
-                                                'scale-100'}`}
+                                        ${index === 0 ? 'scale-90 sm:scale-100 translate-y-2 sm:translate-y-4 -translate-x-1 sm:-translate-x-2' :
+                                            index === 1 ? 'scale-90 sm:scale-100 translate-y-4 sm:translate-y-8 -translate-x-1 sm:-translate-x-1.5' :
+                                                'scale-100 translate-y-1 sm:translate-y-0'}`}
                                 />
                             </div>
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Building2,
@@ -274,6 +274,14 @@ const categories = [
 
 export default function WhyItMatters() {
     const [activeTab, setActiveTab] = useState(categories[0]);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
 
     return (
         <section
@@ -305,12 +313,12 @@ export default function WhyItMatters() {
                 </div>
 
                 {/* Category Tags Bar */}
-                <div className="flex flex-wrap justify-center gap-4 mb-8 px-2">
+                <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 px-2">
                     {categories.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setActiveTab(cat)}
-                            className="group flex items-center gap-1 transition-transform duration-300 hover:scale-[1.02]"
+                            className="group flex items-center transition-transform duration-300 hover:scale-[1.02] mb-1"
                             style={{ fontFamily: 'Palanquin, sans-serif' }}
                         >
                             {/* Icon Circle - Straight Right Edge */}
@@ -322,7 +330,7 @@ export default function WhyItMatters() {
                             </div>
 
                             {/* Text Pill - Straight Left Edge */}
-                            <div className={`px-4 py-1.5 rounded-r-full rounded-l-none text-sm font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-8
+                            <div className={`px-3 sm:px-4 py-1 sm:py-1.5 rounded-r-full rounded-l-none text-[12px] sm:text-sm font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-7 sm:h-8
                                 ${activeTab.id === cat.id
                                     ? 'bg-black text-white'
                                     : 'bg-white text-gray-600'}`}>
@@ -432,18 +440,18 @@ export default function WhyItMatters() {
                                             repeatType: "reverse",
                                             repeatDelay: 4 + Math.random() * 3
                                         }}
-                                        className="absolute z-10 bg-white/40 backdrop-blur-xl rounded-2xl px-5 py-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/60 flex items-center gap-4 min-w-[220px]"
+                                        className="absolute z-10 bg-white/40 backdrop-blur-xl rounded-2xl px-3 py-2 sm:px-5 sm:py-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/60 flex items-center gap-3 sm:gap-4 min-w-[150px] sm:min-w-[220px]"
                                         style={{
-                                            top: badge.top,
-                                            left: badge.left,
-                                            right: badge.right,
-                                            bottom: badge.bottom
+                                            top: badge.top ? (isMobile ? `calc(${badge.top} + ${badge.top.includes('-') ? '5%' : '2%'})` : badge.top) : undefined,
+                                            left: badge.left ? (isMobile ? `calc(${badge.left} + ${badge.left.includes('-') ? '8%' : '5%'})` : badge.left) : undefined,
+                                            right: badge.right ? (isMobile ? `calc(${badge.right} + ${badge.right.includes('-') ? '8%' : '5%'})` : badge.right) : undefined,
+                                            bottom: badge.bottom ? (isMobile ? `calc(${badge.bottom} + ${badge.bottom.includes('-') ? '5%' : '2%'})` : badge.bottom) : undefined,
                                         }}
                                     >
-                                        <div className="w-10 h-10 rounded-xl bg-white/60 flex items-center justify-center shadow-inner">
-                                            <span className="text-[#2563eb] scale-110">{badge.icon}</span>
+                                        <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-white/60 flex items-center justify-center shadow-inner shrink-0">
+                                            <span className="text-[#2563eb] scale-90 sm:scale-110">{badge.icon}</span>
                                         </div>
-                                        <p className="text-sm font-bold text-gray-800 tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>{badge.label}</p>
+                                        <p className="text-[11px] sm:text-sm font-bold text-gray-800 tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>{badge.label}</p>
                                     </motion.div>
                                 ))}
 

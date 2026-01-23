@@ -60,9 +60,9 @@ export default function HowItWorks() {
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
                     {/* Shared Background Watermark "MARKETPLACE" for cards 2 & 3 area */}
-                    <div className="absolute top-[480px] left-1/2 -translate-x-1/2 w-full text-center pointer-events-none select-none z-0 hidden lg:block overflow-visible">
+                    <div className="absolute top-[1010px] md:top-[650px] lg:top-[650px] xl:top-[480px] left-0 w-full text-center pointer-events-none select-none z-0 overflow-visible opacity-30 lg:opacity-100">
                         <span
-                            className="font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center lg:text-[140px] leading-none"
+                            className="font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[60px] md:text-[100px] lg:text-[140px] leading-none"
                             style={{
                                 backgroundImage: 'radial-gradient(ellipse at center, #1C9065 0%, #088557 60%, rgba(0,0,0,0) 100%)'
                             }}
@@ -80,24 +80,27 @@ export default function HowItWorks() {
                                 exit={{ opacity: 0, scale: 0.9, y: 30 }}
                                 transition={{
                                     duration: 0.5,
-                                    duration: 0.5,
                                     delay: index * 0.1
                                 }}
-                                className={`relative flex flex-col group items-center ${index === 0 ? 'md:items-start lg:mt-[-40px]' : (index === 1 ? 'md:items-end md:mt-48 lg:items-start lg:mt-[750px]' : (index === 2 ? 'md:items-start lg:items-start lg:mt-40' : 'md:items-end md:mt-48 lg:items-center lg:mt-[800px]'))}`}
+                                className={`relative flex flex-col group ${index % 2 === 0 ? 'items-start' : 'items-end'} 
+                                    ${index === 0 ? 'md:items-start lg:mt-[-40px]' :
+                                        index === 1 ? 'md:items-end md:mt-24 lg:items-start lg:mt-[500px] xl:mt-[750px]' :
+                                            index === 2 ? 'mt-32 md:items-start md:mt-36 lg:items-start lg:mt-20 xl:mt-40' :
+                                                'md:items-end md:mt-24 lg:items-center lg:mt-[550px] xl:mt-[800px]'}`}
                             >
                                 {/* Card Wrapper - Side-by-side for cards 2 & 3 on large screens */}
-                                <div className={`relative z-10 w-full mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
+                                <div className={`relative z-10 w-full ${index % 2 === 0 ? 'ml-0 mr-auto' : 'mr-0 ml-auto'} sm:mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
                                     ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[-10%]' :
                                         index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' : ''}`}>
 
                                     {/* Visual Group - Constrains width of image/watermark for small cards */}
-                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? 'max-w-[320px] lg:max-w-[150px] mx-auto lg:mx-0' : 'max-w-[320px] sm:max-w-[380px] lg:max-w-full mx-auto'} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''}`}>
+                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? `max-w-[180px] lg:max-w-[150px] ${index === 1 ? 'ml-auto mr-0' : 'ml-0 mr-auto'} lg:mx-0` : `max-w-[320px] sm:max-w-[380px] lg:max-w-full ${index === 3 ? 'ml-auto mr-0' : 'ml-0 mr-auto'}`} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''}`}>
 
                                         {/* Watermark Background Text - Only for cards 1 & 4 */}
                                         {[0, 3].includes(index) && (
-                                            <div className={`absolute pointer-events-none select-none z-0 
-                                                ${index === 0 ? 'left-0 bottom-0' :
-                                                    'right-0 bottom-0'}`}
+                                            <div className={`absolute pointer-events-none select-none z-0 left-1/2 -translate-x-1/2 bottom-0 sm:translate-x-0
+                                                ${index === 0 ? 'sm:left-0 sm:right-auto' :
+                                                    'sm:right-0 sm:left-auto'}`}
                                             >
                                                 <span
                                                     className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[80px] sm:text-[120px] lg:text-[140px] leading-none`}
@@ -118,7 +121,7 @@ export default function HowItWorks() {
                                             <div className="w-[75%] h-full flex items-center justify-center bg-gradient-to-br from-white/5 to-transparent border border-white/5 rounded-[1rem] relative overflow-visible">
                                                 {/* Logo Only - positioned conditionally */}
                                                 <div className={`absolute z-20 ${[1, 2].includes(index) ? '-bottom-4 -left-4 sm:-bottom-5 sm:-left-5' : '-top-4 -right-4 sm:-top-5 sm:-right-5'}`}>
-                                                    <div className={`${[1, 2].includes(index) ? 'w-12 h-12 sm:w-16 sm:h-16' : 'w-20 h-20 sm:w-24 sm:h-24'} transition-all duration-300 hover:scale-110 drop-shadow-xl`}>
+                                                    <div className={`${[1, 2].includes(index) ? 'w-16 h-16 sm:w-20 sm:h-20' : 'w-20 h-20 sm:w-24 sm:h-24'} transition-all duration-300 hover:scale-110 drop-shadow-xl`}>
                                                         <img
                                                             src="/assets/copym/png/Copym-05.png"
                                                             alt="Add"
@@ -143,7 +146,7 @@ export default function HowItWorks() {
                                     </div>
 
                                     {/* Title & Description */}
-                                    <div className="pl-0 pr-6 w-fit max-w-full text-left flex flex-col">
+                                    <div className={`pl-0 pr-0 w-fit max-w-full flex flex-col ${index % 2 === 0 ? 'text-left items-start sm:pr-6' : 'text-right items-end sm:text-left sm:items-start sm:pr-6'}`}>
                                         <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.title}
                                         </h3>
