@@ -70,7 +70,7 @@ function InsightCard({ insight }) {
       {/* Brand Header - Priority to Logo */}
       <div className="flex items-center justify-start h-12 mb-2">
         {insight.logo ? (
-          <div className={`${insight.name === "Alfred Kelly" || insight.title.includes("BNY Mellon") ? "w-32 h-10" : "w-24 h-8"} flex items-center justify-start`}>
+          <div className={`${insight.name === "Alfred Kelly" || insight.title.includes("BNY Mellon") ? "w-48 h-14" : "w-24 h-8"} flex items-center justify-start`}>
             <Image
               src={insight.logo}
               alt={`${insight.company} logo`}

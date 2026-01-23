@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
+
 
 
 export default function HowToTokenize() {
@@ -11,11 +11,11 @@ export default function HowToTokenize() {
   const steps = [
     {
       title: 'CREATE',
-      description: "Create you account with CopyM with your verified proof ID's and Sign up to register your identity and proof of your assets"
+      description: "Create your account with CopyM with your verified proof ID's and Sign up to register your identity and proof of your assets"
     },
     {
       title: 'ADMINISTARTE',
-      description: 'Roles and permissions would-be set. t: Ensure KYC/AML checks, especially in India, and maintain audit trails. The users would Users would be provided with interfaces to view holdings, transaction history, and token status.'
+      description: 'Roles and permissions would-be set. Ensure KYC/AML checks, especially in India, and maintain audit trails. The users would Users would be provided with interfaces to view holdings, transaction history, and token status.'
     },
     {
       title: 'DISTRIBUTE',
@@ -23,7 +23,7 @@ export default function HowToTokenize() {
     },
     {
       title: 'TRADE',
-      description: 'Roles and permissions would-be set. t: Ensure KYC/AML checks, especially in India, and maintain audit trails. The users would Users would be provided with interfaces to view holdings, transaction history, and token status.'
+      description: 'Users can buy and sell asset-backed tokens on compliant marketplaces, with transparent pricing, real-time settlement, enforced KYC/AML, and complete audit trails. Smart contracts execute trades, providing users clear visibility into balances, transactions, status.'
     }
   ];
 
@@ -115,8 +115,8 @@ export default function HowToTokenize() {
                 className="relative w-full max-w-lg"
               >
                 <div className="relative z-10">
-                  <Image
-                    src="/assets/Images/dashboard_screen.png"
+                  <img
+                    src="/assets/Images/dashboard_screen.avif"
                     alt="Dashboard Screenshot"
                     className="w-full h-auto object-contain rounded-lg"
                     style={{ filter: 'drop-shadow(0 20px 40px rgba(21, 163, 110, 0.4))' }}

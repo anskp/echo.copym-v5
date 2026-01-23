@@ -133,7 +133,7 @@ const FeatureSection = () => {
               Earn without a hassle
             </h3>
             <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Sit back and let the experts (and AI) do the heavy lifting. Your money works for
+              Sit back and let the experts and CORA-AI do the heavy lifting. Your money works for
               you, bringing in steady returns–without the stress of paperwork or
               management.
             </p>
@@ -173,7 +173,7 @@ const FeatureSection = () => {
               Explore a world of assets
             </h3>
             <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              From property and gold to private equity and art—our AI picks out
+              From property and gold to private equity and art—our CORA-AI picks out
               smart opportunities so you don't have to dig through endless
               research.
             </p>

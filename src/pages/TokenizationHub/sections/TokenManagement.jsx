@@ -108,7 +108,7 @@ export default function TokenManagement() {
                                     </p>
 
                                     {/* Know More Button - Transparent Outlined Design */}
-                                    <div className="mt-6 sm:mt-8 flex justify-start">
+                                    <div className="mt-6 sm:mt-8 flex justify-center">
                                         <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-transparent border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
                                             <span className="pl-4 pr-2 text-black group-hover:text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 Know more

@@ -225,7 +225,7 @@ const WhoWeServe = () => {
               <Image
                 src={partnersImage}
                 alt="Partners"
-                className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125 translate-x-2"
+                className="hidden lg:block w-auto h-auto max-h-[240px] object-contain transform scale-125 translate-x-2 translate-y-3"
               />
             </div>
 

@@ -131,7 +131,7 @@ const AboutUs = () => {
 
                     {/* BOTTOM: Image Area - Dual Grid */}
                     <div className="relative mt-8 sm:mt-12 w-full">
-                        <div className="flex flex-col md:flex-row gap-6 h-[600px] md:h-[500px] lg:h-[600px] w-full items-stretch">
+                        <div className="flex flex-col-reverse md:flex-row gap-6 h-[600px] md:h-[500px] lg:h-[600px] w-full items-stretch">
                             {/* Left Image - Narrower */}
                             <div className="w-full md:w-5/12 h-full rounded-[30px] md:rounded-l-[40px] md:rounded-r-none overflow-hidden">
                                 <img
