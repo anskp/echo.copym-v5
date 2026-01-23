@@ -94,21 +94,21 @@ export default function TokenManagement() {
                                 {/* Info Section */}
                                 <div className="flex flex-col flex-grow text-left space-y-1.5">
                                     <h3
-                                        className="text-xl sm:text-2xl lg:text-[23px] font-bold text-black min-h-[32px] sm:min-h-[40px] lg:min-h-[48px] flex items-center"
+                                        className="text-lg sm:text-xl lg:text-[19px] font-bold text-black min-h-[48px] sm:min-h-[56px] lg:min-h-[64px] flex items-center whitespace-nowrap"
                                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                                     >
                                         {feature.title}
                                     </h3>
 
                                     <p
-                                        className="text-sm text-gray-600 leading-snug flex-grow"
+                                        className="text-sm text-gray-600 leading-snug flex-grow min-h-[72px]"
                                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                                     >
                                         {feature.description}
                                     </p>
 
                                     {/* Know More Button - Transparent Outlined Design */}
-                                    <div className="mt-12 sm:mt-8 flex justify-center">
+                                    <div className="mt-6 sm:mt-8 flex justify-start">
                                         <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-transparent border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
                                             <span className="pl-4 pr-2 text-black group-hover:text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 Know more

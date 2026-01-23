@@ -12,11 +12,11 @@ export default function Hero() {
         <Image
           src={tokenizationHero}
           alt="Tokenization Hero background"
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-right sm:object-right scale-110 sm:scale-100 translate-y-12 sm:translate-y-0"
         />
       </div>
 
-      <div className="relative z-10 w-full h-full flex items-center justify-start px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
+      <div className="relative z-10 w-full h-full flex items-center justify-start pt-44 sm:pt-0 px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,8 +28,8 @@ export default function Hero() {
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             <span className="text-white block mb-1">TOKENIZATION </span>
-            <span className="text-[#10b981] block">HUB</span>
-            <span className="text-white block mt-1">EMPOWERING ASSET OWNERSHIP</span>
+            <span className="text-[#10b981] block">HUB <span className="text-white">EMPOWERING</span></span>
+            <span className="text-white block mt-1">ASSET OWNERSHIP</span>
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed"

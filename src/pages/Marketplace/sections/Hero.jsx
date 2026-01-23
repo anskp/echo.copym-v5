@@ -11,7 +11,7 @@ export default function Hero() {
         <Image
           src={heroBg}
           alt="Marketplace Background"
-          className="w-full h-full object-cover object-right"
+          className="w-full h-full object-cover object-right sm:object-right scale-110 sm:scale-100 translate-y-12 sm:translate-y-0"
         />
       </div>
 

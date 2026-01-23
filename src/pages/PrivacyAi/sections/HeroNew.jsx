@@ -24,7 +24,7 @@ export default function HeroNew() {
           className="max-w-xl lg:max-w-2xl w-full text-left"
         >
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-4 uppercase tracking-tight">
-            <span className="text-[#10b981] block">PRIVACY AI</span>
+            <span className="text-[#10b981] block">PRIVACY <span className="text-white">AI</span></span>
           </h1>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed">
             Privacy AI is CopyM's intelligent privacy layer. It protects sensitive asset, user and transaction data while enabling compliant tokenization on public and hybrid blockchains.

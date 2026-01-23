@@ -92,7 +92,7 @@ export default function FAQSection() {
         <section className="relative py-8 sm:py-10 md:py-14 lg:pt-20 pb-12 sm:pb-16 bg-white">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
                 {/* Section Header */}
-                <div className="text-left mb-6 sm:mb-8 lg:mb-10">
+                <div className="text-left mb-2">
                     <div className="relative w-fit mb-3 sm:mb-4">
                         <h2
                             className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold pb-1"

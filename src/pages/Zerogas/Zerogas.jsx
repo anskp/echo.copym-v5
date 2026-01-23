@@ -5,6 +5,7 @@ import Intro from './sections/Intro';
 import HowItWorks from './sections/HowItWorks';
 import WhyItMatters from './sections/WhyItMatters';
 import FAQSection from './sections/FAQSection';
+import TestimonialsSection from '../HomePage/sections/Testimonials.jsx';
 
 const ZeroGas = () => {
     return (
@@ -14,6 +15,7 @@ const ZeroGas = () => {
             <HowItWorks />
             <WhyItMatters />
             <FAQSection />
+            <TestimonialsSection />
         </div>
     );
 };
