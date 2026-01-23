@@ -50,7 +50,7 @@ export default function WhyItMatters() {
             className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl text-center mx-auto"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" /> that give you the edge in crypto trading
+            Zero gas fee execution is designed to make blockchain onboarding frictionless, ensuring that every user, <br className="hidden sm:block" /> from retail to institution, can operate without technical or fiscal barriers.
           </p>
         </div>
 

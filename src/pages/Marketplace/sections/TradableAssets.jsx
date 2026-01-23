@@ -51,7 +51,7 @@ export default function TradableAssets() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-black text-white rounded-3xl overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
+                            className="bg-black text-white rounded-[2.5rem] overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
                         >
                             {/* Image Container */}
                             <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-start bg-black">

@@ -26,6 +26,11 @@ import sportsImg from '../../../components/images/marketplacesimg/sports.avif';
 import carbonCreditsImg from '../../../components/images/marketplacesimg/carbon credits.avif';
 import luxuryBuildingImg from '../../../components/images/marketplacesimg/luxurybuilding.avif';
 import downloadImg from '../../../components/images/marketplacesimg/download (15).avif';
+import amazonRainforestIcon from '../../../components/icons/Tokenization/amazonrainforest.avif';
+import oilIcon from '../../../components/icons/Tokenization/oil.avif';
+import goldReserveImg from '../../../components/images/gold.avif';
+import premiumOfficeBuildingImg from '../../../components/images/premium-building-office.avif';
+
 
 const categories = [
     {
@@ -48,8 +53,11 @@ const categories = [
         ],
         growth: '+18.5%',
         topics: ['Paintings', 'Sculptures', 'Digital Art'],
+        cardTitle: "Renaissance Art Collections",
+        tokenPrice: '$12.50',
         badges: [
-            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '20%', left: '5%' },
+            { label: 'Blue-Chip Masterpieces', icon: <Palette className="w-4 h-4" />, top: '20%', left: '5%' },
+            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '20%', right: '5%' },
         ],
         assets: [
             {
@@ -92,9 +100,11 @@ const categories = [
         ],
         growth: '+12.3%',
         topics: ['Gold', 'Silver', 'Oil & Gas'],
+        cardTitle: "Asset-Backed Reserves",
+        tokenPrice: '$8.75',
         badges: [
-            { label: 'Commodity Token', icon: <Package className="w-4 h-4" />, top: '15%', left: '-5%' },
-            { label: 'Global Exchange', icon: <MapPin className="w-4 h-4" />, bottom: '35%', right: '-8%' },
+            { label: 'Hard Asset Backing', icon: <Package className="w-4 h-4" />, top: '15%', left: '5%' },
+            { label: 'Global Market Access', icon: <MapPin className="w-4 h-4" />, bottom: '25%', right: '5%' },
         ],
         assets: [
             {
@@ -103,7 +113,8 @@ const categories = [
                 roi: '2.15%',
                 tokensAvailable: '215,000/250,000',
                 price: '$12,500,000',
-                image: commoditiesImg
+                description: "Secure, physically-backed gold tokens providing a digital hedge against inflation and market volatility.",
+                image: goldReserveImg
             },
             {
                 name: 'Oil & Gas Fund',
@@ -111,8 +122,10 @@ const categories = [
                 roi: '5.80%',
                 tokensAvailable: '425,000/500,000',
                 price: '$5,670,000',
-                image: downloadImg
+                description: "Participate in institutional-grade energy production and revenue streams from major Texas exploration projects.",
+                image: oilIcon
             }
+
         ]
     },
     {
@@ -120,9 +133,9 @@ const categories = [
         name: 'Real Estate',
         icon: <Building2 className="w-4 h-4" />,
         image: realEstateImg,
-        title: "Tokenized Premium Real Estate",
+        title: "Tokenized institutional Real Estate",
         description: "Access institutional-grade property investments with fractional ownership. Earn rental yields and capital appreciation without the traditional barriers to entry.",
-        benefits: ["Fractional Ownership", "Monthly Rental Yields", "High Liquid Market"],
+        benefits: ["Fractional Ownership", "Monthly Rental Yields", "Highly Liquid Market"],
         stats: [
             { label: 'Total Asset Value', value: '$234,700', change: '+3.1%' },
             { label: 'APY', value: '4.11%', change: null },
@@ -135,11 +148,12 @@ const categories = [
         ],
         growth: '+24.5%',
         topics: ['Apartment', 'House', 'Villa'],
+        cardTitle: "Premium Property Portfolios",
+        tokenPrice: '$24.99',
         badges: [
-            { label: 'Commercial Real Estate', icon: <Building2 className="w-4 h-4" />, top: '10%', left: '-10%' },
-            { label: 'New York, USA', icon: <MapPin className="w-4 h-4" />, top: '35%', right: '-15%' },
-            { label: '1,000 Total Tokens', icon: <Layers className="w-4 h-4" />, top: '60%', left: '-12%' },
-            { label: '750 Available', icon: <CheckCircle2 className="w-4 h-4" />, top: '85%', right: '-10%' },
+            { label: 'Institutional Real Estate', icon: <Building2 className="w-4 h-4" />, top: '10%', left: '5%' },
+            { label: 'Verified Ownership', icon: <ShieldCheck className="w-4 h-4" />, top: '45%', right: '5%' },
+            { label: '750 Available', icon: <CheckCircle2 className="w-4 h-4" />, bottom: '20%', left: '5%' },
         ],
         assets: [
             {
@@ -148,6 +162,7 @@ const categories = [
                 roi: '6.8%',
                 tokensAvailable: '1200/1500',
                 price: '$350,000',
+                description: "High-yield residential property in a prime Miami location with consistent rental demand and appreciation potential.",
                 image: luxuryBuildingImg
             },
             {
@@ -156,7 +171,8 @@ const categories = [
                 roi: '8.5%',
                 tokensAvailable: '750/1000',
                 price: '$500,000',
-                image: realEstateImg
+                description: "Fractional ownership in a prestigious Manhattan commercial space with long-term institutional tenants.",
+                image: premiumOfficeBuildingImg
             }
         ]
     },
@@ -165,7 +181,7 @@ const categories = [
         name: 'Sports',
         icon: <Trophy className="w-4 h-4" />,
         image: sportsImg,
-        title: "Sports Asset Tokenization",
+        title: "Professional Sports Assets",
         description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and ownership.",
         benefits: ["Fan Ownership", "Revenue Sharing", "Global Access"],
         stats: [
@@ -180,9 +196,10 @@ const categories = [
         ],
         growth: '+31.2%',
         topics: ['Teams', 'Athletes', 'Stadiums'],
+        cardTitle: "Sports Franchise Ownership",
         badges: [
-            { label: 'Sports Franchise', icon: <Trophy className="w-4 h-4" />, top: '25%', left: '-5%' },
-            { label: 'Verified Asset', icon: <ShieldCheck className="w-4 h-4" />, bottom: '30%', right: '-8%' },
+            { label: 'Sports Franchise', icon: <Trophy className="w-4 h-4" />, top: '25%', left: '5%' },
+            { label: 'Revenue Sharing', icon: <TrendingUp className="w-4 h-4" />, bottom: '25%', right: '5%' },
         ],
         assets: [
             {
@@ -191,6 +208,7 @@ const categories = [
                 roi: "8.4%",
                 tokensAvailable: "250,000/500,000",
                 price: "$150M",
+                description: "Direct fan ownership in a top-tier European football club with revenue-sharing from broadcast rights and sponsorships.",
                 image: "/assets/Images/teams.jpg"
             },
             {
@@ -199,6 +217,7 @@ const categories = [
                 roi: "10.2%",
                 tokensAvailable: "75,000/100,000",
                 price: "$45M",
+                description: "Tokenized stake in modern stadium infrastructure with diverse revenue from matches, concerts, and events.",
                 image: "/assets/Images/stadium.jpg"
             }
         ]
@@ -209,8 +228,9 @@ const categories = [
         icon: <Leaf className="w-4 h-4" />,
         image: carbonCreditsImg,
         title: "Carbon Credits",
-        cardTitle: "Wind Related Assets",
-        description: "Transparent digital carbon assets backed by real-world climate action.Designed for accountability, traceability, and global environmental progress.",
+        cardTitle: "Renewable Energy Carbon Credits",
+        tokenPrice: '$2.50',
+        description: "Transparent digital carbon assets backed verified by real-world climate action. Designed for accountability, traceability, and global environmental progress.",
         benefits: ["ESG Compliant", "Verified Offsets", "Sustainable Returns"],
         stats: [
             { label: 'Total Asset Value', value: '$2,340,000', change: '+4.5%' },
@@ -225,8 +245,8 @@ const categories = [
         growth: '+15.8%',
         topics: ['Forest', 'Solar', 'Wind'],
         badges: [
-            { label: 'Verified Carbon Credit', icon: <Leaf className="w-4 h-4" />, top: '20%', left: '-8%' },
-            { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, bottom: '25%', right: '-10%' },
+            { label: 'Verified Carbon Credit', icon: <Leaf className="w-4 h-4" />, top: '20%', left: '5%' },
+            { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, bottom: '25%', right: '5%' },
         ],
         assets: [
             {
@@ -235,14 +255,17 @@ const categories = [
                 roi: "4.5%",
                 tokensAvailable: "85k/100k",
                 price: "$1.2M",
-                image: carbonCreditsImg
-            },
+                description: "Support global biodiversity and earn returns through verified carbon credit generation from protected forest lands.",
+                image: amazonRainforestIcon
+            }
+            ,
             {
                 name: "Solar Energy Farm",
                 location: "California, USA",
                 roi: "7.2%",
                 tokensAvailable: "120k/200k",
                 price: "$4.5M",
+                description: "Invest in high-output renewable energy infrastructure providing sustainable power and consistent utility-backed yields.",
                 image: "/assets/Images/SOLAR-FARM.jpg"
             }
         ]
@@ -371,10 +394,15 @@ export default function WhyItMatters() {
                                         </div>
 
                                         {/* Price & Graph Row */}
-                                        <div className="flex items-center justify-between pl-10 mb-4">
-                                            <p className="text-xs text-gray-500 font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                $20 per share
-                                            </p>
+                                        <div className="flex items-center justify-between pl-1 mt-2 mb-4">
+                                            <div className="flex items-center overflow-hidden rounded-full font-bold text-[10px] sm:text-[11px] h-5 sm:h-6">
+                                                <div className="bg-[#10b981] text-white px-2 sm:px-3 h-full flex items-center">
+                                                    {activeTab.tokenPrice || '$11.07'}
+                                                </div>
+                                                <div className="bg-black text-white px-2 sm:px-3 h-full flex items-center">
+                                                    1 TOKEN
+                                                </div>
+                                            </div>
 
                                             {/* Growth Graph */}
                                             <div className="flex items-center gap-2">
@@ -419,22 +447,7 @@ export default function WhyItMatters() {
                                     </motion.div>
                                 ))}
 
-                                {/* Split Button at Bottom Left - Same design as category pills */}
-                                <div className="mt-4 flex justify-start">
-                                    <button className="group flex items-center gap-1 transition-transform duration-300 hover:scale-[1.02]">
-                                        {/* Icon Circle - Straight Right Edge */}
-                                        <div className={`w-8 h-8 rounded-l-full rounded-r-none flex items-center justify-center transition-all duration-300 border-r-0 shadow-2xl
-                                            bg-white text-gray-400 group-hover:text-gray-600`}>
-                                            {React.cloneElement(activeTab.icon, { className: "w-4 h-4" })}
-                                        </div>
 
-                                        {/* Text Pill - Straight Left Edge */}
-                                        <div className={`px-4 py-1.5 rounded-r-full rounded-l-none text-sm font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-8
-                                            bg-white text-gray-600`}>
-                                            {activeTab.name}
-                                        </div>
-                                    </button>
-                                </div>
                             </motion.div>
                         </AnimatePresence>
                     </div>

@@ -92,7 +92,7 @@ export default function TokenDistribution() {
                   <div
                     className="absolute bottom-0 left-0 w-full h-[1px]"
                     style={{
-                      background: 'linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #15A36E 50%, rgba(255, 255, 255, 0) 100%)'
+                      background: 'linear-gradient(90deg, transparent 0%, #15A36E 50%, transparent 100%)'
                     }}
                   />
                 )}

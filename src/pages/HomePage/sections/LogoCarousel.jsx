@@ -51,8 +51,13 @@ const LogoCarousel = () => {
             </div>
           </div>
         </div>
-        {/* Green Separator Line */}
-        <div className="w-full h-0.5 bg-[#15a36e]"></div>
+        {/* Premium Faded Green Separator Line */}
+        <div
+          className="w-full h-[1px]"
+          style={{
+            background: 'linear-gradient(90deg, transparent 0%, #15a36e 50%, transparent 100%)'
+          }}
+        ></div>
       </div>
     </section>
   );
