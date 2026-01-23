@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
-import zerogashero from '../../../components/images/zerogashero.png';
+import zerogashero from '../../../components/images/zerogashero.avif';
 
 const Hero = () => {
     return (
@@ -11,7 +11,7 @@ const Hero = () => {
                 <Image
                     src={zerogashero}
                     alt="Zero Gas Hero"
-                    className="w-full h-full object-cover object-right sm:object-right scale-110 sm:scale-100 translate-y-12 sm:translate-y-0"
+                    className="w-full h-full object-cover object-right sm:object-right scale-105 sm:scale-100 translate-y-0 sm:translate-y-0"
                 />
             </div>
 
