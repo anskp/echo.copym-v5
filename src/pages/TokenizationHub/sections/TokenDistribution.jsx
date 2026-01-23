@@ -58,7 +58,7 @@ export default function TokenDistribution() {
               <Image
                 src="/assets/Images/icons/distributionew.png"
                 alt="Token Distribution Network"
-                className="w-full h-full object-contain scale-[1.6] -translate-y-12 sm:translate-y-0 sm:scale-110 transform-gpu"
+                className="w-full h-full object-contain scale-[1.6] -translate-y-12 sm:translate-y-0 sm:scale-110 lg:scale-150 lg:-translate-y-8 transform-gpu"
               />
             </div>
           </div>
