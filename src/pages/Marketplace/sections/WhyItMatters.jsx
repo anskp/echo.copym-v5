@@ -153,7 +153,7 @@ const categories = [
         badges: [
             { label: 'Institutional Real Estate', icon: <Building2 className="w-4 h-4" />, top: '10%', left: '5%' },
             { label: 'Verified Ownership', icon: <ShieldCheck className="w-4 h-4" />, top: '45%', right: '5%' },
-            { label: '750 Available', icon: <CheckCircle2 className="w-4 h-4" />, bottom: '20%', left: '5%' },
+
         ],
         assets: [
             {
@@ -518,7 +518,7 @@ export default function WhyItMatters() {
                                 {activeTab.assets && activeTab.assets.length > 0 && (
                                     <div className="space-y-4 pt-4">
                                         <h4 className="text-sm font-bold text-gray-400 uppercase tracking-[0.2em]">Featured Assets</h4>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        <div className="grid grid-cols-2 sm:grid-cols-2 gap-2.5 sm:gap-4">
                                             {activeTab.assets.map((asset, idx) => (
                                                 <motion.div
                                                     key={idx}
@@ -528,14 +528,14 @@ export default function WhyItMatters() {
                                                     className="bg-white rounded-[2rem] shadow-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 group cursor-pointer"
                                                 >
                                                     {/* Top Image Area - Reduced Height */}
-                                                    <div className="relative h-40 w-full">
+                                                    <div className="relative h-24 sm:h-28 lg:h-40 w-full">
                                                         <img
                                                             src={asset.image}
                                                             alt={asset.name}
                                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                         />
                                                         {/* Logo Badge - Overlapping - Simplified */}
-                                                        <div className="absolute -bottom-8 left-6 w-16 h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
+                                                        <div className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-8 left-3 sm:left-4 lg:left-6 w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
                                                             <Image
                                                                 src="/assets/copym/png/Copym-05.avif"
                                                                 alt="Copym"
@@ -545,17 +545,17 @@ export default function WhyItMatters() {
                                                     </div>
 
                                                     {/* Content Area - Reduced Padding */}
-                                                    <div className="pt-10 px-6 pb-5">
+                                                    <div className="pt-6 sm:pt-8 lg:pt-10 px-3 sm:px-4 lg:px-6 pb-3 sm:pb-4 lg:pb-5">
                                                         {/* Header Row: Title & Price - Smaller Text */}
-                                                        <div className="flex flex-col mb-2">
-                                                            <div className="flex items-baseline justify-end gap-1.5 self-end mb-1">
-                                                                <p className="font-bold text-gray-900 text-xs leading-tight">{asset.price.replace('$', '')}</p>
-                                                                <div className="flex items-center gap-1">
-                                                                    <span className="text-[10px] text-gray-400 font-medium tracking-wide">TVT</span>
-                                                                    <span className="inline-flex items-center justify-center w-3 h-3 rounded-full border border-gray-300 text-[8px] text-gray-400">i</span>
+                                                        <div className="flex flex-col mb-1.5 sm:mb-2">
+                                                            <div className="flex items-baseline justify-end gap-1 sm:gap-1.5 self-end mb-0.5 sm:mb-1">
+                                                                <p className="font-bold text-gray-900 text-[10px] sm:text-xs leading-tight">{asset.price.replace('$', '')}</p>
+                                                                <div className="flex items-center gap-0.5 sm:gap-1">
+                                                                    <span className="text-[8px] sm:text-[10px] text-gray-400 font-medium tracking-wide">TVT</span>
+                                                                    <span className="inline-flex items-center justify-center w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full border border-gray-300 text-[6px] sm:text-[8px] text-gray-400">i</span>
                                                                 </div>
                                                             </div>
-                                                            <h5 className="font-bold text-base text-gray-900 leading-tight whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                            <h5 className="font-bold text-[10px] sm:text-xs lg:text-base text-gray-900 leading-tight whitespace-nowrap overflow-hidden text-ellipsis" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                                 {asset.name}
                                                             </h5>
                                                         </div>
@@ -566,13 +566,13 @@ export default function WhyItMatters() {
                                                         </p>
 
                                                         {/* Footer Row: Tags */}
-                                                        <div className="flex flex-wrap gap-2.5">
-                                                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#ecf6ff] text-[#2563eb] text-[10px] font-bold transition-colors hover:bg-blue-100">
-                                                                {React.cloneElement(activeTab.icon, { className: "w-3 h-3" })}
+                                                        <div className="flex flex-wrap gap-1.5 sm:gap-2.5">
+                                                            <span className="inline-flex items-center gap-1 sm:gap-2 px-1.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-[#ecf6ff] text-[#2563eb] text-[7px] sm:text-[10px] font-bold transition-colors hover:bg-blue-100">
+                                                                {React.cloneElement(activeTab.icon, { className: "w-2 h-2 sm:w-3 sm:h-3" })}
                                                                 {activeTab.name}
                                                             </span>
-                                                            <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gray-100 text-gray-700 text-[10px] font-bold transition-colors hover:bg-gray-200">
-                                                                <MapPin className="w-3 h-3" />
+                                                            <span className="inline-flex items-center gap-1 sm:gap-2 px-1.5 sm:px-3 py-1 sm:py-1.5 rounded-full bg-gray-100 text-gray-700 text-[7px] sm:text-[10px] font-bold transition-colors hover:bg-gray-200">
+                                                                <MapPin className="w-2 h-2 sm:w-3 sm:h-3" />
                                                                 {asset.location.split(',').pop().trim()}
                                                             </span>
                                                         </div>

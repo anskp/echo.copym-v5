@@ -60,11 +60,11 @@ export default function HowItWorks() {
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
                     {/* Shared Background Watermark "MARKETPLACE" for cards 2 & 3 area */}
-                    <div className="absolute top-[1010px] md:top-[650px] lg:top-[650px] xl:top-[480px] left-0 w-full text-center pointer-events-none select-none z-0 overflow-visible opacity-30 lg:opacity-100">
+                    <div className="absolute top-1/2 -translate-y-1/2 md:top-[650px] md:translate-y-0 lg:top-[650px] xl:top-[480px] left-0 w-full text-center pointer-events-none select-none z-0 overflow-visible opacity-70 lg:opacity-100">
                         <span
-                            className="font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[60px] md:text-[100px] lg:text-[140px] leading-none"
+                            className="font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[50px] md:text-[100px] lg:text-[140px] leading-none"
                             style={{
-                                backgroundImage: 'radial-gradient(ellipse at center, #1C9065 0%, #088557 60%, rgba(0,0,0,0) 100%)'
+                                backgroundImage: 'radial-gradient(ellipse at center, #10b981 0%, #059669 70%, rgba(0,0,0,0) 100%)'
                             }}
                         >
                             MARKETPLACE
@@ -91,21 +91,22 @@ export default function HowItWorks() {
                                 {/* Card Wrapper - Side-by-side for cards 2 & 3 on large screens */}
                                 <div className={`relative z-10 w-full ${index % 2 === 0 ? 'ml-0 mr-auto' : 'mr-0 ml-auto'} sm:mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
                                     ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[-10%]' :
-                                        index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' : ''}`}>
+                                        index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' :
+                                            index === 3 ? 'lg:flex lg:flex-col-reverse lg:items-center' : ''}`}>
 
                                     {/* Visual Group - Constrains width of image/watermark for small cards */}
-                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? `max-w-[180px] lg:max-w-[150px] ${index === 1 ? 'ml-auto mr-0' : 'ml-0 mr-auto'} lg:mx-0` : `max-w-[320px] sm:max-w-[380px] lg:max-w-full ${index === 3 ? 'ml-auto mr-0' : 'ml-0 mr-auto'}`} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''}`}>
+                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? `max-w-[180px] lg:max-w-[150px] ${index === 1 ? 'ml-auto mr-0' : 'ml-0 mr-auto'} lg:mx-0` : `max-w-[320px] sm:max-w-[380px] lg:max-w-full ${index === 3 ? 'ml-auto mr-0' : 'ml-0 mr-auto'}`} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''} ${index === 3 ? 'lg:mb-0' : ''}`}>
 
                                         {/* Watermark Background Text - Only for cards 1 & 4 */}
                                         {[0, 3].includes(index) && (
-                                            <div className={`absolute pointer-events-none select-none z-0 left-1/2 -translate-x-1/2 bottom-0 sm:translate-x-0
+                                            <div className={`absolute pointer-events-none select-none z-0 left-1/2 ${index === 3 ? '-translate-x-[65%]' : '-translate-x-1/2'} bottom-0 sm:translate-x-0
                                                 ${index === 0 ? 'sm:left-0 sm:right-auto' :
                                                     'sm:right-0 sm:left-auto'}`}
                                             >
                                                 <span
-                                                    className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[80px] sm:text-[120px] lg:text-[140px] leading-none`}
+                                                    className={`font-black uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[110px] sm:text-[120px] lg:text-[140px] leading-none`}
                                                     style={{
-                                                        backgroundImage: 'radial-gradient(circle, #1C9065 0%, #088557 50%, rgba(0,0,0,0) 90%)'
+                                                        backgroundImage: 'radial-gradient(circle, #10b981 0%, #059669 60%, rgba(0,0,0,0) 100%)'
                                                     }}
                                                 >
                                                     {step.watermark}
@@ -146,7 +147,7 @@ export default function HowItWorks() {
                                     </div>
 
                                     {/* Title & Description */}
-                                    <div className={`pl-0 pr-0 w-fit max-w-full flex flex-col ${index % 2 === 0 ? 'text-left items-start sm:pr-6' : 'text-right items-end sm:text-left sm:items-start sm:pr-6'}`}>
+                                    <div className={`pl-0 pr-0 w-fit max-w-full flex flex-col ${index % 2 === 0 ? 'text-left items-start sm:pr-6' : 'text-right items-end sm:text-left sm:items-start sm:pr-6'} ${index === 3 ? 'lg:mb-6' : ''}`}>
                                         <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.title}
                                         </h3>
