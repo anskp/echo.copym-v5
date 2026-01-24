@@ -50,10 +50,10 @@ const HowItWorks = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto lg:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               GAS ABSTRACTION
             </h3>
-            <p className="text-sm text-black leading-normal max-w-xl md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg text-black leading-normal max-w-xl md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users never need to hold native blockchain tokens. All transaction costs are handled at the protocol level.
             </p>
           </div>
@@ -88,10 +88,10 @@ const HowItWorks = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               META-TRANSACTIONS
             </h3>
-            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Users simply review and sign transactions. CopyM submits them on-chain and pays gas on the user's behalf.
             </p>
           </div>
@@ -126,10 +126,10 @@ const HowItWorks = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               SPONSORED TRANSACTIONS
             </h3>
-            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, ownership transfers, and yield distributions.
             </p>
           </div>
@@ -164,10 +164,10 @@ const HowItWorks = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               OPTIMIZED INFRASTRUCTURE
             </h3>
-            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               The platform runs on high-throughput, low-cost blockchain layers, making the zero-gas model economically sustainable.
             </p>
           </div>
@@ -201,10 +201,10 @@ const HowItWorks = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-lg sm:text-xl md:text-3xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               ENTERPRISE-GRADE UX
             </h3>
-            <p className="text-sm text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Transactions feel instant and intuitive. No gas sliders, no out-of-eth errors - just clear confirmations.
             </p>
           </div>

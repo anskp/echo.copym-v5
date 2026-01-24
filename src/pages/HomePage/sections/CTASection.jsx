@@ -39,7 +39,7 @@ export default function CTASection() {
                         className="inline-flex items-center gap-2 bg-white px-5 py-1.5 sm:px-8 sm:py-2.5 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
                     >
                         <span className="text-sm sm:text-base md:text-base lg:text-lg text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            Invest in the revolution
+                            Join the revolution
                         </span>
                         <FiArrowUpRight className="text-lg sm:text-xl text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </Link>

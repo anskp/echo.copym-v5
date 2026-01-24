@@ -402,7 +402,7 @@ export default function WhyItMatters() {
                                         </div>
 
                                         {/* Price & Graph Row */}
-                                        <div className="flex items-center justify-between pl-1 mt-2 mb-4">
+                                        <div className="flex items-center justify-between pl-1 mt-2 mb-2">
                                             <div className="flex items-center overflow-hidden rounded-full font-bold text-[10px] sm:text-[11px] h-5 sm:h-6">
                                                 <div className="bg-[#10b981] text-white px-2 sm:px-3 h-full flex items-center">
                                                     {activeTab.tokenPrice || '$11.07'}
@@ -420,6 +420,36 @@ export default function WhyItMatters() {
                                                     </svg>
                                                 </div>
                                                 <span className="text-xs font-bold text-gray-900">{activeTab.growth || '+5%'}</span>
+                                            </div>
+                                        </div>
+
+                                        {/* Stats Row - Moved here from right side */}
+                                        <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide">
+                                            {/* Contract Address */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[100px] flex-1">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Contract Address</p>
+                                                <p className="text-[10px] font-bold text-gray-800 font-mono truncate max-w-[80px]">
+                                                    {activeTab.stats?.find(s => s.label === 'Contract Address')?.value || '0x...'}
+                                                </p>
+                                            </div>
+                                            {/* Total Asset Value */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[100px] flex-1">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Total Asset Value</p>
+                                                <div className="flex items-center gap-1.5">
+                                                    <p className="text-[10px] font-bold text-gray-800">
+                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.value || '$0'}
+                                                    </p>
+                                                    <span className="text-[8px] font-bold text-[#10b981] bg-[#10b981]/10 px-1 rounded">
+                                                        {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.change || ''}
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            {/* APY */}
+                                            <div className="border border-gray-200 rounded-xl p-2 min-w-[60px]">
+                                                <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">APY</p>
+                                                <p className="text-[10px] font-bold text-[#10b981]">
+                                                    {activeTab.stats?.find(s => s.label === 'APY')?.value || '0%'}
+                                                </p>
                                             </div>
                                         </div>
 
@@ -484,35 +514,7 @@ export default function WhyItMatters() {
                                     </p>
                                 </div>
 
-                                {/* Stats Row - Moved from left card */}
-                                <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-hide pt-2">
-                                    {/* Contract Address */}
-                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
-                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Contract Address</p>
-                                        <p className="text-[10px] font-bold text-gray-800 font-mono truncate max-w-[100px]">
-                                            {activeTab.stats?.find(s => s.label === 'Contract Address')?.value || '0x...'}
-                                        </p>
-                                    </div>
-                                    {/* Total Asset Value */}
-                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[110px] flex-1">
-                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">Total Asset Value</p>
-                                        <div className="flex items-center gap-1.5">
-                                            <p className="text-[10px] font-bold text-gray-800">
-                                                {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.value || '$0'}
-                                            </p>
-                                            <span className="text-[8px] font-bold text-[#10b981] bg-[#10b981]/10 px-1 rounded">
-                                                {activeTab.stats?.find(s => s.label === 'Total Asset Value')?.change || ''}
-                                            </span>
-                                        </div>
-                                    </div>
-                                    {/* APY */}
-                                    <div className="border border-gray-200 rounded-xl p-2 min-w-[70px]">
-                                        <p className="text-[9px] text-gray-400 font-bold whitespace-nowrap mb-1">APY</p>
-                                        <p className="text-[10px] font-bold text-[#10b981]">
-                                            {activeTab.stats?.find(s => s.label === 'APY')?.value || '0%'}
-                                        </p>
-                                    </div>
-                                </div>
+
 
                                 {/* Asset Cards - Only show if assets exist */}
                                 {activeTab.assets && activeTab.assets.length > 0 && (

@@ -63,7 +63,7 @@ export default function Hero() {
               UNLOCK EXCLUSIVE <span className="text-[#15a36e]">ASSETS,</span>
             </span>
             <span className="block mt-2 sm:mt-3">
-              <span className="text-[#15a36e]">INVEST </span>WITH CONFIDENCE
+              <span className="text-[#15a36e]">OWN  </span>WITH CONFIDENCE
             </span>
           </h1>
 

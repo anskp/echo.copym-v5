@@ -139,9 +139,9 @@ export default function Header() {
           {/* Logo */}
           <Link to="/" className="flex items-center flex-shrink-0">
             <Image
-              src="/assets/copym/png/Copym-01-1.png"
+              src="/assets/copym/png/Copym-02-1.png"
               alt="CopyM Logo"
-              className="w-auto h-10 sm:h-12 object-contain"
+              className="w-auto h-12 sm:h-14 object-contain"
               style={{ maxWidth: 160 }}
             />
           </Link>

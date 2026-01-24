@@ -25,7 +25,7 @@ export const GreenarySection = () => {
                 className="bg-black  px-4 sm:px-5 md:px-6 lg:px-8 xl:px-10 py-2 sm:py-2.5 md:py-2.5 lg:py-3 xl:py-3.5 flex items-center justify-center gap-2 sm:gap-2.5 md:gap-3 lg:gap-4 xl:gap-5 transition-all duration-200 border border-gray-800 w-auto sm:w-auto max-w-[90%] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl overflow-hidden min-w-0 cursor-pointer hover:scale-105 active:scale-95"
               >
                 <span className="text-[#15a36e] text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl font-bold whitespace-nowrap overflow-hidden text-ellipsis" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Invest in the revolution
+                  join revolution
                 </span>
               </button>
             </div>
