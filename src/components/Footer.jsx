@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import Image from './Image'; // Import our new AVIF-compatible Image component
 
 export default function Footer() {
@@ -92,12 +93,21 @@ export default function Footer() {
             <ul className="space-y-2">
               {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
                 <li key={item}>
-                  <a
-                    href="#"
-                    className="text-white hover:text-[#15a36e] text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
-                  >
-                    {item}
-                  </a>
+                  {item === 'Terms' ? (
+                    <Link
+                      to="/terms"
+                      className="text-white hover:text-[#15a36e] text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    >
+                      {item}
+                    </Link>
+                  ) : (
+                    <a
+                      href="#"
+                      className="text-white hover:text-[#15a36e] text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    >
+                      {item}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -245,12 +255,21 @@ export default function Footer() {
               <ul className="space-y-1">
                 {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
-                      className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
-                    >
-                      {item}
-                    </a>
+                    {item === 'Terms' ? (
+                      <Link
+                        to="/terms"
+                        className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                      >
+                        {item}
+                      </Link>
+                    ) : (
+                      <a
+                        href="#"
+                        className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                      >
+                        {item}
+                      </a>
+                    )}
                   </li>
                 ))}
               </ul>

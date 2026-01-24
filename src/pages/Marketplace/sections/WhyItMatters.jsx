@@ -31,12 +31,20 @@ import oilIcon from '../../../components/icons/Tokenization/oil.avif';
 import goldReserveImg from '../../../components/images/gold.avif';
 import premiumOfficeBuildingImg from '../../../components/images/premium-building-office.avif';
 
+// Import Category Logos
+import manchesterLogo from '../../../assets/logos/manchester_united.png';
+import louvreLogo from '../../../assets/logos/louvre.png';
+import emaarLogo from '../../../assets/logos/emaar.png';
+import barrickLogo from '../../../assets/logos/barrick_gold.png';
+import verraLogo from '../../../assets/logos/verra.png';
+
 
 const categories = [
     {
         id: 'art',
         name: 'Art',
         icon: <Palette className="w-4 h-4" />,
+        logo: louvreLogo,
         image: artsImg,
         title: "Tokenized Fine Art",
         description: "Own fractions of masterpiece artworks from renowned artists. Democratizing access to the exclusive world of fine art investments.",
@@ -57,7 +65,7 @@ const categories = [
         tokenPrice: '$12.50',
         badges: [
             { label: 'Blue-Chip Masterpieces', icon: <Palette className="w-4 h-4" />, top: '20%', left: '5%' },
-            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, bottom: '20%', right: '5%' },
+            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, top: '65%', right: '5%' },
         ],
         assets: [
             {
@@ -84,6 +92,7 @@ const categories = [
         id: 'commodities',
         name: 'Commodities',
         icon: <Package className="w-4 h-4" />,
+        logo: barrickLogo,
         image: commoditiesImg,
         title: "Tokenized Commodities",
         description: "Direct exposure to global commodities markets through tokenized assets. From precious metals to energy resources, diversify your portfolio.",
@@ -104,7 +113,7 @@ const categories = [
         tokenPrice: '$8.75',
         badges: [
             { label: 'Hard Asset Backing', icon: <Package className="w-4 h-4" />, top: '15%', left: '5%' },
-            { label: 'Global Market Access', icon: <MapPin className="w-4 h-4" />, bottom: '25%', right: '5%' },
+            { label: 'Global Market Access', icon: <MapPin className="w-4 h-4" />, top: '60%', right: '5%' },
         ],
         assets: [
             {
@@ -132,6 +141,7 @@ const categories = [
         id: 'real-estate',
         name: 'Real Estate',
         icon: <Building2 className="w-4 h-4" />,
+        logo: emaarLogo,
         image: realEstateImg,
         title: "Tokenized institutional Real Estate",
         description: "Access institutional-grade property investments with fractional ownership. Earn rental yields and capital appreciation without the traditional barriers to entry.",
@@ -180,6 +190,7 @@ const categories = [
         id: 'sports',
         name: 'Sports',
         icon: <Trophy className="w-4 h-4" />,
+        logo: manchesterLogo,
         image: sportsImg,
         title: "Professional Sports Assets",
         description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and ownership.",
@@ -199,7 +210,7 @@ const categories = [
         cardTitle: "Sports Franchise Ownership",
         badges: [
             { label: 'Sports Franchise', icon: <Trophy className="w-4 h-4" />, top: '25%', left: '5%' },
-            { label: 'Revenue Sharing', icon: <TrendingUp className="w-4 h-4" />, bottom: '25%', right: '5%' },
+            { label: 'Revenue Sharing', icon: <TrendingUp className="w-4 h-4" />, top: '60%', right: '5%' },
         ],
         assets: [
             {
@@ -226,6 +237,7 @@ const categories = [
         id: 'carbon-credits',
         name: 'Carbon Credits',
         icon: <Leaf className="w-4 h-4" />,
+        logo: verraLogo,
         image: carbonCreditsImg,
         title: "Carbon Credits",
         cardTitle: "Renewable Energy Carbon Credits",
@@ -246,7 +258,7 @@ const categories = [
         topics: ['Forest', 'Solar', 'Wind'],
         badges: [
             { label: 'Verified Carbon Credit', icon: <Leaf className="w-4 h-4" />, top: '20%', left: '5%' },
-            { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, bottom: '25%', right: '5%' },
+            { label: 'Climate Impact', icon: <ShieldCheck className="w-4 h-4" />, top: '60%', right: '5%' },
         ],
         assets: [
             {
@@ -357,7 +369,7 @@ export default function WhyItMatters() {
                                 className="relative w-full max-w-[450px] rounded-[2.5rem] overflow-visible shadow-2xl bg-white p-3"
                             >
                                 <div className="relative">
-                                    <div className="w-full aspect-[4/4.5] rounded-[2rem] overflow-hidden relative">
+                                    <div className="w-full aspect-[4/3.8] rounded-[2rem] overflow-hidden relative">
                                         <Image
                                             src={activeTab.image}
                                             alt={activeTab.name}
@@ -377,11 +389,11 @@ export default function WhyItMatters() {
                                     </div>
 
                                     {/* Logo Badge - Overlapping - Outside overflow-hidden container */}
-                                    <div className="absolute -bottom-8 left-6 w-16 h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
+                                    <div className="absolute -bottom-6 left-6 w-16 h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
                                         <Image
-                                            src="/assets/copym/png/Copym-05.avif"
-                                            alt="Copym"
-                                            className="w-full h-full object-cover scale-[1.3]"
+                                            src={activeTab.logo}
+                                            alt={activeTab.name}
+                                            className="w-full h-full object-contain p-2"
                                         />
                                     </div>
                                 </div>
@@ -391,7 +403,7 @@ export default function WhyItMatters() {
                                     initial={{ opacity: 0, y: 20 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: 0.5, duration: 0.5 }}
-                                    className="px-2 pt-10 pb-2"
+                                    className="px-2 pt-8 pb-2"
                                 >
                                     <div className="flex flex-col gap-0.5">
                                         {/* Title Row */}
@@ -539,9 +551,9 @@ export default function WhyItMatters() {
                                                         {/* Logo Badge - Overlapping - Simplified */}
                                                         <div className="absolute -bottom-4 sm:-bottom-6 lg:-bottom-8 left-3 sm:left-4 lg:left-6 w-8 h-8 sm:w-10 sm:h-10 lg:w-16 lg:h-16 bg-white rounded-full shadow-lg z-10 mx-auto flex items-center justify-center overflow-hidden">
                                                             <Image
-                                                                src="/assets/copym/png/Copym-05.avif"
-                                                                alt="Copym"
-                                                                className="w-full h-full object-cover scale-[1.3]"
+                                                                src={activeTab.logo}
+                                                                alt={activeTab.name}
+                                                                className="w-full h-full object-contain p-1"
                                                             />
                                                         </div>
                                                     </div>

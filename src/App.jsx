@@ -18,6 +18,7 @@ import Launchkit from './pages/Launchkit/Launchkit';
 
 import ZeroGas from './pages/Zerogas/Zerogas';
 import PrivacyAi from './pages/PrivacyAi';
+import TermsOfService from './pages/Legal/TermsOfService';
 import { animate } from 'animejs';
 
 
@@ -73,6 +74,7 @@ function App() {
 
           <Route path="/zerogas" element={<ZeroGas />} />
           <Route path="/privacy-ai" element={<PrivacyAi />} />
+          <Route path="/terms" element={<TermsOfService />} />
           <Route path="/test-avif" element={<TestAvif />} />
         </Routes>
       </main>
