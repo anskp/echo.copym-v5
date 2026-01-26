@@ -64,7 +64,7 @@ const categories = [
         tokenPrice: '$12.50',
         badges: [
             { label: 'Blue-Chip Masterpieces', icon: <Palette className="w-4 h-4" />, top: '20%', left: '5%' },
-            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, top: '65%', right: '5%' },
+            { label: 'Verified Authenticity', icon: <ShieldCheck className="w-4 h-4" />, top: '55%', right: '5%' },
         ],
         assets: [
             {

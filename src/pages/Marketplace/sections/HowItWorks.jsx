@@ -22,17 +22,17 @@ export default function HowItWorks() {
             watermark: "HOW"
         },
         {
-            id: "trade-settle",
-            title: "Buy, Trade & Settlement\u00A0",
-            description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
-            icon: tiicon4,
-            watermark: ""
-        },
-        {
             id: "secure",
             title: "Self Custodial Security",
             description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
             icon: smallp2,
+            watermark: ""
+        },
+        {
+            id: "trade-settle",
+            title: "Buy, Trade & Settlement\u00A0",
+            description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
+            icon: tiicon4,
             watermark: ""
         },
         {
