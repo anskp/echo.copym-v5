@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typeform from "../Contact/Typeform";
 // Removed old contact image imports to use public assets directly
+import TimelineImage from "../../components/images/timeline.avif";
+
 
 // Removed LavaLamp background
 import {
@@ -317,7 +319,7 @@ const AboutUs = () => {
             {/* Section 5: Company Timeline */}
             <section className="relative bg-black py-16 lg:py-24 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="flex flex-col lg:flex-row-reverse gap-16 lg:gap-24 items-start">
+                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
                         {/* Right Column: Heading & Description */}
                         <div className="w-full lg:w-5/12 lg:pt-10">
                             <motion.div
@@ -332,8 +334,8 @@ const AboutUs = () => {
                                         <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Our journey of innovation and growth, building the future of decentralized finance and global asset ownership.
+                                <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12 text-justify hyphens-auto tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. Each milestone is more than progress—it’s a promise to stay ahead, listen to our community, and turn challenges into opportunities. What began as a vision has grown into a movement built on investment and opportunity.
                                 </p>
 
 
@@ -342,51 +344,20 @@ const AboutUs = () => {
 
                         {/* Left Column: Timeline Items */}
                         <div className="w-full lg:w-7/12 relative">
-                            {/* Background decoration or subtle image could go here */}
-
-                            <div className="flex flex-col gap-8">
-                                {[
-                                    {
-                                        year: "2023 - Foundation",
-                                        description: "COPYm was founded with a vision to democratize access to premium investment opportunities.",
-                                        icon: "/assets/Images/icons/Cube.png"
-                                    },
-                                    {
-                                        year: "2024 - Platform Launch",
-                                        description: "Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.",
-                                        icon: "/assets/Images/icons/Rocket.png"
-                                    },
-                                    {
-                                        year: "2025 - Global Expansion",
-                                        description: "Expanding our reach globally, making premium investments accessible worldwide.",
-                                        icon: "/assets/Images/icons/StylizedGlobe.png"
-                                    }
-                                ].map((item, index) => (
-                                    <motion.div
-                                        key={index}
-                                        initial={{ opacity: 0, x: -50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.5, delay: index * 0.15 }}
-                                        viewport={{ once: true }}
-                                        className="py-6 group max-w-lg"
-                                    >
-                                        <div className="flex items-center gap-6 sm:gap-8">
-                                            <div className="flex-shrink-0 w-16 h-16 sm:w-20 sm:h-20 bg-white/5 rounded-2xl flex items-center justify-center p-4 group-hover:scale-110 transition-transform duration-300">
-                                                <img src={item.icon} alt={item.year} className="w-full h-full object-contain" />
-                                            </div>
-                                            <div className="flex-1">
-                                                <h3 className="text-xl sm:text-2xl font-bold text-[#15a36e] mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    {item.year}
-                                                </h3>
-                                                <p className="text-gray-300 text-sm sm:text-base leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    {item.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
+                            <img
+                                src={TimelineImage}
+                                alt="Company Timeline"
+                                className="w-full h-full object-contain scale-[1.8] origin-center -translate-y-12"
+                                style={{
+                                    maskImage: 'linear-gradient(to right, transparent 0%, black 20%)',
+                                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%)'
+                                }}
+                            />
                         </div>
+
+
+
+
                     </div>
                 </div>
             </section>
@@ -584,7 +555,7 @@ const AboutUs = () => {
                     <div className="text-left mb-8 sm:mb-10 lg:mb-12">
                         <div className="relative w-fit mb-4">
                             <h2
-                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase pb-4 leading-tight"
+                                className="text-4xl sm:text-5xl lg:text-7xl font-bold uppercase pb-4 leading-tight"
                                 style={{ fontFamily: 'Palanquin, sans-serif' }}
                             >
                                 <span className="text-black">GET</span>
@@ -593,12 +564,7 @@ const AboutUs = () => {
                                 <span className="text-[#15a36e]">TOUCH</span>
                             </h2>
                         </div>
-                        <p
-                            className="text-base sm:text-lg md:text-xl lg:text-2xl text-black font-normal leading-relaxed tracking-wide mt-4 sm:mt-6"
-                            style={{ fontFamily: 'Palanquin, sans-serif' }}
-                        >
-                            Fill out the form below and our team will get back to you within 24 hours.
-                        </p>
+
                     </div>
 
                     <motion.div

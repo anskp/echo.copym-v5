@@ -4,7 +4,7 @@ import {
   GiCheckMark,
   GiPerson,
   GiHouse,
-  GiGlobe,
+
   GiShield
 } from "react-icons/gi";
 
@@ -97,20 +97,7 @@ const steps = [
     required: true,
     placeholder: "Brief summary about your company, traction, and funding raised to date..."
   },
-  {
-    id: "address",
-    label: "Company Address",
-    type: "group",
-    icon: GiGlobe,
-    required: true,
-    fields: [
-      { key: "street", label: "Address", required: true },
-      { key: "city", label: "City/Town", required: true },
-      { key: "state", label: "State/Region", required: true },
-      { key: "zip", label: "Zip/Post code", required: true },
-      { key: "country", label: "Country", required: true },
-    ],
-  },
+
   {
     id: "companyStatus",
     label: "Company Status",
@@ -146,7 +133,7 @@ const initialForm = {
   companyInfo: { companyName: "", title: "", website: "" },
   industry: "",
   companyDetails: "",
-  address: { street: "", city: "", state: "", zip: "", country: "" },
+
   companyStatus: { incUS: "", productAvailable: "", revenue: "" },
   raiseStructure: "",
 };
@@ -165,8 +152,7 @@ export default function Typeform() {
     setForm(prev => ({ ...prev, contactInfo: { ...prev.contactInfo, [k]: v } }));
   const setCompanyInfo = (k, v) =>
     setForm(prev => ({ ...prev, companyInfo: { ...prev.companyInfo, [k]: v } }));
-  const setAddress = (k, v) =>
-    setForm(prev => ({ ...prev, address: { ...prev.address, [k]: v } }));
+
   const setCompanyStatus = (k, v) =>
     setForm(prev => ({ ...prev, companyStatus: { ...prev.companyStatus, [k]: v } }));
 
@@ -181,8 +167,7 @@ export default function Typeform() {
               value = form.contactInfo[f.key];
             } else if (step.id === "companyInfo") {
               value = form.companyInfo[f.key];
-            } else if (step.id === "address") {
-              value = form.address[f.key];
+
             } else if (step.id === "companyStatus") {
               value = form.companyStatus[f.key];
             }
@@ -262,13 +247,13 @@ export default function Typeform() {
                   }}
                 ></div>
 
-                {/* Text Content - Left Aligned */}
-                <div className="max-w-3xl mx-auto text-center sm:text-left mb-7 px-2 relative z-10">
-                  <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                {/* Text Content - Centered */}
+                <div className="max-w-3xl mx-auto text-center mb-7 px-2 relative z-10">
+                  <p className="text-base sm:text-lg text-black leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
                   </p>
 
-                  <p className="text-lg sm:text-xl md:text-2xl text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <p className="text-base sm:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Join the future of Real World Asset tokenization with Copym.
                   </p>
                 </div>
@@ -277,7 +262,7 @@ export default function Typeform() {
                 <div className="flex justify-center px-2">
                   <motion.button
                     onClick={() => setShowForm(true)}
-                    className="w-full sm:w-auto px-8 sm:px-14 py-3 rounded-full bg-gradient-to-b from-[#15a36e] to-[#12a062] text-white font-bold text-base sm:text-xl shadow-2xl hover:from-[#12a062] hover:to-[#15a36e] transition-all duration-300 uppercase"
+                    className="w-auto px-6 sm:px-10 py-2.5 rounded-full bg-gradient-to-b from-[#15a36e] to-[#12a062] text-white font-bold text-sm sm:text-base shadow-2xl hover:from-[#12a062] hover:to-[#15a36e] transition-all duration-300 uppercase"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -342,9 +327,9 @@ export default function Typeform() {
                   <Question
                     step={step}
                     value={form[step.id]}
-                    address={form.address}
+
                     onChange={setValue}
-                    onAddressChange={setAddress}
+
                     onContactInfoChange={setContactInfo}
                     onCompanyInfoChange={setCompanyInfo}
                     onCompanyStatusChange={setCompanyStatus}
@@ -424,6 +409,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
               )
             }
             className="w-full px-6 py-5 text-base sm:text-lg rounded-2xl bg-white border-2 border-white/20 placeholder-black/50 text-black outline-none focus:border-[#15a36e] focus:bg-white transition-all duration-200"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
             placeholder="Type your answer..."
             autoFocus
           />
@@ -442,6 +428,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
             value={value || ""}
             onChange={(e) => onChange(step.id, e.target.value)}
             className="w-full px-6 py-5 text-base sm:text-lg rounded-2xl bg-white border-2 border-white/20 placeholder-black/50 text-black outline-none resize-none focus:border-[#15a36e] focus:bg-white transition-all duration-200"
+            style={{ fontFamily: 'Palanquin, sans-serif' }}
             placeholder={step.placeholder || "Share your thoughts here..."}
             autoFocus
           />
@@ -466,6 +453,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                   ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg transform scale-[1.02]"
                   : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white hover:shadow-md hover:scale-[1.01] text-black"
                   }`}
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -505,9 +493,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
             } else if (step.id === "companyInfo") {
               fieldValue = value?.[f.key] || "";
               onChangeFunction = (e) => onCompanyInfoChange(f.key, e.target.value);
-            } else if (step.id === "address") {
-              fieldValue = address?.[f.key] || "";
-              onChangeFunction = (e) => onAddressChange(f.key, e.target.value);
+
             } else if (step.id === "companyStatus") {
               fieldValue = value?.[f.key] || "";
               onChangeFunction = (val) => onCompanyStatusChange(f.key, val);
@@ -529,6 +515,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                             ? "border-[#15a36e] bg-[#15a36e] text-white shadow-lg"
                             : "border-white/20 bg-white hover:bg-[#15a36e] hover:border-[#15a36e] hover:text-white text-black"
                             }`}
+                          style={{ fontFamily: 'Palanquin, sans-serif' }}
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
                           transition={{ delay: index * 0.1 }}
@@ -551,6 +538,7 @@ function Question({ step, value, address, onChange, onAddressChange, onContactIn
                 onChange={onChangeFunction}
                 placeholder={f.label}
                 className="w-full px-6 py-4 rounded-2xl bg-white border-2 border-white/20 placeholder-black/50 text-black outline-none focus:border-[#15a36e] focus:bg-white transition-all duration-200 text-base sm:text-lg"
+                style={{ fontFamily: 'Palanquin, sans-serif' }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
@@ -596,17 +584,14 @@ function ThankYou() {
 
         <div className="bg-white rounded-2xl p-6 border border-white/20">
           <h3 className="font-semibold text-black mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>What happens next?</h3>
-          <div className="text-left space-y-2 text-black/80" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <div className="flex flex-col items-center space-y-2 text-black/80" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#15a36e] rounded-full"></div>
               <span>Our team will review your application within 24 hours</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#15a36e] rounded-full"></div>
               <span>We'll schedule a consultation call to discuss your tokenization goals</span>
             </div>
             <div className="flex items-center gap-3">
-              <div className="w-2 h-2 bg-[#15a36e] rounded-full"></div>
               <span>You'll receive a personalized tokenization strategy</span>
             </div>
           </div>
@@ -614,8 +599,8 @@ function ThankYou() {
 
         <p className="text-sm text-black/60 mt-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
           Questions? Contact us at{" "}
-          <a href="mailto:hello@copym.xyz" className="text-[#15a36e] hover:underline font-medium">
-            hello@copym.xyz
+          <a href="mailto:support@copym.xyz" className="text-[#15a36e] hover:underline font-medium">
+            support@copym.xyz
           </a>
         </p>
       </motion.div>

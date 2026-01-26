@@ -74,7 +74,7 @@ function App() {
 
           <Route path="/zerogas" element={<ZeroGas />} />
           <Route path="/privacy-ai" element={<PrivacyAi />} />
-          <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/terms-of-services" element={<TermsOfService />} />
           <Route path="/test-avif" element={<TestAvif />} />
         </Routes>
       </main>

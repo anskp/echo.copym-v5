@@ -91,22 +91,22 @@ export default function Footer() {
               <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
             </div>
             <ul className="space-y-2">
-              {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
+              {['Terms of Services', 'Help Centre', 'Security', 'Press', 'API'].map((item) => (
                 <li key={item}>
-                  {item === 'Terms' ? (
+                  {item === 'Terms of Services' ? (
                     <Link
-                      to="/terms"
+                      to="/terms-of-services"
                       className="text-white hover:text-[#15a36e] text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
                     </Link>
                   ) : (
-                    <a
-                      href="#"
+                    <Link
+                      to="/terms-of-services"
                       className="text-white hover:text-[#15a36e] text-base transition-colors" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
-                    </a>
+                    </Link>
                   )}
                 </li>
               ))}
@@ -253,11 +253,11 @@ export default function Footer() {
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
               </div>
               <ul className="space-y-1">
-                {['Help Centre', 'Security', 'Press', 'Terms', 'API'].map((item) => (
+                {['Terms of Services', 'Help Centre', 'Security', 'Press', 'API'].map((item) => (
                   <li key={item}>
-                    {item === 'Terms' ? (
+                    {item === 'Terms of Services' ? (
                       <Link
-                        to="/terms"
+                        to="/terms-of-services"
                         className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
                       >
                         {item}
@@ -341,7 +341,7 @@ export default function Footer() {
             &copy; 2026 COPYM. All rights reserved.
           </p>
           <p className="text-gray-400 text-[10px] sm:text-xs text-left max-w-5xl leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            Copym is not a registered broker-dealer, funding portal, underwriter, investment bank, investment adviser, or investment manager. Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. Copym does not participate in the negotiation or execution of secondary market transactions for the purchase or sale of securities. Copym does not, at any time, have possession or control of investor funds or securities in connection with such transactions. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies.
+            Copym is not a registered broker-dealer, funding portal, underwriter, investment bank, investment adviser, or investment manager. Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person. Copym does not participate in the negotiation or execution of secondary market transactions for the purchase or sale of securities. Copym does not, at any time, have possession or control of investor funds or securities in connection with such transactions. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies and T & C apply.
           </p>
         </div>
 
