@@ -39,7 +39,7 @@ const TermsOfService = () => {
                         <p className="text-base leading-relaxed mb-4">
                             Welcome to Copym. These Terms of Service ("Terms") govern your use of the Copym platform,
                             including Copym Access and Copym Settlement services (collectively, the "Services"), operated
-                            by Digitalyze Labs ("we," "us," or "our").
+                            by copym limited LLC  ("we," "us," or "our").
                         </p>
                         <p className="text-base leading-relaxed">
                             By accessing or using our Services, you agree to be bound by these Terms. If you do not agree to
@@ -120,7 +120,7 @@ const TermsOfService = () => {
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Intellectual Property</h2>
                         <p className="text-base leading-relaxed">
-                            All content, trademarks, and intellectual property associated with Copym are owned by Digitalyze Labs. You may not use our branding without prior written consent.
+                            All content, trademarks, and intellectual property associated with Copym are owned by copym limited LLC . You may not use our branding without prior written consent.
                         </p>
                     </section>
 
@@ -136,7 +136,7 @@ const TermsOfService = () => {
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 mb-4">9. Governing Law</h2>
                         <p className="text-base leading-relaxed">
-                            These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which Digitalyze Labs is incorporated, without regard to conflict of law principles.
+                            These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which copym limited LLC  is incorporated, without regard to conflict of law principles.
                         </p>
                     </section>
 

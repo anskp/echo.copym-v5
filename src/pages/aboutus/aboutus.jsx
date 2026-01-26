@@ -144,22 +144,30 @@ const AboutUs = () => {
                             </div>
 
                             {/* Right Image - Wider */}
-                            <div className="w-full md:w-8/12 h-full rounded-[30px] md:rounded-r-[40px] md:rounded-l-none overflow-hidden bg-black">
+                            <div className="relative w-full md:w-8/12 h-full rounded-[30px] md:rounded-r-[40px] md:rounded-l-none overflow-hidden bg-black group">
                                 <img
                                     src="/assets/Images/business-team.jpg"
                                     alt="Team Collaboration"
-                                    className="w-full h-full object-cover object-[125%_center] scale-110"
+                                    className="w-full h-full object-cover object-[125%_center] scale-110 transition-transform duration-700 group-hover:scale-115"
                                 />
+                                <div className="absolute inset-0 w-full h-full p-8 md:p-12 bg-black/40 backdrop-blur-sm flex flex-col justify-center">
+                                    <p className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-4 drop-shadow-md" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        “A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets.”
+                                    </p>
+                                    <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        — Kuldeep Mahindrkar, <span className="text-white font-normal">CEO, Copym</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
 
                         {/* Company Logo Badge - Absolute Center Top */}
                         <div className="absolute top-1/2 left-[38%] transform -translate-x-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center p-4">
-                            <div className="w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-transparent flex items-center justify-center relative z-20">
+                            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center relative z-20">
                                 <img
                                     src="/assets/copym/png/Copym-05-1.png"
                                     alt="Copym Logo"
-                                    className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
+                                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
                                 />
                             </div>
                         </div>
@@ -278,10 +286,6 @@ const AboutUs = () => {
                                         title: "Innovation",
                                         description: "We continuously push the boundaries of what's possible in asset tokenization.",
 
-                                    },
-                                    {
-                                        title: "Inclusivity",
-                                        description: "We make premium investments accessible to everyone, regardless of background.",
                                     }
                                 ].map((value, index) => (
                                     <motion.div
@@ -290,7 +294,10 @@ const AboutUs = () => {
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.15 }}
                                         viewport={{ once: true }}
-                                        className="bg-white p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50 max-w-md ml-auto"
+                                        className={`p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border max-w-md ml-auto ${index === 1
+                                                ? 'bg-black border-white/20'
+                                                : 'bg-white border-gray-50'
+                                            }`}
                                         style={{
                                             marginRight: `${index % 2 === 0 ? '20px' : '0px'}` // Stagger effect
                                         }}
@@ -300,11 +307,11 @@ const AboutUs = () => {
                                                 <span className="text-4xl font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                     {value.number}
                                                 </span>
-                                                <h3 className="text-xl font-bold text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : (index === 1 ? 'text-white' : 'text-black')}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                     {value.title}
                                                 </h3>
                                             </div>
-                                            <p className="text-black leading-relaxed text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className={`leading-relaxed text-sm ${index === 1 ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.description}
                                             </p>
                                         </div>

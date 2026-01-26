@@ -2,21 +2,21 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { HiSparkles } from 'react-icons/hi';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
-import ellipse from '../../../components/SVG/Ellipse.svg';
+import ellipse from '../../../components/SVG/mixedellipse.svg';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-background-white pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
+    <section className="w-full bg-black pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <div className="relative w-fit mx-auto mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               <span className="text-[#15a36e]">CORA-AI</span>
-              <span className="text-black"> THAT INVESTS WITH YOU</span>
+              <span className="text-white"> THAT INVESTS WITH YOU</span>
             </h2>
           </div>
-          <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm text-white font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             From real-time insights to smarter decisions, <br className="sm:hidden" />let AI guide your journey <br className="hidden sm:block" />to growing wealth effortlessly.
           </p>
         </div>
@@ -40,10 +40,10 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="absolute left-[1%] sm:left-[3%] lg:left-[8%] xl:left-[14%] top-[-10px] lg:top-0 z-20 w-[160px] sm:w-[210px] lg:w-[300px]"
+              className="absolute left-[0%] sm:left-[2%] lg:left-[6%] xl:left-[12%] top-[-5px] lg:top-[5px] z-20 w-[160px] sm:w-[210px] lg:w-[300px]"
             >
               <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
-                <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-black font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-white font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> <br /> to make better investments
                 </p>
               </div>
@@ -73,7 +73,7 @@ export default function AIInvestingSection() {
               className="absolute right-[-2%] sm:right-[0%] lg:right-[5%] xl:right-[10%] bottom-[-40px] lg:bottom-[-20px] z-20 w-[160px] sm:w-[210px] lg:w-[300px]"
             >
               <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-4 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
-                <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-black font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-[9px] sm:text-[10px] lg:text-[11.5px] text-white font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, <br /> and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
                 </p>
               </div>
@@ -86,22 +86,19 @@ export default function AIInvestingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
-            className="p-[1px] rounded-full"
-            style={{
-              background: 'linear-gradient(to right, #83D47E, #7DD1B2)'
-            }}
+            className="rounded-[2rem] bg-gradient-to-r from-[#179572] via-[#2A867F] to-[#236594] bg-clip-padding p-[1px]"
           >
-            <div className="flex items-center gap-2.5 px-6 py-2.5 rounded-full bg-white shadow-sm">
+            <div className="flex items-center gap-2.5 px-6 py-2.5 rounded-[2rem] bg-black/20 backdrop-blur-xl shadow-sm">
               <div className="relative">
                 {/* Custom Sharp Sparkle SVG */}
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-[#15a36e]">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="text-white">
                   <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                 </svg>
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-[#15a36e] absolute -top-1 -right-1 opacity-70">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" className="text-white absolute -top-1 -right-1 opacity-70">
                   <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                 </svg>
               </div>
-              <span className="text-black font-semibold text-lg tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-white font-semibold text-lg tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Cora AI Assistant
               </span>
             </div>
@@ -115,7 +112,7 @@ export default function AIInvestingSection() {
             viewport={{ once: true }}
             className="max-w-4xl"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-[48px] font-bold text-black leading-[1.15] lg:leading-[1.1]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-[48px] font-bold text-white leading-[1.15] lg:leading-[1.1]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Invest Smarter. Chat with <br /> Cora AI !
             </h2>
           </motion.div>

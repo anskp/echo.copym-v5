@@ -67,7 +67,7 @@ export default function Header() {
       ]
     },
     {
-      label: "Technology",
+      label: "Resources",
       path: "#",
       dropdown: [
         {
@@ -81,20 +81,25 @@ export default function Header() {
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "/privacy-ai"
+        },
+        {
+          icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
+          heading: "Blog",
+          description: "Latest news, insights, and updates from CopyM.",
+          path: "/blog"
+        },
+        {
+          icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
+          heading: "Document",
+          description: "Access all important documents and resources.",
+          path: "/document"
         }
       ]
     },
     {
-      label: "Company",
-      path: "#",
-      dropdown: [
-        {
-          icon: <Image src={aboutush} alt="About Us" className="w-20 h-20 object-contain" />,
-          heading: "About Us",
-          description: "Learn about our mission, vision, and the team driving CopyM forward.",
-          path: "/about"
-        }
-      ]
+      label: "About Us",
+      path: "/about"
+
     }
   ];
 
@@ -181,7 +186,7 @@ export default function Header() {
                         className="absolute top-full left-0 mt-2 lg:bg-[#0e0e0e] rounded-2xl overflow-hidden z-[101] shadow-2xl border border-white/10"
                         style={{
                           width: 'max-content',
-                          minWidth: '320px'
+                          minWidth: '600px'
                         }}
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -192,7 +197,7 @@ export default function Header() {
                         <div className="absolute top-0 right-0 w-[60%] h-[60%] bg-[#15a36e]/40 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/2"></div>
                         <div className="absolute bottom-0 left-0 w-[60%] h-[60%] bg-[#15a36e]/30 blur-[120px] rounded-full pointer-events-none translate-y-1/3 -translate-x-1/3"></div>
 
-                        <div className="relative w-[320px] sm:w-[400px] lg:w-[480px] bg-transparent p-6 rounded-2xl z-10">
+                        <div className="relative w-[600px] bg-transparent p-6 rounded-2xl z-10">
                           {/* Title */}
                           <div className="mb-4 pb-2 border-b border-white/10">
                             <h3 className="text-lg font-bold text-[#15a36e] uppercase tracking-wider" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -200,29 +205,82 @@ export default function Header() {
                             </h3>
                           </div>
 
-                          {/* Items */}
-                          <div className="space-y-4">
-                            {item.dropdown.map((dropdownItem, index) => (
-                              <Link
-                                key={index}
-                                to={dropdownItem.path || item.path}
-                                className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
-                                onClick={() => setHoveredItem(null)}
-                              >
-                                <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
-                                  {dropdownItem.icon}
-                                </div>
-                                <div>
-                                  <h4 className="font-bold text-white text-sm mb-0.5 group-hover/item:text-[#15a36e] transition-colors">
-                                    {dropdownItem.heading}
-                                  </h4>
-                                  <p className="text-xs text-gray-400 leading-snug">
-                                    {dropdownItem.description}
-                                  </p>
-                                </div>
-                              </Link>
-                            ))}
-                          </div>
+                          {/* Grid Layout for Resources */}
+                          {item.label === "Resources" ? (
+                            <div className="grid grid-cols-2 gap-4">
+                              {/* Left Column: Zero Gas, Privacy AI */}
+                              <div className="space-y-4 border-r border-white/20 pr-4">
+                                {item.dropdown.slice(0, 2).map((dropdownItem, index) => (
+                                  <Link
+                                    key={index}
+                                    to={dropdownItem.path || item.path}
+                                    className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                    onClick={() => setHoveredItem(null)}
+                                  >
+                                    <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                                      {dropdownItem.icon}
+                                    </div>
+                                    <div>
+                                      <h4 className="font-bold text-white text-sm mb-0.5 group-hover/item:text-[#15a36e] transition-colors">
+                                        {dropdownItem.heading}
+                                      </h4>
+                                      <p className="text-xs text-gray-400 leading-snug">
+                                        {dropdownItem.description}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+
+                              {/* Right Column: Blog, Document */}
+                              <div className="space-y-4 pl-4">
+                                {item.dropdown.slice(2, 4).map((dropdownItem, index) => (
+                                  <Link
+                                    key={index + 2}
+                                    to={dropdownItem.path || item.path}
+                                    className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                    onClick={() => setHoveredItem(null)}
+                                  >
+                                    <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                                      {dropdownItem.icon}
+                                    </div>
+                                    <div>
+                                      <h4 className="font-bold text-white text-sm mb-0.5 group-hover/item:text-[#15a36e] transition-colors">
+                                        {dropdownItem.heading}
+                                      </h4>
+                                      <p className="text-xs text-gray-400 leading-snug">
+                                        {dropdownItem.description}
+                                      </p>
+                                    </div>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          ) : (
+                            /* Regular layout for other dropdowns */
+                            <div className="space-y-4">
+                              {item.dropdown.map((dropdownItem, index) => (
+                                <Link
+                                  key={index}
+                                  to={dropdownItem.path || item.path}
+                                  className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                  onClick={() => setHoveredItem(null)}
+                                >
+                                  <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
+                                    {dropdownItem.icon}
+                                  </div>
+                                  <div>
+                                    <h4 className="font-bold text-white text-sm mb-0.5 group-hover/item:text-[#15a36e] transition-colors">
+                                      {dropdownItem.heading}
+                                    </h4>
+                                    <p className="text-xs text-gray-400 leading-snug">
+                                      {dropdownItem.description}
+                                    </p>
+                                  </div>
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </div>
                       </motion.div>
                     </>
