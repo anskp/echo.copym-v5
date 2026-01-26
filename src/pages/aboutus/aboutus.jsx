@@ -56,7 +56,7 @@ const AboutUs = () => {
                                             <>Borderless <br /> <span className="text-[#15a36e]">Future</span></>
                                         )}
                                     </h2>
-                                    <div className="text-lg text-gray-600 leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <div className="text-lg text-black leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         {activeTab === 0 && (
                                             <>
                                                 <p>
@@ -185,7 +185,7 @@ const AboutUs = () => {
                                         <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
-                                <p className="text-lg text-gray-600 leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-lg text-black leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
                                 </p>
 
@@ -214,7 +214,7 @@ const AboutUs = () => {
                                                     E-MAIL ID
                                                 </h3>
                                             </div>
-                                            <p className="text-xs text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 support@copym.xyz
                                             </p>
                                         </div>
@@ -241,7 +241,7 @@ const AboutUs = () => {
                                                     ADDRESS
                                                 </h3>
                                             </div>
-                                            <p className="text-xs text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
                                             </p>
                                         </div>
@@ -304,7 +304,7 @@ const AboutUs = () => {
                                                     {value.title}
                                                 </h3>
                                             </div>
-                                            <p className="text-gray-600 leading-relaxed text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-black leading-relaxed text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.description}
                                             </p>
                                         </div>
@@ -334,7 +334,7 @@ const AboutUs = () => {
                                         <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-lg text-gray-400 leading-relaxed max-w-md mb-12 text-justify hyphens-auto tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-lg text-white leading-relaxed max-w-md mb-12 text-justify hyphens-auto tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. Each milestone is more than progress—it’s a promise to stay ahead, listen to our community, and turn challenges into opportunities. What began as a vision has grown into a movement built on investment and opportunity.
                                 </p>
 
