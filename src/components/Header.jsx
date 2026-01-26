@@ -74,25 +74,25 @@ export default function Header() {
           icon: <Image src={zerogash} alt="Zero Gas" className="w-20 h-20 object-contain" />,
           heading: "Zero Gas",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
-          path: "/zerogas"
+          path: "#"  // Disabled redirect
         },
         {
           icon: <Image src={parivaryaih} alt="Privacy AI" className="w-20 h-20 object-contain" />,
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
-          path: "/privacy-ai"
+          path: "#"  // Disabled redirect
         },
         {
           icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
           heading: "Blog",
           description: "Latest news, insights, and updates from CopyM.",
-          path: "/blog"
+          path: "#"  // Disabled redirect
         },
         {
           icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
           heading: "Document",
           description: "Access all important documents and resources.",
-          path: "/document"
+          path: "#"  // Disabled redirect
         }
       ]
     },

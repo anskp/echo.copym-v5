@@ -131,44 +131,26 @@ const AboutUs = () => {
                         </div>
                     </div>
 
-                    {/* BOTTOM: Image Area - Dual Grid */}
-                    <div className="relative mt-8 sm:mt-12 w-full">
-                        <div className="flex flex-col-reverse md:flex-row gap-6 h-[600px] md:h-[500px] lg:h-[600px] w-full items-stretch">
-                            {/* Left Image - Narrower */}
-                            <div className="w-full md:w-5/12 h-full rounded-[30px] md:rounded-l-[40px] md:rounded-r-none overflow-hidden">
+                    {/* BOTTOM: Logo and Quote - No Image */}
+                    <div className="relative mt-4 sm:mt-6 w-full">
+                        <div className="flex flex-col items-center justify-center py-8 md:py-12">
+                            {/* Company Logo */}
+                            <div>
                                 <img
-                                    src="/assets/Images/business-team.jpg"
-                                    alt="Office Building"
-                                    className="w-full h-full object-cover object-left scale-110"
-                                />
-                            </div>
-
-                            {/* Right Image - Wider */}
-                            <div className="relative w-full md:w-8/12 h-full rounded-[30px] md:rounded-r-[40px] md:rounded-l-none overflow-hidden bg-black group">
-                                <img
-                                    src="/assets/Images/business-team.jpg"
-                                    alt="Team Collaboration"
-                                    className="w-full h-full object-cover object-[125%_center] scale-110 transition-transform duration-700 group-hover:scale-115"
-                                />
-                                <div className="absolute inset-0 w-full h-full p-8 md:p-12 bg-black/40 backdrop-blur-sm flex flex-col justify-center">
-                                    <p className="text-white text-xl md:text-2xl font-medium leading-relaxed mb-4 drop-shadow-md" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        “A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets.”
-                                    </p>
-                                    <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        — Kuldeep Mahindrkar, <span className="text-white font-normal">CEO, Copym</span>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Company Logo Badge - Absolute Center Top */}
-                        <div className="absolute top-1/2 left-[38%] transform -translate-x-1/2 -translate-y-1/2 z-10 hidden md:flex items-center justify-center p-4">
-                            <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full bg-white shadow-xl flex items-center justify-center relative z-20">
-                                <img
-                                    src="/assets/copym/png/Copym-05-1.png"
+                                    src="/assets/copym/png/Copym-01-1.avif"
                                     alt="Copym Logo"
-                                    className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
+                                    className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
                                 />
+                            </div>
+
+                            {/* CEO Quote */}
+                            <div className="max-w-4xl mx-auto text-center px-8">
+                                <p className="text-black text-xl md:text-2xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    "A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets."
+                                </p>
+                                <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    — Kuldeep Mahindrkar, <span className="text-black font-normal">CEO, Copym</span>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -295,8 +277,8 @@ const AboutUs = () => {
                                         transition={{ duration: 0.5, delay: index * 0.15 }}
                                         viewport={{ once: true }}
                                         className={`p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border max-w-md ml-auto ${index === 1
-                                                ? 'bg-black border-white/20'
-                                                : 'bg-white border-gray-50'
+                                            ? 'bg-black border-white/20'
+                                            : 'bg-white border-gray-50'
                                             }`}
                                         style={{
                                             marginRight: `${index % 2 === 0 ? '20px' : '0px'}` // Stagger effect

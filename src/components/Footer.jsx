@@ -47,7 +47,7 @@ export default function Footer() {
               <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
             </div>
             <ul className="space-y-2">
-              {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
+              {['Carbon Credits', 'Real Estate', "Commodities", 'Stocks & ETFs', 'Others'].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -209,7 +209,7 @@ export default function Footer() {
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
               </div>
               <ul className="space-y-1">
-                {['Stock', "ETF's", 'Crypto', 'Options', 'Retirement'].map((item) => (
+                {['Carbon Credits', 'Real Estate', "Commodities", 'Stocks & ETFs', 'Others'].map((item) => (
                   <li key={item}>
                     <a
                       href="#"

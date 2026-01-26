@@ -8,7 +8,6 @@ import {
     Palette,
     Package,
     ExternalLink,
-    ChevronRight,
     MapPin,
     Layers,
     ShieldCheck,
@@ -597,14 +596,7 @@ export default function WhyItMatters() {
                                     </div>
                                 )}
 
-                                <div className="pt-8 flex flex-col items-center">
-                                    <button className="flex items-center gap-3 px-8 py-3 bg-transparent border-2 border-[#10b981] text-gray-800 rounded-full font-semibold text-base hover:bg-[#10b981]/5 transition-all duration-300 group">
-                                        Explore Marketplace
-                                        <div className="w-8 h-8 rounded-full bg-[#10b981] flex items-center justify-center group-hover:scale-110 transition-transform">
-                                            <ChevronRight className="w-4 h-4 text-white" />
-                                        </div>
-                                    </button>
-                                </div>
+
                             </motion.div>
                         </AnimatePresence>
                     </div>

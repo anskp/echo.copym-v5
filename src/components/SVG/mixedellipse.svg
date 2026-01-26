@@ -9,14 +9,16 @@
 <feGaussianBlur stdDeviation="49.75" result="effect1_foregroundBlur_1665_865"/>
 </filter>
 <linearGradient id="paint0_linear_1665_865" x1="47.8444" y1="460" x2="843.466" y2="460" gradientUnits="userSpaceOnUse">
-<stop offset="0%" stop-color="#179572"/>
-<stop offset="15%" stop-color="#1F8F79"/>
-<stop offset="30%" stop-color="#2A867F"/>
-<stop offset="45%" stop-color="#317C79"/>
-<stop offset="60%" stop-color="#2E7485"/>
-<stop offset="75%" stop-color="#296C8F"/>
-<stop offset="90%" stop-color="#246399"/>
-<stop offset="100%" stop-color="#236594"/>
+<stop stop-color="#169970"/>
+<stop offset="0.09" stop-color="#179573"/>
+<stop offset="0.211531" stop-color="#198D78"/>
+<stop offset="0.33" stop-color="#1A877C"/>
+<stop offset="0.47" stop-color="#1D7E82"/>
+<stop offset="0.61" stop-color="#1F7788"/>
+<stop offset="0.73" stop-color="#21708D"/>
+<stop offset="0.85" stop-color="#226992"/>
+<stop offset="0.92" stop-color="#236595"/>
+<stop offset="1" stop-color="#246197" stop-opacity="0.3"/>
 </linearGradient>
 </defs>
 </svg>
