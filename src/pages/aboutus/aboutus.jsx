@@ -5,6 +5,8 @@ import Typeform from "../Contact/Typeform";
 import TimelineImage from "../../components/images/timeline.avif";
 
 
+import AboutUsHero from './sections/aboutushero';
+
 // Removed LavaLamp background
 import {
     GiShield,
@@ -63,7 +65,12 @@ const CounterCard = ({ stat, index }) => {
         >
             {/* Vertical divider line on left (except first item) */}
             {index > 0 && (
-                <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-200"></div>
+                <div
+                    className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16"
+                    style={{
+                        background: 'linear-gradient(to bottom, transparent 0%, #15a36e 50%, transparent 100%)'
+                    }}
+                ></div>
             )}
             <div className="flex flex-col items-center">
                 <span
@@ -85,107 +92,103 @@ const AboutUs = () => {
 
     return (
         <div className="min-h-screen bg-white">
+            <AboutUsHero />
 
 
             {/* Unified Company Overview Section */}
             <section className="py-10 lg:py-16 bg-white overflow-hidden" id="company-overview">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col gap-8 lg:gap-12 mb-10 lg:mb-16">
-                        {/* TOP: Dynamic Content Area */}
-                        <div className="relative pt-10 text-center">
-                            <AnimatePresence mode="wait">
-                                <motion.div
-                                    key={activeTab}
-                                    initial={{ opacity: 0, y: 20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.5 }}
-                                    className="flex flex-col items-center"
-                                >
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {activeTab === 0 ? (
-                                            <>Transforming <span className="text-[#15a36e]">Asset</span> Ownership</>
-                                        ) : activeTab === 1 ? (
-                                            <>Democratizing <span className="text-[#15a36e]">Investment</span></>
-                                        ) : (
-                                            <>Borderless <span className="text-[#15a36e]">Future</span></>
-                                        )}
-                                    </h2>
-                                    <div className="text-base text-black leading-relaxed max-w-3xl mx-auto text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {activeTab === 0 && (
-                                            <p>
-                                                COPYm is a leading <span className="font-semibold text-black">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership. The traditional asset market is fragmented, slow, and geographically restricted. We merge blockchain technology with real-world compliance to create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
-                                            </p>
-                                        )}
-                                        {activeTab === 1 && (
-                                            <p>
-                                                To make asset ownership borderless, transparent, and universally accessible through blockchain innovation. We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
-                                            </p>
-                                        )}
-                                        {activeTab === 2 && (
-                                            <p>
-                                                We see a future where any asset, anywhere, can be owned, traded, and verified instantly. Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers.
-                                            </p>
-                                        )}
-                                    </div>
-                                </motion.div>
-                            </AnimatePresence>
-
-
-                        </div>
-
-                        {/* BOTTOM: Accordion / Interactive List */}
-                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
+                    <div className="flex flex-col gap-6 lg:gap-8 mb-2 lg:mb-4">
+                        {/* Accordion / Interactive List */}
+                        <div className="flex flex-col gap-4 sm:gap-6 pt-4">
                             {[
-                                { id: 0, title: "About Us" },
-                                { id: 1, title: "Our Mission" },
-                                { id: 2, title: "Our Vision" }
+                                {
+                                    id: 0,
+                                    title: "Our Mission",
+                                    icon: GiTargetArrows,
+                                    heading: <>Democratizing <span className="text-[#15a36e]">Investment</span></>,
+                                    text: "To make asset ownership borderless, transparent, and universally accessible through blockchain innovation. We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100."
+                                },
+                                {
+                                    id: 1,
+                                    title: "Our Vision",
+                                    icon: GiBinoculars,
+                                    heading: <>Borderless <span className="text-[#15a36e]">Future</span></>,
+                                    text: "We see a future where any asset, anywhere, can be owned, traded, and verified instantly. Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers."
+                                }
                             ].map((item) => (
-                                <motion.button
+                                <div
                                     key={item.id}
-                                    onClick={() => setActiveTab(item.id)}
-                                    className={`flex-1 text-left p-6 sm:p-8 rounded-[20px] transition-all duration-300 border bg-white flex items-center justify-between group ${activeTab === item.id
-                                        ? 'border-gray-200 shadow-lg scale-[1.02]'
+                                    className={`flex flex-col rounded-[24px] transition-all duration-300 border bg-white overflow-hidden ${activeTab === item.id
+                                        ? 'border-gray-200 shadow-lg'
                                         : 'border-transparent hover:bg-gray-50'
                                         }`}
-                                    whileHover={{ scale: 1.01 }}
-                                    whileTap={{ scale: 0.99 }}
                                 >
-                                    <div className="flex items-center gap-6 sm:gap-8">
+                                    <button
+                                        onClick={() => setActiveTab(activeTab === item.id ? null : item.id)} // Toggle behavior
+                                        className="flex items-center justify-between p-8 sm:p-12 w-full text-left"
+                                    >
+                                        <div className="flex items-center gap-4 sm:gap-6">
+                                            <item.icon className={`w-6 h-6 sm:w-8 sm:h-8 ${activeTab === item.id ? 'text-[#15a36e]' : 'text-black'}`} />
+                                            <span className="text-xl sm:text-2xl font-medium text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                {item.title}
+                                            </span>
+                                        </div>
 
-                                        <span className={`text-xl sm:text-2xl font-medium ${activeTab === item.id ? 'text-black' : 'text-gray-500 group-hover:text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                            {item.title}
-                                        </span>
-                                    </div>
+                                        {/* Arrow Icon */}
+                                        <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${activeTab === item.id ? 'bg-[#15a36e] text-white' : 'bg-gray-100 text-gray-400'}`}>
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                                className={`transform transition-transform duration-300 ${activeTab === item.id ? 'rotate-180' : 'rotate-0'}`}
+                                            >
+                                                <path d="M19 9l-7 7-7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </button>
 
-                                    {/* Arrow Icon */}
-                                    <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-colors duration-300 ${activeTab === item.id ? 'bg-[#15a36e] text-white' : 'bg-gray-100 text-gray-400 group-hover:bg-gray-200'}`}>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-                                            className={`transform transition-transform duration-300 ${activeTab === item.id ? '-rotate-45' : 'rotate-0'}`}
-                                        >
-                                            <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                        </svg>
-                                    </div>
-                                </motion.button>
+                                    {/* Dropdown Content */}
+                                    <AnimatePresence>
+                                        {activeTab === item.id && (
+                                            <motion.div
+                                                initial={{ height: 0, opacity: 0 }}
+                                                animate={{ height: "auto", opacity: 1 }}
+                                                exit={{ height: 0, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                                className="overflow-hidden"
+                                            >
+                                                <div className="px-8 sm:px-12 pb-8 pt-0">
+                                                    <div className="w-full h-px bg-gray-100 mb-6"></div>
+                                                    <div className="flex flex-col gap-4">
+                                                        <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                            {item.heading}
+                                                        </h2>
+                                                        <p className="text-base text-gray-600 leading-relaxed text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                            {item.text}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
                             ))}
                         </div>
                     </div>
 
                     {/* BOTTOM: Logo and Quote - No Image */}
                     <div className="relative mt-0 w-full">
-                        <div className="flex flex-col items-center justify-center py-4 md:py-6">
+                        <div className="flex flex-col items-center justify-center pt-0 pb-6 md:pb-8">
                             {/* Company Logo */}
-                            <div>
+                            <div className="-mb-10 sm:-mb-14">
                                 <img
                                     src="/assets/copym/png/Copym-01-1.avif"
                                     alt="Copym Logo"
-                                    className="w-32 h-32 sm:w-40 sm:h-40 object-contain"
+                                    className="w-48 h-48 sm:w-60 sm:h-60 object-contain"
                                 />
                             </div>
 
                             {/* CEO Quote */}
                             <div className="max-w-4xl mx-auto text-center px-8">
-                                <p className="text-black text-xl md:text-2xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-black text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     "A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets."
                                 </p>
                                 <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -202,9 +205,9 @@ const AboutUs = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                         {[
-                            { value: 70, suffix: "", prefix: "+", label: "Crypto currencies" },
-                            { value: 250, suffix: "", prefix: "+", label: "Countries Associated" },
-                            { value: 200, suffix: "k", prefix: "+", label: "Investment Opportunities" }
+                            { value: 70, suffix: "", prefix: "+", label: "Blockchains" },
+                            { value: 5, suffix: "", prefix: "+", label: "Countries Associated" },
+                            { value: 200, suffix: "k", prefix: "+", label: "Beneficial Ownership" }
                         ].map((stat, index) => (
                             <CounterCard key={index} stat={stat} index={index} />
                         ))}
@@ -215,7 +218,7 @@ const AboutUs = () => {
             {/* Section 4: Core Values */}
             <section className="py-6 lg:py-8 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col gap-12 lg:gap-16">
+                    <div className="flex flex-col gap-4 lg:gap-8">
                         {/* TOP: Heading & Description - Centered */}
                         <div className="w-full text-center">
                             <motion.div
@@ -230,7 +233,7 @@ const AboutUs = () => {
                                         Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
-                                <p className="text-base text-black leading-relaxed max-w-3xl mb-12 mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-base text-black leading-relaxed max-w-3xl mb-2 mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
                                 </p>
                             </motion.div>
@@ -262,11 +265,18 @@ const AboutUs = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.15 }}
                                         viewport={{ once: true }}
-                                        className={`p-8 rounded-[24px] transition-all duration-300 relative bg-transparent border-2 ${index === 1
-                                            ? 'border-[#15a36e] hover:bg-[#15a36e]/5'
-                                            : 'border-black hover:bg-black/5'
-                                            }`}
+                                        className="p-8 relative"
                                     >
+                                        {/* Vertical Gradient Divider */}
+                                        {index > 0 && (
+                                            <div
+                                                className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-24"
+                                                style={{
+                                                    background: 'linear-gradient(to bottom, transparent 0%, #15a36e 50%, transparent 100%)'
+                                                }}
+                                            ></div>
+                                        )}
+
                                         <div className="flex flex-col gap-4 text-center">
                                             <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : 'text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.title}
@@ -279,69 +289,15 @@ const AboutUs = () => {
                                 ))}
                             </div>
 
-                            {/* Email and Address Cards - Below Values */}
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 max-w-2xl mx-auto">
-                                {/* Email Card */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: 0.5 }}
-                                    viewport={{ once: true }}
-                                    className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
-                                >
-                                    <div className="flex flex-col gap-2">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                                                <img
-                                                    src="/assets/Images/email.png"
-                                                    alt="Email"
-                                                    className="w-full h-full object-contain"
-                                                />
-                                            </div>
-                                            <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                E-MAIL ID
-                                            </h3>
-                                        </div>
-                                        <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                            support@copym.xyz
-                                        </p>
-                                    </div>
-                                </motion.div>
 
-                                {/* Address Card */}
-                                <motion.div
-                                    initial={{ opacity: 0, y: 30 }}
-                                    whileInView={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.6, delay: 0.6 }}
-                                    viewport={{ once: true }}
-                                    className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
-                                >
-                                    <div className="flex flex-col gap-2">
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                                                <img
-                                                    src="/assets/Images/address.png"
-                                                    alt="Address"
-                                                    className="w-full h-full object-contain"
-                                                />
-                                            </div>
-                                            <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                ADDRESS
-                                            </h3>
-                                        </div>
-                                        <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                            Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
-                                        </p>
-                                    </div>
-                                </motion.div>
-                            </div>
                         </div>
                     </div>
+
                 </div>
-            </section>
+            </section >
 
             {/* Section 5: Company Timeline */}
-            <section className="relative bg-black pt-8 pb-32 lg:pt-12 lg:pb-40 overflow-hidden">
+            < section className="relative bg-black pt-8 pb-32 lg:pt-12 lg:pb-40 overflow-hidden" >
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col gap-8 lg:gap-10">
                         {/* TOP: Heading & Description - Centered */}
@@ -381,7 +337,7 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section >
 
             {/* Section 6: Leadership Team */}
             {/* <section className="py-20 bg-blue-100">
@@ -600,36 +556,107 @@ const AboutUs = () => {
                 </div>
             </section>
 
-            {/* Section 10: Map Only */}
-            <section className="relative pt-0 pb-8 sm:pb-10 md:pb-12 lg:pb-16 bg-white">
+
+            {/* Section 11: Contact Info and Map Grid */}
+            <section className="relative pt-0 pb-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    {/* Map - Full Width */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-[400px] sm:h-[500px] lg:h-[600px]"
-                    >
-                        <div className="relative z-10 w-full h-full">
-                            <iframe
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14529.56708688439!2d54.6152862!3d24.4326555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e458af42657e9%3A0x67586558872e4244!2sMasdar%20City%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1715674845000"
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                title="Copym Office Location - Masdar City, Abu Dhabi"
-                                className="w-full h-full"
-                            ></iframe>
+                    <div className="flex flex-col gap-12">
+                        {/* Top: Email and Address Row */}
+                        <div className="w-full max-w-5xl mx-auto">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 relative">
+                                {/* Email Section */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: -30 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6 }}
+                                    viewport={{ once: true }}
+                                    className="bg-transparent p-4 relative flex justify-center sm:justify-end sm:pr-12"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
+                                            <img
+                                                src="/assets/Images/email.png"
+                                                alt="Email"
+                                                className="w-full h-full object-contain"
+                                            />
+                                        </div>
+                                        <div className="flex items-center gap-2">
+                                            <h3 className="text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                E-MAIL ID :
+                                            </h3>
+                                            <p className="text-base text-black font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                support@copym.xyz
+                                            </p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+
+                                {/* Vertical Gradient Divider */}
+                                <div
+                                    className="hidden sm:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1px] h-16"
+                                    style={{
+                                        background: 'linear-gradient(to bottom, transparent 0%, #15a36e 50%, transparent 100%)'
+                                    }}
+                                ></div>
+
+                                {/* Address Section */}
+                                <motion.div
+                                    initial={{ opacity: 0, x: 30 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.2 }}
+                                    viewport={{ once: true }}
+                                    className="bg-transparent p-4 relative flex justify-center sm:justify-start sm:pl-12"
+                                >
+                                    <div className="flex items-center gap-4">
+                                        <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
+                                            <img
+                                                src="/assets/Images/address.png"
+                                                alt="Address"
+                                                className="w-full h-full object-contain"
+                                            />
+                                        </div>
+                                        <div className="flex items-baseline gap-2">
+                                            <h3 className="text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                ADDRESS :
+                                            </h3>
+                                            <p className="text-base text-black font-medium whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Smart Station, First Floor, Incubator Building,<br /> Masdar City, Abu Dhabi, UAE.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            </div>
                         </div>
-                    </motion.div>
+
+                        {/* Bottom: Map */}
+                        <div className="w-full">
+                            <motion.div
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6 }}
+                                viewport={{ once: true }}
+                                className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-[400px] sm:h-[500px] lg:h-[600px]"
+                            >
+                                <div className="relative z-10 w-full h-full">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14529.56708688439!2d54.6152862!3d24.4326555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e458af42657e9%3A0x67586558872e4244!2sMasdar%20City%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1715674845000"
+                                        width="100%"
+                                        height="100%"
+                                        style={{ border: 0 }}
+                                        allowFullScreen
+                                        loading="lazy"
+                                        referrerPolicy="no-referrer-when-downgrade"
+                                        title="Copym Office Location - Masdar City, Abu Dhabi"
+                                        className="w-full h-full"
+                                    ></iframe>
+                                </div>
+                            </motion.div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
-
-        </div>
+        </div >
     );
 };
 

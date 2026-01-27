@@ -205,13 +205,8 @@ export default function Typeform() {
 
   return (
     <div className="min-h-[300px] text-white flex items-center justify-center px-1 sm:px-4 relative">
-      {/* Logo Background Pattern */}
-      <div className="absolute inset-0 opacity-5" style={{
-        backgroundImage: 'url(/assets/copym/png/Copym-05-1.png)',
-        backgroundRepeat: 'repeat',
-        backgroundSize: '150px',
-        backgroundPosition: 'center'
-      }}></div>
+      {/* White Background */}
+      <div className="absolute inset-0 bg-white"></div>
 
       <div className="relative w-full max-w-5xl group transition-all duration-500 overflow-hidden z-10">
         {/* Removed Silk Background */}
