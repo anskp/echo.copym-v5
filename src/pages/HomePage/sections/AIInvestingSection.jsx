@@ -63,9 +63,9 @@ export default function AIInvestingSection() {
               className="relative z-10 translate-y-40 md:translate-y-48 lg:translate-y-56"
             >
               <Image
-                src="/assets/Images/cora-ai.png"
+                src="/assets/Images/cora-ai.avif"
                 alt="Cora AI"
-                className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[420px] h-auto object-contain"
+                className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[420px] h-auto object-contain translate-y-16"
               />
             </motion.div>
 
