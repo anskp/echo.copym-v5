@@ -25,7 +25,7 @@ export default function PlatformFeatures() {
           <img
             src={GroupedImages}
             alt="Platform Features"
-            className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto object-contain"
+            className="w-full max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl h-auto object-contain transform scale-[1.15]"
           />
         </motion.div>
       </div>

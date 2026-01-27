@@ -53,7 +53,7 @@ export default function TokenManagement() {
                             <span className="text-[#15a36e]">TOKEN</span> <span className="text-black">MANAGEMENT</span>
                         </h2>
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl mx-auto text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-sm font-normal text-black leading-relaxed max-w-4xl mx-auto text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         Comprehensive tools for managing investor relationships, compliance, <br className="hidden sm:block" /> and portfolio performance.
                     </p>
                 </div>
@@ -107,15 +107,15 @@ export default function TokenManagement() {
                                         {feature.description}
                                     </p>
 
-                                    {/* Know More Button - Transparent Outlined Design */}
+                                    {/* Know More Button - Filled Design */}
                                     <div className="mt-6 sm:mt-8 flex justify-center">
-                                        <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-[#15a36e] border border-[#15a36e] hover:bg-transparent rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
-                                            <span className="pl-4 pr-2 text-white group-hover:text-[#15a36e] font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
+                                            <span className="pl-4 pr-2 text-white font-semibold text-xs sm:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 Know more
                                             </span>
-                                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white group-hover:bg-[#15a36e] flex items-center justify-center transition-all duration-300 group-hover:translate-x-0.5">
+                                            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white flex items-center justify-center transition-all duration-300">
                                                 <svg
-                                                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#15a36e] group-hover:text-white"
+                                                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#15a36e]"
                                                     fill="none"
                                                     stroke="currentColor"
                                                     viewBox="0 0 24 24"

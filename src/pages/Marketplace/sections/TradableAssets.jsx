@@ -36,7 +36,7 @@ export default function TradableAssets() {
                             <span className="text-black">What you can trade on</span> <span className="text-[#10b981]">CopyM</span> <span className="text-black">?</span>
                         </h2>
                     </div>
-                    <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <p className="text-sm sm:text-base md:text-lg lg:text-sm font-normal text-black leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br className="hidden sm:block" />
                         that give you the edge in crypto trading
                     </p>

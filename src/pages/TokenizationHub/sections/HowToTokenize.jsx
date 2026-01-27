@@ -118,7 +118,7 @@ export default function HowToTokenize() {
                   <img
                     src="/assets/Images/dashboard_screen.avif"
                     alt="Dashboard Screenshot"
-                    className="w-full h-auto object-contain rounded-lg"
+                    className="w-full h-auto object-contain rounded-lg transform scale-110"
                     style={{ filter: 'drop-shadow(0 20px 40px rgba(21, 163, 110, 0.4))' }}
                   />
                 </div>

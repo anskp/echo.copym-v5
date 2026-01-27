@@ -83,13 +83,13 @@ export default function Header() {
           path: "#"  // Disabled redirect
         },
         {
-          icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
+          icon: <Image src="/assets/Images/blog.avif" alt="Blog" className="w-20 h-20 object-contain" />,
           heading: "Blog",
           description: "Latest news, insights, and updates from CopyM.",
           path: "#"  // Disabled redirect
         },
         {
-          icon: <FaFileAlt className="w-20 h-20 text-[#15a36e]" />,
+          icon: <Image src="/assets/Images/doc.avif" alt="Document" className="w-20 h-20 object-contain" />,
           heading: "Document",
           description: "Access all important documents and resources.",
           path: "#"  // Disabled redirect

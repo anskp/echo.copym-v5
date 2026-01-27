@@ -44,7 +44,7 @@ export default function InvestorManagement() {
             <span className="text-black">INVESTOR </span>
             <span className="text-[#15a36e]">MANAGEMENT</span>
           </h2>
-          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-gray-600 leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-normal text-black leading-relaxed max-w-6xl mx-auto px-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Comprehensive tools for managing investor relationships, compliance, and portfolio performance.
           </p>
         </div>
