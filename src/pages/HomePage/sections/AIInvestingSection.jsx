@@ -34,7 +34,7 @@ export default function AIInvestingSection() {
               />
             </div>
 
-            {/* Left Info Box - Restored Pill Style */}
+            {/* Left Info Box - Text Only */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -42,11 +42,37 @@ export default function AIInvestingSection() {
               viewport={{ once: true }}
               className="absolute left-[-1%] sm:left-[1%] lg:left-[4%] xl:left-[7%] top-[calc(50%+20px)] md:top-[calc(50%+24px)] lg:top-[calc(50%+28px)] -translate-y-1/2 z-20 w-[160px] sm:w-[210px] lg:w-[280px]"
             >
-              <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
-                <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> to make better investments.
-                </p>
-              </div>
+              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> to make better investments.
+              </p>
+              {/* Left Connector Line */}
+              <svg
+                className="absolute -right-[60px] sm:-right-[80px] lg:-right-[100px] top-1/2 -translate-y-1/2 w-[60px] sm:w-[80px] lg:w-[100px] h-[50px] sm:h-[60px] lg:h-[70px]"
+                viewBox="0 0 160 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+              >
+                <path
+                  d="M1 88.2773L74.8267 10.0898C80.3664 4.22283 88.1 0.92921 96.1688 1.00054L158.451 1.55115"
+                  stroke="url(#paint0_linear_left)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_left"
+                    x1="79.7256"
+                    y1="1.55127"
+                    x2="79.7256"
+                    y2="88.2775"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="#0D2F72" />
+                  </linearGradient>
+                </defs>
+              </svg>
             </motion.div>
 
             {/* Central Visual */}
@@ -70,13 +96,40 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute right-[0%] sm:right-[2%] lg:right-[5%] xl:right-[8%] top-[calc(50%+20px)] md:top-[calc(50%+24px)] lg:top-[calc(50%+28px)] -translate-y-1/2 z-20 w-[160px] sm:w-[210px] lg:w-[280px]"
+              className="absolute right-[-1%] sm:right-[1%] lg:right-[4%] xl:right-[7%] top-[calc(50%+20px)] md:top-[calc(50%+24px)] lg:top-[calc(50%+28px)] -translate-y-1/2 z-20 w-[160px] sm:w-[210px] lg:w-[280px]"
             >
-              <div className="bg-white/5 backdrop-blur-xl border border-white/20 rounded-[2rem] py-3 px-5 shadow-[0_8px_32px_rgba(0,0,0,0.08)] text-center">
-                <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
-                </p>
-              </div>
+              {/* Right Connector Line (mirrored) */}
+              <svg
+                className="absolute -left-[60px] sm:-left-[80px] lg:-left-[100px] top-1/2 -translate-y-1/2 w-[60px] sm:w-[80px] lg:w-[100px] h-[50px] sm:h-[60px] lg:h-[70px]"
+                viewBox="0 0 160 90"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none"
+                style={{ transform: 'scaleX(-1) translateY(-50%)' }}
+              >
+                <path
+                  d="M1 88.2773L74.8267 10.0898C80.3664 4.22283 88.1 0.92921 96.1688 1.00054L158.451 1.55115"
+                  stroke="url(#paint0_linear_right)"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_right"
+                    x1="79.7256"
+                    y1="1.55127"
+                    x2="79.7256"
+                    y2="88.2775"
+                    gradientUnits="userSpaceOnUse"
+                  >
+                    <stop stopColor="white" />
+                    <stop offset="1" stopColor="#0D2F72" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
+              </p>
             </motion.div>
           </div>
 

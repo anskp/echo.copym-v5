@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../../../components/Layout/SectionHeader';
 
 const CompanyTimeline = () => {
   const timelineData = [
@@ -33,10 +34,10 @@ const CompanyTimeline = () => {
           <div className="flex flex-col gap-8 sm:gap-12 md:gap-16 lg:gap-[70px] justify-start items-center w-full h-full">
 
             {/* Section Title */}
-            <h2 className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold leading-[36px] sm:leading-[46px] md:leading-[58px] lg:leading-[72px] text-center uppercase text-text-white w-auto">
-              <span className="text-text-white">Company </span>
-              <span className="text-text-accent">Timeline</span>
-            </h2>
+            <SectionHeader
+              title="Company Timeline"
+              alignment="center"
+            />
 
             {/* Timeline Container */}
             <div className="relative flex flex-col justify-center items-center w-full lg:w-[70%] self-end">

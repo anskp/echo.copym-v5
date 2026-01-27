@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
 import Typeform from "../Contact/Typeform";
 // Removed old contact image imports to use public assets directly
 import TimelineImage from "../../components/images/timeline.avif";
@@ -24,7 +24,61 @@ import {
     GiHourglass
 } from "react-icons/gi";
 
+// Animated Counter Component
+const CounterCard = ({ stat, index }) => {
+    const [count, setCount] = useState(0);
+    const ref = useRef(null);
+    const isInView = useInView(ref, { once: true });
 
+    useEffect(() => {
+        if (isInView) {
+            const duration = 2000; // 2 seconds
+            const startTime = Date.now();
+            const endValue = stat.value;
+
+            const animate = () => {
+                const now = Date.now();
+                const progress = Math.min((now - startTime) / duration, 1);
+                // Ease out cubic for smooth deceleration
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+                setCount(Math.floor(easeOut * endValue));
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                }
+            };
+
+            requestAnimationFrame(animate);
+        }
+    }, [isInView, stat.value]);
+
+    return (
+        <motion.div
+            ref={ref}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            viewport={{ once: true }}
+            className="text-center relative"
+        >
+            {/* Vertical divider line on left (except first item) */}
+            {index > 0 && (
+                <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 w-px h-16 bg-gray-200"></div>
+            )}
+            <div className="flex flex-col items-center">
+                <span
+                    className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#15a36e]"
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
+                    {stat.prefix}{count}{stat.suffix}
+                </span>
+                <span className="text-base text-black mt-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    {stat.label}
+                </span>
+            </div>
+        </motion.div>
+    );
+};
 
 const AboutUs = () => {
     const [activeTab, setActiveTab] = useState(0);
@@ -36,9 +90,9 @@ const AboutUs = () => {
             {/* Unified Company Overview Section */}
             <section className="py-10 lg:py-16 bg-white overflow-hidden" id="company-overview">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 lg:mb-16">
-                        {/* LEFT TOP: Dynamic Content Area */}
-                        <div className="relative pt-10">
+                    <div className="flex flex-col gap-8 lg:gap-12 mb-10 lg:mb-16">
+                        {/* TOP: Dynamic Content Area */}
+                        <div className="relative pt-10 text-center">
                             <AnimatePresence mode="wait">
                                 <motion.div
                                     key={activeTab}
@@ -46,46 +100,32 @@ const AboutUs = () => {
                                     animate={{ opacity: 1, y: 0 }}
                                     exit={{ opacity: 0, y: -20 }}
                                     transition={{ duration: 0.5 }}
+                                    className="flex flex-col items-center"
                                 >
-                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8 text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         {activeTab === 0 ? (
-                                            <>Transforming <br /> <span className="text-[#15a36e]">Asset</span> Ownership</>
+                                            <>Transforming <span className="text-[#15a36e]">Asset</span> Ownership</>
                                         ) : activeTab === 1 ? (
-                                            <>Democratizing <br /> <span className="text-[#15a36e]">Investment</span></>
+                                            <>Democratizing <span className="text-[#15a36e]">Investment</span></>
                                         ) : (
-                                            <>Borderless <br /> <span className="text-[#15a36e]">Future</span></>
+                                            <>Borderless <span className="text-[#15a36e]">Future</span></>
                                         )}
                                     </h2>
-                                    <div className="text-lg text-black leading-relaxed max-w-xl space-y-6" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <div className="text-base text-black leading-relaxed max-w-3xl mx-auto text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         {activeTab === 0 && (
-                                            <>
-                                                <p>
-                                                    COPYm is a leading <span className="font-semibold text-black">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership.
-                                                </p>
-                                                <p>
-                                                    The traditional asset market is fragmented, slow, and geographically restricted. We merge blockchain technology with real-world compliance to create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
-                                                </p>
-                                            </>
+                                            <p>
+                                                COPYm is a leading <span className="font-semibold text-black">Real-World Asset (RWA) tokenization platform</span> designed to transform how individuals invest and manage ownership. The traditional asset market is fragmented, slow, and geographically restricted. We merge blockchain technology with real-world compliance to create a unified marketplace where assets can be exchanged instantly, securely, and without borders.
+                                            </p>
                                         )}
                                         {activeTab === 1 && (
-                                            <>
-                                                <p>
-                                                    To make asset ownership borderless, transparent, and universally accessible through blockchain innovation.
-                                                </p>
-                                                <p>
-                                                    We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
-                                                </p>
-                                            </>
+                                            <p>
+                                                To make asset ownership borderless, transparent, and universally accessible through blockchain innovation. We democratize access to investment opportunities by enabling fractional ownership of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100.
+                                            </p>
                                         )}
                                         {activeTab === 2 && (
-                                            <>
-                                                <p>
-                                                    We see a future where any asset, anywhere, can be owned, traded, and verified instantly.
-                                                </p>
-                                                <p>
-                                                    Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers.
-                                                </p>
-                                            </>
+                                            <p>
+                                                We see a future where any asset, anywhere, can be owned, traded, and verified instantly. Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers.
+                                            </p>
                                         )}
                                     </div>
                                 </motion.div>
@@ -94,8 +134,8 @@ const AboutUs = () => {
 
                         </div>
 
-                        {/* RIGHT TOP: Accordion / Interactive List */}
-                        <div className="flex flex-col gap-6 pt-10">
+                        {/* BOTTOM: Accordion / Interactive List */}
+                        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4">
                             {[
                                 { id: 0, title: "About Us" },
                                 { id: 1, title: "Our Mission" },
@@ -104,7 +144,7 @@ const AboutUs = () => {
                                 <motion.button
                                     key={item.id}
                                     onClick={() => setActiveTab(item.id)}
-                                    className={`w-full text-left p-6 sm:p-8 rounded-[20px] transition-all duration-300 border bg-white flex items-center justify-between group ${activeTab === item.id
+                                    className={`flex-1 text-left p-6 sm:p-8 rounded-[20px] transition-all duration-300 border bg-white flex items-center justify-between group ${activeTab === item.id
                                         ? 'border-gray-200 shadow-lg scale-[1.02]'
                                         : 'border-transparent hover:bg-gray-50'
                                         }`}
@@ -157,102 +197,48 @@ const AboutUs = () => {
                 </div>
             </section>
 
+            {/* Section: Live Stats Counter */}
+            <section className="py-12 lg:py-16 bg-white overflow-hidden">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                        {[
+                            { value: 70, suffix: "", prefix: "+", label: "Crypto currencies" },
+                            { value: 250, suffix: "", prefix: "+", label: "Countries Associated" },
+                            { value: 200, suffix: "k", prefix: "+", label: "Investment Opportunities" }
+                        ].map((stat, index) => (
+                            <CounterCard key={index} stat={stat} index={index} />
+                        ))}
+                    </div>
+                </div>
+            </section>
+
             {/* Section 4: Core Values */}
             <section className="py-10 lg:py-16 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
-                        {/* Left Column: Heading & Description */}
-                        <div className="w-full lg:w-5/12 pt-10 lg:pt-20 relative">
+                    <div className="flex flex-col gap-12 lg:gap-16">
+                        {/* TOP: Heading & Description - Centered */}
+                        <div className="w-full text-center">
                             <motion.div
-                                initial={{ opacity: 0, x: -30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: -30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
+                                className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-8 sm:mb-10 lg:mb-12">
-                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-black pb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        Our<br />
-                                        <span className="text-[#15a36e]">Core</span> Values
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black pb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
-                                <p className="text-lg text-black leading-relaxed max-w-md mb-12" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-base text-black leading-relaxed max-w-3xl mb-12 mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     We believe in building a transparent, secure, and inclusive financial future. Our values drive every decision we make, ensuring we empower investors and asset owners alike.
                                 </p>
-
-
-
-                                {/* Email and Address Cards - Side by Side */}
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-                                    {/* Email Card */}
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.3 }}
-                                        viewport={{ once: true }}
-                                        className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
-                                    >
-                                        <div className="flex flex-col gap-2">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                                                    <img
-                                                        src="/assets/Images/email.png"
-                                                        alt="Email"
-                                                        className="w-full h-full object-contain"
-                                                    />
-                                                </div>
-                                                <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    E-MAIL ID
-                                                </h3>
-                                            </div>
-                                            <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                support@copym.xyz
-                                            </p>
-                                        </div>
-                                    </motion.div>
-
-                                    {/* Address Card */}
-                                    <motion.div
-                                        initial={{ opacity: 0, x: -30 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        transition={{ duration: 0.6, delay: 0.4 }}
-                                        viewport={{ once: true }}
-                                        className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
-                                    >
-                                        <div className="flex flex-col gap-2">
-                                            <div className="flex items-center gap-2">
-                                                <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
-                                                    <img
-                                                        src="/assets/Images/address.png"
-                                                        alt="Address"
-                                                        className="w-full h-full object-contain"
-                                                    />
-                                                </div>
-                                                <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    ADDRESS
-                                                </h3>
-                                            </div>
-                                            <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
-                                            </p>
-                                        </div>
-                                    </motion.div>
-                                </div>
                             </motion.div>
                         </div>
 
-                        {/* Right Column: Images & Cards */}
-                        <div className="w-full lg:w-7/12 relative">
-                            {/* Background Image Container */}
-                            <div className="absolute top-0 right-0 w-[85%] h-[90%] bg-gray-100 rounded-[40px] overflow-hidden -z-10 transform rotate-1">
-                                <img
-                                    src="/assets/Images/image-2.png"
-                                    alt="Core Values Background"
-                                    className="w-full h-full object-cover opacity-80"
-                                />
-                            </div>
-
-                            {/* Cards Stack */}
-                            <div className="flex flex-col gap-6 pt-12 pr-4 sm:pr-12 md:pr-24 lg:pr-32">
+                        {/* BOTTOM: Value Cards - Horizontal Row */}
+                        <div className="w-full">
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                                 {[
                                     {
                                         title: "Integrity",
@@ -272,27 +258,19 @@ const AboutUs = () => {
                                 ].map((value, index) => (
                                     <motion.div
                                         key={index}
-                                        initial={{ opacity: 0, x: 50 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
+                                        initial={{ opacity: 0, y: 50 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.15 }}
                                         viewport={{ once: true }}
-                                        className={`p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border max-w-md ml-auto ${index === 1
+                                        className={`p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border ${index === 1
                                             ? 'bg-black border-white/20'
                                             : 'bg-white border-gray-50'
                                             }`}
-                                        style={{
-                                            marginRight: `${index % 2 === 0 ? '20px' : '0px'}` // Stagger effect
-                                        }}
                                     >
-                                        <div className="flex flex-col gap-4">
-                                            <div className="flex items-baseline justify-between">
-                                                <span className="text-4xl font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    {value.number}
-                                                </span>
-                                                <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : (index === 1 ? 'text-white' : 'text-black')}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                    {value.title}
-                                                </h3>
-                                            </div>
+                                        <div className="flex flex-col gap-4 text-center">
+                                            <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : (index === 1 ? 'text-white' : 'text-black')}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                {value.title}
+                                            </h3>
                                             <p className={`leading-relaxed text-sm ${index === 1 ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.description}
                                             </p>
@@ -300,53 +278,107 @@ const AboutUs = () => {
                                     </motion.div>
                                 ))}
                             </div>
+
+                            {/* Email and Address Cards - Below Values */}
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8 max-w-2xl mx-auto">
+                                {/* Email Card */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.5 }}
+                                    viewport={{ once: true }}
+                                    className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
+                                >
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                                <img
+                                                    src="/assets/Images/email.png"
+                                                    alt="Email"
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                            <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                E-MAIL ID
+                                            </h3>
+                                        </div>
+                                        <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            support@copym.xyz
+                                        </p>
+                                    </div>
+                                </motion.div>
+
+                                {/* Address Card */}
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.6 }}
+                                    viewport={{ once: true }}
+                                    className="bg-white p-4 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border border-gray-50"
+                                >
+                                    <div className="flex flex-col gap-2">
+                                        <div className="flex items-center gap-2">
+                                            <div className="w-8 h-8 flex items-center justify-center flex-shrink-0">
+                                                <img
+                                                    src="/assets/Images/address.png"
+                                                    alt="Address"
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            </div>
+                                            <h3 className="text-xs font-bold text-black uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                ADDRESS
+                                            </h3>
+                                        </div>
+                                        <p className="text-xs text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            Smart Station, First Floor, Incubator Building, Masdar City, Abu Dhabi, UAE.
+                                        </p>
+                                    </div>
+                                </motion.div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             {/* Section 5: Company Timeline */}
-            <section className="relative bg-black py-16 lg:py-24 overflow-hidden">
+            <section className="relative bg-black pt-8 pb-32 lg:pt-12 lg:pb-40 overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                    <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
-                        {/* Right Column: Heading & Description */}
-                        <div className="w-full lg:w-5/12 lg:pt-10">
+                    <div className="flex flex-col gap-8 lg:gap-10">
+                        {/* TOP: Heading & Description - Centered */}
+                        <div className="w-full text-center">
                             <motion.div
-                                initial={{ opacity: 0, x: 30 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, y: -30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.8 }}
                                 viewport={{ once: true }}
+                                className="flex flex-col items-center"
                             >
-                                <div className="relative w-fit mb-8 sm:mb-10 lg:mb-12">
-                                    <h2 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        Company<br />
-                                        <span className="text-[#15a36e]">Timeline</span>
+                                <div className="relative w-fit mb-4 sm:mb-6 lg:mb-8">
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        Company <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-lg text-white leading-relaxed max-w-md mb-12 text-justify hyphens-auto tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. Each milestone is more than progress—it’s a promise to stay ahead, listen to our community, and turn challenges into opportunities. What began as a vision has grown into a movement built on investment and opportunity.
+                                <p className="text-base text-white leading-relaxed max-w-3xl mx-auto text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities. What began as a vision has grown into a movement built on investment and opportunity.
                                 </p>
-
-
                             </motion.div>
                         </div>
 
-                        {/* Left Column: Timeline Items */}
-                        <div className="w-full lg:w-7/12 relative">
-                            <img
-                                src={TimelineImage}
-                                alt="Company Timeline"
-                                className="w-full h-full object-contain scale-[1.8] origin-center -translate-y-12"
-                                style={{
-                                    maskImage: 'linear-gradient(to right, transparent 0%, black 20%)',
-                                    WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 20%)'
-                                }}
-                            />
+                        {/* BOTTOM: Timeline Image */}
+                        <div className="w-full relative -mt-36">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                viewport={{ once: true }}
+                            >
+                                <img
+                                    src={TimelineImage}
+                                    alt="Company Timeline"
+                                    className="w-[110%] h-[100%] object-contain scale-125"
+                                />
+                            </motion.div>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </section>
@@ -541,15 +573,13 @@ const AboutUs = () => {
             <section className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section Header */}
-                    <div className="text-left mb-8 sm:mb-10 lg:mb-12">
-                        <div className="relative w-fit mb-4">
+                    <div className="text-center mb-8 sm:mb-10 lg:mb-12">
+                        <div className="relative w-fit mb-4 mx-auto">
                             <h2
-                                className="text-4xl sm:text-5xl lg:text-7xl font-bold uppercase pb-4 leading-tight"
+                                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase pb-4 leading-tight"
                                 style={{ fontFamily: 'Palanquin, sans-serif' }}
                             >
-                                <span className="text-black">GET</span>
-                                <br />
-                                <span className="text-black">IN </span>
+                                <span className="text-black">GET IN </span>
                                 <span className="text-[#15a36e]">TOUCH</span>
                             </h2>
                         </div>

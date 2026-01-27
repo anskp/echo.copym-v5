@@ -1,4 +1,5 @@
 import React from 'react';
+import SectionHeader from '../../../components/Layout/SectionHeader';
 
 const CompanyOverview = () => {
   return (
@@ -7,9 +8,10 @@ const CompanyOverview = () => {
         <div className="flex flex-col items-center justify-start w-full gap-3 lg:gap-[12px]">
 
           {/* Section Title */}
-          <h2 className="text-[20px] sm:text-[26px] md:text-[32px] lg:text-[40px] font-bold leading-[36px] sm:leading-[46px] md:leading-[58px] lg:leading-[72px] text-center uppercase text-text-accent w-auto">
-            Company Overview
-          </h2>
+          <SectionHeader
+            title="Company Overview"
+            alignment="center"
+          />
 
           {/* Content Container */}
           <div className="flex flex-col lg:flex-row justify-start items-center w-full mr-0 lg:mr-[22px]">
@@ -41,7 +43,7 @@ const CompanyOverview = () => {
               </p>
 
               {/* Why We Exist Section */}
-              <h3 className="text-[16px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-bold leading-[29px] sm:leading-[36px] md:leading-[46px] lg:leading-[57px] text-center capitalize text-text-secondary w-auto mt-8 sm:mt-12 md:mt-16 lg:mt-[56px] ml-0 lg:ml-[104px] self-start">
+              <h3 className="text-[16px] sm:text-[20px] md:text-[26px] lg:text-[32px] font-bold leading-[29px] sm:leading-[36px] md:leading-[46px] lg:leading-[57px] text-center capitalize text-text-secondary w-auto mt-8 sm:mt-12 md:mt-16 lg:mt-[56px]">
                 Why We Exist
               </h3>
 

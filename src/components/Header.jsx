@@ -67,7 +67,7 @@ export default function Header() {
           path: "/tokenization"
         },
         {
-          icon: <StyledIcon icon={BsShop} />,
+          icon: <StyledIcon icon={FaDollarSign} />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
