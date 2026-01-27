@@ -32,7 +32,7 @@ export default function IssuerSection() {
               <img
                 src="/assets/Images/3cubes.png"
                 alt="Tokenization"
-                className="w-full max-w-[380px] h-auto object-contain transform scale-110"
+                className="w-full h-full object-cover transform scale-120"
               />
             </div>
 

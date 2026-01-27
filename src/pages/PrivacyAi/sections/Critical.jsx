@@ -51,17 +51,14 @@ export default function Critical() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="bg-black text-white rounded-[2.5rem] overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
+                            className="bg-black text-white rounded-lg overflow-hidden flex items-center h-24 sm:h-24 md:h-32 lg:h-40 group"
                         >
                             {/* Image Container */}
-                            <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-center bg-black">
+                            <div className="w-[35%] sm:w-[30%] md:w-[25%] h-full relative overflow-hidden flex items-end justify-start bg-black">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className={`w-full h-full object-contain object-bottom transition-transform duration-500 group-hover:scale-115 
-                                        ${index === 1 ? 'scale-100 translate-y-2 -translate-x-6' :
-                                            index === 3 ? 'scale-110 -translate-x-4' :
-                                                'scale-110'}`}
+                                    className="w-full h-full object-contain object-left-bottom transition-transform duration-500 scale-90 sm:scale-100 translate-y-2 sm:translate-y-4 -translate-x-1 sm:-translate-x-2"
                                 />
                             </div>
 

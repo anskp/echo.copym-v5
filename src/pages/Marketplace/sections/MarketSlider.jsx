@@ -1,11 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { 
-  GiRoundStar, 
-  GiChart, 
-  GiShield, 
-  GiGlobe, 
-  GiPerson 
+import {
+  GiRoundStar,
+  GiChart,
+  GiShield,
+  GiGlobe,
+  GiPerson
 } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { Player } from '@lottiefiles/react-lottie-player';
@@ -28,12 +28,12 @@ const scrollbarHideStyles = `
 
 // --- Asset data for ChromaGrid ----
 const mockAssets = [
-  { 
-    id: "real-estate-1", 
-    title: "Premium Office Building", 
-    subtitle: "Real Estate Investment", 
-    location: "New York, USA", 
-    roi: "8.5% ROI", 
+  {
+    id: "real-estate-1",
+    title: "Premium Office Building",
+    subtitle: "Real Estate Investment",
+    location: "New York, USA",
+    roi: "8.5% ROI",
     expectedRoi: "8.5%",
     image: "/assets/Images/premium-office-building-1.png",
     url: "/market/real-estate/",
@@ -44,12 +44,12 @@ const mockAssets = [
     price: 25000000,
     category: "Real Estate"
   },
-  { 
-    id: "art-1", 
-    title: "Digital Art Collection", 
-    subtitle: "Art Investment", 
-    location: "Digital", 
-    roi: "Variable ROI", 
+  {
+    id: "art-1",
+    title: "Digital Art Collection",
+    subtitle: "Art Investment",
+    location: "Digital",
+    roi: "Variable ROI",
     expectedRoi: "Variable",
     image: "/assets/Images/digital-art-collection-1.png",
     url: "/market/art/",
@@ -60,12 +60,12 @@ const mockAssets = [
     price: 5000000,
     category: "Art"
   },
-  { 
-    id: "commodities-1", 
-    title: "Gold Reserve", 
-    subtitle: "Commodities Investment", 
-    location: "Switzerland", 
-    roi: "5.2% ROI", 
+  {
+    id: "commodities-1",
+    title: "Gold Reserve",
+    subtitle: "Commodities Investment",
+    location: "Switzerland",
+    roi: "5.2% ROI",
     expectedRoi: "5.2%",
     image: "/assets/Images/gold-reserve.png",
     url: "/market/gold/",
@@ -76,12 +76,12 @@ const mockAssets = [
     price: 50000000,
     category: "Commodities"
   },
-  { 
-    id: "infrastructure-1", 
-    title: "Solar Farm Project", 
-    subtitle: "Infrastructure Investment", 
-    location: "Arizona, USA", 
-    roi: "7.3% ROI", 
+  {
+    id: "infrastructure-1",
+    title: "Solar Farm Project",
+    subtitle: "Infrastructure Investment",
+    location: "Arizona, USA",
+    roi: "7.3% ROI",
     expectedRoi: "7.3%",
     image: "/assets/Images/solar-farm-project-2.png",
     url: "/market/carbon-credits/",
@@ -92,12 +92,12 @@ const mockAssets = [
     price: 15000000,
     category: "Infrastructure"
   },
-  { 
-    id: "startups-1", 
-    title: "Tech Startup Equity", 
-    subtitle: "Startup Investment", 
-    location: "San Francisco, USA", 
-    roi: "High Risk/Reward", 
+  {
+    id: "startups-1",
+    title: "Tech Startup Equity",
+    subtitle: "Startup Investment",
+    location: "San Francisco, USA",
+    roi: "High Risk/Reward",
     expectedRoi: "High Risk/Reward",
     image: "/assets/Images/tech-2.png",
     url: "/market/private-equity/",
@@ -108,12 +108,12 @@ const mockAssets = [
     price: 2000000,
     category: "Startup"
   },
-  { 
-    id: "real-estate-2", 
-    title: "Luxury Apartment Complex", 
-    subtitle: "Real Estate Investment", 
-    location: "Miami, USA", 
-    roi: "6.8% ROI", 
+  {
+    id: "real-estate-2",
+    title: "Luxury Apartment Complex",
+    subtitle: "Real Estate Investment",
+    location: "Miami, USA",
+    roi: "6.8% ROI",
     expectedRoi: "6.8%",
     image: "/assets/Images/apartment-complex.png",
     url: "/market/real-estate/",
@@ -144,26 +144,26 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
     console.log(`Navigating to ${link}`);
     // Your navigation logic here
   };
-  
+
   return (
     <motion.div
       layoutId={layoutId}
-      className="w-full h-[400px] rounded-2xl flex flex-col justify-end overflow-hidden shadow-2xl relative bg-black group"
+      className="w-full h-[400px] rounded-lg flex flex-col justify-end overflow-hidden shadow-2xl relative bg-black group"
       whileHover={{ scale: 1.02 }}
       transition={{ duration: 0.3 }}
     >
       {/* Enhanced Aura Effect on Hover */}
       <div className="absolute inset-0 bg-green-500/30 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10" />
-      
+
       <motion.img
         src={card.image}
         alt={card.title}
         className="absolute inset-0 w-full h-full object-cover z-0"
       />
-      
+
       {/* Enhanced Gradient for Better Readability */}
       <div className={`absolute inset-0 bg-gradient-to-t z-10 ${isPopup ? 'from-black/95 via-black/80' : 'from-black/90 via-black/70'} to-transparent`} />
-      
+
       {/* Removed Blue Header - Cleaner Design */}
       <div className="relative z-20 p-6 space-y-4 text-white">
         <h3 className="text-2xl font-bold leading-tight dm-sans">{card.title}</h3>
@@ -176,13 +176,13 @@ const AssetCard = ({ card, layoutId, isPopup = false }) => {
             <p className="text-sm opacity-70">Price</p>
             <p className="text-2xl font-bold">${card.price.toLocaleString()}</p>
           </div>
-          <motion.button 
-            className="px-6 py-3 text-white rounded-lg font-semibold shadow-lg text-sm bg-green-500 hover:bg-green-600 transition-colors duration-300" 
-            whileHover={{ scale: 1.05 }} 
-            whileTap={{ scale: 0.95 }} 
-            onClick={(e) => { 
-              e.stopPropagation(); 
-              handleNavigate(card.link); 
+          <motion.button
+            className="px-6 py-3 text-white rounded-lg font-semibold shadow-lg text-sm bg-green-500 hover:bg-green-600 transition-colors duration-300"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNavigate(card.link);
             }}
           >
             Invest
@@ -201,32 +201,32 @@ const MarketplaceGlimpse = () => {
   return (
     <div className="w-full">
       <style dangerouslySetInnerHTML={{ __html: scrollbarHideStyles }} />
-             {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
-       <section className="relative bg-black">
-                   {/* Main Content with Curved Background - HomePage Style */}
-          <div className="relative z-10 bg-black pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
-            
-            {/* Content Container */}
-            <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
-          {/* Single Lottie Animation */}
-           <motion.div
-             initial={{ opacity: 0, y: 30 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             transition={{ duration: 0.8 }}
-             viewport={{ once: true }}
-             className="relative flex justify-center items-center w-full"
-           >
-             <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
-               <Player
-                 autoplay
-                 loop
-                 src={marketplace3rd}
-                 className="w-full h-full object-contain"
-                 style={{ width: '100%', height: '100%' }}
-               />
-             </div>
-          </motion.div>
-        </div>
+      {/* PART 2: ChromaGrid Section - The Centerpiece Refactor */}
+      <section className="relative bg-black">
+        {/* Main Content with Curved Background - HomePage Style */}
+        <div className="relative z-10 bg-black pt-6 sm:pt-8 md:pt-12 lg:pt-16 pb-4 sm:pb-6 overflow-hidden">
+
+          {/* Content Container */}
+          <div className="relative z-10 w-full px-4 sm:px-6 lg:px-8">
+            {/* Single Lottie Animation */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="relative flex justify-center items-center w-full"
+            >
+              <div className="w-full h-[40vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8">
+                <Player
+                  autoplay
+                  loop
+                  src={marketplace3rd}
+                  className="w-full h-full object-contain"
+                  style={{ width: '100%', height: '100%' }}
+                />
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 

@@ -17,7 +17,7 @@ const LottieCardsSection = () => {
         {/* First Row - Two Cards with Horizontal Split (Text Left, Graphic Right) */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-2 mb-3 lg:mb-4">
           {/* Card 1 - "Own a piece of big Investment" - Chain with $ */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-center min-h-[120px] lg:min-h-[150px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-lg border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-6 grid grid-cols-2 gap-2 lg:gap-5 items-center min-h-[120px] lg:min-h-[150px] overflow-hidden">
             {/* Text Section - Left Grid */}
             <div className="flex flex-col justify-center overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left leading-tight">
@@ -42,7 +42,7 @@ const LottieCardsSection = () => {
           </div>
 
           {/* Card 2 - "Smart Portfolio Diversification" - Candlesticks */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col md:flex-row items-center gap-3 lg:gap-4 min-h-[120px] lg:min-h-[150px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-lg border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-3 lg:p-4 flex flex-col md:flex-row items-center gap-3 lg:gap-4 min-h-[120px] lg:min-h-[150px] overflow-hidden">
             {/* Text Section - Left */}
             <div className="flex-1 flex flex-col justify-center overflow-hidden">
               <h3 className="text-base sm:text-lg lg:text-xl font-bold text-[#15a36e] mb-2 lg:mb-3 text-left">
@@ -69,7 +69,7 @@ const LottieCardsSection = () => {
         {/* Second Row - Three Cards with Vertical Split (Text Top, Graphic Bottom) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-3 lg:gap-4">
           {/* Card 3 - "Trade anytime, anywhere" - Candlesticks */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-lg border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
             <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
               <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">
@@ -94,7 +94,7 @@ const LottieCardsSection = () => {
           </div>
 
           {/* Card 4 - "Earn without a hassle" - Animated Growing Graph */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-lg border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
             <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
               <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">
@@ -147,7 +147,7 @@ const LottieCardsSection = () => {
           </div>
 
           {/* Card 5 - "Explore a world of assets" - Hexagon/Globe */}
-          <div className="relative bg-[#eaf1f7] rounded-xl border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
+          <div className="relative bg-[#eaf1f7] rounded-lg border-2 border-[#eaf1f7] shadow-[0px_4px_22.6px_rgba(0,0,0,0.25)] p-2 lg:p-3 flex flex-col min-h-[220px] lg:min-h-[240px] overflow-hidden">
             {/* Text Section - Top */}
             <div className="flex-1 flex flex-col mb-2 lg:mb-3 overflow-hidden">
               <h3 className="text-sm sm:text-base lg:text-lg font-bold text-[#15a36e] mb-1 lg:mb-2 text-left leading-tight">

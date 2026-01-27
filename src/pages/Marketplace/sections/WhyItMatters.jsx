@@ -370,14 +370,14 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                 transition={{ duration: 0.5 }}
-                                className="relative w-full max-w-full md:max-w-[350px] rounded-2xl overflow-visible shadow-xl bg-white p-2"
+                                className="relative w-full max-w-full md:max-w-[350px] rounded-lg overflow-visible shadow-xl bg-white p-2"
                             >
                                 <div className="relative">
-                                    <div className="w-full aspect-[10/9] rounded-2xl overflow-hidden relative">
+                                    <div className="w-full aspect-[10/9] rounded-lg overflow-hidden relative">
                                         <Image
                                             src={activeTab.image}
                                             alt={activeTab.name}
-                                            className={`w-full h-full object-cover transition-transform duration-1000 ${activeTab.id === 'real-estate' ? 'scale-120' : 'scale-100'}`}
+                                            className="w-full h-full object-cover transition-transform duration-1000 scale-120"
                                             style={{
                                                 objectPosition: ['carbon-credits', 'sports'].includes(activeTab.id) ? '20% center' : 'center center'
                                             }}
@@ -543,7 +543,7 @@ export default function WhyItMatters() {
                                                     initial={{ opacity: 0, y: 20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.3 + (idx * 0.15), duration: 0.5 }}
-                                                    className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                                                    className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
                                                 >
                                                     {/* Top Image Area - Reduced Height */}
                                                     <div className="relative h-20 sm:h-24 w-full">

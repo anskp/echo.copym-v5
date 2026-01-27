@@ -41,7 +41,7 @@ const WhoWeServe = () => {
               <Image
                 src={assetsImage}
                 alt="Asset Owners & Institutions"
-                className="w-full h-full max-h-[300px] lg:max-h-[360px] object-contain"
+                className="w-full h-full object-cover transform scale-120"
               />
             </div>
 

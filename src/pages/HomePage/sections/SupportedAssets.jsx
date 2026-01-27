@@ -94,7 +94,7 @@ export default function AssetTypesSection() {
                 stiffness: 120,
                 damping: 20,
               }}
-              className={`absolute w-80 md:w-[360px] h-[420px] bg-black/30 ${blur} backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden shadow-xl transform-style preserve-3d`}
+              className={`absolute w-80 md:w-[360px] h-[420px] bg-black/30 ${blur} backdrop-blur-lg border border-white/10 rounded-lg overflow-hidden shadow-xl transform-style preserve-3d`}
               style={{
                 pointerEvents: isActive ? 'auto' : 'none',
               }}

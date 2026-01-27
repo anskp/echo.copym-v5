@@ -4,13 +4,21 @@ import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa';
-import { HiCube } from 'react-icons/hi';
+import { HiCube, HiShieldCheck, HiLightningBolt, HiDocumentText, HiBookOpen } from 'react-icons/hi';
+import { BsCurrencyBitcoin, BsShop } from 'react-icons/bs';
 import Image from './Image'; // Import our new AVIF-compatible Image component
 import tiicon4 from '../components/icons/Tokenization/tiicon4.avif';
 import aboutush from '../components/images/aboutush.avif';
 import tokencoinh from '../components/images/tokencoinh.avif';
 import zerogash from '../components/images/zerogash.avif';
 import parivaryaih from '../components/images/parivaryaih.avif';
+
+// Styled icon component with green color
+const StyledIcon = ({ icon: Icon, className = "" }) => (
+  <div className={`w-14 h-14 flex items-center justify-center ${className}`}>
+    <Icon className="w-8 h-8 text-[#15a36e]" />
+  </div>
+);
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -53,13 +61,13 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <Image src={tokencoinh} alt="Tokenization" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={HiCube} />,
           heading: "Tokenization",
           description: "Learn how CopyM tokenizes real-world assets into digital securities.",
           path: "/tokenization"
         },
         {
-          icon: <Image src={tiicon4} alt="Marketplace" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={BsShop} />,
           heading: "Marketplace",
           description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
@@ -71,25 +79,25 @@ export default function Header() {
       path: "#",
       dropdown: [
         {
-          icon: <Image src={zerogash} alt="Zero Gas" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={HiLightningBolt} />,
           heading: "Zero Gas",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "#"  // Disabled redirect
         },
         {
-          icon: <Image src={parivaryaih} alt="Privacy AI" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={HiShieldCheck} />,
           heading: "Privacy AI",
           description: "Explore how CopyM can help Investors leverage tokenization to generate revenue",
           path: "#"  // Disabled redirect
         },
         {
-          icon: <Image src="/assets/Images/blog.avif" alt="Blog" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={HiBookOpen} />,
           heading: "Blog",
           description: "Latest news, insights, and updates from CopyM.",
           path: "#"  // Disabled redirect
         },
         {
-          icon: <Image src="/assets/Images/doc.avif" alt="Document" className="w-20 h-20 object-contain" />,
+          icon: <StyledIcon icon={HiDocumentText} />,
           heading: "Document",
           description: "Access all important documents and resources.",
           path: "#"  // Disabled redirect
