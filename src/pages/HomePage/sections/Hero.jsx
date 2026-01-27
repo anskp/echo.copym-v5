@@ -72,7 +72,7 @@ export default function Hero() {
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
 
           >
-            Secure, AI-enhanced marketplace. Seamless on-chain ownership of real estate, commodities, <br className="hidden md:block" />
+            Secure, AI-enhanced marketplace. Seamless on-chain exposure of real estate, commodities, <br className="hidden md:block" />
             carbon credits, and luxury assets.
           </p>
 

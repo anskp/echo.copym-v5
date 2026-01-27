@@ -38,7 +38,7 @@ export default function TokenizationProcess() {
     },
     {
       title: "Greater transparency",
-      description: "Investors can track token ownership and access real-time information regarding fund performance and asset holdings securely.",
+      description: "Investors can track token exposure and access real-time information regarding fund performance and asset holdings securely.",
       icon: ticon4
     }
   ];

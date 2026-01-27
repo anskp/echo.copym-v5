@@ -17,7 +17,7 @@ export default function TradableAssets() {
         {
             image: "/assets/Images/icons/tradee3.png",
             title: "BRAND & IP ASSETS",
-            description: "Tokenized ownership within institutional global brands and digital assets."
+            description: "Tokenized exposure within institutional global brands and digital assets."
         },
         {
             image: "/assets/Images/icons/tradee4.png",

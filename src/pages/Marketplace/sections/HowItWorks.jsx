@@ -31,7 +31,7 @@ export default function HowItWorks() {
         {
             id: "trade-settle",
             title: "Buy, Trade & Settlement\u00A0",
-            description: "Participate in a transparent marketplace where ownership and returns are automated through smart contracts.",
+            description: "Participate in a transparent marketplace where exposure and returns are automated through smart contracts.",
             icon: tiicon4,
             watermark: ""
         },

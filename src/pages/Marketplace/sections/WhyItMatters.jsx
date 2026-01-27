@@ -51,7 +51,13 @@ const categories = [
         logo: louvreAvif,
         image: artsImg,
         title: "Tokenized Fine Art",
-        description: "Own fractions of masterpiece artworks from renowned artists. Democratizing access to the exclusive world of fine art investments.",
+        description: (
+            <>
+                Own fractions of masterpiece artworks from renowned artists.<br />
+                Democratizing access to the exclusive world of fine art<br />
+                investments.
+            </>
+        ),
         benefits: ["Fractional Ownership", "Blue-Chip Art Access", "Secure Provenance"],
         stats: [
             { label: 'Total Asset Value', value: '$1,250,000', change: '+5.2%' },
@@ -78,7 +84,7 @@ const categories = [
                 roi: "9.2%",
                 tokensAvailable: "1,500/2,000",
                 price: "$2,400,000",
-                description: "Offers investors tokenized ownership of Renaissance-era masterpieces.",
+                description: "Offers investors tokenized exposure of Renaissance-era masterpieces.",
                 image: "/assets/Images/art2.jpg"
             },
             {
@@ -148,7 +154,7 @@ const categories = [
         logo: '/assets/Images/compass.avif',
         image: realEstateImg,
         title: "Tokenized institutional Real Estate",
-        description: "Access institutional-grade property investments with fractional ownership. Earn rental yields and capital appreciation without the traditional barriers to entry.",
+        description: "Access institutional-grade property investments with fractional exposure. Earn rental yields and capital appreciation without the traditional barriers to entry.",
         benefits: ["Fractional Ownership", "Monthly Rental Yields", "Highly Liquid Market"],
         stats: [
             { label: 'Total Asset Value', value: '$234,700', change: '+3.1%' },
@@ -185,7 +191,7 @@ const categories = [
                 roi: '8.5%',
                 tokensAvailable: '750/1000',
                 price: '$500,000',
-                description: "Fractional ownership in a prestigious Manhattan commercial space with long-term institutional tenants.",
+                description: "Fractional exposure in a prestigious Manhattan commercial space with long-term institutional tenants.",
                 image: premiumOfficeBuildingImg
             }
         ]
@@ -197,7 +203,7 @@ const categories = [
         logo: manchesterLogo,
         image: sportsImg,
         title: "Professional Sports Assets",
-        description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and ownership.",
+        description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and exposure.",
         benefits: ["Fan Ownership", "Revenue Sharing", "Global Access"],
         stats: [
             { label: 'Total Asset Value', value: '$8,500,000', change: '+7.3%' },
@@ -223,7 +229,7 @@ const categories = [
                 roi: "8.4%",
                 tokensAvailable: "250,000/500,000",
                 price: "$150M",
-                description: "Direct fan ownership in a top-tier European football club with revenue-sharing from broadcast rights and sponsorships.",
+                description: "Direct fan exposure in a top-tier European football club with revenue-sharing from broadcast rights and sponsorships.",
                 image: "/assets/Images/teams.jpg"
             },
             {

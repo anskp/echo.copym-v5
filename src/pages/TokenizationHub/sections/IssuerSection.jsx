@@ -19,7 +19,7 @@ export default function IssuerSection() {
             </h2>
           </div>
           <p className="text-sm sm:text-base md:text-lg lg:text-sm font-normal text-black leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            Digitizing real-world assets on the blockchain to unlock transparent ownership, automated settlement <br /> and global access to institutional-grade asset opportunities.</p>
+            Digitizing real-world assets on the blockchain to unlock transparent exposure, automated settlement <br /> and global access to institutional-grade asset opportunities.</p>
         </div>
 
         {/* Grid Layout - Same as WhoWeServe: lg:grid-cols-7 with 3 left, 4 right split */}

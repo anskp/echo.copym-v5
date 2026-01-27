@@ -10,7 +10,7 @@ const CompanyTimeline = () => {
     },
     {
       year: "2024 - Platform Launch",
-      description: "Our revolutionary RWA tokenization platform goes live, enabling fractional ownership.",
+      description: "Our revolutionary RWA tokenization platform goes live, enabling fractional exposure.",
       image: "/images/img_image_844.png"
     },
     {

@@ -15,7 +15,7 @@ export default function MarketplaceIntro() {
                         <p>
                             The CopyM Marketplace is a secure, blockchain-powered venue where real-world and digital assets are <br className="hidden sm:block" />
                             brought on-chain, discovered and traded. It connects asset owners, investors and infrastructure partners <br className="hidden sm:block" />
-                            in one transparent ecosystem, enabling seamless ownership, trading and settlement.
+                            in one transparent ecosystem, enabling seamless exposure, trading and settlement.
                         </p>
                     </div>
                 </div>

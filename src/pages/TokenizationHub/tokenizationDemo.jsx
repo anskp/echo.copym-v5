@@ -105,7 +105,7 @@ const CreateAssetModal = ({ open, onClose }) => {
     { id: 'real-estate', name: 'Real estate', icon: HomeIcon, disabled: false },
     { id: 'real-world-asset', name: 'Real-world asset', icon: PublicIcon, disabled: false }
   ];
-  
+
   // Non-financial asset options
   const nonFinancialAssets = [
     { id: 'utility', name: 'Utility', icon: FlashIcon, disabled: false },
@@ -113,7 +113,7 @@ const CreateAssetModal = ({ open, onClose }) => {
     { id: 'loyalty', name: 'Loyalty', icon: CardGiftcardIcon, disabled: false },
     { id: 'other', name: 'Other', icon: SmartphoneIcon, disabled: false }
   ];
-  
+
   // Token templates based on selected asset
   const templates = {
     stablecoin: [
@@ -175,7 +175,7 @@ const CreateAssetModal = ({ open, onClose }) => {
       { id: 'ripple-other', name: 'Ripple token', standard: 'Ripple', description: 'A template for creating a token on the Ripple blockchain.', fireblocks: false, isEVM: false }
     ]
   };
-  
+
   // Template details
   const templateDetails = {
     erc20f: {
@@ -192,7 +192,7 @@ const CreateAssetModal = ({ open, onClose }) => {
     },
     'erc20f-commodity': {
       description: 'A fungible token that can be used as a unit of account, for issuing stablecoins, or for fundraising.',
-      useCases: ['Commodity tokenization', 'Trading', 'Fractional ownership'],
+      useCases: ['Commodity tokenization', 'Trading', 'Fractional exposure'],
       publisher: 'Fireblocks',
       auditBadge: true
     },
@@ -228,7 +228,7 @@ const CreateAssetModal = ({ open, onClose }) => {
     },
     'erc20f-rwa': {
       description: 'A fungible token that can be used as a unit of account, for issuing stablecoins, or for fundraising.',
-      useCases: ['Asset tokenization', 'Fractional ownership', 'Investment tokens'],
+      useCases: ['Asset tokenization', 'Fractional exposure', 'Investment tokens'],
       publisher: 'Fireblocks',
       auditBadge: true
     },
@@ -372,7 +372,7 @@ const CreateAssetModal = ({ open, onClose }) => {
       auditBadge: false
     }
   };
-  
+
   // Token deployers
   const tokenDeployers = [
     { id: 'fireblocks', name: 'Fireblocks' },
@@ -382,20 +382,20 @@ const CreateAssetModal = ({ open, onClose }) => {
   ];
 
   const steps = ['Select Asset', 'Choose Template', 'Template Details', 'Setup'];
-  
+
   // Handle navigation between steps
   const goToNextStep = () => {
     if (currentStep < 3) {
       setCurrentStep(currentStep + 1);
     }
   };
-  
+
   const goToPreviousStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
     }
   };
-  
+
   // Handle asset selection
   const handleAssetSelect = (event) => {
     setSelectedAsset(event.target.value);
@@ -404,12 +404,12 @@ const CreateAssetModal = ({ open, onClose }) => {
       setCustomAssetName(''); // Reset custom name if not "other"
     }
   };
-  
+
   // Handle custom asset name change
   const handleCustomAssetNameChange = (event) => {
     setCustomAssetName(event.target.value);
   };
-  
+
   // Get asset display name
   const getAssetDisplayName = () => {
     if (selectedAsset === 'other' && customAssetName) {
@@ -419,7 +419,7 @@ const CreateAssetModal = ({ open, onClose }) => {
     const asset = allAssets.find(a => a.id === selectedAsset);
     return asset ? asset.name : '';
   };
-  
+
   // Handle template selection
   const handleTemplateSelect = (templateId) => {
     setSelectedTemplate(templateId);
@@ -428,7 +428,7 @@ const CreateAssetModal = ({ open, onClose }) => {
       goToNextStep();
     }, 300); // Small delay for better UX
   };
-  
+
   // Handle form input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -437,7 +437,7 @@ const CreateAssetModal = ({ open, onClose }) => {
       [name]: value
     });
   };
-  
+
   // Handle network toggle
   const handleNetworkToggle = (event) => {
     setFormData({
@@ -446,13 +446,13 @@ const CreateAssetModal = ({ open, onClose }) => {
       selectedNetwork: event.target.checked ? '' : 'ethereum' // Reset selectedNetwork when switching
     });
   };
-  
+
   // Render the current step
   const renderStep = () => {
     switch (currentStep) {
       case 0:
-        return <Step1 
-          financialAssets={financialAssets} 
+        return <Step1
+          financialAssets={financialAssets}
           nonFinancialAssets={nonFinancialAssets}
           selectedAsset={selectedAsset}
           onSelectAsset={handleAssetSelect}
@@ -461,19 +461,19 @@ const CreateAssetModal = ({ open, onClose }) => {
           onCustomAssetNameChange={handleCustomAssetNameChange}
         />;
       case 1:
-        return <Step2 
+        return <Step2
           templates={templates[selectedAsset] || []}
           selectedTemplate={selectedTemplate}
           onSelectTemplate={handleTemplateSelect}
           assetDisplayName={getAssetDisplayName()}
         />;
       case 2:
-        return <Step3 
+        return <Step3
           templateDetails={templateDetails[selectedTemplate]}
           onNext={goToNextStep}
         />;
       case 3:
-        return <Step4 
+        return <Step4
           formData={formData}
           tokenDeployers={tokenDeployers}
           selectedTemplate={selectedTemplate}
@@ -485,31 +485,31 @@ const CreateAssetModal = ({ open, onClose }) => {
         return <Step1 />;
     }
   };
-  
+
   return (
-    <Drawer 
+    <Drawer
       key={componentKey}
-      anchor="bottom" 
-      open={open} 
-      onClose={onClose} 
+      anchor="bottom"
+      open={open}
+      onClose={onClose}
       transitionDuration={400}
-      PaperProps={{ 
-        sx: { 
-          borderTopLeftRadius: 16, 
-          borderTopRightRadius: 16, 
+      PaperProps={{
+        sx: {
+          borderTopLeftRadius: 16,
+          borderTopRightRadius: 16,
           minHeight: '80vh',
-          maxHeight: '95vh', 
-          overflow: 'auto' 
-        } 
+          maxHeight: '95vh',
+          overflow: 'auto'
+        }
       }}
     >
       <Container maxWidth={false} sx={{ py: 3, px: { xs: 2, sm: 4, md: 8 } }}>
         <Box sx={{ position: 'relative', mb: 3 }}>
           <Box sx={{ position: 'absolute', right: -16, top: -8, display: 'flex', gap: 1 }}>
             {currentStep > 0 && (
-              <IconButton 
+              <IconButton
                 onClick={goToPreviousStep}
-                sx={{ 
+                sx={{
                   bgcolor: 'grey.100',
                   '&:hover': { bgcolor: 'grey.200' }
                 }}
@@ -517,9 +517,9 @@ const CreateAssetModal = ({ open, onClose }) => {
                 <span style={{ fontSize: 18 }}>←</span>
               </IconButton>
             )}
-            <IconButton 
-              onClick={onClose} 
-              sx={{ 
+            <IconButton
+              onClick={onClose}
+              sx={{
                 bgcolor: 'grey.100',
                 '&:hover': { bgcolor: 'grey.200' }
               }}
@@ -531,9 +531,9 @@ const CreateAssetModal = ({ open, onClose }) => {
             Create Asset
           </Typography>
         </Box>
-        
+
         <Divider sx={{ mb: 4 }} />
-        
+
         {/* Progress Bar */}
         <Box sx={{ mb: 4 }}>
           <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 1 }}>
@@ -544,11 +544,11 @@ const CreateAssetModal = ({ open, onClose }) => {
               {Math.round(((currentStep + 1) / steps.length) * 100)}% Complete
             </Typography>
           </Box>
-          <LinearProgress 
-            variant="determinate" 
+          <LinearProgress
+            variant="determinate"
             value={((currentStep + 1) / steps.length) * 100}
-            sx={{ 
-              height: 8, 
+            sx={{
+              height: 8,
               borderRadius: 4,
               bgcolor: 'grey.200',
               '& .MuiLinearProgress-bar': {
@@ -560,7 +560,7 @@ const CreateAssetModal = ({ open, onClose }) => {
             {steps[currentStep]}
           </Typography>
         </Box>
-        
+
         {/* Current step content */}
         {renderStep()}
       </Container>
@@ -573,10 +573,10 @@ const Step1 = ({ financialAssets, nonFinancialAssets, selectedAsset, onSelectAss
   const renderAssetCard = (asset) => {
     const IconComponent = asset.icon;
     return (
-      <Card 
+      <Card
         key={asset.id}
         variant="outlined"
-        sx={{ 
+        sx={{
           cursor: asset.disabled ? 'not-allowed' : 'pointer',
           opacity: asset.disabled ? 0.5 : 1,
           border: selectedAsset === asset.id ? 2 : 1,
@@ -615,7 +615,7 @@ const Step1 = ({ financialAssets, nonFinancialAssets, selectedAsset, onSelectAss
             Step 1: Select Asset Type
           </Typography>
         </Box>
-        
+
         <FormControl component="fieldset">
           <RadioGroup value={selectedAsset} onChange={onSelectAsset}>
             <Grid container spacing={3}>
@@ -628,7 +628,7 @@ const Step1 = ({ financialAssets, nonFinancialAssets, selectedAsset, onSelectAss
                   {financialAssets.map(renderAssetCard)}
                 </Stack>
               </Grid>
-              
+
               {/* Non-Financial Assets Section */}
               <Grid item xs={12} md={6}>
                 <Typography variant="h6" sx={{ mb: 2, color: 'text.secondary', fontWeight: 'medium' }}>
@@ -641,7 +641,7 @@ const Step1 = ({ financialAssets, nonFinancialAssets, selectedAsset, onSelectAss
             </Grid>
           </RadioGroup>
         </FormControl>
-        
+
         {/* Custom Asset Name Input for "Other" */}
         {selectedAsset === 'other' && (
           <Box sx={{ mt: 3 }}>
@@ -656,10 +656,10 @@ const Step1 = ({ financialAssets, nonFinancialAssets, selectedAsset, onSelectAss
             />
           </Box>
         )}
-        
+
         {/* Navigation buttons */}
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Button 
+          <Button
             variant="contained"
             onClick={onNext}
             disabled={!selectedAsset || (selectedAsset === 'other' && !customAssetName.trim())}
@@ -679,16 +679,16 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
   // Debug log to check templates
   console.log('Step2 templates:', templates);
   console.log('Asset display name:', assetDisplayName);
-  
+
   // Categorize templates into EVM and non-EVM
   const evmTemplates = templates.filter(template => template.isEVM);
   const nonEvmTemplates = templates.filter(template => !template.isEVM);
 
   const renderTemplateCard = (template) => (
     <Grid item xs={12} md={6} key={template.id}>
-      <Card 
+      <Card
         variant="outlined"
-        sx={{ 
+        sx={{
           cursor: 'pointer',
           height: '100%',
           border: selectedTemplate === template.id ? 2 : 1,
@@ -711,10 +711,10 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
               </Typography>
             </Box>
             {template.fireblocks && (
-              <Chip 
-                label="Fireblocks" 
-                size="small" 
-                color="primary" 
+              <Chip
+                label="Fireblocks"
+                size="small"
+                color="primary"
                 variant="outlined"
               />
             )}
@@ -722,7 +722,7 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
           <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
             {template.description}
           </Typography>
-          <Button 
+          <Button
             variant={selectedTemplate === template.id ? "contained" : "outlined"}
             fullWidth
             size="small"
@@ -743,7 +743,7 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
             Step 2: Choose {assetDisplayName ? `${assetDisplayName} ` : ''}Template
           </Typography>
         </Box>
-        
+
         {templates.length > 0 ? (
           <>
             {/* EVM Templates Section */}
@@ -754,10 +754,10 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
                   <Typography variant="h6" fontWeight="bold" color="primary.main">
                     EVM Compatible
                   </Typography>
-                  <Chip 
+                  <Chip
                     label={`${evmTemplates.length} template${evmTemplates.length > 1 ? 's' : ''}`}
-                    size="small" 
-                    color="primary" 
+                    size="small"
+                    color="primary"
                     variant="outlined"
                   />
                 </Box>
@@ -778,10 +778,10 @@ const Step2 = ({ templates, selectedTemplate, onSelectTemplate, assetDisplayName
                   <Typography variant="h6" fontWeight="bold" color="secondary.main">
                     Non-EVM
                   </Typography>
-                  <Chip 
+                  <Chip
                     label={`${nonEvmTemplates.length} template${nonEvmTemplates.length > 1 ? 's' : ''}`}
-                    size="small" 
-                    color="secondary" 
+                    size="small"
+                    color="secondary"
                     variant="outlined"
                   />
                 </Box>
@@ -817,7 +817,7 @@ const Step3 = ({ templateDetails, onNext }) => {
       </Paper>
     );
   }
-  
+
   return (
     <Paper elevation={3} sx={{ p: 4, borderRadius: 3 }}>
       <Stack spacing={4}>
@@ -827,7 +827,7 @@ const Step3 = ({ templateDetails, onNext }) => {
             Step 3: Template Details
           </Typography>
         </Box>
-        
+
         <Card variant="outlined" sx={{ p: 3 }}>
           <Stack spacing={3}>
             <Box>
@@ -838,14 +838,14 @@ const Step3 = ({ templateDetails, onNext }) => {
                 {templateDetails.description}
               </Typography>
             </Box>
-            
+
             <Box>
               <Typography variant="h6" sx={{ mb: 2, display: 'flex', alignItems: 'center', gap: 1 }}>
                 <StarsIcon fontSize="small" /> Supported Use Cases
               </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
                 {templateDetails.useCases.map((useCase, index) => (
-                  <Chip 
+                  <Chip
                     key={index}
                     label={useCase}
                     variant="outlined"
@@ -855,7 +855,7 @@ const Step3 = ({ templateDetails, onNext }) => {
                 ))}
               </Box>
             </Box>
-            
+
             <Box>
               <Typography variant="h6" sx={{ mb: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
                 <BusinessIcon fontSize="small" /> Publisher
@@ -864,13 +864,13 @@ const Step3 = ({ templateDetails, onNext }) => {
                 {templateDetails.publisher}
               </Typography>
             </Box>
-            
+
             {templateDetails.auditBadge && (
               <Box>
                 <Typography variant="h6" sx={{ mb: 1, display: 'flex', alignItems: 'center', gap: 1 }}>
                   <SecurityIcon fontSize="small" /> Security
                 </Typography>
-                <Chip 
+                <Chip
                   icon={<VerifiedIcon />}
                   label="OpenZeppelin Audit"
                   color="success"
@@ -880,10 +880,10 @@ const Step3 = ({ templateDetails, onNext }) => {
             )}
           </Stack>
         </Card>
-        
+
         {/* Navigation buttons */}
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Button 
+          <Button
             variant="contained"
             onClick={onNext}
             size="large"
@@ -901,7 +901,7 @@ const Step3 = ({ templateDetails, onNext }) => {
 const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNetworkToggle, onNext }) => {
   // Check if it's a Ripple template
   const isRippleTemplate = selectedTemplate && selectedTemplate.includes('ripple');
-  
+
   // Network options for testnet
   const testnetNetworks = [
     { id: 'eth_test6', name: 'ETH_TEST6', icon: '🔷' },
@@ -923,7 +923,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
             Step 4: Token Setup
           </Typography>
         </Box>
-        
+
         <Card variant="outlined" sx={{ p: 3 }}>
           <Stack spacing={3}>
             {/* Network Toggle */}
@@ -951,20 +951,20 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
               </Typography>
               {isRippleTemplate ? (
                 // For Ripple templates, show fixed Ripple
-                <Box sx={{ 
-                  p: 2, 
-                  border: '1px solid', 
-                  borderColor: 'divider', 
-                  borderRadius: 1, 
+                <Box sx={{
+                  p: 2,
+                  border: '1px solid',
+                  borderColor: 'divider',
+                  borderRadius: 1,
                   bgcolor: 'grey.50',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 1
                 }}>
-                  <Box sx={{ 
-                    width: 24, 
-                    height: 24, 
-                    borderRadius: '50%', 
+                  <Box sx={{
+                    width: 24,
+                    height: 24,
+                    borderRadius: '50%',
                     bgcolor: '#346AA9',
                     display: 'flex',
                     alignItems: 'center',
@@ -988,7 +988,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                     onChange={onInputChange}
                     displayEmpty
                     disabled={formData.network === 'mainnet'}
-                    sx={{ 
+                    sx={{
                       bgcolor: formData.network === 'mainnet' ? 'grey.100' : 'background.paper'
                     }}
                   >
@@ -998,10 +998,10 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                     {formData.network === 'mainnet' ? (
                       <MenuItem value="ethereum">
                         <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                          <Box sx={{ 
-                            width: 24, 
-                            height: 24, 
-                            borderRadius: '50%', 
+                          <Box sx={{
+                            width: 24,
+                            height: 24,
+                            borderRadius: '50%',
                             bgcolor: '#627EEA',
                             display: 'flex',
                             alignItems: 'center',
@@ -1019,10 +1019,10 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                       testnetNetworks.map(network => (
                         <MenuItem key={network.id} value={network.id}>
                           <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                            <Box sx={{ 
-                              width: 24, 
-                              height: 24, 
-                              borderRadius: '50%', 
+                            <Box sx={{
+                              width: 24,
+                              height: 24,
+                              borderRadius: '50%',
                               bgcolor: '#627EEA',
                               display: 'flex',
                               alignItems: 'center',
@@ -1042,7 +1042,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                 </FormControl>
               )}
             </Box>
-            
+
             <Grid container spacing={3}>
               {/* Token Name */}
               <Grid item xs={12} md={6}>
@@ -1056,7 +1056,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                   variant="outlined"
                 />
               </Grid>
-              
+
               {/* Symbol */}
               <Grid item xs={12} md={6}>
                 <TextField
@@ -1069,7 +1069,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                   variant="outlined"
                 />
               </Grid>
-              
+
               {/* Default Admin */}
               <Grid item xs={12}>
                 <TextField
@@ -1082,7 +1082,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                   variant="outlined"
                 />
               </Grid>
-              
+
               {/* Minter */}
               <Grid item xs={12} md={6}>
                 <TextField
@@ -1095,7 +1095,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                   variant="outlined"
                 />
               </Grid>
-              
+
               {/* Pauser */}
               <Grid item xs={12} md={6}>
                 <TextField
@@ -1108,7 +1108,7 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
                   variant="outlined"
                 />
               </Grid>
-              
+
               {/* Token Deployer */}
               <Grid item xs={12}>
                 <FormControl fullWidth>
@@ -1130,10 +1130,10 @@ const Step4 = ({ formData, tokenDeployers, selectedTemplate, onInputChange, onNe
             </Grid>
           </Stack>
         </Card>
-        
+
         {/* Navigation buttons */}
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-          <Button 
+          <Button
             variant="contained"
             onClick={onNext}
             size="large"

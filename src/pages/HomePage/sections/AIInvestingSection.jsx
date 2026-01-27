@@ -7,7 +7,7 @@ import ellipse from '../../../components/SVG/mixedellipse.svg';
 
 export default function AIInvestingSection() {
   return (
-    <section className="w-full bg-black pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-24 sm:pb-32 md:pb-40 lg:pb-48 overflow-x-hidden relative">
+    <section className="w-full bg-black pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-x-hidden relative">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
@@ -41,17 +41,16 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="absolute left-[-2%] sm:left-[-1%] lg:left-[1%] xl:left-[4%] top-[calc(50%+20px)] md:top-[calc(50%+24px)] lg:top-[calc(50%+28px)] -translate-y-1/2 z-20 w-[160px] sm:w-[210px] lg:w-[280px]"
+              className="absolute left-[0%] sm:left-[2%] lg:left-[4%] xl:left-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[180px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
             >
-              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-2 sm:pr-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> to make better investments.
               </p>
-              {/* Left Connector Line */}
               {/* Left Connector Line */}
               <img
                 src="/assets/svg/leftvector.svg"
                 alt=""
-                className="absolute -right-[40px] sm:-right-[60px] lg:-right-[80px] top-1/2 -translate-y-1/2 w-[60px] sm:w-[80px] lg:w-[100px] h-[50px] sm:h-[60px] lg:h-[70px]"
+                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0"
               />
             </motion.div>
 
@@ -76,16 +75,15 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute right-[-2%] sm:right-[-1%] lg:right-[1%] xl:right-[4%] top-[calc(50%+20px)] md:top-[calc(50%+24px)] lg:top-[calc(50%+28px)] -translate-y-1/2 z-20 w-[160px] sm:w-[210px] lg:w-[280px]"
+              className="absolute right-[0%] sm:right-[2%] lg:right-[4%] xl:right-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[180px] sm:w-[240px] lg:w-[320px] flex items-center justify-start"
             >
-              {/* Right Connector Line (mirrored) */}
               {/* Right Connector Line */}
               <img
                 src="/assets/svg/rightvectorr.svg"
                 alt=""
-                className="absolute -left-[40px] sm:-left-[60px] lg:-left-[80px] top-1/2 -translate-y-1/2 w-[60px] sm:w-[80px] lg:w-[100px] h-[50px] sm:h-[60px] lg:h-[70px]"
+                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0"
               />
-              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-2 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
               </p>
             </motion.div>

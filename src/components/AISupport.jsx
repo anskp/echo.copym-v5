@@ -38,7 +38,7 @@ const AISupport = () => {
       text: getAIResponse(inputMessage),
       sender: 'ai'
     };
-    
+
     // Clear input and add AI response
     setInputMessage('');
     setTimeout(() => {
@@ -48,14 +48,14 @@ const AISupport = () => {
 
   const getAIResponse = (userInput) => {
     const lowerInput = userInput.toLowerCase();
-    
+
     const responses = {
       'hi': "Hello! Welcome to Copym. How can I assist you today?",
       'hello': "Hi there! I'm ready to help you with any questions about Copym.",
       'help': "I can help you with information about our AI-powered investment platform, blockchain integrations, and tokenization services.",
-      'what is copym': "Copym is an innovative AI-driven platform that democratizes investment by allowing fractional ownership of high-value assets like real estate, art, and more.",
+      'what is copym': "Copym is an innovative AI-driven platform that democratizes investment by allowing fractional exposure of high-value assets like real estate, art, and more.",
       'how does it work': "We use AI to identify and tokenize valuable assets, allowing users to invest in fractions of these assets with minimal capital.",
-      'features': "Key features include AI-powered asset selection, fractional ownership, seamless trading, and a user-friendly dashboard.",
+      'features': "Key features include AI-powered asset selection, fractional exposure, seamless trading, and a user-friendly dashboard.",
       'default': "I'm here to help! Could you be more specific about what you'd like to know about Copym?"
     };
 
@@ -67,15 +67,15 @@ const AISupport = () => {
   };
 
   const renderMessage = (message) => (
-    <div 
-      key={message.id} 
+    <div
+      key={message.id}
       className={`flex mb-4 ${message.sender === 'ai' ? 'justify-start' : 'justify-end'}`}
     >
-      <div 
+      <div
         className={`
           max-w-[70%] p-3 rounded-lg 
-          ${message.sender === 'ai' 
-            ? 'bg-emerald-100 text-emerald-800' 
+          ${message.sender === 'ai'
+            ? 'bg-emerald-100 text-emerald-800'
             : 'bg-blue-100 text-blue-800'}
         `}
       >
@@ -95,7 +95,7 @@ const AISupport = () => {
               <FaRobot className="text-2xl" />
               <span className="font-semibold">Copym AI Support</span>
             </div>
-            <button 
+            <button
               onClick={() => setIsOpen(false)}
               className="hover:bg-emerald-700 p-1 rounded-full transition"
             >
@@ -111,15 +111,15 @@ const AISupport = () => {
 
           {/* Input Area */}
           <div className="p-4 border-t border-gray-200 flex space-x-2">
-            <input 
-              type="text" 
+            <input
+              type="text"
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
               placeholder="Ask about Copym..."
               className="flex-grow p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500"
             />
-            <button 
+            <button
               onClick={handleSendMessage}
               className="bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition"
             >
@@ -130,12 +130,12 @@ const AISupport = () => {
       )}
 
       {/* Chat Bubble */}
-      <button 
+      <button
         onClick={() => setIsOpen(!isOpen)}
         className={`
           w-16 h-16 rounded-full shadow-2xl flex items-center justify-center 
-          ${isOpen 
-            ? 'bg-red-500 text-white' 
+          ${isOpen
+            ? 'bg-red-500 text-white'
             : 'bg-emerald-600 text-white hover:bg-emerald-700'}
           transition-all duration-300 ease-in-out
         `}
