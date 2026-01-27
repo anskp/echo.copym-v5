@@ -15,8 +15,8 @@ import parivaryaih from '../components/images/parivaryaih.avif';
 
 // Styled icon component with green color
 const StyledIcon = ({ icon: Icon, className = "" }) => (
-  <div className={`w-14 h-14 flex items-center justify-center ${className}`}>
-    <Icon className="w-8 h-8 text-[#15a36e]" />
+  <div className={`w-10 h-10 flex items-center justify-center ${className}`}>
+    <Icon className="w-6 h-6 text-[#15a36e]" />
   </div>
 );
 
@@ -222,7 +222,7 @@ export default function Header() {
                                   <Link
                                     key={index}
                                     to={dropdownItem.path || item.path}
-                                    className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                    className="flex items-center gap-3 p-1.5 rounded-xl hover:bg-white/5 transition-colors group/item"
                                     onClick={() => setHoveredItem(null)}
                                   >
                                     <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">
@@ -241,12 +241,12 @@ export default function Header() {
                               </div>
 
                               {/* Right Column: Blog, Document */}
-                              <div className="space-y-4 pl-4">
+                              <div className="space-y-4">
                                 {item.dropdown.slice(2, 4).map((dropdownItem, index) => (
                                   <Link
                                     key={index + 2}
                                     to={dropdownItem.path || item.path}
-                                    className="flex items-center gap-5 p-2 rounded-xl hover:bg-white/5 transition-colors group/item"
+                                    className={`flex items-center gap-3 p-1.5 rounded-xl hover:bg-white/5 transition-colors group/item ${index === 1 ? 'mt-2.5' : ''}`}
                                     onClick={() => setHoveredItem(null)}
                                   >
                                     <div className="flex-shrink-0 flex items-center justify-center group-hover/item:scale-110 transition-transform">

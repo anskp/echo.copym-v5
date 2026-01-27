@@ -326,7 +326,7 @@ export default function WhyItMatters() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="text-sm sm:text-base md:text-lg text-black font-medium max-w-4xl mx-auto leading-relaxed px-4"
+                        className="text-sm sm:text-base md:text-lg lg:text-sm text-black font-medium max-w-4xl mx-auto leading-relaxed px-4"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                         Unlocking the trillion-dollar potential of Real-World Assets with institutional-grade infrastructure. <br className="hidden md:block" />

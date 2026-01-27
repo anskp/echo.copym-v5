@@ -26,7 +26,7 @@ const WhoWeServe = () => {
             </h2>
 
           </div>
-          <p className="text-xs sm:text-[13px] text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-2xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm sm:text-base md:text-lg lg:text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-2xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Unlocking the trillion-dollar potential of Real-World Assets with institutional-grade infrastructure. Capitalize on unparalleled liquidity, compliance, and global reach.
           </p>
         </motion.div>

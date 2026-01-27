@@ -60,7 +60,7 @@ export default function TokenizationProcess() {
           </div>
 
           <p
-            className="text-sm sm:text-base md:text-lg text-black leading-relaxed mt-6 max-w-4xl mx-auto"
+            className="text-sm sm:text-base md:text-lg lg:text-sm text-black leading-relaxed mt-6 max-w-4xl mx-auto"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Master the markets with AI-driven insights, predictive alerts, and real-time intelligence <br />that give you the edge in crypto trading
