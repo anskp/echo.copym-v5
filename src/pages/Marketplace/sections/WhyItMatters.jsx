@@ -47,7 +47,7 @@ const categories = [
     {
         id: 'art',
         name: 'Art',
-        icon: <Image src={louvreAvif} alt="Art" className="w-4 h-4 object-contain" />,
+        icon: <Palette className="w-4 h-4" />,
         logo: louvreAvif,
         image: artsImg,
         title: "Tokenized Fine Art",
@@ -95,7 +95,7 @@ const categories = [
     {
         id: 'commodities',
         name: 'Commodities',
-        icon: <Image src={barrickSvg} alt="Commodities" className="w-4 h-4 object-contain" />,
+        icon: <Package className="w-4 h-4" />,
         logo: barrickSvg,
         image: commoditiesImg,
         title: "Tokenized Commodities",
@@ -144,7 +144,7 @@ const categories = [
     {
         id: 'real-estate',
         name: 'Real Estate',
-        icon: <Image src={'/assets/Images/compass.avif'} alt="Real Estate" className="w-4 h-4 object-contain" />,
+        icon: <Building2 className="w-4 h-4" />,
         logo: '/assets/Images/compass.avif',
         image: realEstateImg,
         title: "Tokenized institutional Real Estate",
@@ -193,7 +193,7 @@ const categories = [
     {
         id: 'sports',
         name: 'Sports',
-        icon: <Image src={manchesterLogo} alt="Sports" className="w-4 h-4 object-contain" />,
+        icon: <Trophy className="w-4 h-4" />,
         logo: manchesterLogo,
         image: sportsImg,
         title: "Professional Sports Assets",
@@ -240,7 +240,7 @@ const categories = [
     {
         id: 'carbon-credits',
         name: 'Carbon Credits',
-        icon: <Image src={verraSvg} alt="Carbon Credits" className="w-4 h-4 object-contain" />,
+        icon: <Leaf className="w-4 h-4" />,
         logo: verraSvg,
         image: carbonCreditsImg,
         title: "Carbon Credits",
@@ -370,10 +370,10 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                 transition={{ duration: 0.5 }}
-                                className="relative w-full max-w-full md:max-w-[350px] rounded-[2rem] overflow-visible shadow-xl bg-white p-2"
+                                className="relative w-full max-w-full md:max-w-[350px] rounded-2xl overflow-visible shadow-xl bg-white p-2"
                             >
                                 <div className="relative">
-                                    <div className="w-full aspect-[4/3] rounded-[2rem] overflow-hidden relative">
+                                    <div className="w-full aspect-[10/9] rounded-2xl overflow-hidden relative">
                                         <Image
                                             src={activeTab.image}
                                             alt={activeTab.name}
@@ -543,7 +543,7 @@ export default function WhyItMatters() {
                                                     initial={{ opacity: 0, y: 20 }}
                                                     animate={{ opacity: 1, y: 0 }}
                                                     transition={{ delay: 0.3 + (idx * 0.15), duration: 0.5 }}
-                                                    className="bg-white rounded-[1.5rem] shadow-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                                                    className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
                                                 >
                                                     {/* Top Image Area - Reduced Height */}
                                                     <div className="relative h-20 sm:h-24 w-full">

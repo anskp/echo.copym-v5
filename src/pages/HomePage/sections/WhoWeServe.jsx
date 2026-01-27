@@ -35,7 +35,7 @@ const WhoWeServe = () => {
         {/* Keep all horizontal gaps (left/right gutter, between 2-right cards, and main column gap) equal */}
         <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-3 sm:gap-4 lg:gap-x-4 lg:gap-y-4">
           {/* Left Card - Large (tall + wide) - Asset Owners & Institutions */}
-          <div className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col">
+          <div className="lg:col-span-3 lg:row-span-2 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col rounded-lg overflow-hidden">
             {/* Large Image - Dominant Visual */}
             <div className="mb-4 sm:mb-5 lg:mb-6 flex items-start justify-center min-h-[180px] sm:min-h-[220px] lg:min-h-[300px] -mt-2 sm:-mt-3 lg:-mt-4">
               <Image
@@ -120,7 +120,7 @@ const WhoWeServe = () => {
           </div>
 
           {/* Top-Right Card - Investors */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 h-full overflow-hidden">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-4 border border-gray-800 flex flex-col lg:flex-row items-center gap-2 lg:gap-4 h-full overflow-hidden rounded-lg">
             {/* Image on Top (Mobile) / Right (Desktop) */}
             <div className="w-full lg:w-auto lg:flex-1 flex items-center justify-center lg:justify-end lg:order-2 min-h-[180px] sm:min-h-[220px] lg:min-h-[140px] -mt-2 sm:-mt-3 lg:mt-0">
               {/* Mobile Image */}
@@ -212,7 +212,7 @@ const WhoWeServe = () => {
           </div>
 
           {/* Bottom-Right Card - Partners */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black px-3 sm:px-4 lg:px-4 py-4 sm:py-5 lg:py-6 border border-gray-800 flex flex-col lg:flex-row items-center gap-3 lg:gap-4 h-full overflow-hidden rounded-lg">
             {/* Image on Top (Mobile) / Left (Desktop) */}
             <div className="w-full lg:w-1/2 flex items-center justify-center lg:justify-start min-h-[180px] sm:min-h-[220px] lg:min-h-[160px] flex-shrink-0 -mt-2 sm:-mt-3 lg:mt-0">
               {/* Mobile Image */}

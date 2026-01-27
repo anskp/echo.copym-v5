@@ -26,7 +26,7 @@ export default function IssuerSection() {
         <div className="grid grid-cols-1 lg:grid-cols-7 lg:grid-rows-2 gap-3 sm:gap-4 lg:gap-x-4 lg:gap-y-4">
 
           {/* Left Card - Full Height (3 columns, 2 rows) */}
-          <div className="lg:col-span-3 lg:row-span-2 bg-black p-6 sm:p-8 flex flex-col justify-between">
+          <div className="lg:col-span-3 lg:row-span-2 bg-black rounded-lg p-6 sm:p-8 flex flex-col justify-between">
             {/* Image at top */}
             <div className="flex justify-center mb-4 sm:mb-6 flex-1 items-center overflow-hidden">
               <img
@@ -54,7 +54,7 @@ export default function IssuerSection() {
           </div>
 
           {/* Top Right Card (4 columns, 1 row) */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black rounded-lg p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
             {/* Image on top (mobile) / right (desktop) */}
             <div className="flex justify-center lg:justify-end items-center lg:order-2">
               <img
@@ -106,7 +106,7 @@ export default function IssuerSection() {
           </div>
 
           {/* Bottom Right Card (4 columns, 1 row) */}
-          <div className="lg:col-span-4 lg:row-span-1 bg-black p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
+          <div className="lg:col-span-4 lg:row-span-1 bg-black rounded-lg p-6 sm:p-8 flex flex-col lg:flex-row items-center gap-4 lg:gap-6">
             {/* Image on left */}
             <div className="flex justify-center lg:justify-start items-center flex-shrink-0">
               <img

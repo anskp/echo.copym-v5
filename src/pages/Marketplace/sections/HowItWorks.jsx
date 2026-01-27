@@ -157,10 +157,10 @@ export default function HowItWorks() {
 
                                     {/* Title & Description */}
                                     <div className={`pl-0 pr-0 w-fit max-w-full flex flex-col text-left items-start sm:pr-6 ${index === 3 ? 'lg:mb-6' : ''}`}>
-                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.title}
                                         </h3>
-                                        <p className="text-sm sm:text-base text-gray-400 leading-relaxed font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        <p className="text-sm sm:text-base text-gray-400 leading-[1.1] font-medium text-justify tracking-tight hyphens-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                             {step.description}
                                         </p>
                                     </div>
