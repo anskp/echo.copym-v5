@@ -52,10 +52,10 @@ const AISupport = () => {
     const responses = {
       'hi': "Hello! Welcome to Copym. How can I assist you today?",
       'hello': "Hi there! I'm ready to help you with any questions about Copym.",
-      'help': "I can help you with information about our AI-powered investment platform, blockchain integrations, and tokenization services.",
-      'what is copym': "Copym is an innovative AI-driven platform that democratizes investment by allowing fractional exposure of high-value assets like real estate, art, and more.",
+      'help': "I can help you with information about our AI-powered entitlement platform, blockchain integrations, and tokenization services.",
+      'what is copym': "Copym is an innovative AI-driven platform that democratizes entitlement by allowing fractional entitlement of high-value assets like real estate, art, and more.",
       'how does it work': "We use AI to identify and tokenize valuable assets, allowing users to invest in fractions of these assets with minimal capital.",
-      'features': "Key features include AI-powered asset selection, fractional exposure, seamless trading, and a user-friendly dashboard.",
+      'features': "Key features include AI-powered asset selection, fractional entitlement, seamless trading, and a user-friendly dashboard.",
       'default': "I'm here to help! Could you be more specific about what you'd like to know about Copym?"
     };
 

@@ -54,7 +54,7 @@ const FeaturesGrid = () => {
     },
     {
       title: "AI-Powered Recommendations",
-      description: "Get personalized investment suggestions based on your goals and risk profile.",
+      description: "Get personalized entitlement suggestions based on your goals and risk profile.",
       stats: "100% Compliant"
     },
     {
@@ -325,7 +325,7 @@ export default function AppPeekSection() {
                 <span className="text-black">Features</span>
               </h2>
               <p className="text-gray-600 text-sm sm:text-base md:text-lg lg:text-xl">
-                Everything you need for modern investment management
+                Everything you need for modern entitlement management
               </p>
             </motion.div>
 

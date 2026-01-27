@@ -13,12 +13,12 @@ export default function TokenizationProcess() {
   const whyTokenizeFeatures = [
     {
       title: "Programmable terms",
-      description: "Program compliance rules and investment terms required for diverse asset and investor classifications via digital contracts.",
+      description: "Program compliance rules and entitlement terms required for diverse asset and investor classifications via digital contracts.",
       icon: ticon1
     },
     {
       title: "Increased accessibility",
-      description: "Tokenization opens investment opportunities, allowing retail investors to access markets restricted to traditional financial structure models.",
+      description: "Tokenization opens entitlement opportunities, allowing retail investors to access markets restricted to traditional financial structure models.",
       icon: ticon2
     },
     {
@@ -28,7 +28,7 @@ export default function TokenizationProcess() {
     },
     {
       title: "Fractional Ownership",
-      description: "Enable investors to own portions of high-value assets improving market liquidity and diversifying their investment portfolios.",
+      description: "Enable investors to own portions of high-value assets improving market liquidity and diversifying their entitlement portfolios.",
       icon: ticon6
     },
     {
@@ -38,7 +38,7 @@ export default function TokenizationProcess() {
     },
     {
       title: "Greater transparency",
-      description: "Investors can track token exposure and access real-time information regarding fund performance and asset holdings securely.",
+      description: "Investors can track token entitlementent and access real-time information regarding fund performance and asset holdings securely.",
       icon: ticon4
     }
   ];

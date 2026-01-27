@@ -130,7 +130,7 @@ const HowItWorks = () => {
               SPONSORED TRANSACTIONS
             </h3>
             <p className="text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, exposure transfers, and yield distributions.
+              CopyM sponsors gas for key interactions such as asset issuance, marketplace trades, entitlement transfers, and yield distributions.
             </p>
           </div>
         </motion.div>

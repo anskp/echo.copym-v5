@@ -74,7 +74,7 @@ export default function FAQsection() {
   const faqs = [
     {
       question: "How do I start investing on the marketplace?",
-      answer: "Create an account, complete KYC in minutes, connect a wallet (or use custodial onboarding), and browse assets. Each listing shows minimum investment, risk band, and expected ROI."
+      answer: "Create an account, complete KYC in minutes, connect a wallet (or use custodial onboarding), and browse assets. Each listing shows minimum entitlement, risk band, and expected ROI."
     },
     {
       question: "What currencies and wallets are supported?",

@@ -48,7 +48,7 @@ const TokenizeAssetsSection = () => {
         title="TOKENIZE REAL ASSETS"
         subtitle={
           <span className="max-w-3xl mx-auto block">
-            Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets <br className="hidden md:block" /> into digital tokens for global investment access.
+            Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets <br className="hidden md:block" /> into digital tokens for global entitlement access.
           </span>
         }
         highlightWords={["TOKENIZE"]}

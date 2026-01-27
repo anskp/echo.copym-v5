@@ -107,14 +107,14 @@ const AboutUs = () => {
                                     title: "Our Mission",
                                     icon: GiTargetArrows,
                                     heading: <>Democratizing <span className="text-[#15a36e]">Investment</span></>,
-                                    text: "To make asset exposure borderless, transparent, and universally accessible through blockchain innovation. We democratize access to investment opportunities by enabling fractional exposure of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100."
+                                    text: "To make asset entitlement borderless, transparent, and universally accessible through blockchain innovation. We democratize access to entitlement opportunities by enabling fractional entitlement of premium assets, making it possible for anyone to invest in real estate, commodities, and valuable assets with as little as $100."
                                 },
                                 {
                                     id: 1,
                                     title: "Our Vision",
                                     icon: GiBinoculars,
                                     heading: <>Borderless <span className="text-[#15a36e]">Future</span></>,
-                                    text: "We see a future where any asset, anywhere, can be owned, traded, and verified instantly. Through our platform, we envision a future where everyone has access to premium investment opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers."
+                                    text: "We see a future where any asset, anywhere, can be owned, traded, and verified instantly. Through our platform, we envision a future where everyone has access to premium entitlement opportunities, creating a more inclusive and prosperous global economy where wealth generation is not limited by geography or traditional barriers."
                                 }
                             ].map((item) => (
                                 <div
@@ -189,7 +189,7 @@ const AboutUs = () => {
                             {/* CEO Quote */}
                             <div className="max-w-4xl mx-auto text-center px-8">
                                 <p className="text-black text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    "A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets."
+                                    “A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets.”
                                 </p>
                                 <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     — Kuldeep Mahindrkar, <span className="text-black font-normal">CEO, Copym</span>
@@ -317,7 +317,7 @@ const AboutUs = () => {
                                 <p className="text-base text-white leading-relaxed w-full mx-auto text-center tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry.<br />
                                     Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities.<br />
-                                    What began as a vision has grown into a movement built on investment and opportunity.
+                                    What began as a vision has grown into a movement built on entitlement and opportunity.
                                 </p>
                             </motion.div>
                         </div>

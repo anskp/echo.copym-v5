@@ -7,7 +7,7 @@ export default function TradableAssets() {
         {
             image: "/assets/Images/icons/tradee1.png",
             title: "REAL-WORLD ASSETS",
-            description: "Tokenized exposure to institutional real-world investment grade assets."
+            description: "Tokenized entitlement to institutional real-world entitlement grade assets."
         },
         {
             image: "/assets/Images/icons/tradee2.png",
@@ -17,7 +17,7 @@ export default function TradableAssets() {
         {
             image: "/assets/Images/icons/tradee3.png",
             title: "BRAND & IP ASSETS",
-            description: "Tokenized exposure within institutional global brands and digital assets."
+            description: "Tokenized entitlement within institutional global brands and digital assets."
         },
         {
             image: "/assets/Images/icons/tradee4.png",

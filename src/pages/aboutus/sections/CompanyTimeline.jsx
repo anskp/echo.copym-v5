@@ -5,12 +5,12 @@ const CompanyTimeline = () => {
   const timelineData = [
     {
       year: "2023 - Foundation",
-      description: "COPYm was founded with a vision to democratize access to premium investment opportunities.",
+      description: "COPYm was founded with a vision to democratize access to premium entitlement opportunities.",
       image: "/images/img_image_845.png"
     },
     {
       year: "2024 - Platform Launch",
-      description: "Our revolutionary RWA tokenization platform goes live, enabling fractional exposure.",
+      description: "Our revolutionary RWA tokenization platform goes live, enabling fractional entitlement.",
       image: "/images/img_image_844.png"
     },
     {

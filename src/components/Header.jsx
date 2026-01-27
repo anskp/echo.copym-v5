@@ -69,7 +69,7 @@ export default function Header() {
         {
           icon: <StyledIcon icon={FaDollarSign} />,
           heading: "Marketplace",
-          description: "Discover investment opportunities in a secure, compliant digital asset marketplace.",
+          description: "Discover entitlementt opportunities in a secure, compliant digital asset marketplace.",
           path: "/marketplace"
         }
       ]
@@ -388,19 +388,25 @@ export default function Header() {
                   const open = isDropdown && mobileDropdownOpen === item.path;
                   return (
                     <div key={item.path} className="border-b border-white/5 last:border-b-0">
-                      <div
-                        className={`flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer ${open ? 'text-white' : ''}`}
-                        onClick={() => {
-                          if (isDropdown) {
+                      {isDropdown ? (
+                        <div
+                          className={`flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer ${open ? 'text-white' : ''}`}
+                          onClick={() => {
                             setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
-                          } else {
-                            setIsMenuOpen(false);
-                          }
-                        }}
-                      >
-                        <span className="flex-1 text-base">{item.label}</span>
-                        {isDropdown && <DropdownChevron open={open} />}
-                      </div>
+                          }}
+                        >
+                          <span className="flex-1 text-base">{item.label}</span>
+                          <DropdownChevron open={open} />
+                        </div>
+                      ) : (
+                        <Link
+                          to={item.path}
+                          className="flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          <span className="flex-1 text-base">{item.label}</span>
+                        </Link>
+                      )}
 
                       {/* Dropdown Content */}
                       <AnimatePresence initial={false}>

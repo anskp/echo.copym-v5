@@ -19,7 +19,7 @@ export default function TokenManagement() {
         },
         {
             title: 'Portfolio Analytics',
-            description: 'Advanced analytics and reporting tools for tracking your investment performance.',
+            description: 'Advanced analytics and reporting tools for tracking your entitlement performance.',
             icon: tiicon2,
             badge: 'Real Time',
             number: '02.',

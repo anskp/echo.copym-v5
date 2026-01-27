@@ -16,7 +16,7 @@ export default function HowItWorks() {
     },
     {
       title: "Privacy-Preserving Verification",
-      description: "Eligibility, exposure and compliance are verified without exposing sensitive personal or business information.",
+      description: "Eligibility, entitlement and compliance are verified without exposing sensitive personal or business information.",
       icon: smallp2
     },
     {

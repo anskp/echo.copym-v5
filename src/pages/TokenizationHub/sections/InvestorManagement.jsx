@@ -13,7 +13,7 @@ export default function InvestorManagement() {
     },
     {
       title: "Portfolio Analytics",
-      description: "Advanced analytics and reporting tools for investment performance tracking.",
+      description: "Advanced analytics and reporting tools for entitlement performance tracking.",
       stats: "Real Time"
     },
     {

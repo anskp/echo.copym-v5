@@ -86,7 +86,7 @@ function InsightCard({ insight }) {
 
       {/* Quote - Smaller, refined typography */}
       <p className="text-base sm:text-lg text-[#222] leading-relaxed font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-        "{insight.quote}"
+        “{insight.quote}”
       </p>
 
       {/* Author Info - Smaller, compact */}

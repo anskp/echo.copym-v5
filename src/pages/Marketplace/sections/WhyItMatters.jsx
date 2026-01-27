@@ -84,7 +84,7 @@ const categories = [
                 roi: "9.2%",
                 tokensAvailable: "1,500/2,000",
                 price: "$2,400,000",
-                description: "Offers investors tokenized exposure of Renaissance-era masterpieces.",
+                description: "Offers investors tokenized entitlementententent of Renaissance-era masterpieces.",
                 image: "/assets/Images/art2.jpg"
             },
             {
@@ -105,7 +105,7 @@ const categories = [
         logo: barrickSvg,
         image: commoditiesImg,
         title: "Tokenized Commodities",
-        description: "Direct exposure to global commodities markets through tokenized assets. From precious metals to energy resources, diversify your portfolio.",
+        description: "Direct entitlemententent to global commodities markets through tokenized assets. From precious metals to energy resources, diversify your portfolio.",
         benefits: ["Inflation Hedge", "Global Markets", "Direct Exposure"],
         stats: [
             { label: 'Total Asset Value', value: '$18,170,000', change: '+2.7%' },
@@ -154,7 +154,7 @@ const categories = [
         logo: '/assets/Images/compass.avif',
         image: realEstateImg,
         title: "Tokenized institutional Real Estate",
-        description: "Access institutional-grade property investments with fractional exposure. Earn rental yields and capital appreciation without the traditional barriers to entry.",
+        description: "Access institutional-grade property investments with fractional entitlement. Earn rental yields and capital appreciation without the traditional barriers to entry.",
         benefits: ["Fractional Ownership", "Monthly Rental Yields", "Highly Liquid Market"],
         stats: [
             { label: 'Total Asset Value', value: '$234,700', change: '+3.1%' },
@@ -191,7 +191,7 @@ const categories = [
                 roi: '8.5%',
                 tokensAvailable: '750/1000',
                 price: '$500,000',
-                description: "Fractional exposure in a prestigious Manhattan commercial space with long-term institutional tenants.",
+                description: "Fractional entitlement in a prestigious Manhattan commercial space with long-term institutional tenants.",
                 image: premiumOfficeBuildingImg
             }
         ]
@@ -203,7 +203,7 @@ const categories = [
         logo: manchesterLogo,
         image: sportsImg,
         title: "Professional Sports Assets",
-        description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and exposure.",
+        description: "Invest in tokenized sports assets including team shares, athlete contracts, and stadium infrastructure. A new frontier in fan engagement and entitlement.",
         benefits: ["Fan Ownership", "Revenue Sharing", "Global Access"],
         stats: [
             { label: 'Total Asset Value', value: '$8,500,000', change: '+7.3%' },
@@ -229,7 +229,7 @@ const categories = [
                 roi: "8.4%",
                 tokensAvailable: "250,000/500,000",
                 price: "$150M",
-                description: "Direct fan exposure in a top-tier European football club with revenue-sharing from broadcast rights and sponsorships.",
+                description: "Direct fan entitlement in a top-tier European football club with revenue-sharing from broadcast rights and sponsorships.",
                 image: "/assets/Images/teams.jpg"
             },
             {
@@ -586,7 +586,7 @@ export default function WhyItMatters() {
 
                                                         {/* Description - Reduced Margin & Size */}
                                                         <p className="text-gray-500 text-[10px] font-medium leading-relaxed mb-2 line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                            {asset.description || "Premium investment opportunity with stable returns and high growth potential."}
+                                                            {asset.description || "Premium entitlementt opportunity with stable returns and high growth potential."}
                                                         </p>
 
                                                         {/* Footer Row: Tags */}
@@ -619,7 +619,7 @@ export default function WhyItMatters() {
                     <div className="text-[#98a2b3] text-[9px] sm:text-[10px] leading-relaxed max-w-6xl mx-auto font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                         <p className="mb-0.5">
 
-                            Copym does not provide brokerage services, investment banking services, underwriting services, investment recommendations, or investment advice to any person.
+                            Copym does not provide brokerage services, entitlement banking services, underwriting services, entitlement recommendations, or entitlement advice to any person.
                         </p>
                         <p>
                             Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies T & C apply.

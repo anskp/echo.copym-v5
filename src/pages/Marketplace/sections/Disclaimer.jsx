@@ -15,8 +15,8 @@ export default function Disclaimer() {
                         className="text-[10px] sm:text-xs text-gray-400 leading-relaxed font-medium"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
-                        Copym does not provide brokerage services, investment banking services, underwriting services,
-                        investment recommendations, or investment advice to any person. Copym operates as a technology
+                        Copym does not provide brokerage services, entitlement banking services, underwriting services,
+                        entitlement recommendations, or entitlement advice to any person. Copym operates as a technology
                         platform focused on distributed ledger technology to improve efficiency, accessibility, and
                         transparency in financial technologies.
                     </p>
