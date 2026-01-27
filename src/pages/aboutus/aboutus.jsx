@@ -172,8 +172,8 @@ const AboutUs = () => {
                     </div>
 
                     {/* BOTTOM: Logo and Quote - No Image */}
-                    <div className="relative mt-4 sm:mt-6 w-full">
-                        <div className="flex flex-col items-center justify-center py-8 md:py-12">
+                    <div className="relative mt-0 w-full">
+                        <div className="flex flex-col items-center justify-center py-4 md:py-6">
                             {/* Company Logo */}
                             <div>
                                 <img
@@ -198,7 +198,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section: Live Stats Counter */}
-            <section className="py-12 lg:py-16 bg-white overflow-hidden">
+            <section className="py-6 lg:py-8 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
                         {[
@@ -213,7 +213,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 4: Core Values */}
-            <section className="py-10 lg:py-16 bg-white overflow-hidden">
+            <section className="py-6 lg:py-8 bg-white overflow-hidden">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col gap-12 lg:gap-16">
                         {/* TOP: Heading & Description - Centered */}
@@ -262,16 +262,16 @@ const AboutUs = () => {
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: index * 0.15 }}
                                         viewport={{ once: true }}
-                                        className={`p-8 rounded-[24px] shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_15px_40px_rgba(0,0,0,0.12)] transition-shadow duration-300 relative border ${index === 1
-                                            ? 'bg-black border-white/20'
-                                            : 'bg-white border-gray-50'
+                                        className={`p-8 rounded-[24px] transition-all duration-300 relative bg-transparent border-2 ${index === 1
+                                            ? 'border-[#15a36e] hover:bg-[#15a36e]/5'
+                                            : 'border-black hover:bg-black/5'
                                             }`}
                                     >
                                         <div className="flex flex-col gap-4 text-center">
-                                            <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : (index === 1 ? 'text-white' : 'text-black')}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <h3 className={`text-xl font-bold ${value.title === 'Security' ? 'text-[#15a36e]' : 'text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.title}
                                             </h3>
-                                            <p className={`leading-relaxed text-sm ${index === 1 ? 'text-white' : 'text-black'}`} style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="leading-relaxed text-sm text-black" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 {value.description}
                                             </p>
                                         </div>
@@ -601,7 +601,7 @@ const AboutUs = () => {
             </section>
 
             {/* Section 10: Map Only */}
-            <section className="relative py-8 sm:py-10 md:py-12 lg:py-16 bg-white">
+            <section className="relative pt-0 pb-8 sm:pb-10 md:pb-12 lg:pb-16 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Map - Full Width */}
                     <motion.div

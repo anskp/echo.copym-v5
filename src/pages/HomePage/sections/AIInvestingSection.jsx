@@ -105,7 +105,7 @@ export default function AIInvestingSection() {
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none"
-                style={{ transform: 'scaleX(-1) translateY(-50%)' }}
+                style={{ transform: 'translateY(-50%)' }}
               >
                 <path
                   d="M1 88.2773L74.8267 10.0898C80.3664 4.22283 88.1 0.92921 96.1688 1.00054L158.451 1.55115"
