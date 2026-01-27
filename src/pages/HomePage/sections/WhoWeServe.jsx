@@ -46,7 +46,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Text Content Container with Padding */}
-            <div className="pl-8 sm:pl-10 lg:pl-12">
+            <div className="flex flex-col px-8 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
@@ -100,7 +100,7 @@ const WhoWeServe = () => {
               </motion.ul>
 
               {/* Learn More Button */}
-              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit self-center lg:self-start" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
                   Learn More
                 </span>
@@ -138,7 +138,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Content Below (Mobile) / Left (Desktop) */}
-            <div className="flex-1 lg:max-w-[60%] lg:order-1 flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12">
+            <div className="flex-1 lg:max-w-[60%] lg:order-1 flex flex-col justify-center px-8 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
@@ -192,7 +192,7 @@ const WhoWeServe = () => {
               </motion.ul>
 
               {/* Learn More Button */}
-              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit self-center lg:self-start" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
                   Learn More
                 </span>
@@ -230,7 +230,7 @@ const WhoWeServe = () => {
             </div>
 
             {/* Content on Right */}
-            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center pl-8 sm:pl-10 lg:pl-12">
+            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center px-8 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
@@ -284,7 +284,7 @@ const WhoWeServe = () => {
               </motion.ul>
 
               {/* Learn More Button */}
-              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <button className="group inline-flex items-center justify-between min-w-[120px] sm:min-w-[150px] bg-black border border-white/40 rounded-full p-1 hover:bg-white/10 transition-all duration-300 w-fit self-center lg:self-start" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="pl-3 sm:pl-4 pr-2 text-white font-semibold text-xs sm:text-base">
                   Learn More
                 </span>
