@@ -61,7 +61,7 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative z-10 translate-y-32 md:translate-y-36 lg:translate-y-40"
+              className="relative z-10 translate-y-40 md:translate-y-48 lg:translate-y-56"
             >
               <Image
                 src="/assets/Images/cora-ai.png"

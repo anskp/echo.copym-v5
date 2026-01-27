@@ -34,7 +34,7 @@ export default function Hero() {
                         className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
-                        COPYm is a leading Real-World Asset (RWA) tokenization platform designed to transform how individuals invest and manage ownership. The traditional asset market is fragmented, slow, and geographically restricted..
+                        Copym is a leading Real-World Asset tokenization platform designed to transform how individuals invest and manage ownership. The traditional asset market is fragmented, slow, and geographically restricted.
                     </p>
                 </motion.div>
             </div>

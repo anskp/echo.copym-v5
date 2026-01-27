@@ -10,7 +10,7 @@ const FeatureCard = ({ icon, title, description, bgColor = "bg-emerald-50" }) =>
           {icon}
         </div>
       </div>
-      
+
       {/* Content Section */}
       <div className="p-6">
         <h3 className="text-xl font-bold text-emerald-600 mb-3 leading-tight">
@@ -49,17 +49,17 @@ const EarnIcon = () => (
     <div className="relative">
       <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center">
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
       </div>
       <div className="absolute -top-2 -right-2 w-6 h-6 bg-emerald-400 rounded-full flex items-center justify-center">
         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M7 14l5-5 5 5z"/>
+          <path d="M7 14l5-5 5 5z" />
         </svg>
       </div>
       <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-emerald-400 rounded-full flex items-center justify-center">
         <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M7 14l5-5 5 5z"/>
+          <path d="M7 14l5-5 5 5z" />
         </svg>
       </div>
     </div>
@@ -71,7 +71,7 @@ const ExploreIcon = () => (
     <div className="relative">
       <div className="w-16 h-16 bg-emerald-500 rounded-full flex items-center justify-center">
         <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
         </svg>
       </div>
       <div className="absolute -top-4 -left-4 bg-emerald-100 px-3 py-1 rounded-full text-emerald-700 text-sm font-medium">
@@ -114,7 +114,7 @@ export default function FeatureCards() {
         {/* Section Title */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'DM Sans, sans-serif' }}>
-            OWN. EARN. EXPLORE. TRADE.
+            Exposure. EARN. EXPLORE. TRADE.
           </h2>
         </div>
 
@@ -125,15 +125,15 @@ export default function FeatureCards() {
             title="Own a piece of big Investment"
             description="Ever thought real estate, gold, or fine art was only for the rich? Not anymore. Start with small amounts and own a piece of high-value assets you actually care about."
           />
-          
-         
-          
+
+
+
           <FeatureCard
             icon={<ExploreIcon />}
             title="Explore a world of assets"
             description="From property and gold to private equity and art—our AI picks out smart opportunities so you don't have to dig through endless research."
           />
-          
+
           <FeatureCard
             icon={<TradeIcon />}
             title="Trade anytime, anywhere"
