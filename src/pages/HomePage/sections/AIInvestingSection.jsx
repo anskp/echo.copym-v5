@@ -50,7 +50,7 @@ export default function AIInvestingSection() {
               <img
                 src="/assets/svg/leftvector.svg"
                 alt=""
-                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0"
+                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
             </motion.div>
 
@@ -81,7 +81,7 @@ export default function AIInvestingSection() {
               <img
                 src="/assets/svg/rightvectorr.svg"
                 alt=""
-                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0"
+                className="w-[60px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
               <p className="text-[10px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-2 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
