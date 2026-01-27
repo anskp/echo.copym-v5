@@ -23,8 +23,8 @@ export default function HowItWorks() {
         },
         {
             id: "secure",
-            title: "Self Custodial Security",
-            description: "Users maintain full control and verifiable ownership of their positions through secure blockchain wallets.",
+            title: "Regulated Custodial",
+            description: "Regulated custody delivers compliant asset protection via licensed institutions, rigorous audits, and jurisdictional regulatory oversight.",
             icon: smallp2,
             watermark: ""
         },

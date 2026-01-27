@@ -226,26 +226,13 @@ export default function Typeform() {
                 transition={{ duration: 0.6 }}
                 className="w-full relative group"
               >
-                {/* Hexagonal Pattern Background - Shows on Hover */}
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-30 transition-opacity duration-500 pointer-events-none rounded-lg"
-                  style={{
-                    background: `
-                      radial-gradient(circle at 25% 25%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 75% 25%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 50% 50%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 25% 75%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
-                      radial-gradient(circle at 75% 75%, rgba(21, 163, 110, 0.15) 0%, transparent 50%),
-                      linear-gradient(135deg, rgba(21, 163, 110, 0.05) 0%, rgba(16, 185, 129, 0.05) 100%)
-                    `,
-                    backgroundSize: '100px 100px, 100px 100px, 100px 100px, 100px 100px, 100px 100px, 100% 100%'
-                  }}
-                ></div>
+
 
                 {/* Text Content - Centered */}
                 <div className="max-w-3xl mx-auto text-center mb-7 px-2 relative z-10">
                   <p className="text-base sm:text-lg text-black leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                    This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your tokenization journey.
+                    This form takes only <span className="font-bold">2 minutes</span> to complete and will capture all the information needed for your<br />
+                    tokenization journey.
                   </p>
 
                   <p className="text-base sm:text-lg text-black leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -257,12 +244,24 @@ export default function Typeform() {
                 <div className="flex justify-center px-2">
                   <motion.button
                     onClick={() => setShowForm(true)}
-                    className="w-auto px-6 sm:px-10 py-2.5 rounded-full bg-gradient-to-b from-[#15a36e] to-[#12a062] text-white font-bold text-sm sm:text-base shadow-2xl hover:from-[#12a062] hover:to-[#15a36e] transition-all duration-300 uppercase"
-                    style={{ fontFamily: 'Palanquin, sans-serif' }}
+                    className="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#12a062] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer"
                     whileHover={{ scale: 1.05, y: -2 }}
                     whileTap={{ scale: 0.98 }}
                   >
-                    GET STARTED
+                    <span className="pl-4 pr-2 text-white font-semibold text-sm sm:text-base" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                      GET STARTED
+                    </span>
+                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center transition-all duration-300">
+                      <svg
+                        className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#15a36e]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        strokeWidth="3"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                      </svg>
+                    </div>
                   </motion.button>
                 </div>
               </motion.div>

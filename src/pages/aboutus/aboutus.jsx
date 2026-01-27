@@ -97,7 +97,7 @@ const AboutUs = () => {
 
             {/* Unified Company Overview Section */}
             <section className="py-10 lg:py-16 bg-white overflow-hidden" id="company-overview">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col gap-6 lg:gap-8 mb-2 lg:mb-4">
                         {/* Accordion / Interactive List */}
                         <div className="flex flex-col gap-4 sm:gap-6 pt-4">
@@ -121,7 +121,7 @@ const AboutUs = () => {
                                     key={item.id}
                                     className={`flex flex-col rounded-[24px] transition-all duration-300 border bg-white overflow-hidden ${activeTab === item.id
                                         ? 'border-gray-200 shadow-lg'
-                                        : 'border-transparent hover:bg-gray-50'
+                                        : 'border-transparent hover:bg-gray-50 shadow-md'
                                         }`}
                                 >
                                     <button
@@ -157,11 +157,11 @@ const AboutUs = () => {
                                             >
                                                 <div className="px-8 sm:px-12 pb-8 pt-0">
                                                     <div className="w-full h-px bg-gray-100 mb-6"></div>
-                                                    <div className="flex flex-col gap-4">
-                                                        <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    <div className="flex flex-col gap-4 items-center text-center">
+                                                        <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                             {item.heading}
                                                         </h2>
-                                                        <p className="text-base text-gray-600 leading-relaxed text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                        <p className="text-base text-gray-600 leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                             {item.text}
                                                         </p>
                                                     </div>
@@ -228,7 +228,7 @@ const AboutUs = () => {
                                 viewport={{ once: true }}
                                 className="flex flex-col items-center"
                             >
-                                <div className="relative w-fit mb-8 sm:mb-10 lg:mb-12">
+                                <div className="relative w-fit mb-2">
                                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black pb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
@@ -314,8 +314,10 @@ const AboutUs = () => {
                                         Company <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-base text-white leading-relaxed max-w-3xl mx-auto text-justify" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities. What began as a vision has grown into a movement built on investment and opportunity.
+                                <p className="text-base text-white leading-relaxed w-full mx-auto text-center tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry.<br />
+                                    Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities.<br />
+                                    What began as a vision has grown into a movement built on investment and opportunity.
                                 </p>
                             </motion.div>
                         </div>
