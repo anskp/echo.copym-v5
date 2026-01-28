@@ -18,8 +18,8 @@ export default function IssuerSection() {
               <span className="text-[#15a36e]">TOKENIZE</span> REAL ASSETS
             </h2>
           </div>
-          <p className="text-sm sm:text-base md:text-lg lg:text-sm font-normal text-black leading-relaxed max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            Digitizing real-world assets on the blockchain to unlock transparent entitlementent, automated settlement <br /> and global access to institutional-grade asset opportunities.</p>
+          <p className="text-sm sm:text-base md:text-lg lg:text-sm font-normal text-black leading-relaxed max-w-4xl mx-auto text-justify md:text-center tracking-tighter" style={{ fontFamily: 'Palanquin, sans-serif', hyphens: 'auto' }}>
+            Digitizing real-world assets on the blockchain to unlock transparent entitlementent, automated settlement <br className="hidden md:block" /> and global access to institutional-grade asset opportunities.</p>
         </div>
 
         {/* Grid Layout - Same as WhoWeServe: lg:grid-cols-7 with 3 left, 4 right split */}
