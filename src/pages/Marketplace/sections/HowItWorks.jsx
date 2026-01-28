@@ -59,20 +59,8 @@ export default function HowItWorks() {
 
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
-                    {/* Shared Background Watermark "MARKETPLACE" for cards 2 & 3 area */}
-                    <div className="absolute top-1/2 -translate-y-1/2 md:top-[650px] md:translate-y-0 lg:top-[650px] xl:top-[480px] -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20">
-                        <span
-                            className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
-                            style={{
-                                backgroundImage: 'radial-gradient(circle, #10b981 0%, #059669 60%, rgba(0,0,0,0) 100%)'
-                            }}
-                        >
-                            MARKETPLACE
-                        </span>
-                    </div>
-
-                    {/* REGULATED Watermark - Top Right */}
-                    <div className="absolute top-0 right-[-50px] md:right-0 w-full text-right pointer-events-none select-none z-0 overflow-visible opacity-50 pr-20">
+                    {/* REGULATED Watermark - Between 1st and 2nd Card on Mobile */}
+                    <div className="absolute top-[520px] md:top-0 right-[-50px] md:right-0 w-full text-right pointer-events-none select-none z-0 overflow-visible opacity-50 pr-20">
                         <span
                             className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
                             style={{
@@ -83,8 +71,20 @@ export default function HowItWorks() {
                         </span>
                     </div>
 
-                    {/* FRAMEWORK Watermark - Bottom Left */}
-                    <div className="absolute bottom-0 -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20">
+                    {/* MARKETPLACE Watermark - Between 2nd and 3rd Card on Mobile */}
+                    <div className="absolute top-[1050px] md:top-1/2 md:-translate-y-1/2 lg:top-[650px] xl:top-[480px] -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20 transition-all duration-300">
+                        <span
+                            className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
+                            style={{
+                                backgroundImage: 'radial-gradient(circle, #10b981 0%, #059669 60%, rgba(0,0,0,0) 100%)'
+                            }}
+                        >
+                            MARKETPLACE
+                        </span>
+                    </div>
+
+                    {/* FRAMEWORK Watermark - Between 3rd and 4th Card on Mobile */}
+                    <div className="absolute top-[1580px] md:top-auto md:bottom-0 -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20">
                         <span
                             className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
                             style={{

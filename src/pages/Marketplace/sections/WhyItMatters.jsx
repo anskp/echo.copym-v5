@@ -542,7 +542,7 @@ export default function WhyItMatters() {
                                 {activeTab.assets && activeTab.assets.length > 0 && (
                                     <div className="space-y-3 pt-1">
                                         <h4 className="text-xs sm:text-sm font-bold text-gray-400 uppercase tracking-[0.15em]">Featured Assets</h4>
-                                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-8 max-w-lg">
+                                        <div className="grid grid-cols-2 gap-4 sm:gap-8 max-w-[340px] sm:max-w-lg lg:max-w-none mx-auto lg:mx-0">
                                             {activeTab.assets.map((asset, idx) => (
                                                 <motion.div
                                                     key={idx}
@@ -552,7 +552,7 @@ export default function WhyItMatters() {
                                                     className="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-xl transition-all duration-300 group cursor-pointer"
                                                 >
                                                     {/* Top Image Area - Reduced Height */}
-                                                    <div className="relative h-20 sm:h-24 w-full">
+                                                    <div className="relative h-28 sm:h-24 w-full">
                                                         <img
                                                             src={asset.image}
                                                             alt={asset.name}
@@ -602,6 +602,16 @@ export default function WhyItMatters() {
                                                         </div>
                                                     </div>
                                                 </motion.div>
+                                            ))}
+                                        </div>
+
+                                        {/* Pagination Dots - Mobile Only */}
+                                        <div className="flex justify-center gap-1.5 mt-4 sm:hidden">
+                                            {[1, 2].map((_, i) => (
+                                                <div
+                                                    key={i}
+                                                    className={`w-1.5 h-1.5 rounded-full ${i === 0 ? 'bg-[#10b981]' : 'bg-gray-300'}`}
+                                                />
                                             ))}
                                         </div>
                                     </div>
