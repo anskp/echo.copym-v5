@@ -6,6 +6,7 @@ This document summarizes the key UI/UX refinements implemented for the Copym V5 
 - **Header Alignment**: Standardized header height to `h-16` and refined dropdown menu alignment in `Header.jsx`.
 - **Icon Sizing**: Reduced icon sizes within dropdowns for a cleaner, professional appearance.
 - **Typography Consistency**: Standardized subtext and description font sizes to `text-sm` across the entire homepage.
+- **FAQ Centering**: Centered FAQ headings across Homepage and Tokenization Hub to match Marketplace consistency.
 - **Visual Polish**: Applied consistent border-radii (`rounded-2xl` and `rounded-lg`) to all cards and section edges.
 
 ## 2. Tokenization Hub
