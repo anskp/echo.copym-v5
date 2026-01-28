@@ -19,6 +19,7 @@ This document summarizes the key UI/UX refinements implemented for the Copym V5 
 
 ### Core Values & Sections
 - **Header Size Standardization**: Synchronized "Our Core Values" and "COMPANY TIMELINE" headers to match the "GET IN TOUCH" head size (`lg:text-4xl`) on desktop for a uniform look.
+- **Partners Image Positioning**: Moved the image in the "Partners" card further down in desktop view for a more balanced layout.
 - **Capitalization**: Updated "Our Core Values" and "Company Timeline" headers to uppercase for a more rhythmic and bold design.
 - **Mobile Dividers**: Implemented horizontal green gradient separators between cards on mobile view for better visual hierarchy.
 
