@@ -20,7 +20,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-xl lg:max-w-4xl w-full text-left"
+          className="max-w-xl lg:max-w-4xl w-full text-left mt-12 sm:mt-0"
         >
           <h1
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-4 uppercase tracking-tight"

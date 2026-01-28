@@ -229,7 +229,7 @@ const AboutUs = () => {
                                 className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-2">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black pb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
@@ -267,12 +267,22 @@ const AboutUs = () => {
                                         viewport={{ once: true }}
                                         className="p-8 relative"
                                     >
-                                        {/* Vertical Gradient Divider */}
+                                        {/* Vertical Gradient Divider (Desktop) */}
                                         {index > 0 && (
                                             <div
                                                 className="hidden sm:block absolute left-0 top-1/2 -translate-y-1/2 w-[1px] h-24"
                                                 style={{
                                                     background: 'linear-gradient(to bottom, transparent 0%, #15a36e 50%, transparent 100%)'
+                                                }}
+                                            ></div>
+                                        )}
+
+                                        {/* Horizontal Gradient Divider (Mobile) */}
+                                        {index > 0 && (
+                                            <div
+                                                className="block sm:hidden absolute top-0 left-1/2 -translate-x-1/2 w-48 h-[1px]"
+                                                style={{
+                                                    background: 'linear-gradient(to right, transparent 0%, #15a36e 50%, transparent 100%)'
                                                 }}
                                             ></div>
                                         )}
@@ -323,7 +333,7 @@ const AboutUs = () => {
                         </div>
 
                         {/* BOTTOM: Timeline Image */}
-                        <div className="w-full relative -mt-36">
+                        <div className="w-full relative mt-0 sm:-mt-36">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -333,7 +343,7 @@ const AboutUs = () => {
                                 <img
                                     src={TimelineImage}
                                     alt="Company Timeline"
-                                    className="w-[110%] h-[100%] object-contain scale-125"
+                                    className="w-[110%] h-[100%] object-contain scale-[1.8] sm:scale-125"
                                 />
                             </motion.div>
                         </div>
@@ -574,19 +584,19 @@ const AboutUs = () => {
                                     viewport={{ once: true }}
                                     className="bg-transparent p-4 relative flex justify-center sm:justify-end sm:pr-12"
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
+                                    <div className="flex items-center gap-4 w-full max-w-[300px] sm:max-w-none justify-start">
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center flex-shrink-0">
                                             <img
                                                 src="/assets/Images/email.png"
                                                 alt="Email"
                                                 className="w-full h-full object-contain"
                                             />
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <h3 className="text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        <div className="flex flex-row items-center gap-2">
+                                            <h3 className="text-xs sm:text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 E-MAIL ID :
                                             </h3>
-                                            <p className="text-base text-black font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                            <p className="text-sm sm:text-base text-black font-medium" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 support@copym.xyz
                                             </p>
                                         </div>
@@ -601,6 +611,12 @@ const AboutUs = () => {
                                     }}
                                 ></div>
 
+                                {/* Horizontal Gradient Divider (Mobile) */}
+                                <div
+                                    className="block sm:hidden w-48 h-[1px] mx-auto my-4"
+                                    style={{ background: 'linear-gradient(to right, transparent 0%, #15a36e 50%, transparent 100%)' }}
+                                ></div>
+
                                 {/* Address Section */}
                                 <motion.div
                                     initial={{ opacity: 0, x: 30 }}
@@ -609,20 +625,20 @@ const AboutUs = () => {
                                     viewport={{ once: true }}
                                     className="bg-transparent p-4 relative flex justify-center sm:justify-start sm:pl-12"
                                 >
-                                    <div className="flex items-center gap-4">
-                                        <div className="w-16 h-16 flex items-center justify-center flex-shrink-0">
+                                    <div className="flex items-center gap-4 w-full max-w-[300px] sm:max-w-none justify-start">
+                                        <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center flex-shrink-0">
                                             <img
                                                 src="/assets/Images/address.png"
                                                 alt="Address"
                                                 className="w-full h-full object-contain"
                                             />
                                         </div>
-                                        <div className="flex items-baseline gap-2">
-                                            <h3 className="text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                        <div className="flex flex-row items-baseline gap-2">
+                                            <h3 className="text-xs sm:text-sm font-bold text-black uppercase tracking-wide whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                 ADDRESS :
                                             </h3>
-                                            <p className="text-base text-black font-medium whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                                Smart Station, First Floor, Incubator Building,<br /> Masdar City, Abu Dhabi, UAE.
+                                            <p className="text-[10px] sm:text-base text-black font-medium text-left whitespace-normal sm:whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Smart Station, First Floor, Incubator Building,<br className="hidden sm:block" /> Masdar City, Abu Dhabi, UAE.
                                             </p>
                                         </div>
                                     </div>

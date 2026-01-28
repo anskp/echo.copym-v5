@@ -559,7 +559,7 @@ export default function WhyItMatters() {
                                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                                         />
                                                         {/* Logo Badge - Overlapping - Simplified */}
-                                                        <div className="absolute -bottom-3 sm:-bottom-4 left-2 sm:left-3 w-6 h-6 sm:w-8 sm:h-8 bg-white rounded-full shadow-md z-10 mx-auto flex items-center justify-center overflow-hidden">
+                                                        <div className="absolute -bottom-3 sm:-bottom-4 left-2 sm:left-3 w-8 h-8 sm:w-8 sm:h-8 bg-white rounded-full shadow-md z-10 mx-auto flex items-center justify-center overflow-hidden">
                                                             <Image
                                                                 src={activeTab.logo}
                                                                 alt={activeTab.name}

@@ -4,7 +4,7 @@ export default function Disclaimer() {
     return (
         <section className="bg-white pb-8 pt-4">
             <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 border-t border-gray-100 pt-8">
-                <div className="max-w-5xl mx-auto text-center">
+                <div className="max-w-5xl mx-auto text-left md:text-center">
                     <h4
                         className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest mb-2"
                         style={{ fontFamily: 'Palanquin, sans-serif' }}
