@@ -107,6 +107,7 @@ export default function AIInvestingSection() {
             line-height: 1.2;
             font-weight: 500 !important;
             min-width: 0; /* Allow shrinking */
+            padding-top: clamp(20px, 5vw, 24px) !important; /* Move text further down to align first line with vector */
           }
 
           .info-box-text span {
