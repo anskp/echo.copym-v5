@@ -187,7 +187,7 @@ const AboutUs = () => {
                             </div>
 
                             {/* CEO Quote */}
-                            <div className="max-w-4xl mx-auto text-center px-8">
+                            <div className="max-w-3xl mx-auto text-center px-8">
                                 <p className="text-black text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     “A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets.”
                                 </p>
@@ -311,7 +311,7 @@ const AboutUs = () => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="flex flex-col gap-8 lg:gap-10">
                         {/* TOP: Heading & Description - Centered */}
-                        <div className="w-full text-center">
+                        <div className="w-full text-left sm:text-center">
                             <motion.div
                                 initial={{ opacity: 0, y: -30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -324,7 +324,7 @@ const AboutUs = () => {
                                         Company <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-base text-white leading-relaxed w-full mx-auto text-center tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                <p className="text-base text-white leading-relaxed w-full mx-auto text-left sm:text-center tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry.<br />
                                     Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities.<br />
                                     What began as a vision has grown into a movement built on entitlement and opportunity.
