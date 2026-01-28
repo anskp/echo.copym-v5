@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import tiicon1 from '../../../components/icons/Tokenization/tiicon1.png';
@@ -8,6 +8,18 @@ import tiicon4 from '../../../components/icons/Tokenization/tiicon4.png';
 import cardshades from '../../../components/images/cardshades.png';
 
 export default function TokenManagement() {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const scrollRef = useRef(null);
+
+    const handleScroll = () => {
+        if (scrollRef.current) {
+            const scrollLeft = scrollRef.current.scrollLeft;
+            const cardWidth = scrollRef.current.offsetWidth * 0.55; // Approximate width including gap
+            const newIndex = Math.round(scrollLeft / cardWidth);
+            setActiveIndex(newIndex);
+        }
+    };
+
     const managementFeatures = [
         {
             title: 'Investor Dashboard',
@@ -59,7 +71,11 @@ export default function TokenManagement() {
                 </div>
 
                 {/* Features Grid - Matching RWA Assets Design */}
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-5 lg:gap-6 w-full">
+                <div
+                    ref={scrollRef}
+                    onScroll={handleScroll}
+                    className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-4 gap-4 lg:gap-6 w-full -mx-5 px-5 pb-8 lg:mx-0 lg:px-0 lg:pb-0"
+                >
                     {managementFeatures.map((feature, index) => (
                         <motion.div
                             key={index}
@@ -67,7 +83,7 @@ export default function TokenManagement() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                             viewport={{ once: true }}
-                            className="relative w-full h-full"
+                            className="relative w-full h-full min-w-[50vw] sm:min-w-[45vw] lg:min-w-0 snap-center"
                         >
                             <div
                                 className="rounded-lg p-3 sm:p-4 lg:p-5 flex flex-col h-full min-h-[350px] sm:min-h-[420px] lg:min-h-[480px] relative transition-transform duration-300 hover:scale-[1.02]"
@@ -129,6 +145,17 @@ export default function TokenManagement() {
                                 </div>
                             </div>
                         </motion.div>
+                    ))}
+                </div>
+
+                {/* Pagination Dots - Mobile Only */}
+                <div className="flex justify-center gap-2 mt-4 lg:hidden">
+                    {managementFeatures.map((_, index) => (
+                        <div
+                            key={index}
+                            className={`w-2 h-2 rounded-full transition-all duration-300 ${activeIndex === index ? 'bg-[#15a36e] w-4' : 'bg-gray-300'
+                                }`}
+                        />
                     ))}
                 </div>
             </div>

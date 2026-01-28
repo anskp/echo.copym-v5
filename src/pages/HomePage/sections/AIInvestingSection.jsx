@@ -17,7 +17,7 @@ export default function AIInvestingSection() {
               <span className="text-white"> THAT INVESTS WITH YOU</span>
             </h2>
           </div>
-          <p className="text-sm text-white font-normal leading-relaxed tracking-wide mt-2 sm:mt-3 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-sm text-white font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             From real-time insights to smarter decisions, <br className="sm:hidden" />let AI guide your journey <br className="hidden sm:block" />to growing wealth effortlessly.
           </p>
         </div>
@@ -31,7 +31,7 @@ export default function AIInvestingSection() {
               <img
                 src={ellipse}
                 alt=""
-                className="w-[350px] h-[350px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] opacity-60"
+                className="w-[280px] h-[280px] sm:w-[300px] sm:h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] xl:w-[600px] xl:h-[600px] opacity-60"
               />
             </div>
 
@@ -41,9 +41,9 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="absolute left-[0%] sm:left-[2%] lg:left-[4%] xl:left-[8%] top-[calc(50%+145px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[150px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
+              className="absolute left-[2%] sm:left-[2%] lg:left-[4%] xl:left-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[110px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
             >
-              <p className="text-[8px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> to make better investments.
               </p>
               {/* Left Connector Line */}
@@ -65,7 +65,7 @@ export default function AIInvestingSection() {
               <Image
                 src="/assets/Images/cora-ai.avif"
                 alt="Cora AI"
-                className="w-[220px] sm:w-[280px] md:w-[340px] lg:w-[420px] h-auto object-contain translate-y-16"
+                className="w-[180px] sm:w-[280px] md:w-[340px] lg:w-[420px] h-auto object-contain translate-y-12"
               />
             </motion.div>
 
@@ -75,7 +75,7 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
               viewport={{ once: true }}
-              className="absolute right-[0%] sm:right-[2%] lg:right-[4%] xl:right-[8%] top-[calc(50%+145px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[150px] sm:w-[240px] lg:w-[320px] flex items-center justify-start"
+              className="absolute right-[2%] sm:right-[2%] lg:right-[4%] xl:right-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[110px] sm:w-[240px] lg:w-[320px] flex items-center justify-start"
             >
               {/* Right Connector Line */}
               <img
@@ -83,7 +83,7 @@ export default function AIInvestingSection() {
                 alt=""
                 className="w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
-              <p className="text-[8px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-1 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-1 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
               </p>
             </motion.div>
@@ -95,9 +95,9 @@ export default function AIInvestingSection() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="max-w-4xl pt-16 sm:pt-6 md:pt-8 lg:pt-10"
+            className="max-w-4xl pt-12 sm:pt-6 md:pt-8 lg:pt-10"
           >
-            <h2 className="text-xl md:text-2xl lg:text-[24px] font-bold text-white leading-tight tracking-wide" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h2 className="text-base sm:text-lg md:text-xl lg:text-[24px] font-bold text-white leading-tight tracking-wide text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Invest Smarter. Chat with <br className="hidden md:block" /> Cora AI
             </h2>
           </motion.div>

@@ -344,15 +344,15 @@ export default function WhyItMatters() {
                             style={{ fontFamily: 'Palanquin, sans-serif' }}
                         >
                             {/* Icon Circle - Straight Right Edge */}
-                            <div className={`w-7 h-7 rounded-l-full rounded-r-none flex items-center justify-center transition-all duration-300 border-r-0 shadow-2xl
+                            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-l-full rounded-r-none flex items-center justify-center transition-all duration-300 border-r-0 shadow-2xl
                                 ${activeTab.id === cat.id
                                     ? 'bg-[#10b981] text-white'
                                     : 'bg-white text-gray-400 group-hover:text-gray-600'}`}>
-                                {React.cloneElement(cat.icon, { className: "w-3.5 h-3.5" })}
+                                {React.cloneElement(cat.icon, { className: "w-4 h-4 sm:w-5 sm:h-5" })}
                             </div>
 
                             {/* Text Pill - Straight Left Edge */}
-                            <div className={`px-2 sm:px-3 py-0.5 sm:py-1 rounded-r-full rounded-l-none text-[10px] sm:text-[12px] font-semibold transition-all duration-300 border-l-0 shadow-2xl flex items-center h-6 sm:h-7
+                            <div className={`px-4 sm:px-6 py-0.5 sm:py-1 rounded-r-full rounded-l-none text-[10px] sm:text-[12px] font-bold transition-all duration-300 border-l-0 shadow-2xl flex items-center justify-center h-8 sm:h-10 min-w-[60px] sm:min-w-[80px]
                                 ${activeTab.id === cat.id
                                     ? 'bg-black text-white'
                                     : 'bg-white text-gray-600'}`}>
@@ -376,7 +376,7 @@ export default function WhyItMatters() {
                                 animate={{ opacity: 1, scale: 1, x: 0 }}
                                 exit={{ opacity: 0, scale: 0.9, x: 20 }}
                                 transition={{ duration: 0.5 }}
-                                className="relative w-full max-w-full md:max-w-[350px] rounded-lg overflow-visible shadow-xl bg-white p-2"
+                                className="relative w-full max-w-[320px] md:max-w-[350px] rounded-lg overflow-visible shadow-xl bg-white p-2"
                             >
                                 <div className="relative">
                                     <div className="w-full aspect-[10/9] rounded-lg overflow-hidden relative">
