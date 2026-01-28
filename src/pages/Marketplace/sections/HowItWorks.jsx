@@ -59,20 +59,8 @@ export default function HowItWorks() {
 
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
-                    {/* REGULATED Watermark - Between 1st and 2nd Card on Mobile */}
-                    <div className="absolute top-[520px] md:top-0 right-[-50px] md:right-0 w-full text-right pointer-events-none select-none z-0 overflow-visible opacity-50 pr-20">
-                        <span
-                            className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
-                            style={{
-                                backgroundImage: 'radial-gradient(circle, #10b981 0%, #059669 60%, rgba(0,0,0,0) 100%)'
-                            }}
-                        >
-                            REGULATED
-                        </span>
-                    </div>
-
-                    {/* MARKETPLACE Watermark - Between 2nd and 3rd Card on Mobile */}
-                    <div className="absolute top-[1050px] md:top-1/2 md:-translate-y-1/2 lg:top-[650px] xl:top-[480px] -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20 transition-all duration-300">
+                    {/* Shared Background Watermark "MARKETPLACE" */}
+                    <div className="relative order-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:top-[650px] md:translate-y-0 lg:top-[650px] xl:top-[480px] md:-left-20 w-full flex justify-start md:block pointer-events-none select-none z-0 overflow-visible opacity-50 md:pl-20">
                         <span
                             className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
                             style={{
@@ -83,8 +71,20 @@ export default function HowItWorks() {
                         </span>
                     </div>
 
-                    {/* FRAMEWORK Watermark - Between 3rd and 4th Card on Mobile */}
-                    <div className="absolute top-[1580px] md:top-auto md:bottom-0 -left-20 w-full text-left pointer-events-none select-none z-0 overflow-visible opacity-50 pl-20">
+                    {/* REGULATED Watermark */}
+                    <div className="relative order-2 md:absolute md:top-0 md:translate-y-0 md:right-0 w-full flex justify-end md:block text-right pointer-events-none select-none z-0 overflow-visible opacity-50 md:pr-20">
+                        <span
+                            className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
+                            style={{
+                                backgroundImage: 'radial-gradient(circle, #10b981 0%, #059669 60%, rgba(0,0,0,0) 100%)'
+                            }}
+                        >
+                            REGULATED
+                        </span>
+                    </div>
+
+                    {/* FRAMEWORK Watermark */}
+                    <div className="relative order-6 md:absolute md:bottom-0 md:top-auto md:translate-y-0 md:-left-20 w-full flex justify-end md:block text-right pointer-events-none select-none z-0 overflow-visible opacity-50 md:pl-20">
                         <span
                             className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
                             style={{
@@ -107,19 +107,19 @@ export default function HowItWorks() {
                                     delay: index * 0.1
                                 }}
                                 className={`relative flex flex-col group ${index % 2 === 0 ? 'items-start' : 'items-end'} 
-                                    ${index === 0 ? 'md:items-start lg:mt-[-40px]' :
-                                        index === 1 ? 'md:items-end md:mt-24 lg:items-start lg:mt-[500px] xl:mt-[750px]' :
-                                            index === 2 ? 'mt-32 md:items-start md:mt-36 lg:items-start lg:mt-20 xl:mt-40' :
-                                                'md:items-end md:mt-24 lg:items-center lg:mt-[350px] xl:mt-[600px]'}`}
+                                    ${index === 0 ? 'order-1 md:items-start lg:mt-[-40px]' :
+                                        index === 1 ? 'order-3 md:items-end md:mt-24 lg:items-start lg:mt-[500px] xl:mt-[750px]' :
+                                            index === 2 ? 'order-5 md:mt-32 md:items-start md:mt-36 lg:items-start lg:mt-20 xl:mt-40' :
+                                                'order-7 md:items-end md:mt-24 lg:items-center lg:mt-[350px] xl:mt-[600px]'}`}
                             >
                                 {/* Card Wrapper - Side-by-side for cards 2 & 3 on large screens */}
-                                <div className={`relative z-10 w-full ${index % 2 === 0 ? 'ml-0 mr-auto' : 'mr-0 ml-auto'} sm:mx-auto max-w-[320px] sm:max-w-[380px] lg:max-w-full 
+                                <div className={`relative z-10 w-full ${index % 2 === 0 ? 'ml-0 mr-auto' : 'mr-0 ml-auto'} sm:mx-auto max-w-[240px] sm:max-w-[380px] lg:max-w-full 
                                     ${index === 1 ? 'lg:flex lg:flex-row-reverse lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[-10%]' :
                                         index === 2 ? 'lg:flex lg:flex-row lg:items-center lg:gap-10 lg:mx-0 lg:translate-x-[20%]' :
                                             index === 3 ? 'lg:flex lg:flex-col-reverse lg:items-center' : ''}`}>
 
                                     {/* Visual Group - Constrains width of image/watermark for small cards */}
-                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? `max-w-[180px] lg:max-w-[150px] ${index === 1 ? 'ml-auto mr-0' : 'ml-0 mr-auto'} lg:mx-0` : `max-w-[320px] sm:max-w-[380px] lg:max-w-full ${index === 3 ? 'ml-auto mr-0' : 'ml-0 mr-auto'}`} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''} ${index === 3 ? 'lg:mb-0' : ''}`}>
+                                    <div className={`relative w-full mb-4 ${[1, 2].includes(index) ? `max-w-[140px] lg:max-w-[150px] ${index === 1 ? 'ml-auto mr-0' : 'ml-0 mr-auto'} lg:mx-0` : `max-w-[240px] sm:max-w-[380px] lg:max-w-full ${index === 3 ? 'ml-auto mr-0' : 'ml-0 mr-auto'}`} ${[1, 2].includes(index) ? 'lg:mb-0 lg:shrink-0' : ''} ${index === 3 ? 'lg:mb-0' : ''}`}>
 
 
 

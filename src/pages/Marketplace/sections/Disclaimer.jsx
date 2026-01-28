@@ -18,7 +18,7 @@ export default function Disclaimer() {
                         Copym does not provide brokerage services, entitlement banking services, underwriting services,
                         entitlement recommendations, or entitlement advice to any person. Copym operates as a technology
                         platform focused on distributed ledger technology to improve efficiency, accessibility, and
-                        transparency in financial technologies.
+                        transparency in financial technologies. T & C apply.
                     </p>
                 </div>
             </div>
