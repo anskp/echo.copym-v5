@@ -229,7 +229,7 @@ const AboutUs = () => {
                                 className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-2">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-black pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold leading-tight text-black pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
@@ -320,7 +320,7 @@ const AboutUs = () => {
                                 className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-4 sm:mb-6 lg:mb-8">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Company <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
