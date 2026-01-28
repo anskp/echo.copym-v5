@@ -139,7 +139,7 @@ export default function Header() {
         <div className={`
           pointer-events-auto
           relative w-full
-          px-4 py-1 sm:px-6 sm:py-1.5
+          px-4 py-4 sm:px-6 lg:py-1.5
           border border-white/10
           flex items-center justify-between
           transition-all duration-300 backdrop-blur-md
@@ -356,7 +356,7 @@ export default function Header() {
                   className="flex items-center"
                 >
                   <Image
-                    src="/assets/copym/png/Copym-01-1.png"
+                    src="/assets/copym/png/Copym-02-1.png"
                     alt="CopyM"
                     className="h-14 w-auto"
                   />

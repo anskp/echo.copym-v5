@@ -53,6 +53,7 @@ export default function AIInvestingSection() {
     <section className="ai-investing-section w-full bg-black pt-12 sm:pt-12 md:pt-12 lg:pt-12 pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-x-hidden relative">
       <style>{`
         /* MOBILE-ONLY: AI Investing Section */
+        /* MOBILE-ONLY: AI Investing Section */
         @media (max-width: 768px) {
           .ai-investing-section {
             padding-top: 2rem;
@@ -71,16 +72,17 @@ export default function AIInvestingSection() {
           }
 
           .central-container {
-            margin-top: -1rem;
-            min-height: 260px;
+            margin-top: 0rem;
+            min-height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
+            transform-origin: center center;
           }
 
           .info-box {
-            width: clamp(140px, 42vw, 200px);
-            padding: 0.4rem 0.6rem;
+            width: clamp(90px, 30vw, 140px); /* Reduced width for mobile */
+            padding: 0;
             top: 50% !important;
             transform: translateY(-50%) !important;
             z-index: 40;
@@ -88,50 +90,57 @@ export default function AIInvestingSection() {
             align-items: center;
           }
 
+          .info-box-left {
+            left: 0 !important; /* Pin to edges to maximize space */
+            padding-left: 2%; 
+            justify-content: flex-end;
+          }
+
+          .info-box-right {
+            right: 0 !important;
+            padding-right: 2%;
+            justify-content: flex-start;
+          }
+
           .info-box-text {
-            font-size: clamp(8px, 2.4vw, 11px) !important;
-            line-height: 1.25;
+            font-size: clamp(7px, 2.2vw, 10px) !important;
+            line-height: 1.2;
             font-weight: 500 !important;
+            min-width: 0; /* Allow shrinking */
           }
 
           .info-box-text span {
             font-weight: 800 !important;
           }
 
-          .cora-ai-badge {
-            padding: 0.4rem 0.8rem;
-            font-size: clamp(0.7rem, 2.5vw, 0.9rem);
-          }
-
-          .info-box-left {
-            left: clamp(-5%, -2vw, 2%) !important;
-            justify-content: flex-end;
-          }
-
-          .info-box-right {
-            right: clamp(-5%, -2vw, 2%) !important;
-            justify-content: flex-start;
-          }
-
           .connector-line {
-            width: clamp(30px, 8vw, 50px) !important;
-            transform: translateY(0.2rem) !important;
+            width: clamp(20px, 6vw, 40px) !important;
+            transform: translateY(1px) !important;
           }
 
           .central-visual {
             transform: none !important;
             position: relative;
             z-index: 30;
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
           .central-image {
-            width: clamp(180px, 48vw, 280px) !important;
+            width: clamp(110px, 35vw, 160px) !important; /* Significantly smaller to fit inside ellipse */
             height: auto !important;
-            transform: none !important;
+            transform: translateY(12px) !important; /* Slightly moved down */
+            object-fit: contain;
+          }
+
+          .ellipse-container {
+             transform: none !important; /* Reset desktop shift for mobile */
+             align-items: center;
           }
 
           .ai-investing-cta-group {
-            padding-top: 2rem !important;
+            padding-top: 1.5rem !important;
             gap: 1rem !important;
           }
         }
@@ -155,7 +164,7 @@ export default function AIInvestingSection() {
           {/* Item 1: The Blue Sphere with Info Boxes */}
           <div className="central-container relative w-full flex justify-center items-center -mt-4 md:-mt-6">
             {/* Background Ellipse for depth */}
-            <div className="absolute inset-0 flex items-center justify-center -z-10 translate-y-12 md:translate-y-16 lg:translate-y-20">
+            <div className="ellipse-container absolute inset-0 flex items-center justify-center -z-10 translate-y-12 md:translate-y-16 lg:translate-y-20">
               <img
                 src={ellipse}
                 alt=""
@@ -232,13 +241,13 @@ export default function AIInvestingSection() {
 
             {/* Item 3: Cora AI Assistant Badge */}
             <div className="cora-ai-badge rounded-[2rem] bg-gradient-to-r from-[#179572] via-[#2A867F] to-[#236594] bg-clip-padding p-[1px] cursor-pointer hover:scale-105 transition-transform">
-              <div className="flex items-center gap-2 sm:gap-2.5 p-1 sm:px-8 sm:py-3 min-w-[120px] sm:min-w-fit rounded-[2rem] bg-black/40 backdrop-blur-xl shadow-sm">
+              <div className="flex items-center gap-2 sm:gap-2.5 px-5 py-2 sm:px-8 sm:py-3 min-w-fit rounded-[2rem] bg-black/40 backdrop-blur-xl shadow-sm">
                 <div className="relative">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white sm:w-5 sm:h-5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white w-4 h-4 sm:w-5 sm:h-5">
                     <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
                   </svg>
                 </div>
-                <span className="text-white font-medium text-xs sm:text-base tracking-tight pl-3 pr-2 sm:p-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-white font-medium text-[clamp(12px,4vw,16px)] sm:text-base tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Cora AI Assistant
                 </span>
               </div>
