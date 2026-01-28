@@ -46,14 +46,14 @@ const WhoWeServe = () => {
             </div>
 
             {/* Text Content Container with Padding */}
-            <div className="flex flex-col px-8 sm:px-0 sm:pl-10 lg:pl-12">
+            <div className="flex flex-col px-4 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
+                className="text-base sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Asset Owners & Institutions
@@ -65,7 +65,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-nowrap"
+                className="text-white/80 text-[10px] sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5 whitespace-normal lg:whitespace-nowrap"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Launch tokenized products with institutional-grade compliance.
@@ -81,19 +81,19 @@ const WhoWeServe = () => {
               >
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Real estate, private credit, funds, commodities
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     White-label portals for your investors
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Ongoing reporting and secondary liquidity options
                   </span>
                 </li>
@@ -138,14 +138,14 @@ const WhoWeServe = () => {
             </div>
 
             {/* Content Below (Mobile) / Left (Desktop) */}
-            <div className="flex-1 lg:max-w-[60%] lg:order-1 flex flex-col justify-center px-8 sm:px-0 sm:pl-10 lg:pl-12">
+            <div className="flex-1 lg:max-w-[60%] lg:order-1 flex flex-col justify-center px-4 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-1.5 lg:mb-1.5"
+                className="text-base sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-1.5 lg:mb-1.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Investors
@@ -157,7 +157,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2 whitespace-nowrap"
+                className="text-white/80 text-[10px] sm:text-sm md:text-sm lg:text-sm mb-2 lg:mb-2 whitespace-normal lg:whitespace-nowrap"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Access curated RWA opportunities worldwide.
@@ -173,19 +173,19 @@ const WhoWeServe = () => {
               >
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Fractional tickets
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Zero-gas trades & instant settlement
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Portfolio dashboards and automated income reinvestment
                   </span>
                 </li>
@@ -230,14 +230,14 @@ const WhoWeServe = () => {
             </div>
 
             {/* Content on Right */}
-            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center px-8 sm:px-0 sm:pl-10 lg:pl-12">
+            <div className="flex-1 lg:max-w-[50%] flex flex-col justify-center px-4 sm:px-0 sm:pl-10 lg:pl-12">
               {/* Title */}
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
-                className="text-lg sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
+                className="text-base sm:text-xl md:text-2xl lg:text-[28px] font-bold text-white mb-2 lg:mb-2.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Partners
@@ -249,7 +249,7 @@ const WhoWeServe = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="text-white/80 text-xs sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5"
+                className="text-white/80 text-[10px] sm:text-sm md:text-sm lg:text-sm mb-3 lg:mb-3.5"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 Connect custodians, oracles and ESG data to real assets on-chain.
@@ -265,19 +265,19 @@ const WhoWeServe = () => {
               >
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Custody integrations
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Compliance & data providers
                   </span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-white mr-3 mt-1 text-xs font-normal">•</span>
-                  <span className="text-xs sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <span className="text-[10px] sm:text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Node operators and ecosystem partners
                   </span>
                 </li>

@@ -79,16 +79,23 @@ export default function AIInvestingSection() {
           }
 
           .info-box {
-            width: clamp(130px, 35vw, 180px);
-            padding: 0.6rem 0.8rem;
+            width: clamp(140px, 42vw, 200px);
+            padding: 0.4rem 0.6rem;
             top: 50% !important;
             transform: translateY(-50%) !important;
             z-index: 40;
+            display: flex;
+            align-items: center;
           }
 
           .info-box-text {
-            font-size: clamp(7px, 2.2vw, 10px) !important;
-            line-height: 1.3;
+            font-size: clamp(8px, 2.4vw, 11px) !important;
+            line-height: 1.25;
+            font-weight: 500 !important;
+          }
+
+          .info-box-text span {
+            font-weight: 800 !important;
           }
 
           .cora-ai-badge {
@@ -97,11 +104,18 @@ export default function AIInvestingSection() {
           }
 
           .info-box-left {
-            left: clamp(-2%, 1vw, 4%) !important;
+            left: clamp(-5%, -2vw, 2%) !important;
+            justify-content: flex-end;
           }
 
           .info-box-right {
-            right: clamp(-2%, 1vw, 4%) !important;
+            right: clamp(-5%, -2vw, 2%) !important;
+            justify-content: flex-start;
+          }
+
+          .connector-line {
+            width: clamp(30px, 8vw, 50px) !important;
+            transform: translateY(0.2rem) !important;
           }
 
           .central-visual {
@@ -111,13 +125,14 @@ export default function AIInvestingSection() {
           }
 
           .central-image {
-            width: clamp(160px, 40vw, 240px) !important;
+            width: clamp(180px, 48vw, 280px) !important;
             height: auto !important;
             transform: none !important;
           }
 
-          .ai-investing-bottom-heading {
-            padding-top: 1.5rem !important;
+          .ai-investing-cta-group {
+            padding-top: 2rem !important;
+            gap: 1rem !important;
           }
         }
       `}</style>
@@ -163,7 +178,7 @@ export default function AIInvestingSection() {
               <img
                 src="/assets/svg/leftvector.svg"
                 alt=""
-                className="w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
+                className="connector-line w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
             </motion.div>
 
@@ -194,7 +209,7 @@ export default function AIInvestingSection() {
               <img
                 src="/assets/svg/rightvectorr.svg"
                 alt=""
-                className="w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
+                className="connector-line w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
               <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-1 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
@@ -202,36 +217,31 @@ export default function AIInvestingSection() {
             </motion.div>
           </div>
 
-          {/* Item 2: Bold Heading (Moved above button) */}
+          {/* CTA Group: Grouped Heading and Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
-            className="ai-investing-bottom-heading max-w-4xl pt-12 sm:pt-6 md:pt-8 lg:pt-10"
+            className="ai-investing-cta-group w-full flex flex-col items-center gap-4 sm:gap-6 pt-12 sm:pt-6 md:pt-8 lg:pt-10"
           >
-            <h2 className="text-base sm:text-lg md:text-xl lg:text-[24px] font-bold text-white leading-tight tracking-wide text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            {/* Item 2: Bold Heading */}
+            <h2 className="ai-investing-bottom-heading text-base sm:text-lg md:text-xl lg:text-[24px] font-bold text-white leading-tight tracking-wide text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Invest Smarter. Chat with <br className="hidden md:block" /> Cora AI
             </h2>
-          </motion.div>
 
-          {/* Item 3: Cora AI Assistant Badge (Moved below heading) */}
-          <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            viewport={{ once: true }}
-            className="cora-ai-badge rounded-[2rem] bg-gradient-to-r from-[#179572] via-[#2A867F] to-[#236594] bg-clip-padding p-[1px] cursor-pointer hover:scale-105 transition-transform"
-          >
-            <div className="flex items-center gap-2 sm:gap-2.5 p-1 sm:px-8 sm:py-3 min-w-[120px] sm:min-w-fit rounded-[2rem] bg-black/40 backdrop-blur-xl shadow-sm">
-              <div className="relative">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white sm:w-5 sm:h-5">
-                  <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
-                </svg>
+            {/* Item 3: Cora AI Assistant Badge */}
+            <div className="cora-ai-badge rounded-[2rem] bg-gradient-to-r from-[#179572] via-[#2A867F] to-[#236594] bg-clip-padding p-[1px] cursor-pointer hover:scale-105 transition-transform">
+              <div className="flex items-center gap-2 sm:gap-2.5 p-1 sm:px-8 sm:py-3 min-w-[120px] sm:min-w-fit rounded-[2rem] bg-black/40 backdrop-blur-xl shadow-sm">
+                <div className="relative">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" className="text-white sm:w-5 sm:h-5">
+                    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                  </svg>
+                </div>
+                <span className="text-white font-medium text-xs sm:text-base tracking-tight pl-3 pr-2 sm:p-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  Cora AI Assistant
+                </span>
               </div>
-              <span className="text-white font-medium text-xs sm:text-base tracking-tight pl-3 pr-2 sm:p-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Cora AI Assistant
-              </span>
             </div>
           </motion.div>
 

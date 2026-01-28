@@ -94,7 +94,7 @@ export default function TokenManagement() {
                                 {/* Status Badge - Top Right */}
                                 <div className="absolute top-4 right-4 z-10 flex flex-col gap-2">
                                     <div className="flex items-center gap-1.5 px-2 py-1 rounded bg-[#dcfce7] border border-[#bbf7d0]/50 shadow-sm">
-                                        <span className="text-xs sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>{feature.badge}</span>
+                                        <span className="text-[10px] sm:text-sm font-bold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>{feature.badge}</span>
                                     </div>
                                 </div>
 
@@ -110,14 +110,14 @@ export default function TokenManagement() {
                                 {/* Info Section */}
                                 <div className="flex flex-col flex-grow text-left space-y-1.5">
                                     <h3
-                                        className="text-lg sm:text-xl lg:text-[19px] font-bold text-black min-h-[48px] sm:min-h-[56px] lg:min-h-[64px] flex items-center whitespace-nowrap"
+                                        className="text-sm sm:text-xl lg:text-[19px] font-bold text-black min-h-[48px] sm:min-h-[56px] lg:min-h-[64px] flex items-center whitespace-nowrap"
                                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                                     >
                                         {feature.title}
                                     </h3>
 
                                     <p
-                                        className="text-sm text-gray-600 leading-snug flex-grow min-h-[72px]"
+                                        className="text-[10px] sm:text-sm text-gray-600 leading-snug flex-grow min-h-[72px]"
                                         style={{ fontFamily: 'Palanquin, sans-serif' }}
                                     >
                                         {feature.description}

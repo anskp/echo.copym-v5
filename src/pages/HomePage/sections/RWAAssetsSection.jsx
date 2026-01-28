@@ -100,7 +100,7 @@ const TokenizeAssetsSection = () => {
                 </div>
 
                 {/* Asset Image - Top, Centered - Fixed Height */}
-                <div className="flex items-center justify-center mt-4 sm:mt-10 lg:mt-12 mb-3 sm:mb-4 lg:mb-5 h-[80px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
+                <div className="flex items-center justify-center mt-4 sm:mt-10 lg:mt-12 mb-6 sm:mb-4 lg:mb-5 h-[100px] sm:h-[140px] md:h-[160px] lg:h-[180px]">
                   <Image
                     src={asset?.image}
                     alt={asset?.title}
@@ -120,7 +120,7 @@ const TokenizeAssetsSection = () => {
 
                   {/* Description - Fixed Height */}
                   <p
-                    className="text-[12px] sm:text-sm text-black leading-snug flex-grow"
+                    className="text-[12px] sm:text-sm text-black leading-snug flex-grow text-left"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     {asset?.description}

@@ -63,11 +63,11 @@ export default function TradableAssets() {
                             </div>
 
                             {/* Text Container */}
-                            <div className="flex-1 px-4 sm:px-6 md:px-8 flex flex-col justify-center">
-                                <h3 className="text-sm sm:text-base md:text-lg lg:text-2xl font-bold tracking-wider mb-3 sm:mb-4 text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <div className="flex-1 px-2 sm:px-6 md:px-8 flex flex-col justify-center">
+                                <h3 className="text-[11px] sm:text-base md:text-lg lg:text-2xl font-bold tracking-wider mb-1.5 sm:mb-4 text-white" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     {asset.title}
                                 </h3>
-                                <p className="text-xs sm:text-sm text-gray-400 font-medium tracking-wide leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
+                                <p className="text-[10px] sm:text-sm text-gray-400 font-medium tracking-wide leading-tight sm:leading-relaxed" style={{ fontFamily: 'DM Sans, sans-serif' }}>
                                     {asset.description}
                                 </p>
                             </div>
