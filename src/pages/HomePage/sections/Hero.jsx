@@ -21,10 +21,14 @@ export default function Hero() {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isVideoOpen]);
 
-  // Trap focus in modal and prevent body scroll
+  // Trap focus in modal and prevent body scroll only on desktop
   useEffect(() => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
     if (isVideoOpen) {
-      document.body.style.overflow = 'hidden';
+      if (!isMobile) {
+        document.body.style.overflow = 'hidden';
+      }
       // Focus close button when modal opens
       setTimeout(() => closeButtonRef.current?.focus(), 100);
     } else {
@@ -36,7 +40,7 @@ export default function Hero() {
   }, [isVideoOpen]);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative">
       {/* ====== BACKGROUND VIDEO ====== */}
       <div className="absolute inset-0 w-full h-full z-0">
         <video
@@ -45,7 +49,7 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ minHeight: '100vh' }}
+          style={{ minHeight: '100vh', height: 'auto' }}
         >
           <source src="/assets/videos/hero section video.mp4" type="video/mp4" />
         </video>
