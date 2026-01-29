@@ -31,11 +31,11 @@ import goldReserveImg from '../../../components/images/gold.avif';
 import premiumOfficeBuildingImg from '../../../components/images/premium-building-office.avif';
 
 // Import Category Logos
-import manchesterLogo from '../../../assets/logos/manchester_united.png';
-import louvreLogo from '../../../assets/logos/louvre.png';
-import emaarLogo from '../../../assets/logos/emaar.png';
-import barrickLogo from '../../../assets/logos/barrick_gold.png';
-import verraLogo from '../../../assets/logos/verra.png';
+import manchesterLogo from '../../../assets/logos/manchester_united.avif';
+import louvreLogo from '../../../assets/logos/louvre.avif';
+import emaarLogo from '../../../assets/logos/emaar.avif';
+import barrickLogo from '../../../assets/logos/barrick_gold.avif';
+import verraLogo from '../../../assets/logos/verra.avif';
 
 // Import specific logos for categories
 import verraSvg from '../../HomePage/sections/Verra.svg';

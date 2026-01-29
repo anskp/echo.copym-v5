@@ -60,7 +60,7 @@ export default function HowItWorks() {
                 {/* Staggered Grid Container */}
                 <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-12 lg:gap-x-8">
                     {/* Shared Background Watermark "MARKETPLACE" */}
-                    <div className="relative order-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:top-[700px] md:translate-y-0 lg:top-[700px] xl:top-[530px] md:-left-20 w-full flex justify-start md:block pointer-events-none select-none z-0 overflow-visible opacity-50 md:pl-20">
+                    <div className="relative order-4 md:absolute md:top-1/2 md:-translate-y-1/2 md:top-[640px] md:translate-y-0 lg:top-[640px] xl:top-[470px] md:-left-20 w-full flex justify-start md:block pointer-events-none select-none z-0 overflow-visible opacity-50 md:pl-20">
                         <span
                             className="font-bold uppercase tracking-tighter whitespace-nowrap bg-clip-text text-transparent bg-center text-[40px] md:text-[90px] lg:text-[130px] leading-none"
                             style={{
