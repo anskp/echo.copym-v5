@@ -53,7 +53,7 @@ export default function Hero() {
       </div>
 
       {/* ====== HERO CONTENT - CENTERED ====== */}
-      <div className="relative z-10 w-full h-[85vh] md:h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12">
+      <div className="relative z-10 w-full min-h-screen md:h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
