@@ -61,10 +61,31 @@
 } */
 
 * {
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Apply smooth scrolling only on larger screens, disable on mobile for better performance */
+@media (min-width: 768px) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Specific mobile scrolling fixes */
+@media (max-width: 768px) {
+  html,
+  body {
+    -webkit-overflow-scrolling: touch; /* Enable momentum scrolling on iOS */
+  }
+
+  /* Prevent fixed elements from causing viewport issues on mobile */
+  .navbar,
+  .nav-pills {
+    position: sticky;
+    top: 0;
+  }
 }
 
 html,
@@ -259,7 +280,7 @@ main {
 
 /* Delta-Style Navbar Styles */
 .navbar {
-  position: absolute;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -283,22 +304,11 @@ main {
   padding: 8px;
   display: flex;
   gap: 4px;
-  position: fixed !important;
+  position: sticky !important;
   top: 10px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   z-index: 1001 !important;
-
-  border-radius: 50px;
-  padding: 8px;
-  display: flex;
-  gap: 4px;
-  position: fixed !important;
-  top: 10px !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-  z-index: 1001 !important;
-
 }
 
 .nav-item {
@@ -567,6 +577,7 @@ main {
 /* Responsive */
 @media (max-width: 768px) {
   .nav-pills {
+    position: static !important; /* Override sticky positioning on mobile */
     display: none;
   }
 

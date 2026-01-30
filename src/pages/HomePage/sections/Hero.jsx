@@ -49,7 +49,11 @@ export default function Hero() {
           muted
           playsInline
           className="w-full h-full object-cover"
-          style={{ minHeight: '100vh', height: 'auto' }}
+          style={{
+            minHeight: '100vh',
+            height: 'auto',
+            maxHeight: '-webkit-fill-available' /* Better mobile viewport height support */
+          }}
         >
           <source src="/assets/videos/hero section video.mp4" type="video/mp4" />
         </video>

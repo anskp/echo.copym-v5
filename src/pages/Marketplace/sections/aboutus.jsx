@@ -157,11 +157,11 @@ const AboutUs = () => {
                                             >
                                                 <div className="px-8 sm:px-12 pb-8 pt-0">
                                                     <div className="w-full h-px bg-gray-100 mb-6"></div>
-                                                    <div className="flex flex-col gap-4 items-center text-center">
-                                                        <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                    <div className="flex flex-col gap-4 items-start text-left md:items-center md:text-center">
+                                                        <h2 className="text-2xl sm:text-3xl font-bold text-black leading-tight text-left md:text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                             {item.heading}
                                                         </h2>
-                                                        <p className="text-base text-gray-600 leading-relaxed text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                        <p className="text-base text-gray-600 leading-relaxed text-left md:text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                                             {item.text}
                                                         </p>
                                                     </div>
@@ -182,13 +182,13 @@ const AboutUs = () => {
                                 <img
                                     src="/assets/copym/png/Copym-01-1.avif"
                                     alt="Copym Logo"
-                                    className="w-48 h-48 sm:w-60 sm:h-60 object-contain"
+                                    className="w-32 h-32 sm:w-60 sm:h-60 object-contain"
                                 />
                             </div>
 
                             {/* CEO Quote */}
-                            <div className="max-w-3xl mx-auto text-center px-8">
-                                <p className="text-black text-2xl sm:text-3xl md:text-4xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                            <div className="max-w-4xl mx-auto text-left sm:text-center px-8">
+                                <p className="text-black text-lg sm:text-3xl md:text-4xl font-medium leading-relaxed mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                     “A seamless real-world asset ecosystem—transparent chains, responsible custody, sustainable markets.”
                                 </p>
                                 <p className="text-[#15a36e] font-bold text-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -229,7 +229,7 @@ const AboutUs = () => {
                                 className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-2">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold leading-tight text-black pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold leading-tight text-black pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Our <span className="text-[#15a36e]">Core</span> Values
                                     </h2>
                                 </div>
@@ -320,14 +320,12 @@ const AboutUs = () => {
                                 className="flex flex-col items-center"
                             >
                                 <div className="relative w-fit mb-4 sm:mb-6 lg:mb-8">
-                                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-4xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    <h2 className="text-base sm:text-lg md:text-xl lg:text-4xl font-bold leading-tight text-white pb-4 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                         Company <span className="text-[#15a36e]">Timeline</span>
                                     </h2>
                                 </div>
-                                <p className="text-base text-white leading-relaxed w-full mx-auto text-left sm:text-center tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry.<br />
-                                    Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities.<br />
-                                    What began as a vision has grown into a movement built on entitlement and opportunity.
+                                <p className="text-base text-white leading-relaxed w-full mx-auto text-justify sm:text-center tracking-tighter hyphens-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                    Our journey reflects growth, innovation, and a commitment to delivering value at every stage. From humble beginnings to becoming a trusted name in our tokenization industry. <br className="hidden sm:block" />Each milestone is more than progress—it's a promise to stay ahead, listen to our community, and turn challenges into opportunities. <br className="hidden sm:block" />What began as a vision has grown into a movement built on entitlement and opportunity.
                                 </p>
                             </motion.div>
                         </div>

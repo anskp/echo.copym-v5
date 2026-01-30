@@ -20,7 +20,7 @@ import GreenarySection from "./sections/GreenarySection";
 export default function HomePage() {
 
   return (
-    <div className="min-h-screen bg-white p-0 m-0 overflow-x-hidden w-full">
+    <div className="min-h-screen bg-white p-0 m-0 w-full">
       <Hero />
       <LogoCarousel />
       {/* Lottie Cards Section - Replaced SVG layouts */}

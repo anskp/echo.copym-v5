@@ -12,10 +12,9 @@ const SectionContainer = ({
     <section
       id={id}
       className={`
-        w-full 
+        w-full
         ${bgColor}
         ${padding}
-        overflow-x-hidden
       `}
     >
       <div className={`${maxWidth} mx-auto px-4 sm:px-6 md:px-8 lg:px-20`}>

@@ -36,9 +36,10 @@ const SectionHeader = ({
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
       className={`
-        ${alignment === 'center' ? 'text-center' : 'text-left'} 
+        ${alignment === 'center' ? 'text-center' : 'text-left'}
         mb-8 sm:mb-10 md:mb-12
         ${className}
+        md:scroll-smooth
       `}
     >
       <div className={`relative w-fit ${alignment === 'center' ? 'mx-auto' : ''}`}>
