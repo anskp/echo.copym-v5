@@ -18,6 +18,15 @@ const SectionHeader = ({
     return words.map((word, index) => {
       // Strip punctuation for matching (e.g., "EARN," becomes "EARN")
       const cleanWord = word.trim().replace(/[.,!?;:]/g, "").toUpperCase();
+
+      if (cleanWord === ">>") {
+        return (
+          <span key={index} className="self-center text-[0.6em]">
+            {word}
+          </span>
+        );
+      }
+
       if (highlightWords.includes(cleanWord)) {
         return (
           <span key={index} className="text-[#15a36e]">

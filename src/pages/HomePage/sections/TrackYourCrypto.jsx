@@ -20,10 +20,13 @@ export default function TrackYourCrypto() {
           {/* Title - Moved to Top */}
           <div className="space-y-2 sm:space-y-3 text-left w-full mt-10">
             <h2 className="text-base sm:text-lg md:text-xl lg:text-[32px] font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your <br /> favorite App store</span>
+              <span className="text-white">Get </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">on Your Preferred Platform <br /> or Stay Connected with Copym</span>
             </h2>
             <p className="text-sm text-white font-normal leading-relaxed max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Stay connected to your portfolio across all your devices. CopyM is available on iOS, Android, Windows, and Mac, so you can track every move, get insights, and stay ahead on your investments – wherever you are.
+              Access your Copym account across devices with a unified, secure experience. <br />
+              Stay connected to your real-world asset activity, insights, and portfolio context—anytime, anywhere. <br />
+              <br />
+              <span className="text-[#15a36e] font-semibold">Available on iOS, Android, Windows, and macOS</span>
             </p>
           </div>
 
@@ -118,12 +121,13 @@ export default function TrackYourCrypto() {
           <div className="space-y-3 sm:space-y-4 text-left order-1 lg:order-2">
             <div className="space-y-2 sm:space-y-3">
               <h2 className="text-base sm:text-lg md:text-xl lg:text-[32px] font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                <span className="text-white">Download </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">from your favorite App store</span>
+                <span className="text-white">Get </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">on Your Preferred Platforms</span>
               </h2>
               <p className="text-xs sm:text-xs md:text-sm lg:text-base text-white font-normal leading-snug" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                Stay connected to your portfolio across all your devices.<br />
-                CopyM is available on iOS, Android, Windows, and Mac, so<br />
-                you can track every move, get insights, and stay ahead – wherever you are.
+                Access your Copym account across devices with a unified, secure experience.<br />
+                Stay connected to your real-world asset activity, insights, and portfolio context—anytime, anywhere.<br />
+                <br />
+                <span className="text-[#15a36e] font-semibold">Available on iOS, Android, Windows, and macOS</span>
               </p>
             </div>
 

@@ -34,7 +34,7 @@ const ProductStackReview = () => {
             </h2>
           </div>
           <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            One platform. Multiple products. Full lifecycle tokenization.
+            Compliance-first infrastructure across the full asset lifecycle.
           </p>
         </motion.div>
         {/* Lottie Animation */}

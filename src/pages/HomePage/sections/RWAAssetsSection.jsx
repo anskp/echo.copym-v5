@@ -26,29 +26,29 @@ const TokenizeAssetsSection = () => {
   const assets = [
     {
       id: 1,
-      title: "Gold and Metals",
-      description: "Stabilize your portfolio with tokenized gold, silver, and trusted real-world metals.",
+      title: "Gold & Metals",
+      description: "Compliant structuring, tokenization, on-chain entitlement for precious metals with verified custody.",
       image: maskcard1,
       roi: "82%"
     },
     {
       id: 2,
       title: "Fine Art",
-      description: "Own fractional stakes in iconic and contemporary art—exclusive collections with long-term appreciation potential.",
+      description: "Tokenization of curated art assets supported by transparent provenance and entitlement frameworks.",
       image: maskcard2,
       roi: "68%"
     },
     {
       id: 3,
       title: "Carbon Credits",
-      description: "Earn real returns by owning verified carbon assets—invest with purpose and measurable impact.",
+      description: "Verified carbon assets structured on-chain with traceable entitlement, impact integrity.",
       image: maskcard3,
       roi: "91%"
     },
     {
       id: 4,
       title: "Real Estate",
-      description: "Own a fractional stake in premium global real estate—high-value properties built to grow long-term wealth.",
+      description: "Institutional-grade real estate structuring with tokenized participation, lifecycle controls.",
       image: maskcard4,
       roi: "76%"
     }
@@ -57,13 +57,13 @@ const TokenizeAssetsSection = () => {
   return (
     <SectionContainer padding="pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
       <SectionHeader
-        title="TOKENIZE REAL ASSETS"
+        title="REAL-WORLD ASSET CLASSES"
         subtitle={
           <span className="max-w-3xl mx-auto block">
-            Gold, Art, Carbon Credits, Real Estate & more. Transform physical assets <br className="hidden md:block" /> into digital tokens for global entitlement access.
+            Infrastructure enabling compliant asset structuring, tokenization, on-chain entitlement across multiple asset classes.
           </span>
         }
-        highlightWords={["TOKENIZE"]}
+        highlightWords={["REAL-WORLD"]}
       />
 
       {/* Assets Grid */}

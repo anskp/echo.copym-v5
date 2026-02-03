@@ -151,12 +151,13 @@ export default function AIInvestingSection() {
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
           <div className="relative w-fit mx-auto mb-2 sm:mb-3">
             <h2 className="ai-investing-title inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e]">CORA-AI</span>
-              <span className="text-white"> THAT INVESTS WITH YOU</span>
+              <span className="text-[#15a36e]">CORA AI -</span>
+              <span className="text-white"> YOUR INTELLIGENT EDGE IN REAL-WORLD ASSETS</span>
             </h2>
           </div>
           <p className="ai-investing-subtitle text-sm text-white font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-            From real-time insights to smarter decisions, <br className="sm:hidden" />let AI guide your journey <br className="hidden sm:block" />to growing wealth effortlessly.
+            Turn complex asset data into clear insights. Cora AI helps you analyze opportunities, understand risks, <br className="hidden sm:block" />
+            and make confident decisions across real-world assets.
           </p>
         </div>
 
@@ -181,8 +182,8 @@ export default function AIInvestingSection() {
               viewport={{ once: true }}
               className="info-box info-box-left absolute left-[2%] sm:left-[2%] lg:left-[4%] xl:left-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[110px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
             >
-              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                <span className="text-[#15a36e] font-bold">Cora AI</span> is a AI technology designed by <span className="font-bold">CopyM</span> to make better investments.
+              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4 translate-y-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-[#15a36e] font-bold">Cora AI</span> is Copym’s intelligence layer, designed to simplify real-world asset participation through data-driven insights.
               </p>
               {/* Left Connector Line */}
               <img
@@ -221,8 +222,8 @@ export default function AIInvestingSection() {
                 alt=""
                 className="connector-line w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
               />
-              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-1 sm:pl-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                <span className="text-[#15a36e] font-bold">AI</span> that predicts trends, analyzes data, and guides <span className="text-[#15a36e] font-bold">smarter investments</span>
+              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-left pl-1 sm:pl-4 translate-y-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Advanced analytics transforming market signals, asset data, and portfolio context into <span className="text-[#15a36e] font-bold">actionable intelligence.</span>
               </p>
             </motion.div>
           </div>
@@ -237,7 +238,7 @@ export default function AIInvestingSection() {
           >
             {/* Item 2: Bold Heading */}
             <h2 className="ai-investing-bottom-heading text-base sm:text-lg md:text-xl lg:text-[24px] font-bold text-white leading-tight tracking-wide text-center" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Invest Smarter. Chat with <br className="hidden md:block" /> Cora AI
+              Think Smarter. Decide Better.
             </h2>
 
             {/* Item 3: Cora AI Assistant Badge */}

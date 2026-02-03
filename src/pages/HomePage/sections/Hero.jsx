@@ -65,14 +65,9 @@ export default function Hero() {
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
           <h1
-            className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase"
+            className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase text-center"
           >
-            <span className="block">
-              UNLOCK EXCLUSIVE <span className="text-[#15a36e]">ASSETS,</span>
-            </span>
-            <span className="block mt-2 sm:mt-3">
-              <span className="text-[#15a36e]">Exposure </span>WITH CONFIDENCE
-            </span>
+            Unlock Secure Access to <br className="hidden lg:block" /> <span className="text-[#15a36e]">Real-World Assets</span>
           </h1>
 
           {/* ====== DESCRIPTION ====== */}
@@ -80,15 +75,15 @@ export default function Hero() {
             className="text-xs sm:text-xs md:text-sm lg:text-base text-white leading-relaxed mb-4 sm:mb-6 font-thin"
 
           >
-            Secure, AI-enhanced marketplace. Seamless on-chain entitlement of real estate, commodities, <br className="hidden md:block" />
-            carbon credits, and luxury assets.
+            A compliant, AI-powered marketplace enabling on-chain entitlement to real estate, commodities, <br className="hidden md:block" />
+            carbon credits, and alternative assets.
           </p>
 
           <p
             className="text-center text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
 
           >
-            <span className="font-bold border-b-2 border-[#15a36e] pb-0.5">FOR ASSET OWNERS</span> – launch compliant, fictionalized products in weeks, not months.
+            <span className="font-bold border-b border-[#15a36e] pb-0.5">ASSET OWNERS</span> – Launch RWAs, tokenized assets faster with built-in compliance, on-chain entitlement, custody, and institutional-grade infrastructure.
           </p>
 
           {/* ====== FOR INVESTORS ====== */}
@@ -96,7 +91,7 @@ export default function Hero() {
             className="text-center text-xs sm:text-sm md:text-base text-white mb-8 sm:mb-10 md:mb-12 font-light"
 
           >
-            <span className="font-bold underline decoration-[#15a36e] decoration-2 underline-offset-4">FOR INVESTORS</span> – access curated, yield-bearing RWA's with instant, gas-free settlement.
+            <span className="font-bold border-b border-[#15a36e] pb-0.5">INVESTORS</span> – Own exclusive real-world assets with transparent entitlements, settlement, and Gas-free transactions.
           </p>
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
