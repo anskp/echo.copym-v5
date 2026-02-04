@@ -150,9 +150,9 @@ export default function AIInvestingSection() {
         {/* Section Header */}
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
           <div className="relative w-fit mx-auto mb-2 sm:mb-3">
-            <h2 className="ai-investing-title inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e]">CORA AI -</span>
-              <span className="text-white"> YOUR INTELLIGENT EDGE IN REAL-WORLD ASSETS</span>
+            <h2 className="ai-investing-title flex flex-col items-center gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <span className="text-[#15a36e]">CORA-AI</span>
+              <span className="text-white">YOUR INTELLIGENT EDGE IN REAL-WORLD ASSETS</span>
             </h2>
           </div>
           <p className="ai-investing-subtitle text-sm text-white font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -180,16 +180,16 @@ export default function AIInvestingSection() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               viewport={{ once: true }}
-              className="info-box info-box-left absolute left-[2%] sm:left-[2%] lg:left-[4%] xl:left-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[110px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
+              className="info-box info-box-left absolute left-0 sm:left-[2%] lg:left-[3%] xl:left-[8%] top-[calc(50%+15px)] md:top-[calc(50%+20px)] lg:top-[calc(50%+25px)] -translate-y-1/2 z-20 w-[110px] sm:w-[240px] lg:w-[320px] flex items-center justify-end"
             >
-              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4 translate-y-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="info-box-text text-[7px] sm:text-[11px] lg:text-[13px] text-white font-medium leading-relaxed text-right pr-1 sm:pr-4 translate-y-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 <span className="text-[#15a36e] font-bold">Cora AI</span> is Copym’s intelligence layer, designed to simplify real-world asset participation through data-driven insights.
               </p>
               {/* Left Connector Line */}
               <img
                 src="/assets/svg/leftvector.svg"
                 alt=""
-                className="connector-line w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-1.5"
+                className="connector-line w-[40px] sm:w-[80px] lg:w-[100px] h-auto flex-shrink-0 translate-y-2 -translate-x-2.5"
               />
             </motion.div>
 

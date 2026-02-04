@@ -29,8 +29,8 @@ const ProductStackReview = () => {
         >
           <div className="relative w-fit mx-auto" ref={headingRef}>
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e]">PRODUCT </span>
-              <span className="text-black">STACK REVIEW</span>
+              <span className="text-black">BUILT FOR</span>
+              <span className="text-[#15a36e]">REAL-WORLD ASSETS</span>
             </h2>
           </div>
           <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>

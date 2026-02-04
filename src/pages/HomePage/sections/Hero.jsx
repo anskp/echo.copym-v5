@@ -67,7 +67,7 @@ export default function Hero() {
           <h1
             className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase text-center"
           >
-            Unlock Secure Access to <br className="hidden lg:block" /> <span className="text-[#15a36e]">Real-World Assets</span>
+            Unlock Secure Access to <br /> <span className="text-[#15a36e]">Real-World Assets</span>
           </h1>
 
           {/* ====== DESCRIPTION ====== */}

@@ -20,7 +20,7 @@ export default function TrackYourCrypto() {
           {/* Title - Moved to Top */}
           <div className="space-y-2 sm:space-y-3 text-left w-full mt-10">
             <h2 className="text-base sm:text-lg md:text-xl lg:text-[32px] font-bold text-white leading-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-white">Get </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">on Your Preferred Platform <br /> or Stay Connected with Copym</span>
+              <span className="text-white">Get </span><span className="text-[#15a36e]">CopyM</span> <span className="text-white">on Your Preferred Platform </span>
             </h2>
             <p className="text-sm text-white font-normal leading-relaxed max-w-2xl" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Access your Copym account across devices with a unified, secure experience. <br />
