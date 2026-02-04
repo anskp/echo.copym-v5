@@ -20,7 +20,7 @@ export default function AuditSection() {
               </h2>
             </div>
             <p className="text-sm text-black font-normal leading-relaxed tracking-wide mt-3 sm:mt-4 max-w-2xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Suggested Alternative: Pre-audited smart contracts designed for secure, verifiable deployment across established blockchain networks
+              Pre-audited smart contracts designed for secure, verifiable deployment across established blockchain networks
 
             </p>
           </div>
