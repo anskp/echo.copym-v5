@@ -7,9 +7,17 @@ const MOCK_INVESTMENTS = [
     {
         id: 1,
         title: 'UK Property Tokens',
+        tokenSymbol: 'UKPT',
         category: 'REAL ESTATE',
-        price: 'AED 100k',
-        minInvestment: 'MIN. INVESTMENT',
+        esgScore: 'A+',
+        roi: '12% ROI',
+        issuerName: 'London Estates',
+        issuerLogo: 'https://ui-avatars.com/api/?name=London+Estates&background=0D8ABC&color=fff',
+        assetPrice: 'AED 1M',
+        tokenPriceETH: '0.015 ETH',
+        tokenPriceUSD: '$45 USD',
+        availableTokens: 100000,
+        totalTokens: 1000000,
         status: 'coming-soon',
         image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
         badge: 'COMING SOON',
@@ -20,14 +28,22 @@ const MOCK_INVESTMENTS = [
         city: 'London',
         location: 'Kensington',
         priceVal: 100000,
-        tokenPercentage: 45
+        tokenPercentage: 10
     },
     {
         id: 2,
         title: 'Dubai Property Tokens',
+        tokenSymbol: 'DXB-T',
         category: 'REAL ESTATE',
-        price: 'AED 2000',
-        minInvestment: 'MIN. INVESTMENT',
+        esgScore: 'A',
+        roi: '15% ROI',
+        issuerName: 'Emaar Properties',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Emaar+Properties&background=10B981&color=fff',
+        assetPrice: 'AED 500k',
+        tokenPriceETH: '0.010 ETH',
+        tokenPriceUSD: '$30 USD',
+        availableTokens: 50000,
+        totalTokens: 500000,
         status: 'coming-soon',
         image: 'https://images.unsplash.com/photo-1512453979798-5ea904ac848e?q=80&w=2070&auto=format&fit=crop',
         badge: 'COMING SOON',
@@ -43,9 +59,17 @@ const MOCK_INVESTMENTS = [
     {
         id: 3,
         title: 'Manhattan Penthouse',
+        tokenSymbol: 'NYC-PH',
         category: 'REAL ESTATE',
-        price: 'AED 5000',
-        minInvestment: 'MIN. INVESTMENT',
+        esgScore: 'B+',
+        roi: '8% ROI',
+        issuerName: 'NY Developers',
+        issuerLogo: 'https://ui-avatars.com/api/?name=NY+Developers&background=F59E0B&color=fff',
+        assetPrice: 'AED 2M',
+        tokenPriceETH: '0.050 ETH',
+        tokenPriceUSD: '$150 USD',
+        availableTokens: 0,
+        totalTokens: 1000000,
         status: 'sold-out',
         image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop',
         badge: 'SOLD OUT',
@@ -337,7 +361,7 @@ export default function Publicmarketplace() {
                 matchesAdvanced = false;
             }
             // Beds
-            if (matchesAdvanced) {
+            if (matchesAdvanced && (filters.minBeds !== 'Any' || filters.maxBeds !== 'Any')) {
                 const itemBeds = item.beds || 0;
                 let min = 0;
                 let max = 100;
@@ -495,69 +519,80 @@ export default function Publicmarketplace() {
                             className="group bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
                         >
                             {/* Image Section */}
-                            <div className="relative h-52 overflow-hidden bg-gray-100">
+                            <div className="relative h-48 overflow-hidden bg-gray-100">
                                 <img
                                     src={item.image}
                                     alt={item.title}
-                                    className={`w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${item.status === 'coming-soon' ? 'grayscale-[20%]' : ''
-                                        }`}
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                 />
 
-                                {/* Badge */}
-                                <div className="absolute top-4 left-4 z-10">
-                                    {item.status === 'sold-out' ? (
-                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white text-blue-600 shadow-sm">
-                                            <Flame size={12} className="fill-blue-600" />
-                                            {item.badge}
-                                        </span>
-                                    ) : (
-                                        <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[#10B981] text-white shadow-sm">
-                                            <Clock size={12} />
-                                            {item.badge}
-                                        </span>
-                                    )}
+                                {/* Top Left Overlays */}
+                                <div className="absolute top-4 left-4 flex flex-col gap-1 items-start">
+                                    <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-gray-800 shadow-sm border border-gray-100">
+                                        {item.category}
+                                    </div>
+                                    <div className="bg-[#10B981]/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-sm flex items-center gap-1">
+                                        <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
+                                        ESG Score: {item.esgScore}
+                                    </div>
+                                </div>
+
+                                {/* Top Right Overlay */}
+                                <div className="absolute top-4 right-4">
+                                    <div className="bg-[#0F172A]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-white shadow-sm border border-gray-700">
+                                        {item.roi}
+                                    </div>
                                 </div>
                             </div>
 
                             {/* Content Section */}
                             <div className="p-5 flex-1 flex flex-col">
-                                <div className="mb-4">
-                                    <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2">{item.category}</p>
-                                    <h3 className="text-lg font-bold text-[#0F172A] leading-tight mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                        {item.title}
-                                    </h3>
+                                {/* Issuer Info */}
+                                <div className="flex items-center gap-2 mb-3 border-b border-gray-50 pb-3">
+                                    <img src={item.issuerLogo} alt={item.issuerName} className="w-6 h-6 rounded-full" />
+                                    <span className="text-xs font-medium text-gray-500">{item.issuerName}</span>
                                 </div>
 
-                                <div className="mt-auto space-y-4">
-                                    <div className="flex justify-between items-end border-b border-gray-50 pb-4">
-                                        <div>
-                                            <p className="text-xl font-bold text-[#0F172A]">{item.price}</p>
-                                        </div>
-                                        {/* Always show Min Investment label to match wireframe layout structure */}
-                                        <p className="text-[9px] font-bold text-gray-400 uppercase tracking-widest mb-1.5">
-                                            {item.minInvestment}
-                                        </p>
-                                    </div>
+                                {/* Title */}
+                                <div className="mb-4">
+                                    <h3 className="text-base font-bold text-[#0F172A] leading-tight mb-1">
+                                        {item.title}
+                                    </h3>
+                                    <p className="text-xs text-gray-400 font-medium">({item.tokenSymbol})</p>
+                                </div>
 
-                                    {/* Footer Action */}
-                                    {item.status === 'sold-out' ? (
-                                        <div className="w-full">
-                                            <div className="flex justify-between text-xs font-semibold text-gray-900 mb-1.5">
-                                                <span>{item.progress}%</span>
-                                                <span>Sold Out</span>
-                                            </div>
-                                            <div className="w-full bg-gray-100 rounded-full h-2 overflow-hidden">
-                                                <div
-                                                    className="bg-blue-600 h-full rounded-full transition-all duration-1000"
-                                                    style={{ width: `${item.progress}%` }}
-                                                ></div>
-                                            </div>
+                                {/* Metrics */}
+                                <div className="space-y-3 mb-4">
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-xs text-gray-500 uppercase font-semibold">Asset Price</span>
+                                        <span className="text-sm font-bold text-gray-900">{item.assetPrice}</span>
+                                    </div>
+                                    <div className="flex justify-between items-center">
+                                        <span className="text-xs text-gray-500 uppercase font-semibold">Token Price</span>
+                                        <div className="text-right">
+                                            <span className="text-sm font-bold text-gray-900 block">{item.tokenPriceETH}</span>
+                                            <span className="text-[10px] text-gray-400 font-medium">({item.tokenPriceUSD})</span>
                                         </div>
-                                    ) : (
-                                        <div className="w-full">
-                                            <p className="text-sm font-medium text-gray-900">{item.launchDate}</p>
+                                    </div>
+                                    <div>
+                                        <div className="flex justify-between items-center mb-1">
+                                            <span className="text-xs text-gray-500 uppercase font-semibold">Available Tokens</span>
+                                            <span className="text-xs font-bold text-gray-900">{item.availableTokens.toLocaleString()} / {item.totalTokens.toLocaleString()}</span>
                                         </div>
-                                    )}
+                                        <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                                            <div
+                                                className={`h-full rounded-full ${item.availableTokens === 0 ? 'bg-gray-400' : 'bg-blue-600'}`}
+                                                style={{ width: `${(item.availableTokens / item.totalTokens) * 100}%` }}
+                                            ></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Footer Action */}
+                                <div className="mt-auto pt-4 border-t border-gray-50">
+                                    <button className="w-full py-2.5 rounded-lg bg-[#0F172A] text-white text-sm font-bold hover:bg-gray-800 transition-colors shadow-lg shadow-gray-200">
+                                        View Details
+                                    </button>
                                 </div>
                             </div>
                         </motion.div>
