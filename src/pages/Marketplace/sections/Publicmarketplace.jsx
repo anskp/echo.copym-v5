@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Search, SlidersHorizontal, ChevronDown, Flame, Clock, Check, X, MapPin, BadgeCheck, Palette, Box, Building2, Trophy, Leaf, LayoutGrid } from 'lucide-react';
+import { Search, SlidersHorizontal, ChevronDown, Flame, Clock, Check, X, MapPin, BadgeCheck } from 'lucide-react';
 // ... existing imports
 
 // ... inside the component loop ...
@@ -123,69 +123,12 @@ const MOCK_LAND_ITEMS = [
         location: 'JVC',
         priceVal: 10000,
         tokenPercentage: 0
-    },
-    {
-        id: 5,
-        title: 'Masterpiece Collection',
-        tokenSymbol: 'ARTCOL',
-        category: 'ART',
-        roi: '15%',
-        cagr: '12.00%',
-        propertyType: 'Art',
-        priceVal: 250000,
-        image: '/assets/publicm/villa.jpeg', // placeholder
-        status: 'open'
-    },
-    {
-        id: 6,
-        title: 'Gold Reserve Tokens',
-        tokenSymbol: 'GOLD',
-        category: 'COMMODITIES',
-        roi: '8%',
-        cagr: '10.00%',
-        propertyType: 'Gold',
-        priceVal: 500000,
-        image: '/assets/publicm/penthouse.jpeg', // placeholder
-        status: 'open'
-    },
-    {
-        id: 7,
-        title: 'Tennis Pro Franchise',
-        tokenSymbol: 'SPORT-T',
-        category: 'SPORTS',
-        roi: '18%',
-        cagr: '20.00%',
-        propertyType: 'Team',
-        priceVal: 1000000,
-        image: '/assets/publicm/villa.jpeg', // placeholder
-        status: 'coming-soon'
-    },
-    {
-        id: 8,
-        title: 'Amazon Reforestation',
-        tokenSymbol: 'CARBON',
-        category: 'CARBON_CREDITS',
-        roi: '10%',
-        cagr: '15.00%',
-        propertyType: 'Credits',
-        priceVal: 50000,
-        image: '/assets/publicm/penthouse.jpeg', // placeholder
-        status: 'open'
     }
 ];
 
 MOCK_INVESTMENTS.push(...MOCK_LAND_ITEMS);
 
-const CATEGORIES = [
-    { id: 'All', label: 'All', icon: LayoutGrid },
-    { id: 'ART', label: 'Art', icon: Palette },
-    { id: 'COMMODITIES', label: 'Commodities', icon: Box },
-    { id: 'Real Estate', label: 'Real Estate', icon: Building2 },
-    { id: 'SPORTS', label: 'Sports', icon: Trophy },
-    { id: 'CARBON_CREDITS', label: 'Carbon Credits', icon: Leaf },
-];
-
-const FILTER_TABS = CATEGORIES.map(c => c.label);
+const FILTER_TABS = ['All', 'Real Estate'];
 
 const PROPERTY_TYPES = ['Residential', 'Commercial', 'Land', 'Multiple Units', 'Off Plan'];
 const RESIDENTIAL_SUBTYPES = [
@@ -521,8 +464,8 @@ export default function Publicmarketplace() {
     // Filter logic
     const filteredInvestments = MOCK_INVESTMENTS.filter((item) => {
         // Tab Filter
-        const selectedCat = CATEGORIES.find(c => c.label === activeTab);
-        const matchesTab = activeTab === 'All' || item.category === selectedCat?.id;
+        const matchesTab = activeTab === 'All' ||
+            (activeTab === 'Real Estate' && item.category === 'REAL ESTATE');
 
         // Search Query
         const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -601,45 +544,26 @@ export default function Publicmarketplace() {
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
 
                     {/* Left: Filters */}
-                    {/* Left: Category Tabs */}
-                    <div className="flex flex-wrap items-center gap-3 w-full md:w-auto">
-                        <div className="flex bg-gray-50/50 p-1.5 rounded-full border border-gray-100/50 gap-1.5 overflow-x-auto no-scrollbar max-w-full">
-                            {CATEGORIES.map((cat) => {
-                                const Icon = cat.icon;
-                                const isActive = activeTab === cat.label;
-                                return (
-                                    <button
-                                        key={cat.id}
-                                        onClick={() => {
-                                            setActiveTab(cat.label);
-                                            if (cat.label === 'Real Estate') setShowFilters(true);
-                                            else setShowFilters(false);
-                                        }}
-                                        className={`flex items-center transition-all duration-300 rounded-full h-11 ${isActive
-                                            ? 'bg-black shadow-lg shadow-black/10'
-                                            : 'bg-white/80 hover:bg-white border border-gray-200/50 shadow-sm'
-                                            }`}
-                                    >
-                                        <div className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${isActive
-                                            ? 'bg-[#10B981] text-white'
-                                            : 'bg-transparent text-gray-400'
-                                            }`}>
-                                            <Icon size={18} />
-                                        </div>
-                                        <span className={`px-4 text-sm font-bold transition-colors whitespace-nowrap ${isActive ? 'text-white' : 'text-gray-600'
-                                            }`}>
-                                            {cat.label}
-                                        </span>
-                                    </button>
-                                );
-                            })}
-                        </div>
-
+                    <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
+                        {FILTER_TABS.map((tab) => (
+                            <button
+                                key={tab}
+                                onClick={() => {
+                                    setActiveTab(tab);
+                                    if (tab === 'Real Estate') setShowFilters(true);
+                                    else setShowFilters(false);
+                                }}
+                                className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeTab === tab
+                                    ? 'bg-white text-gray-900 border border-gray-200 shadow-sm'
+                                    : 'bg-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+                                    }`}
+                            >
+                                {tab}
+                            </button>
+                        ))}
                         <button
                             onClick={() => setShowFilters(!showFilters)}
-                            className={`flex items-center gap-2 h-11 px-6 rounded-full text-sm font-bold transition-all duration-300 shadow-lg ${showFilters
-                                ? 'bg-[#0F172A] text-white ring-4 ring-slate-100 shadow-slate-200'
-                                : 'bg-white text-gray-700 border border-gray-200 hover:border-gray-300 shadow-gray-100'
+                            className={`ml-2 flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-lg shadow-gray-200 ${showFilters ? 'bg-[#0F172A] text-white' : 'bg-white text-gray-700 border border-gray-200'
                                 }`}
                         >
                             <SlidersHorizontal size={16} />
