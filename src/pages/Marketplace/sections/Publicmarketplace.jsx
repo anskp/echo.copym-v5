@@ -93,6 +93,11 @@ const RESIDENTIAL_SUBTYPES = [
     'Hotel Apartment', 'Residential Building', 'Residential Floor', 'Villa Compound'
 ];
 
+const COMMERCIAL_SUBTYPES = [
+    'Office', 'Retail', 'Industrial', 'Staff Accomm', 'Shop', 'Warehouse',
+    'Commercial Floor', 'Commercial Building', 'Commercial Villa', 'Factory', 'Showroom', 'Other'
+];
+
 const BED_OPTIONS = [
     'Studio', '1 Bedroom', '2 Bedrooms', '3 Bedrooms', '4 Bedrooms',
     '5 Bedrooms', '6 Bedrooms', '7 Bedrooms', '8 Bedrooms',
@@ -157,7 +162,7 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                 key={type}
                                 onClick={() => {
                                     updateFilter('selectedPropertyType', type === localFilters.selectedPropertyType ? '' : type);
-                                    if (type !== 'Residential') updateFilter('selectedSubTypes', []);
+                                    if (type !== localFilters.selectedPropertyType) updateFilter('selectedSubTypes', []);
                                 }}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedPropertyType === type
                                     ? 'bg-[#0F172A] text-white border-[#0F172A]'
@@ -172,21 +177,23 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
 
                 {/* Residential Sub-Types */}
                 <AnimatePresence>
-                    {localFilters.selectedPropertyType === 'Residential' && (
+                    {(localFilters.selectedPropertyType === 'Residential' || localFilters.selectedPropertyType === 'Commercial') && (
                         <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: 'auto' }}
                             exit={{ opacity: 0, height: 0 }}
                         >
-                            <label className="block text-sm font-bold text-gray-700 mb-4">Residential Type</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-4">
+                                {localFilters.selectedPropertyType} Type
+                            </label>
                             <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                                {RESIDENTIAL_SUBTYPES.map(type => (
+                                {(localFilters.selectedPropertyType === 'Residential' ? RESIDENTIAL_SUBTYPES : COMMERCIAL_SUBTYPES).map(type => (
                                     <button
                                         key={type}
                                         onClick={() => toggleSubType(type)}
                                         className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedSubTypes || []).includes(type)
-                                            ? 'bg-blue-50 text-blue-700 font-semibold'
-                                            : 'text-gray-600 hover:bg-gray-50'
+                                                ? 'bg-blue-50 text-blue-700 font-semibold'
+                                                : 'text-gray-600 hover:bg-gray-50'
                                             }`}
                                     >
                                         {type}
@@ -403,13 +410,6 @@ export default function Publicmarketplace() {
         <section className="w-full py-12 md:py-20 bg-white min-h-screen">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                {/* Header */}
-                <div className="mb-8">
-                    <h1 className="text-2xl md:text-3xl font-bold text-[#0F172A]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Marketplace <span className="text-gray-400 font-normal">/ All Investments</span>
-                    </h1>
-                </div>
-
                 {/* Controls Bar */}
                 <div className="flex flex-col md:flex-row justify-between items-center gap-4 mb-10">
 
@@ -516,83 +516,108 @@ export default function Publicmarketplace() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="group bg-white rounded-3xl overflow-hidden hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col"
+                            className="group relative bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500 h-[320px] border border-gray-100"
                         >
-                            {/* Image Section */}
-                            <div className="relative h-48 overflow-hidden bg-gray-100">
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                                />
+                            {/* Sliding Container */}
+                            <div className="absolute inset-0 flex w-[200%] transition-transform duration-500 ease-in-out -translate-x-0 group-hover:-translate-x-1/2">
 
-                                {/* Top Left Overlays */}
-                                <div className="absolute top-4 left-4 flex flex-col gap-1 items-start">
-                                    <div className="bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider text-gray-800 shadow-sm border border-gray-100">
-                                        {item.category}
-                                    </div>
-                                    <div className="bg-[#10B981]/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-sm flex items-center gap-1">
-                                        <div className="w-1.5 h-1.5 rounded-full bg-white"></div>
-                                        ESG Score: {item.esgScore}
-                                    </div>
-                                </div>
+                                {/* 1. Initial State (Full Image View) */}
+                                <div className="w-1/2 h-full relative">
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                    {/* Gradient Overlay for text readability */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
 
-                                {/* Top Right Overlay */}
-                                <div className="absolute top-4 right-4">
-                                    <div className="bg-[#0F172A]/90 backdrop-blur-sm px-3 py-1.5 rounded-lg text-xs font-bold text-white shadow-sm border border-gray-700">
-                                        {item.roi}
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Content Section */}
-                            <div className="p-5 flex-1 flex flex-col">
-                                {/* Issuer Info */}
-                                <div className="flex items-center gap-2 mb-3 border-b border-gray-50 pb-3">
-                                    <img src={item.issuerLogo} alt={item.issuerName} className="w-6 h-6 rounded-full" />
-                                    <span className="text-xs font-medium text-gray-500">{item.issuerName}</span>
-                                </div>
-
-                                {/* Title */}
-                                <div className="mb-4">
-                                    <h3 className="text-base font-bold text-[#0F172A] leading-tight mb-1">
-                                        {item.title}
-                                    </h3>
-                                    <p className="text-xs text-gray-400 font-medium">({item.tokenSymbol})</p>
-                                </div>
-
-                                {/* Metrics */}
-                                <div className="space-y-3 mb-4">
-                                    <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-500 uppercase font-semibold">Asset Price</span>
-                                        <span className="text-sm font-bold text-gray-900">{item.assetPrice}</span>
-                                    </div>
-                                    <div className="flex justify-between items-center">
-                                        <span className="text-xs text-gray-500 uppercase font-semibold">Token Price</span>
-                                        <div className="text-right">
-                                            <span className="text-sm font-bold text-gray-900 block">{item.tokenPriceETH}</span>
-                                            <span className="text-[10px] text-gray-400 font-medium">({item.tokenPriceUSD})</span>
+                                    {/* Top Badges */}
+                                    <div className="absolute top-3 left-3 flex flex-col gap-1.5 items-start">
+                                        <div className="bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-widest text-[#0F172A] shadow-lg">
+                                            {item.category}
+                                        </div>
+                                        <div className="bg-[#10B981] px-2 py-0.5 rounded-md text-[9px] font-bold text-white shadow-lg flex items-center gap-1">
+                                            <div className="w-1 h-1 rounded-full bg-white animate-pulse"></div>
+                                            ESG: {item.esgScore}
                                         </div>
                                     </div>
-                                    <div>
-                                        <div className="flex justify-between items-center mb-1">
-                                            <span className="text-xs text-gray-500 uppercase font-semibold">Available Tokens</span>
-                                            <span className="text-xs font-bold text-gray-900">{item.availableTokens.toLocaleString()} / {item.totalTokens.toLocaleString()}</span>
+
+                                    <div className="absolute top-3 right-3">
+                                        <div className="bg-[#0F172A] px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-lg border border-gray-700/50">
+                                            {item.roi}
                                         </div>
-                                        <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
-                                            <div
-                                                className={`h-full rounded-full ${item.availableTokens === 0 ? 'bg-gray-400' : 'bg-blue-600'}`}
-                                                style={{ width: `${(item.availableTokens / item.totalTokens) * 100}%` }}
-                                            ></div>
+                                    </div>
+
+                                    {/* Bottom Info on Cover */}
+                                    <div className="absolute bottom-0 left-0 w-full p-4 text-white">
+                                        <div className="flex items-center gap-1.5 mb-1">
+                                            <img src={item.issuerLogo} alt={item.issuerName} className="w-5 h-5 rounded-full border border-white/30" />
+                                            <span className="text-[10px] font-medium text-gray-200">{item.issuerName}</span>
+                                        </div>
+                                        <h3 className="text-lg font-bold leading-tight mb-0.5 font-palanquin">{item.title}</h3>
+                                        <p className="text-xs text-gray-300 font-medium mb-3">{item.tokenSymbol}</p>
+
+                                        <div className="flex items-center gap-1.5 text-[10px] font-bold tracking-wide text-gray-400">
+                                            <span>DETAILS</span>
+                                            <svg className="w-3 h-3 animate-bounce-x" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* Footer Action */}
-                                <div className="mt-auto pt-4 border-t border-gray-50">
-                                    <button className="w-full py-2.5 rounded-lg bg-[#0F172A] text-white text-sm font-bold hover:bg-gray-800 transition-colors shadow-lg shadow-gray-200">
-                                        View Details
-                                    </button>
+                                {/* 2. Hover State (Split View) - Occupies right half of the 200% width container */}
+                                <div className="w-1/2 h-full flex">
+                                    {/* Left side of the split (Retained Image Strip) */}
+                                    <div className="w-[35%] h-full relative overflow-hidden">
+                                        <img
+                                            src={item.image}
+                                            alt={item.title}
+                                            className="w-full h-full object-cover scale-150"
+                                        />
+                                        <div className="absolute inset-0 bg-[#0F172A]/40 backdrop-blur-[2px]"></div>
+                                    </div>
+
+                                    {/* Right side of the split (Details Panel) */}
+                                    <div className="w-[65%] h-full bg-white p-4 flex flex-col justify-between">
+                                        <div>
+                                            <h4 className="text-sm font-bold text-[#0F172A] leading-tight mb-2 line-clamp-2">{item.title}</h4>
+                                            <div className="flex flex-wrap gap-1.5 mb-3">
+                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600">{item.subType}</span>
+                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600 animate-pulse">{item.status === 'coming-soon' ? 'Coming Soon' : 'Sold Out'}</span>
+                                            </div>
+
+                                            <div className="space-y-2.5">
+                                                <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                    <span className="text-[9px] text-gray-400 font-semibold uppercase">Asset Price</span>
+                                                    <span className="text-xs font-bold text-[#0F172A]">{item.assetPrice}</span>
+                                                </div>
+                                                <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                    <span className="text-[9px] text-gray-400 font-semibold uppercase">Token Price</span>
+                                                    <div className="text-right">
+                                                        <span className="text-xs font-bold text-[#0F172A] block">{item.tokenPriceETH}</span>
+                                                        <span className="text-[9px] text-gray-400">{item.tokenPriceUSD}</span>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="flex justify-between items-center mb-1">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Tokens Left</span>
+                                                        <span className="text-[9px] font-bold text-[#0F172A]">{item.availableTokens.toLocaleString()}</span>
+                                                    </div>
+                                                    <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                                                        <div
+                                                            className={`h-full rounded-full ${item.availableTokens === 0 ? 'bg-gray-400' : 'bg-[#0F172A]'}`}
+                                                            style={{ width: `${(item.availableTokens / item.totalTokens) * 100}%` }}
+                                                        ></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <button className="w-full py-2.5 rounded-lg bg-[#0F172A] hover:bg-blue-600 text-white text-[10px] font-bold tracking-widest uppercase transition-colors shadow-lg shadow-gray-200 mt-2">
+                                            View Details
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </motion.div>
