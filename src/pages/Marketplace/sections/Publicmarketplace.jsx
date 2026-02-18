@@ -1,5 +1,9 @@
-import React, { useState } from 'react';
-import { Search, SlidersHorizontal, ChevronDown, Flame, Clock, Check, X, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, SlidersHorizontal, ChevronDown, Flame, Clock, Check, X, MapPin, BadgeCheck } from 'lucide-react';
+// ... existing imports
+
+// ... inside the component loop ...
+
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Mock Data
@@ -19,7 +23,7 @@ const MOCK_INVESTMENTS = [
         availableTokens: 100000,
         totalTokens: 1000000,
         status: 'coming-soon',
-        image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop',
+        image: '/assets/publicm/villa.jpeg',
         badge: 'COMING SOON',
         launchDate: 'Coming soon',
         propertyType: 'Residential',
@@ -45,7 +49,7 @@ const MOCK_INVESTMENTS = [
         availableTokens: 50000,
         totalTokens: 500000,
         status: 'coming-soon',
-        image: 'https://images.unsplash.com/photo-1512453979798-5ea904ac848e?q=80&w=2070&auto=format&fit=crop',
+        image: '/assets/publicm/vilaa2.jpeg',
         badge: 'COMING SOON',
         launchDate: 'Coming soon',
         propertyType: 'Residential',
@@ -71,7 +75,7 @@ const MOCK_INVESTMENTS = [
         availableTokens: 0,
         totalTokens: 1000000,
         status: 'sold-out',
-        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop',
+        image: '/assets/publicm/penthouse.jpeg',
         badge: 'SOLD OUT',
         launchDate: 'Sold Out',
         progress: 100,
@@ -192,8 +196,8 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                         key={type}
                                         onClick={() => toggleSubType(type)}
                                         className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedSubTypes || []).includes(type)
-                                                ? 'bg-blue-50 text-blue-700 font-semibold'
-                                                : 'text-gray-600 hover:bg-gray-50'
+                                            ? 'bg-blue-50 text-blue-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
                                             }`}
                                     >
                                         {type}
@@ -536,10 +540,7 @@ export default function Publicmarketplace() {
                                         <div className="bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-widest text-[#0F172A] shadow-lg">
                                             {item.category}
                                         </div>
-                                        <div className="bg-[#10B981] px-2 py-0.5 rounded-md text-[9px] font-bold text-white shadow-lg flex items-center gap-1">
-                                            <div className="w-1 h-1 rounded-full bg-white animate-pulse"></div>
-                                            ESG: {item.esgScore}
-                                        </div>
+                                        <img src="/assets/publicm/verify.png" alt="Verified" className="h-[28px] w-auto object-contain drop-shadow-lg" />
                                     </div>
 
                                     <div className="absolute top-3 right-3">
@@ -601,7 +602,7 @@ export default function Publicmarketplace() {
                                                 </div>
                                                 <div>
                                                     <div className="flex justify-between items-center mb-1">
-                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Tokens Left</span>
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Available Tokens</span>
                                                         <span className="text-[9px] font-bold text-[#0F172A]">{item.availableTokens.toLocaleString()}</span>
                                                     </div>
                                                     <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
