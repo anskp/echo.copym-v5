@@ -14,7 +14,8 @@ const MOCK_INVESTMENTS = [
         tokenSymbol: 'UKPT',
         category: 'REAL ESTATE',
         esgScore: 'A+',
-        roi: '12% ROI',
+        roi: '12%',
+        cagr: '15.50%',
         issuerName: 'London Estates',
         issuerLogo: 'https://ui-avatars.com/api/?name=London+Estates&background=0D8ABC&color=fff',
         assetPrice: 'AED 1M',
@@ -40,7 +41,8 @@ const MOCK_INVESTMENTS = [
         tokenSymbol: 'DXB-T',
         category: 'REAL ESTATE',
         esgScore: 'A',
-        roi: '15% ROI',
+        roi: '15%',
+        cagr: '18.20%',
         issuerName: 'Emaar Properties',
         issuerLogo: 'https://ui-avatars.com/api/?name=Emaar+Properties&background=10B981&color=fff',
         assetPrice: 'AED 500k',
@@ -66,7 +68,8 @@ const MOCK_INVESTMENTS = [
         tokenSymbol: 'NYC-PH',
         category: 'REAL ESTATE',
         esgScore: 'B+',
-        roi: '8% ROI',
+        roi: '8%',
+        cagr: '10.50%',
         issuerName: 'NY Developers',
         issuerLogo: 'https://ui-avatars.com/api/?name=NY+Developers&background=F59E0B&color=fff',
         assetPrice: 'AED 2M',
@@ -540,12 +543,16 @@ export default function Publicmarketplace() {
                                         <div className="bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md text-[9px] font-extrabold uppercase tracking-widest text-[#0F172A] shadow-lg">
                                             {item.category}
                                         </div>
-                                        <img src="/assets/publicm/verify.png" alt="Verified" className="h-[28px] w-auto object-contain drop-shadow-lg" />
+                                        <img src="/assets/publicm/verify.png" alt="Verified" className="h-[36px] w-auto object-contain drop-shadow-lg" />
                                     </div>
 
-                                    <div className="absolute top-3 right-3">
-                                        <div className="bg-[#0F172A] px-2 py-1 rounded-md text-[10px] font-bold text-white shadow-lg border border-gray-700/50">
-                                            {item.roi}
+                                    <div className="absolute top-3 right-3 flex flex-col items-end gap-1.5">
+                                        <div className="bg-[#0F172A] px-2 py-0.5 rounded-md text-white shadow-lg border border-gray-700/50 flex items-center gap-1">
+                                            <span className="text-[10px] font-bold text-white">{item.roi}</span>
+                                            <span className="text-[8px] font-bold text-gray-400 tracking-wider uppercase">PROJECTED ROI</span>
+                                        </div>
+                                        <div className="bg-white/90 backdrop-blur-md px-2 py-0.5 rounded-md text-[9px] font-bold text-[#0F172A] shadow-lg border border-white/20">
+                                            {item.cagr} CAGR
                                         </div>
                                     </div>
 
