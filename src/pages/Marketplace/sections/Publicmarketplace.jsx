@@ -28,7 +28,7 @@ const MOCK_INVESTMENTS = [
         badge: 'COMING SOON',
         launchDate: 'Coming soon',
         propertyType: 'Residential',
-        subType: 'Apartment',
+        investmentStrategy: 'Capital Growth',
         beds: 2,
         country: 'UK',
         city: 'London',
@@ -58,7 +58,7 @@ const MOCK_INVESTMENTS = [
         launchDate: 'Live Now',
         progress: 75,
         propertyType: 'Residential',
-        subType: 'Villa',
+        investmentStrategy: 'High-Yield',
         beds: 5,
         country: 'UAE',
         city: 'Dubai',
@@ -88,7 +88,7 @@ const MOCK_INVESTMENTS = [
         launchDate: 'Sold Out',
         progress: 100,
         propertyType: 'Residential',
-        subType: 'Penthouse',
+        investmentStrategy: 'Prime',
         beds: 3,
         country: 'USA',
         city: 'New York',
@@ -120,8 +120,7 @@ const MOCK_LAND_ITEMS = [
         badge: 'NEW',
         launchDate: 'Coming soon',
         propertyType: 'Land',
-        subType: 'Plot',
-        zonedFor: 'Residential',
+        investmentStrategy: 'Fix n Flip',
         country: 'UAE',
         city: 'Dubai',
         location: 'JVC',
@@ -133,27 +132,13 @@ const MOCK_LAND_ITEMS = [
 
 MOCK_INVESTMENTS.push(...MOCK_LAND_ITEMS);
 
-const FILTER_TABS = ['All', 'Real Estate', 'Art', 'Commodities', 'Sports', 'Carbon Credits'];
+const FILTER_TABS = ['All', 'Real Estate', 'Commodities', 'Arts', 'Sports', 'Carbon Credits'];
 
 const PROPERTY_TYPES = ['Residential', 'Commercial', 'Land', 'Multiple Units'];
+const INVESTMENT_STRATEGIES = ['Capital Growth', 'High-Yield', 'Prime', 'Fix n Flip'];
 const COMPLETION_STATUSES = ['All', 'Ready', 'Under Construction', 'Off-Plan'];
-const RESIDENTIAL_SUBTYPES = [
-    'Apartment', 'Villa', 'Townhouse', 'Penthouse',
-    'Hotel Apartment', 'Residential Building', 'Residential Floor', 'Villa Compound'
-];
 
-const COMMERCIAL_SUBTYPES = [
-    'Office', 'Retail', 'Industrial', 'Staff Accomm', 'Shop', 'Warehouse',
-    'Commercial Floor', 'Commercial Building', 'Commercial Villa', 'Factory', 'Showroom', 'Other'
-];
-
-const ZONED_FOR_OPTIONS = ['Residential', 'Commercial', 'Retail', 'Industrial', 'Mixed Use'];
-
-const BED_OPTIONS = [
-    'Studio', '1 Bedroom', '2 Bedrooms', '3 Bedrooms', '4 Bedrooms',
-    '5 Bedrooms', '6 Bedrooms', '7 Bedrooms', '8 Bedrooms',
-    '9 Bedrooms', '10 Bedrooms', '11 Bedrooms', '12+ Bedrooms'
-];
+const BED_OPTIONS = ['1', '2', '3', '4', '5', '6'];
 
 const SORT_OPTIONS = [
     { label: 'Listing Price > Highest to low', value: 'price_desc' },
@@ -165,7 +150,6 @@ const SORT_OPTIONS = [
 const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply }) => {
     const [localFilters, setLocalFilters] = useState(filters);
     const [isBedsDropdownOpen, setIsBedsDropdownOpen] = useState(false);
-    const [isZonedForDropdownOpen, setIsZonedForDropdownOpen] = useState(false);
 
     // Sync local state with props when panel opens
     React.useEffect(() => {
@@ -176,12 +160,12 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
         setLocalFilters(prev => ({ ...prev, [key]: value }));
     };
 
-    const toggleSubType = (type) => {
-        const current = localFilters.selectedSubTypes || [];
-        const updated = current.includes(type)
-            ? current.filter(t => t !== type)
-            : [...current, type];
-        updateFilter('selectedSubTypes', updated);
+    const toggleInvestmentStrategy = (strategy) => {
+        const current = localFilters.selectedInvestmentStrategies || [];
+        const updated = current.includes(strategy)
+            ? current.filter(s => s !== strategy)
+            : [...current, strategy];
+        updateFilter('selectedInvestmentStrategies', updated);
     };
 
     if (!isOpen || activeTab !== 'Real Estate') return null;
@@ -217,7 +201,7 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                         key={type}
                                         onClick={() => {
                                             updateFilter('selectedPropertyType', type === localFilters.selectedPropertyType ? '' : type);
-                                            if (type !== localFilters.selectedPropertyType) updateFilter('selectedSubTypes', []);
+                                            if (type !== localFilters.selectedPropertyType) updateFilter('selectedInvestmentStrategies', []);
                                         }}
                                         className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedPropertyType === type
                                             ? 'bg-[#0F172A] text-white border-[#0F172A]'
@@ -230,29 +214,29 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                             </div>
                         </div>
 
-                        {/* Sub-Types */}
+                        {/* Investment Strategies */}
                         <AnimatePresence>
-                            {(localFilters.selectedPropertyType === 'Residential' || localFilters.selectedPropertyType === 'Commercial') && (
+                            {localFilters.selectedPropertyType === 'Residential' && (
                                 <motion.div
                                     initial={{ opacity: 0, height: 0 }}
                                     animate={{ opacity: 1, height: 'auto' }}
                                     exit={{ opacity: 0, height: 0 }}
                                 >
                                     <label className="block text-sm font-bold text-gray-700 mb-3">
-                                        {localFilters.selectedPropertyType} Type
+                                        Investment Strategy
                                     </label>
                                     <div className="grid grid-cols-2 gap-2">
-                                        {(localFilters.selectedPropertyType === 'Residential' ? RESIDENTIAL_SUBTYPES : COMMERCIAL_SUBTYPES).map(type => (
+                                        {INVESTMENT_STRATEGIES.map(strategy => (
                                             <button
-                                                key={type}
-                                                onClick={() => toggleSubType(type)}
-                                                className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedSubTypes || []).includes(type)
+                                                key={strategy}
+                                                onClick={() => toggleInvestmentStrategy(strategy)}
+                                                className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedInvestmentStrategies || []).includes(strategy)
                                                     ? 'bg-blue-50 text-blue-700 font-semibold'
                                                     : 'text-gray-600 hover:bg-gray-50'
                                                     }`}
                                             >
-                                                <span className="truncate mr-1">{type}</span>
-                                                {(localFilters.selectedSubTypes || []).includes(type) && <Check size={14} className="flex-shrink-0" />}
+                                                <span className="truncate mr-1">{strategy}</span>
+                                                {(localFilters.selectedInvestmentStrategies || []).includes(strategy) && <Check size={14} className="flex-shrink-0" />}
                                             </button>
                                         ))}
                                     </div>
@@ -263,146 +247,9 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
 
                     {/* Right Column */}
                     <div className="flex flex-col gap-4">
-                        {/* Completion Status */}
-                        <AnimatePresence>
-                            {(localFilters.selectedPropertyType === 'Residential' || localFilters.selectedPropertyType === 'Commercial') && (
-                                <motion.div
-                                    initial={{ opacity: 0, height: 0 }}
-                                    animate={{ opacity: 1, height: 'auto' }}
-                                    exit={{ opacity: 0, height: 0 }}
-                                >
-                                    <label className="block text-sm font-bold text-gray-700 mb-2">Completion Status</label>
-                                    <div className="flex flex-wrap gap-2">
-                                        {COMPLETION_STATUSES.map(status => (
-                                            <button
-                                                key={status}
-                                                onClick={() => updateFilter('completionStatus', status)}
-                                                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.completionStatus === status
-                                                    ? 'bg-[#0F172A] text-white border-[#0F172A]'
-                                                    : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
-                                                    }`}
-                                            >
-                                                {status}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </motion.div>
-                            )}
-                        </AnimatePresence>
-
-                        {/* Beds / Zoned For */}
-                        <div className="relative">
-                            {['Land', 'Multiple Units'].includes(localFilters.selectedPropertyType) ? (
-                                <>
-                                    <label className="block text-sm font-bold text-gray-700 mb-2">Zoned For</label>
-                                    <button
-                                        onClick={() => setIsZonedForDropdownOpen(!isZonedForDropdownOpen)}
-                                        className="w-full flex items-center justify-between bg-white border border-gray-200 text-gray-700 text-sm font-medium py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <span className="truncate mr-2">
-                                            {(localFilters.zonedFor && localFilters.zonedFor.length > 0)
-                                                ? `${localFilters.zonedFor.length} Selected`
-                                                : 'Any'}
-                                        </span>
-                                        <ChevronDown size={16} className="flex-shrink-0" />
-                                    </button>
-                                    <AnimatePresence>
-                                        {isZonedForDropdownOpen && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                className="absolute top-full left-0 mt-2 w-full bg-white rounded-xl shadow-2xl border border-gray-100 p-2 z-50 max-h-60 overflow-y-auto"
-                                            >
-                                                {ZONED_FOR_OPTIONS.map((option) => (
-                                                    <button
-                                                        key={option}
-                                                        onClick={() => {
-                                                            const current = localFilters.zonedFor || [];
-                                                            let newSelected;
-                                                            if (current.includes(option)) {
-                                                                newSelected = current.filter(t => t !== option);
-                                                            } else {
-                                                                newSelected = [...current, option];
-                                                            }
-                                                            updateFilter('zonedFor', newSelected);
-                                                        }}
-                                                        className={`w-full text-left px-3 py-2 rounded-lg text-sm flex items-center justify-between ${(localFilters.zonedFor || []).includes(option)
-                                                            ? 'bg-blue-50 text-blue-700 font-semibold'
-                                                            : 'text-gray-600 hover:bg-gray-50'
-                                                            }`}
-                                                    >
-                                                        {option}
-                                                        {(localFilters.zonedFor || []).includes(option) && <Check size={14} />}
-                                                    </button>
-                                                ))}
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </>
-                            ) : localFilters.selectedPropertyType === 'Residential' ? (
-                                <>
-                                    <label className="block text-sm font-bold text-gray-700 mb-1.5">Beds</label>
-                                    <button
-                                        onClick={() => setIsBedsDropdownOpen(!isBedsDropdownOpen)}
-                                        className="w-full flex items-center justify-between bg-white border border-gray-200 text-gray-700 text-sm font-medium py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                                    >
-                                        <span className="truncate mr-2">
-                                            {localFilters.minBeds === 'Any' && localFilters.maxBeds === 'Any'
-                                                ? 'Any'
-                                                : `${localFilters.minBeds} - ${localFilters.maxBeds}`}
-                                        </span>
-                                        <ChevronDown size={16} className="flex-shrink-0" />
-                                    </button>
-                                    <AnimatePresence>
-                                        {isBedsDropdownOpen && (
-                                            <motion.div
-                                                initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                className="absolute top-full left-0 mt-2 w-full sm:w-[480px] bg-white rounded-xl shadow-2xl border border-gray-100 p-5 z-50 flex flex-col sm:flex-row gap-4"
-                                            >
-                                                <div className="flex-1">
-                                                    <label className="block text-xs font-bold text-gray-500 mb-1.5">Min Bedrooms</label>
-                                                    <div className="relative">
-                                                        <select
-                                                            className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:border-gray-400"
-                                                            value={localFilters.minBeds}
-                                                            onChange={(e) => updateFilter('minBeds', e.target.value)}
-                                                        >
-                                                            <option value="Any">Any</option>
-                                                            <option value="Studio">Studio</option>
-                                                            {BED_OPTIONS.filter(opt => opt !== 'Studio').map(opt => <option key={opt} value={opt}>{opt}</option>)}
-                                                        </select>
-                                                        <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                                                    </div>
-                                                </div>
-                                                <div className="hidden sm:flex items-center pt-5 text-gray-400">-</div>
-                                                <div className="flex-1">
-                                                    <label className="block text-xs font-bold text-gray-500 mb-1.5">Max Bedrooms</label>
-                                                    <div className="relative">
-                                                        <select
-                                                            className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:border-gray-400"
-                                                            value={localFilters.maxBeds}
-                                                            onChange={(e) => updateFilter('maxBeds', e.target.value)}
-                                                        >
-                                                            <option value="Any">Any</option>
-                                                            <option value="Studio">Studio</option>
-                                                            {BED_OPTIONS.filter(opt => opt !== 'Studio').map(opt => <option key={opt} value={opt}>{opt}</option>)}
-                                                        </select>
-                                                        <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
-                                                    </div>
-                                                </div>
-                                            </motion.div>
-                                        )}
-                                    </AnimatePresence>
-                                </>
-                            ) : null}
-                        </div>
-
                         {/* Location Filters */}
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">Location</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Location</label>
                             <div className="flex flex-col sm:flex-row gap-2">
                                 {/* Country */}
                                 <div className="relative flex-1">
@@ -449,6 +296,91 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                 </div>
                             </div>
                         </div>
+
+                        {/* Completion Status */}
+                        <AnimatePresence>
+                            {(localFilters.selectedPropertyType === 'Residential' || localFilters.selectedPropertyType === 'Commercial') && (
+                                <motion.div
+                                    initial={{ opacity: 0, height: 0 }}
+                                    animate={{ opacity: 1, height: 'auto' }}
+                                    exit={{ opacity: 0, height: 0 }}
+                                >
+                                    <label className="block text-sm font-bold text-gray-700 mb-2">Completion Status</label>
+                                    <div className="flex flex-wrap gap-2">
+                                        {COMPLETION_STATUSES.map(status => (
+                                            <button
+                                                key={status}
+                                                onClick={() => updateFilter('completionStatus', status)}
+                                                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.completionStatus === status
+                                                    ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                                    : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                                    }`}
+                                            >
+                                                {status}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
+
+                        {/* Bedrooms - Only for Residential */}
+                        {localFilters.selectedPropertyType === 'Residential' && (
+                            <div>
+                                <label className="block text-sm font-bold text-gray-700 mb-1.5">Bedrooms</label>
+                                <button
+                                    onClick={() => setIsBedsDropdownOpen(!isBedsDropdownOpen)}
+                                    className="w-full flex items-center justify-between bg-white border border-gray-200 text-gray-700 text-sm font-medium py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                    <span className="truncate mr-2">
+                                        {localFilters.minBeds === 'Any' && localFilters.maxBeds === 'Any'
+                                            ? 'Any'
+                                            : `${localFilters.minBeds} - ${localFilters.maxBeds}`}
+                                    </span>
+                                    <ChevronDown size={16} className="flex-shrink-0" />
+                                </button>
+                                <AnimatePresence>
+                                    {isBedsDropdownOpen && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                                            className="absolute top-full left-0 mt-2 w-full sm:w-[480px] bg-white rounded-xl shadow-2xl border border-gray-100 p-5 z-50 flex flex-col sm:flex-row gap-4"
+                                        >
+                                            <div className="flex-1">
+                                                <label className="block text-xs font-bold text-gray-500 mb-1.5">Min Bedrooms</label>
+                                                <div className="relative">
+                                                    <select
+                                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:border-gray-400"
+                                                        value={localFilters.minBeds}
+                                                        onChange={(e) => updateFilter('minBeds', e.target.value)}
+                                                    >
+                                                        <option value="Any">Any</option>
+                                                        {BED_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                                                    </select>
+                                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                                </div>
+                                            </div>
+                                            <div className="hidden sm:flex items-center pt-5 text-gray-400">-</div>
+                                            <div className="flex-1">
+                                                <label className="block text-xs font-bold text-gray-500 mb-1.5">Max Bedrooms</label>
+                                                <div className="relative">
+                                                    <select
+                                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:border-gray-400"
+                                                        value={localFilters.maxBeds}
+                                                        onChange={(e) => updateFilter('maxBeds', e.target.value)}
+                                                    >
+                                                        <option value="Any">Any</option>
+                                                        {BED_OPTIONS.map(opt => <option key={opt} value={opt}>{opt}</option>)}
+                                                    </select>
+                                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                                </div>
+                                            </div>
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        )}
                     </div>
                 </div>
 
@@ -475,6 +407,7 @@ export default function Publicmarketplace() {
     const [searchQuery, setSearchQuery] = useState('');
     const [showFilters, setShowFilters] = useState(false);
     const [isSortOpen, setIsSortOpen] = useState(false);
+    const [isBedsDropdownOpen, setIsBedsDropdownOpen] = useState(false);
     const [sortBy, setSortBy] = useState('price_desc'); // Default sort
 
     // Filter State
@@ -483,11 +416,10 @@ export default function Publicmarketplace() {
         maxBeds: 'Any',
         propertyValueRange: [0, 4000000],
         selectedPropertyType: '',
-        selectedSubTypes: [],
+        selectedInvestmentStrategies: [],
         country: '',
         city: '',
         location: '',
-        zonedFor: [],
         completionStatus: 'All'
     });
 
@@ -508,11 +440,11 @@ export default function Publicmarketplace() {
         let matchesAdvanced = true;
         if (activeTab === 'Real Estate') {
             // Property Type
-            if (filters.selectedPropertyType && item.propertyType !== filters.selectedPropertyType) {
+            if (filters.selectedPropertyType && filters.selectedPropertyType !== 'All' && item.propertyType !== filters.selectedPropertyType) {
                 matchesAdvanced = false;
             }
-            // Sub Type
-            if (matchesAdvanced && filters.selectedSubTypes.length > 0 && !filters.selectedSubTypes.includes(item.subType)) {
+            // Investment Strategy
+            if (matchesAdvanced && filters.selectedInvestmentStrategies.length > 0 && !filters.selectedInvestmentStrategies.includes(item.investmentStrategy)) {
                 matchesAdvanced = false;
             }
             // Country
@@ -531,10 +463,6 @@ export default function Publicmarketplace() {
             if (matchesAdvanced && filters.completionStatus !== 'All' && item.completionStatus !== filters.completionStatus) {
                 matchesAdvanced = false;
             }
-            // Zoned For
-            if (matchesAdvanced && filters.zonedFor && filters.zonedFor.length > 0 && !filters.zonedFor.includes(item.zonedFor)) {
-                matchesAdvanced = false;
-            }
             // Beds
             if (matchesAdvanced && (filters.minBeds !== 'Any' || filters.maxBeds !== 'Any')) {
                 const itemBeds = item.beds || 0;
@@ -542,14 +470,11 @@ export default function Publicmarketplace() {
                 let max = 100;
 
                 if (filters.minBeds !== 'Any') {
-                    if (filters.minBeds === 'Studio') min = 0;
-                    else min = parseInt(filters.minBeds);
+                    min = parseInt(filters.minBeds);
                 }
 
                 if (filters.maxBeds !== 'Any') {
-                    if (filters.maxBeds === 'Studio') max = 0;
-                    else if (filters.maxBeds === '12+ Bedrooms') max = 100;
-                    else max = parseInt(filters.maxBeds);
+                    max = parseInt(filters.maxBeds);
                 }
 
                 if (itemBeds < min || itemBeds > max) {
@@ -760,7 +685,7 @@ export default function Publicmarketplace() {
                                         <div>
                                             <h4 className="text-sm font-bold text-[#0F172A] leading-tight mb-2 line-clamp-2">{item.title}</h4>
                                             <div className="flex flex-wrap gap-1.5 mb-3">
-                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600">{item.subType}</span>
+                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600">{item.investmentStrategy}</span>
                                                 <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600 animate-pulse">{item.status === 'coming-soon' ? 'Coming Soon' : 'Sold Out'}</span>
                                             </div>
 
