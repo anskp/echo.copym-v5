@@ -268,7 +268,7 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
 
                         {/* Location Filters - Shows for ALL property types */}
                         <div>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">Location</label>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Location</label>
                             <div className="flex flex-col sm:flex-row gap-2">
                                 {/* Country */}
                                 <div className="relative flex-1">
@@ -399,6 +399,7 @@ export default function Publicmarketplace() {
     const [searchQuery, setSearchQuery] = useState('');
     const [showFilters, setShowFilters] = useState(false);
     const [isSortOpen, setIsSortOpen] = useState(false);
+    const [isBedsDropdownOpen, setIsBedsDropdownOpen] = useState(false);
     const [sortBy, setSortBy] = useState('price_desc'); // Default sort
 
     // Filter State
