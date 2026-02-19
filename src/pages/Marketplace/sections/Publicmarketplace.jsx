@@ -120,7 +120,7 @@ const MOCK_LAND_ITEMS = [
         badge: 'NEW',
         launchDate: 'Coming soon',
         propertyType: 'Land',
-        investmentStrategy: 'Fix n Flip',
+        investmentStrategy: 'Fix & Flip',
         country: 'UAE',
         city: 'Dubai',
         location: 'JVC',
@@ -132,10 +132,74 @@ const MOCK_LAND_ITEMS = [
 
 MOCK_INVESTMENTS.push(...MOCK_LAND_ITEMS);
 
+// Commodities Mock Data
+const MOCK_COMMODITIES = [
+    {
+        id: 101,
+        title: 'Gold Bullion Tokenized',
+        tokenSymbol: 'GLD-T',
+        category: 'COMMODITIES',
+        commodityCategory: 'Precious Metals',
+        commodityType: 'Gold',
+        esgScore: 'A',
+        roi: '8%',
+        cagr: '10.50%',
+        issuerName: 'Global Precious Metals',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Global+Precious+Metals&background=F59E0B&color=fff',
+        assetPrice: '$1M',
+        tokenPriceETH: '0.05 ETH',
+        tokenPriceUSD: '$150 USD',
+        availableTokens: 50000,
+        totalTokens: 500000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1610375461246-83df859d849d?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 60,
+        investmentStrategy: 'Capital Growth',
+        country: 'South Africa',
+        region: 'Africa',
+        location: 'Johannesburg',
+        priceVal: 50000,
+        tokenPercentage: 60
+    },
+    {
+        id: 102,
+        title: 'Solar Farm Revenue Share',
+        tokenSymbol: 'SOLAR-RS',
+        category: 'COMMODITIES',
+        commodityCategory: 'Energy Commodities',
+        commodityType: 'Solar farm revenue share',
+        esgScore: 'A+',
+        roi: '14%',
+        cagr: '16.00%',
+        issuerName: 'Renewable Energy Corp',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Renewable+Energy&background=10B981&color=fff',
+        assetPrice: '$2.5M',
+        tokenPriceETH: '0.1 ETH',
+        tokenPriceUSD: '$300 USD',
+        availableTokens: 100000,
+        totalTokens: 1000000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 45,
+        investmentStrategy: 'High-Yield',
+        country: 'USA',
+        region: 'North America',
+        location: 'California',
+        priceVal: 75000,
+        tokenPercentage: 45
+    }
+];
+
+MOCK_INVESTMENTS.push(...MOCK_COMMODITIES);
+
 const FILTER_TABS = ['All', 'Real Estate', 'Commodities', 'Arts', 'Sports', 'Carbon Credits'];
 
 const PROPERTY_TYPES = ['All', 'Residential', 'Commercial', 'Land', 'Multi-Units'];
-const INVESTMENT_STRATEGIES = ['Capital Growth', 'High-Yield', 'Prime', 'Fix n Flip'];
+const INVESTMENT_STRATEGIES = ['Capital Growth', 'High-Yield', 'Prime', 'Fix & Flip'];
 const COMPLETION_STATUSES = ['All', 'Ready', 'Under Construction', 'Off-Plan'];
 
 const BED_OPTIONS = ['1', '2', '3', '4', '5', '6'];
