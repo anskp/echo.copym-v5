@@ -140,6 +140,40 @@ const COMPLETION_STATUSES = ['All', 'Ready', 'Under Construction', 'Off-Plan'];
 
 const BED_OPTIONS = ['1', '2', '3', '4', '5', '6'];
 
+// Commodities Type Options
+const PRECIOUS_METALS_TYPES = ['All', 'Gold', 'Silver', 'Platinum', 'Palladium'];
+const ENERGY_COMMODITIES_TYPES = [
+    'All',
+    'Solar farm revenue share',
+    'Wind farm SPV',
+    'Diesel inventory trade finance',
+    'Crude oil storage-backed contract',
+    'LNG contract-backed exposure',
+    'Long-term strategic energy exposure'
+];
+const AGRICULTURAL_COMMODITIES_TYPES = [
+    'All',
+    'Wheat',
+    'Corn',
+    'Rice',
+    'Coffee',
+    'Cocoa',
+    'Cotton',
+    'Soybeans',
+    'Palm oil',
+    'Saffron',
+    'Black pepper'
+];
+const INDUSTRIAL_STRATEGIC_METALS_TYPES = [
+    'All',
+    'Copper (warehouse-backed)',
+    'Lithium carbonate (inventory-backed)',
+    'Nickel (refined stock)',
+    'Mining revenue SPV (structured exposure)'
+];
+
+const COMMODITIES_CATEGORIES = ['Precious Metals', 'Energy Commodities', 'Agricultural Commodities', 'Industrial / Strategic Metals'];
+
 const SORT_OPTIONS = [
     { label: 'Listing Price > Highest to low', value: 'price_desc' },
     { label: 'Listing Price > Lowest to high', value: 'price_asc' },
@@ -318,7 +352,7 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
 
                         {/* Bedrooms - Only for Residential */}
                         {localFilters.selectedPropertyType === 'Residential' && (
-                            <div>
+                            <div className="relative">
                                 <label className="block text-sm font-bold text-gray-700 mb-1.5">Bedrooms</label>
                                 <button
                                     onClick={() => setIsBedsDropdownOpen(!isBedsDropdownOpen)}
@@ -394,6 +428,219 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
     );
 };
 
+const CommoditiesFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply }) => {
+    const [localFilters, setLocalFilters] = useState(filters);
+
+    // Sync local state with props when panel opens
+    React.useEffect(() => {
+        setLocalFilters(filters);
+    }, [filters, isOpen]);
+
+    const updateFilter = (key, value) => {
+        setLocalFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const toggleInvestmentStrategy = (strategy) => {
+        const current = localFilters.selectedInvestmentStrategies || [];
+        const updated = current.includes(strategy)
+            ? current.filter(s => s !== strategy)
+            : [...current, strategy];
+        updateFilter('selectedInvestmentStrategies', updated);
+    };
+
+    const getCommodityTypes = (category) => {
+        switch (category) {
+            case 'Precious Metals':
+                return PRECIOUS_METALS_TYPES;
+            case 'Energy Commodities':
+                return ENERGY_COMMODITIES_TYPES;
+            case 'Agricultural Commodities':
+                return AGRICULTURAL_COMMODITIES_TYPES;
+            case 'Industrial / Strategic Metals':
+                return INDUSTRIAL_STRATEGIC_METALS_TYPES;
+            default:
+                return ['All'];
+        }
+    };
+
+    if (!isOpen || activeTab !== 'Commodities') return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-full bg-white rounded-3xl shadow-xl border border-gray-100 p-4 md:p-5 mb-8 overflow-visible z-20 relative"
+        >
+            <div className="flex flex-col gap-4">
+                {/* Header */}
+                <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        Commodities <ChevronDown size={20} />
+                    </h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+                        <X size={24} />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                    {/* Left Column - Category & Type */}
+                    <div className="flex flex-col gap-4">
+                        {/* Commodities Categories */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Category</label>
+                            <div className="flex flex-wrap gap-2">
+                                {COMMODITIES_CATEGORIES.map(cat => (
+                                    <button
+                                        key={cat}
+                                        onClick={() => {
+                                            updateFilter('selectedCategory', cat === localFilters.selectedCategory ? '' : cat);
+                                            if (cat !== localFilters.selectedCategory) updateFilter('selectedCommodityType', 'All');
+                                        }}
+                                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedCategory === cat
+                                            ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                            : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        {cat}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Commodity Type - Dynamic based on category */}
+                        {localFilters.selectedCategory && (
+                            <motion.div
+                                initial={{ opacity: 0, y: 10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                <label className="block text-sm font-bold text-gray-700 mb-3">
+                                    Type
+                                </label>
+                                <div className="flex flex-wrap gap-2">
+                                    {getCommodityTypes(localFilters.selectedCategory).map(type => (
+                                        <button
+                                            key={type}
+                                            onClick={() => updateFilter('selectedCommodityType', type)}
+                                            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedCommodityType === type
+                                                ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                                : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                                }`}
+                                        >
+                                            {type}
+                                        </button>
+                                    ))}
+                                </div>
+                            </motion.div>
+                        )}
+
+                        {/* Investment Strategies */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">
+                                Investment Strategy
+                            </label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {INVESTMENT_STRATEGIES.map(strategy => (
+                                    <button
+                                        key={strategy}
+                                        onClick={() => toggleInvestmentStrategy(strategy)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedInvestmentStrategies || []).includes(strategy)
+                                            ? 'bg-blue-50 text-blue-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{strategy}</span>
+                                        {(localFilters.selectedInvestmentStrategies || []).includes(strategy) && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Location Filters */}
+                    <div className="flex flex-col gap-4">
+                        {/* Location Filters */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Origin</label>
+                            <div className="flex flex-col sm:flex-row gap-2">
+                                {/* Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={localFilters.country || ''}
+                                        onChange={(e) => updateFilter('country', e.target.value)}
+                                    >
+                                        <option value="">Country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="UAE">UAE</option>
+                                        <option value="Australia">Australia</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="China">China</option>
+                                        <option value="India">India</option>
+                                        <option value="South Africa">South Africa</option>
+                                        <option value="Russia">Russia</option>
+                                        <option value="Indonesia">Indonesia</option>
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Region */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={localFilters.region || ''}
+                                        onChange={(e) => updateFilter('region', e.target.value)}
+                                    >
+                                        <option value="">Region</option>
+                                        <option value="North America">North America</option>
+                                        <option value="South America">South America</option>
+                                        <option value="Europe">Europe</option>
+                                        <option value="Middle East">Middle East</option>
+                                        <option value="Asia Pacific">Asia Pacific</option>
+                                        <option value="Africa">Africa</option>
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Search */}
+                                <div className="relative flex-[1.5]">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <Search size={14} className="text-gray-400" />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder="Search..."
+                                        className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+                                        value={localFilters.location || ''}
+                                        onChange={(e) => updateFilter('location', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="flex justify-end pt-4 border-t border-gray-50 mt-4">
+                    <button
+                        onClick={() => {
+                            setFilters(localFilters);
+                            onApply(localFilters);
+                            onClose();
+                        }}
+                        className="px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white font-bold rounded-lg transition-colors shadow-lg shadow-green-100"
+                    >
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
 export default function Publicmarketplace() {
     const [activeTab, setActiveTab] = useState('All');
     const [searchQuery, setSearchQuery] = useState('');
@@ -402,7 +649,7 @@ export default function Publicmarketplace() {
     const [isBedsDropdownOpen, setIsBedsDropdownOpen] = useState(false);
     const [sortBy, setSortBy] = useState('price_desc'); // Default sort
 
-    // Filter State
+    // Filter State - Real Estate
     const [filters, setFilters] = useState({
         minBeds: 'Any',
         maxBeds: 'Any',
@@ -415,20 +662,35 @@ export default function Publicmarketplace() {
         completionStatus: 'All'
     });
 
+    // Filter State - Commodities
+    const [commoditiesFilters, setCommoditiesFilters] = useState({
+        selectedCategory: '',
+        selectedCommodityType: 'All',
+        selectedInvestmentStrategies: [],
+        country: '',
+        region: '',
+        location: ''
+    });
+
     const handleApplyFilters = (newFilters) => {
         setFilters(newFilters);
+    };
+
+    const handleApplyCommoditiesFilters = (newFilters) => {
+        setCommoditiesFilters(newFilters);
     };
 
     // Filter logic
     const filteredInvestments = MOCK_INVESTMENTS.filter((item) => {
         // Tab Filter
         const matchesTab = activeTab === 'All' ||
-            (activeTab === 'Real Estate' && item.category === 'REAL ESTATE');
+            (activeTab === 'Real Estate' && item.category === 'REAL ESTATE') ||
+            (activeTab === 'Commodities' && item.category === 'COMMODITIES');
 
         // Search Query
         const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
 
-        // Advanced Filters (Only apply if active tab is Real Estate)
+        // Advanced Filters - Real Estate
         let matchesAdvanced = true;
         if (activeTab === 'Real Estate') {
             // Property Type
@@ -475,6 +737,34 @@ export default function Publicmarketplace() {
             }
         }
 
+        // Advanced Filters - Commodities
+        if (activeTab === 'Commodities') {
+            // Category
+            if (commoditiesFilters.selectedCategory && commoditiesFilters.selectedCategory !== 'All' && item.commodityCategory !== commoditiesFilters.selectedCategory) {
+                matchesAdvanced = false;
+            }
+            // Commodity Type
+            if (matchesAdvanced && commoditiesFilters.selectedCommodityType && commoditiesFilters.selectedCommodityType !== 'All' && item.commodityType !== commoditiesFilters.selectedCommodityType) {
+                matchesAdvanced = false;
+            }
+            // Investment Strategy
+            if (matchesAdvanced && commoditiesFilters.selectedInvestmentStrategies.length > 0 && !commoditiesFilters.selectedInvestmentStrategies.includes(item.investmentStrategy)) {
+                matchesAdvanced = false;
+            }
+            // Country
+            if (matchesAdvanced && commoditiesFilters.country && item.country !== commoditiesFilters.country) {
+                matchesAdvanced = false;
+            }
+            // Region
+            if (matchesAdvanced && commoditiesFilters.region && item.region !== commoditiesFilters.region) {
+                matchesAdvanced = false;
+            }
+            // Location
+            if (matchesAdvanced && commoditiesFilters.location && !item.location.toLowerCase().includes(commoditiesFilters.location.toLowerCase())) {
+                matchesAdvanced = false;
+            }
+        }
+
         return matchesTab && matchesSearch && matchesAdvanced;
     }).sort((a, b) => {
         switch (sortBy) {
@@ -501,16 +791,21 @@ export default function Publicmarketplace() {
                     {/* Left: Filters */}
                     <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                         {FILTER_TABS.map((tab) => {
-                            const isClickable = tab === 'All' || tab === 'Real Estate';
+                            const isClickable = tab === 'All' || tab === 'Real Estate' || tab === 'Commodities';
                             return (
                                 <button
                                     key={tab}
                                     disabled={!isClickable}
                                     onClick={() => {
                                         if (isClickable) {
-                                            setActiveTab(tab);
-                                            if (tab === 'Real Estate') setShowFilters(true);
-                                            else setShowFilters(false);
+                                            // Toggle logic: if clicking the same active tab, close filters
+                                            if (activeTab === tab && (tab === 'Real Estate' || tab === 'Commodities')) {
+                                                setShowFilters(!showFilters);
+                                            } else {
+                                                setActiveTab(tab);
+                                                if (tab === 'Real Estate' || tab === 'Commodities') setShowFilters(true);
+                                                else setShowFilters(false);
+                                            }
                                         }
                                     }}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeTab === tab
@@ -524,14 +819,16 @@ export default function Publicmarketplace() {
                                 </button>
                             );
                         })}
-                        <button
-                            onClick={() => setShowFilters(!showFilters)}
-                            className={`ml-2 flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-lg shadow-gray-200 ${showFilters ? 'bg-[#0F172A] text-white' : 'bg-white text-gray-700 border border-gray-200'
-                                }`}
-                        >
-                            <SlidersHorizontal size={16} />
-                            Filters
-                        </button>
+                        {(activeTab === 'Real Estate' || activeTab === 'Commodities') && (
+                            <button
+                                onClick={() => setShowFilters(!showFilters)}
+                                className={`ml-2 flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-lg shadow-gray-200 ${showFilters ? 'bg-[#0F172A] text-white' : 'bg-white text-gray-700 border border-gray-200'
+                                    }`}
+                            >
+                                <SlidersHorizontal size={16} />
+                                Filters
+                            </button>
+                        )}
                     </div>
 
                     {/* Right: Search & Sort */}
@@ -589,14 +886,24 @@ export default function Publicmarketplace() {
 
                 {/* Filter Panel */}
                 <AnimatePresence>
-                    {showFilters && (
+                    {showFilters && activeTab === 'Real Estate' && (
                         <FilterPanel
                             isOpen={showFilters}
                             onClose={() => setShowFilters(false)}
-                            activeTab={activeTab === 'Real Estate' ? 'Real Estate' : 'Real Estate'} // Always show if toggled on, but visual logic might prefer binding to tab
+                            activeTab="Real Estate"
                             filters={filters}
                             setFilters={setFilters}
                             onApply={handleApplyFilters}
+                        />
+                    )}
+                    {showFilters && activeTab === 'Commodities' && (
+                        <CommoditiesFilterPanel
+                            isOpen={showFilters}
+                            onClose={() => setShowFilters(false)}
+                            activeTab="Commodities"
+                            filters={commoditiesFilters}
+                            setFilters={setCommoditiesFilters}
+                            onApply={handleApplyCommoditiesFilters}
                         />
                     )}
                 </AnimatePresence>
