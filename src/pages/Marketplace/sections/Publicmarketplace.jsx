@@ -196,6 +196,330 @@ const MOCK_COMMODITIES = [
 
 MOCK_INVESTMENTS.push(...MOCK_COMMODITIES);
 
+// Arts Mock Data
+const MOCK_ARTS = [
+    {
+        id: 201,
+        title: 'Monet Water Lilies Fragment',
+        tokenSymbol: 'MONET-WL',
+        category: 'ARTS',
+        artType: 'Paintings',
+        artistName: 'Claude Monet',
+        artistTier: 'Blue-Chip',
+        yearCreated: 1906,
+        esgScore: 'A',
+        roi: '18%',
+        cagr: '22.50%',
+        issuerName: 'Christie\'s Tokenized Art',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Christies&background=7C3AED&color=fff',
+        assetPrice: '$2.5M',
+        tokenPriceETH: '0.5 ETH',
+        tokenPriceUSD: '$1,500 USD',
+        availableTokens: 75000,
+        totalTokens: 500000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1579783902614-a3fb39279c23?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 85,
+        investmentStrategy: 'Blue-Chip Stability',
+        authentication: ['Authenticated', 'Museum Exhibited'],
+        provenance: 'Private Collection, Paris',
+        exhibitionHistory: 'Musée d\'Orsay 2019',
+        country: 'France',
+        region: 'Europe',
+        location: 'Paris',
+        priceVal: 150000,
+        tokenPercentage: 85
+    },
+    {
+        id: 202,
+        title: 'Contemporary Sculpture Series',
+        tokenSymbol: 'CONT-SCULPT',
+        category: 'ARTS',
+        artType: 'Sculptures',
+        artistName: 'Anish Kapoor',
+        artistTier: 'Established',
+        yearCreated: 2020,
+        esgScore: 'A',
+        roi: '15%',
+        cagr: '18.00%',
+        issuerName: 'Sotheby\'s Digital',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Sothebys&background=DC2626&color=fff',
+        assetPrice: '$1.8M',
+        tokenPriceETH: '0.3 ETH',
+        tokenPriceUSD: '$900 USD',
+        availableTokens: 120000,
+        totalTokens: 400000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1554188248-986adbb73be0?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 70,
+        investmentStrategy: 'Capital Growth',
+        authentication: ['Authenticated', 'Auction Proven'],
+        provenance: 'Gallery Exhibition 2021',
+        exhibitionHistory: 'Tate Modern 2022',
+        country: 'UK',
+        region: 'Europe',
+        location: 'London',
+        priceVal: 90000,
+        tokenPercentage: 70
+    },
+    {
+        id: 203,
+        title: 'NFT Digital Art Masterpiece',
+        tokenSymbol: 'NFT-DIGI',
+        category: 'ARTS',
+        artType: 'Digital / Mixed Media',
+        artistName: 'Beeple',
+        artistTier: 'Established',
+        yearCreated: 2023,
+        esgScore: 'B',
+        roi: '35%',
+        cagr: '45.00%',
+        issuerName: 'Nifty Gateway',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Nifty+Gateway&background=EC4899&color=fff',
+        assetPrice: '$5M',
+        tokenPriceETH: '1.2 ETH',
+        tokenPriceUSD: '$3,600 USD',
+        availableTokens: 200000,
+        totalTokens: 1000000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1634926878768-2a5b3c42f139?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 80,
+        investmentStrategy: 'Speculative Upside',
+        authentication: ['Authenticated'],
+        provenance: 'Blockchain Verified',
+        exhibitionHistory: 'Digital Art Fair 2023',
+        country: 'USA',
+        region: 'North America',
+        location: 'Miami',
+        priceVal: 360000,
+        tokenPercentage: 80
+    }
+];
+
+MOCK_INVESTMENTS.push(...MOCK_ARTS);
+
+// Sports Mock Data
+const MOCK_SPORTS = [
+    {
+        id: 301,
+        title: 'Cristiano Ronaldo Revenue Share',
+        tokenSymbol: 'CR7-REV',
+        category: 'SPORTS',
+        assetType: 'Athlete Revenue Share',
+        sportType: 'Football',
+        athleteName: 'Cristiano Ronaldo',
+        teamAffiliation: 'Al Nassr FC',
+        esgScore: 'A',
+        roi: '25%',
+        cagr: '30.00%',
+        issuerName: 'SportX Capital',
+        issuerLogo: 'https://ui-avatars.com/api/?name=SportX&background=EF4444&color=fff',
+        assetPrice: '$10M',
+        tokenPriceETH: '2.0 ETH',
+        tokenPriceUSD: '$6,000 USD',
+        availableTokens: 150000,
+        totalTokens: 500000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1579952363873-27f3bade9f55?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 70,
+        investmentStrategy: 'Revenue Yield',
+        revenueModel: 'Contracted Revenue Share',
+        contractValue: '$200M',
+        contractDuration: '3 years',
+        country: 'Saudi Arabia',
+        region: 'Middle East',
+        location: 'Riyadh',
+        priceVal: 600000,
+        tokenPercentage: 70
+    },
+    {
+        id: 302,
+        title: 'Manchester United FC Equity',
+        tokenSymbol: 'MANU-EQ',
+        category: 'SPORTS',
+        assetType: 'Club / Franchise Equity',
+        sportType: 'Football',
+        athleteName: 'N/A',
+        teamAffiliation: 'Manchester United',
+        esgScore: 'A',
+        roi: '18%',
+        cagr: '22.00%',
+        issuerName: 'Premier League Investments',
+        issuerLogo: 'https://ui-avatars.com/api/?name=PL&background=3B0764&color=fff',
+        assetPrice: '$50M',
+        tokenPriceETH: '5.0 ETH',
+        tokenPriceUSD: '$15,000 USD',
+        availableTokens: 80000,
+        totalTokens: 200000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1518091043644-c1d4457512c6?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 60,
+        investmentStrategy: 'Franchise Stability',
+        revenueModel: 'Media Rights Distribution',
+        contractValue: 'N/A',
+        contractDuration: 'Perpetual',
+        country: 'UK',
+        region: 'Europe',
+        location: 'Manchester',
+        priceVal: 1500000,
+        tokenPercentage: 60
+    },
+    {
+        id: 303,
+        title: 'NBA Media Rights Pool',
+        tokenSymbol: 'NBA-Media',
+        category: 'SPORTS',
+        assetType: 'Media Rights Revenue',
+        sportType: 'Basketball',
+        athleteName: 'N/A',
+        teamAffiliation: 'NBA League',
+        esgScore: 'A+',
+        roi: '20%',
+        cagr: '25.00%',
+        issuerName: 'NBA Digital Ventures',
+        issuerLogo: 'https://ui-avatars.com/api/?name=NBA&background=1D428A&color=fff',
+        assetPrice: '$25M',
+        tokenPriceETH: '3.5 ETH',
+        tokenPriceUSD: '$10,500 USD',
+        availableTokens: 0,
+        totalTokens: 300000,
+        status: 'sold-out',
+        image: 'https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=800&h=600&fit=crop',
+        badge: 'SOLD OUT',
+        launchDate: 'Sold Out',
+        progress: 100,
+        investmentStrategy: 'Revenue Yield',
+        revenueModel: 'Media Rights Distribution',
+        contractValue: '$24B',
+        contractDuration: '9 years',
+        country: 'USA',
+        region: 'North America',
+        location: 'New York',
+        priceVal: 1050000,
+        tokenPercentage: 100
+    }
+];
+
+MOCK_INVESTMENTS.push(...MOCK_SPORTS);
+
+// Carbon Credits Mock Data
+const MOCK_CARBON_CREDITS = [
+    {
+        id: 401,
+        title: 'Amazon Rainforest Conservation',
+        tokenSymbol: 'AMZN-CRN',
+        category: 'CARBON_CREDITS',
+        projectType: 'Forestry',
+        standard: 'Gold Standard',
+        creditType: 'Nature-Based',
+        esgScore: 'A+',
+        roi: '15%',
+        cagr: '18.00%',
+        issuerName: 'Rainforest Trust',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Rainforest+Trust&background=059669&color=fff',
+        assetPrice: '$5M',
+        tokenPriceETH: '0.8 ETH',
+        tokenPriceUSD: '$2,400 USD',
+        availableTokens: 100000,
+        totalTokens: 250000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1511497584788-876760111969?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 60,
+        investmentStrategy: 'Long-Term Impact',
+        co2Volume: '50,000 tonnes/year',
+        sdgAlignment: 'SDG 13, 15',
+        projectLocation: 'Brazil',
+        permanencePeriod: '100 years',
+        country: 'Brazil',
+        region: 'South America',
+        location: 'Amazon Basin',
+        priceVal: 240000,
+        tokenPercentage: 60
+    },
+    {
+        id: 402,
+        title: 'Solar Farm Carbon Offset',
+        tokenSymbol: 'SOLAR-CO2',
+        category: 'CARBON_CREDITS',
+        projectType: 'Renewable Energy',
+        standard: 'VARA Standards',
+        creditType: 'Tech-Based',
+        esgScore: 'A',
+        roi: '12%',
+        cagr: '14.50%',
+        issuerName: 'Clean Energy Fund',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Clean+Energy&background=F59E0B&color=fff',
+        assetPrice: '$3M',
+        tokenPriceETH: '0.5 ETH',
+        tokenPriceUSD: '$1,500 USD',
+        availableTokens: 80000,
+        totalTokens: 200000,
+        status: 'open',
+        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?w=800&h=600&fit=crop',
+        badge: 'OPEN',
+        launchDate: 'Live Now',
+        progress: 60,
+        investmentStrategy: 'Yield via Offtake',
+        co2Volume: '30,000 tonnes/year',
+        sdgAlignment: 'SDG 7, 13',
+        projectLocation: 'India',
+        permanencePeriod: '25 years',
+        country: 'India',
+        region: 'Asia Pacific',
+        location: 'Rajasthan',
+        priceVal: 150000,
+        tokenPercentage: 60
+    },
+    {
+        id: 403,
+        title: 'Methane Capture Landfill',
+        tokenSymbol: 'METH-CAP',
+        category: 'CARBON_CREDITS',
+        projectType: 'Methane Capture',
+        standard: 'Gold Standard',
+        creditType: 'Avoidance',
+        esgScore: 'A',
+        roi: '18%',
+        cagr: '22.00%',
+        issuerName: 'Waste Management Corp',
+        issuerLogo: 'https://ui-avatars.com/api/?name=Waste+Management&background=1E40AF&color=fff',
+        assetPrice: '$8M',
+        tokenPriceETH: '1.5 ETH',
+        tokenPriceUSD: '$4,500 USD',
+        availableTokens: 0,
+        totalTokens: 300000,
+        status: 'sold-out',
+        image: 'https://images.unsplash.com/photo-1532996122724-e3c351a81f80?w=800&h=600&fit=crop',
+        badge: 'SOLD OUT',
+        launchDate: 'Sold Out',
+        progress: 100,
+        investmentStrategy: 'Capital Appreciation',
+        co2Volume: '75,000 tonnes/year',
+        sdgAlignment: 'SDG 11, 13',
+        projectLocation: 'USA',
+        permanencePeriod: '30 years',
+        country: 'USA',
+        region: 'North America',
+        location: 'California',
+        priceVal: 450000,
+        tokenPercentage: 100
+    }
+];
+
+MOCK_INVESTMENTS.push(...MOCK_CARBON_CREDITS);
+
 const FILTER_TABS = ['All', 'Real Estate', 'Commodities', 'Arts', 'Sports', 'Carbon Credits'];
 
 const PROPERTY_TYPES = ['All', 'Residential', 'Commercial', 'Land', 'Multi-Units'];
@@ -237,6 +561,58 @@ const INDUSTRIAL_STRATEGIC_METALS_TYPES = [
 ];
 
 const COMMODITIES_CATEGORIES = ['Precious Metals', 'Energy Commodities', 'Agricultural Commodities', 'Industrial / Strategic Metals'];
+
+// Arts Type Options
+const ARTS_TYPES = ['All', 'Paintings', 'Sculptures', 'Photography', 'Digital / Mixed Media'];
+
+// Artist Tier Options
+const ARTIST_TIERS = ['Emerging', 'Mid-Career', 'Established', 'Blue-Chip'];
+
+// Arts Investment Strategies
+const ARTS_INVESTMENT_STRATEGIES = ['Capital Growth', 'Blue-Chip Stability', 'Speculative Upside', 'Curated Portfolio'];
+
+// Authentication Options
+const AUTHENTICATION_OPTIONS = ['Authenticated', 'Museum Exhibited', 'Auction Proven', 'Private Collection Verified'];
+
+// Sports Asset Type Options
+const SPORTS_ASSET_TYPES = [
+    'All',
+    'Athlete Revenue Share',
+    'Sports Academy Investment',
+    'Club / Franchise Equity',
+    'Media Rights Revenue',
+    'Tournament Revenue Pool'
+];
+
+// Sports Type Options
+const SPORTS_TYPES = ['All', 'Football', 'Cricket', 'Basketball', 'Tennis', 'Motorsports', 'Others'];
+
+// Sports Investment Strategies
+const SPORTS_INVESTMENT_STRATEGIES = ['Revenue Yield', 'Growth Potential', 'Performance-Linked', 'Franchise Stability'];
+
+// Sports Revenue Models
+const SPORTS_REVENUE_MODELS = [
+    'Contracted Revenue Share',
+    'Sponsorship Income',
+    'Media Rights Distribution',
+    'Prize Pool Distribution',
+    'Equity Appreciation'
+];
+
+// Carbon Credits Project Types
+const CARBON_PROJECT_TYPES = ['All', 'Forestry', 'Renewable Energy', 'Methane Capture', 'Industrial Reduction', 'Blue Carbon'];
+
+// Carbon Credits Standards
+const CARBON_STANDARDS = ['All', 'VARA Standards', 'Gold Standard'];
+
+// Carbon Credits Investment Strategies
+const CARBON_INVESTMENT_STRATEGIES = ['Capital Appreciation', 'Yield via Offtake', 'Long-Term Impact', 'ESG Allocation'];
+
+// Carbon Credits Credit Types
+const CARBON_CREDIT_TYPES = ['All', 'Avoidance', 'Removal', 'Nature-Based', 'Tech-Based'];
+
+// Carbon Credits Impact Metrics Options
+const CARBON_IMPACT_METRICS = ['CO₂ Volume', 'SDG Alignment', 'Project Location', 'Permanence Period'];
 
 const SORT_OPTIONS = [
     { label: 'Listing Price > Highest to low', value: 'price_desc' },
@@ -373,7 +749,10 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                     <select
                                         className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         value={localFilters.country || ''}
-                                        onChange={(e) => updateFilter('country', e.target.value)}
+                                        onChange={(e) => {
+                                            updateFilter('country', e.target.value);
+                                            updateFilter('city', '');
+                                        }}
                                     >
                                         <option value="">Country</option>
                                         <option value="UK">UK</option>
@@ -383,29 +762,46 @@ const FilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply 
                                     <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                                 </div>
 
-                                {/* City */}
+                                {/* City - Dependent on Country */}
                                 <div className="relative flex-1">
                                     <select
-                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                                         value={localFilters.city || ''}
                                         onChange={(e) => updateFilter('city', e.target.value)}
+                                        disabled={!localFilters.country}
                                     >
                                         <option value="">City</option>
-                                        <option value="Dubai">Dubai</option>
-                                        <option value="London">London</option>
-                                        <option value="New York">New York</option>
+                                        {localFilters.country === 'UK' && (
+                                            <>
+                                                <option value="London">London</option>
+                                                <option value="Manchester">Manchester</option>
+                                            </>
+                                        )}
+                                        {localFilters.country === 'UAE' && (
+                                            <>
+                                                <option value="Dubai">Dubai</option>
+                                                <option value="Abu Dhabi">Abu Dhabi</option>
+                                            </>
+                                        )}
+                                        {localFilters.country === 'USA' && (
+                                            <>
+                                                <option value="New York">New York</option>
+                                                <option value="Los Angeles">Los Angeles</option>
+                                                <option value="Miami">Miami</option>
+                                            </>
+                                        )}
                                     </select>
                                     <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                                 </div>
 
-                                {/* Search */}
+                                {/* Search within selected location */}
                                 <div className="relative flex-[1.5]">
                                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                         <Search size={14} className="text-gray-400" />
                                     </div>
                                     <input
                                         type="text"
-                                        placeholder="Search..."
+                                        placeholder={localFilters.country ? `Search in ${localFilters.country}...` : 'Search location...'}
                                         className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
                                         value={localFilters.location || ''}
                                         onChange={(e) => updateFilter('location', e.target.value)}
@@ -634,7 +1030,10 @@ const CommoditiesFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilter
                                     <select
                                         className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         value={localFilters.country || ''}
-                                        onChange={(e) => updateFilter('country', e.target.value)}
+                                        onChange={(e) => {
+                                            updateFilter('country', e.target.value);
+                                            updateFilter('region', '');
+                                        }}
                                     >
                                         <option value="">Country</option>
                                         <option value="USA">USA</option>
@@ -651,32 +1050,667 @@ const CommoditiesFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilter
                                     <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                                 </div>
 
-                                {/* Region */}
+                                {/* Region - Dependent on Country */}
                                 <div className="relative flex-1">
                                     <select
-                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
                                         value={localFilters.region || ''}
                                         onChange={(e) => updateFilter('region', e.target.value)}
+                                        disabled={!localFilters.country}
                                     >
                                         <option value="">Region</option>
-                                        <option value="North America">North America</option>
-                                        <option value="South America">South America</option>
-                                        <option value="Europe">Europe</option>
-                                        <option value="Middle East">Middle East</option>
-                                        <option value="Asia Pacific">Asia Pacific</option>
-                                        <option value="Africa">Africa</option>
+                                        {localFilters.country === 'USA' && <option value="North America">North America</option>}
+                                        {localFilters.country === 'UK' && <option value="Europe">Europe</option>}
+                                        {localFilters.country === 'UAE' && <option value="Middle East">Middle East</option>}
+                                        {localFilters.country === 'Australia' && <option value="Asia Pacific">Asia Pacific</option>}
+                                        {localFilters.country === 'Brazil' && <option value="South America">South America</option>}
+                                        {localFilters.country === 'China' && <option value="Asia Pacific">Asia Pacific</option>}
+                                        {localFilters.country === 'India' && <option value="Asia Pacific">Asia Pacific</option>}
+                                        {localFilters.country === 'South Africa' && <option value="Africa">Africa</option>}
+                                        {localFilters.country === 'Russia' && <option value="Europe">Europe</option>}
+                                        {localFilters.country === 'Indonesia' && <option value="Asia Pacific">Asia Pacific</option>}
                                     </select>
                                     <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
                                 </div>
 
-                                {/* Search */}
+                                {/* Search within selected location */}
                                 <div className="relative flex-[1.5]">
                                     <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                         <Search size={14} className="text-gray-400" />
                                     </div>
                                     <input
                                         type="text"
-                                        placeholder="Search..."
+                                        placeholder={localFilters.country ? `Search in ${localFilters.country}...` : 'Search location...'}
+                                        className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+                                        value={localFilters.location || ''}
+                                        onChange={(e) => updateFilter('location', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="flex justify-end pt-4 border-t border-gray-50 mt-4">
+                    <button
+                        onClick={() => {
+                            setFilters(localFilters);
+                            onApply(localFilters);
+                            onClose();
+                        }}
+                        className="px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white font-bold rounded-lg transition-colors shadow-lg shadow-green-100"
+                    >
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
+const ArtsFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply }) => {
+    const [localFilters, setLocalFilters] = useState(filters);
+
+    // Sync local state with props when panel opens
+    React.useEffect(() => {
+        setLocalFilters(filters);
+    }, [filters, isOpen]);
+
+    const updateFilter = (key, value) => {
+        setLocalFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const toggleInvestmentStrategy = (strategy) => {
+        const current = localFilters.selectedInvestmentStrategies || [];
+        const updated = current.includes(strategy)
+            ? current.filter(s => s !== strategy)
+            : [...current, strategy];
+        updateFilter('selectedInvestmentStrategies', updated);
+    };
+
+    const toggleAuthentication = (auth) => {
+        const current = localFilters.selectedAuthentications || [];
+        const updated = current.includes(auth)
+            ? current.filter(a => a !== auth)
+            : [...current, auth];
+        updateFilter('selectedAuthentications', updated);
+    };
+
+    if (!isOpen || activeTab !== 'Arts') return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-full bg-white rounded-3xl shadow-xl border border-gray-100 p-4 md:p-5 mb-8 overflow-visible z-20 relative"
+        >
+            <div className="flex flex-col gap-4">
+                {/* Header */}
+                <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        Arts <ChevronDown size={20} />
+                    </h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+                        <X size={24} />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                    {/* Left Column - Type, Artist Tier, Investment Strategy */}
+                    <div className="flex flex-col gap-4">
+                        {/* Arts Types */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Type</label>
+                            <div className="flex flex-wrap gap-2">
+                                {ARTS_TYPES.map(type => (
+                                    <button
+                                        key={type}
+                                        onClick={() => updateFilter('selectedType', type)}
+                                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedType === type
+                                            ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                            : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        {type}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Artist Tier */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Artist Tier</label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {ARTIST_TIERS.map(tier => (
+                                    <button
+                                        key={tier}
+                                        onClick={() => updateFilter('artistTier', tier)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${localFilters.artistTier === tier
+                                            ? 'bg-purple-50 text-purple-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{tier}</span>
+                                        {localFilters.artistTier === tier && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Investment Strategies */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">
+                                Investment Strategy
+                            </label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {ARTS_INVESTMENT_STRATEGIES.map(strategy => (
+                                    <button
+                                        key={strategy}
+                                        onClick={() => toggleInvestmentStrategy(strategy)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedInvestmentStrategies || []).includes(strategy)
+                                            ? 'bg-blue-50 text-blue-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{strategy}</span>
+                                        {(localFilters.selectedInvestmentStrategies || []).includes(strategy) && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Authentication & Location */}
+                    <div className="flex flex-col gap-4">
+                        {/* Authentication */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Authentication</label>
+                            <div className="grid grid-cols-1 gap-2">
+                                {AUTHENTICATION_OPTIONS.map(auth => (
+                                    <button
+                                        key={auth}
+                                        onClick={() => toggleAuthentication(auth)}
+                                        className={`px-4 py-3 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedAuthentications || []).includes(auth)
+                                            ? 'bg-green-50 text-green-700 font-semibold border-2 border-green-200'
+                                            : 'text-gray-600 hover:bg-gray-50 border-2 border-transparent'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-2">{auth}</span>
+                                        {(localFilters.selectedAuthentications || []).includes(auth) && <Check size={16} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Location Filters */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Location</label>
+                            <div className="flex flex-col sm:flex-row gap-2">
+                                {/* Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={localFilters.country || ''}
+                                        onChange={(e) => {
+                                            updateFilter('country', e.target.value);
+                                            updateFilter('region', '');
+                                        }}
+                                    >
+                                        <option value="">Country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="France">France</option>
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Region - Dependent on Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                                        value={localFilters.region || ''}
+                                        onChange={(e) => updateFilter('region', e.target.value)}
+                                        disabled={!localFilters.country}
+                                    >
+                                        <option value="">Region</option>
+                                        {localFilters.country === 'USA' && <option value="North America">North America</option>}
+                                        {localFilters.country === 'UK' && <option value="Europe">Europe</option>}
+                                        {localFilters.country === 'France' && <option value="Europe">Europe</option>}
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Search within selected location */}
+                                <div className="relative flex-[1.5]">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <Search size={14} className="text-gray-400" />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder={localFilters.country ? `Search in ${localFilters.country}...` : 'Search location...'}
+                                        className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+                                        value={localFilters.location || ''}
+                                        onChange={(e) => updateFilter('location', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="flex justify-end pt-4 border-t border-gray-50 mt-4">
+                    <button
+                        onClick={() => {
+                            setFilters(localFilters);
+                            onApply(localFilters);
+                            onClose();
+                        }}
+                        className="px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white font-bold rounded-lg transition-colors shadow-lg shadow-green-100"
+                    >
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
+const SportsFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply }) => {
+    const [localFilters, setLocalFilters] = useState(filters);
+
+    // Sync local state with props when panel opens
+    React.useEffect(() => {
+        setLocalFilters(filters);
+    }, [filters, isOpen]);
+
+    const updateFilter = (key, value) => {
+        setLocalFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const toggleInvestmentStrategy = (strategy) => {
+        const current = localFilters.selectedInvestmentStrategies || [];
+        const updated = current.includes(strategy)
+            ? current.filter(s => s !== strategy)
+            : [...current, strategy];
+        updateFilter('selectedInvestmentStrategies', updated);
+    };
+
+    const toggleRevenueModel = (model) => {
+        const current = localFilters.selectedRevenueModels || [];
+        const updated = current.includes(model)
+            ? current.filter(m => m !== model)
+            : [...current, model];
+        updateFilter('selectedRevenueModels', updated);
+    };
+
+    if (!isOpen || activeTab !== 'Sports') return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-full bg-white rounded-3xl shadow-xl border border-gray-100 p-4 md:p-5 mb-8 overflow-visible z-20 relative"
+        >
+            <div className="flex flex-col gap-4">
+                {/* Header */}
+                <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        Sports <ChevronDown size={20} />
+                    </h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+                        <X size={24} />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                    {/* Left Column - Asset Type, Sport Type, Investment Strategy */}
+                    <div className="flex flex-col gap-4">
+                        {/* Sports Asset Types */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Asset Type</label>
+                            <div className="flex flex-wrap gap-2">
+                                {SPORTS_ASSET_TYPES.map(type => (
+                                    <button
+                                        key={type}
+                                        onClick={() => updateFilter('selectedAssetType', type)}
+                                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedAssetType === type
+                                            ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                            : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        {type}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Sport Type */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Sport Type</label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {SPORTS_TYPES.map(sport => (
+                                    <button
+                                        key={sport}
+                                        onClick={() => updateFilter('sportType', sport)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${localFilters.sportType === sport
+                                            ? 'bg-orange-50 text-orange-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{sport}</span>
+                                        {localFilters.sportType === sport && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Investment Strategies */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">
+                                Investment Strategy
+                            </label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {SPORTS_INVESTMENT_STRATEGIES.map(strategy => (
+                                    <button
+                                        key={strategy}
+                                        onClick={() => toggleInvestmentStrategy(strategy)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedInvestmentStrategies || []).includes(strategy)
+                                            ? 'bg-blue-50 text-blue-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{strategy}</span>
+                                        {(localFilters.selectedInvestmentStrategies || []).includes(strategy) && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Revenue Model & Location */}
+                    <div className="flex flex-col gap-4">
+                        {/* Revenue Model */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Revenue Model</label>
+                            <div className="grid grid-cols-1 gap-2">
+                                {SPORTS_REVENUE_MODELS.map(model => (
+                                    <button
+                                        key={model}
+                                        onClick={() => toggleRevenueModel(model)}
+                                        className={`px-4 py-3 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedRevenueModels || []).includes(model)
+                                            ? 'bg-orange-50 text-orange-700 font-semibold border-2 border-orange-200'
+                                            : 'text-gray-600 hover:bg-gray-50 border-2 border-transparent'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-2">{model}</span>
+                                        {(localFilters.selectedRevenueModels || []).includes(model) && <Check size={16} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Location Filters */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Location</label>
+                            <div className="flex flex-col sm:flex-row gap-2">
+                                {/* Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={localFilters.country || ''}
+                                        onChange={(e) => {
+                                            updateFilter('country', e.target.value);
+                                            updateFilter('region', '');
+                                        }}
+                                    >
+                                        <option value="">Country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="UK">UK</option>
+                                        <option value="Saudi Arabia">Saudi Arabia</option>
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Region - Dependent on Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                                        value={localFilters.region || ''}
+                                        onChange={(e) => updateFilter('region', e.target.value)}
+                                        disabled={!localFilters.country}
+                                    >
+                                        <option value="">Region</option>
+                                        {localFilters.country === 'USA' && <option value="North America">North America</option>}
+                                        {localFilters.country === 'UK' && <option value="Europe">Europe</option>}
+                                        {localFilters.country === 'Saudi Arabia' && <option value="Middle East">Middle East</option>}
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Search within selected location */}
+                                <div className="relative flex-[1.5]">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <Search size={14} className="text-gray-400" />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder={localFilters.country ? `Search in ${localFilters.country}...` : 'Search location...'}
+                                        className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+                                        value={localFilters.location || ''}
+                                        onChange={(e) => updateFilter('location', e.target.value)}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Footer */}
+                <div className="flex justify-end pt-4 border-t border-gray-50 mt-4">
+                    <button
+                        onClick={() => {
+                            setFilters(localFilters);
+                            onApply(localFilters);
+                            onClose();
+                        }}
+                        className="px-8 py-3 bg-[#10B981] hover:bg-[#059669] text-white font-bold rounded-lg transition-colors shadow-lg shadow-green-100"
+                    >
+                        Apply
+                    </button>
+                </div>
+            </div>
+        </motion.div>
+    );
+};
+
+const CarbonCreditsFilterPanel = ({ isOpen, onClose, activeTab, filters, setFilters, onApply }) => {
+    const [localFilters, setLocalFilters] = useState(filters);
+
+    // Sync local state with props when panel opens
+    React.useEffect(() => {
+        setLocalFilters(filters);
+    }, [filters, isOpen]);
+
+    const updateFilter = (key, value) => {
+        setLocalFilters(prev => ({ ...prev, [key]: value }));
+    };
+
+    const toggleInvestmentStrategy = (strategy) => {
+        const current = localFilters.selectedInvestmentStrategies || [];
+        const updated = current.includes(strategy)
+            ? current.filter(s => s !== strategy)
+            : [...current, strategy];
+        updateFilter('selectedInvestmentStrategies', updated);
+    };
+
+    const toggleCreditType = (type) => {
+        const current = localFilters.selectedCreditTypes || [];
+        const updated = current.includes(type)
+            ? current.filter(t => t !== type)
+            : [...current, type];
+        updateFilter('selectedCreditTypes', updated);
+    };
+
+    if (!isOpen || activeTab !== 'Carbon Credits') return null;
+
+    return (
+        <motion.div
+            initial={{ opacity: 0, y: -20, height: 0 }}
+            animate={{ opacity: 1, y: 0, height: 'auto' }}
+            exit={{ opacity: 0, y: -20, height: 0 }}
+            transition={{ duration: 0.3 }}
+            className="w-full bg-white rounded-3xl shadow-xl border border-gray-100 p-4 md:p-5 mb-8 overflow-visible z-20 relative"
+        >
+            <div className="flex flex-col gap-4">
+                {/* Header */}
+                <div className="flex justify-between items-center">
+                    <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                        Carbon Credits <ChevronDown size={20} />
+                    </h3>
+                    <button onClick={onClose} className="text-gray-400 hover:text-gray-600">
+                        <X size={24} />
+                    </button>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
+                    {/* Left Column - Project Type, Standard, Investment Strategy */}
+                    <div className="flex flex-col gap-4">
+                        {/* Project Type */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Project Type</label>
+                            <div className="flex flex-wrap gap-2">
+                                {CARBON_PROJECT_TYPES.map(type => (
+                                    <button
+                                        key={type}
+                                        onClick={() => updateFilter('selectedProjectType', type)}
+                                        className={`px-4 py-2 rounded-full text-sm font-medium transition-colors border ${localFilters.selectedProjectType === type
+                                            ? 'bg-[#0F172A] text-white border-[#0F172A]'
+                                            : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        {type}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Standard */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Standard</label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {CARBON_STANDARDS.map(standard => (
+                                    <button
+                                        key={standard}
+                                        onClick={() => updateFilter('selectedStandard', standard)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${localFilters.selectedStandard === standard
+                                            ? 'bg-green-50 text-green-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{standard}</span>
+                                        {localFilters.selectedStandard === standard && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Investment Strategies */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">
+                                Investment Strategy
+                            </label>
+                            <div className="grid grid-cols-2 gap-2">
+                                {CARBON_INVESTMENT_STRATEGIES.map(strategy => (
+                                    <button
+                                        key={strategy}
+                                        onClick={() => toggleInvestmentStrategy(strategy)}
+                                        className={`px-3 py-2 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedInvestmentStrategies || []).includes(strategy)
+                                            ? 'bg-blue-50 text-blue-700 font-semibold'
+                                            : 'text-gray-600 hover:bg-gray-50'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-1">{strategy}</span>
+                                        {(localFilters.selectedInvestmentStrategies || []).includes(strategy) && <Check size={14} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Credit Type & Location */}
+                    <div className="flex flex-col gap-4">
+                        {/* Credit Type */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Credit Type</label>
+                            <div className="grid grid-cols-1 gap-2">
+                                {CARBON_CREDIT_TYPES.map(type => (
+                                    <button
+                                        key={type}
+                                        onClick={() => toggleCreditType(type)}
+                                        className={`px-4 py-3 rounded-lg text-sm text-left transition-colors flex items-center justify-between group ${(localFilters.selectedCreditTypes || []).includes(type)
+                                            ? 'bg-emerald-50 text-emerald-700 font-semibold border-2 border-emerald-200'
+                                            : 'text-gray-600 hover:bg-gray-50 border-2 border-transparent'
+                                            }`}
+                                    >
+                                        <span className="truncate mr-2">{type}</span>
+                                        {(localFilters.selectedCreditTypes || []).includes(type) && <Check size={16} className="flex-shrink-0" />}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Location Filters */}
+                        <div>
+                            <label className="block text-sm font-bold text-gray-700 mb-3">Location</label>
+                            <div className="flex flex-col sm:flex-row gap-2">
+                                {/* Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        value={localFilters.country || ''}
+                                        onChange={(e) => {
+                                            updateFilter('country', e.target.value);
+                                            updateFilter('region', '');
+                                        }}
+                                    >
+                                        <option value="">Country</option>
+                                        <option value="Brazil">Brazil</option>
+                                        <option value="USA">USA</option>
+                                        <option value="India">India</option>
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Region - Dependent on Country */}
+                                <div className="relative flex-1">
+                                    <select
+                                        className="w-full appearance-none bg-white border border-gray-200 text-gray-900 py-2.5 px-3 pr-8 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:bg-gray-100"
+                                        value={localFilters.region || ''}
+                                        onChange={(e) => updateFilter('region', e.target.value)}
+                                        disabled={!localFilters.country}
+                                    >
+                                        <option value="">Region</option>
+                                        {localFilters.country === 'Brazil' && <option value="South America">South America</option>}
+                                        {localFilters.country === 'USA' && <option value="North America">North America</option>}
+                                        {localFilters.country === 'India' && <option value="Asia Pacific">Asia Pacific</option>}
+                                    </select>
+                                    <ChevronDown size={14} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" />
+                                </div>
+
+                                {/* Search within selected location */}
+                                <div className="relative flex-[1.5]">
+                                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                        <Search size={14} className="text-gray-400" />
+                                    </div>
+                                    <input
+                                        type="text"
+                                        placeholder={localFilters.country ? `Search in ${localFilters.country}...` : 'Search location...'}
                                         className="w-full pl-9 pr-4 py-2.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
                                         value={localFilters.location || ''}
                                         onChange={(e) => updateFilter('location', e.target.value)}
@@ -736,6 +1770,39 @@ export default function Publicmarketplace() {
         location: ''
     });
 
+    // Filter State - Arts
+    const [artsFilters, setArtsFilters] = useState({
+        selectedType: 'All',
+        artistTier: '',
+        selectedInvestmentStrategies: [],
+        selectedAuthentications: [],
+        country: '',
+        region: '',
+        location: ''
+    });
+
+    // Filter State - Sports
+    const [sportsFilters, setSportsFilters] = useState({
+        selectedAssetType: 'All',
+        sportType: 'All',
+        selectedInvestmentStrategies: [],
+        selectedRevenueModels: [],
+        country: '',
+        region: '',
+        location: ''
+    });
+
+    // Filter State - Carbon Credits
+    const [carbonCreditsFilters, setCarbonCreditsFilters] = useState({
+        selectedProjectType: 'All',
+        selectedStandard: 'All',
+        selectedInvestmentStrategies: [],
+        selectedCreditTypes: [],
+        country: '',
+        region: '',
+        location: ''
+    });
+
     const handleApplyFilters = (newFilters) => {
         setFilters(newFilters);
     };
@@ -744,12 +1811,27 @@ export default function Publicmarketplace() {
         setCommoditiesFilters(newFilters);
     };
 
+    const handleApplyArtsFilters = (newFilters) => {
+        setArtsFilters(newFilters);
+    };
+
+    const handleApplySportsFilters = (newFilters) => {
+        setSportsFilters(newFilters);
+    };
+
+    const handleApplyCarbonCreditsFilters = (newFilters) => {
+        setCarbonCreditsFilters(newFilters);
+    };
+
     // Filter logic
     const filteredInvestments = MOCK_INVESTMENTS.filter((item) => {
         // Tab Filter
         const matchesTab = activeTab === 'All' ||
             (activeTab === 'Real Estate' && item.category === 'REAL ESTATE') ||
-            (activeTab === 'Commodities' && item.category === 'COMMODITIES');
+            (activeTab === 'Commodities' && item.category === 'COMMODITIES') ||
+            (activeTab === 'Arts' && item.category === 'ARTS') ||
+            (activeTab === 'Sports' && item.category === 'SPORTS') ||
+            (activeTab === 'Carbon Credits' && item.category === 'CARBON_CREDITS');
 
         // Search Query
         const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase());
@@ -829,6 +1911,114 @@ export default function Publicmarketplace() {
             }
         }
 
+        // Advanced Filters - Arts
+        if (activeTab === 'Arts') {
+            // Art Type
+            if (artsFilters.selectedType && artsFilters.selectedType !== 'All' && item.artType !== artsFilters.selectedType) {
+                matchesAdvanced = false;
+            }
+            // Artist Tier
+            if (matchesAdvanced && artsFilters.artistTier && item.artistTier !== artsFilters.artistTier) {
+                matchesAdvanced = false;
+            }
+            // Investment Strategy
+            if (matchesAdvanced && artsFilters.selectedInvestmentStrategies.length > 0 && !artsFilters.selectedInvestmentStrategies.includes(item.investmentStrategy)) {
+                matchesAdvanced = false;
+            }
+            // Authentication
+            if (matchesAdvanced && artsFilters.selectedAuthentications.length > 0) {
+                const itemAuths = item.authentication || [];
+                const hasMatchingAuth = artsFilters.selectedAuthentications.some(auth => itemAuths.includes(auth));
+                if (!hasMatchingAuth) {
+                    matchesAdvanced = false;
+                }
+            }
+            // Country
+            if (matchesAdvanced && artsFilters.country && item.country !== artsFilters.country) {
+                matchesAdvanced = false;
+            }
+            // Region
+            if (matchesAdvanced && artsFilters.region && item.region !== artsFilters.region) {
+                matchesAdvanced = false;
+            }
+            // Location
+            if (matchesAdvanced && artsFilters.location && !item.location.toLowerCase().includes(artsFilters.location.toLowerCase())) {
+                matchesAdvanced = false;
+            }
+        }
+
+        // Advanced Filters - Sports
+        if (activeTab === 'Sports') {
+            // Asset Type
+            if (sportsFilters.selectedAssetType && sportsFilters.selectedAssetType !== 'All' && item.assetType !== sportsFilters.selectedAssetType) {
+                matchesAdvanced = false;
+            }
+            // Sport Type
+            if (matchesAdvanced && sportsFilters.sportType && sportsFilters.sportType !== 'All' && item.sportType !== sportsFilters.sportType) {
+                matchesAdvanced = false;
+            }
+            // Investment Strategy
+            if (matchesAdvanced && sportsFilters.selectedInvestmentStrategies.length > 0 && !sportsFilters.selectedInvestmentStrategies.includes(item.investmentStrategy)) {
+                matchesAdvanced = false;
+            }
+            // Revenue Model
+            if (matchesAdvanced && sportsFilters.selectedRevenueModels.length > 0) {
+                const itemModels = item.revenueModel ? [item.revenueModel] : [];
+                const hasMatchingModel = sportsFilters.selectedRevenueModels.some(model => itemModels.includes(model));
+                if (!hasMatchingModel) {
+                    matchesAdvanced = false;
+                }
+            }
+            // Country
+            if (matchesAdvanced && sportsFilters.country && item.country !== sportsFilters.country) {
+                matchesAdvanced = false;
+            }
+            // Region
+            if (matchesAdvanced && sportsFilters.region && item.region !== sportsFilters.region) {
+                matchesAdvanced = false;
+            }
+            // Location
+            if (matchesAdvanced && sportsFilters.location && !item.location.toLowerCase().includes(sportsFilters.location.toLowerCase())) {
+                matchesAdvanced = false;
+            }
+        }
+
+        // Advanced Filters - Carbon Credits
+        if (activeTab === 'Carbon Credits') {
+            // Project Type
+            if (carbonCreditsFilters.selectedProjectType && carbonCreditsFilters.selectedProjectType !== 'All' && item.projectType !== carbonCreditsFilters.selectedProjectType) {
+                matchesAdvanced = false;
+            }
+            // Standard
+            if (matchesAdvanced && carbonCreditsFilters.selectedStandard && carbonCreditsFilters.selectedStandard !== 'All' && item.standard !== carbonCreditsFilters.selectedStandard) {
+                matchesAdvanced = false;
+            }
+            // Investment Strategy
+            if (matchesAdvanced && carbonCreditsFilters.selectedInvestmentStrategies.length > 0 && !carbonCreditsFilters.selectedInvestmentStrategies.includes(item.investmentStrategy)) {
+                matchesAdvanced = false;
+            }
+            // Credit Type
+            if (matchesAdvanced && carbonCreditsFilters.selectedCreditTypes.length > 0) {
+                const itemCreditType = item.creditType ? [item.creditType] : [];
+                const hasMatchingCredit = carbonCreditsFilters.selectedCreditTypes.some(type => itemCreditType.includes(type));
+                if (!hasMatchingCredit) {
+                    matchesAdvanced = false;
+                }
+            }
+            // Country
+            if (matchesAdvanced && carbonCreditsFilters.country && item.country !== carbonCreditsFilters.country) {
+                matchesAdvanced = false;
+            }
+            // Region
+            if (matchesAdvanced && carbonCreditsFilters.region && item.region !== carbonCreditsFilters.region) {
+                matchesAdvanced = false;
+            }
+            // Location
+            if (matchesAdvanced && carbonCreditsFilters.location && !item.location.toLowerCase().includes(carbonCreditsFilters.location.toLowerCase())) {
+                matchesAdvanced = false;
+            }
+        }
+
         return matchesTab && matchesSearch && matchesAdvanced;
     }).sort((a, b) => {
         switch (sortBy) {
@@ -855,21 +2045,16 @@ export default function Publicmarketplace() {
                     {/* Left: Filters */}
                     <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                         {FILTER_TABS.map((tab) => {
-                            const isClickable = tab === 'All' || tab === 'Real Estate' || tab === 'Commodities';
+                            const isClickable = tab === 'All' || tab === 'Real Estate' || tab === 'Commodities' || tab === 'Arts' || tab === 'Sports' || tab === 'Carbon Credits';
                             return (
                                 <button
                                     key={tab}
                                     disabled={!isClickable}
                                     onClick={() => {
                                         if (isClickable) {
-                                            // Toggle logic: if clicking the same active tab, close filters
-                                            if (activeTab === tab && (tab === 'Real Estate' || tab === 'Commodities')) {
-                                                setShowFilters(!showFilters);
-                                            } else {
-                                                setActiveTab(tab);
-                                                if (tab === 'Real Estate' || tab === 'Commodities') setShowFilters(true);
-                                                else setShowFilters(false);
-                                            }
+                                            // Just switch tab and close filters - filters only open via Filters button
+                                            setActiveTab(tab);
+                                            setShowFilters(false);
                                         }
                                     }}
                                     className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-200 ${activeTab === tab
@@ -883,7 +2068,7 @@ export default function Publicmarketplace() {
                                 </button>
                             );
                         })}
-                        {(activeTab === 'Real Estate' || activeTab === 'Commodities') && (
+                        {(activeTab === 'Real Estate' || activeTab === 'Commodities' || activeTab === 'Arts' || activeTab === 'Sports' || activeTab === 'Carbon Credits') && (
                             <button
                                 onClick={() => setShowFilters(!showFilters)}
                                 className={`ml-2 flex items-center gap-2 px-5 py-2 rounded-full text-sm font-medium transition-colors shadow-lg shadow-gray-200 ${showFilters ? 'bg-[#0F172A] text-white' : 'bg-white text-gray-700 border border-gray-200'
@@ -970,6 +2155,36 @@ export default function Publicmarketplace() {
                             onApply={handleApplyCommoditiesFilters}
                         />
                     )}
+                    {showFilters && activeTab === 'Arts' && (
+                        <ArtsFilterPanel
+                            isOpen={showFilters}
+                            onClose={() => setShowFilters(false)}
+                            activeTab="Arts"
+                            filters={artsFilters}
+                            setFilters={setArtsFilters}
+                            onApply={handleApplyArtsFilters}
+                        />
+                    )}
+                    {showFilters && activeTab === 'Sports' && (
+                        <SportsFilterPanel
+                            isOpen={showFilters}
+                            onClose={() => setShowFilters(false)}
+                            activeTab="Sports"
+                            filters={sportsFilters}
+                            setFilters={setSportsFilters}
+                            onApply={handleApplySportsFilters}
+                        />
+                    )}
+                    {showFilters && activeTab === 'Carbon Credits' && (
+                        <CarbonCreditsFilterPanel
+                            isOpen={showFilters}
+                            onClose={() => setShowFilters(false)}
+                            activeTab="Carbon Credits"
+                            filters={carbonCreditsFilters}
+                            setFilters={setCarbonCreditsFilters}
+                            onApply={handleApplyCarbonCreditsFilters}
+                        />
+                    )}
                 </AnimatePresence>
 
                 {/* Grid */}
@@ -1049,34 +2264,131 @@ export default function Publicmarketplace() {
                                             <h4 className="text-sm font-bold text-[#0F172A] leading-tight mb-2 line-clamp-2">{item.title}</h4>
                                             <div className="flex flex-wrap gap-1.5 mb-3">
                                                 <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600">{item.investmentStrategy}</span>
-                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600 animate-pulse">{item.status === 'coming-soon' ? 'Coming Soon' : 'Sold Out'}</span>
+                                                <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[9px] font-bold text-gray-600 animate-pulse">{item.status === 'coming-soon' ? 'Coming Soon' : item.status === 'sold-out' ? 'Sold Out' : 'Open'}</span>
                                             </div>
 
-                                            <div className="space-y-2.5">
-                                                <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
-                                                    <span className="text-[9px] text-gray-400 font-semibold uppercase">Asset Price</span>
-                                                    <span className="text-xs font-bold text-[#0F172A]">{item.assetPrice}</span>
+                                            {/* Arts-Specific Details */}
+                                            {item.category === 'ARTS' && (
+                                                <div className="space-y-2 mb-3">
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Artist</span>
+                                                        <span className="text-xs font-bold text-[#0F172A] text-right">{item.artistName}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Artist Tier</span>
+                                                        <span className={`text-xs font-bold text-right ${item.artistTier === 'Blue-Chip' ? 'text-purple-600' : item.artistTier === 'Established' ? 'text-blue-600' : item.artistTier === 'Mid-Career' ? 'text-green-600' : 'text-gray-600'}`}>{item.artistTier}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Type</span>
+                                                        <span className="text-xs font-bold text-[#0F172A]">{item.artType}</span>
+                                                    </div>
+                                                    {item.authentication && item.authentication.length > 0 && (
+                                                        <div className="pt-1">
+                                                            <div className="flex items-center gap-1 mb-1">
+                                                                <BadgeCheck size={12} className="text-green-600" />
+                                                                <span className="text-[9px] text-gray-400 font-semibold uppercase">Authentication</span>
+                                                            </div>
+                                                            <div className="flex flex-wrap gap-1">
+                                                                {item.authentication.slice(0, 2).map((auth, idx) => (
+                                                                    <span key={idx} className="px-1.5 py-0.5 bg-green-50 rounded text-[8px] font-bold text-green-700">{auth}</span>
+                                                                ))}
+                                                                {item.authentication.length > 2 && (
+                                                                    <span className="px-1.5 py-0.5 bg-gray-100 rounded text-[8px] font-medium text-gray-500">+{item.authentication.length - 2}</span>
+                                                                )}
+                                                            </div>
+                                                        </div>
+                                                    )}
                                                 </div>
-                                                <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
-                                                    <span className="text-[9px] text-gray-400 font-semibold uppercase">Token Price</span>
-                                                    <div className="text-right">
-                                                        <span className="text-xs font-bold text-[#0F172A] block">{item.tokenPriceETH}</span>
-                                                        <span className="text-[9px] text-gray-400">{item.tokenPriceUSD}</span>
+                                            )}
+
+                                            {/* Sports-Specific Details */}
+                                            {item.category === 'SPORTS' && (
+                                                <div className="space-y-2 mb-3">
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Sport</span>
+                                                        <span className="text-xs font-bold text-[#0F172A] text-right">{item.sportType}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Asset Type</span>
+                                                        <span className="text-xs font-bold text-[#0F172A] text-right">{item.assetType}</span>
+                                                    </div>
+                                                    {item.athleteName && item.athleteName !== 'N/A' && (
+                                                        <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                            <span className="text-[9px] text-gray-400 font-semibold uppercase">Athlete</span>
+                                                            <span className="text-xs font-bold text-orange-600 text-right">{item.athleteName}</span>
+                                                        </div>
+                                                    )}
+                                                    {item.teamAffiliation && (
+                                                        <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                            <span className="text-[9px] text-gray-400 font-semibold uppercase">Team/League</span>
+                                                            <span className="text-xs font-bold text-[#0F172A] text-right">{item.teamAffiliation}</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Revenue Model</span>
+                                                        <span className="text-xs font-bold text-orange-600">{item.revenueModel}</span>
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    <div className="flex justify-between items-center mb-1">
-                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Available Tokens</span>
-                                                        <span className="text-[9px] font-bold text-[#0F172A]">{item.availableTokens.toLocaleString()}</span>
+                                            )}
+
+                                            {/* Carbon Credits-Specific Details */}
+                                            {item.category === 'CARBON_CREDITS' && (
+                                                <div className="space-y-2 mb-3">
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Project Type</span>
+                                                        <span className="text-xs font-bold text-emerald-600 text-right">{item.projectType}</span>
                                                     </div>
-                                                    <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
-                                                        <div
-                                                            className={`h-full rounded-full ${item.availableTokens === 0 ? 'bg-gray-400' : 'bg-[#0F172A]'}`}
-                                                            style={{ width: `${(item.availableTokens / item.totalTokens) * 100}%` }}
-                                                        ></div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Standard</span>
+                                                        <span className="text-xs font-bold text-[#0F172A] text-right">{item.standard}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Credit Type</span>
+                                                        <span className="text-xs font-bold text-emerald-600">{item.creditType}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">CO₂ Volume</span>
+                                                        <span className="text-xs font-bold text-[#0F172A]">{item.co2Volume}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">SDG</span>
+                                                        <span className="text-xs font-bold text-emerald-600">{item.sdgAlignment}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Location</span>
+                                                        <span className="text-xs font-bold text-[#0F172A]">{item.projectLocation}</span>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            )}
+
+                                            {/* Real Estate & Commodities Details */}
+                                            {item.category !== 'ARTS' && item.category !== 'SPORTS' && item.category !== 'CARBON_CREDITS' && (
+                                                <div className="space-y-2.5">
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Asset Price</span>
+                                                        <span className="text-xs font-bold text-[#0F172A]">{item.assetPrice}</span>
+                                                    </div>
+                                                    <div className="flex justify-between items-center border-b border-gray-50 pb-1.5">
+                                                        <span className="text-[9px] text-gray-400 font-semibold uppercase">Token Price</span>
+                                                        <div className="text-right">
+                                                            <span className="text-xs font-bold text-[#0F172A] block">{item.tokenPriceETH}</span>
+                                                            <span className="text-[9px] text-gray-400">{item.tokenPriceUSD}</span>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <div className="flex justify-between items-center mb-1">
+                                                            <span className="text-[9px] text-gray-400 font-semibold uppercase">Available Tokens</span>
+                                                            <span className="text-[9px] font-bold text-[#0F172A]">{item.availableTokens.toLocaleString()}</span>
+                                                        </div>
+                                                        <div className="w-full bg-gray-100 rounded-full h-1.5 overflow-hidden">
+                                                            <div
+                                                                className={`h-full rounded-full ${item.availableTokens === 0 ? 'bg-gray-400' : 'bg-[#0F172A]'}`}
+                                                                style={{ width: `${(item.availableTokens / item.totalTokens) * 100}%` }}
+                                                            ></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
 
                                         <button className="w-full py-2.5 rounded-lg bg-[#0F172A] hover:bg-blue-600 text-white text-[10px] font-bold tracking-widest uppercase transition-colors shadow-lg shadow-gray-200 mt-2">
