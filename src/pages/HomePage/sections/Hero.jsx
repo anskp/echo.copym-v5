@@ -96,8 +96,10 @@ export default function Hero() {
 
           {/* ====== BUTTONS (SIDE BY SIDE) ====== */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-3 sm:gap-4">
-            <Link
-              to="/marketplace"
+            <a
+              href="https://copymlaunchpad.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2 shadow-md w-auto sm:min-w-[200px]"
               style={{
                 fontFamily: 'Palanquin, sans-serif',
@@ -120,7 +122,7 @@ export default function Hero() {
                   />
                 </svg>
               </div>
-            </Link>
+            </a>
 
           </div>
         </div>

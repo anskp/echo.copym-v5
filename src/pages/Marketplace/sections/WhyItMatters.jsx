@@ -13,7 +13,8 @@ import {
     ShieldCheck,
     CheckCircle2,
     Heart,
-    TrendingUp
+    TrendingUp,
+    ChevronDown
 } from 'lucide-react';
 import Image from '../../../components/Image'; // Import our AVIF-compatible Image component
 
@@ -332,6 +333,41 @@ export default function WhyItMatters() {
                         Unlocking the trillion-dollar potential of Real-World Assets with institutional-grade infrastructure. <br className="hidden md:block" />
                         Capitalize on unparalleled liquidity, compliance, and global reach.
                     </motion.p>
+
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="flex justify-center mt-6"
+                    >
+                        <motion.button
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            onClick={() => window.open('https://copymlaunchpad.vercel.app/', '_blank')}
+                            className="inline-flex items-center gap-2 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full text-white font-bold text-sm sm:text-base shadow-lg hover:shadow-xl transition-all duration-300 min-w-[180px] sm:min-w-[200px] justify-center"
+                            style={{
+                                fontFamily: 'Palanquin, sans-serif',
+                                background: 'linear-gradient(to right, #23BD83, #109261)'
+                            }}
+                        >
+                            EXPLORE MORE
+                            <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center ml-1">
+                                <svg
+                                    className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#109261]"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                >
+                                    <path
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                        strokeWidth={2.5}
+                                        d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                                    />
+                                </svg>
+                            </div>
+                        </motion.button>
+                    </motion.div>
                 </div>
 
                 {/* Category Tags Bar */}
@@ -614,10 +650,9 @@ export default function WhyItMatters() {
                                                 />
                                             ))}
                                         </div>
+
                                     </div>
                                 )}
-
-
                             </motion.div>
                         </AnimatePresence>
                     </div>
