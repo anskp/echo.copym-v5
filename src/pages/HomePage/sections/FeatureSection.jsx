@@ -20,7 +20,7 @@ const FeatureSection = () => {
 
       {/* Vertical Stack of 4 Sections */}
       <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
-        {/* Section 1 - Own a piece of big Investment (Graphic Left) */}
+        {/* Section 1 - Explore curated real-world assets (Graphic Left) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -49,18 +49,17 @@ const FeatureSection = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto lg:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Own a piece of assets
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Explore curated real-world assets
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Ever thought real estate, gold, or fine art was only for the rich? Not anymore.
-              Start with small amounts and own a piece of high-value assets you actually
-              care about.
+              From property and gold to private credit and art, CORA AI helps you discover opportunities 
+              and summarize key risks – so you can decide faster.
             </p>
           </div>
         </motion.div>
 
-        {/* Section 2 - Trade anytime, anywhere (Graphic Right) */}
+        {/* Section 2 - Access fractional RWAs(Graphic Right) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,18 +88,16 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Trade anytime, anywhere
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Access fractional RWAs
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Want out? Sell instantly. Want in? Buy in seconds. With your
-              built-in wallet, you can manage and trade smoothly—just like
-              sending money to a friend.
+              Start with smaller amounts and gain exposure to curated real-world assets – backed by transparent on-chain entitlements and built-in compliance.
             </p>
           </div>
         </motion.div>
 
-        {/* Section 3 - Earn without a hassle (Graphic Left) */}
+        {/* Section 3 -  Trade anytime, anywhere (Graphic Left) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -129,18 +126,16 @@ const FeatureSection = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Earn without a hassle
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Trade anytime, anywhere
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Sit back and let the experts and CORA-AI do the heavy lifting. Your money works for
-              you, bringing in steady returns–without the stress of paperwork or
-              management.
+              Buy and sell eligible positions with streamlined settlement and a built-in wallet experience – designed for compliant access and smooth portfolio management.
             </p>
           </div>
         </motion.div>
 
-        {/* Section 4 - Explore a world of assets (Graphic Right) */}
+        {/* Section 4 - Invest with clarity, not complexity (Graphic Right) */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -169,13 +164,11 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3 whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              Explore a world of assets
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              Invest with clarity, not complexity
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              From property and gold to private equity and art—our CORA-AI picks out
-              smart opportunities so you don't have to dig through endless
-              research.
+              CORA AI helps you discover opportunities, summarize risks, and monitor positions – while compliance and onboarding are built into the platform.
             </p>
           </div>
         </motion.div>

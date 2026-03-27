@@ -83,7 +83,7 @@ export default function Hero() {
             className="text-center text-xs sm:text-sm md:text-base text-white mb-3 sm:mb-4 font-light"
 
           >
-            <span className="font-bold border-b border-[#15a36e] pb-0.5">ASSET OWNERS</span> – Launch RWAs, tokenized assets faster with built-in compliance, on-chain entitlement, custody, and institutional-grade infrastructure.
+            <span className="font-bold border-b border-[#15a36e] pb-0.5">ASSET OWNERS</span> – Launch RWAs, tokenized assets faster  built-in compliance, on-chain entitlement, custody, and institutional-grade infrastructure.
           </p>
 
           {/* ====== FOR INVESTORS ====== */}
