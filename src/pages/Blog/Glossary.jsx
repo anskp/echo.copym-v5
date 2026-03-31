@@ -251,23 +251,23 @@ export default function Glossary() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Search + Alphabet Navigation - New Layout */}
-      <SectionContainer padding="py-12" bgColor="bg-white">
+      {/* Search + Alphabet Navigation - Responsive Layout */}
+      <SectionContainer padding="py-8 sm:py-12" bgColor="bg-white">
         <div className="max-w-6xl mx-auto">
           {/* Search and Letters Card */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 border border-gray-100 shadow-lg shadow-gray-200/50">
+          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 shadow-lg shadow-gray-200/50">
             {/* Search Bar */}
-            <div className="relative mb-8">
+            <div className="relative mb-6 sm:mb-8">
               <input
                 type="text"
                 value={searchTerm}
                 onChange={(e) => handleSearch(e.target.value)}
                 placeholder="Search glossary terms..."
-                className="w-full px-6 py-4 pl-14 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-4 focus:ring-[#15a36e]/10 transition-all text-base"
+                className="w-full px-6 py-3 pl-12 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-4 focus:ring-[#15a36e]/10 transition-all text-sm"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               />
               <svg
-                className="absolute left-5 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400"
+                className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -276,8 +276,8 @@ export default function Glossary() {
               </svg>
             </div>
 
-            {/* Alphabet Filter Pills - Complete A to Z */}
-            <div className="flex flex-nowrap gap-1.5 overflow-x-auto pb-2 scrollbar-hide justify-start">
+            {/* Alphabet Filter Pills */}
+            <div className="flex flex-wrap lg:flex-nowrap gap-1 lg:gap-0 justify-center lg:justify-start">
               {['ALL', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].map((letter) => (
                 <button
                   key={letter}
@@ -285,10 +285,10 @@ export default function Glossary() {
                     setSelectedLetter(letter);
                     if (letter !== 'ALL') setSearchTerm('');
                   }}
-                  className={`flex-shrink-0 px-3 py-2 rounded-full text-xs font-bold transition-all duration-300 whitespace-nowrap ${
+                  className={`px-2.5 py-1.5 lg:px-4 lg:py-2 rounded-full text-[10px] lg:text-xs font-bold transition-all duration-300 ${
                     selectedLetter === letter
-                      ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/30 scale-105'
-                      : 'bg-white text-gray-600 hover:bg-gray-100 hover:scale-105'
+                      ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/30'
+                      : 'bg-white text-gray-600 hover:bg-gray-100'
                   }`}
                   style={{ fontFamily: 'Palanquin, sans-serif' }}
                 >
@@ -300,22 +300,22 @@ export default function Glossary() {
         </div>
       </SectionContainer>
 
-      {/* Terms List */}
-      <SectionContainer padding="pt-8 pb-16" bgColor="bg-white">
+      {/* Terms List - Responsive */}
+      <SectionContainer padding="pt-6 sm:pt-8 pb-12 sm:pb-16" bgColor="bg-white">
         {Object.keys(termsByLetter).length > 0 ? (
-          <div className="space-y-10">
+          <div className="space-y-8 sm:space-y-10 px-4 sm:px-6">
             {Object.entries(termsByLetter).map(([letter, terms]) => (
               <div key={letter}>
                 {/* Letter Heading */}
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-[#15a36e] flex items-center justify-center">
-                    <span className="text-2xl font-bold text-white">{letter}</span>
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-[#15a36e] flex items-center justify-center flex-shrink-0">
+                    <span className="text-lg sm:text-2xl font-bold text-white">{letter}</span>
                   </div>
                   <div className="flex-1 h-px bg-gray-200"></div>
                 </div>
 
-                {/* Terms List with Expandable Descriptions - 4 per row */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                {/* Terms List with Expandable Descriptions - Responsive Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
                   {terms.map((item, index) => {
                     const isExpanded = expandedTerm === item.slug;
                     return (
@@ -328,16 +328,16 @@ export default function Glossary() {
                       >
                         <button
                           onClick={() => setExpandedTerm(isExpanded ? null : item.slug)}
-                          className="w-full flex items-center gap-3 p-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
+                          className="w-full flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
                         >
-                          <FiChevronRight className={`w-5 h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 ${
+                          <FiChevronRight className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 ${
                             isExpanded ? 'rotate-90 text-[#15a36e]' : ''
                           }`} />
-                          <span className="text-sm font-bold text-gray-800 flex-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                          <span className="text-xs sm:text-sm font-bold text-gray-800 flex-1 line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             {item.term}
                           </span>
                         </button>
-                        
+
                         {/* Expanded Description */}
                         <AnimatePresence>
                           {isExpanded && (
@@ -348,8 +348,8 @@ export default function Glossary() {
                               transition={{ duration: 0.3 }}
                               className="overflow-hidden"
                             >
-                              <div className="pl-8 pr-3 pb-3 pt-1">
-                                <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                              <div className="pl-7 sm:pl-8 pr-3 pb-3 pt-1">
+                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                                   {item.description}
                                 </p>
                               </div>
@@ -367,49 +367,49 @@ export default function Glossary() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-16"
+            className="text-center py-12 sm:py-16 px-4"
           >
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
-              <FiBook className="w-10 h-10 text-gray-400" />
+            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
+              <FiBook className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400" />
             </div>
-            <h3 className="text-xl font-bold text-gray-700 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-700 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               No terms found
             </h3>
-            <p className="text-gray-500" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Try a different search term or letter
             </p>
           </motion.div>
         )}
       </SectionContainer>
 
-      {/* Related Educational Content */}
-      <SectionContainer padding="py-16" bgColor="bg-gray-50">
+      {/* Related Educational Content - Responsive */}
+      <SectionContainer padding="py-12 sm:py-16" bgColor="bg-gray-50">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center px-4"
         >
-          <h2 
-            className="text-2xl sm:text-3xl font-bold text-black mb-4"
+          <h2
+            className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-4"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Want to Learn More?
           </h2>
-          <p 
-            className="text-sm sm:text-base text-gray-600 mb-8 max-w-2xl mx-auto"
+          <p
+            className="text-sm sm:text-base text-gray-600 mb-6 sm:mb-8 max-w-2xl mx-auto px-2"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Explore our educational articles and insights for deeper understanding of blockchain and tokenization.
           </p>
           <a
             href="/blog"
-            className="inline-flex items-center gap-2 bg-[#15a36e] hover:bg-[#128a5c] text-white px-6 py-3 rounded-full font-bold transition-all duration-300"
+            className="inline-flex items-center gap-2 bg-[#15a36e] hover:bg-[#128a5c] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full font-bold text-sm sm:text-base transition-all duration-300 hover:scale-105"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             Visit Blog
-            <FiBook className="w-5 h-5" />
+            <FiBook className="w-4 h-4 sm:w-5 sm:h-5" />
           </a>
         </motion.div>
       </SectionContainer>

@@ -28,9 +28,9 @@ export default function Hero() {
             className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-4 uppercase tracking-tight"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
-            <span className="text-black sm:text-white block mb-1">KNOWLEDGE </span>
+            <span className="text-white block mb-1">KNOWLEDGE </span>
             <span className="text-[#10b981] block">BASE </span>
-            <span className="text-black sm:text-white block mt-1">TERMS & DEFINITIONS</span>
+            <span className="text-white block mt-1">TERMS & DEFINITIONS</span>
           </h1>
           <p
             className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 font-light tracking-wide max-w-lg leading-relaxed"

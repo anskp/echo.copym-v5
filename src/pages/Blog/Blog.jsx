@@ -21,7 +21,7 @@ const blogPosts = [
     slug: "understanding-rwa-tokenization",
     featured: true,
     featuredPriority: 1,
-    image: "/assets/Images/Buildings.png"
+    image: "/assets/Images/blogfeatured.avif"
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ const blogPosts = [
     slug: "future-compliant-marketplaces",
     featured: true,
     featuredPriority: 2,
-    image: "/assets/Images/Digital-Assets.jpg"
+    image: "/assets/Images/Digital-Assets.avif"
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const blogPosts = [
     slug: "carbon-credits-blockchain-guide",
     featured: true,
     featuredPriority: 3,
-    image: "/assets/Images/blogfeatured1.jpg"
+    image: "/assets/Images/blogfeatured1.avif"
   },
   {
     id: 4,
@@ -60,7 +60,7 @@ const blogPosts = [
     slug: "gold-tokenization-guide",
     featured: true,
     featuredPriority: 4,
-    image: "/assets/Images/gold-reserve.png"
+    image: "/assets/Images/gold-reserve.avif"
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ const blogPosts = [
     readTime: "5 min read",
     author: "CopyM Team",
     slug: "create-first-tokenized-asset",
-    image: "/assets/Images/bloghero1st.png"
+    image: "/assets/Images/bloghero1st.avif"
   },
   {
     id: 6,
@@ -82,7 +82,7 @@ const blogPosts = [
     readTime: "3 min read",
     author: "CopyM Team",
     slug: "cora-ai-investment-assistant",
-    image: "/assets/Images/blogpostai.png"
+    image: "/assets/Images/blogpostai.avif"
   },
   {
     id: 7,
@@ -93,7 +93,7 @@ const blogPosts = [
     readTime: "7 min read",
     author: "CopyM Team",
     slug: "global-banks-blockchain-assets",
-    image: "/assets/Images/blogpost3.png"
+    image: "/assets/Images/blogpost3.avif"
   },
   {
     id: 8,
@@ -104,7 +104,8 @@ const blogPosts = [
     readTime: "5 min read",
     author: "CopyM Team",
     slug: "liquidity-models-institutional-rwa",
-    image: "/assets/Images/blogpost2.png"
+    image: "/assets/Images/blogpost4.avif",
+    imagePosition: "object-top"
   },
   {
     id: 9,
@@ -115,7 +116,7 @@ const blogPosts = [
     readTime: "8 min read",
     author: "CopyM Team",
     slug: "smart-contracts-tokenization",
-    image: "/assets/Images/blogpost2.png"
+    image: "/assets/Images/blogpost5.avif"
   },
   {
     id: 10,
@@ -126,7 +127,7 @@ const blogPosts = [
     readTime: "6 min read",
     author: "CopyM Team",
     slug: "token-standards-explained",
-    image: "/assets/Images/blogpost2.png"
+    image: "/assets/Images/blogpost6.avif"
   },
   {
     id: 11,
@@ -137,7 +138,7 @@ const blogPosts = [
     readTime: "8 min read",
     author: "CopyM Team",
     slug: "institutional-adoption-barriers",
-    image: "/assets/Images/blogpost2.png"
+    image: "/assets/Images/blogpost7.avif"
   },
   {
     id: 12,
@@ -148,7 +149,7 @@ const blogPosts = [
     readTime: "5 min read",
     author: "CopyM Team",
     slug: "regulation-tokenization-2026",
-    image: "/assets/Images/blogpost2.png"
+    image: "/assets/Images/blogpost8.avif"
   }
 ];
 
@@ -242,14 +243,14 @@ export default function Blog() {
 
         {/* Search + Filter Header - Clean Vercel-style layout */}
         <div className="max-w-6xl mx-auto mb-12">
-          <div className="flex flex-col sm:flex-row gap-4 items-center justify-between">
+          <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Category Filters - Clean Pills */}
-            <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+            <div className="flex flex-wrap gap-2 justify-center w-full lg:w-auto">
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => handleCategoryChange(category)}
-                  className={`px-5 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 ${
+                  className={`px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category && category !== 'Glossary'
                       ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/20'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -262,7 +263,7 @@ export default function Blog() {
             </div>
 
             {/* Search Bar - Right Side */}
-            <div className="relative w-full sm:w-auto sm:min-w-[350px]">
+            <div className="relative w-full lg:w-auto lg:min-w-[350px]">
               <input
                 type="text"
                 value={searchTerm}
@@ -286,7 +287,7 @@ export default function Blog() {
         {/* Post Grid */}
         {paginatedPosts.length > 0 ? (
           <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0">
               {paginatedPosts.map((post, index) => (
                 <motion.article
                   key={post.id}
@@ -313,17 +314,17 @@ export default function Blog() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-center py-16"
+            className="text-center py-12 sm:py-16 px-4"
           >
-            <div className="w-20 h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
-              <svg className="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-6 rounded-full bg-gray-100 flex items-center justify-center">
+              <svg className="w-8 h-8 sm:w-10 sm:h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-gray-700 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-lg sm:text-xl font-bold text-gray-700 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               No posts found
             </h3>
-            <p className="text-gray-500" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-xs sm:text-sm text-gray-500" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Try selecting a different category or search term
             </p>
           </motion.div>
@@ -349,7 +350,7 @@ export default function Blog() {
             
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left Content */}
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
                 {/* Icon */}
                 <div className="inline-flex items-center justify-center w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-[#15a36e] to-emerald-600 shadow-lg shadow-[#15a36e]/30">
                   <FiMail className="w-7 h-7 text-white" />
@@ -359,24 +360,24 @@ export default function Blog() {
                   JOIN OUR NEWSLETTER
                 </h3>
 
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-lg" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-lg text-center lg:text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   Subscribe to our newsletter for the latest insights on real-world asset tokenization and exclusive updates.
                 </p>
               </div>
 
               {/* Right Content - Form */}
-              <div className="flex justify-center lg:justify-end">
-                <form className="flex flex-col sm:flex-row gap-3 w-full max-w-md" onSubmit={(e) => e.preventDefault()}>
+              <div className="w-full flex justify-center">
+                <form className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center sm:items-stretch" onSubmit={(e) => e.preventDefault()}>
                   <input
                     type="email"
                     required
                     placeholder="Enter your E-Mail Address"
-                    className="flex-1 px-6 py-4 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-2 focus:ring-[#15a36e]/10 transition-all text-sm font-medium"
+                    className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-2 focus:ring-[#15a36e]/10 transition-all text-sm font-medium"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   />
                   <button
                     type="submit"
-                    className="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#12a062] rounded-full p-1 transition-all duration-300 w-fit"
+                    className="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#12a062] rounded-full p-1 transition-all duration-300"
                     style={{ fontFamily: 'Palanquin, sans-serif' }}
                   >
                     <span className="pl-4 pr-2 text-white font-semibold text-sm sm:text-base">

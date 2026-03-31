@@ -26,22 +26,24 @@ export default function PostCard({
 
   // Standard Card (Grid)
   if (variant === 'standard') {
-    // Posts that need text overlay on image
-    const hasTextOverlay = ['create-first-tokenized-asset', 'cora-ai-investment-assistant'].includes(slug);
-    
+    // No text overlay on any images
+    const hasTextOverlay = false;
+    // Check if this post has a custom image position (default: object-center)
+    const imagePosition = post.imagePosition || 'object-center';
+
     return (
       <article
         className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
       >
         <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block">
           {/* Image */}
-          <div className="relative h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
+          <div className="relative w-full h-58 sm:h-58 md:h-60 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
             {image ? (
               <>
                 <img
                   src={image}
                   alt={title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`w-full h-full object-cover ${imagePosition} transition-transform duration-700 group-hover:scale-110`}
                 />
                 {hasTextOverlay && (
                   <div className="absolute left-0 top-0 bottom-0 w-full sm:w-1/2 bg-gradient-to-r from-black/60 via-black/40 to-transparent flex items-center p-4">
@@ -66,45 +68,45 @@ export default function PostCard({
           </div>
 
           {/* Content */}
-          <div className="p-5">
-            <div className="flex items-center gap-2 text-xs text-gray-500 mb-3 flex-wrap">
+          <div className="p-4 sm:p-5">
+            <div className="flex items-center gap-1.5 sm:gap-2 text-xs text-gray-500 mb-2 sm:mb-3 flex-wrap">
               <span className="text-[#15a36e] font-semibold whitespace-nowrap">
                 {category === 'Product Updates' ? 'Updates' : category}
               </span>
               <span className="flex items-center gap-1 whitespace-nowrap">
-                <FiCalendar className="w-3.5 h-3.5" />
+                <FiCalendar className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 {date}
               </span>
               <span className="flex items-center gap-1 whitespace-nowrap">
-                <FiClock className="w-3.5 h-3.5" />
+                <FiClock className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 {readTime}
               </span>
             </div>
 
             <h3
-              className="text-lg font-bold text-black mb-3 line-clamp-2 group-hover:text-[#15a36e] transition-colors"
+              className="text-base sm:text-lg font-bold text-black mb-2 sm:mb-3 line-clamp-2 group-hover:text-[#15a36e] transition-colors"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
             >
               {title}
             </h3>
 
-            <p className="text-sm text-gray-600 leading-relaxed mb-4 line-clamp-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed mb-3 sm:mb-4 line-clamp-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               {excerpt}
             </p>
 
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-[#15a36e]/20 flex items-center justify-center">
-                  <FiUser className="w-3.5 h-3.5 text-[#15a36e]" />
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#15a36e]/20 flex items-center justify-center">
+                  <FiUser className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#15a36e]" />
                 </div>
                 <span className="text-xs text-gray-600" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   {author}
                 </span>
               </div>
 
-              <span className="inline-flex items-center gap-1.5 text-[#15a36e] font-semibold text-sm group-hover:gap-2.5 transition-all">
+              <span className="inline-flex items-center gap-1 sm:gap-1.5 text-[#15a36e] font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-2.5 transition-all">
                 Read
-                <FiArrowRight className="w-3.5 h-3.5" />
+                <FiArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
               </span>
             </div>
           </div>

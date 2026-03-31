@@ -131,18 +131,18 @@ export default function BlogPost() {
       <Hero article={article} />
 
       {/* Main Content */}
-      <SectionContainer padding="py-12" bgColor="bg-white">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+      <SectionContainer padding="py-8 sm:py-12" bgColor="bg-white">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 px-4 sm:px-0">
           {/* Article Content */}
           <div className="lg:col-span-2">
             <motion.article
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="prose prose-lg max-w-none"
+              className="prose prose-sm sm:prose-base lg:prose-lg max-w-none"
             >
               {/* Author Box */}
-              <div className="mb-8">
+              <div className="mb-6 sm:mb-8">
                 <AuthorBox
                   name={article.author.name}
                   role={article.author.role}
@@ -152,8 +152,8 @@ export default function BlogPost() {
               </div>
 
               {/* Article Body */}
-              <div 
-                className="text-gray-800 leading-relaxed space-y-6"
+              <div
+                className="text-gray-800 leading-relaxed space-y-4 sm:space-y-6"
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
                 dangerouslySetInnerHTML={{ __html: article.content }}
               />
