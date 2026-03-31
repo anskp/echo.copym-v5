@@ -94,7 +94,7 @@ export default function Header() {
           icon: <StyledIcon icon={HiBookOpen} />,
           heading: "Blog",
           description: "Latest news, insights, and updates from CopyM.",
-          path: "#"  // Disabled redirect
+          path: "/blog"
         },
         {
           icon: <StyledIcon icon={HiDocumentText} />,
@@ -103,6 +103,10 @@ export default function Header() {
           path: "#"  // Disabled redirect
         }
       ]
+    },
+    {
+      label: "Glossary",
+      path: "/glossary"
     },
     {
       label: "About Us",

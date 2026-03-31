@@ -19,6 +19,13 @@ import Launchkit from './pages/Launchkit/Launchkit';
 import ZeroGas from './pages/Zerogas/Zerogas';
 import PrivacyAi from './pages/PrivacyAi';
 import TermsOfService from './pages/Legal/TermsOfService';
+
+// Blog pages
+import Blog from './pages/Blog/Blog';
+import BlogPost from './pages/Blog/BlogPost';
+import Glossary from './pages/Blog/Glossary';
+import GlossaryTerm from './pages/Blog/GlossaryTerm';
+
 import { animate } from 'animejs';
 
 
@@ -76,6 +83,14 @@ function App() {
           <Route path="/privacy-ai" element={<PrivacyAi />} />
           <Route path="/terms-of-services" element={<TermsOfService />} />
           <Route path="/test-avif" element={<TestAvif />} />
+          
+          {/* Blog Routes */}
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:category/:slug" element={<BlogPost />} />
+          
+          {/* Glossary Routes */}
+          <Route path="/glossary" element={<Glossary />} />
+          <Route path="/glossary/:slug" element={<GlossaryTerm />} />
         </Routes>
       </main>
       <Footer />
