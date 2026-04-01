@@ -43,26 +43,20 @@ export default function TableOfContents({ headings = [] }) {
   if (headings.length === 0) return null;
 
   return (
-    <div className="sticky top-24 lg:top-28">
+    <div className="lg:hidden mb-6">
       {/* Mobile Toggle */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden w-full flex items-center justify-between px-4 py-3 bg-white border border-black/10 rounded-lg font-semibold text-sm mb-3"
+        className="w-full flex items-center justify-between px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg font-semibold text-sm"
         style={{ fontFamily: 'Palanquin, sans-serif' }}
       >
         <span>Table of Contents</span>
         <FiChevronDown className={`w-4 h-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
-      {/* Desktop Sidebar / Mobile Dropdown */}
-      <div className={`${isOpen ? 'block' : 'hidden'} lg:block`}>
-        <div className="bg-white rounded-xl p-4 border border-black/5 shadow-sm">
-          <h4 
-            className="text-sm font-bold text-black mb-3 hidden lg:block"
-            style={{ fontFamily: 'Palanquin, sans-serif' }}
-          >
-            On this page
-          </h4>
+      {/* Mobile Dropdown */}
+      <div className={`${isOpen ? 'block' : 'hidden'} mt-3`}>
+        <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
           <nav className="space-y-2">
             {headings.map(({ id, title, level }) => (
               <a
@@ -73,7 +67,7 @@ export default function TableOfContents({ headings = [] }) {
                   activeId === id
                     ? 'text-[#15a36e] font-semibold'
                     : 'text-gray-600 hover:text-gray-900'
-                } ${level === 3 ? 'pl-4 border-l-2 border-[#15a36e]' : ''}`}
+                } ${level === 3 ? 'pl-4' : ''}`}
                 style={{ fontFamily: 'Palanquin, sans-serif' }}
               >
                 {title}

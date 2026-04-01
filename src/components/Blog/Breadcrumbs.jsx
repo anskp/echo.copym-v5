@@ -10,24 +10,18 @@ import { FiChevronRight } from 'react-icons/fi';
 export default function Breadcrumbs({ items = [] }) {
   if (!items || items.length === 0) return null;
 
-  // Default home item if not provided
-  const defaultItems = [
-    { label: 'Home', path: '/' },
-    ...items
-  ];
-
   return (
     <nav className="flex items-center flex-wrap gap-1 text-xs sm:text-sm" aria-label="Breadcrumb">
-      {defaultItems.map((item, index) => {
-        const isLast = index === defaultItems.length - 1;
-        
+      {items.map((item, index) => {
+        const isLast = index === items.length - 1;
+
         return (
           <React.Fragment key={item.path || index}>
-            {/* Current Item */}
+            {/* Separator */}
             {index > 0 && (
               <FiChevronRight className="w-3 h-3 sm:w-4 sm:h-4 text-gray-400 mx-1 sm:mx-2 flex-shrink-0" />
             )}
-            
+
             {isLast ? (
               <span className="text-gray-500 font-medium truncate max-w-[150px] sm:max-w-none">
                 {item.label}

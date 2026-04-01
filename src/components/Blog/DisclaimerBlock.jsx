@@ -1,27 +1,29 @@
 import React from 'react';
-import { FiAlertTriangle } from 'react-icons/fi';
+import { FiAlertCircle } from 'react-icons/fi';
 
 /**
  * DisclaimerBlock Component
  * Legal/financial disclaimer for articles
  */
-export default function DisclaimerBlock({ 
+export default function DisclaimerBlock({
   title = "Disclaimer",
-  children 
+  children
 }) {
   return (
-    <div className="my-8 bg-amber-50 rounded-xl p-5 border border-amber-200">
+    <div className="my-8 bg-gray-50 rounded-xl p-6 border border-gray-200">
       <div className="flex items-start gap-3">
-        <FiAlertTriangle className="w-5 h-5 text-amber-600 flex-shrink-0 mt-0.5" />
-        <div>
-          <h4 
-            className="font-bold text-amber-800 mb-2"
+        <div className="flex-shrink-0 w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+          <FiAlertCircle className="w-4 h-4 text-gray-600" />
+        </div>
+        <div className="flex-1">
+          <h4
+            className="font-bold text-gray-900 mb-2 text-sm uppercase tracking-wide"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             {title}
           </h4>
-          <div 
-            className="text-xs sm:text-sm text-amber-700 leading-relaxed"
+          <div
+            className="text-xs sm:text-sm text-gray-600 leading-relaxed"
             style={{ fontFamily: 'Palanquin, sans-serif' }}
           >
             {children}
