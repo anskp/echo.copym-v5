@@ -7,151 +7,7 @@ import Pagination from '../../components/Blog/Pagination';
 import FeaturedSection from '../../components/Blog/FeaturedSection';
 import Hero from './sections/Hero';
 import { FiMail } from 'react-icons/fi';
-
-// Sample blog posts data
-const blogPosts = [
-  {
-    id: 1,
-    title: "Understanding Real-World Asset Tokenization",
-    excerpt: "Learn how blockchain technology is revolutionizing the way we invest in real estate, commodities, and alternative assets through tokenization.",
-    category: "Education",
-    date: "March 15, 2026",
-    readTime: "5 min read",
-    author: "CopyM Team",
-    slug: "understanding-rwa-tokenization",
-    featured: true,
-    featuredPriority: 1,
-    image: "/assets/Images/blogfeatured.avif"
-  },
-  {
-    id: 2,
-    title: "The Future of Compliant Digital Asset Marketplaces",
-    excerpt: "Explore how regulatory compliance and blockchain technology are creating new opportunities for institutional and retail investors.",
-    category: "Articles",
-    date: "March 10, 2026",
-    readTime: "4 min read",
-    author: "CopyM Team",
-    slug: "future-compliant-marketplaces",
-    featured: true,
-    featuredPriority: 2,
-    image: "/assets/Images/Digital-Assets.avif"
-  },
-  {
-    id: 3,
-    title: "Cross‑Chain Liquidity: Connecting Global Markets",
-    excerpt: "Discover how tokenized carbon credits are bringing transparency and accessibility to environmental investing.",
-    category: "Education",
-    date: "March 5, 2026",
-    readTime: "6 min read",
-    author: "CopyM Team",
-    slug: "carbon-credits-blockchain-guide",
-    featured: true,
-    featuredPriority: 3,
-    image: "/assets/Images/blogfeatured1.avif"
-  },
-  {
-    id: 4,
-    title: "Gold Tokenization: The New Age of Digital Commodities",
-    excerpt: "How precious metals are being democratized through blockchain-based entitlement frameworks.",
-    category: "News",
-    date: "February 28, 2026",
-    readTime: "4 min read",
-    author: "CopyM Team",
-    slug: "gold-tokenization-guide",
-    featured: true,
-    featuredPriority: 4,
-    image: "/assets/Images/gold-reserve.avif"
-  },
-  {
-    id: 5,
-    title: "How to Create Your First Tokenized Asset",
-    excerpt: "A simple step-by-step guide to tokenizing real estate, commodities, or other assets on CopyM platform.",
-    category: "Product Updates",
-    date: "February 20, 2026",
-    readTime: "5 min read",
-    author: "CopyM Team",
-    slug: "create-first-tokenized-asset",
-    image: "/assets/Images/bloghero1st.avif"
-  },
-  {
-    id: 6,
-    title: "CORA AI: Your Smart Investment Assistant",
-    excerpt: "Meet CORA AI, the intelligent assistant helping you navigate real-world asset investments with confidence.",
-    category: "Product Updates",
-    date: "February 15, 2026",
-    readTime: "3 min read",
-    author: "CopyM Team",
-    slug: "cora-ai-investment-assistant",
-    image: "/assets/Images/blogpostai.avif"
-  },
-  {
-    id: 7,
-    title: "Global Banks Explore Blockchain for Real-World Assets",
-    excerpt: "Major financial institutions are testing blockchain technology to streamline asset tokenization and improve settlement efficiency.",
-    category: "News",
-    date: "March 20, 2026",
-    readTime: "7 min read",
-    author: "CopyM Team",
-    slug: "global-banks-blockchain-assets",
-    image: "/assets/Images/blogpost3.avif"
-  },
-  {
-    id: 8,
-    title: "Liquidity Models for Institutional RWA Platforms",
-    excerpt: "Explore different approaches to providing liquidity for institutional real-world asset trading on digital platforms.",
-    category: "Insights",
-    date: "March 12, 2026",
-    readTime: "5 min read",
-    author: "CopyM Team",
-    slug: "liquidity-models-institutional-rwa",
-    image: "/assets/Images/blogpost4.avif",
-    imagePosition: "object-top"
-  },
-  {
-    id: 9,
-    title: "Smart Contracts in Asset Tokenization",
-    excerpt: "Learn how smart contracts automate compliance, distributions, and ownership transfers in tokenized asset ecosystems.",
-    category: "Education",
-    date: "March 8, 2026",
-    readTime: "8 min read",
-    author: "CopyM Team",
-    slug: "smart-contracts-tokenization",
-    image: "/assets/Images/blogpost5.avif"
-  },
-  {
-    id: 10,
-    title: "Why Token Standards Matter (ERC-20, ERC-721, ERC-4626)",
-    excerpt: "Understanding the key token standards that power digital securities and their role in compliance and interoperability.",
-    category: "Education",
-    date: "March 1, 2026",
-    readTime: "6 min read",
-    author: "CopyM Team",
-    slug: "token-standards-explained",
-    image: "/assets/Images/blogpost6.avif"
-  },
-  {
-    id: 11,
-    title: "Institutional Adoption: Barriers and Breakthroughs",
-    excerpt: "Examining the challenges and progress in bringing traditional finance institutions into the tokenized asset space.",
-    category: "Insights",
-    date: "February 25, 2026",
-    readTime: "8 min read",
-    author: "CopyM Team",
-    slug: "institutional-adoption-barriers",
-    image: "/assets/Images/blogpost7.avif"
-  },
-  {
-    id: 12,
-    title: "How Regulation Is Shaping the Tokenization Landscape in 2026",
-    excerpt: "A look at the latest regulatory developments and their impact on the future of digital asset markets.",
-    category: "News",
-    date: "February 18, 2026",
-    readTime: "5 min read",
-    author: "CopyM Team",
-    slug: "regulation-tokenization-2026",
-    image: "/assets/Images/blogpost8.avif"
-  }
-];
+import { blogPosts, getFeaturedPosts as getFeaturedPostsUtil } from '../../data/blogPosts';
 
 const categories = ["All", "Education", "News", "Insights", "Product Updates", "Glossary"];
 const POSTS_PER_PAGE = 6;
@@ -184,10 +40,7 @@ export default function Blog() {
 
   // Get featured posts (sorted by priority)
   const featuredPosts = useMemo(() => {
-    return blogPosts
-      .filter(post => post.featured)
-      .sort((a, b) => (a.featuredPriority || 999) - (b.featuredPriority || 999))
-      .slice(0, 5); // Max 5 featured (1 main + 4 secondary)
+    return getFeaturedPostsUtil(5);
   }, []);
 
   // Get regular (non-featured) posts for the grid
@@ -347,7 +200,7 @@ export default function Blog() {
             {/* Decorative Background Elements */}
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#15a36e]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#15a36e]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl"></div>
-            
+
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left Content */}
               <div className="text-center lg:text-left flex flex-col items-center lg:items-start">

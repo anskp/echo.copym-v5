@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import SectionContainer from '../../components/Layout/SectionContainer';
-import TermCard from '../../components/Blog/Glossary/TermCard';
 import Hero from './sections/GlossaryHero';
-import { FiBook, FiChevronRight } from 'react-icons/fi';
+import { FiBook, FiArrowRight } from 'react-icons/fi';
 
 // Sample glossary terms data with descriptions - 8 terms per letter
-const glossaryTerms = [
+export const glossaryTerms = [
   // A - 8 terms
   { term: "Asset Tokenization", slug: "asset-tokenization", letter: "A", description: "The process of converting real-world assets like real estate, art, or commodities into digital tokens on a blockchain." },
   { term: "Altcoin", slug: "altcoin", letter: "A", description: "Any cryptocurrency other than Bitcoin, representing alternative blockchain projects." },
@@ -221,11 +221,10 @@ const glossaryTerms = [
 export default function Glossary() {
   const [selectedLetter, setSelectedLetter] = useState("A");
   const [searchTerm, setSearchTerm] = useState("");
-  const [expandedTerm, setExpandedTerm] = useState(null);
 
   const filteredTerms = glossaryTerms.filter(term => {
     const matchesLetter = selectedLetter === "ALL" || term.letter === selectedLetter;
-    const matchesSearch = searchTerm === "" || 
+    const matchesSearch = searchTerm === "" ||
       term.term.toLowerCase().includes(searchTerm.toLowerCase());
     return matchesLetter && matchesSearch;
   });
@@ -314,51 +313,32 @@ export default function Glossary() {
                   <div className="flex-1 h-px bg-gray-200"></div>
                 </div>
 
-                {/* Terms List with Expandable Descriptions - Responsive Grid */}
+                {/* Terms Grid - Clickable Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-                  {terms.map((item, index) => {
-                    const isExpanded = expandedTerm === item.slug;
-                    return (
-                      <motion.div
-                        key={item.slug}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: index * 0.05 }}
-                        viewport={{ once: true }}
+                  {terms.map((item, index) => (
+                    <motion.div
+                      key={item.slug}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.05 }}
+                      viewport={{ once: true }}
+                    >
+                      <Link
+                        to={`/glossary/${item.slug}`}
+                        className="block bg-white rounded-xl p-4 border border-gray-200 hover:border-[#15a36e] hover:shadow-lg hover:shadow-[#15a36e]/10 transition-all duration-300 group h-full"
                       >
-                        <button
-                          onClick={() => setExpandedTerm(isExpanded ? null : item.slug)}
-                          className="w-full flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 text-left hover:bg-gray-50 rounded-lg transition-colors"
-                        >
-                          <FiChevronRight className={`w-4 h-4 sm:w-5 sm:h-5 text-gray-400 flex-shrink-0 transition-transform duration-300 ${
-                            isExpanded ? 'rotate-90 text-[#15a36e]' : ''
-                          }`} />
-                          <span className="text-xs sm:text-sm font-bold text-gray-800 flex-1 line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        <div className="flex items-start justify-between gap-3 mb-2">
+                          <h3 className="text-sm sm:text-base font-bold text-gray-800 group-hover:text-[#15a36e] transition-colors line-clamp-2 flex-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             {item.term}
-                          </span>
-                        </button>
-
-                        {/* Expanded Description */}
-                        <AnimatePresence>
-                          {isExpanded && (
-                            <motion.div
-                              initial={{ height: 0, opacity: 0 }}
-                              animate={{ height: 'auto', opacity: 1 }}
-                              exit={{ height: 0, opacity: 0 }}
-                              transition={{ duration: 0.3 }}
-                              className="overflow-hidden"
-                            >
-                              <div className="pl-7 sm:pl-8 pr-3 pb-3 pt-1">
-                                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                                  {item.description}
-                                </p>
-                              </div>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </motion.div>
-                    );
-                  })}
+                          </h3>
+                          <FiArrowRight className="w-4 h-4 text-gray-300 group-hover:text-[#15a36e] group-hover:translate-x-1 transition-all flex-shrink-0 mt-0.5" />
+                        </div>
+                        <p className="text-xs text-gray-500 leading-relaxed line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                          {item.description}
+                        </p>
+                      </Link>
+                    </motion.div>
+                  ))}
                 </div>
               </div>
             ))}
