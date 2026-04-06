@@ -74,7 +74,7 @@ export default function TokenManagement() {
                 <div
                     ref={scrollRef}
                     onScroll={handleScroll}
-                    className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-4 gap-4 lg:gap-6 w-full -mx-5 px-5 pb-8 lg:mx-0 lg:px-0 lg:pb-0"
+                    className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar lg:grid lg:grid-cols-4 gap-4 lg:gap-6 w-full px-5 pb-8 lg:mx-0 lg:px-0 lg:pb-0"
                 >
                     {managementFeatures.map((feature, index) => (
                         <motion.div

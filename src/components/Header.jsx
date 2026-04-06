@@ -30,28 +30,37 @@ export default function Header() {
 
   useEffect(() => {
     let lastScrollY = window.scrollY;
+    let ticking = false;
 
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const currentScrollY = window.scrollY;
 
-      // Background logic
-      if (currentScrollY > 20) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
+          // Background logic - works on all devices
+          if (currentScrollY > 20) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
+
+          // Hide/show logic with larger threshold on mobile
+          const threshold = window.innerWidth < 1024 ? 20 : 5;
+
+          if (currentScrollY > lastScrollY + threshold && currentScrollY > 100) {
+            setIsVisible(false);
+          } else if (currentScrollY < lastScrollY - threshold) {
+            setIsVisible(true);
+          }
+
+          lastScrollY = currentScrollY;
+          ticking = false;
+        });
+        ticking = true;
       }
-
-      // Show/Hide logic
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setIsVisible(false);
-      } else {
-        setIsVisible(true);
-      }
-
-      lastScrollY = currentScrollY;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -134,12 +143,15 @@ export default function Header() {
 
   return (
     <>
-      {/* Full Width Header - Fixed to top with no gap */}
-      <motion.nav
-        className="fixed top-0 left-0 right-0 z-[100] pointer-events-none"
-        initial={{ y: -100, opacity: 0 }}
-        animate={{ y: isVisible ? 0 : -100, opacity: 1 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
+      {/* Full Width Header - Fixed to top with slide animation */}
+      <nav
+        className="fixed top-0 left-0 right-0 z-[100] pointer-events-none transition-transform duration-300 ease-in-out"
+        style={{
+          top: 'env(safe-area-inset-top, 0px)',
+          transform: isVisible ? 'translateY(0)' : 'translateY(-100%)',
+          willChange: 'transform',
+          WebkitTransform: isVisible ? 'translateZ(0)' : 'translateY(-100%) translateZ(0)',
+        }}
       >
         {/* Actual Header Container - Inner pointer events auto to allow clicking */}
         <div className={`
@@ -329,7 +341,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile/Tablet Slide-in Menu */}
       <AnimatePresence>
