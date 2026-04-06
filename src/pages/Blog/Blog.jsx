@@ -1,13 +1,13 @@
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import SectionContainer from '../../components/Layout/SectionContainer';
 import PostCard from '../../components/Blog/PostCard';
 import Pagination from '../../components/Blog/Pagination';
 import FeaturedSection from '../../components/Blog/FeaturedSection';
 import Hero from './sections/Hero';
-import { FiMail } from 'react-icons/fi';
 import { blogPosts, getFeaturedPosts as getFeaturedPostsUtil } from '../../data/blogPosts';
+import { FiMail } from 'react-icons/fi';
 
 const categories = ["All", "Education", "News", "Insights", "Product Updates", "Glossary"];
 const POSTS_PER_PAGE = 6;
@@ -193,7 +193,7 @@ export default function Blog() {
       </SectionContainer>
       </div>
 
-      {/* Newsletter Section - White Card with Pill Button */}
+      {/* CTA Section - White Card with CTA Buttons */}
       <SectionContainer padding="py-16" bgColor="bg-white">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -202,7 +202,7 @@ export default function Blog() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto px-6"
         >
-          {/* Newsletter Banner - White Rectangular Card */}
+          {/* CTA Banner - White Rectangular Card */}
           <motion.div
             className="relative overflow-hidden rounded-3xl bg-white px-6 py-12 sm:px-12 sm:py-16 shadow-[0_20px_60px_rgba(15,23,42,0.1)] border border-gray-100"
           >
@@ -210,54 +210,38 @@ export default function Blog() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#15a36e]/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#15a36e]/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-2xl"></div>
 
-            <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left Content */}
-              <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
-                {/* Icon */}
-                <div className="inline-flex items-center justify-center w-14 h-14 mb-6 rounded-2xl bg-gradient-to-br from-[#15a36e] to-emerald-600 shadow-lg shadow-[#15a36e]/30">
-                  <FiMail className="w-7 h-7 text-white" />
-                </div>
+            <div className="relative flex flex-col items-center text-center">
+              {/* Heading */}
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                See How It Works
+              </h3>
 
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  JOIN OUR NEWSLETTER
-                </h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mb-10" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                Explore our platform and discover how CopyM makes tokenization simple, secure, and accessible for everyone.
+              </p>
 
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-lg text-center lg:text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Subscribe to our newsletter for the latest insights on real-world asset tokenization and exclusive updates.
-                </p>
-              </div>
-
-              {/* Right Content - Form */}
-              <div className="w-full flex justify-center">
-                <form className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center sm:items-stretch" onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="email"
-                    required
-                    placeholder="Enter your E-Mail Address"
-                    className="w-full sm:w-auto px-6 py-4 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-2 focus:ring-[#15a36e]/10 transition-all text-sm font-medium"
-                    style={{ fontFamily: 'Palanquin, sans-serif' }}
-                  />
-                  <button
-                    type="submit"
-                    className="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#12a062] rounded-full p-1 transition-all duration-300"
-                    style={{ fontFamily: 'Palanquin, sans-serif' }}
-                  >
-                    <span className="pl-4 pr-2 text-white font-semibold text-sm sm:text-base">
-                      Subscribe
-                    </span>
-                    <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
-                      <svg
-                        className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#15a36e]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        strokeWidth="3"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                      </svg>
-                    </div>
-                  </button>
-                </form>
+              {/* CTA Button */}
+              <div className="flex justify-center">
+                <Link
+                  to="/tokenization"
+                  className="group inline-flex items-center justify-between min-w-[160px] sm:min-w-[180px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#12a062] rounded-full p-1 transition-all duration-300"
+                  style={{ fontFamily: 'Palanquin, sans-serif' }}
+                >
+                  <span className="pl-4 pr-2 text-white font-semibold text-sm sm:text-base">
+                    Explore Platform
+                  </span>
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white flex items-center justify-center transition-all duration-300 group-hover:translate-x-1">
+                    <svg
+                      className="w-4 h-4 sm:w-4.5 sm:h-4.5 text-[#15a36e]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="3"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                </Link>
               </div>
             </div>
           </motion.div>
