@@ -7,9 +7,9 @@ export default function Hero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/Images/bloghero1.png"
+          src="/assets/Images/heroblog5.png"
           alt="Blog hero background"
-          className="w-full h-full object-cover object-right sm:object-right scale-110 sm:scale-100 translate-y-12 sm:translate-y-0"
+          className="w-full h-full object-cover object-right"
         />
       </div>
       <div className="relative z-10 w-full h-full flex items-center justify-start px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32">

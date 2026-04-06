@@ -4,7 +4,7 @@ import { IoClose } from 'react-icons/io5';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaUsers, FaDollarSign, FaHandshake, FaFileAlt, FaKey, FaFileAlt as FaReport, FaInfoCircle, FaEnvelope, FaDownload, FaChevronDown } from 'react-icons/fa';
-import { HiCube, HiShieldCheck, HiLightningBolt, HiDocumentText, HiBookOpen } from 'react-icons/hi';
+import { HiCube, HiShieldCheck, HiLightningBolt, HiDocumentText, HiBookOpen, HiNewspaper } from 'react-icons/hi';
 import { BsCurrencyBitcoin, BsShop } from 'react-icons/bs';
 import Image from './Image'; // Import our new AVIF-compatible Image component
 import tiicon4 from '../components/icons/Tokenization/tiicon4.avif';
@@ -97,16 +97,18 @@ export default function Header() {
           path: "/blog"
         },
         {
+          icon: <StyledIcon icon={HiNewspaper} />,
+          heading: "Glossary",
+          description: "Explore key terms and concepts in real-world asset tokenization.",
+          path: "/glossary"
+        },
+        {
           icon: <StyledIcon icon={HiDocumentText} />,
           heading: "Document",
           description: "Access all important documents and resources.",
           path: "#"  // Disabled redirect
         }
       ]
-    },
-    {
-      label: "Glossary",
-      path: "/glossary"
     },
     {
       label: "About Us",
@@ -244,9 +246,9 @@ export default function Header() {
                                 ))}
                               </div>
 
-                              {/* Right Column: Blog, Document */}
+                              {/* Right Column: Blog, Glossary, Document */}
                               <div className="space-y-4">
-                                {item.dropdown.slice(2, 4).map((dropdownItem, index) => (
+                                {item.dropdown.slice(2).map((dropdownItem, index) => (
                                   <Link
                                     key={index + 2}
                                     to={dropdownItem.path || item.path}
@@ -389,14 +391,14 @@ export default function Header() {
               <div className="px-2">
                 {navItems.map((item, idx) => {
                   const isDropdown = item.dropdown && item.dropdown.length > 0;
-                  const open = isDropdown && mobileDropdownOpen === item.path;
+                  const open = isDropdown && mobileDropdownOpen === item.label;
                   return (
-                    <div key={item.path} className="border-b border-white/5 last:border-b-0">
+                    <div key={item.label} className="border-b border-white/5 last:border-b-0">
                       {isDropdown ? (
                         <div
                           className={`flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer ${open ? 'text-white' : ''}`}
                           onClick={() => {
-                            setMobileDropdownOpen(mobileDropdownOpen === item.path ? null : item.path);
+                            setMobileDropdownOpen(mobileDropdownOpen === item.label ? null : item.label);
                           }}
                         >
                           <span className="flex-1 text-base">{item.label}</span>

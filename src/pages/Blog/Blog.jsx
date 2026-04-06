@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import SectionContainer from '../../components/Layout/SectionContainer';
@@ -17,6 +17,7 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const postsRef = useRef(null);
 
   // Filter posts based on category and search
   const filteredPosts = useMemo(() => {
@@ -63,7 +64,13 @@ export default function Blog() {
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 400, behavior: 'smooth' });
+    // Scroll after state update - use longer delay for mobile rendering
+    setTimeout(() => {
+      const el = postsRef.current;
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 300);
   };
 
   return (
@@ -77,7 +84,8 @@ export default function Blog() {
       )}
 
       {/* Blog Posts Grid */}
-      <SectionContainer padding="pt-16 pb-16" bgColor="bg-white">
+      <div ref={postsRef} id="posts-section">
+        <SectionContainer padding="pt-16 pb-16" bgColor="bg-white">
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -183,6 +191,7 @@ export default function Blog() {
           </motion.div>
         )}
       </SectionContainer>
+      </div>
 
       {/* Newsletter Section - White Card with Pill Button */}
       <SectionContainer padding="py-16" bgColor="bg-white">

@@ -203,7 +203,7 @@ export default function Footer() {
             {/* Product Links */}
             <div>
               <div className="relative w-fit mb-2">
-                <h3 className="uppercase tracking-wide text-[10px] sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="uppercase tracking-wide text-xs sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   PRODUCT
                 </h3>
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
@@ -213,7 +213,7 @@ export default function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                      className="text-white hover:text-[#15a36e] text-xs sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
                     </a>
@@ -225,7 +225,7 @@ export default function Footer() {
             {/* Company Links */}
             <div>
               <div className="relative w-fit mb-2">
-                <h3 className="uppercase tracking-wide text-[10px] sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="uppercase tracking-wide text-xs sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   COMPANY
                 </h3>
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
@@ -235,7 +235,7 @@ export default function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                      className="text-white hover:text-[#15a36e] text-xs sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       {item}
                     </a>
@@ -247,7 +247,7 @@ export default function Footer() {
             {/* Support Links */}
             <div>
               <div className="relative w-fit mb-2">
-                <h3 className="uppercase tracking-wide text-[10px] sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="uppercase tracking-wide text-xs sm:text-xs text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   SUPPORT
                 </h3>
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
@@ -258,14 +258,14 @@ export default function Footer() {
                     {item === 'Terms of Services' ? (
                       <Link
                         to="/terms-of-services"
-                        className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                        className="text-white hover:text-[#15a36e] text-xs sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
                       >
                         {item}
                       </Link>
                     ) : (
                       <a
                         href="#"
-                        className="text-white hover:text-[#15a36e] text-[10px] sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
+                        className="text-white hover:text-[#15a36e] text-xs sm:text-sm transition-colors whitespace-nowrap" style={{ fontFamily: 'Palanquin, sans-serif' }}
                       >
                         {item}
                       </a>
@@ -283,12 +283,12 @@ export default function Footer() {
           <div className="flex flex-col space-y-3">
             <div>
               <div className="relative w-fit mb-2">
-                <h3 className="uppercase tracking-wide text-xs sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <h3 className="uppercase tracking-wide text-sm sm:text-sm text-[#15a36e] font-semibold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                   JOIN OUR NEWS LETTER
                 </h3>
                 <div className="absolute bottom-0 left-0 bg-[#15a36e]" style={{ width: '100%', height: '1px' }}></div>
               </div>
-              <p className="mt-2 text-sm text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+              <p className="mt-2 text-base text-white leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 To know more subscribe to our newsletter
               </p>
             </div>
@@ -310,7 +310,7 @@ export default function Footer() {
                     paddingLeft: '16px',
                     paddingRight: '8px',
                     color: '#000000',
-                    fontSize: '14px',
+                    fontSize: '16px',
                     background: 'transparent',
                     fontFamily: 'Palanquin, sans-serif',
                   }}
@@ -325,7 +325,7 @@ export default function Footer() {
                   }}
                 >
                   <span
-                    className="text-xs sm:text-sm font-semibold"
+                    className="text-sm sm:text-sm font-semibold"
                   >
                     Subscribe
                   </span>
@@ -340,7 +340,7 @@ export default function Footer() {
           <p className="text-gray-400 text-sm sm:text-base text-left" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             &copy; 2026 COPYM. All rights reserved.
           </p>
-          <p className="text-gray-400 text-[10px] sm:text-xs text-left max-w-5xl leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          <p className="text-gray-400 text-xs sm:text-xs text-left max-w-5xl leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
             Copym is not a registered broker-dealer, funding portal, underwriter, entitlement bank, entitlement adviser, or entitlement manager. Copym does not provide brokerage services, entitlement banking services, underwriting services, entitlement recommendations, or entitlement advice to any person. Copym does not participate in the negotiation or execution of secondary market transactions for the purchase or sale of securities. Copym does not, at any time, have possession or control of investor funds or securities in connection with such transactions. Copym operates as a technology platform focused on distributed ledger technology to improve efficiency, accessibility, and transparency in financial technologies and T & C apply.
           </p>
         </div>
