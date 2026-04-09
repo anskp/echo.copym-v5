@@ -7,7 +7,21 @@ import { FiArrowRight } from 'react-icons/fi';
  * Shows related articles at end of post
  */
 export default function RelatedPosts({ posts = [], title = "Related Articles" }) {
-  if (!posts || posts.length === 0) return null;
+  if (!posts || posts.length === 0) {
+    return (
+      <section>
+        <h3
+          className="text-2xl font-bold text-gray-900 mb-6"
+          style={{ fontFamily: 'Palanquin, sans-serif' }}
+        >
+          {title}
+        </h3>
+        <p className="text-gray-500 italic" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+          More articles coming soon...
+        </p>
+      </section>
+    );
+  }
 
   return (
     <section>

@@ -1,40 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Navigate } from 'react-router-dom';
 import { FiTwitter, FiLinkedin, FiMail, FiFacebook, FiLink, FiCalendar, FiClock, FiUser, FiChevronRight } from 'react-icons/fi';
 import DisclaimerBlock from '../../components/Blog/DisclaimerBlock';
 import RelatedPosts from '../../components/Blog/RelatedPosts';
 import Breadcrumbs from '../../components/Blog/Breadcrumbs';
-import { blogPosts, getRelatedPosts as getRelatedPostsUtil } from '../../data/blogPosts';
-
-// Read also posts (static for sidebar)
-const readAlsoPosts = [
-  {
-    id: 5,
-    title: "Security Token Offerings: A Complete Guide",
-    category: "Education",
-    date: "March 1, 2026",
-    slug: "security-token-offerings-guide"
-  },
-  {
-    id: 6,
-    title: "Blockchain Compliance in 2026",
-    category: "Compliance",
-    date: "February 25, 2026",
-    slug: "blockchain-compliance-2026"
-  },
-  {
-    id: 7,
-    title: "Digital Asset Custody Solutions",
-    category: "Technology",
-    date: "February 20, 2026",
-    slug: "digital-asset-custody-solutions"
-  }
-];
+import BlogContentRenderer from '../../components/Blog/BlogContentRenderer';
+import { fetchBlogPostBySlug, transformApiPost } from '../../services/blogApi';
+import { blogPosts as staticBlogPosts } from '../../data/blogPosts';
+import { generatePageSEO, generateBlogPostSchema, generateFAQSchema, generateBreadcrumbSchema } from '../../utils/seo';
 
 export default function BlogPost() {
   const { slug } = useParams();
   const [article, setArticle] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [relatedPosts, setRelatedPosts] = useState([]);
+  const [youMayAlsoLike, setYouMayAlsoLike] = useState([]);
   const [activeSection, setActiveSection] = useState('');
   const [leftSidebarFixed, setLeftSidebarFixed] = useState(true);
   const [rightSidebarFixed, setRightSidebarFixed] = useState(true);
@@ -46,14 +27,68 @@ export default function BlogPost() {
 
   const shareUrl = typeof window !== 'undefined' ? window.location.href : '';
 
+  // Normalize author data (API posts have authorData, static posts have author string)
+  const authorObj = article ? (
+    article.authorData || {
+      name: typeof article.author === 'string' ? article.author : 'CopyM Team',
+      role: '',
+      bio: ''
+    }
+  ) : null;
+
   // Find article by slug
   useEffect(() => {
-    const foundPost = blogPosts.find(post => post.slug === slug);
-    if (foundPost) {
-      setArticle(foundPost);
-      // Get related posts (excluding current post)
-      setRelatedPosts(getRelatedPostsUtil(foundPost.id, 3));
-    }
+    const fetchPost = async () => {
+      setLoading(true);
+      try {
+        // Try API first
+        const apiPost = await fetchBlogPostBySlug(slug);
+        const transformedPost = transformApiPost(apiPost);
+        setArticle(transformedPost);
+
+        // Combine admin post with static posts to find related ones
+        const allPosts = [transformedPost, ...staticBlogPosts.filter(p => p.slug !== transformedPost.slug)];
+        
+        // Related posts: same category first, then others
+        const sameCategoryPosts = allPosts.filter(p => p.category === transformedPost.category && p.slug !== slug);
+        const otherPosts = allPosts.filter(p => p.category !== transformedPost.category);
+        const allRelated = [...sameCategoryPosts, ...otherPosts].slice(0, 3);
+        setRelatedPosts(allRelated);
+
+        // "You May Also Like" - pick different posts than related posts
+        const usedSlugs = new Set(allRelated.map(p => p.slug));
+        usedSlugs.add(slug);
+        const alsoLike = allPosts.filter(p => !usedSlugs.has(p.slug)).slice(0, 3);
+        setYouMayAlsoLike(alsoLike);
+      } catch (error) {
+        // Fallback to static posts
+        const staticPost = staticBlogPosts.find(p => p.slug === slug);
+        if (staticPost) {
+          setArticle(staticPost);
+          // Combine static posts for related logic
+          const allPosts = staticBlogPosts.filter(p => p.slug !== slug);
+          
+          // Related posts: same category first, then others
+          const sameCategoryPosts = allPosts.filter(p => p.category === staticPost.category);
+          const otherPosts = allPosts.filter(p => p.category !== staticPost.category);
+          const allRelated = [...sameCategoryPosts, ...otherPosts].slice(0, 3);
+          setRelatedPosts(allRelated);
+
+          // "You May Also Like" - pick different posts than related posts
+          const usedSlugs = new Set(allRelated.map(p => p.slug));
+          usedSlugs.add(slug);
+          const alsoLike = allPosts.filter(p => !usedSlugs.has(p.slug)).slice(0, 3);
+          setYouMayAlsoLike(alsoLike);
+        } else {
+          console.error('Failed to fetch post:', error);
+          setArticle(null);
+        }
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPost();
   }, [slug]);
 
   // Scroll to top when page loads
@@ -145,6 +180,86 @@ export default function BlogPost() {
 
   return (
     <div className="bg-white text-gray-900 min-h-screen">
+      {/* SEO Helmet */}
+      <Helmet>
+        {(() => {
+          const postUrl = `/blog/${article.category?.toLowerCase()}/${article.slug}`;
+          const seo = generatePageSEO({
+            title: article.title,
+            description: article.excerpt,
+            canonical: postUrl,
+            image: article.image,
+            type: 'article',
+            publishedTime: article.date,
+            modifiedTime: article.updatedDate || article.date,
+            author: article.author,
+            section: article.category,
+          });
+
+          // Article Schema
+          const articleSchema = generateBlogPostSchema({
+            title: article.title,
+            description: article.excerpt,
+            image: article.image,
+            publishedDate: article.date,
+            modifiedDate: article.updatedDate,
+            author: article.author,
+            reviewer: article.reviewer?.name,
+            url: `${seo.meta.canonical}`,
+          });
+
+          // FAQ Schema
+          const faqSchema = generateFAQSchema(article.faqs);
+
+          // Breadcrumb Schema
+          const breadcrumbSchema = generateBreadcrumbSchema([
+            { label: 'Home', path: '/' },
+            { label: 'Blog', path: '/blog' },
+            { label: article.category, path: `/blog?category=${article.category.toLowerCase()}` },
+            { label: article.title, path: postUrl },
+          ]);
+
+          return (
+            <>
+              <title>{seo.title}</title>
+              <meta name="description" content={seo.meta.description} />
+              <link rel="canonical" href={seo.meta.canonical} />
+              <meta property="og:type" content={seo.meta.og.type} />
+              <meta property="og:title" content={seo.meta.og.title} />
+              <meta property="og:description" content={seo.meta.og.description} />
+              <meta property="og:image" content={seo.meta.og.image} />
+              <meta property="og:url" content={seo.meta.og.url} />
+              <meta name="twitter:card" content={seo.meta.twitter.card} />
+              <meta name="twitter:title" content={seo.meta.twitter.title} />
+              <meta name="twitter:description" content={seo.meta.twitter.description} />
+              <meta name="twitter:image" content={seo.meta.twitter.image} />
+              {seo.meta.article && (
+                <>
+                  <meta property="article:published_time" content={seo.meta.article.publishedTime} />
+                  <meta property="article:modified_time" content={seo.meta.article.modifiedTime} />
+                  <meta property="article:author" content={seo.meta.article.author} />
+                  <meta property="article:section" content={seo.meta.article.section} />
+                </>
+              )}
+              {/* JSON-LD: Article */}
+              <script type="application/ld+json">
+                {JSON.stringify(articleSchema)}
+              </script>
+              {/* JSON-LD: FAQ */}
+              {faqSchema && (
+                <script type="application/ld+json">
+                  {JSON.stringify(faqSchema)}
+                </script>
+              )}
+              {/* JSON-LD: Breadcrumbs */}
+              <script type="application/ld+json">
+                {JSON.stringify(breadcrumbSchema)}
+              </script>
+            </>
+          );
+        })()}
+      </Helmet>
+
       {/* Breadcrumbs - Sticky on desktop, static on mobile */}
       <div className="hidden lg:block fixed top-0 left-0 right-0 bg-gray-50 z-40 pt-28">
         <div className="px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 pb-8">
@@ -201,18 +316,28 @@ export default function BlogPost() {
                   const hasSubheadings = subheadings.length > 0;
                   const isExpanded = expandedHeadings.includes(item.id);
 
+                  const scrollToHeading = (id) => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                      const yOffset = -120; // Offset for fixed header/breadcrumbs
+                      const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  };
+
                   return (
                     <div key={item.id}>
                       <button
                         onClick={() => {
-                          document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' });
+                          scrollToHeading(item.id);
                           setActiveSection(item.id);
+                          // Close all other expanded H2s, toggle current if it has subheadings
                           if (hasSubheadings) {
                             setExpandedHeadings(prev =>
-                              prev.includes(item.id)
-                                ? prev.filter(id => id !== item.id)
-                                : [...prev, item.id]
+                              prev.includes(item.id) ? [] : [item.id]
                             );
+                          } else {
+                            setExpandedHeadings([]);
                           }
                         }}
                         className={`w-full text-left block text-sm transition-colors ${
@@ -232,7 +357,12 @@ export default function BlogPost() {
                                 href={`#${sub.id}`}
                                 onClick={(e) => {
                                   e.preventDefault();
-                                  document.getElementById(sub.id)?.scrollIntoView({ behavior: 'smooth' });
+                                  const el = document.getElementById(sub.id);
+                                  if (el) {
+                                    const yOffset = -120;
+                                    const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                    window.scrollTo({ top: y, behavior: 'smooth' });
+                                  }
                                   setActiveSection(sub.id);
                                 }}
                                 className="block text-xs text-gray-500 hover:text-gray-900 transition-colors flex items-center gap-1.5"
@@ -318,17 +448,17 @@ export default function BlogPost() {
                 {/* Author */}
                 <div className="flex items-center gap-2.5">
                   <div className="w-9 h-9 rounded-full bg-[#15a36e]/20 flex items-center justify-center flex-shrink-0">
-                    {article.author?.avatar ? (
-                      <img src={article.author.avatar} alt={article.author.name} className="w-full h-full rounded-full object-cover" />
+                    {authorObj?.avatar ? (
+                      <img src={authorObj.avatar} alt={authorObj.name} className="w-full h-full rounded-full object-cover" />
                     ) : (
-                      <span className="text-xs font-bold text-[#15a36e]">{article.author?.name?.charAt(0) || 'C'}</span>
+                      <span className="text-xs font-bold text-[#15a36e]">{authorObj?.name?.charAt(0) || 'C'}</span>
                     )}
                   </div>
                   <div>
                     <p className="text-xs font-semibold text-gray-900" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                      {article.author?.name || 'CopyM Team'}
+                      {authorObj?.name || 'CopyM Team'}
                     </p>
-                    <p className="text-[10px] text-gray-500">{article.author?.role || 'Research Team'}</p>
+                    <p className="text-[10px] text-gray-500">{authorObj?.role || 'Research Team'}</p>
                   </div>
                 </div>
 
@@ -365,8 +495,15 @@ export default function BlogPost() {
             <div
               className="prose prose-sm sm:prose-base lg:prose-lg max-w-none text-gray-800 leading-relaxed"
               style={{ fontFamily: 'Palanquin, sans-serif' }}
-              dangerouslySetInnerHTML={{ __html: article.content }}
-            />
+            >
+              {/* Render contentBlocks as React components (admin posts) */}
+              {article.contentBlocks && article.contentBlocks.length > 0 ? (
+                <BlogContentRenderer contentBlocks={article.contentBlocks} />
+              ) : (
+                /* Fallback for static posts without contentBlocks */
+                <div dangerouslySetInnerHTML={{ __html: article.content }} />
+              )}
+            </div>
 
             <style>{`
               .prose h2 {
@@ -378,14 +515,17 @@ export default function BlogPost() {
                 padding-bottom: 0.75rem !important;
                 border-bottom: 3px solid #e5e7eb !important;
                 letter-spacing: -0.025em !important;
+                text-transform: uppercase !important;
               }
               .prose h3 {
-                color: #374151 !important;
+                color: #15a36e !important;
                 font-weight: 600 !important;
-                font-size: 1.375rem !important;
-                margin-top: 1.75rem !important;
-                margin-bottom: 0.875rem !important;
-                letter-spacing: -0.015em !important;
+                font-size: 1.25rem !important;
+                margin-top: 2rem !important;
+                margin-bottom: 0.75rem !important;
+                padding-left: 0.75rem !important;
+                border-left: 3px solid #15a36e !important;
+                letter-spacing: -0.01em !important;
               }
               .prose p {
                 color: #374151 !important;
@@ -421,6 +561,360 @@ export default function BlogPost() {
               .overflow-y-auto::-webkit-scrollbar-thumb:hover {
                 background: #9ca3af;
               }
+
+              /* ============================================
+                 INSERTABLE CONTENT BLOCKS
+                 ============================================ */
+
+              /* --- Base block style --- */
+              .blog-block {
+                margin: 2.5rem 0 !important;
+                border-radius: 1rem !important;
+                overflow: hidden !important;
+                font-family: 'Palanquin', sans-serif !important;
+              }
+
+              /* --- CTA Block --- */
+              .blog-cta {
+                background: #ffffff !important;
+                border: 2px solid #e5e7eb !important;
+                border-left: 2px solid #e5e7eb !important;
+                border-radius: 1rem !important;
+                padding: 2rem 1.5rem !important;
+                position: relative !important;
+                overflow: hidden !important;
+                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06) !important;
+                text-align: center !important;
+              }
+              .blog-cta h3,
+              .blog-cta__title {
+                color: #000000 !important;
+                border-left: none !important;
+                padding-left: 0 !important;
+                font-size: 1.25rem !important;
+                font-weight: 700 !important;
+                margin: 0 0 0.5rem !important;
+                line-height: 1.3 !important;
+              }
+              .blog-cta__text {
+                color: #6b7280 !important;
+                font-size: 0.9rem !important;
+                line-height: 1.6 !important;
+                margin: 0 0 1.25rem !important;
+              }
+              .blog-cta__btn {
+                display: inline-flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                gap: 0.5rem !important;
+                background: #15a36e !important;
+                color: #fff !important;
+                font-weight: 600 !important;
+                font-size: 0.875rem !important;
+                padding: 0.625rem 1.5rem !important;
+                border-radius: 9999px !important;
+                text-decoration: none !important;
+                transition: all 0.3s ease !important;
+                border: none !important;
+                box-shadow: 0 4px 12px rgba(21, 163, 110, 0.3) !important;
+              }
+              .blog-cta__btn:hover {
+                background: #12a062 !important;
+                transform: translateY(-2px) !important;
+                box-shadow: 0 6px 20px rgba(21, 163, 110, 0.4) !important;
+              }
+
+              /* --- Fast Fact / Key Fact Block --- */
+              .blog-fast-fact {
+                background: #f0fdf7 !important;
+                border-left: 4px solid #15a36e !important;
+                padding: 1.25rem 1.5rem !important;
+              }
+              .blog-fast-fact__label {
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+                font-size: 0.75rem !important;
+                font-weight: 700 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em !important;
+                color: #15a36e !important;
+                margin-bottom: 0.5rem !important;
+              }
+              .blog-fast-fact__value {
+                color: #111827 !important;
+                font-size: 1.125rem !important;
+                font-weight: 600 !important;
+                line-height: 1.5 !important;
+                margin: 0 !important;i 
+              }
+
+              /* --- Quote Block --- */
+              .blog-quote {
+                background: #fafafa !important;
+                border-left: 4px solid #15a36e !important;
+                padding: 1.5rem 2rem !important;
+                position: relative !important;
+              }
+              .blog-quote::before {
+                content: '\u201C' !important;
+                position: absolute !important;
+                top: 0.5rem !important;
+                left: 1rem !important;
+                font-size: 4rem !important;
+                color: rgba(21, 163, 110, 0.1) !important;
+                line-height: 1 !important;
+              }
+              .blog-quote__text {
+                color: #1f2937 !important;
+                font-size: 1.05rem !important;
+                font-style: italic !important;
+                line-height: 1.7 !important;
+                margin: 0 0 1rem !important;
+                position: relative;
+                z-index: 1;
+              }
+              .blog-quote__author {
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.75rem !important;
+              }
+              .blog-quote__avatar {
+                width: 40px !important;
+                height: 40px !important;
+                border-radius: 50% !important;
+                background: rgba(21, 163, 110, 0.15) !important;
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+                color: #15a36e !important;
+                font-weight: 700 !important;
+                font-size: 1rem !important;
+                flex-shrink: 0 !important;
+              }
+              .blog-quote__avatar img {
+                width: 100% !important;
+                height: 100% !important;
+                border-radius: 50% !important;
+                object-fit: cover !important;
+              }
+              .blog-quote__name {
+                font-weight: 600 !important;
+                font-size: 0.875rem !important;
+                color: #111827 !important;
+              }
+              .blog-quote__role {
+                font-size: 0.75rem !important;
+                color: #6b7280 !important;
+              }
+
+              /* --- Callout Block --- */
+              .blog-callout {
+                padding: 1.25rem 1.5rem !important;
+                display: flex !important;
+                gap: 0.75rem !important;
+                align-items: flex-start !important;
+              }
+              .blog-callout__icon {
+                width: 20px !important;
+                height: 20px !important;
+                flex-shrink: 0 !important;
+                margin-top: 2px !important;
+              }
+              .blog-callout__content {
+                flex: 1 !important;
+              }
+              .blog-callout__title {
+                font-weight: 700 !important;
+                font-size: 0.875rem !important;
+                margin: 0 0 0.25rem !important;
+              }
+              .blog-callout__text {
+                font-size: 0.875rem !important;
+                line-height: 1.6 !important;
+                margin: 0 !important;
+              }
+
+              /* Callout variants */
+              .blog-callout--info {
+                background: #eff6ff !important;
+                border-left: 4px solid #3b82f6 !important;
+              }
+              .blog-callout--info .blog-callout__icon { color: #3b82f6 !important; }
+              .blog-callout--info .blog-callout__title { color: #1e40af !important; }
+              .blog-callout--info .blog-callout__text { color: #1e3a5f !important; }
+
+              .blog-callout--warning {
+                background: #fefce8 !important;
+                border-left: 4px solid #eab308 !important;
+              }
+              .blog-callout--warning .blog-callout__icon { color: #eab308 !important; }
+              .blog-callout--warning .blog-callout__title { color: #854d0e !important; }
+              .blog-callout--warning .blog-callout__text { color: #713f12 !important; }
+
+              .blog-callout--note {
+                background: #f5f3ff !important;
+                border-left: 4px solid #8b5cf6 !important;
+              }
+              .blog-callout--note .blog-callout__icon { color: #8b5cf6 !important; }
+              .blog-callout--note .blog-callout__title { color: #5b21b6 !important; }
+              .blog-callout--note .blog-callout__text { color: #4c1d95 !important; }
+
+              .blog-callout--success {
+                background: #f0fdf7 !important;
+                border-left: 4px solid #15a36e !important;
+              }
+              .blog-callout--success .blog-callout__icon { color: #15a36e !important; }
+              .blog-callout--success .blog-callout__title { color: #065f46 !important; }
+              .blog-callout--success .blog-callout__text { color: #064e3b !important; }
+
+              /* --- Table Block --- */
+              .blog-table {
+                border: 1px solid #e5e7eb !important;
+                border-radius: 0.75rem !important;
+                overflow: hidden !important;
+              }
+              @media (max-width: 1023px) {
+                .blog-table {
+                  overflow-x: auto !important;
+                  -webkit-overflow-scrolling: touch !important;
+                  /* Hide scrollbar visually */
+                  -ms-overflow-style: none !important;
+                  scrollbar-width: none !important;
+                }
+                .blog-table::-webkit-scrollbar {
+                  display: none !important;
+                }
+                .blog-table table {
+                  min-width: 600px !important;
+                }
+              }
+              .blog-table table {
+                width: 100% !important;
+                border-collapse: collapse !important;
+                margin: 0 !important;
+                font-size: 0.875rem !important;
+              }
+              .blog-table thead {
+                background: #f9fafb !important;
+              }
+              .blog-table th {
+                color: #111827 !important;
+                font-weight: 600 !important;
+                text-align: left !important;
+                padding: 0.875rem 1rem !important;
+                border-bottom: 2px solid #e5e7eb !important;
+              }
+              .blog-table td {
+                color: #4b5563 !important;
+                padding: 0.75rem 1rem !important;
+                border-bottom: 1px solid #f3f4f6 !important;
+              }
+              .blog-table tbody tr:last-child td {
+                border-bottom: none !important;
+              }
+              .blog-table tbody tr:hover {
+                background: #f9fafb !important;
+              }
+
+              /* --- Image + Caption Block --- */
+              .blog-image {
+                margin: 2rem 0 !important;
+                border-radius: 0.75rem !important;
+                overflow: hidden !important;
+                background: #f9fafb !important;
+              }
+              .blog-image img {
+                width: 100% !important;
+                height: auto !important;
+                display: block !important;
+              }
+              .blog-image__caption {
+                padding: 0.75rem 1rem !important;
+                font-size: 0.8rem !important;
+                color: #6b7280 !important;
+                text-align: center !important;
+                font-style: italic !important;
+                border-top: 1px solid #e5e7eb !important;
+              }
+
+              /* --- Source / Reference Block --- */
+              .blog-source {
+                background: #f9fafb !important;
+                border-left: 4px solid #d1d5db !important;
+                padding: 1rem 1.25rem !important;
+                margin: 2rem 0 !important;
+              }
+              .blog-source__title {
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+                font-size: 0.75rem !important;
+                font-weight: 700 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em !important;
+                color: #6b7280 !important;
+                margin-bottom: 0.5rem !important;
+              }
+              .blog-source__link {
+                color: #15a36e !important;
+                font-size: 0.85rem !important;
+                text-decoration: underline !important;
+                word-break: break-all !important;
+                transition: color 0.2s !important;
+              }
+              .blog-source__link:hover {
+                color: #0e7a4f !important;
+              }
+
+              /* --- Related Article Inline Block --- */
+              .blog-related-article {
+                background: linear-gradient(135deg, #f0fdf7 0%, #ffffff 100%) !important;
+                border: 1px solid rgba(21, 163, 110, 0.2) !important;
+                border-radius: 0.75rem !important;
+                padding: 1.25rem 1.5rem !important;
+                transition: all 0.3s ease !important;
+              }
+              .blog-related-article:hover {
+                border-color: rgba(21, 163, 110, 0.4) !important;
+                box-shadow: 0 4px 24px rgba(21, 163, 110, 0.08) !important;
+              }
+              .blog-related-article__label {
+                display: inline-flex !important;
+                align-items: center !important;
+                gap: 0.375rem !important;
+                font-size: 0.7rem !important;
+                font-weight: 700 !important;
+                text-transform: uppercase !important;
+                letter-spacing: 0.05em !important;
+                color: #15a36e !important;
+                margin-bottom: 0.5rem !important;
+              }
+              .blog-related-article__title {
+                color: #111827 !important;
+                font-size: 1rem !important;
+                font-weight: 600 !important;
+                margin: 0 0 0.25rem !important;
+                text-decoration: none !important;
+                transition: color 0.2s !important;
+              }
+              .blog-related-article__title:hover {
+                color: #15a36e !important;
+              }
+              .blog-related-article__meta {
+                font-size: 0.75rem !important;
+                color: #9ca3af !important;
+              }
+
+              /* --- Responsive --- */
+              @media (max-width: 768px) {
+                .blog-cta { padding: 1.5rem 1rem !important; }
+                .blog-cta__title { font-size: 1.1rem !important; }
+                .blog-quote { padding: 1.25rem 1rem !important; }
+                .blog-quote::before { font-size: 3rem !important; }
+                .blog-fast-fact { padding: 1rem 1.25rem !important; }
+                .blog-table table { font-size: 0.8rem !important; }
+              }
             `}</style>
 
             {/* Author & Reviewer Section - CopyM Style */}
@@ -432,10 +926,10 @@ export default function BlogPost() {
                     <div className="flex items-start gap-4">
                       {/* Avatar */}
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#15a36e]/20 to-[#15a36e]/5 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
-                        {article.author?.avatar ? (
-                          <img src={article.author.avatar} alt={article.author.name} className="w-full h-full rounded-lg object-cover" />
+                        {authorObj?.avatar ? (
+                          <img src={authorObj.avatar} alt={authorObj.name} className="w-full h-full rounded-lg object-cover" />
                         ) : (
-                          <span className="text-xl font-bold text-[#15a36e]">{article.author?.name?.charAt(0) || 'C'}</span>
+                          <span className="text-xl font-bold text-[#15a36e]">{authorObj?.name?.charAt(0) || 'C'}</span>
                         )}
                       </div>
 
@@ -443,10 +937,10 @@ export default function BlogPost() {
                       <div className="flex-1">
                         <span className="text-[10px] font-bold uppercase tracking-wider text-[#15a36e] block mb-1">Written By</span>
                         <h4 className="text-lg font-bold text-gray-900 mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                          {article.author?.name || 'CopyM Team'}
+                          {authorObj?.name || 'CopyM Team'}
                         </h4>
-                        <p className="text-xs text-gray-500 mb-3">{article.author?.role || 'Research Team'}</p>
-                        <p className="text-sm text-gray-600 leading-relaxed">{article.author?.bio || 'Our research team analyzes market trends and emerging technologies in blockchain and tokenization.'}</p>
+                        <p className="text-xs text-gray-500 mb-3">{authorObj?.role || 'Research Team'}</p>
+                        <p className="text-sm text-gray-600 leading-relaxed">{authorObj?.bio || 'Our research team analyzes market trends and emerging technologies in blockchain and tokenization.'}</p>
                       </div>
                     </div>
                   </div>
@@ -551,10 +1045,10 @@ export default function BlogPost() {
                   You May Also Like
                 </h4>
                 <div className="space-y-3">
-                  {readAlsoPosts.map((post) => (
+                  {youMayAlsoLike.map((post) => (
                     <a
                       key={post.id}
-                      href={`/blog/${post.slug}`}
+                      href={`/blog/${post.category?.toLowerCase()}/${post.slug}`}
                       className="group block py-2 border-b border-gray-100 hover:border-[#15a36e] transition-colors last:border-0"
                     >
                       <span className="text-xs font-semibold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -614,10 +1108,10 @@ export default function BlogPost() {
                 You May Also Like
               </h4>
               <div className="space-y-2">
-                {readAlsoPosts.map((post) => (
+                {youMayAlsoLike.map((post) => (
                   <a
                     key={post.id}
-                    href={`/blog/${post.slug}`}
+                    href={`/blog/${post.category?.toLowerCase()}/${post.slug}`}
                     className="group block py-2 border-b border-gray-100 hover:border-[#15a36e] transition-colors last:border-0"
                   >
                     <span className="text-xs font-semibold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>

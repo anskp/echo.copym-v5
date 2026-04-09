@@ -78,7 +78,7 @@ function FeaturedHeroCard({ post }) {
         {/* Image Background */}
         <div className="relative h-[350px] sm:h-[400px] w-full">
           <Image
-            src={image}
+            src={image || '/assets/Images/blogfeatured.avif'}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
           />
@@ -118,7 +118,7 @@ function FeaturedHeroCard({ post }) {
             </div>
 
             {/* 5. Know More Button */}
-            <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="group inline-flex items-center justify-between min-w-[100px] sm:min-w-[110px] md:min-w-[125px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-0.5 sm:p-1 transition-all duration-300 w-fit">
+            <span className="group inline-flex items-center justify-between min-w-[100px] sm:min-w-[110px] md:min-w-[125px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-0.5 sm:p-1 transition-all duration-300 w-fit cursor-pointer">
               <span className="pl-2 pr-1.5 sm:pl-2.5 sm:pr-2 text-white font-semibold text-[10px] sm:text-xs md:text-sm" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Know more
               </span>
@@ -133,7 +133,7 @@ function FeaturedHeroCard({ post }) {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </div>
-            </Link>
+            </span>
           </div>
         </div>
       </article>

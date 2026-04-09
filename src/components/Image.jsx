@@ -14,10 +14,40 @@ const Image = ({
   onError,
   ...props
 }) => {
+  // If no src, show nothing
+  if (!src) {
+    return (
+      <img
+        src=""
+        alt={alt}
+        className={className}
+        style={style}
+        {...props}
+      />
+    );
+  }
+
+  // For external URLs (http://, https://, //), don't try AVIF/WebP conversion
+  // since those files won't exist on the external server
+  const isExternalUrl = /^https?:\/\//i.test(src) || src.startsWith('//');
+
+  if (isExternalUrl) {
+    return (
+      <img
+        src={src}
+        alt={alt}
+        className={className}
+        style={style}
+        onLoad={onLoad}
+        onError={onError}
+        {...props}
+      />
+    );
+  }
+
   // Generate AVIF version of the image path
   const getAvifSrc = (originalSrc) => {
     if (!originalSrc) return originalSrc;
-
     // Replace the file extension with .avif
     return originalSrc.replace(/\.(png|jpe?g|gif|webp)$/i, '.avif');
   };
@@ -25,7 +55,6 @@ const Image = ({
   // Generate WebP version of the image path
   const getWebpSrc = (originalSrc) => {
     if (!originalSrc) return originalSrc;
-
     // Replace the file extension with .webp
     return originalSrc.replace(/\.(png|jpe?g|gif)$/i, '.webp');
   };

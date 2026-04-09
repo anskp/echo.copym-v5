@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Blog
+Allow: /blog
+Allow: /blog/education/
+Allow: /blog/news/
+Allow: /blog/insights/
+Allow: /blog/product-updates/
+
+# Glossary
+Allow: /glossary
+
+# Disallow admin/API endpoints
+Disallow: /api/
+Disallow: /admin/
+
+# Sitemap
+Sitemap: https://copym.xyz/sitemap.xml

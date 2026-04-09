@@ -40,10 +40,30 @@ export const blogPosts = [
 
       <p>Real-world asset (RWA) tokenization is revolutionizing how we think about ownership, investment, and value transfer. By converting physical and traditional financial assets into digital tokens on a blockchain, tokenization opens up new possibilities for liquidity, accessibility, and efficiency.</p>
 
+      <!-- 1. FAST FACT BLOCK -->
+      <div class="blog-block blog-fast-fact">
+        <div class="blog-fast-fact__label">
+          Fast Fact
+        </div>
+        <p class="blog-fast-fact__value">The global tokenized asset market is projected to reach $16 trillion by 2030, up from just $10 billion in 2023.</p>
+      </div>
+
       <h2 id="what-is-tokenization">What is Tokenization?</h2>
       <p>Tokenization is the process of converting rights to an asset into a digital token on a blockchain. These tokens represent ownership or entitlement to the underlying asset, which can be anything from real estate and commodities to art and intellectual property.</p>
 
       <p>At its core, tokenization creates a digital representation of an asset on a distributed ledger. Each token is unique, verifiable, and can be programmed with specific rules and rights. This digital representation maintains a direct link to the underlying asset, ensuring that token holders have legitimate claims to the value it represents.</p>
+
+      <!-- 3. QUOTE BLOCK -->
+      <div class="blog-block blog-quote">
+        <p class="blog-quote__text">"Tokenization will fundamentally change how assets are bought, sold, and managed worldwide — it's the future of finance."</p>
+        <div class="blog-quote__author">
+          <div class="blog-quote__avatar">C</div>
+          <div>
+            <div class="blog-quote__name">Jane Smith</div>
+            <div class="blog-quote__role">Head of Innovation, CopyM</div>
+          </div>
+        </div>
+      </div>
 
       <p>The beauty of tokenization lies in its ability to democratize access to investments that were previously reserved for institutional investors or high-net-worth individuals. By dividing assets into smaller, more affordable units, tokenization opens doors for retail investors to participate in markets that were once out of reach.</p>
 
@@ -57,6 +77,14 @@ export const blogPosts = [
         <li class="flex items-start gap-2"><span class="w-1.5 h-1.5 bg-gray-400 rounded-full mt-2 flex-shrink-0"></span><span><strong>Management:</strong> Ongoing administration and compliance</span></li>
       </ul>
 
+      <!-- 4. CALLOUT BLOCK — Warning -->
+      <div class="blog-block blog-callout blog-callout--warning">
+        <div class="blog-callout__content">
+          <div class="blog-callout__title">Regulatory Compliance</div>
+          <p class="blog-callout__text">Always consult legal counsel before tokenizing assets. Regulatory requirements vary by jurisdiction and asset type.</p>
+        </div>
+      </div>
+
       <p>Smart contracts automate many aspects of tokenization, from issuance to dividend distribution. These self-executing contracts ensure that all transactions comply with predefined rules and regulations, reducing the need for intermediaries and lowering operational costs.</p>
 
       <p>The technical infrastructure typically involves a blockchain platform (such as Ethereum, Polygon, or specialized security token chains), custody solutions for secure asset storage, and trading platforms for secondary market liquidity. Each component plays a crucial role in ensuring the tokenized asset functions smoothly throughout its lifecycle.</p>
@@ -67,14 +95,65 @@ export const blogPosts = [
       <h3 id="fractional-ownership">Fractional Ownership</h3>
       <p>By dividing assets into smaller tokens, investors can participate with lower capital requirements. This democratization makes previously inaccessible assets available to a broader audience, allowing investors to diversify their portfolios across multiple asset classes. For example, a $10 million commercial property can be tokenized into 100,000 tokens at $100 each, making real estate investment accessible to retail investors.</p>
 
+      <!-- 5. TABLE BLOCK -->
+      <div class="blog-block blog-table">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Traditional</th>
+              <th>Tokenized</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Minimum Investment</td>
+              <td>$100,000+</td>
+              <td>As low as $100</td>
+            </tr>
+            <tr>
+              <td>Settlement Time</td>
+              <td>30-90 days</td>
+              <td>Minutes</td>
+            </tr>
+            <tr>
+              <td>Liquidity</td>
+              <td>Low</td>
+              <td>High</td>
+            </tr>
+            <tr>
+              <td>Transparency</td>
+              <td>Limited</td>
+              <td>Full (on-chain)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
       <h3 id="liquidity">Enhanced Liquidity</h3>
       <p>Tokenized assets can be traded on secondary markets, providing liquidity options that traditional assets often lack. Real estate, private equity, and other illiquid assets become more accessible when investors can buy and sell tokens without lengthy settlement processes. This liquidity premium can also enhance the underlying asset's value.</p>
 
       <h3 id="transparency">Transparency and Security</h3>
       <p>Blockchain technology provides an immutable record of ownership and transactions, increasing transparency and reducing fraud risk. Every token transfer is recorded on the blockchain, creating an auditable trail that enhances investor confidence. Smart contracts enforce rules automatically, reducing the need for trust in intermediaries.</p>
 
+      <!-- 6. IMAGE + CAPTION BLOCK -->
+      <div class="blog-block blog-image">
+        <img src="/assets/Images/blogfeatured.avif" alt="Tokenized asset dashboard showing portfolio overview" />
+        <div class="blog-image__caption">Tokenized real estate portfolio dashboard — Source: CopyM Platform</div>
+      </div>
+
       <h3 id="efficiency">Operational Efficiency</h3>
       <p>Automation through smart contracts reduces manual processes, lowers administrative costs, and minimizes the potential for human error. Settlement times decrease from days to minutes, and intermediaries are reduced, resulting in cost savings for all participants. Corporate actions like dividend distributions can be executed automatically and instantaneously.</p>
+
+      <!-- 1. CTA BLOCK -->
+      <div class="blog-block blog-cta">
+        <h3 class="blog-cta__title">Ready to Explore Tokenization?</h3>
+        <p class="blog-cta__text">Discover how CopyM makes tokenizing real-world assets simple, secure, and compliant.</p>
+        <a href="/tokenization" class="blog-cta__btn">
+          Explore Platform
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path></svg>
+        </a>
+      </div>
 
       <h2 id="real-world-applications">Real-World Applications</h2>
       <p>Tokenization is already transforming multiple industries:</p>
@@ -100,6 +179,17 @@ export const blogPosts = [
       <p>Institutional adoption, cross-chain interoperability, and integration with traditional finance systems are key trends shaping the future of asset tokenization. We're moving toward a world where tokenized assets coexist seamlessly with traditional securities, offering investors unprecedented choice and flexibility.</p>
 
       <p>The convergence of tokenization with other emerging technologies like artificial intelligence and IoT promises even more innovative applications. From automated compliance checks to real-time asset monitoring, the possibilities are expanding rapidly.</p>
+
+      <!-- 7. SOURCE / REFERENCE BLOCK -->
+      <div class="blog-block blog-source">
+        <div class="blog-source__title">
+          Sources
+        </div>
+        <ul>
+          <li><a href="https://www.mckinsey.com" class="blog-source__link" target="_blank" rel="noopener noreferrer">Global Tokenization Report 2026 — McKinsey & Company</a></li>
+          <li><a href="https://www.bcg.com" class="blog-source__link" target="_blank" rel="noopener noreferrer">The Future of Digital Assets — Boston Consulting Group</a></li>
+        </ul>
+      </div>
     `,
     headings: [
       { id: "key-takeaways", title: "Key Takeaways", level: 2 },

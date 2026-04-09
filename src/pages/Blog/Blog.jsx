@@ -1,4 +1,5 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect, useRef, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
 import SectionContainer from '../../components/Layout/SectionContainer';
@@ -6,8 +7,9 @@ import PostCard from '../../components/Blog/PostCard';
 import Pagination from '../../components/Blog/Pagination';
 import FeaturedSection from '../../components/Blog/FeaturedSection';
 import Hero from './sections/Hero';
-import { blogPosts, getFeaturedPosts as getFeaturedPostsUtil } from '../../data/blogPosts';
-import { FiMail } from 'react-icons/fi';
+import { fetchBlogPosts, transformApiPost } from '../../services/blogApi';
+import { blogPosts as staticBlogPosts, getFeaturedPosts as getFeaturedPostsUtil } from '../../data/blogPosts';
+import { generatePageSEO } from '../../utils/seo';
 
 const categories = ["All", "Education", "News", "Insights", "Product Updates", "Glossary"];
 const POSTS_PER_PAGE = 6;
@@ -17,18 +19,60 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [apiPosts, setApiPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const postsRef = useRef(null);
+
+  // Fetch posts from API
+  const fetchPosts = useCallback(async () => {
+    setLoading(true);
+    try {
+      const categoryFilter = selectedCategory === "All" ? undefined : selectedCategory;
+      const result = await fetchBlogPosts({
+        category: categoryFilter,
+        search: searchTerm || undefined,
+        page: 1,
+        limit: 100
+      });
+
+      const transformedPosts = result.data.map(transformApiPost);
+      setApiPosts(transformedPosts);
+    } catch (error) {
+      console.warn('API not available, using static posts only:', error.message);
+      setApiPosts([]);
+    } finally {
+      setLoading(false);
+    }
+  }, [selectedCategory, searchTerm]);
+
+  useEffect(() => {
+    fetchPosts();
+  }, [fetchPosts]);
+
+  // Combine static posts + API posts (remove duplicates by slug)
+  const allPosts = useMemo(() => {
+    const staticPosts = staticBlogPosts || [];
+    const apiSlugs = new Set(apiPosts.map(p => p.slug));
+    
+    // Add static posts that aren't already in API posts
+    const uniqueStaticPosts = staticPosts.filter(p => !apiSlugs.has(p.slug));
+    
+    // API posts first, then static posts
+    return [...apiPosts, ...uniqueStaticPosts];
+  }, [apiPosts]);
 
   // Filter posts based on category and search
   const filteredPosts = useMemo(() => {
-    return blogPosts.filter(post => {
+    if (allPosts.length === 0) return [];
+    
+    return allPosts.filter(post => {
       const matchesCategory = selectedCategory === "All" || post.category === selectedCategory;
       const matchesSearch = searchTerm === "" ||
         post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
       return matchesCategory && matchesSearch;
     });
-  }, [selectedCategory, searchTerm]);
+  }, [allPosts, selectedCategory, searchTerm]);
 
   const handleCategoryChange = (category) => {
     if (category === 'Glossary') {
@@ -41,8 +85,11 @@ export default function Blog() {
 
   // Get featured posts (sorted by priority)
   const featuredPosts = useMemo(() => {
-    return getFeaturedPostsUtil(5);
-  }, []);
+    return allPosts
+      .filter(post => post.featured)
+      .sort((a, b) => a.featuredPriority - b.featuredPriority)
+      .slice(0, 5);
+  }, [allPosts]);
 
   // Get regular (non-featured) posts for the grid
   const regularPosts = useMemo(() => {
@@ -75,11 +122,38 @@ export default function Blog() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Helmet>
+        {(() => {
+          const seo = generatePageSEO({
+            title: 'Blog — Insights, Education & Updates',
+            description: 'Explore the latest insights, education, news, and product updates on real-world asset tokenization and digital assets.',
+            canonical: '/blog',
+            type: 'website',
+          });
+          return (
+            <>
+              <title>{seo.title}</title>
+              <meta name="description" content={seo.meta.description} />
+              <link rel="canonical" href={seo.meta.canonical} />
+              <meta property="og:type" content={seo.meta.og.type} />
+              <meta property="og:title" content={seo.meta.og.title} />
+              <meta property="og:description" content={seo.meta.og.description} />
+              <meta property="og:image" content={seo.meta.og.image} />
+              <meta property="og:url" content={seo.meta.og.url} />
+              <meta name="twitter:card" content={seo.meta.twitter.card} />
+              <meta name="twitter:title" content={seo.meta.twitter.title} />
+              <meta name="twitter:description" content={seo.meta.twitter.description} />
+              <meta name="twitter:image" content={seo.meta.twitter.image} />
+            </>
+          );
+        })()}
+      </Helmet>
+
       {/* Hero Section */}
       <Hero />
 
       {/* Featured Section */}
-      {searchTerm === "" && (
+      {!loading && searchTerm === "" && (
         <FeaturedSection featuredPosts={featuredPosts} />
       )}
 
@@ -146,7 +220,12 @@ export default function Blog() {
         </div>
 
         {/* Post Grid */}
-        {paginatedPosts.length > 0 ? (
+        {loading ? (
+          <div className="text-center py-16">
+            <div className="inline-block animate-spin rounded-full h-12 w-12 border-b-2 border-[#15a36e]"></div>
+            <p className="mt-4 text-gray-600" style={{ fontFamily: 'Palanquin, sans-serif' }}>Loading posts...</p>
+          </div>
+        ) : paginatedPosts.length > 0 ? (
           <>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-4 sm:px-0">
               {paginatedPosts.map((post, index) => (
@@ -212,8 +291,9 @@ export default function Blog() {
 
             <div className="relative flex flex-col items-center text-center">
               {/* Heading */}
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                See How It Works
+              <h3 className="text-2xl sm:text-3xl font-bold mb-4" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                <span className="text-gray-900">See How </span>
+                <span className="text-[#15a36e]">It Works</span>
               </h3>
 
               <p className="text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl mb-10" style={{ fontFamily: 'Palanquin, sans-serif' }}>
