@@ -206,6 +206,7 @@ export default function BlogPost() {
             author: article.author,
             reviewer: article.reviewer?.name,
             url: `${seo.meta.canonical}`,
+            faqs: article.faqs,
           });
 
           // FAQ Schema

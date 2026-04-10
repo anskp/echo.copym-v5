@@ -63,23 +63,30 @@ export function generateBlogPostSchema({
   author,
   reviewer,
   url,
+  faqs,
 }) {
   const schemaOrg = {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": title,
     "description": description,
-    "image": image,
-    "datePublished": publishedDate,
-    "dateModified": modifiedDate || publishedDate,
+    "image": image ? [image] : [],
+    "url": url,
+    "datePublished": publishedDate ? new Date(publishedDate).toISOString() : new Date().toISOString(),
+    "dateModified": modifiedDate ? new Date(modifiedDate).toISOString() : new Date().toISOString(),
     "author": {
       "@type": "Organization",
       "name": author || SITE_NAME,
+      "url": SITE_URL,
     },
     "publisher": {
       "@type": "Organization",
       "name": SITE_NAME,
       "url": SITE_URL,
+      "logo": {
+        "@type": "ImageObject",
+        "url": `${SITE_URL}/logo.png`,
+      },
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
