@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import Typeform from "../Contact/Typeform";
-// Removed old contact image imports to use public assets directly
+import LeafletMap from "../../components/LeafletMap";
 import TimelineImage from "../../components/images/timeline.avif";
-
-
 import AboutUsHero from './sections/aboutushero';
 
 // Removed LavaLamp background
@@ -651,20 +649,32 @@ const AboutUs = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6 }}
                                 viewport={{ once: true }}
-                                className="relative w-full rounded-lg overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-[400px] sm:h-[500px] lg:h-[600px]"
+                                className="relative w-full rounded-2xl overflow-hidden border border-gray-200 shadow-[0_20px_60px_rgba(15,23,42,0.1)] h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]"
                             >
-                                <div className="relative z-10 w-full h-full">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14529.56708688439!2d54.6152862!3d24.4326555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e458af42657e9%3A0x67586558872e4244!2sMasdar%20City%20-%20Abu%20Dhabi%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2sin!4v1715674845000"
-                                        width="100%"
-                                        height="100%"
-                                        style={{ border: 0 }}
-                                        allowFullScreen
-                                        loading="lazy"
-                                        referrerPolicy="no-referrer-when-downgrade"
-                                        title="Copym Office Location - Masdar City, Abu Dhabi"
-                                        className="w-full h-full"
-                                    ></iframe>
+                                <LeafletMap
+                                    center={[24.4326, 54.6152]}
+                                    zoom={14}
+                                    markerPosition={[24.4326, 54.6152]}
+                                    popupText="Copym Headquarters - Masdar City, Abu Dhabi"
+                                />
+
+                                {/* Floating Info Card */}
+                                <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 md:top-4 md:left-4 z-[500] bg-white rounded-lg sm:rounded-xl shadow-xl border border-gray-100 max-w-[140px] sm:max-w-[180px] md:max-w-[240px] p-1.5 sm:p-2 md:p-3">
+                                    <div className="flex items-center gap-1 sm:gap-2">
+                                        <img
+                                            src="/assets/copym/png/Copym-01-1.avif"
+                                            alt="Copym"
+                                            className="w-6 h-6 sm:w-9 sm:h-9 md:w-12 md:h-12 object-contain flex-shrink-0"
+                                        />
+                                        <div className="min-w-0">
+                                            <h4 className="text-[10px] sm:text-xs md:text-sm font-bold text-gray-900 leading-tight truncate" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Copym Global
+                                            </h4>
+                                            <p className="text-[7px] sm:text-[9px] md:text-[11px] text-gray-500 mt-0 leading-relaxed line-clamp-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                                                Masdar City, Abu Dhabi
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </motion.div>
                         </div>

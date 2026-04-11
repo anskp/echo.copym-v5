@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import SectionContainer from '../../components/Layout/SectionContainer';
 import Hero from './sections/GlossaryHero';
 import { FiBook, FiArrowRight } from 'react-icons/fi';
@@ -219,8 +219,53 @@ export const glossaryTerms = [
 ];
 
 export default function Glossary() {
-  const [selectedLetter, setSelectedLetter] = useState("A");
+  const [searchParams] = useSearchParams();
+  const initialLetter = searchParams.get('letter') || 'A';
+  const [selectedLetter, setSelectedLetter] = useState(initialLetter);
   const [searchTerm, setSearchTerm] = useState("");
+  const [isSticky, setIsSticky] = useState(false);
+  const [stickyBarHeight, setStickyBarHeight] = useState(0);
+  const stickyNavRef = useRef(null);
+  const filterSectionRef = useRef(null);
+
+  // Scroll to filter section when coming from a term page
+  useEffect(() => {
+    if (searchParams.get('letter') && filterSectionRef.current) {
+      setTimeout(() => {
+        filterSectionRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  }, []);
+
+  useEffect(() => {
+    const navEl = stickyNavRef.current;
+    if (!navEl) return;
+
+    const navOriginalTop = navEl.getBoundingClientRect().top + window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Make sticky when scrolled past original position
+      if (currentScrollY >= navOriginalTop) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    const calculateHeight = () => {
+      setStickyBarHeight(navEl.offsetHeight);
+    };
+
+    calculateHeight();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', calculateHeight);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', calculateHeight);
+    };
+  }, []);
 
   const filteredTerms = glossaryTerms.filter(term => {
     const matchesLetter = selectedLetter === "ALL" || term.letter === selectedLetter;
@@ -247,57 +292,88 @@ export default function Glossary() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Back to Blog Button - Desktop & Tablet Only */}
+      <div className="hidden lg:block absolute top-28 left-24 xl:left-32 z-50">
+        <a
+          href="/blog"
+          className="inline-flex items-center gap-2 text-gray-600 hover:text-[#15a36e] transition-colors duration-300 group"
+        >
+          <svg
+            className="w-5 h-5 group-hover:-translate-x-1 transition-transform duration-300"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          <span className="text-sm font-semibold">Back to Blog</span>
+        </a>
+      </div>
+
       {/* Hero Section */}
       <Hero />
 
-      {/* Search + Alphabet Navigation - Responsive Layout */}
-      <SectionContainer padding="py-8 sm:py-12" bgColor="bg-white">
-        <div className="max-w-6xl mx-auto">
-          {/* Search and Letters Card */}
-          <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 shadow-lg shadow-gray-200/50">
-            {/* Search Bar */}
-            <div className="relative mb-6 sm:mb-8">
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => handleSearch(e.target.value)}
-                placeholder="Search glossary terms..."
-                className="w-full px-6 py-3 pl-12 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-4 focus:ring-[#15a36e]/10 transition-all text-sm"
-                style={{ fontFamily: 'Palanquin, sans-serif' }}
-              />
-              <svg
-                className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-
-            {/* Alphabet Filter Pills */}
-            <div className="flex flex-wrap lg:flex-nowrap gap-1 lg:gap-0 justify-center lg:justify-start">
-              {['ALL', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].map((letter) => (
-                <button
-                  key={letter}
-                  onClick={() => {
-                    setSelectedLetter(letter);
-                    if (letter !== 'ALL') setSearchTerm('');
-                  }}
-                  className={`px-2.5 py-1.5 lg:px-4 lg:py-2 rounded-full text-[10px] lg:text-xs font-bold transition-all duration-300 ${
-                    selectedLetter === letter
-                      ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/30'
-                      : 'bg-white text-gray-600 hover:bg-gray-100'
-                  }`}
+      {/* Search + Alphabet Navigation */}
+      <div ref={stickyNavRef} style={isSticky ? {
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        right: '0',
+        zIndex: '9999',
+        background: 'white',
+        boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
+      } : {}}>
+        <SectionContainer padding="py-6 sm:py-8" bgColor="bg-white">
+          <div ref={filterSectionRef} className="max-w-6xl mx-auto">
+            {/* Search and Letters Card */}
+            <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-8 border border-gray-100 shadow-lg shadow-gray-200/50">
+              {/* Search Bar */}
+              <div className="relative mb-6 sm:mb-8">
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => handleSearch(e.target.value)}
+                  placeholder="Search glossary terms..."
+                  className="w-full px-6 py-3 pl-12 rounded-xl bg-gray-50 border-2 border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[#15a36e] focus:ring-4 focus:ring-[#15a36e]/10 transition-all text-sm"
                   style={{ fontFamily: 'Palanquin, sans-serif' }}
+                />
+                <svg
+                  className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-                  {letter}
-                </button>
-              ))}
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+
+              {/* Alphabet Filter Pills */}
+              <div className="flex flex-wrap lg:flex-nowrap gap-0.5 lg:gap-0 justify-center lg:justify-start">
+                {['ALL', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'].map((letter) => (
+                  <button
+                    key={letter}
+                    onClick={() => {
+                      setSelectedLetter(letter);
+                      if (letter !== 'ALL') setSearchTerm('');
+                    }}
+                    className={`px-2 py-1 lg:px-4 lg:py-2 rounded-full text-[9px] lg:text-xs font-bold transition-all duration-300 ${
+                      selectedLetter === letter
+                        ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/30'
+                        : 'bg-white text-gray-600 hover:bg-gray-100'
+                    }`}
+                    style={{ fontFamily: 'Palanquin, sans-serif' }}
+                  >
+                    {letter}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </SectionContainer>
+        </SectionContainer>
+      </div>
+
+      {/* Spacer to prevent content jump when nav becomes fixed */}
+      {isSticky && <div style={{ height: `${stickyBarHeight}px` }} />}
 
       {/* Terms List - Responsive */}
       <SectionContainer padding="pt-6 sm:pt-8 pb-12 sm:pb-16" bgColor="bg-white">

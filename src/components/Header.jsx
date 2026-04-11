@@ -420,7 +420,13 @@ export default function Header() {
                         <Link
                           to={item.path}
                           className="flex items-center px-4 py-4 text-gray-300 font-medium cursor-pointer"
-                          onClick={() => setIsMenuOpen(false)}
+                          onClick={(e) => {
+                            if (item.path === "#") {
+                              e.preventDefault();
+                              return;
+                            }
+                            setIsMenuOpen(false);
+                          }}
                         >
                           <span className="flex-1 text-base">{item.label}</span>
                         </Link>
@@ -433,6 +439,7 @@ export default function Header() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: 'auto', opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.2 }}
                             className="overflow-hidden bg-white/5 mx-2 rounded-xl mb-2"
                           >
                             <div className="p-2 space-y-1">
@@ -441,7 +448,14 @@ export default function Header() {
                                   key={i}
                                   to={sub.path}
                                   className="flex items-center gap-3 p-3 rounded-lg hover:bg-white/5 text-gray-400 hover:text-white transition-colors"
-                                  onClick={() => setIsMenuOpen(false)}
+                                  onClick={(e) => {
+                                    if (sub.path === "#") {
+                                      e.preventDefault();
+                                      return;
+                                    }
+                                    setIsMenuOpen(false);
+                                    setMobileDropdownOpen(null);
+                                  }}
                                 >
                                   <div className="w-12 h-12 flex items-center justify-center text-white text-xs">
                                     {cloneElement(sub.icon, {

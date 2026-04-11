@@ -6,7 +6,8 @@ const SectionContainer = ({
   padding = 'py-10',
   bgColor = 'bg-white',
   maxWidth = 'max-w-7xl',
-  id = null
+  id = null,
+  style = null
 }) => {
   return (
     <section
@@ -16,6 +17,7 @@ const SectionContainer = ({
         ${bgColor}
         ${padding}
       `}
+      style={style}
     >
       <div className={`${maxWidth} mx-auto px-4 sm:px-6 md:px-8 lg:px-20`}>
         {children}

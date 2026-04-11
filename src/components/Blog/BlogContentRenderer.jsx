@@ -123,9 +123,6 @@ function FastFactBlock({ block }) {
   return (
     <div className="blog-block blog-fast-fact">
       <div className="blog-fast-fact__label">
-        <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-        </svg>
         Fast Fact
       </div>
       <p className="blog-fast-fact__value">{block.content}</p>
@@ -155,36 +152,14 @@ function QuoteBlock({ block }) {
 function CalloutBlock({ block }) {
   const variant = block.variant || 'info';
 
-  const icons = {
-    info: (
-      <svg className="blog-callout__icon" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
-      </svg>
-    ),
-    warning: (
-      <svg className="blog-callout__icon" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-      </svg>
-    ),
-    note: (
-      <svg className="blog-callout__icon" fill="currentColor" viewBox="0 0 20 20">
-        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
-        <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-      </svg>
-    ),
-    success: (
-      <svg className="blog-callout__icon" fill="currentColor" viewBox="0 0 20 20">
-        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-      </svg>
-    ),
-  };
+  // Capitalize variant name for display (info -> Info, warning -> Warning)
+  const variantLabel = variant.charAt(0).toUpperCase() + variant.slice(1);
 
   return (
     <div className={`blog-block blog-callout blog-callout--${variant}`}>
-      {icons[variant] || icons.info}
       <div className="blog-callout__content">
-        {block.title && (
-          <div className="blog-callout__title">{block.title}</div>
+        {(block.title || variantLabel) && (
+          <div className="blog-callout__title">{block.title || variantLabel}</div>
         )}
         <p className="blog-callout__text">{block.content}</p>
       </div>
@@ -231,13 +206,7 @@ function ImageBlock({ block }) {
           src={block.imageUrl}
           alt={block.caption || ''}
         />
-      ) : (
-        <div className="w-full h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-          <svg className="w-16 h-16 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-        </div>
-      )}
+      ) : null}
       {block.caption && (
         <div className="blog-image__caption">{block.caption}</div>
       )}
@@ -252,12 +221,7 @@ function SourceBlock({ block }) {
 
   return (
     <div className="blog-block blog-source">
-      <div className="blog-source__title">
-        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-        </svg>
-        Sources
-      </div>
+      <div className="blog-source__title">Sources</div>
       <ul>
         {sources.map((s, i) => (
           <li key={i}>

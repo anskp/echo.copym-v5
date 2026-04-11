@@ -294,7 +294,7 @@ export default function Footer() {
             </div>
             <form className="space-y-2 w-full">
               <div
-                className="flex items-center overflow-hidden w-full max-w-[400px]"
+                className="flex items-center overflow-hidden w-full"
                 style={{
                   height: '40px',
                   background: '#ffffff',
@@ -317,7 +317,7 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[20px] whitespace-nowrap px-4 sm:px-6"
+                  className="h-full flex items-center justify-center hover:opacity-90 transition rounded-r-[20px] whitespace-nowrap px-3 sm:px-4 md:px-6"
                   style={{
                     background: '#15a36e',
                     color: '#ffffff',
@@ -325,7 +325,7 @@ export default function Footer() {
                   }}
                 >
                   <span
-                    className="text-sm sm:text-sm font-semibold"
+                    className="text-xs sm:text-sm md:text-base font-semibold"
                   >
                     Subscribe
                   </span>

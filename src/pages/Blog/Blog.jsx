@@ -180,12 +180,12 @@ export default function Blog() {
         <div className="max-w-6xl mx-auto mb-12">
           <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
             {/* Category Filters - Clean Pills */}
-            <div className="flex flex-wrap gap-2 justify-center w-full lg:w-auto">
+            <div className="flex flex-nowrap overflow-x-auto gap-1.5 sm:gap-2 justify-center w-full lg:w-auto" style={{ msOverflowStyle: 'none', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}>
               {categories.map((category) => (
                 <button
                   key={category}
                   onClick={() => handleCategoryChange(category)}
-                  className={`px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${
+                  className={`flex-shrink-0 px-2 sm:px-4 md:px-5 py-1.5 sm:py-2.5 rounded-full text-[10px] sm:text-sm font-semibold transition-all duration-300 ${
                     selectedCategory === category && category !== 'Glossary'
                       ? 'bg-[#15a36e] text-white shadow-lg shadow-[#15a36e]/20'
                       : 'bg-gray-100 text-gray-700 hover:bg-gray-200'

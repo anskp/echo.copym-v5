@@ -433,8 +433,8 @@ export default function BlogPost() {
         <main ref={mainContentRef} className="flex-1 min-w-0">
           <article>
             {/* Article Header */}
-            <header className="mb-12 pt-8 lg:pt-0">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold leading-tight mb-4 uppercase tracking-tight text-gray-900" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <header className="mb-8 sm:mb-10 lg:mb-12 pt-8 lg:pt-0">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold leading-tight mb-4 uppercase tracking-tight text-gray-900" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 {article.title}
               </h1>
 
@@ -459,7 +459,7 @@ export default function BlogPost() {
                     <p className="text-xs font-semibold text-gray-900" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       {authorObj?.name || 'CopyM Team'}
                     </p>
-                    <p className="text-[10px] text-gray-500">{authorObj?.role || 'Research Team'}</p>
+                    <p className="text-xs text-gray-500">{authorObj?.role || 'Research Team'}</p>
                   </div>
                 </div>
 
@@ -487,7 +487,7 @@ export default function BlogPost() {
               {/* Featured Image */}
               {article.image && (
                 <div className="rounded-xl overflow-hidden mb-10">
-                  <img src={article.image} alt={article.title} className="w-full h-56 sm:h-72 md:h-96 object-cover" />
+                  <img src={article.image} alt={article.title} className="w-full h-40 sm:h-56 md:h-72 lg:h-96 object-cover" />
                 </div>
               )}
             </header>
@@ -510,29 +510,54 @@ export default function BlogPost() {
               .prose h2 {
                 color: #111827 !important;
                 font-weight: 700 !important;
-                font-size: 1.75rem !important;
-                margin-top: 2.5rem !important;
-                margin-bottom: 1.25rem !important;
-                padding-bottom: 0.75rem !important;
-                border-bottom: 3px solid #e5e7eb !important;
+                font-size: 1.25rem !important;
+                margin-top: 2rem !important;
+                margin-bottom: 1rem !important;
+                padding-bottom: 0.5rem !important;
+                border-bottom: 2px solid #e5e7eb !important;
                 letter-spacing: -0.025em !important;
                 text-transform: uppercase !important;
+              }
+              @media (min-width: 640px) {
+                .prose h2 {
+                  font-size: 1.5rem !important;
+                }
+              }
+              @media (min-width: 1024px) {
+                .prose h2 {
+                  font-size: 1.75rem !important;
+                }
               }
               .prose h3 {
                 color: #15a36e !important;
                 font-weight: 600 !important;
-                font-size: 1.25rem !important;
-                margin-top: 2rem !important;
+                font-size: 1.1rem !important;
+                margin-top: 1.5rem !important;
                 margin-bottom: 0.75rem !important;
                 padding-left: 0.75rem !important;
                 border-left: 3px solid #15a36e !important;
                 letter-spacing: -0.01em !important;
               }
+              @media (min-width: 640px) {
+                .prose h3 {
+                  font-size: 1.25rem !important;
+                }
+              }
               .prose p {
                 color: #374151 !important;
-                line-height: 1.8 !important;
+                line-height: 1.75 !important;
                 margin-bottom: 1.25rem !important;
-                font-size: 1rem !important;
+                font-size: 0.9rem !important;
+              }
+              @media (min-width: 640px) {
+                .prose p {
+                  font-size: 1rem !important;
+                }
+              }
+              @media (min-width: 1024px) {
+                .prose p {
+                  font-size: 1.1rem !important;
+                }
               }
               .prose ul {
                 margin-top: 0.75rem !important;
@@ -644,10 +669,15 @@ export default function BlogPost() {
               }
               .blog-fast-fact__value {
                 color: #111827 !important;
-                font-size: 1.125rem !important;
+                font-size: 1rem !important;
                 font-weight: 600 !important;
                 line-height: 1.5 !important;
-                margin: 0 !important;i 
+                margin: 0 !important;
+              }
+              @media (min-width: 640px) {
+                .blog-fast-fact__value {
+                  font-size: 1.125rem !important;
+                }
               }
 
               /* --- Quote Block --- */
@@ -668,12 +698,17 @@ export default function BlogPost() {
               }
               .blog-quote__text {
                 color: #1f2937 !important;
-                font-size: 1.05rem !important;
+                font-size: 0.95rem !important;
                 font-style: italic !important;
                 line-height: 1.7 !important;
                 margin: 0 0 1rem !important;
                 position: relative;
                 z-index: 1;
+              }
+              @media (min-width: 640px) {
+                .blog-quote__text {
+                  font-size: 1.05rem !important;
+                }
               }
               .blog-quote__author {
                 display: flex !important;
@@ -712,18 +747,9 @@ export default function BlogPost() {
               /* --- Callout Block --- */
               .blog-callout {
                 padding: 1.25rem 1.5rem !important;
-                display: flex !important;
-                gap: 0.75rem !important;
-                align-items: flex-start !important;
-              }
-              .blog-callout__icon {
-                width: 20px !important;
-                height: 20px !important;
-                flex-shrink: 0 !important;
-                margin-top: 2px !important;
               }
               .blog-callout__content {
-                flex: 1 !important;
+                width: 100% !important;
               }
               .blog-callout__title {
                 font-weight: 700 !important;
@@ -741,7 +767,6 @@ export default function BlogPost() {
                 background: #eff6ff !important;
                 border-left: 4px solid #3b82f6 !important;
               }
-              .blog-callout--info .blog-callout__icon { color: #3b82f6 !important; }
               .blog-callout--info .blog-callout__title { color: #1e40af !important; }
               .blog-callout--info .blog-callout__text { color: #1e3a5f !important; }
 
@@ -749,7 +774,6 @@ export default function BlogPost() {
                 background: #fefce8 !important;
                 border-left: 4px solid #eab308 !important;
               }
-              .blog-callout--warning .blog-callout__icon { color: #eab308 !important; }
               .blog-callout--warning .blog-callout__title { color: #854d0e !important; }
               .blog-callout--warning .blog-callout__text { color: #713f12 !important; }
 
@@ -757,7 +781,6 @@ export default function BlogPost() {
                 background: #f5f3ff !important;
                 border-left: 4px solid #8b5cf6 !important;
               }
-              .blog-callout--note .blog-callout__icon { color: #8b5cf6 !important; }
               .blog-callout--note .blog-callout__title { color: #5b21b6 !important; }
               .blog-callout--note .blog-callout__text { color: #4c1d95 !important; }
 
@@ -765,7 +788,6 @@ export default function BlogPost() {
                 background: #f0fdf7 !important;
                 border-left: 4px solid #15a36e !important;
               }
-              .blog-callout--success .blog-callout__icon { color: #15a36e !important; }
               .blog-callout--success .blog-callout__title { color: #065f46 !important; }
               .blog-callout--success .blog-callout__text { color: #064e3b !important; }
 
@@ -847,9 +869,6 @@ export default function BlogPost() {
                 margin: 2rem 0 !important;
               }
               .blog-source__title {
-                display: flex !important;
-                align-items: center !important;
-                gap: 0.5rem !important;
                 font-size: 0.75rem !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
@@ -884,7 +903,7 @@ export default function BlogPost() {
                 display: inline-flex !important;
                 align-items: center !important;
                 gap: 0.375rem !important;
-                font-size: 0.7rem !important;
+                font-size: 0.75rem !important;
                 font-weight: 700 !important;
                 text-transform: uppercase !important;
                 letter-spacing: 0.05em !important;
@@ -919,14 +938,14 @@ export default function BlogPost() {
             `}</style>
 
             {/* Author & Reviewer Section - CopyM Style */}
-            <section className="my-12">
-              <div className="grid md:grid-cols-2 gap-6">
+            <section className="my-8 sm:my-12">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
                 {/* Author Card */}
                 <div className="bg-white rounded-lg border border-gray-100 overflow-hidden hover:border-[#15a36e]/30 transition-all duration-300 group flex flex-col" style={{ boxShadow: '0px 4px 48.9px 0px #BDE3D5' }}>
-                  <div className="p-6 flex-1">
-                    <div className="flex items-start gap-4">
+                  <div className="p-4 sm:p-6 flex-1">
+                    <div className="flex items-start gap-3 sm:gap-4">
                       {/* Avatar */}
-                      <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#15a36e]/20 to-[#15a36e]/5 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-[#15a36e]/20 to-[#15a36e]/5 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                         {authorObj?.avatar ? (
                           <img src={authorObj.avatar} alt={authorObj.name} className="w-full h-full rounded-lg object-cover" />
                         ) : (
@@ -936,8 +955,8 @@ export default function BlogPost() {
 
                       {/* Content */}
                       <div className="flex-1">
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-[#15a36e] block mb-1">Written By</span>
-                        <h4 className="text-lg font-bold text-gray-900 mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        <span className="text-xs font-bold uppercase tracking-wider text-[#15a36e] block mb-1">Written By</span>
+                        <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                           {authorObj?.name || 'CopyM Team'}
                         </h4>
                         <p className="text-xs text-gray-500 mb-3">{authorObj?.role || 'Research Team'}</p>
@@ -953,10 +972,10 @@ export default function BlogPost() {
                 {/* Reviewer Card */}
                 {article.reviewer && (
                   <div className="bg-white rounded-lg border border-gray-100 overflow-hidden hover:border-[#15a36e]/30 transition-all duration-300 group flex flex-col" style={{ boxShadow: '0px 4px 48.9px 0px #BDE3D5' }}>
-                    <div className="p-6 flex-1">
-                      <div className="flex items-start gap-4">
+                    <div className="p-4 sm:p-6 flex-1">
+                      <div className="flex items-start gap-3 sm:gap-4">
                         {/* Avatar */}
-                        <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-[#15a36e]/20 to-[#15a36e]/5 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
+                        <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-gradient-to-br from-[#15a36e]/20 to-[#15a36e]/5 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform duration-300">
                           {article.reviewer.avatar ? (
                             <img src={article.reviewer.avatar} alt={article.reviewer.name} className="w-full h-full rounded-lg object-cover" />
                           ) : (
@@ -966,8 +985,8 @@ export default function BlogPost() {
 
                         {/* Content */}
                         <div className="flex-1">
-                          <span className="text-[10px] font-bold uppercase tracking-wider text-[#15a36e] block mb-1">Reviewed By</span>
-                          <h4 className="text-lg font-bold text-gray-900 mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                          <span className="text-xs font-bold uppercase tracking-wider text-[#15a36e] block mb-1">Reviewed By</span>
+                          <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                             {article.reviewer.name}
                           </h4>
                           <p className="text-xs text-gray-500 mb-3">{article.reviewer.role}</p>
@@ -984,14 +1003,14 @@ export default function BlogPost() {
             </section>
 
             {/* FAQ Section - Simple Inline Style */}
-            <section className="my-12">
-              <h3 className="text-2xl font-bold mb-8 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <section className="my-8 sm:my-12">
+              <h3 className="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 uppercase" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                 Frequently Asked Questions
               </h3>
-              <div className="space-y-6">
+              <div className="space-y-4 sm:space-y-6">
                 {article.faqs?.map((faq, idx) => (
-                  <div key={idx} className="border-b border-gray-100 pb-6 last:border-0 last:pb-0">
-                    <h4 className="text-base font-bold text-gray-900 mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <div key={idx} className="border-b border-gray-100 pb-4 sm:pb-6 last:border-0 last:pb-0">
+                    <h4 className="text-sm sm:text-base font-bold text-gray-900 mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       {faq.question}
                     </h4>
                     <p className="text-sm text-gray-600 leading-relaxed" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -1004,7 +1023,7 @@ export default function BlogPost() {
 
             {/* End-of-Article CTA */}
             <section className="mt-12">
-              <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 sm:p-10 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-5 sm:p-8 md:p-10 text-white relative overflow-hidden">
                 {/* Background Pattern */}
                 <div className="absolute top-0 right-0 w-64 h-64 opacity-10">
                   <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
