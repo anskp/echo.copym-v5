@@ -1035,85 +1035,85 @@ export default function GlossaryTerm() {
           </main>
 
           {/* Right Column: Sidebar */}
-          <aside ref={rightSidebarRef} className="hidden lg:block w-[260px] flex-shrink-0">
-            <div className={rightSidebarFixed ? 'fixed right-[24px] sm:right-[48px] md:right-[64px] lg:right-[96px] xl:right-[128px] top-[220px] w-[260px]' : ''}>
-              <div className="space-y-6 pb-8">
+          <aside ref={rightSidebarRef} className="hidden lg:block w-[240px] flex-shrink-0">
+            <div className={rightSidebarFixed ? 'fixed right-[24px] sm:right-[48px] md:right-[64px] lg:right-[96px] xl:right-[128px] top-[220px] w-[240px]' : ''}>
+              <div className="space-y-4 pb-6">
                 {/* Related Terms */}
                 {termData.relatedTerms && termData.relatedTerms.length > 0 && (
                   <>
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Related Terms
                     </h4>
-                    <div className="flex flex-wrap gap-1.5">
+                    <div className="flex flex-wrap gap-1">
                       {termData.relatedTerms.map((related) => (
                         <Link
                           key={related.slug}
                           to={`/glossary/${related.slug}`}
-                          className="inline-flex items-center gap-1 px-2 py-1.5 bg-white hover:bg-[#15a36e] hover:text-white border border-gray-200 hover:border-[#15a36e] rounded text-xs font-medium text-gray-700 transition-all duration-300"
+                          className="inline-flex items-center gap-1 px-1.5 py-1 bg-white hover:bg-[#15a36e] hover:text-white border border-gray-200 hover:border-[#15a36e] rounded text-[11px] font-medium text-gray-700 transition-all duration-300"
                         >
-                          <FiLink className="w-3 h-3" />
+                          <FiLink className="w-2.5 h-2.5" />
                           {related.term}
                         </Link>
                       ))}
                     </div>
 
                     {/* Divider */}
-                    <hr className="border-gray-200 my-6" />
+                    <hr className="border-gray-200 my-4" />
                   </>
                 )}
 
                 {/* Quick Info */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Quick Info
                   </h4>
-                  <div className="space-y-2.5 text-xs">
-                    <div className="flex justify-between py-1.5 border-b border-gray-100">
-                      <span className="text-xs text-gray-500">Letter</span>
+                  <div className="space-y-1.5 text-[11px]">
+                    <div className="flex justify-between py-1 border-b border-gray-100">
+                      <span className="text-[11px] text-gray-500">Letter</span>
                       <Link
                         to={`/glossary?letter=${termData.letter}`}
-                        className="text-xs font-semibold text-gray-900 bg-gray-100 px-2 py-1 rounded hover:bg-[#15a36e] hover:text-white transition-all duration-300"
+                        className="text-[11px] font-semibold text-gray-900 bg-gray-100 px-1.5 py-0.5 rounded hover:bg-[#15a36e] hover:text-white transition-all duration-300"
                       >
                         {termData.letter}
                       </Link>
                     </div>
-                    <div className="flex justify-between py-1.5 border-b border-gray-100">
-                      <span className="text-xs text-gray-500">Category</span>
+                    <div className="flex justify-between py-1 border-b border-gray-100">
+                      <span className="text-[11px] text-gray-500">Category</span>
                       <Link
                         to="/glossary"
-                        className="text-xs font-semibold text-gray-900 bg-gray-100 px-2 py-1 rounded hover:bg-[#15a36e] hover:text-white transition-all duration-300"
+                        className="text-[11px] font-semibold text-gray-900 bg-gray-100 px-1.5 py-0.5 rounded hover:bg-[#15a36e] hover:text-white transition-all duration-300"
                       >
                         Glossary
                       </Link>
                     </div>
-                    <div className="flex justify-between py-1.5">
-                      <span className="text-xs text-gray-500">Updated</span>
-                      <span className="text-xs font-semibold text-gray-900">{termData.lastUpdated}</span>
+                    <div className="flex justify-between py-1">
+                      <span className="text-[11px] text-gray-500">Updated</span>
+                      <span className="text-[11px] font-semibold text-gray-900">{termData.lastUpdated}</span>
                     </div>
                   </div>
                 </div>
 
                 {/* Divider */}
-                <hr className="border-gray-200 my-6" />
+                <hr className="border-gray-200 my-4" />
 
                 {/* Newsletter Subscription */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <h4 className="text-[11px] font-bold text-gray-900 uppercase tracking-wide mb-1.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Subscribe for Updates
                   </h4>
-                  <p className="text-[11px] text-gray-500 mb-2.5" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                    Get the latest glossary updates and insights delivered to your inbox.
+                  <p className="text-[10px] text-gray-500 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    Get the latest glossary updates delivered to your inbox.
                   </p>
-                  <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-2">
+                  <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-1.5">
                     <input
                       type="email"
                       placeholder="Enter your email"
-                      className="w-full px-2.5 py-2 text-xs border border-gray-200 rounded focus:outline-none focus:border-[#15a36e] focus:ring-2 focus:ring-[#15a36e]/20 transition-all"
+                      className="w-full px-2 py-1.5 text-[11px] border border-gray-200 rounded focus:outline-none focus:border-[#15a36e] focus:ring-1 focus:ring-[#15a36e]/20 transition-all"
                       style={{ fontFamily: 'Palanquin, sans-serif' }}
                     />
                     <button
                       type="submit"
-                      className="w-full bg-[#15a36e] hover:bg-[#128a5c] text-white py-2 rounded font-semibold text-xs transition-colors"
+                      className="w-full bg-[#15a36e] hover:bg-[#128a5c] text-white py-1.5 rounded font-semibold text-[11px] transition-colors"
                       style={{ fontFamily: 'Palanquin, sans-serif' }}
                     >
                       Subscribe
