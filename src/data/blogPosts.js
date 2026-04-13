@@ -11,6 +11,12 @@ export const blogPosts = [
     updatedDate: "March 20, 2026",
     readTime: "5 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Dr. Sarah Chen",
+      role: "Blockchain Technology Reviewer",
+      bio: "PhD in Distributed Systems. Reviews blockchain architecture and technical accuracy.",
+      avatar: ""
+    },
     slug: "understanding-rwa-tokenization",
     featured: true,
     featuredPriority: 1,
@@ -221,6 +227,12 @@ export const blogPosts = [
     updatedDate: "March 15, 2026",
     readTime: "4 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Michael Torres, JD",
+      role: "Legal & Compliance Reviewer",
+      bio: "Securities law expert. Reviews regulatory compliance and legal accuracy.",
+      avatar: ""
+    },
     slug: "future-compliant-marketplaces",
     featured: true,
     featuredPriority: 2,
@@ -385,6 +397,12 @@ export const blogPosts = [
     updatedDate: "March 8, 2026",
     readTime: "6 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Dr. Alex Kumar",
+      role: "Blockchain Infrastructure Reviewer",
+      bio: "Expert in blockchain interoperability and cross-chain protocols.",
+      avatar: ""
+    },
     slug: "carbon-credits-blockchain-guide",
     featured: true,
     featuredPriority: 3,
@@ -582,6 +600,12 @@ export const blogPosts = [
     updatedDate: "March 2, 2026",
     readTime: "4 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "James Whitfield, CFA",
+      role: "Commodities & Precious Metals Reviewer",
+      bio: "Chartered Financial Analyst with expertise in commodity tokenization.",
+      avatar: ""
+    },
     slug: "gold-tokenization-guide",
     featured: true,
     featuredPriority: 4,
@@ -749,6 +773,12 @@ export const blogPosts = [
     updatedDate: "February 25, 2026",
     readTime: "5 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Emily Rodriguez",
+      role: "Tokenization Platform Reviewer",
+      bio: "Product specialist in asset tokenization platforms and launch protocols.",
+      avatar: ""
+    },
     slug: "create-first-tokenized-asset",
     image: "/assets/Images/bloghero1st.avif",
     content: `
@@ -905,6 +935,12 @@ export const blogPosts = [
     updatedDate: "February 18, 2026",
     readTime: "3 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Dr. Kevin Park",
+      role: "AI & FinTech Reviewer",
+      bio: "AI researcher specializing in investment technology and automated advisory systems.",
+      avatar: ""
+    },
     slug: "cora-ai-investment-assistant",
     image: "/assets/Images/blogpostai.avif",
     content: `
@@ -1060,6 +1096,12 @@ export const blogPosts = [
     updatedDate: "March 22, 2026",
     readTime: "7 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Rachel Morrison, CFA",
+      role: "Institutional Finance Reviewer",
+      bio: "Banking industry analyst covering blockchain adoption in traditional finance.",
+      avatar: ""
+    },
     slug: "global-banks-blockchain-assets",
     image: "/assets/Images/blogpost3.avif",
     content: `
@@ -1216,6 +1258,12 @@ export const blogPosts = [
     updatedDate: "March 14, 2026",
     readTime: "5 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Thomas Anderson",
+      role: "Institutional Liquidity Reviewer",
+      bio: "Market structure specialist focusing on RWA platform liquidity models.",
+      avatar: ""
+    },
     slug: "liquidity-models-institutional-rwa",
     image: "/assets/Images/blogpost4.avif",
     imagePosition: "object-top",
@@ -1369,6 +1417,12 @@ export const blogPosts = [
     updatedDate: "March 10, 2026",
     readTime: "8 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Dr. Lisa Zhang",
+      role: "Smart Contract Security Reviewer",
+      bio: "Blockchain developer and smart contract security auditor.",
+      avatar: ""
+    },
     slug: "smart-contracts-tokenization",
     image: "/assets/Images/blogpost5.avif",
     content: `
@@ -1525,6 +1579,12 @@ export const blogPosts = [
     updatedDate: "March 3, 2026",
     readTime: "6 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Marcus Weber",
+      role: "Token Standards Reviewer",
+      bio: "Ethereum developer and token standards contributor.",
+      avatar: ""
+    },
     slug: "token-standards-explained",
     image: "/assets/Images/blogpost6.avif",
     content: `
@@ -1681,6 +1741,12 @@ export const blogPosts = [
     updatedDate: "February 28, 2026",
     readTime: "8 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Patricia Lawson",
+      role: "Institutional Strategy Reviewer",
+      bio: "Former investment banker advising on institutional tokenization adoption.",
+      avatar: ""
+    },
     slug: "institutional-adoption-barriers",
     image: "/assets/Images/blogpost7.avif",
     content: `
@@ -1841,6 +1907,12 @@ export const blogPosts = [
     updatedDate: "February 20, 2026",
     readTime: "5 min read",
     author: "CopyM Team",
+    reviewer: {
+      name: "Jonathan Pierce, Esq.",
+      role: "Regulatory Compliance Reviewer",
+      bio: "Financial regulatory lawyer specializing in digital asset frameworks.",
+      avatar: ""
+    },
     slug: "regulation-tokenization-2026",
     image: "/assets/Images/blogpost8.avif",
     content: `
