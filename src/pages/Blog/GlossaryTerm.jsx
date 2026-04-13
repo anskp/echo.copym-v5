@@ -1037,11 +1037,11 @@ export default function GlossaryTerm() {
           {/* Right Column: Sidebar */}
           <aside ref={rightSidebarRef} className="hidden lg:block w-[240px] flex-shrink-0">
             <div className={rightSidebarFixed ? 'fixed right-[24px] sm:right-[48px] md:right-[64px] lg:right-[96px] xl:right-[128px] top-[220px] w-[240px]' : ''}>
-              <div className="space-y-6 pb-6">
+              <div className="space-y-4 pb-4">
                 {/* Related Terms */}
                 {termData.relatedTerms && termData.relatedTerms.length > 0 && (
                   <>
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                       Related Terms
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -1058,17 +1058,17 @@ export default function GlossaryTerm() {
                     </div>
 
                     {/* Divider */}
-                    <hr className="border-gray-200 my-6" />
+                    <hr className="border-gray-200 my-4" />
                   </>
                 )}
 
                 {/* Quick Info */}
                 <div>
-                  <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Quick Info
                   </h4>
-                  <div className="space-y-2.5 text-xs">
-                    <div className="flex justify-between py-2 border-b border-gray-100">
+                  <div className="space-y-2 text-xs">
+                    <div className="flex justify-between py-1.5 border-b border-gray-100">
                       <span className="text-xs text-gray-500">Letter</span>
                       <Link
                         to={`/glossary?letter=${termData.letter}`}
@@ -1077,7 +1077,7 @@ export default function GlossaryTerm() {
                         {termData.letter}
                       </Link>
                     </div>
-                    <div className="flex justify-between py-2 border-b border-gray-100">
+                    <div className="flex justify-between py-1.5 border-b border-gray-100">
                       <span className="text-xs text-gray-500">Category</span>
                       <Link
                         to="/glossary"
@@ -1086,7 +1086,7 @@ export default function GlossaryTerm() {
                         Glossary
                       </Link>
                     </div>
-                    <div className="flex justify-between py-2">
+                    <div className="flex justify-between py-1.5">
                       <span className="text-xs text-gray-500">Updated</span>
                       <span className="text-xs font-semibold text-gray-900">{termData.lastUpdated}</span>
                     </div>
@@ -1094,17 +1094,17 @@ export default function GlossaryTerm() {
                 </div>
 
                 {/* Divider */}
-                <hr className="border-gray-200 my-6" />
+                <hr className="border-gray-200 my-4" />
 
                 {/* Newsletter Subscription */}
                 <div>
                   <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Subscribe for Updates
                   </h4>
-                  <p className="text-xs text-gray-500 mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                  <p className="text-xs text-gray-500 mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
                     Get the latest glossary updates delivered to your inbox.
                   </p>
-                  <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-2.5">
+                  <form onSubmit={(e) => { e.preventDefault(); }} className="space-y-2">
                     <input
                       type="email"
                       placeholder="Enter your email"
