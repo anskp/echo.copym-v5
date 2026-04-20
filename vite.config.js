@@ -16,16 +16,11 @@ export default defineConfig({
         '/tokenization',
         '/blog',
         '/glossary',
-        // Blog posts
-        '/blog/education/understanding-rwa-tokenization',
-        '/blog/education/blockchain-fundamentals',
-        '/blog/insights/tokenization-trends-2024',
-        // Glossary terms
-        '/glossary/blockchain',
-        '/glossary/tokenization',
-        '/glossary/defi',
       ],
-      format: 'json',
+      crawlerLinks: [
+        '/blog/**',
+        '/glossary/**',
+      ],
     }),
   ],
   resolve: {
