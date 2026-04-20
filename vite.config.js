@@ -17,10 +17,6 @@ export default defineConfig({
         '/blog',
         '/glossary',
       ],
-      crawlerLinks: [
-        '/blog/**',
-        '/glossary/**',
-      ],
     }),
   ],
   resolve: {
