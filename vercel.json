@@ -6,6 +6,16 @@
     "rewrites": [
         { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
         { "source": "/robots.txt", "destination": "/robots.txt" },
+        { "source": "/about", "destination": "/about/index.html" },
+        { "source": "/tokenization", "destination": "/tokenization/index.html" },
+        { "source": "/marketplace", "destination": "/marketplace/index.html" },
+        { "source": "/blog", "destination": "/blog/index.html" },
+        { "source": "/blog/education/*", "destination": "/blog/education/index.html" },
+        { "source": "/blog/news/*", "destination": "/blog/news/index.html" },
+        { "source": "/blog/insights/*", "destination": "/blog/insights/index.html" },
+        { "source": "/blog/product-updates/*", "destination": "/blog/product-updates/index.html" },
+        { "source": "/glossary", "destination": "/glossary/index.html" },
+        { "source": "/glossary/*", "destination": "/glossary/index.html" },
         { "source": "/((?!sitemap\\.xml|robots\\.txt).*)", "destination": "/index.html" }
     ],
     "headers": [{
