@@ -1,24 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import fs from 'fs';
-import SSG from 'vite-plugin-ssg';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    SSG({
-      routes: [
-        '/',
-        '/about',
-        '/marketplace',
-        '/tokenization',
-        '/blog',
-        '/glossary',
-      ],
-    }),
-  ],
+  plugins: [react()],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
