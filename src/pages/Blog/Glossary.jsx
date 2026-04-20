@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link, useSearchParams } from 'react-router-dom';
+import { generatePageSEO, generateCollectionPageSchema } from '../../utils/seo';
 import SectionContainer from '../../components/Layout/SectionContainer';
 import Hero from './sections/GlossaryHero';
 import { FiBook, FiArrowRight } from 'react-icons/fi';
@@ -228,6 +230,12 @@ export default function Glossary() {
   const stickyNavRef = useRef(null);
   const filterSectionRef = useRef(null);
 
+  const seo = generatePageSEO({
+    title: 'Glossary - RWA Tokenization Terms & Definitions',
+    description: 'Comprehensive glossary of terms related to real-world asset tokenization, blockchain, DeFi, and digital assets.',
+    canonical: '/glossary',
+  });
+
   // Scroll to filter section when coming from a term page
   useEffect(() => {
     if (searchParams.get('letter') && filterSectionRef.current) {
@@ -292,6 +300,29 @@ export default function Glossary() {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* SEO */}
+      <Helmet>
+        <title>{seo.title}</title>
+        <meta name="description" content={seo.meta.description} />
+        <link rel="canonical" href={seo.meta.canonical} />
+        <meta property="og:type" content={seo.meta.og.type} />
+        <meta property="og:title" content={seo.meta.og.title} />
+        <meta property="og:description" content={seo.meta.og.description} />
+        <meta property="og:image" content={seo.meta.og.image} />
+        <meta property="og:url" content={seo.meta.og.url} />
+        <meta name="twitter:card" content={seo.meta.twitter.card} />
+        <meta name="twitter:title" content={seo.meta.twitter.title} />
+        <meta name="twitter:description" content={seo.meta.twitter.description} />
+        <meta name="twitter:image" content={seo.meta.twitter.image} />
+        <script type="application/ld+json">
+          {JSON.stringify(generateCollectionPageSchema({
+            name: 'Glossary - RWA Tokenization Terms',
+            description: 'Comprehensive glossary of terms related to real-world asset tokenization, blockchain, and digital assets.',
+            url: seo.meta.canonical,
+          }))}
+        </script>
+      </Helmet>
+
       {/* Back to Blog Button - Desktop & Tablet Only */}
       <div className="hidden lg:block absolute top-28 left-24 xl:left-32 z-50">
         <a

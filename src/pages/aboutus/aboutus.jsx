@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Helmet } from 'react-helmet-async';
 import { motion, AnimatePresence, useInView } from "framer-motion";
+import { generatePageSEO, generateWebPageSchema } from '../../utils/seo';
 import Typeform from "../Contact/Typeform";
 import LeafletMap from "../../components/LeafletMap";
 import TimelineImage from "../../components/images/timeline.avif";
@@ -88,8 +90,37 @@ const CounterCard = ({ stat, index }) => {
 const AboutUs = () => {
     const [activeTab, setActiveTab] = useState(0);
 
+    const seo = generatePageSEO({
+        title: 'About Us - CopyM Team & Mission',
+        description: 'Learn about CopyM - the complete tokenization platform for real-world assets. Discover our mission, team, and vision for democratizing investments.',
+        canonical: '/about',
+    });
+
     return (
         <div className="min-h-screen bg-white">
+            {/* SEO */}
+            <Helmet>
+                <title>{seo.title}</title>
+                <meta name="description" content={seo.meta.description} />
+                <link rel="canonical" href={seo.meta.canonical} />
+                <meta property="og:type" content={seo.meta.og.type} />
+                <meta property="og:title" content={seo.meta.og.title} />
+                <meta property="og:description" content={seo.meta.og.description} />
+                <meta property="og:image" content={seo.meta.og.image} />
+                <meta property="og:url" content={seo.meta.og.url} />
+                <meta name="twitter:card" content={seo.meta.twitter.card} />
+                <meta name="twitter:title" content={seo.meta.twitter.title} />
+                <meta name="twitter:description" content={seo.meta.twitter.description} />
+                <meta name="twitter:image" content={seo.meta.twitter.image} />
+                <script type="application/ld+json">
+                    {JSON.stringify(generateWebPageSchema({
+                        name: 'About Us - CopyM Team & Mission',
+                        description: 'Learn about CopyM - the complete tokenization platform for real-world assets.',
+                        url: seo.meta.canonical,
+                    }))}
+                </script>
+            </Helmet>
+
             <AboutUsHero />
 
 

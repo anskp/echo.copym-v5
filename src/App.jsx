@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-import { HelmetProvider } from 'react-helmet-async';
+import { HelmetProvider, Helmet } from 'react-helmet-async';
+import { generateOrganizationSchema, generateWebsiteSchema } from './utils/seo';
 import Header from './components/Header';
 import Hero from './pages/HomePage/sections/Hero';
 
@@ -62,6 +63,15 @@ function App() {
 
   return (
     <HelmetProvider>
+      {/* Global Organization + Website Schema */}
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(generateOrganizationSchema())}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(generateWebsiteSchema())}
+        </script>
+      </Helmet>
       <Box
         ref={appRef}
         className={`min-h-screen relative text-text-primary overflow-x-hidden`}>

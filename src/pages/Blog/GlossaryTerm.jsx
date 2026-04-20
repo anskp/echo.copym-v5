@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FiLink, FiCalendar, FiClock, FiTwitter, FiLinkedin, FiMail, FiFacebook } from 'react-icons/fi';
+import { generatePageSEO, generateDefinedTermSchema } from '../../utils/seo';
 import { glossaryTerms } from './Glossary';
 import Breadcrumbs from '../../components/Blog/Breadcrumbs';
 import { blogPosts } from '../../data/blogPosts';
@@ -294,6 +296,35 @@ export default function GlossaryTerm() {
 
   return (
     <div className="bg-white text-gray-900 min-h-screen">
+      {/* SEO */}
+      <Helmet>
+        <title>{termData.term} - Definition & Explanation | CopyM Glossary</title>
+        <meta name="description" content={termData.fullDefinition} />
+        <link rel="canonical" href={`https://copym.xyz/glossary/${slug}`} />
+        
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={`${termData.term} - Definition & Explanation | CopyM Glossary`} />
+        <meta property="og:description" content={termData.fullDefinition} />
+        <meta property="og:image" content="/assets/copym/png/Copym-01-1.avif" />
+        <meta property="og:url" content={`https://copym.xyz/glossary/${slug}`} />
+        
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${termData.term} - Definition & Explanation | CopyM Glossary`} />
+        <meta name="twitter:description" content={termData.fullDefinition} />
+        <meta name="twitter:image" content="/assets/copym/png/Copym-01-1.avif" />
+        
+        {/* DefinedTerm Schema */}
+        <script type="application/ld+json">
+          {JSON.stringify(generateDefinedTermSchema({
+            term: termData.term,
+            description: termData.fullDefinition,
+            url: `https://copym.xyz/glossary/${slug}`
+          }))}
+        </script>
+      </Helmet>
+
       {/* Breadcrumbs - Sticky on desktop, static on mobile */}
       <div className="hidden lg:block fixed top-0 left-0 right-0 bg-gray-50 z-40 pt-28">
         <div className="px-6 sm:px-12 md:px-16 lg:px-24 xl:px-32 pb-8">
