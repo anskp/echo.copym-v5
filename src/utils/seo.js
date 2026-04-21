@@ -20,7 +20,7 @@ export function generatePageSEO({
 } = {}) {
   const pageTitle = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} - Complete Tokenization Platform`;
   const pageUrl = canonical ? `${SITE_URL}${canonical}` : SITE_URL;
-  const ogImage = image || DEFAULT_IMAGE;
+  const ogImage = image ? `${SITE_URL}${image}` : `${SITE_URL}${DEFAULT_IMAGE}`;
 
   return {
     title: pageTitle,
@@ -178,7 +178,7 @@ export function generateWebPageSchema({ name, description, url }) {
     "@type": "WebPage",
     "name": name,
     "description": description,
-    "url:": url,
+    "url": url,
     "isPartOf": {
       "@type": "WebSite",
       "name": SITE_NAME,
