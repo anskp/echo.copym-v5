@@ -16,6 +16,15 @@
     "rewrites": [
         { "source": "/sitemap.xml", "destination": "/sitemap.xml" },
         { "source": "/robots.txt", "destination": "/robots.txt" },
-        { "source": "/((?!sitemap|robots).*)", "destination": "/index.html" }
+        { "source": "/about", "destination": "/about.html" },
+        { "source": "/marketplace", "destination": "/marketplace.html" },
+        { "source": "/tokenization", "destination": "/tokenization.html" },
+        { "source": "/zerogas", "destination": "/zerogas.html" },
+        { "source": "/privacy-ai", "destination": "/privacy-ai.html" },
+        { "source": "/launchkit", "destination": "/launchkit.html" },
+        { "source": "/glossary", "destination": "/glossary.html" },
+        { "source": "/blog", "destination": "/blog.html" },
+        { "source": "/terms-of-services", "destination": "/terms-of-services.html" },
+        { "source": "/((?!sitemap|robots|.*\\.html$).*)", "destination": "/index.html" }
     ]
 }
