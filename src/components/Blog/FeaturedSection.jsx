@@ -73,7 +73,7 @@ function FeaturedHeroCard({ post }) {
   const { title, excerpt, category, date, readTime, author, image, slug } = post;
 
   return (
-    <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="group block">
+    <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="group block">
       <article className="relative h-full bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-500 border border-black/5">
         {/* Image Background */}
         <div className="relative h-[350px] sm:h-[400px] w-full">
@@ -148,7 +148,7 @@ function FeaturedSidebarCard({ post }) {
   const { title, excerpt, category, date, readTime, image, slug } = post;
 
   return (
-    <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="group block">
+    <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="group block">
       <article className="relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-black/5">
         <div className="flex gap-3 p-3">
           {/* Thumbnail Image - Smaller */}

@@ -58,11 +58,14 @@ async function fetchApiPosts() {
     // API returns { success: true, data: [...] } where data is array of posts
     const posts = Array.isArray(result.data) ? result.data : (result.data.posts || []);
 
-    return posts.map(post => ({
-      slug: post.slug,
-      category: (post.category || 'insights').toLowerCase(),
-      updatedAt: post.updatedAt || post.publishedAt || null,
-    }));
+    return posts.map(post => {
+      const category = (post.category || 'insights').toLowerCase().replace(/\s+/g, '-');
+      return {
+        slug: post.slug,
+        category: category,
+        updatedAt: post.updatedAt || post.publishedAt || null,
+      };
+    });
   } catch (error) {
     console.warn(`Failed to fetch API posts: ${error.message}. Continuing with static posts only.`);
     return [];
@@ -76,7 +79,7 @@ async function getStaticBlogPosts() {
 
     return blogPosts.map(post => ({
       slug: post.slug,
-      category: (post.category || 'insights').toLowerCase(),
+      category: (post.category || 'insights').toLowerCase().replace(/\s+/g, '-'),
       updatedDate: post.updatedDate || post.date || null,
     }));
   } catch (error) {

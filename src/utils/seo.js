@@ -2,7 +2,7 @@
 
 const SITE_URL = import.meta.env.VITE_SITE_URL || 'https://copym.xyz';
 const SITE_NAME = 'CopyM';
-const DEFAULT_IMAGE = '/assets/copym/png/Copym-01-1.avif';
+const DEFAULT_IMAGE = '/assets/copym/png/Copym-01-1.png';
 const TWITTER_HANDLE = '@copym';
 
 export function generatePageSEO({

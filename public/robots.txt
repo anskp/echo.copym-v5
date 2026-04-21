@@ -1,15 +1,17 @@
 User-agent: *
 Allow: /
 
-# Blog
-Allow: /blog
+# Blog posts
+Allow: /blog/
 Allow: /blog/education/
 Allow: /blog/news/
 Allow: /blog/insights/
-Allow: /blog/product-updates/
+Allow: /blog/product%20updates/
+Allow: /blog/product updates/
 
 # Glossary
-Allow: /glossary
+Allow: /glossary/
+Allow: /glossary/*
 
 # Disallow admin/API endpoints
 Disallow: /api/

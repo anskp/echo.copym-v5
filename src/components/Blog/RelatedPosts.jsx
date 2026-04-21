@@ -37,7 +37,7 @@ export default function RelatedPosts({ posts = [], title = "Related Articles" })
             key={post.id || index}
             className="group bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:border-[#15a36e] hover:shadow-lg transition-all duration-300"
           >
-            <Link to={`/blog/${post.category?.toLowerCase()}/${post.slug}`} className="block">
+            <Link to={`/blog/${post.category?.toLowerCase().replace(/\s+/g, '-')}/${post.slug}`} className="block">
               {/* Image */}
               {post.image && (
                 <div className="aspect-video overflow-hidden">

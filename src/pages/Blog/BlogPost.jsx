@@ -183,7 +183,7 @@ export default function BlogPost() {
       {/* SEO Helmet */}
       <Helmet>
         {(() => {
-          const postUrl = `/blog/${article.category?.toLowerCase()}/${article.slug}`;
+          const postUrl = `/blog/${article.category?.toLowerCase().replace(/\s+/g, '-')}/${article.slug}`;
           const seo = generatePageSEO({
             title: article.title,
             description: article.excerpt,
@@ -1068,7 +1068,7 @@ export default function BlogPost() {
                   {youMayAlsoLike.map((post) => (
                     <a
                       key={post.id}
-                      href={`/blog/${post.category?.toLowerCase()}/${post.slug}`}
+                      href={`/blog/${post.category?.toLowerCase().replace(/\s+/g, '-')}/${post.slug}`}
                       className="group block py-2 border-b border-gray-100 hover:border-[#15a36e] transition-colors last:border-0"
                     >
                       <span className="text-xs font-semibold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -1131,7 +1131,7 @@ export default function BlogPost() {
                 {youMayAlsoLike.map((post) => (
                   <a
                     key={post.id}
-                    href={`/blog/${post.category?.toLowerCase()}/${post.slug}`}
+                    href={`/blog/${post.category?.toLowerCase().replace(/\s+/g, '-')}/${post.slug}`}
                     className="group block py-2 border-b border-gray-100 hover:border-[#15a36e] transition-colors last:border-0"
                   >
                     <span className="text-xs font-semibold text-[#15a36e]" style={{ fontFamily: 'Palanquin, sans-serif' }}>

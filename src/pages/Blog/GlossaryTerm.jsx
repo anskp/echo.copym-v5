@@ -306,14 +306,14 @@ export default function GlossaryTerm() {
         <meta property="og:type" content="article" />
         <meta property="og:title" content={`${termData.term} - Definition & Explanation | CopyM Glossary`} />
         <meta property="og:description" content={termData.fullDefinition} />
-        <meta property="og:image" content="/assets/copym/png/Copym-01-1.avif" />
+        <meta property="og:image" content="/assets/copym/png/Copym-01-1.png" />
         <meta property="og:url" content={`https://copym.xyz/glossary/${slug}`} />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${termData.term} - Definition & Explanation | CopyM Glossary`} />
         <meta name="twitter:description" content={termData.fullDefinition} />
-        <meta name="twitter:image" content="/assets/copym/png/Copym-01-1.avif" />
+        <meta name="twitter:image" content="/assets/copym/png/Copym-01-1.png" />
         
         {/* DefinedTerm Schema */}
         <script type="application/ld+json">
@@ -611,7 +611,7 @@ export default function GlossaryTerm() {
                       {termData.relatedArticles.map((article, index) => (
                         <Link
                           key={index}
-                          to={`/blog/${article.category?.toLowerCase()}/${article.slug}`}
+                          to={`/blog/${article.category?.toLowerCase().replace(/\s+/g, '-')}/${article.slug}`}
                           className="group"
                         >
                           {/* Image */}

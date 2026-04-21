@@ -35,7 +35,7 @@ export default function PostCard({
       <article
         className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
       >
-        <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block">
+        <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="block">
           {/* Image */}
           <div className="relative w-full h-58 sm:h-58 md:h-60 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
             {image ? (
@@ -121,7 +121,7 @@ export default function PostCard({
       <article
         className="bg-black rounded-xl overflow-hidden border border-white/10 shadow-lg hover:shadow-2xl hover:border-[#15a36e]/30 transition-all duration-300 group cursor-pointer"
       >
-        <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block">
+        <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="block">
           {/* Image */}
           <div className="relative h-48 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center overflow-hidden">
             {image ? (
@@ -193,7 +193,7 @@ export default function PostCard({
   if (variant === 'featured') {
     return (
       <article className="bg-gradient-to-br from-gray-50 to-white rounded-2xl overflow-hidden border border-black/5 shadow-lg">
-        <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block">
+        <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="block">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Image Side */}
             <div className="relative h-64 lg:h-auto bg-gradient-to-br from-[#15a36e]/10 to-[#15a36e]/5 flex items-center justify-center">
@@ -272,7 +272,7 @@ export default function PostCard({
   if (variant === 'compact') {
     return (
       <article className="bg-white rounded-lg overflow-hidden border border-black/5 shadow-sm hover:shadow-md transition-all duration-300 group">
-        <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block p-4">
+        <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="block p-4">
           <div className="flex items-start gap-3">
             {/* Thumbnail */}
             <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200 flex-shrink-0 overflow-hidden">
@@ -313,7 +313,7 @@ export default function PostCard({
   if (variant === 'horizontal') {
     return (
       <article className="bg-white rounded-xl overflow-hidden border border-black/5 shadow-sm hover:shadow-lg transition-all duration-300 group h-full">
-        <Link to={`/blog/${category?.toLowerCase()}/${slug}`} className="block">
+        <Link to={`/blog/${category?.toLowerCase().replace(/\s+/g, '-')}/${slug}`} className="block">
           <div className="flex flex-col">
             {/* Image */}
             <div className="relative h-32 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center overflow-hidden">
