@@ -3,7 +3,7 @@ import path from 'path';
 
 const DIST_DIR = path.resolve('./dist');
 const SITE_URL = 'https://copym.xyz';
-const DEFAULT_IMAGE = '/assets/copym/png/Copym-01-1.avif';
+const DEFAULT_IMAGE = SITE_URL + '/assets/copym/png/Copym-01-1.avif';
 
 const PAGES = [
   // Main pages
