@@ -70,16 +70,16 @@ function getGlossaryTerms() {
     const glossaryPath = path.resolve(__dirname, '../src/pages/Blog/Glossary.jsx');
     const content = fs.readFileSync(glossaryPath, 'utf8');
     
-    const termRegex = /slug:\s*"([^"]+)",\s*\n\s*term:\s*"([^"]+)"/g;
+    const termRegex = /\{\s*term:\s*"([^"]+)",\s*slug:\s*"([^"]+)"/g;
     const terms = [];
     let match;
     
     while ((match = termRegex.exec(content)) !== null) {
       terms.push({
-        route: `/glossary/${match[1]}`,
-        name: `glossary_${match[1]}`,
-        title: `${match[2]} - RWA Tokenization Glossary`,
-        description: `Learn about ${match[2]} - ${match[2]} definition and explanation in blockchain and tokenization.`,
+        route: `/glossary/${match[2]}`,
+        name: `glossary_${match[2]}`,
+        title: `${match[1]} - Definition & Explanation | CopyM Glossary`,
+        description: `Learn about ${match[1]} and its meaning in blockchain, tokenization, and digital assets.`,
         type: 'article'
       });
     }
@@ -145,6 +145,14 @@ function buildStaticPages(allPages) {
     
     fs.writeFileSync(filePath, modifiedHtml);
     console.log(`Generated: ${fileName}`);
+
+    // Also emit route-shaped HTML so Vercel can rewrite dynamic URLs generically.
+    if (page.route !== '/') {
+      const routeDir = path.join(DIST_DIR, page.route.replace(/^\/+/, ''));
+      fs.mkdirSync(routeDir, { recursive: true });
+      fs.writeFileSync(path.join(routeDir, 'index.html'), modifiedHtml);
+      console.log(`Generated: ${page.route}/index.html`);
+    }
   });
 
   console.log(`Static SEO pages built successfully! (${allPages.length} pages)`);

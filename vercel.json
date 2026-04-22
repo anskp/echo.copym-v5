@@ -28,32 +28,8 @@
         { "source": "/terms-of-services", "destination": "/terms-of-services.html" },
         
         
-        { "source": "/blog/education/understanding-rwa-tokenization", "destination": "/blog_education_understanding-rwa-tokenization.html" },
-        { "source": "/blog/insights/how-real-world-asset-tokenization-is-transforming-investments", "destination": "/blog_insights_how-real-world-asset-tokenization-is-transforming-investments.html" },
-        { "source": "/blog/news/copym-toknization", "destination": "/blog_news_copym-toknization.html" },
-        { "source": "/blog/articles/future-compliant-marketplaces", "destination": "/blog_articles_future-compliant-marketplaces.html" },
-        { "source": "/blog/education/carbon-credits-blockchain-guide", "destination": "/blog_education_carbon-credits-blockchain-guide.html" },
-        { "source": "/blog/news/gold-tokenization-guide", "destination": "/blog_news_gold-tokenization-guide.html" },
-        { "source": "/blog/product%20updates/create-first-tokenized-asset", "destination": "/blog_product_Updates_create-first-tokenized-asset.html" },
-        { "source": "/blog/product%20updates/cora-ai-investment-assistant", "destination": "/blog_product_Updates_cora-ai-investment-assistant.html" },
-        { "source": "/blog/news/global-banks-blockchain-assets", "destination": "/blog_news_global-banks-blockchain-assets.html" },
-        { "source": "/blog/insights/liquidity-models-institutional-rwa", "destination": "/blog_insights_liquidity-models-institutional-rwa.html" },
-        { "source": "/blog/education/smart-contracts-tokenization", "destination": "/blog_education_smart-contracts-tokenization.html" },
-        { "source": "/blog/education/token-standards-explained", "destination": "/blog_education_token-standards-explained.html" },
-        { "source": "/blog/insights/institutional-adoption-barriers", "destination": "/blog_insights_institutional-adoption-barriers.html" },
-        { "source": "/blog/news/regulation-tokenization-2026", "destination": "/blog_news_regulation-tokenization-2026.html" },
-        
-       
-        { "source": "/glossary/asset-tokenization", "destination": "/glossary_asset-tokenization.html" },
-        { "source": "/glossary/blockchain", "destination": "/glossary_blockchain.html" },
-        { "source": "/glossary/ethereum", "destination": "/glossary_ethereum.html" },
-        { "source": "/glossary/nft", "destination": "/glossary_nft.html" },
-        { "source": "/glossary/smart-contract", "destination": "/glossary_smart-contract.html" },
-        { "source": "/glossary/defi", "destination": "/glossary_defi.html" },
-        { "source": "/glossary/stablecoin", "destination": "/glossary_stablecoin.html" },
-        { "source": "/glossary/cryptocurrency", "destination": "/glossary_cryptocurrency.html" },
-        { "source": "/glossary/web3", "destination": "/glossary_web3.html" },
-        { "source": "/glossary/token", "destination": "/glossary_token.html" },
+        { "source": "/blog/:category/:slug", "destination": "/blog/:category/:slug/index.html" },
+        { "source": "/glossary/:slug", "destination": "/glossary/:slug/index.html" },
         
         { "source": "/(.*)", "destination": "/index.html" }
     ]
