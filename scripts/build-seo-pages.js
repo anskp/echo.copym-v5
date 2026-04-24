@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 
 const DIST_DIR = path.resolve('./dist');
 const SITE_URL = 'https://copym.xyz';
-const DEFAULT_IMAGE = SITE_URL + '/assets/copym/png/Copym-01-1.png';
+const DEFAULT_IMAGE = SITE_URL + '/logo/Copym-01-1.png';
 
 const STATIC_PAGES = [
   { route: '/', name: 'index', title: 'CopyM - Complete Tokenization Platform for Real-World Assets', description: 'CopyM is the complete tokenization platform for real-world assets. Secure, compliant, and accessible digital asset marketplace for RWA tokenization.', type: 'website' },
