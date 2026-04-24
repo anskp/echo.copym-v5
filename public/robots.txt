@@ -13,9 +13,16 @@ Allow: /blog/product updates/
 Allow: /glossary/
 Allow: /glossary/*
 
+# Allow logo and favicon only
+Allow: /logo/
+Allow: /favicon_io/
+
 # Disallow admin/API endpoints
 Disallow: /api/
 Disallow: /admin/
+
+# Block unnecessary images and assets
+Disallow: /assets/
 
 # Sitemap
 Sitemap: https://copym.xyz/sitemap.xml
