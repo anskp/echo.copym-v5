@@ -31,15 +31,18 @@ export default function CTASection() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <h2 className="text-lg sm:text-xl md:text-3xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Turning assets into opportunities
+                    <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight max-w-4xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        The Future of Real-World Assets Starts Here
                     </h2>
+                    <p className="text-xs sm:text-sm md:text-base lg:text-lg text-white/90 leading-relaxed mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                        A compliance-first platform for structuring, tokenization, and secure on-chain access across real-world asset markets.
+                    </p>
                     <Link
                         to="/contact"
                         className="inline-flex items-center gap-2 bg-white px-5 py-1.5 sm:px-8 sm:py-2.5 hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 rounded-full group"
                     >
                         <span className="text-sm sm:text-base md:text-base lg:text-lg text-black font-semibold" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                            Join the revolution
+                            Request Access
                         </span>
                         <FiArrowUpRight className="text-lg sm:text-xl text-black transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
                     </Link>

@@ -135,7 +135,7 @@ export default function TestimonialsSection() {
         <div className="text-center mb-6">
           <div className="relative w-fit mx-auto mb-3 sm:mb-4">
             <h2 className="inline-flex items-baseline gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e] uppercase">INSIGHT'</span><span className="text-black">s</span>
+              <span className="text-[#15a36e] uppercase">INDUSTRY </span><span className="text-black">PERSPECTIVES</span>
             </h2>
           </div>
         </div>

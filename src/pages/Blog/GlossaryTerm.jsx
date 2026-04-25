@@ -300,6 +300,7 @@ export default function GlossaryTerm() {
       <Helmet>
         <title>{termData.term} - Definition & Explanation | CopyM Glossary</title>
         <meta name="description" content={termData.fullDefinition} />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://copym.xyz/glossary/${slug}`} />
         
         {/* Open Graph */}

@@ -64,11 +64,11 @@ export default function Hero() {
       <div className="relative z-10 w-full min-h-screen md:h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="max-w-4xl w-full text-center">
           {/* ====== HEADLINE ====== */}
-          <h1
-            className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase text-center"
-          >
-            Unlock Secure Access to <br /> <span className="text-[#15a36e]">Real-World Assets</span>
-          </h1>
+           <h1
+             className="text-base sm:text-lg md:text-xl lg:text-4xl font-medium leading-tight text-white mb-4 sm:mb-6 uppercase text-center"
+           >
+            Tokenize and access <span className="text-[#15a36e]">real-world assets</span> <span className="text-[#15a36e]">with</span> built-in compliance
+           </h1>
 
           {/* ====== DESCRIPTION ====== */}
           <p
@@ -76,7 +76,7 @@ export default function Hero() {
 
           >
             A compliant, AI-powered marketplace enabling on-chain entitlement to real estate, commodities, <br className="hidden md:block" />
-            carbon credits, and alternative assets.
+            carbon credits, and alternative assets, and more.
           </p>
 
           <p
@@ -106,7 +106,7 @@ export default function Hero() {
                 background: 'linear-gradient(to right, #23BD83, #109261)'
               }}
             >
-              GET STARTED
+              Explore the Platform
               <div className="w-6 h-6 sm:w-7 sm:h-7 bg-white rounded-full flex items-center justify-center ml-1">
                 <svg
                   className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#109261]"

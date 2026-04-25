@@ -27,6 +27,7 @@ export function generatePageSEO({
     meta: {
       description: description,
       canonical: pageUrl,
+      robots: { content: 'index, follow' },
       og: {
         title: title || SITE_NAME,
         description: description,

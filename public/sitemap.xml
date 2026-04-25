@@ -32,11 +32,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  <url>
+   <url>
     <loc>https://copym.xyz/privacy-ai</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+
   <url>
     <loc>https://copym.xyz/terms-of-services</loc>
     <changefreq>yearly</changefreq>

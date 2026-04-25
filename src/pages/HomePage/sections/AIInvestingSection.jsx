@@ -250,7 +250,7 @@ export default function AIInvestingSection() {
                   </svg>
                 </div>
                 <span className="text-white font-medium text-[clamp(12px,4vw,16px)] sm:text-base tracking-tight" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                  Cora AI Assistant
+                 Try CORA AI
                 </span>
               </div>
             </div>

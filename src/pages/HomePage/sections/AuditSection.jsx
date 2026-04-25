@@ -9,7 +9,7 @@ export default function AuditSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 to-cyan-400/20"></div>
       </div>
 
-      <div className="relative z-10 py-8 sm:py-12 md:py-16 lg:py-20 pb-0 sm:pb-6 md:pb-8 lg:pb-10">
+      <div className="relative z-10 py-6 sm:py-10 md:py-12 lg:py-14 pb-0 sm:pb-4 md:pb-6 lg:pb-8">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           {/* Section Header */}
           <div className="text-center mb-6 sm:mb-8 md:mb-10">
@@ -27,7 +27,7 @@ export default function AuditSection() {
         </div>
 
         {/* Logo and Icons Image - Full Width */}
-        <div className="w-full flex justify-center items-center py-0 sm:py-3 md:py-4 lg:py-6 overflow-hidden mt-6 sm:mt-8 md:mt-10">
+        <div className="w-full flex justify-center items-center py-0 sm:py-2 md:py-3 lg:py-4 overflow-hidden mt-4 sm:mt-6 md:mt-8">
           <img
             src={logoAndIcons}
             alt="Secure & Audited - Blockchain Networks"

@@ -220,20 +220,21 @@ export default function BlogPost() {
             { label: article.title, path: postUrl },
           ]);
 
-          return (
-            <>
-              <title>{seo.title}</title>
-              <meta name="description" content={seo.meta.description} />
-              <link rel="canonical" href={seo.meta.canonical} />
-              <meta property="og:type" content={seo.meta.og.type} />
-              <meta property="og:title" content={seo.meta.og.title} />
-              <meta property="og:description" content={seo.meta.og.description} />
-              <meta property="og:image" content={seo.meta.og.image} />
-              <meta property="og:url" content={seo.meta.og.url} />
-              <meta name="twitter:card" content={seo.meta.twitter.card} />
-              <meta name="twitter:title" content={seo.meta.twitter.title} />
-              <meta name="twitter:description" content={seo.meta.twitter.description} />
-              <meta name="twitter:image" content={seo.meta.twitter.image} />
+           return (
+             <>
+               <title>{seo.title}</title>
+               <meta name="description" content={seo.meta.description} />
+               <meta name="robots" content={seo.meta.robots.content} />
+               <link rel="canonical" href={seo.meta.canonical} />
+               <meta property="og:type" content={seo.meta.og.type} />
+               <meta property="og:title" content={seo.meta.og.title} />
+               <meta property="og:description" content={seo.meta.og.description} />
+               <meta property="og:image" content={seo.meta.og.image} />
+               <meta property="og:url" content={seo.meta.og.url} />
+               <meta name="twitter:card" content={seo.meta.twitter.card} />
+               <meta name="twitter:title" content={seo.meta.twitter.title} />
+               <meta name="twitter:description" content={seo.meta.twitter.description} />
+               <meta name="twitter:image" content={seo.meta.twitter.image} />
               {seo.meta.article && (
                 <>
                   <meta property="article:published_time" content={seo.meta.article.publishedTime} />

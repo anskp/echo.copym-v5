@@ -13,25 +13,25 @@ const FeatureSection = () => {
     <SectionContainer padding="pt-12 pb-26 sm:py-20 md:py-24 lg:py-26 text-center" bgColor="bg-white" maxWidth="max-w-10xl">
       {/* Main Heading */}
       <SectionHeader
-        title="EXPLORE >> OWN >> TRADE >> EARN"
+        title="EXPLORE → OWN → TRADE → EARN"
         highlightWords={['OWN', 'EARN']}
         alignment="center"
       />
 
-      {/* Vertical Stack of 4 Sections */}
-      <div className="space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-16">
+      {/* Vertical Stack of 4 Sections - Reduced spacing for compactness */}
+      <div className="space-y-6 sm:space-y-8 md:space-y-10 lg:space-y-12">
         {/* Section 1 - Explore curated real-world assets (Graphic Left) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          viewport={{ once: true, margin: "-100px" }} /* Adjust margin for mobile triggering */
-          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
-        >
+         <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.1 }}
+           viewport={{ once: true, margin: "-100px" }}
+           className="flex flex-col md:flex-row md:justify-center items-center gap-6 md:gap-10 lg:gap-16"
+         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[350px] sm:w-[260px] md:w-[450px] min-h-[220px] sm:min-h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[280px] sm:w-[220px] md:w-[360px] min-h-[180px] sm:min-h-[200px] md:h-[360px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -49,7 +49,7 @@ const FeatureSection = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto lg:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Explore curated real-world assets
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -60,17 +60,17 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Section 2 - Access fractional RWAs(Graphic Right) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }} /* Adjust margin for mobile triggering */
-          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
-        >
+         <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.2 }}
+           viewport={{ once: true, margin: "-100px" }}
+           className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-6 md:gap-10 lg:gap-16"
+         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[350px] sm:w-[260px] md:w-[450px] min-h-[220px] sm:min-h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[280px] sm:w-[220px] md:w-[360px] min-h-[180px] sm:min-h-[200px] md:h-[360px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -88,7 +88,7 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Access fractional RWAs
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -98,17 +98,17 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Section 3 -  Trade anytime, anywhere (Graphic Left) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true, margin: "-100px" }} /* Adjust margin for mobile triggering */
-          className="flex flex-col md:flex-row md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
-        >
+         <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.3 }}
+           viewport={{ once: true, margin: "-100px" }}
+           className="flex flex-col md:flex-row md:justify-center items-center gap-6 md:gap-10 lg:gap-16"
+         >
           {/* Graphic - Left */}
           <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[350px] sm:w-[260px] md:w-[450px] min-h-[220px] sm:min-h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[280px] sm:w-[220px] md:w-[360px] min-h-[180px] sm:min-h-[200px] md:h-[360px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -126,7 +126,7 @@ const FeatureSection = () => {
 
           {/* Content - Right */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Trade anytime, anywhere
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>
@@ -136,17 +136,17 @@ const FeatureSection = () => {
         </motion.div>
 
         {/* Section 4 - Invest with clarity, not complexity (Graphic Right) */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true, margin: "-100px" }} /* Adjust margin for mobile triggering */
-          className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-8 md:gap-20 lg:gap-64"
-        >
+         <motion.div
+           initial={{ opacity: 0, y: 30 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           transition={{ duration: 0.6, delay: 0.4 }}
+           viewport={{ once: true, margin: "-100px" }}
+           className="flex flex-col md:flex-row-reverse md:justify-center items-center gap-6 md:gap-10 lg:gap-16"
+         >
           {/* Graphic - Right */}
           <div className="w-full md:w-auto flex justify-center">
             <div
-              className="w-[350px] sm:w-[260px] md:w-[450px] min-h-[220px] sm:min-h-[260px] md:h-[450px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
+              className="w-[280px] sm:w-[220px] md:w-[360px] min-h-[180px] sm:min-h-[200px] md:h-[360px] bg-white rounded-lg flex items-center justify-center overflow-hidden"
               style={{
                 boxShadow: '0px 4px 48.9px 0px rgba(189, 227, 213, 1)',
                 backgroundImage:
@@ -164,7 +164,7 @@ const FeatureSection = () => {
 
           {/* Content - Left */}
           <div className="w-full md:w-auto text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-2 sm:mb-3" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+            <h3 className="text-xl sm:text-2xl md:text-4xl font-bold text-black mb-1 sm:mb-2" style={{ fontFamily: 'Palanquin, sans-serif' }}>
               Invest with clarity, not complexity
             </h3>
             <p className="text-sm md:text-lg text-black leading-normal max-w-xl mx-auto md:mx-0" style={{ fontFamily: 'Palanquin, sans-serif' }}>

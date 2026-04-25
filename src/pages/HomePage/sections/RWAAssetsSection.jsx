@@ -27,28 +27,28 @@ const TokenizeAssetsSection = () => {
     {
       id: 1,
       title: "Gold & Metals",
-      description: "Compliant structuring, tokenization, on-chain entitlement for precious metals with verified custody.",
+      description: "Tokenized exposure to gold and precious metals, with transparent pricing and secure custody.",
       image: maskcard1,
       roi: "82%"
     },
     {
       id: 2,
       title: "Fine Art",
-      description: "Tokenization of curated art assets supported by transparent provenance and entitlement frameworks.",
+      description: "Fractional access to curated fine art, structured for long-term value and verified provenance.",
       image: maskcard2,
       roi: "68%"
     },
     {
       id: 3,
       title: "Carbon Credits",
-      description: "Verified carbon assets structured on-chain with traceable entitlement, impact integrity.",
+      description: "Digitized carbon instruments backed by verified registries—built for traceability and impact reporting.",
       image: maskcard3,
       roi: "91%"
     },
     {
       id: 4,
       title: "Real Estate",
-      description: "Institutional-grade real estate structuring with tokenized participation, lifecycle controls.",
+      description: "Digitized real estate offerings with fractional ownership, governance, and distribution readiness.",
       image: maskcard4,
       roi: "76%"
     }
@@ -57,13 +57,13 @@ const TokenizeAssetsSection = () => {
   return (
     <SectionContainer padding="pt-16 sm:pt-20 md:pt-24 lg:pt-32 pb-8 sm:pb-12 md:pb-16 lg:pb-20">
       <SectionHeader
-        title="REAL-WORLD ASSET CLASSES"
+        title="EXPLORE TOKENIZED ASSET CLASSES"
         subtitle={
           <span className="max-w-3xl mx-auto block">
-            Infrastructure enabling compliant asset structuring, tokenization, on-chain entitlement across multiple asset classes.
+            Gold, real estate, carbon credits, and more—structured into investable digital products.
           </span>
         }
-        highlightWords={["REAL-WORLD"]}
+        highlightWords={["EXPLORE", "TOKENIZED"]}
       />
 
       {/* Assets Grid */}
@@ -129,9 +129,9 @@ const TokenizeAssetsSection = () => {
                   {/* Know More Button - Filled Design */}
                   <div className="mt-6 sm:mt-8 flex justify-center">
                     <Link to="/marketplace" className="group inline-flex items-center justify-between min-w-[90px] sm:min-w-[130px] bg-[#15a36e] border border-[#15a36e] hover:bg-[#15a36e] rounded-full p-1 transition-all duration-300 w-fit cursor-pointer">
-                      <span className="pl-2.5 pr-1 text-white font-semibold text-[10px] sm:text-xs" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-                        Know more
-                      </span>
+                       <span className="pl-2.5 pr-1 text-white font-semibold text-[10px] sm:text-xs" style={{ fontFamily: 'Palanquin, sans-serif' }}>
+                         Learn More
+                       </span>
                       <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-white flex items-center justify-center transition-all duration-300">
                         <svg
                           className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#15a36e]"

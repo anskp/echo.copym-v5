@@ -102,6 +102,7 @@ const AboutUs = () => {
             <Helmet>
                 <title>{seo.title}</title>
                 <meta name="description" content={seo.meta.description} />
+                <meta name="robots" content={seo.meta.robots.content} />
                 <link rel="canonical" href={seo.meta.canonical} />
                 <meta property="og:type" content={seo.meta.og.type} />
                 <meta property="og:title" content={seo.meta.og.title} />
