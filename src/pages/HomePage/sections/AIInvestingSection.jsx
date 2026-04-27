@@ -151,7 +151,7 @@ export default function AIInvestingSection() {
         <div className="text-center mb-4 sm:mb-6 md:mb-8">
           <div className="relative w-fit mx-auto mb-2 sm:mb-3">
             <h2 className="ai-investing-title flex flex-col items-center gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1" style={{ fontFamily: 'Palanquin, sans-serif' }}>
-              <span className="text-[#15a36e]">CORA-AI</span>
+              <span className="text-[#15a36e]">CORA AI</span>
               <span className="text-white">YOUR INTELLIGENT EDGE IN REAL-WORLD ASSETS</span>
             </h2>
           </div>

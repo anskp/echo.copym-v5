@@ -53,7 +53,7 @@ const SectionHeader = ({
     >
       <div className={`relative w-fit ${alignment === 'center' ? 'mx-auto' : ''}`}>
         <h2
-          className={`inline-flex items-baseline ${alignment === 'center' ? 'text-center' : 'text-left'} gap-1 text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1 text-black`}
+          className={`text-base sm:text-lg md:text-xl lg:text-4xl font-bold uppercase pb-1 text-black`}
           style={{ fontFamily: 'Palanquin, sans-serif' }}
         >
           {getTitleWithHighlights(title)}

@@ -45,9 +45,9 @@ export default function TrackYourCrypto() {
                   <div className="relative w-full aspect-[9/18]">
                     {/* Single Mockup Image */}
                     <img
-                      src="/assets/Images/mockup.png"
+                      src="/assets/Images/mock2.png"
                       alt="App Mockup"
-                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-14"
+                      className="w-[100%] h-[100%] object-contain mx-auto translate-y-2"
                     />
                   </div>
                 </div>
@@ -107,9 +107,9 @@ export default function TrackYourCrypto() {
                   <div className="relative w-full aspect-[9/18]">
                     {/* Single Mockup Image */}
                     <img
-                      src="/assets/Images/mockup.png"
+                      src="/assets/Images/mock2.png"
                       alt="App Mockup"
-                      className="w-[65%] h-[65%] object-contain mx-auto translate-y-20"
+                      className="w-[100%] h-[100%] object-contain mx-auto translate-y-2"
                     />
                   </div>
                 </div>
